@@ -50,7 +50,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "tactile"
 description              : "A website."
-url                      : "https://loafee.github.io/citatel/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://loafee.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/citatel/docs/" # the subpath of your site, e.g. "/blog"
 
 #-------
