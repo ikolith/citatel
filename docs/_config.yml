@@ -51,7 +51,7 @@ subtitle                 : # site tagline that appears below site title in masth
 name                     : "tactile"
 description              : "A website."
 url                      : "https://loafee.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/citatel/docs/" # the subpath of your site, e.g. "/blog"
+baseurl                  : "/citatel/" # the subpath of your site, e.g. "/blog"
 
 #-------
 
