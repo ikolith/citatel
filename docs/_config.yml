@@ -122,7 +122,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show # nah not for now
+paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -154,6 +154,8 @@ whitelist:
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
+
+
 category_archive:
   type: liquid
   path: /categories/
@@ -180,15 +182,19 @@ compress_html:
   ignore:
     envs: development
 
+sidebar:
+  nav: "sidebar"
 
 # Defaults
-defaults:
-  # _posts
+defaults:  # this is just for posts.. this works, i'm going to try one for _pages.
+  # _posts # changing to just be general default
   - scope:
       path: ""
-      type: posts
+      #type: posts
     values:
       layout: single
+      sidebar:
+        nav: "sidebar"
       author_profile: false #true
       read_time: false #true
       comments: false # true

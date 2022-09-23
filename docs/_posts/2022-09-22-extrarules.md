@@ -1,5 +1,6 @@
 ---
 title: "Rules: The Cutting Room Floor"
+layout: single
 toc: true
 ---
 

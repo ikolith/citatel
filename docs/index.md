@@ -1,7 +1,7 @@
 ---
-#author_profile: true # is something mmistakes wants, seems obviously bad
 layout: home
-#(https://mmistakes.github.io/minimal-mistakes/docs/layouts/#home-page-layout)
+sidebar:
+    nav: "sidebar"
 ---
 
 This is the public home of "tactile", the system what is probably going to end up with a different name.

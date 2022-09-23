@@ -1,5 +1,11 @@
 main:
-#- title: "Poasts"
-#  url: /poasts/
-- title: "Rules"
-  url: rules/
+  - title: "The Repo"
+    url: "https://github.com/loafee/citatel"
+  - title: "Posts"
+    url: _pages/posts
+
+sidebar:
+  - title: Rules and References
+    children:
+    - title: "Rules"
+      url: _pages/rules
