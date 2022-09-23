@@ -3,9 +3,17 @@ main:
     url: "https://github.com/loafee/citatel"
   - title: "Posts"
     url: _pages/posts
+  - title: "About"
+    url: _pages/about
 
 sidebar:
   - title: Rules and References
     children:
     - title: "Rules"
-      url: _pages/rules
+      url: _pages/rules_and_resources/rules
+    - title: "Common Status Effects"
+      url: _pages/rules_and_resources/status_effects
+  - title: Talaje
+    children: 
+    - title: "About"
+      url: _pages/talaje/talaje_about

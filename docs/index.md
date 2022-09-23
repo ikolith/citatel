@@ -1,7 +1,7 @@
 ---
 layout: home
 sidebar:
-    nav: "sidebar"
+    nav: sidebar
 ---
 
 This is the public home of "tactile", the system what is probably going to end up with a different name.
