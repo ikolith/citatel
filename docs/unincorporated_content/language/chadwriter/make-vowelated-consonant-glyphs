@@ -1,0 +1,76 @@
+#!/bin/bash
+
+echo This bash script makes the consonants-with-diacritics glyphs, dumping them all in the main directory for that writing style.
+echo This script is not very intensive, and has many independent tasks, but for simplicity I have not parallelized it, so it takes a minute.
+
+#I used this to make the vowel marks
+#magick vowel.png -resize 256x256 bigvowel.png
+#for v in vowels/* ; do magick mogrify -flip "$v" ; done
+
+#appends a vowel mark to the top of the consonant
+#magick vowel.png consonant.png -background none -gravity north -append upmarked.png
+echo Get in main cursive directory.
+cd cursive/
+pwd
+sp="misc/spacer.png" #this blank, spacer image is not necessarily also the character space; in fact, they differ in dimensions currently.
+
+echo clear main directory
+rm -f *.png #The force is just to suppress warnings in case there are no pngs, so *.png is literal, and we have to "delete" that nonexistent file.
+
+echo Copy up punctuation
+cd punctuation/
+for p in *.png ; do
+  cp "$p" ../"$p"
+done
+cd ..
+
+echo Prepare long vowels by flipping the short vowels.
+mkdir -p longvowels
+for v in vowels/* ; do
+  magick convert "$v" -flip longvowels/"$(basename "$v" .png)_.png"
+done
+
+echo Prepare the h marked vowels both long and short
+echo "I hope you have the long h because I forgot to script that. All you need is a flip to the short h, though."
+for v in vowels/* ; do
+  magick h/h.png "$v" +append hvowels/h$(basename "$v" .png).png
+done
+for v in longvowels/* ; do
+  magick "h/h_.png" "$v" +append longhvowels/h$(basename "$v" .png).png
+done
+
+echo Lengthen consonants. This will also generate a lengthened null consonant, which is impossible, so we delete it.
+for c in consonants/* ; do
+    magick  "$c" "misc/dot.png" -background none -gravity east -composite longconsonants/$(basename "$c" .png)_.png
+done
+rm longconsonants/null_.png
+
+echo Copy bare and long bare consonants up, and also stick spaces on them for weighing. This will also generate a bare null consonant, which is impossible, so we delete it.
+for c in consonants/* longconsonants/* ; do
+    magick "$sp" "$c" "$sp" -background none -gravity north -append $(basename "$c" .png).png
+done
+rm null.png
+
+echo Stick h marked vowels on null consonant
+for c in consonants/null.png ; do
+  for v in hvowels/* ; do
+    magick  "$sp" "$c" "$v" -background none -gravity north -append $(basename "$v" .png).png
+  done
+  for v in longhvowels/* ; do
+    magick "$v" "$c" "$sp" -background none -gravity north -append $(basename "$v" .png).png
+  done
+done
+
+echo stick vowels on consonants
+for c in consonants/* longconsonants/* ; do
+  for v in vowels/* ; do
+    magick  "$sp" "$c" "$v" -background none -gravity north -append "$(basename "$c" .png)$(basename "$v" .png).png"
+  done
+  for v in longvowels/* ; do
+    magick "$v" "$c" "$sp" -background none -gravity north -append "$(basename "$c" .png)$(basename "$v" .png).png"
+  done
+done
+
+# ye olde rename style rename "null" "" *.png
+#pcre rename style:
+rename "s/null//g" *.png

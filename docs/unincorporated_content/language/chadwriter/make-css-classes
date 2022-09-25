@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#loop over each non-hidden directory in this one. WE ASSUME they represent a writing style, with a bunch of png immediately in them, to be scooped up. Therefore, we print lines of css classes to stdout
+for d in * ; do
+  if [ -d "$d" ] ; then
+    cd "$d"
+      for f in *.png ; do #This would catch any dirs named something.png, if you foolish enough to have any of those.
+        n=$(basename -- "$f" .png)
+        #there was some weirdness about $x_ here, before I changed the quote marks.
+        echo img."$d"_"$n { content:url('$d/$n.png');}"
+      done
+    cd ..
+  fi
+done

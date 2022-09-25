@@ -1,0 +1,136 @@
+\documentclass{article}
+\usepackage{tipa}
+\usepackage{textcomp}
+\usepackage{forest}
+\begin{document}
+\section{Phonology}
+
+\subsection{Phoneme Inventory: Consonants}
+\begin{center}
+
+
+\begin{tabular}{|c|c|c|c|c|c|}
+
+
+\hline
+
+  & \textbf{Labial}  & \textbf{Alveolar} & {\footnotesize \textbf{Alvelo-Palatal}} & \textbf{Guttural}  \\
+\hline
+\textbf{Stop} & \textipa{p b}  & \textipa{t (d)} &  & \textipa{k  k\super{w} (g)}  \\
+\hline
+\textbf{Nasal} & \textipa{m}  & \textipa{n} & &    \\
+\hline
+\textbf{Trill} & &  & &   \textipa{\textinvscr}   \\
+\hline
+\textbf{Fricative} & \textipa{\textphi}  \textipa{\textbeta} & \textipa{s z }   & \textipa{\textesh} \textipa{\textyogh}  &  \textipa{h} \\
+\hline
+\textbf{Approximant} & \textipa{w} &  \textipa{l} &  \textipa{j} &   \\
+\hline
+
+
+
+
+
+\end{tabular}
+
+\small
+%Allophones are marked (parenthetically)
+\normalsize
+\end{center}
+
+\subsection{Phoneme Inventory: Vowels}
+
+
+
+\begin{center}
+
+
+\begin{tabular}{|c|c|c|}
+\hline & \textbf{Front}  &  \textbf{Back} \\
+\hline
+\textbf{High} & \textipa{i, i:} & \textipa{u, u:} \\
+\hline
+\textbf{Mid} & \textipa{e, e: (@)} & \textipa{o,o:} \\
+\hline
+\textbf{Open} & & \textipa{A, A: (5)} \\
+\hline
+
+\end{tabular}
+\end{center}
+
+Vowel length is always phonemic, and any monophthong may be long or short. Additionally, there are a number of phonemic dipthongs that arise from the ablaut system: see  \ref{sec:abl}.
+
+
+\subsection{Orthography}
+Loric is romanized such that each character represents one phoneme. For the most part, characters produce the same sound an English speaker would expect them to (the only major exeption being \textlangle{}x\textrangle{} for /\textipa{S}/, which shouldn't be \textit{too} unbelievable to an English speaker familar with Chinese romanization convention):
+
+
+\begin{center}
+\begin{tabular}{l|l}
+
+
+\textbf{Phoneme} & \textbf{Letter}\\
+\hline
+\textipa{F} & f \\
+\textipa{B} & v \\
+\textipa{\textinvscr} & r \\
+\textipa{S} & x \\
+\textipa{Z} & j \\
+\textipa{k\super{w}} & q \\
+j & y \\
+
+
+
+
+\end{tabular}
+\end{center}
+
+Phoneme length (vowel length and consonant gemination) can be marked in two ways: the first, preferred method is to mark long vowels with a macron (\textipa{\=a \=i \=u \=e \=o}) and geminate consonants with an underdot (\textipa{\.*r \.*l \.*j \.*x})
+
+In cases where an extended character set is not available, an acceptable alterative is simply to double the glyph for the lengthened phoneme:\footnote{My only real rationale for not limiting the romanization to ASCII only is that words derived from productive morphology tend to be rich in long vowels and geminate consonants, which produces long sequences of glyphs with disproportionately few actual phonemes. Also I think double vowels just look ugly}
+
+\begin{itemize}
+  \item \textit{aqeeddellee} $\leftrightarrow$ \textit{aq\textipa{\=e}\textipa{\.*d}e\textipa{\.*l}\textipa{\=e}}
+\end{itemize}
+The remainder of this document will use this romanization scheme, and only show IPA transcriptions to highlight phenomena not represented orthographically.
+
+
+\subsection{Phonotactics}
+%TODO
+\begin{itemize}
+  \item Syllable structure is (C)(C)V(C)(C) --- up to two consonants in the onset, an obligatory vowel, and up to two consonants in the coda.
+  \begin{itemize}
+    \item However, the maximum number of sequential consonants, including over a syllable boundary, is three, so *VCCCCV is disallowed.
+
+  \end{itemize}
+  \item /h/ is \textit{only} permitted word-initially when immediately followed by a vowel. /h/ is represented as a phoneme here out of convention, but it would be more accurate to consider it a contrastive suprasegmental property that word-initial vowels may take.
+
+  \item The stops /t/ /k/ are voiced intervocalically and unvoiced elsewhere.\footnote{Technically speaking, the characters \textlangle{} d, g\textrangle{} do not represent phonemes and could be done without in the romanization scheme; I have included them anyway to ensure readability} This can occur accross word boundaries:
+
+
+  \item The alveolar stop /t/ becomes /\textipa{T}/ when preceeded by /i/, including accross a word boundary:  \textit{\textipa{xi tre}} ``The insect'' $\rightarrow$ \textipa{[Si Tre]} \\ This rule applies \textit{after} the rule to voice stops intervocalically, so intervocalic /t/ after /i/ becomes /\textipa{D}/:
+  \textit{\textipa{xi t\=axi}} ``The fire'' $\rightarrow$ \textipa{[Si DA:Si]} \\
+
+
+  \item Two consonants with the same place of articulation is not permitted in a sequence, \textit{unless} one of them is a tap or trill.  (for phonotactic purposes, a geminate consonant is considered a single phoneme). If this arises from affixation or when introducing a loanword, the following repair strategy is utilized:
+    \begin{enumerate}
+      \item When such a sequence contains a nasal consonant, its neighbor assimilates to be come nasal and the original nasal phoneme is deleted: \\ \textit{\textipa{*he\.*dne}} $\rightarrow$ \textit{\textipa{he\.*ne}} \\ \textit{\textipa{*xipma}} $\rightarrow$ \textit{\textipa{xima}} (however, \textit{\textipa{xipna}} is a valid sequence)
+      %\end{enumerate}
+
+      \item When two of the same consonant are adjacent, they become a single geminate consonant: \\ \textit{\textipa{vr\=axk}} ``war'' + \textit{kisi} ``person'' $\rightarrow$ \textit{\textipa{vr\=ax\.*kisi}} ``warrior''
+
+
+    \end{enumerate}
+
+  \item You may have noticed that the phoneme inventory contains no affricates. Not only are affricates non-phonemic, they are phonotactially impossible. A sequence of [stop][fricative] is never permitted in any position.
+  \begin{itemize}
+    \item However [fricative][stop] is permitted: \textit{\textipa{\=exk}} ``covering''
+    \item The repair strategy when this occurs is to insert a copy of the previous vowel between the two consonants: \\ \textit{\textipa{he\.*d}} ``to color (perfect)'' + \textit{sawi} ``cloak'' $\rightarrow$ \textit{\textipa{he\.*dasawi}} ``uniform''
+  \end{itemize}
+\end{itemize}
+
+
+
+\newpage
+
+\end{document}
