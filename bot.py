@@ -1,5 +1,5 @@
 import os
-import game as g
+import cli as g
 import py_utils.text_utils as t
 import argparse
 import discord
