@@ -17,3 +17,5 @@ sidebar:
     children: 
     - title: "About"
       url: _pages/talaje/talaje_about
+    - title: "Language"
+      url: _pages/talaje/language/language
