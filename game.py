@@ -10,11 +10,21 @@ import py_utils.minipages as m
 import py_utils.entity_text_generators as g
 
 all_data = t.get_all_data(
-    invocations=os.path.join(".", "talaje", "entities", "invocations.csv"),
-    items=os.path.join(".", "talaje", "entities", "items.csv"),
-    weapons=os.path.join(".", "talaje", "entities", "weapons.csv"),
-    npcs=os.path.join(".", "talaje", "entities", "npcs.csv"),
-    skills=os.path.join(".", "rules_resources_references", "skills.csv"),
+    invocations=os.path.join(
+        ".", "docs", "unincorporated_content", "talaje", "entities", "invocations.csv"
+    ),
+    items=os.path.join(
+        ".", "docs", "unincorporated_content", "talaje", "entities", "items.csv"
+    ),
+    weapons=os.path.join(
+        ".", "docs", "unincorporated_content", "talaje", "entities", "weapons.csv"
+    ),
+    npcs=os.path.join(
+        ".", "docs", "unincorporated_content", "talaje", "entities", "npcs.csv"
+    ),
+    skills=os.path.join(
+        ".", "docs", "unincorporated_content", "talaje", "entities", "skills.csv"
+    ),
 )
 
 
