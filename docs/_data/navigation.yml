@@ -15,7 +15,7 @@ sidebar:
       url: _pages/rules_and_resources/status_effects
   - title: Talaje
     children: 
-    - title: "About"
-      url: _pages/talaje/talaje_about
+    - title: "About Talaje"
+      url: _pages/talaje/about_talaje
     - title: "Language"
       url: _pages/talaje/language/language
