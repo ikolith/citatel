@@ -21,3 +21,7 @@ sidebar:
       url: _pages/talaje/npcs_and_factions
     - title: "Language"
       url: _pages/talaje/language/language
+  - title: Code and Downloads
+    children:
+    - title: "Character Sheets and Handouts"
+      url: _pages/code_and_handouts/handouts
