@@ -6,9 +6,9 @@ toc: true
 
 ## Culture
 
-The Isopods are an ancient people with courts, politics, philosophy, and dynasties. They can communicate through writing and speech and they can bypass language entirely to communicate complex feelings and even thoughts directly to one another through pheremones. They do this instinctively, like a person moves their face.  
+The Isopods are an ancient people with courts, politics, philosophy, and dynasties. They can communicate through writing and speech. They can bypass language entirely to communicate complex feelings and even full thoughts directly to one another via pheremones. They do this instinctively, like a person moves their face.  
 
-The Isopod word for what we would call thought is approximately "inner thought" where pheremones are "outer thought". Their word for themselves is approximately "thinker", whereas their words for other groups relate them to objects.  
+The Isopod word for what we would call thought is approximately "inner thought" where pheremones are "outer thought". Their word for themselves is approximately "thinker", whereas their words for other groups relate the members of those groups to objects.  
 
 In the ornate and ancient Isopod courts, richly painted Isopods attempt to subtly manipulate each other by precisely deploying pheremones, even using bottled pheremones to mislead and persuade. They might strategically steer the mood of a room through highly trained covert manipulators, though an Isopod gentleman would never admit this.  
 
@@ -30,8 +30,8 @@ Isopod NPCs (full stats): Isopod Trophy Hunter, Isopod Raider, Isopod Exile, Iso
 
 ## Isopod Anatomy, Movement, Fighting
 
-Isopods have thick layered bands of chitin along their top side, this forms their natural armor. They have seven pairs of jointed appendages. Each appendage ends in two articulated long sticky fingers. The two front pairs of appendages are the longest, with long fingers meant for fine manipulation. Lacking thumbs, the Isopods use their arms in vertical pairs, with the two suspended top fingers and two suspended bottom fingers working in tandem, each finger opposable. The appendages after the foremost pairs become shorter and their main purpose shifts from manipulation to movement. They move low, using all of the limbs that line their body. They move parallel to the ground, with the bulk of their limbs folded under them. 
+Isopods have thick layered bands of chitin along their top side, this forms their natural armor. They have seven pairs of jointed appendages. Each appendage ends in two articulated long sticky fingers. The two front pairs of appendages are the longest, with long fingers meant for fine manipulation. Lacking thumbs, the Isopods use their arms in vertical pairs, with the two suspended top fingers and two suspended bottom fingers working in tandem, each finger opposable. The appendages after the foremost pairs become shorter and their main purpose shifts from manipulation to movement. They move low, using all of the limbs that line their body. They move parallel to the ground, with the bulk of their limbs folded under them. Isopods are larger than humans, though of course they are shorter when walking. They do not call their movement "crawling".
 
-They will tip their front portions upward In only a couple of situations. The first is when engaged in some especially demanding manual task where lifting something in front of themselves using only a couple of limb pairs will not suffice, as in the use of most of their instruments. The second is as a posture of deference or trust. 
+They will tip their front portions upward in only a couple of situations. The first is when engaged in some especially demanding manual task where lifting something in front of themselves using only a couple of limb pairs will not suffice, as in the use of most of their instruments. The second is as a posture of deference or trust. 
 
 They fight primarily through quickly throwing out rope darts or barbed blades with their long powerful fore-limbs and then either retracting the projectiles or attaching the ropes to the surfaces of the cave, suspending their victim from multiple points. They do this while moving rapidly along the cave walls. They employ long specialized patas and katars in close combat. They also use nets to slow down their enemies.  

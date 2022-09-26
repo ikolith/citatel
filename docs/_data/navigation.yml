@@ -17,7 +17,7 @@ sidebar:
     children: 
     - title: "About Talaje"
       url: _pages/talaje/about_talaje
-    - title: "NPCs"
-      url: _pages/talaje/npcs
+    - title: "NPCs and Factions"
+      url: _pages/talaje/npcs_and_factions
     - title: "Language"
       url: _pages/talaje/language/language

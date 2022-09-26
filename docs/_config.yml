@@ -1,6 +1,5 @@
 collections: 
-# its not clear that its even possible to call this npcs..
-  npcs:
+  npcs_and_factions:
     output: true
     permalink: /:collection/:path/
 
