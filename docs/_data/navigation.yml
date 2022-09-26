@@ -27,3 +27,5 @@ sidebar:
     children:
     - title: "Character Sheets, Handouts, Tables"
       url: _pages/code_and_downloads/handouts
+    - title: "A Note on the Code"
+      url: _pages/code_and_downloads/code

@@ -337,20 +337,20 @@ If you're hit while you're down, take the damage and add a failed death check.
 
 #### Consequences
 
-##### [weak]  
+***[weak]***
 
 -1 STR, -1 CON  
 This is and [frail] should have more involved penalties, rather than just stats, I would think.
 
-##### [frail]  
+***[frail]***
 
 -1 STR, -2 CON, -1 AGI
 
-##### Scars
+***Scars***
 
 Scars are completely cosmetic and up to DM discretion. The scar might be from the blow that downed the character or they might be from some other large blow received in the same fight. 
 
-##### Lower a Stat
+***Lower a Stat***
 
 Lower a stat by 1 by rolling a d4 using the following table:
 
@@ -361,11 +361,11 @@ Lower a stat by 1 by rolling a d4 using the following table:
 | DEX  | 3    |
 | CON  | 4    |
 
-##### Lame
+***Lame***
 
 Take your first move action as normal. Every subsequent move action is slower by 1 space.
 
-##### Lose a Limb
+***Lose a Limb***
 
 Determine Limb loss by rolling on the following table:
 
@@ -375,12 +375,6 @@ Determine Limb loss by rolling on the following table:
 | 2    | Leg  |
 | 3    | Eye  |
 | 4    | Ear  |
-
-## Rules for Other Actions
-
-### Stealth
-
-Stealth is an AGI check (+STEALTH if you have it) against the defender’s passive perception. It’s a check against a passive score, and that is always 6 + SCORE.
 
 ## SOCIAL Rolls
 
@@ -439,7 +433,7 @@ When a player asks a question that would fall under "social perception" about an
 
 Social perception rolls are very similar to other character conflicts, they can be either a check or a contest.
 
-##### Checks
+### Checks
 
 When the roll is a check, the DC will likely be a default DC of 6 + SOCIAL (and/or relevant skills). If you are trying to read a character who is is lying the DC will be set by their initial attempt to lie, which will have been a check + SOCIAL (and/or relevant skills) against your passive social perception. If they attempt to lie and fail this check, then whatever they said will be described as highly suspicious or likely a lie. If they succeed in their initial check, but you pass their DC when you attempt to read them, you will notice that something seems wrong, or suspicious, or you'll notice strange nervous habits.
 
@@ -447,29 +441,29 @@ Social perception rolls are almost always checks. If you are lying to someone, y
 
 If every lie was a contest, the fact that you had a contest to begin with would tip you off to the lie.
 
-##### Check Resolution
+#### Check Resolution
 
 In the case of a tie, resolution is the same as any other check. Defender wins. Otherwise there are four possible outcomes. 
 
-##### If you pass the check more than 3, Complete Success:
+***If you pass the check more than 3, Complete Success:***
 
 You read them like an open book. You get a full answer to whatever question you were asking, or as full an answer as you could get from watching someone. They crumble at your gaze. Maybe they are so caught off guard that they fumble and make an embarrassing mistake, mentioning something they should not have.
 
-###### If you pass the check by 3 or less, Moderate Success: 
+***If you pass the check by 3 or less, Moderate Success:***
 
 You get some insight into the question you were asking. If you are trying to see if someone is lying, you'll know that they're certainly not telling the whole truth, that they are actively misleading you. If you're trying to get insight into someone's emotional state, you get a good idea of how they are feeling. You might be able to tell that someone is distressed and trying to hide it. This is a pretty good read of someone, and they do not know that you know anything.
 
-###### If you fail the check by 3 or less, Moderate Failure:
+***If you fail the check by 3 or less, Moderate Failure:***
 
 You have no answer to your question at all and the person you were attempting to read knows the vague shape of the question you asked or that you have a question at all. If you were trying to figure out if someone was lying about a specific claim they might know that you don't trust them or that you suspect them in some way. Otherwise you might just be staring and it's a little weird.
 
-###### If you fail the check by more than 3, Catastrophic Failure:
+***If you fail the check by more than 3, Catastrophic Failure:***
 
 God have mercy on your soul. You completely give yourself away, your interests and your question are written all over your face. Spaghetti is falling out of your pockets. If you are trying to catch a lie, not only is it clear what exactly you think is being lied about, it's clear that you have *no* idea if they're lying.
 
 Some examples: maybe you scoffed at a specific claim, maybe you blurt out "But the stone of Macguffin!" at exactly the wrong time. Your face is probably red.
 
-##### Contests
+### Contests
 
 Contests are far rarer than checks. Social perception contests happen in contexts where it is understood that both parties are trying to advance their own interests and, if not outright lying, being very selective with the truth. Some examples of this would be a tense negotiation, an official dinner of ambassadors whose states are on the brink of war, a game of poker, spies meeting to trade secrets while not revealing their true intentions. In these cases checks would be happening simultaneously anyway, and the information that someone might doubt what you are saying or that they might not be telling the whole truth wouldn't be very meaningful.
 
@@ -477,17 +471,13 @@ Contest Resolution is just about the same as check resolution. The difference be
 
 Ties are just ties, a staredown, a tense silence. If your group prefers, ties can be resolved in the normal way for a contest: win goes to the higher modifier, if that's a tie, it's a tie in game, if that makes no sense, do it again.
 
-###### Debug: Notes, Skip This or Maybe Don't Include it in the Docs
-
-Catastrophic Failure is an odd thing to have in the game. It takes away agency from the player, forcing them to flub important moments. This is not ideal. I think it's probably worth it for what it brings to the game though. Suddenly trying to get a read on someone instead of just talking to them has a risk associated with it so you won't be trying it literally all of the time. It may be that in many situations you should just try and navigate without rolls. 
-
-It sets up the possibility for characters or NPCs who are not physically intimidating, but *brutal* to be grilled by or to try and deceive. One could imagine a corrupt weak elderly politician who the players must attempt to outwit or remove from power who is just a nightmare to deal with, the way he manipulates people, twists their words, makes them say things they didn't mean to say. You could even pick up skills that make you much harder to read, and then say something that seems like an obvious lie, baiting someone into attempting to roll a check on you at which point they get a catastrophic failure, triumphantly call you out, and completely show their hand.
-
-Something that may or may not be a problem however, is the narrowness of the margins. Catastrophic Failure and Complete Success are only 6 points away from one another. Because of the distribution of the 2d6, this means that these 6 points cover a ton of probability mass (assuming no modifiers), but that's fully a cope. The reason the thresholds are at 3 is that a lot of other thresholds are at 3 including the other social rules, and I wanted the rules to be easier to remember. What this means is that characters with high modifiers socially will tend to completely roll characters with low modifiers. Is this a bug or a feature? Hard to say. Probably depends on your table. Does this help to create the sort of story the rest of the system will tend to create? Not sure. I think so, weakly.
-
-The same effect these rules are aiming for could certainly be achieved with sufficiently good role playing, preparation, writing, and *outstanding* improv and acting on the part of the DM, but this is very rare and very difficult. Regardless, most groups that are able to play social games that well will tend to ignore or avoid leaning too much on social rules that exist in their system. At least, as far as I can tell. I think a framework that encourages and supports this sort of play is useful and valuable, anyway. TTRPG players may need social crutches is what I'm saying. Most games are not your favorite professionally produced DnD campaign.
-
 ## Odds and Ends
+
+Some rules that did not fit nicely into a cohesive category.
+
+### Stealth
+
+Stealth is an AGI check (+STEALTH if you have it) against the defender’s passive perception. It’s a check against a passive score, and that is always 6 + SCORE.
 
 ### Grappling
 
