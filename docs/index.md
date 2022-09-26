@@ -6,7 +6,7 @@ sidebar:
 
 This is the public home of "tactile", the system what is probably going to end up with a different name.
 
-If you got this link, please refrain from sharing it. I'm not willing to pay for Github Plus or whatever to make this private. If this looks unfinished, that's because it is. The website is double unfinished, most of the content that actually exists isn't even here yet.
+If you got this link, please refrain from sharing it. I'm not willing to pay for Github Plus or whatever to make this private. If this looks unfinished that's because it is. The website is double unfinished, most of the content that actually exists isn't even here yet.
 
 Most everything related to this system lives in another very messy private repo. There are Google Docs and long rambling discord messages about what this game is and what it is trying to achieve. I am working on bringing all of that together in this repo. Things will be added regularly. Hopefully. Unless I need to go with some other site generator.
 
@@ -14,4 +14,4 @@ By the end of this, all of the work done on the game should end up happening in 
 
 I do not like working in a public repo. However, the whole idea was that this would be available for anyone to use, change, etc. so it's just an L I have to take.
 
-I welcome quetsions and suggestions. @ me on the server. If you're not on the server how did you get here my guy?
+I welcome questions and suggestions. @ me on the server. If you're not on the server how did you get here my guy?

@@ -17,10 +17,12 @@ sidebar:
     children: 
     - title: "About Talaje"
       url: _pages/talaje/about_talaje
-    - title: "NPCs and Factions"
-      url: _pages/talaje/npcs_and_factions
+    # - title: "Entity Tables"
+    #   url: _pages/talaje/entities
     - title: "Language"
       url: _pages/talaje/language/language
+    - title: "NPCs and Factions"
+      url: _pages/talaje/npcs_and_factions
   - title: Code and Downloads
     children:
     - title: "Character Sheets and Handouts"
