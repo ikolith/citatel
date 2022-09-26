@@ -25,5 +25,5 @@ sidebar:
       url: _pages/talaje/npcs_and_factions
   - title: Code and Downloads
     children:
-    - title: "Character Sheets and Handouts"
-      url: _pages/code_and_handouts/handouts
+    - title: "Character Sheets, Handouts, Tables"
+      url: _pages/code_and_downloads/handouts
