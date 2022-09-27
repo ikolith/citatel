@@ -1,0 +1,4 @@
+# This .gitignore and the one in bot_cards are here to keep these dirs around so that the card functions have some place to put output but that output is not constantly being committed.
+*
+!.gitignore
+!bot_cards/
