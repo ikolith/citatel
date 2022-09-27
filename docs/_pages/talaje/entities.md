@@ -2,7 +2,7 @@
 title: Entity Tables
 ---
 
-TODO: figure out changing the remotethemes css because this is u g l y.
+<!-- TODO: figure out changing the remotethemes css because this is u g l y. -->
 
 {% assign mydata=site.data.entities.weapons %}
 

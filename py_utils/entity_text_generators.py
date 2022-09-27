@@ -57,8 +57,6 @@ def generate_skill_plaintext(row: pd.Series) -> str:
 # start of latex formatting section
 smallskip = r"\smallskip "
 skipline = smallskip + r" \hrule " + smallskip
-# TODO: using \hline outside of a table makes latex scream, cry, tell me ive clearly made a mistake, shit its pants, and then do what i wanted anyway. i guess i should switch to either \hrulefill or \line or something but neither option actually does what i want. so the compiler is just going to have to suffer.
-# actually, i may want to consider a more precisely sized line if this latex is to be used in some other form of documentation
 
 
 def curry_wrap(latex: str) -> str:  # latex formatting wrapper
