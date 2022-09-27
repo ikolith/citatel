@@ -11,19 +11,19 @@ import py_utils.entity_text_generators as g
 
 all_data = t.get_all_data(
     invocations=os.path.join(
-        ".", "docs", "unincorporated_content", "talaje", "entities", "invocations.csv"
+       ".", "docs", "_data", "entities", "invocations.csv"
     ),
     items=os.path.join(
-        ".", "docs", "unincorporated_content", "talaje", "entities", "items.csv"
+        ".", "docs", "_data", "entities", "items.csv"
     ),
     weapons=os.path.join(
-        ".", "docs", "unincorporated_content", "talaje", "entities", "weapons.csv"
+        ".", "docs", "_data", "entities", "weapons.csv"
     ),
     npcs=os.path.join(
-        ".", "docs", "unincorporated_content", "talaje", "entities", "npcs.csv"
+        ".", "docs", "_data", "entities", "npcs.csv"
     ),
     skills=os.path.join(
-        ".", "docs", "unincorporated_content", "talaje", "entities", "skills.csv"
+        ".", "docs", "_data", "entities", "skills.csv"
     ),
 )
 
