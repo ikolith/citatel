@@ -176,7 +176,7 @@ defaults:  # this is just for posts.. this works, i'm going to try one for _page
       sidebar:
         nav: "sidebar"
       author_profile: false #true
-      read_time: false #true
+      read_time: true #false
       comments: false # true
       share:  false #true
       related: false #true
