@@ -1,0 +1,7 @@
+name,hp,scores,skills,holds,flavor_text,filter_tags,clean_name
+Man From Saint Ives,{d3 wife_from_saint_ives},,,,,,man_from_saint_ives
+Wife From Saint Ives,{d3 sack_from_saint_ives},,,,,,wife_from_saint_ives
+Sack from Saint Ives,0 cat_from_saint_ives},,,,,,sack_from_saint_ives
+Cat From Saint Ives,{d3 kit_from_saint_ives},,,,,,cat_from_saint_ives
+Kit From Saint Ives,sweet fuck-all,,,,,,kit_from_saint_ives
+Wife I Box,{10d6-5},,,,"""son, i already cant click the book""",,wife_i_box

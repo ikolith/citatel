@@ -2,6 +2,7 @@ from typing import NewType
 import pandas as pd
 import py_utils.dice_utils as d
 import py_utils.entity_text_generators as g
+import pprint
 import re
 import os
 
@@ -49,12 +50,13 @@ def get_all_data(
     return all_data
 
 
-def parse_curlies(text: str) -> list[dict[str, str, str]]:
+def parse_curlies(text: str) -> list[dict[str, str, str, int]]:
     curlies = re.findall(r"{[^}]*}", text)
     curlies_parsed = []
     if curlies:
         for match in curlies:
             # Check for entity...
+            quantity = 1
             if (e := re.search(r"(?<=\s|{)([a-z_]*)(?=})", match)) is not None:
                 entity = e.group()
             else:
@@ -62,35 +64,44 @@ def parse_curlies(text: str) -> list[dict[str, str, str]]:
             # Check for dice...
             if r := re.search(r"(?<={)\d*?d\d+x?[+-]?\d*", match):
                 roll = r.group()
+                quantity = d.die_parser_roller(roll)
             # Check for number
             else:
                 if entity == "":
                     break
                 elif (n := re.search(r"(?<={)\d+(?=\s)", match)) is not None:
-                    roll = n.group()
+                    roll = ""
+                    quantity = n.group()
                 else:
                     roll = ""
-            curlies_parsed.append({"match": match, "roll": roll, "entity": entity})
+            curlies_parsed.append(
+                {
+                    "match": match,
+                    "roll": roll,
+                    "entity": entity,
+                    "quantity": quantity,
+                }
+            )
     return curlies_parsed
 
 
 def get_replacement_text(
-    text: str,
+    base_text: str,
     curlies_parsed: list,
-    roll_results: list = [],
 ) -> str:
-    if not roll_results:
-        roll_results = [match["roll"] for match in curlies_parsed]
+    # roll_results = [curly["quantity"] for curly in curlies_parsed]
+    # if not roll_results:
+    #     roll_results = [match["roll"] for match in curlies_parsed]
     for i, curly_match in enumerate(curlies_parsed):
-        if roll_results[i] == 0:
-            text = text.replace(curly_match["match"], "", 1)
+        if curly_match["quantity"] == 0:
+            base_text = base_text.replace(curly_match["match"], "", 1)
         else:
-            text = text.replace(
+            base_text = base_text.replace(
                 curly_match["match"],
-                f"{roll_results[i]} {curly_match['entity']}".strip(),
+                f"""{curly_match['quantity']} {curly_match['entity']}""".strip(),
                 1,
             )
-    return text
+    return base_text
 
 
 def search_all_data(clean_name: str, all_data: dict) -> tuple[str, pd.Series]:
@@ -127,21 +138,9 @@ def generate_entity_tree_and_non_unique(
 ) -> tuple[
     list, dict
 ]:  # this typing could be more verbose.. but really we just need curlies to be a NewType
-    # TODO: idea at some point to move base case into while though now im not so sure that this is necessary or good...i will probably just not do it yet and do the more pressing stuff first
     non_unique_entities = {}
-    base_text = search_for_text(base_curly["entity"], all_data, text_type)
-    entity_tree = [
-        {
-            "entity": base_curly["entity"],
-            "unique": True,
-            "text": base_text,
-            "children": [],
-        }
-    ]  # the index here is equivalent to an id,
-    # the index will be how parents/children will be assigned later
-    if not text_is_unique(base_text):
-        non_unique_entities[base_curly["entity"]] = {"text": base_text, "count": 1}
-    curly_queue = [parse_curlies(base_text)]
+    entity_tree = []
+    curly_queue = [[base_curly]]
     while len(curly_queue) != 0 and len(entity_tree) < 100:
         # TODO: looking back up the tree to not recurse
         curlies = curly_queue.pop(0)
@@ -150,10 +149,8 @@ def generate_entity_tree_and_non_unique(
             # skips case where the curly is just a roll.
             if not curly["entity"]:
                 continue
-
             entity_text = search_for_text(curly["entity"], all_data, text_type)
             unique = text_is_unique(entity_text)
-
             # deals with case where this is not unique...
             if not unique:
                 # ... and we have seen it before:
@@ -166,6 +163,20 @@ def generate_entity_tree_and_non_unique(
                         "count": 1,
                     }
                 entity_text = ""
+            if roll_dice:
+                curlies_parsed = parse_curlies(entity_text)
+                entity_text = get_replacement_text(
+                    base_text=entity_text, curlies_parsed=curlies_parsed
+                )
+                for curly in curlies_parsed:
+                    if not curly["entity"]:
+                        pass
+                    else:
+                        curly_queue += [[curly] * curly["quantity"]]
+            else:
+                curly_queue.append(parse_curlies(entity_text))
+            if parent_id >= 0:
+                entity_tree[parent_id]["children"].append(len(entity_tree) - 1)
             entity_tree.append(
                 {
                     "id": len(entity_tree),
@@ -176,8 +187,6 @@ def generate_entity_tree_and_non_unique(
                     "curly": curly,
                 }
             )
-            entity_tree[parent_id]["children"].append(len(entity_tree) - 1)
-            curly_queue.append(parse_curlies(entity_text))
     return entity_tree, non_unique_entities
 
 
@@ -188,8 +197,7 @@ def generate_entity_tree_text(
     roll_dice=False,
     text_type="plaintext",
 ) -> str:
-
-    base_quantity = d.die_parser_roller(base_curly["roll"]) if base_curly["roll"] else 1
+    base_quantity = base_curly["quantity"]
     # just need this line for the fancy name:
     _, base_row = search_all_data(base_curly["entity"], all_data)
     base_text = search_for_text(
@@ -200,27 +208,19 @@ def generate_entity_tree_text(
             n_base_entity = str(base_quantity) + " " + base_row["name"] + "\n"
             curlies_parsed = parse_curlies(base_text)
             return n_base_entity + get_replacement_text(
-                text=base_text, curlies_parsed=curlies_parsed
+                base_text=base_text, curlies_parsed=curlies_parsed
             )
         else:
             return base_text
-    # at this point we guarantee that the base case entity has children, though we are uncertain on rolling
     entity_tree, non_unique_entities = generate_entity_tree_and_non_unique(
         base_curly, all_data, expand_entities, roll_dice
     )
-    # should a given unique include a list of non_unique entities it has??
     non_unique_text = """--------\nNon Unique Entities:\n--------"""
     entity_text = """\n--------\nUnique Entities, Full Tree:\n--------"""
-    if not roll_dice:
-        for clean_name, v in non_unique_entities.items():
-            non_unique_text += f"\n{v['count']} {clean_name}\n{v['text']}"
-        for n in entity_tree:
-            text = n["text"] if n["unique"] else g.name_plaintext(n["entity"])
-            entity_text += str("\n" + text)
-        return non_unique_text + entity_text
-    # roll dice and expand
-    print(entity_tree)
+
+    for clean_name, v in non_unique_entities.items():
+        non_unique_text += f"\n{v['count']} {clean_name}\n{v['text']}"
     for n in entity_tree:
-        # TODO: roll-expand
-        pass
-    # now have to deal with traversing the tree and Not rolling dice
+        if n["unique"]:
+            entity_text += "\n" + n["text"]
+    return non_unique_text + entity_text

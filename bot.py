@@ -8,21 +8,11 @@ from discord import app_commands
 from dotenv import load_dotenv
 
 all_data = t.get_all_data(
-    invocations=os.path.join(
-       ".", "docs", "_data", "entities", "invocations.csv"
-    ),
-    items=os.path.join(
-        ".", "docs", "_data", "entities", "items.csv"
-    ),
-    weapons=os.path.join(
-        ".", "docs", "_data", "entities", "weapons.csv"
-    ),
-    npcs=os.path.join(
-        ".", "docs", "_data", "entities", "npcs.csv"
-    ),
-    skills=os.path.join(
-        ".", "docs", "_data", "entities", "skills.csv"
-    ),
+    invocations=os.path.join(".", "docs", "_data", "entities", "invocations.csv"),
+    items=os.path.join(".", "docs", "_data", "entities", "items.csv"),
+    weapons=os.path.join(".", "docs", "_data", "entities", "weapons.csv"),
+    npcs=os.path.join(".", "docs", "_data", "entities", "npcs.csv"),
+    skills=os.path.join(".", "docs", "_data", "entities", "skills.csv"),
 )
 
 load_dotenv()
