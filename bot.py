@@ -6,6 +6,23 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 from dotenv import load_dotenv
+import asyncio
+
+
+async def post_text(text: str, interaction: discord.Interaction) -> None:
+    if len(text) < 2000:
+        await interaction.response.send_message(text)
+    else:
+        with open(
+            os.path.join("output", "bot_output", "long_message.txt"), mode="w"
+        ) as f:
+            f.write(text)
+        await interaction.response.send_message(
+            file=discord.File(
+                fp=os.path.join("output", "bot_output", "long_message.txt") #annoying to bounce this 
+            )
+        )
+
 
 all_data = t.get_all_data(
     invocations=os.path.join(".", "docs", "_data", "entities", "invocations.csv"),
@@ -49,8 +66,10 @@ async def self(
     expand_entities: bool = False,
     roll_dice: bool = False,
 ) -> None:
-    await interaction.response.send_message(
-        g.cli_single_curly_parser(curly, all_data, expand_entities, roll_dice)
+
+    await post_text(
+        g.cli_single_curly_parser(curly, all_data, expand_entities, roll_dice),
+        interaction,
     )
 
 
