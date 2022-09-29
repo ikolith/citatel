@@ -2,7 +2,7 @@ from typing import NewType
 import pandas as pd
 import py_utils.dice_utils as d
 import py_utils.entity_text_generators as g
-import pprint
+from pprint import pprint
 import re
 import os
 
@@ -140,7 +140,7 @@ def generate_entity_tree_and_non_unique(
 ]:  # this typing could be more verbose.. but really we just need curlies to be a NewType
     non_unique_entities = {}
     entity_tree = []
-    curly_queue = [[base_curly]]
+    curly_queue = [[base_curly] * base_curly["quantity"]]
     while len(curly_queue) != 0 and len(entity_tree) < 100:
         # TODO: looking back up the tree to not recurse
         curlies = curly_queue.pop(0)
@@ -169,7 +169,7 @@ def generate_entity_tree_and_non_unique(
                     base_text=entity_text, curlies_parsed=curlies_parsed
                 )
                 for curly in curlies_parsed:
-                    if not curly["entity"]:
+                    if not curly["entity"] or curly["quantity"] == 0:
                         pass
                     else:
                         curly_queue += [[curly] * curly["quantity"]]
@@ -215,6 +215,9 @@ def generate_entity_tree_text(
     entity_tree, non_unique_entities = generate_entity_tree_and_non_unique(
         base_curly, all_data, expand_entities, roll_dice
     )
+
+    pprint(entity_tree)
+
     non_unique_text = """--------\nNon Unique Entities:\n--------"""
     entity_text = """\n--------\nUnique Entities, Full Tree:\n--------"""
 
