@@ -56,7 +56,7 @@ def enlist(
         if df.empty:
             enlist_base.pop(e_type)
     if not output_filepath:
-        output_filepath = os.path.join("cards", "entities.txt")
+        output_filepath = os.path.join("output", "entities.txt")
     entities = ""
     for df in enlist_base.values():
         entities += (
@@ -86,7 +86,7 @@ def command_generate_cards(
     # get entity list either from file or passed arguments
     if input_filepath:
         if input_filepath == "e":
-            input_filepath = os.path.join("cards", "entities.txt")
+            input_filepath = os.path.join("output", "entities.txt")
             # just a little shortcut to the default
         with open(input_filepath) as f:
             card_entities = f.readline().split(sep=",")
@@ -94,7 +94,7 @@ def command_generate_cards(
         card_entities = cards.split(",")
     assert card_entities
     if not output_filepath:
-        output_filepath = os.path.join("cards", "cards")
+        output_filepath = os.path.join("output", "cards")
     m.generate_cards(card_entities, all_data, card_type, output_filepath)
 
 
@@ -156,7 +156,7 @@ card_p.add_argument(
     "--input_filepath",
     help="""Use the -i flag if you want to pass a .txt file containing just clean_names separated by commas. Example:
     a_sword,a_hat,a_potion,three_tchoks_in_a_trenchcoat
-    "e" is an alias for ./cards/entities.txt which is the default location that enlist will drop entities into, so you can use "-i e" to save a bit of typing if you used the default filepath for enlist.
+    "e" is an alias for ./output/entities.txt which is the default location that enlist will drop entities into, so you can use "-i e" to save a bit of typing if you used the default filepath for enlist.
     """,
 )
 card_p.add_argument(
@@ -170,7 +170,7 @@ card_p.add_argument(
 enlist_p = subparsers.add_parser(
     "enlist",
     help="""TODO: improve this
-Use "enlist" to create a .txt list of entities. By default all entities will be gathered and the output file will be at cards/entities.txt""",
+Use "enlist" to create a .txt list of entities. By default all entities will be gathered and the output file will be at output/entities.txt""",
 )
 enlist_p.add_argument(
     "-t",
@@ -193,7 +193,7 @@ enlist_p.add_argument(
 enlist_p.add_argument(
     "-o",
     "--output_filepath",
-    help="""Where the .txt should be written and what it should be named. By default it will be written at cards/entities.txt""",
+    help="""Where the .txt should be written and what it should be named. By default it will be written at output/entities.txt""",
 )
 
 if __name__ == "__main__":

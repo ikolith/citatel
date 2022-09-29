@@ -71,7 +71,7 @@ async def self(
         e_type,
         filter_tags_include,
         filter_tags_exclude,
-        os.path.join("cards", "bot_cards", (list_name + ".txt")),
+        os.path.join("output", "bot_output", (list_name + ".txt")),
     )
     await interaction.response.send_message(":white_check_mark:")
 
@@ -90,16 +90,16 @@ async def self(
     if list_name == "e":
         list_name = "enlist"
     list_name = (
-        os.path.join("cards", "bot_cards", (list_name + ".txt")) if list_name else ""
+        os.path.join("output", "bot_output", (list_name + ".txt")) if list_name else ""
     )
     g.command_generate_cards(
         card_type,
         cards,
         list_name,
-        os.path.join("cards", "bot_cards", "cards"),
+        os.path.join("output", "bot_output", "cards"),
     )
     await interaction.response.send_message(
-        file=discord.File(fp=os.path.join("cards", "bot_cards", "cards.pdf"))
+        file=discord.File(fp=os.path.join("output", "bot_output", "cards.pdf"))
     )
 
 
