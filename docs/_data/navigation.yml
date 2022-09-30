@@ -13,6 +13,15 @@ sidebar:
       url: _pages/rules_and_resources/rules
     - title: "Common Status Effects"
       url: _pages/rules_and_resources/status_effects
+    # - title: "NPC Creation" commented out because it really only talks about the .csv
+    #   url: _pages/rules_and_resources/npc_creation
+    - title: "Weapon Creation"
+      url: _pages/rules_and_resources/weapon_creation
+    # - title: "Skill Creation" commented out because.. eh, doesn't seem super useful to most folks
+    #   url: _pages/rules_and_resources/skill_creation
+
+
+
   - title: Talaje
     children: 
     - title: "About Talaje"

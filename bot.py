@@ -19,7 +19,7 @@ async def post_text(text: str, interaction: discord.Interaction) -> None:
             f.write(text)
         await interaction.response.send_message(
             file=discord.File(
-                fp=os.path.join("output", "bot_output", "long_message.txt") #annoying to bounce this 
+                fp=os.path.join("output", "bot_output", "long_message.txt")
             )
         )
 
