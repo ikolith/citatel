@@ -19,6 +19,8 @@ sidebar:
       url: _pages/rules_and_resources/weapon_creation
     # - title: "Skill Creation" commented out because.. eh, doesn't seem super useful to most folks
     #   url: _pages/rules_and_resources/skill_creation
+    - title: "Shield and Armor Creation"
+      url: _pages/rules_and_resources/shield_and_armor_creation
 
 
 
