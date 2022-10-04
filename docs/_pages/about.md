@@ -6,7 +6,7 @@ toc: true
 
 ### What is all this?
 
-"citatel" is the website. It is public home of "tactile", the system.  
+"citatel" is the website. It is the public home of "tactile", the system.  
 
 The "sixtem" is the use of 2d6 for checks and contests with attributes centered around 0. "tactile" is that plus all the other rules. There are two reasons for the distinction. The first is that they were written independently, while "tactile" was being created several different dice, combinations of dice, and attribute mechanics were used. The second more important reason is that "sixtem" is a fun name and I like it. The distinction between "tactile" and "sixtem" is post-hoc and not important.
 

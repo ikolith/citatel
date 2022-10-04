@@ -1,4 +1,5 @@
 from typing import NewType
+from functools import cache
 import pandas as pd
 import py_utils.dice_utils as d
 import py_utils.entity_text_generators as g
@@ -50,6 +51,7 @@ def get_all_data(
     return all_data
 
 
+@cache
 def parse_curlies(text: str) -> list[dict[str, str, str, int]]:
     curlies = re.findall(r"{[^}]*}", text)
     curlies_parsed = []
@@ -104,11 +106,12 @@ def get_replacement_text(
     return base_text
 
 
+@cache
 def search_all_data(clean_name: str, all_data: dict) -> tuple[str, pd.Series]:
     for entity_type, data in all_data.items():
         if clean_name in data.clean_name.values:
             return entity_type, data.loc[data["clean_name"] == clean_name].squeeze()
-            # TODO: this sucks. search_all_data was built to return one series, one row. increasingly there are cases where we want many rows, and calling this many times is pretty suboptimal. neither this function nor any of the functions that rely on it can handle many rows. This should return a dataframe and take as input a list of clean_names.. probably. also generate_entity_tree(_text) or whatever should cache more. optimizations needed.
+            # TODO: this sucks. search_all_data was built to return one series, one row. increasingly there are cases where we want many rows, and calling this many times is pretty suboptimal. neither this function nor any of the functions that rely on it can handle many rows. This should return a dataframe and take as input a list of clean_names.. probably.
     raise Exception(f"Couldn't find {clean_name} in all_data")
 
 
@@ -120,6 +123,7 @@ def text_has_children(text: str) -> bool:
     return any([curly["entity"] for curly in parse_curlies(text)])
 
 
+@cache
 def search_for_text(
     clean_name: str, all_data: dict, text_type: str = "plaintext"
 ) -> str:
@@ -215,8 +219,6 @@ def generate_entity_tree_text(
     entity_tree, non_unique_entities = generate_entity_tree_and_non_unique(
         base_curly, all_data, expand_entities, roll_dice
     )
-
-    pprint(entity_tree)
 
     non_unique_text = """--------\nNon Unique Entities:\n--------"""
     entity_text = """\n--------\nUnique Entities, Full Tree:\n--------"""
