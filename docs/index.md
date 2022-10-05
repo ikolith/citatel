@@ -4,8 +4,8 @@ sidebar:
 nav: sidebar
 ---
 
-This is the public home of "tactile". More info is can be found in the [About](./_pages/about.md) page.
+This is the public home of "tactile". More info can be found in the [About](./_pages/about.md) page.
 
-If you got this link, please refrain from sharing it. I'm not willing to pay for Github Plus or whatever to make this private. If this looks unfinished that's because it is. Most of the content that actually exists isn't even here yet, and there isn't even enough content counting what isn't here. However, all of the [code](./_pages/code_and_downloads/code.md)  *is* here.
+This is unfinished. Most of the content that actually exists isn't here yet, and even if it was, a lot would still have to be done. All of the [code](./_pages/code_and_downloads/code.md) *is* here. 
 
-Send me ideas, critique, pages that need better editing. I am trying not to lose *too* much time to editing, so probably I missed things. Send it to me on discord.
+This still needs to be play-tested extensively. I try to run games sometimes. If you want to be involved contact me on github or message me on discord. Any sort of contributions, input, or involvement are welcome. 
