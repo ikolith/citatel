@@ -36,13 +36,6 @@ First, effects that take place “at the beginning of your next turn” take pla
 
 **If you're using the optional interrupt rules:** Ending your turn means the next person in initiative goes, but if you have the AP you can always still try to use a move with [interrupt]. Remember, if your turn has passed, the interrupt attempt doesn’t cost AP, but you still have to have a contest with whoever you’re trying to interrupt if they don't want you to interrupt them, for example, all enemies. 
 
-## Too Much Snark for the Case for Encumbrance
-
-In the fantasy books we read the hero sets off on his horse in the night with a hastily thrown together pack containing some clothes, some cheese, meat, bread, and his father's sword hidden under his cloak. He meets many strange people and ends up in dangerous situations. He doesn't stop by Wal-Generalstore for his Standard Adventurer's Pack, get stopped by a ravine with a shack next to it, and go "well, I woulda taken the one with the grappling hook" and then take 20 to "grapple hook across" the ravine.  
-
-You're a looney tunes character in a world of people who are supposed to intrigue you or pose a threat to you but don't get to carry a STRV-103 for three months because they "forget they had it".
-
-
 ## Skill Points and Character Advancement or How I Learned to Stop Worrying and Play Calvinball
 
 There is no XP, there is no structured way to gain skill points, skill points are awarded by the DM for solving problems, winning combat encounters, etc. Skill points can, are often, earmarked for something relevant to what you were doing. So, if you’re a STR based warrior who has been fighting for the last couple hours, you might get SP earmarked for that, rather than SP that can be used to improve your persuasion. If you want to improve your persuasion, work at it somehow. Persuade some folks. TTYDM. Character advancement is admittedly calvinball right now.

@@ -520,19 +520,11 @@ Fall damage is a d6 for every 6 spaces up to 25d6.
 
 You can take 10 minutes to work at something (that you can try repeatedly at where there is no cost for failure) to treat your check as a 10 + relevant modifiers.
 
-## Encumbrance
+## Encumbrance and Rations
 
 Encumbrance is measured in encs. Encs are a combined measure of weight and unwieldiness. Most weapons are 1 enc. A [heavy] weapon is 2 encs. A days worth of food and water is 1. 3 small items, like a book, a dagger, and some bandages together take 1 enc. Negligible items like quills and needles don't take up any encs, unless the DM determines you are carrying "way too many".  
 
-Players must describe and account for how they are moving their things. They take "reasonable" penalties for impractical methods. If they tie a bunch of swords together and then hang that off of their neck, they will have a hard time stealthing, and if they fall over while wearing their dangerous wind chimes they're going to have a bad time.
-
-### A Case for Encumbrance
-
-Yes, yes, everyone hates encumbrance. You can take it out of the game and nothing would break mechanically. But hear me out. In this game players and NPCs are much closer to one another in HP and damage than in most others. The way you get an edge on someone else in combat is figuring out how you can best deal with the situation with what you have on hand and what you've prepared. Fights should be determined both by quick thinking and preparation. When trading with someone on the road, you have to trade with something you brought. If you're delivering something to someone or hiding something, you have to keep it somewhere.These logistical questions should cause you to engage with the world like it's a real place and make decisions about what you want to take with you and what you want to leave, what is important to your character and why. This allows different weapons, items, and characters to shine in different contexts. This encourages different people in the party to take up different roles, acquire skills, and build out their character as their character adapts to the situations they find themselves in rather than picking up some cluster of disconnected attributes to fill out a fantasy archetype.
-
-If you're carrying every weapon and item you've seen and liked, wearing full plate all day every day, and outfitted with a general store worth of ropes, chains, stoves, etc. then you're already prepared for everything and you don't need to make any decisions. There are a lot of tense situations that just can't happen, you can't run out of medical equipment or food and water, money isn't real or necessary, and you don't have to talk to non-Quest-Relevant people. The cool outlander in the party isn't the only thing that's going to get you through the threatening wilderness, he's just a guy with a silly hat and a funny voice. 
-
-Encumbrance rules tend to slow games down quite a bit. The rules here are very light and the amount of stuff you have to track is small. Ease of use is prioritized over accuracy.
+Players must describe and account for how they are moving their things. They take "reasonable" penalties for impractical methods. If they tie a bunch of swords together and then hang that off of their neck, they will have a hard time stealthing. If they fall over while wearing the described necklace of dangerous wind chimes they're going to have a bad time.
 
 ### Storage Spaces, The "Personal" Space and Bags
 
