@@ -21,13 +21,10 @@ sidebar:
     #   url: _pages/rules_and_resources/skill_creation
     - title: "Shield and Armor Creation"
       url: _pages/rules_and_resources/shield_and_armor_creation
-
-
-
   - title: Talaje
     children: 
-    - title: "About Talaje"
-      url: _pages/talaje/about_talaje
+    - title: "Lore"
+      url: _pages/talaje/lore
     # - title: "Entity Tables"
     #   url: _pages/talaje/entities
     - title: "Language"

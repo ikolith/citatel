@@ -2,6 +2,9 @@ collections:
   npcs_and_factions:
     output: true
     permalink: /:collection/:path/
+  lore:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Build settings
