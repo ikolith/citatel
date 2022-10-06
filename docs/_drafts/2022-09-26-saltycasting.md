@@ -4,17 +4,17 @@ title: Salt, Mist, HYLIC, PSYCHIC
 
 **New Scores, New Mechanics, New Friends, New Me, New You**
 
-This is a mess. It was written for the Salt Mines and ended up in Talaje.
+This is a mess. It was written for the Salt Mines setting which no longer exists and it ended up in Talaje.
 
 ## HYLIC and PSYCHIC 
 
-Two new stats are introduced in Talaje, specifically in the tunnels of the End. These are HYLIC and PSYCHIC. PSYCHIC is used for channeling and accessing powers beyond oneself. It used for fine manipulation of complex things far away. PSYCHIC is the main score for mist related magic. HYLIC is for exerting control over the immediate, the physical, and the self. HYLIC allows you to efficiently and effectively manipulate SALT, primarily to augment physical abilities. It roughly maps to a force of will, embeddedness with the physical world and one's own body. It's not very clear to describe, or, apparently, ascribe a SCORE to. If you are using an external resource and shaping yourself or the world through yourself, it is HYLIC.
+Two new stats are introduced in Talaje, specifically in the tunnels of the End. These are HYLIC and PSYCHIC. PSYCHIC is used for channeling and accessing powers beyond oneself. It's used for fine manipulation of complex things far away. PSYCHIC is the main score for mist related magic. HYLIC is for exerting control over the immediate, the physical, and the self. HYLIC allows you to efficiently and effectively manipulate SALT, primarily to augment physical abilities. It roughly maps to a force of will, embeddedness with the physical world and one's own body. If you are using an external resource and shaping yourself or the world through yourself, it is HYLIC.
 HYLIC for SALT.  
 PSYCHIC for MIST. 
 
 ## Salt
 
-"Salt" comes in two forms. The first is the alchemically active pure SALT found deep in the earth or in the End (this is used as a magical resource, so to avoid confusion it's typically written in all caps, "SALT"). The second is any adulterated form of the first, including the sort of salt used in cooking. Alchemical SALT can be transformed into a much larger amount of conventional salt, or it might be used to fuel some spell. SALT is the main currency in the underground. SALT is measured in "flakes" denoted as "f". 1 full unit of SALT used in casting is equivalent in mass to 100f. You can use SALT to buy and sell, a pickaxe might cost 40f. SALT when used as a casting resource is like POISON or BLEED, it's a status effect tracked by tokens. The main mechanical use of SALT is to enhance physical abilities. SALT naturally wears off at the rate of 1 SALT per hour. Having SALT equal to or greater than 6 + HYLIC at the beginning of your turn causes you to take 20 damage. 
+"Salt" comes in two forms. The first is the alchemically active pure SALT found deep in the earth or in the End (this is used as a magical resource, so to avoid confusion it's typically written in all caps, "SALT"). The second is any adulterated form of the first, including the sort of salt used in cooking. Alchemical SALT can be transformed into a much larger amount of conventional salt, or it might be used to fuel some spell. SALT is the main currency in the underground. SALT is measured in "flakes" denoted as "f". 1 full unit of SALT used in casting is equivalent in mass to 100f. A pickaxe might cost 40f. SALT when used as a casting resource is like POISON or BLEED, it's a status effect tracked by tokens. SALT naturally wears off at the rate of 1 SALT per hour. Having SALT equal to or greater than 6 + HYLIC at the beginning of your turn causes you to take 20 damage. 
 
 ### Casting, but Salty
 
@@ -26,7 +26,7 @@ There are basically two ways to use SALT, "burning" over a long period, typicall
 - The total amount of SALT you are burning and flaring at any one time cannot exceed your HYLIC score (though your SALT itself *can* exceed your HYLIC).
 - While you are burning SALT for an ability, that SALT still counts towards your total SALT. If you choose to shut off an ability before it would naturally go away, the ability ends, but the SALT still has to go away naturally. 
 
-#### Chitinous Strata (1 SP)
+<!-- #### Chitinous Strata (1 SP)
 
 Requires: 1 HYLIC  
 
@@ -62,17 +62,17 @@ Both of these can be flared to increase by 1 more for 1 minute.
 If you have at least 2 HYLIC: 
 
 AGI: Increase AGI and move speed by 1 and move for 1 hour by continuously burning SALT. Can be flared for 1 SALT to leap 6 spaces.
-PERCEPTION: Increase perception by 1 for 6 hours by continuously burning SALT, can replace 4 hours of sleep. Can be flared by burning 1 SALT to add +3 to checks made with one sense for 5 minutes.
+PERCEPTION: Increase perception by 1 for 6 hours by continuously burning SALT, can replace 4 hours of sleep. Can be flared by burning 1 SALT to add +3 to checks made with one sense for 5 minutes. -->
 
-### Notes on other moves not available at the start of the game, that exist elsewhere.
+<!-- ### Notes on other moves not available at the start of the game, that exist elsewhere.
 
 - Ability that requires 3 HYLIC, and requires burning 3 SALT. If you are reduced to 0 HP but not killed outright, stay at 1 HP.
 - Way of Constant Secretion: The patented crust punk move, always be gaining 1 SALT, can't sleep.
-- Ability to shift what attribute you are using between STR CON and AGI with Salubrity.
+- Ability to shift what attribute you are using between STR CON and AGI with Salubrity. -->
 
-# Some Gameplay and Move Notes on MIST and PSYCHIC
+<!-- # Some Gameplay and Move Notes on MIST and PSYCHIC
 
-MIST abilities are rarer to start with than SALT, and users of MIST are less trusted or understood. Where SALT damage is more bludgeoning/piercing heavy, MIST is more slashing/grappling/debuff/manipulation heavy. Where the SALT resource is external, the MIST resource is "internal", you can lower your own stats in order to pull more from the mists, (mist is more... up in the air right now. Mist allows you to create entities, or pseudo entities, in the form of the mist itself, which you can manipulate for attacks or utility. Mist users typically have vessels they store some mist in and keep on hand. Mist is exhaled, and requires focus on the breath. Mist users must be able to breathe. Mist requires concentration to maintain channeling. Mist use might be aided by some kind of mask. If certain conditions are met, like the destruction of the mists or sudden involuntary separation from the mists, the user does not get their stats or resources back immediately, they must recover slowly. MIST is less directly combat oriented than SALT. Fire is a hard counter to mist.
+MIST abilities are rarer to start with than SALT, and users of MIST are less trusted or understood. Where SALT damage is more bludgeoning/piercing heavy, MIST is more slashing/grappling/debuff/manipulation heavy. Where the SALT resource is external, the MIST resource is "internal", you can lower your own stats in order to pull more from the mists, (mist is more... up in the air right now. Mist allows you to create entities, or pseudo entities made of mist which you can manipulate for attacks or utility. Mist users typically have vessels they store some mist in and keep on hand. Mist is exhaled, and requires focus on the breath. Mist users must be able to breathe. Mist requires concentration to maintain channeling. Mist use might be aided by some kind of mask. If certain conditions are met, like the destruction of the mists or sudden involuntary separation from the mists, the user does not get their stats or resources back immediately, they must recover slowly. MIST is less directly combat oriented than SALT. Fire is a hard counter to mist.
 
 #### More Mist Notes More Specific
 
@@ -156,4 +156,4 @@ Though some are very gross some are, like golden moles, downright [precious](htt
 
 ## The Operators
 
-You know I love me a good walrus operator.
+You know I love me a good walrus operator. -->
