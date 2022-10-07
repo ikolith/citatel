@@ -2,11 +2,11 @@
 title: The End of the World
 ---
 
-As you head east you approach the End of the World. You climb gentle hills that drop down to valleys only to climb again up to higher plateaus. As you near the End the climbs and descents both become steeper, but every peak is higher than the last. The geographical features become like nested moats and taluses guarding the End. The End itself is more like a sheer wall of stone than a mountain range, there is no peak visible. The layers of stone extend up into the sky and away forever.  
+As you head east you approach the End of the World. You climb gentle hills that drop down to valleys only to climb again up to higher plateaus. As you near the End, the climbs and descents both become steeper but every peak is higher than the last. The geographical features become like nested moats and taluses guarding the End. The End itself is more like a sheer wall of stone than a mountain range, there is no peak visible. The layers of stone extend up into the sky and away forever.  
 
-You reach the End. You stand in the highlands at its foot with your back to it and look back at the infinite horizon formed by the sky and the land below you. You then turn around to face the End again and look straight up to see another infinite horizon. This horizon is the line between the rock formations and hanging forests of the End and the sky, with mists and clouds dancing between them.  
+You reach the End. You stand in the highlands at its foot with your back to it. You look back at the infinite horizon formed by the sky and the land below you. You then turn around to face the End again and look straight up to see another infinite horizon. This horizon is the line between the rock formations and hanging forests of the End and the sky, with mists and clouds dancing between them. 
 
-This journey is long, dangerous, and expensive. It means going right up to the limit of the known world. To go past this point, to go into the End itself is for the suicidally greedy, the desperate, religious zealots, or the insane.
+This journey is long, dangerous, and expensive. It means going right up to the limit of the known world. To go past this point, to go into the End itself is for the suicidally greedy, the desperate, religious zealots, and the insane.
 
 ## The End in Culture
 
