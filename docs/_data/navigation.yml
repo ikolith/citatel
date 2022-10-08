@@ -22,7 +22,7 @@ sidebar:
     - title: "Shield and Armor Creation"
       url: _pages/rules_and_resources/shield_and_armor_creation
     - title: Known Issues and Todo
-      url: _pages/todo
+      url: _pages/rules_and_resources/todo
   - title: Talaje
     children: 
     - title: "Lore"
