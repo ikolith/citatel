@@ -1,0 +1,23 @@
+---
+title: Those Who Belong
+---
+
+Those without a cure will deny their disease. They live apart from the earth in a feverish half consciousness before multiplying their fitful confusions and flaring out, leaving only a stain and a memory that fades faster even than themselves.  
+
+Those of the World have kept their gifts to themselves for millennia while creating great works spanning geologic time, but contemplation is broken again and again by those without time for themselves or each other. They have no patience for beauty.
+
+They must be shown the right way. If given the time, they will learn the error of their ways. The People carry great slow blades formed by the perfection of chance. They bring the gift of life without panic, without a diseased flurry of activity.
+
+It must be noted that some among the People take another path, they walk quietly to the bottom of a waterway. They let the slow deposit of earth encase them. They wait that they might find themselves in another place and another time, eventually.
+
+## Appearance
+
+They are humanoid. They are a dense black clay slowly shifting between carefully curated and arranged stones. Their heads are great rounded shapes, dull and pocked. Inside of their heads are crystals of incomparable beauty. Priceless gems, highly coveted.
+
+<!-- More practically, being hit by their blades means losing AP under certain conditions, rolling max damage? As you're hit, your body is converted into this same dark clay. They are high HYLIC high PSYCHIC, they guard their palaces, they are nearly immune to (P) and (S), they are unaffected by statuses like [bleed] and [poison] that rely on damaging or otherwise manipulating biological processes. They can practically only be hurt by high amounts of (B), best directed at their heads.
+
+If one is killed it should be described in a way that is unsettlingly violent, the beauty in their heads spills out into the world. Something rare, ancient, natural, beautiful, correct, is dying.
+
+Finding these should signal that a group is deep deep into something ancient. For them to seek out the living indicates that something is going terribly wrong. They will fight if pushed to it, to guard their civilizations. If they are raiding or otherwise attacking, it is an indicator of something terrible, they do not do so lightly. 
+
+They can communicate telepathically, they do this very very rarely, preferring the silence. They have a mastery over the light that the Radiats wield so callously. The Radiats hate them for this, Those Who Belong see the Radiats and their xenophobic purges as an honest reflection of life that does not belong. Anyway, the Radiats keep most of the violence to other groups that are a problem. Those Who Belong see the Radiats as almost more direct, more honest a form of quick life, they see their shallow understanding of light as funny. -->
