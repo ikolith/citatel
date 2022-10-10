@@ -43,7 +43,7 @@ Skill point value: 8
 
 #### Has:
 
-1500f and 10 points of medical equipment in a {rucksack}.
+1500f and 10 points of medical equipment in a {rucksack}. {rondel_dagger}.
 
 #### Wants:
 
