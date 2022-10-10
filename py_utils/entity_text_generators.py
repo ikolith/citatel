@@ -1,11 +1,12 @@
 import pandas as pd
 from pylatex.utils import NoEscape
+import os
 
 # single entity text generators. used for cli and various utilities.
 
 
 def name_plaintext(text: str) -> str:
-    return f"""### {text}"""
+    return f"""### {text}  """
 
 
 def flavor_plaintext(text: str) -> str:
@@ -17,41 +18,46 @@ def flavor_plaintext(text: str) -> str:
 
 def generate_weapon_plaintext(row: pd.Series) -> str:
     row["basic_attacks"] = row["basic_attacks"].replace(",", "\n-")
-    return f"""{name_plaintext(row['name'])}
-    Tags: {row['tags']}
-    Requires: {row['requirements']}
-    Speed: {row['speed']}, To-Hit: {row['to_hit']}
-    - {row['basic_attacks']}
-    {row['effect']}
-    {flavor_plaintext(row['flavor_text'])}""".strip()
+    return f"""{name_plaintext(row['name'])}  
+Tags: {row['tags']}  
+Requires: {row['requirements']}  
+Speed: {row['speed']}, To-Hit: {row['to_hit']}  
+- {row['basic_attacks']}  
+{row['effect']}  
+
+{flavor_plaintext(row['flavor_text'])}""".strip()
 
 
 def generate_invocation_plaintext(row: pd.Series) -> str:
-    return f"""{name_plaintext(row['name'])}, Target: {row['target']}
-    {row['effect']}
-    {flavor_plaintext(row['flavor_text'])}""".strip()
+    return f"""{name_plaintext(row['name'])}  
+Target: {row['target']}  
+{row['effect']}  
+  
+{flavor_plaintext(row['flavor_text'])}""".strip()
 
 
 def generate_item_plaintext(row: pd.Series) -> str:
-    return f"""{name_plaintext(row['name'])}
-    {row['effect']}
-    {flavor_plaintext(row['flavor_text'])}""".strip()
+    return f"""{name_plaintext(row['name'])}  
+{row['effect']}  
+  
+{flavor_plaintext(row['flavor_text'])}""".strip()
 
 
 def generate_npc_plaintext(row: pd.Series) -> str:
-    return f"""{name_plaintext(row['name'])}
-    HP: {row['hp']}, Scores: {row['scores']}
-    Skills: {row['skills']}
-    Holds: {row['holds']}
-    {row['flavor_text']}""".strip()
+    return f"""{name_plaintext(row['name'])}  
+HP: {row['hp']}, Scores: {row['scores']}  
+Skills: {row['skills']}  
+Holds: {row['holds']}  
+  
+{row['flavor_text']}""".strip()
 
 
 def generate_skill_plaintext(row: pd.Series) -> str:
-    return f"""{name_plaintext(row['name'])}
-    Requires: {row["requirements"]}
-    SP Cost: {row["cost"]}
-    {row["effect"]}
-    """
+    return f"""{name_plaintext(row['name'])}  
+Requires: {row["requirements"]}  
+SP Cost: {row["cost"]}  
+{row["effect"]}
+"""
 
 
 # start of latex formatting section
@@ -259,3 +265,29 @@ def generate_entity_text(
         else:
             raise Exception("Unsupported entity type.")
     return text
+
+
+def all_entities_md(
+    all_data: dict,
+    output_filepath: str = os.path.join(
+        "docs", "_pages", "talaje", "generated_entities.md"
+    ),
+) -> None:
+    contents = """---
+title : Generated Markdown for All Entities
+toc : True
+---
+<!-- Don't try to edit this file directly, there is no point. This is generated using the all_entities_md() function in (starting at the top of the whole project) py_utils/entity_text_generators.py-->
+
+The following is a programmatically generated entry for every entity in the game using the entity .csvs.
+
+"""
+    for entity_type in all_data:
+        contents += "## " + entity_type.capitalize() + "  \n\n"
+        df = all_data[entity_type].sort_index()
+        for index, row in df.iterrows():
+            contents += (
+                generate_entity_text(entity_type, row, "plaintext") + "  " + "\n\n"
+            ) + "  \n"
+    with open(output_filepath, "w") as f:
+        f.write(contents)

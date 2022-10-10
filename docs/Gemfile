@@ -34,7 +34,6 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # minimalmistakes stuff
 
-# gem "github-pages", group: :jekyll_plugins # this is what the tutorial wanted me to do, specifying version instead
 gem "jekyll-include-cache", group: :jekyll_plugins
 
 # ???

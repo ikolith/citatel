@@ -49,6 +49,9 @@ def get_all_data(
             all_data[entity] = load(path).set_index(
                 "clean_name", inplace=False, drop=False
             )
+            all_data[entity].index.names = [
+                "clean_name_index"
+            ]  # this is kind of hacky, but it *does* clear up the ambiguity...
             all_data[entity]["filter_tags"] = all_data[entity]["filter_tags"].map(
                 lambda x: x.replace(" ", "").split(sep=",")
             )
