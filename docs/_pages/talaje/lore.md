@@ -1,5 +1,5 @@
 ---
-title: Lore
+title: Lore and Setting Rules
 layout: collection
 collection: lore
 entries_layout: grid

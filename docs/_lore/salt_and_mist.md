@@ -2,10 +2,6 @@
 title: Salt, Mist, HYLIC, PSYCHIC
 ---
 
-**New Scores, New Mechanics, New Friends, New Me, New You**
-
-This is a mess. It was written for the Salt Mines setting which no longer exists and it ended up in Talaje.
-
 ## HYLIC and PSYCHIC 
 
 Two new stats are introduced in Talaje. These are HYLIC and PSYCHIC. PSYCHIC is used for channeling and accessing powers beyond oneself. It's used for fine manipulation of complex things far away. PSYCHIC is the main score for mist related magic. HYLIC is for exerting control over the immediate, the physical, and the self. HYLIC allows you to efficiently and effectively manipulate SALT to augment physical abilities. It roughly maps to a force of will, embeddedness within the physical world and control of one's own body. If you are using an external resource and shaping yourself or the world through yourself, it is HYLIC.  
@@ -29,7 +25,7 @@ There are two common ways to use [SALT], "burning" over a long period, typically
 
 ## MIST
 
-
+Mist/PSYCHIC rules coming soon.
 
 <!-- #### Chitinous Strata (1 SP)
 
