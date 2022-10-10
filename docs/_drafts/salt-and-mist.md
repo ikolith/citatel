@@ -138,10 +138,14 @@ Deep sea fey with many teeth, keepers of arcane knowledge, associated with the m
 ### The Reviled
 
 The Reviled live in the useless putrid saltwater, saltwater not considered suitable for any dignified or intelligent sort of life.  
-They call prefer to call themselves "Saturants". They claim their own place in the celestial order by associating not with the sun or moon, but with Saturn, claiming the rings around Saturn to be an endless river of salt. They are ignored. One has to wonder how they found out about Saturn to begin with.  
+They are often pacifists. They teach that that there is no difference between the HYLIC and the PSYCHIC, and that there is no self either. Both schools are ways of engaging with the singular being that everything is. HYLIC starts from the apparent self, raising it up and building outward into the world. PSYCHIC rejects the self as illusory and builds paths from without, from the great universal total, towards ones self, unseating the self and communing with the other. Truly, the saturants say, this is just a pragmatic and frankly lazy path to understanding everything. No bridges need to be built, the only thing that is needed is to recognize the inherent unity of all things. Everyone fucking hates these guys.
 
 The following section really only applies to the Salt Mine setting, or a similar setting that plays liberally with real-world places.
+
+They call prefer to call themselves "Saturants". They claim their own place in the celestial order by associating not with the sun or moon, but with Saturn, claiming the rings around Saturn to be an endless river of salt. They are ignored. One has to wonder how they found out about Saturn to begin with.
+
 >Players engaging with the Reviled can learn of a cosmology relating major and minor celestial bodies as:  
+
 Sun/Salt -> Mars
 Moon/Water -> Neptune
 Where Saturn is actually unified, with the planet as the major body and the rings as the minor.  
