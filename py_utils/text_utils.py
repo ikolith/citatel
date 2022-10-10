@@ -11,11 +11,13 @@ import os
 
 
 def load(path: str) -> pd.DataFrame:
-    return pd.read_csv(path, header=0).dropna(subset="name").fillna("")
+    return (
+        pd.read_csv(path, header=0).dropna(subset="name").fillna("")
+    )  # should this be a one-liner? not sure
 
 
 def clean_name(name: list) -> list:
-    """Returns a name in lowercase with whitespace stripped, " " and "-" replaced with "_" and every other chatacter removed."""
+    """Returns a name in lowercase with whitespace stripped, " " and "-" replaced with "_" and every other character removed."""
     return re.sub(
         r"[^a-z1-9_]", "", name.lower().strip().replace(" ", "_").replace("-", "_")
     )
@@ -44,7 +46,9 @@ def get_all_data(
     for entity, path in paths.items():
         if path:
             csv_add_clean_name(path)
-            all_data[entity] = load(path)
+            all_data[entity] = load(path).set_index(
+                "clean_name", inplace=False, drop=False
+            )
             all_data[entity]["filter_tags"] = all_data[entity]["filter_tags"].map(
                 lambda x: x.replace(" ", "").split(sep=",")
             )
@@ -106,13 +110,21 @@ def get_replacement_text(
     return base_text
 
 
-@cache
+row_cache = {}
+# had to cache this myself, f
 def search_all_data(clean_name: str, all_data: dict) -> tuple[str, pd.Series]:
-    for entity_type, data in all_data.items():
-        if clean_name in data.clean_name.values:
-            return entity_type, data.loc[data["clean_name"] == clean_name].squeeze()
-            # TODO: this sucks. search_all_data was built to return one series, one row. increasingly there are cases where we want many rows, and calling this many times is pretty suboptimal. neither this function nor any of the functions that rely on it can handle many rows. This should return a dataframe and take as input a list of clean_names.. probably.
-    raise Exception(f"Couldn't find {clean_name} in all_data")
+    if clean_name not in row_cache:
+        for entity_type, data in all_data.items():
+            if clean_name in data.index:
+                row_cache["clean_name"] = {
+                    "entity_type": entity_type,
+                    "row": data.loc[clean_name],
+                }
+                return entity_type, data.loc[clean_name]
+    try:
+        return row_cache["clean_name"]["entity_type"], row_cache["clean_name"]["row"]
+    except:
+        raise Exception(f"Couldn't find {clean_name} in all_data")
 
 
 def text_is_unique(text: str) -> bool:
@@ -123,7 +135,6 @@ def text_has_children(text: str) -> bool:
     return any([curly["entity"] for curly in parse_curlies(text)])
 
 
-@cache
 def search_for_text(
     clean_name: str, all_data: dict, text_type: str = "plaintext"
 ) -> str:
