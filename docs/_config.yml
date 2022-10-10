@@ -186,15 +186,17 @@ defaults:  # this is just for posts.. this works, i'm going to try one for _page
 
 repository: "loafee/citatel" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 
-search: true # false (default)
-search_full_content: true # false (default)
-search_provider: google
-# search_engine_id is in the google section...
+search: false # false (default)
+search_full_content: false # false (default)
 
-# cant use lunr because it breaks unless it has a version of jekyll newer than github pages supports! ree!
+#search_provider: algolia
+
 # search_provider: lunr # (default), algolia, google
 # lunr:
 #   search_within_pages:  true # false (default)
+
+# cant use lunr because it breaks unless it has a version of jekyll newer than github pages supports! ree!
+
 
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
@@ -237,8 +239,8 @@ algolia:
   search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
   powered_by             : # true (default), false
 google:
-  search_engine_id       : 41b3d1146b5e64252
-  instant_search         : # false (default), true
+  #search_engine_id       : nope
+  #instant_search         : true #false
 # SEO Related
 google_site_verification :
 bing_site_verification   :
