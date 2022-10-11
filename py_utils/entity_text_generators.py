@@ -1,63 +1,71 @@
 import pandas as pd
 from pylatex.utils import NoEscape
+import py_utils.vars as v
 import os
 
 # single entity text generators. used for cli and various utilities.
 
 
-def name_plaintext(text: str) -> str:
-    return f"""### {text}  """
+def if_field_exists_md(text: str, field_text: str = "") -> str:
+    return field_md(field_text) + " " + text if text else ""
 
 
-def flavor_plaintext(text: str) -> str:
-    if text == "":
-        return text
-    else:
-        return "*" + text + "*"
+def field_md(field_text: str) -> str:
+    return f"**{field_text}**" if field_text else ""
 
 
-def generate_weapon_plaintext(row: pd.Series) -> str:
+def name_md(text: str) -> str:
+    return f"""### {text}"""
+
+
+def flavor_md(text: str) -> str:
+    return "*" + text + "*" if text else ""
+
+
+def generate_weapon_md(row: pd.Series) -> str:
     row["basic_attacks"] = row["basic_attacks"].replace(",", "\n-")
-    return f"""{name_plaintext(row['name'])}  
-Tags: {row['tags']}  
-Requires: {row['requirements']}  
-Speed: {row['speed']}, To-Hit: {row['to_hit']}  
+    return f"""{name_md(row['name'])}  
+{if_field_exists_md(row['tags'],'Tags:')}  
+{if_field_exists_md(row['requirements'], 'Requirements:')}    
+{if_field_exists_md(row['speed'], "Speed:")}, {if_field_exists_md(row['to_hit'],"To Hit:")} 
 - {row['basic_attacks']}  
-{row['effect']}  
 
-{flavor_plaintext(row['flavor_text'])}""".strip()
+{if_field_exists_md(row['effect'])}  
 
-
-def generate_invocation_plaintext(row: pd.Series) -> str:
-    return f"""{name_plaintext(row['name'])}  
-Target: {row['target']}  
-{row['effect']}  
-  
-{flavor_plaintext(row['flavor_text'])}""".strip()
+{if_field_exists_md(flavor_md(row['flavor_text']))}""".strip()
 
 
-def generate_item_plaintext(row: pd.Series) -> str:
-    return f"""{name_plaintext(row['name'])}  
+def generate_invocation_md(row: pd.Series) -> str:
+    return f"""{name_md(row['name'])}  
+{if_field_exists_md(row['target'],"Target:")}    
 {row['effect']}  
   
-{flavor_plaintext(row['flavor_text'])}""".strip()
+{if_field_exists_md(flavor_md(row['flavor_text']))}""".strip()
 
 
-def generate_npc_plaintext(row: pd.Series) -> str:
-    return f"""{name_plaintext(row['name'])}  
-HP: {row['hp']}, Scores: {row['scores']}  
-Skills: {row['skills']}  
-Holds: {row['holds']}  
+def generate_item_md(row: pd.Series) -> str:
+    return f"""{name_md(row['name'])}  
+{row['effect']}  
   
-{row['flavor_text']}""".strip()
+{if_field_exists_md(flavor_md(row['flavor_text']))}""".strip()
 
 
-def generate_skill_plaintext(row: pd.Series) -> str:
-    return f"""{name_plaintext(row['name'])}  
-Requires: {row["requirements"]}  
-SP Cost: {row["cost"]}  
-{row["effect"]}
-"""
+def generate_npc_md(row: pd.Series) -> str:
+    row["skills"] = row["skills"].replace(",", "\n-")
+    return f"""{name_md(row['name'])}  
+{if_field_exists_md(row['hp'],"HP:")}  
+{if_field_exists_md(row['scores'],"Scores:")}    
+{if_field_exists_md(row['skills'],"Skills:")}  
+{if_field_exists_md(row['holds'], "Holds:")}  
+  
+{flavor_md(row['flavor_text'])}""".strip()
+
+
+def generate_skill_md(row: pd.Series) -> str:
+    return f"""{name_md(row['name'])}  
+{if_field_exists_md(row["requirements"],"Requirements:")}  
+{if_field_exists_md(row["cost"],"Cost:")}    
+{(row["effect"])}""".strip()
 
 
 # start of latex formatting section
@@ -207,22 +215,56 @@ def generate_skill_latex(row: pd.Series) -> str:
 
 
 def generate_entity_text(
-    entity_type: str, row: pd.Series, text_type="plaintext"
+    entity_type: str,
+    row: pd.Series,
+    text_type: str = "md",
+    html_characters: bool = False,
 ) -> str:
-    # the {clean_name} type markdown really breaks everything
-    if text_type == "plaintext":
+    if text_type == "md":
+        if html_characters:
+            # these are all in some html version??
+            arrow = "&#8658;"
+            empty_triangle_r = "&#9655;"
+            filled_triangle_r = "&#9654;"
+            triangle_up = "&#9650;"
+            row = row.str.replace(
+                r"[_]", r"\_", regex=True
+            )  # not sure if md needs this but probably does!
+            row = row.str.replace(r"->", f"{arrow}", regex=True)
+            # replacing text with latex glyphs for the [swinging: ...], [thrusting] tags
+            row = row.str.replace(
+                r"\[swinging: following]",
+                f"{filled_triangle_r} {empty_triangle_r} {empty_triangle_r}",
+                regex=True,
+            )
+            row = row.str.replace(
+                r"\[swinging: neutral]",
+                f"{empty_triangle_r} {filled_triangle_r} {empty_triangle_r}",
+                regex=True,
+            )
+            row = row.str.replace(
+                r"\[swinging: leading]",
+                f"{empty_triangle_r} {empty_triangle_r} {filled_triangle_r}",
+                regex=True,
+            )
+            row = row.str.replace(
+                r"\[thrusting]",
+                f"{triangle_up}",
+                regex=True,
+            )
+
         if entity_type == "armors":
             pass  # dont have csvs for armor yet
         elif entity_type == "invocations":
-            text = generate_invocation_plaintext(row)
+            text = generate_invocation_md(row)
         elif entity_type == "items":
-            text = generate_item_plaintext(row)
+            text = generate_item_md(row)
         elif entity_type == "npcs":
-            text = generate_npc_plaintext(row)
+            text = generate_npc_md(row)
         elif entity_type == "weapons":
-            text = generate_weapon_plaintext(row)
+            text = generate_weapon_md(row)
         elif entity_type == "skills":
-            text = generate_skill_plaintext(row)
+            text = generate_skill_md(row)
         else:
             raise Exception("Unsupported entity type.")
     if text_type == "latex":
@@ -269,25 +311,22 @@ def generate_entity_text(
 
 def all_entities_md(
     all_data: dict,
+    html_characters: bool = False,
     output_filepath: str = os.path.join(
         "docs", "_pages", "talaje", "generated_entities.md"
     ),
+    front_matter=v.all_entities_front_matter,
 ) -> None:
-    contents = """---
-title : Generated Markdown for All Entities
-toc : True
----
-<!-- Don't try to edit this file directly, there is no point. This is generated using the all_entities_md() function in (starting at the top of the whole project) py_utils/entity_text_generators.py-->
-
-The following is a programmatically generated entry for every entity in the game using the entity .csvs.
-
-"""
+    contents = front_matter
     for entity_type in all_data:
         contents += "## " + entity_type.capitalize() + "  \n\n"
         df = all_data[entity_type].sort_index()
         for index, row in df.iterrows():
             contents += (
-                generate_entity_text(entity_type, row, "plaintext") + "  " + "\n\n"
-            ) + "  \n"
+                generate_entity_text(entity_type, row, "md", html_characters)
+                + "\n  "
+                + "\n  "
+                + "--- \n"
+            )
     with open(output_filepath, "w") as f:
         f.write(contents)

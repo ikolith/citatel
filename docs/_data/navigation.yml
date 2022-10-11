@@ -27,10 +27,8 @@ sidebar:
     children: 
     - title: "Lore and Setting Rules"
       url: _pages/talaje/lore
-    # - title: "Entity Tables"
-    #   url: _pages/talaje/entities
-    # - title: "All Entities"
-    #   url: _pages/talaje/generated_entities
+    - title: "All Entities"
+      url: _pages/talaje/generated_entities
     - title: "NPCs and Factions"
       url: _pages/talaje/npcs_and_factions
   - title: Code and Downloads

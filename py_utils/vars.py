@@ -74,3 +74,19 @@ card_type: This is the size of each card, "tarot", "poker","square" or "quarter"
 "square" gives 12 cards per sheet at 64mm.
 "quarter" gives 4 cards per sheet at around 100mm, gets tweaked sometimes.
 """
+
+all_entities_front_matter = """---
+title : Generated Markdown for All Entities
+toc : True
+---
+<!-- Don't try to edit this file directly, there is no point. This is generated using the all_entities_md() function in (starting at the top of the whole project) py_utils/entity_text_generators.py-->
+
+The following is a programmatically generated entry for every entity in the game using the entity .csvs.
+
+## Spoilers Ahead
+
+This page tchok-full of spoilers. This is all the content in the entity tables (as of the last time I generated this doc, of course). If you want to avoid spoilers and/or filter the entities you see, the currently available tools are the discord bot and the python command line interface in the repo (cli.py).
+
+There will probably be better online documentation generators down the line. This is here for the sake of completeness and because I thought it couldn't be *that* hard to get them all up here.
+
+"""
