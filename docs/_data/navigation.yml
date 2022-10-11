@@ -31,6 +31,8 @@ sidebar:
       url: _pages/talaje/generated_entities
     - title: "NPCs and Factions"
       url: _pages/talaje/npcs_and_factions
+    - title: "Pre-Rolls"
+      url: _pages/talaje/prerolls
   - title: Code and Downloads
     children:
     - title: "Character Sheets, Handouts, Tables"

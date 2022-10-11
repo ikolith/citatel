@@ -5,6 +5,9 @@ collections:
   lore:
     output: true
     permalink: /:collection/:path/
+  prerolls:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Build settings
