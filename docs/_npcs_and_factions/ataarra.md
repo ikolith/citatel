@@ -8,13 +8,13 @@ Ataarrans are amphibians with long bodies, short limbs, and blunt snouts. They a
 
 HP: 12 To-Hit: 7
 
-STR: -1, Every increase in STR costs x2 as many points up to 4 STR.
-AGI: 1
-DEX: 0
-CON: 0
-PERC: 0
-SOCIAL: 0
-PSYCHIC: 1 Every increase in PSYCHIC costs half as many points (rounded down) up to 4 PSYCHIC.
+STR: -1, Every increase in STR costs x2 as many points up to 4 STR.  
+AGI: 1  
+DEX: 0  
+CON: 0  
+PERC: 0  
+SOCIAL: 0  
+PSYCHIC: 1 Every increase in PSYCHIC costs half as many points (rounded down) up to 4 PSYCHIC.  
 
 Speed when crawling or swimming is 6. Bipedal speed is 3 and it's a funny looking waddle.
 
