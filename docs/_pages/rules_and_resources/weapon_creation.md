@@ -190,12 +190,12 @@ Weapons are classified loosely by weight and ease-of-handling which determines h
 1. [1n1]
 2. [1n1], [1n1], [1n2]*
 
-#### Medium:
+### Medium:
 
 - [1n1], [1n2]
 - [1n2], [2n1]
 
-#### Heavy:
+### Heavy:
 
 - [2n1]
 - [3n1]
