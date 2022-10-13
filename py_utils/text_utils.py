@@ -138,9 +138,7 @@ def text_has_children(text: str) -> bool:
     return any([curly["entity"] for curly in parse_curlies(text)])
 
 
-def search_for_text(
-    clean_name: str, all_data: dict, text_type: str = "plaintext"
-) -> str:
+def search_for_text(clean_name: str, all_data: dict, text_type: str = "md") -> str:
     return g.generate_entity_text(*search_all_data(clean_name, all_data), text_type)
 
 
@@ -152,7 +150,7 @@ def generate_entity_tree_and_non_unique(
     all_data: dict,
     expand_entities=False,
     roll_dice=False,
-    text_type="plaintext",
+    text_type="md",
 ) -> tuple[
     list, dict
 ]:  # this typing could be more verbose.. but really we just need curlies to be a NewType
@@ -213,7 +211,7 @@ def generate_entity_tree_text(
     all_data: dict,
     expand_entities=False,
     roll_dice=False,
-    text_type="plaintext",
+    text_type="md",
 ) -> str:
     base_quantity = base_curly["quantity"]
     # just need this line for the fancy name:

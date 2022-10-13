@@ -29,7 +29,7 @@ def cli_single_curly_parser(
     base_curly = curlies_parsed[0]
 
     # case when only die roll is present
-    if not curlies_parsed[0]["entity"]:
+    if not base_curly["entity"]:
         return str(d.die_parser_roller(base_curly["roll"]))
 
     # all other cases
