@@ -5,7 +5,7 @@ toc: True
 
 The intent is to be able to describe a real or fictional weapon clearly and succinctly so that you capture the intended use and function of the weapon. A person can be better with a certain type of weapon, some skills might only be useful with certain types of weapons, but we don't restrict a given weapon to a rigid and arbitrary typology. We do not care whether a bardiche is an axe, or a glaive is a spear, but the bardiche and the glaive should feel different to the player. Weapons should exist that are crafted for a specific niche, or that straddle the line between different categories. Weapons should feel unique and interesting to find and use.  
 
-## How Weapons are Described, and Why
+## How Weapons are Described and Why
 
 Information about a weapon is stored in two places. The first is in the "Tags" section which includes general information like whether the weapon is [one-handed], [two-handed], [hilted], etc. The second place information is stored is in a given attack, a spear might have an attack that is [thrusting] and does (P) piercing damage.  
 Putting these together, a handaxe is a [shafted] weapon with the [one-handed] tag that contains a [swinging: leading] attack that deals slashing (S) damage. Skills might require a certain damage type or a certain tag, but they won't require the use of an axe or a sword. The system has no opinions about what exactly qualifies as an axe or a sword. The system only describes relevant features of the weapon and what you can do with it.  
@@ -24,15 +24,15 @@ This category includes any tag that is not move-specific. There are no strict re
 
 You do not have to express every effect and quality purely through tags. You can specify different conditions or behaviours in the text of the weapon or along with specific attacks.
 
-#### [one-handed], [two-handed]
+### [one-handed], [two-handed]
 
 These tags capture what you would expect, whether a weapon is meant to be used with one hand or two hands. There are generic rules in the main rules document that allow someone to two-hand a [one-handed] weapon that they might not have the strength to wield, or one-hand a [two-handed] weapon. Most weapons will be built to be either one or two-handed, but some will be designed to be either one or two-handed like a bastard sword. This sort of weapon should be created with tradeoffs in mind. The bastard sword is between the two categories, not quite as fast as a dedicated one-hander, not quite as hard hitting as a dedicated two-hander. When building a weapon like that you can just add both tags so skills for either one or two-handed weapons could be used, or you could specify some different behaviour or effect when the weapon is used with one hand or two.
 
-#### [range: X]
+### [range: X]
 
 The range of a weapon is the number of spaces away from you that you can attack. If no range is included the weapon is treated as being [range: 1]. [range: 0] is a special case. When using a [range: 0] weapon like a dagger or brass knuckles you are treated as moving into the enemies space during your attack and then back out again, though some skills may allow you to fight your enemy within their space which might be advantageous for you. [range: 3] is assumed to mean all the spaces up to 3, i.e. [range: 0-3]. If this isn't the case you can specify the low end of the range. An especially long pike might be [range: 2-4], so that it is completely unusable at close quarters. If you want to specify some specific disadvantage or advantage from range just include the range and then describe that in the weapon text.
 
-#### [hilted], [shafted], [flexible]
+### [hilted], [shafted], [flexible]
 
 This is a pretty important category. [shafted] weapons are any weapon that consists of a head mounted on a shaft or pole. Rather than having some set of unambiguous places for one's hands, they have a length along which any place is a valid handle. Axes, every polearm, staves, and spears all fit in this category.  
 
@@ -41,13 +41,13 @@ This is a pretty important category. [shafted] weapons are any weapon that consi
 
 A weapon is typically only one of [hilted], [shafted], or [flexible]. That being said, there is nothing besides human decency that would keep you from making a swordspear with a ball and chain attached to the shilt (similar to how the flail is attached to the kusarigama). I cannot stop you. I wish I could. You could even make it [one-handed], [two-handed], and completely unusable. In general, resist the urge to create a platypus because it has as all the tags, most weapons in history did not look like that because having all that extra stuff makes the weapon a clumsy mess. It doesn't show up in fantasy because it's ugly. But you can still do it.
 
-### Use-Based Tags
+## Use-Based Tags
 
-#### [stealth] and [finesse]
+### [stealth] and [finesse]
 
 Both [stealth] and [finesse] are used exclusively to fulfill requirements to use skills. [stealth] expresses a weapon that is small and concealable, useful for sneak attacks. [finesse] expresses weapons that are meant to be able to deflect, redirect, and punish enemy attacks, [finesse] is used for active non-STR based defense. Both of these could and probably should be replaced by just referencing qualities of the weapon.
 
-#### [bladed]
+### [bladed]
 
 [bladed] is a construction tag that is used for currently-in-testing [sharpening] effects. This will probably be replaced by just having whetstones and invocations look for moves that do slashing (S) damage, but that change is not put in place and the tag is still present, so it's included here.
 
@@ -60,7 +60,7 @@ These are explained quite well in the core rules [here]() and I don't have anyth
 This captures any ranged attack. The motion is much less important for a ranged attack, presumably you are not in melee when performing it. You should give a range for a ranged attack, and if the attack is a [ranged: throwing] attack you should say so. It's likely obvious (how else would a javelin have a ranged attack?) but for ease of use and to avoid ambiguity with whether a given skill can be used, just specify [ranged: throwing]  
 *Some move text*...[ranged: throwing] [range: 5] is fine.
 
-# Requirements vs Scaling and a Note on Weapon Sizes
+## Requirements vs Scaling and a Note on Weapon Sizes
 
 When in doubt use requirements to balance weapons instead of score based damage scaling (+SCORE to damage). Fast weapons should very rarely get score based damage scaling. Slower weapons should be much more likely to get score based damage scaling. In general (but especially in the case of faster weapons) score based damage scaling should be a remarkable feature of weapon, not a standard part of an attack. It's totally fine for weapons of a higher quality to be straightforwardly better than simpler or more common weapons.  
 Versatile weapons (that is to say, weapons that are good at multiple types of attacks, and don't necessarily specialize) like straight swords do not generally scale with stats, they just have higher requirements. There are skills for more advanced characters to use to do more damage, this is where most extra damage should come from. Some weapons like hammers might add STR to damage, and many ranged weapons might add PERCEPTION or DEX to their damage, but their base damage is lower to compensate. For these weapons, the idea is to express that relatively more of the damage comes from how hard you can swing the hammer or where you place your shots.  
@@ -112,7 +112,7 @@ If a weapon deals multiple damage types, both damage types are affected by armor
 
 3d8 (heavy), giant weapons.
 
-# Making Weapons
+## Making Weapons
 
 This has been a long document. Understanding what each tag is meant to represent and how a given tag follows from the construction and use of a weapon requires a fair bit of explanation, but it shouldn't require so much knowledge to use, the work of weapon interpretation should be done almost entirely in the process of creating it, players should get a relatively concise and straightforward statblock, something that easily fits in a card, with each potentially mechanical tag in brackets "[]".
 
