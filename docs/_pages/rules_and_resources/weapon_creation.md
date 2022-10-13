@@ -88,7 +88,7 @@ It's possible for a weapon to do multiple damage types, e.g. a club covered in s
 A giant club with spikes might be 2d6 (B) + 1d6 (P).  
 If a weapon deals multiple damage types, both damage types are affected by armor separately. That is, if there is armor that blocks 4 (B) and 2 (P), you attack with the club that deals 1d6 (B) + 2 (P), and roll a 5, you do 1 damage in total, so doing multiple damage types in one hit is a bad bet against armor, though it might just be free damage otherwise.
 
-#### One-handed examples:
+### One-handed examples:
 
 1d4+ (light), small weapons, dagger, shiv, small club, push dagger.
 
@@ -100,7 +100,7 @@ If a weapon deals multiple damage types, both damage types are affected by armor
 
 1d12 (medium), very high quality weapons.
 
-#### Two-handed examples:
+### Two-handed examples:
 
 1d10, 1d12 (light-medium), low quality weapon or aggressive scaling weapon.
 
