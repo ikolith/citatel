@@ -1,5 +1,6 @@
 ---
 title: Weapon Creation
+toc: True
 ---
 
 The intent is to be able to describe a real or fictional weapon clearly and succinctly so that you capture the intended use and function of the weapon. A person can be better with a certain type of weapon, some skills might only be useful with certain types of weapons, but we don't restrict a given weapon to a rigid and arbitrary typology. We do not care whether a bardiche is an axe, or a glaive is a spear, but the bardiche and the glaive should feel different to the player. Weapons should exist that are crafted for a specific niche, or that straddle the line between different categories. Weapons should feel unique and interesting to find and use.  
