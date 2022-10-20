@@ -24,7 +24,7 @@ async def post_text(text: str, interaction: discord.Interaction) -> None:
         )
 
 
-all_data = t.get_all_data(
+all_data = t.get_entities(
     invocations=os.path.join(".", "docs", "_data", "entities", "invocations.csv"),
     items=os.path.join(".", "docs", "_data", "entities", "items.csv"),
     weapons=os.path.join(".", "docs", "_data", "entities", "weapons.csv"),

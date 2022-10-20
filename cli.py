@@ -9,7 +9,7 @@ import py_utils.vars as v
 import py_utils.minipages as m
 import py_utils.entity_text_generators as g
 
-all_data = t.get_all_data(
+all_data = t.get_entities(
     invocations=os.path.join(".", "docs", "_data", "entities", "invocations.csv"),
     items=os.path.join(".", "docs", "_data", "entities", "items.csv"),
     weapons=os.path.join(".", "docs", "_data", "entities", "weapons.csv"),

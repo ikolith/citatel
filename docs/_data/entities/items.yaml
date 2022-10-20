@@ -1,0 +1,137 @@
+- name: The Braggart
+  effect: >-
+    A cloak with bright silver stitching. When worn, DC 9 illusion of a full
+    plate set of armor.
+
+- name: Lost
+  effect: >-
+    Two stone birds that constantly tug towards each other, regardless of
+    distance.
+
+- name: Bandage
+  effect: Spend (3n1). Remove 1 bleed. Bandages can be improvised out of any cloth.
+  flavor_text: A roll of clean cloth.
+  filter_tags: item, medicine, gear, basic
+
+- name: Simple Whetstone
+  effect: >-
+    Apply [sharpened] to a [bladed] weapon, takes 30 minutes to apply. Weapon
+    does +1 damage and ignores 1 armor. [sharpened] is lost when you roll a 1
+    with a damage die.
+  flavor_text: A large flat stone bearing faded inscriptions.
+  filter_tags: item, whetstone, basic
+
+- name: Troll Salts
+  effect: >-
+    Remove 1 [exhaustion], after 10 minutes take 2 [exhaustion]. Wake up from
+    unconsciousness not caused by negative health.
+  flavor_text: >-
+    A small earthenware jar filled with a strong-smelling coarse powder, sealed
+    with a waxed ball of plant fiber.
+  filter_tags: item, medicine
+
+- name: Stolen Ichor
+  effect: (2n1). Get 4 heal.
+  filter_tags: item, medicine, gear
+
+- name: "Variigoshlovr Root "
+  effect: (1n1). Remove 1 bleed.
+  filter_tags: item, medicine, gear, basic
+
+- name: Glowing Root Bundle
+  effect: (1n1). Instantly gain 4 HP.
+  filter_tags: item, medicine, gear
+
+- name: Valiikon's Whetstone
+  effect: >-
+    Takes 30 minutes to apply [sharpened]. Inflict 1 poison on hit. Inflict 1
+    poison if you do 2 poison in one turn. Rolling minimum damage removes
+    [sharpened].
+  filter_tags: item, whetstone
+
+- name: Vial of Verdant Sap
+  effect: (2n1). Gain 2 heal.
+  filter_tags: item, medicine, gear
+
+- name: Footsoldier's Whetstone
+  effect: >-
+    Takes 30 minutes to apply [sharpened] to a [bladed] weapon. Ignore 3 armor.
+    Rolling 1 for damage twice removes [sharpened].
+  flavor_text: >-
+    A fragment of a relief etched into heavy white stone. The relief depicts a
+    phalanx of soldiers in formation bearing partisans against an unseen force.
+    The relief is etched deeply with identical runes in various styles.
+  filter_tags: item, whetstone
+
+- name: Cannibal Whetstone
+  effect: >-
+    Takes 2 hours to apply [sharpened] to a [bladed] weapon. Whetstone must be
+    soaked in blood before use. Inflict 1 [bleed] on hit. Gain 1 HP at the
+    beginning of your turn as long as the opponent is bleeding.
+  flavor_text: >-
+    A warm mass of striated stone writhing almost imperceptibly. It bears a
+    closed eye on one side, it emanates a silent screaming call.
+  filter_tags: item, whetstone
+
+- name: Crude Frog Idol
+  effect: >-
+    (3n1). Must be holding the idol with both hands. Ignore 3 poison damage next
+    turn.
+  flavor_text: >-
+    A small, worn, and stained frog idol on a fraying cord of twine. It's
+    wearing an even smaller straw hat. He seems to be smiling.
+
+- name: Battle Egg Carton and Bandolier
+  effect: >-
+    Carton holds 24 Putrefying Eggs. Carton will break if it or the person
+    wearing it takes 12 damage in one turn.
+  flavor_text: >-
+    A wooden case made from solid hardwood with round impressions chipped into
+    it. The inside is padded with soft moss.
+
+- name: Bag of Salt
+  effect: Worth {1d12}*10f.
+  filter_tags: item, basic
+
+- name: Salorbrious
+  effect: For 6 turns, gain 1 SALT every turn.
+  flavor_text: >-
+    A smooth waxed sphere of pure SALT, it feels heavy in the hand. It's just
+    enough to kill a man.
+  filter_tags: item, basic
+
+- name: Tall Salted Peter
+  effect: Gain 3 SALT.
+  flavor_text: >-
+    A long clay vial filled with salt suspended in a dark brown oil and
+    continuously swirling and glittering .
+  filter_tags: item, basic
+
+- name: Curse Eye
+  effect: When crushed, all characters within 3 spaces gain 1d4 CURSE.
+  flavor_text: A brittle dull black sphere with a layer of veins on one side.
+
+- name: Rucksack
+  effect: "Max encumbrance: 6 + STR, [encumbered] threshold: 3 + STR."
+  filter_tags: item, bag, basic
+
+- name: Sling Bag
+  effect: >-
+    Can be worn with another bag. Max encumbrance: 3. This bag can be switched
+    from being worn on your front or back for [1n1]. Searching and grabbing
+    something from this bag is [2n1].
+  filter_tags: item, bag, basic
+
+- name: Scout's Bag
+  effect: "Max encumbrance: 4 + STR."
+  filter_tags: item, bag, basic
+
+- name: Frame Bag
+  effect: "Max encumbrance: 8+STR. [enumbered] threshold: 2+STR."
+  filter_tags: item, bag, basic
+
+- name: Stick Bag
+  effect: >-
+    Can be carried while wearing another bag. Stick must be held with one hand.
+    Max encumbrance: 2 + STR.
+  filter_tags: item, bag, basic

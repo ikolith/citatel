@@ -6,56 +6,30 @@ import py_utils.entity_text_generators as g
 from pprint import pprint
 import re
 import os
-
-# loading csvs, cleaning_csvs, building all_data
-
-
-def load(path: str) -> pd.DataFrame:
-    return (
-        pd.read_csv(path, header=0).dropna(subset="name").fillna("")
-    )  # should this be a one-liner? not sure
+import yaml
 
 
-def clean_name(name: list) -> list:
-    """Returns a name in lowercase with whitespace stripped, " " and "-" replaced with "_" and every other character removed."""
+def get_clean_name(name: str) -> str:
+    """Returns a name in lowercase with numbers left alone, whitespace stripped, " " and "-" replaced with "_", and every other character removed."""
     return re.sub(
         r"[^a-z1-9_]", "", name.lower().strip().replace(" ", "_").replace("-", "_")
     )
 
 
-def csv_add_clean_name(path: str) -> None:
-    df = load(path)
-    df["clean_name"] = df["name"].apply(clean_name)
-    df.to_csv(path, index=False)
-
-
-def get_all_data(
-    armors="", invocations="", items="", npcs="", weapons="", skills=""
-) -> dict:
-    """This function wants paths to csvs.
-    It returns a dictionary with the the type of entity as key and a DataFrame of all the relevant csvs values."""
-    paths = {
-        "armors": armors,
-        "invocations": invocations,
-        "items": items,
-        "npcs": npcs,
-        "weapons": weapons,
-        "skills": skills,
-    }
-    all_data = {}
-    for entity, path in paths.items():
-        if path:
-            csv_add_clean_name(path)
-            all_data[entity] = load(path).set_index(
-                "clean_name", inplace=False, drop=False
-            )
-            all_data[entity].index.names = [
-                "clean_name_index"
-            ]  # this is kind of hacky, but it *does* clear up the ambiguity...
-            all_data[entity]["filter_tags"] = all_data[entity]["filter_tags"].map(
-                lambda x: x.replace(" ", "").split(sep=",")
-            )
-    return all_data
+def get_entities(dir_path: str) -> dict[dict]:
+    entities = {}
+    entity_files = []
+    for file in os.listdir(dir_path):
+        if file[-5:] == ".yaml":
+            entity_files.append(os.path.join(dir_path, file))
+    for file in entity_files:
+        with open(file) as f:
+            data = yaml.safe_load(f)
+            for entity in data:
+                clean_name = get_clean_name(entity["name"])
+                assert not clean_name in entities
+                entities[clean_name] = entity
+    return entities
 
 
 @cache
@@ -113,23 +87,6 @@ def get_replacement_text(
     return base_text
 
 
-row_cache = {}
-# had to cache this myself, f
-def search_all_data(clean_name: str, all_data: dict) -> tuple[str, pd.Series]:
-    if clean_name not in row_cache:
-        for entity_type, data in all_data.items():
-            if clean_name in data.index:
-                row_cache["clean_name"] = {
-                    "entity_type": entity_type,
-                    "row": data.loc[clean_name],
-                }
-                return entity_type, data.loc[clean_name]
-    try:
-        return row_cache["clean_name"]["entity_type"], row_cache["clean_name"]["row"]
-    except:
-        raise Exception(f"Couldn't find {clean_name} in all_data")
-
-
 def text_is_unique(text: str) -> bool:
     return any([curly["roll"] for curly in parse_curlies(text)])
 
@@ -138,13 +95,9 @@ def text_has_children(text: str) -> bool:
     return any([curly["entity"] for curly in parse_curlies(text)])
 
 
-def search_for_text(clean_name: str, all_data: dict, text_type: str = "md") -> str:
-    return g.generate_entity_text(*search_all_data(clean_name, all_data), text_type)
-
-
 # entity tree functions
 
-
+# TODO: these need to be updated to be able to use the new data..  but it relies on better text generation, and so i will go off and do the text generation first!
 def generate_entity_tree_and_non_unique(
     base_curly: dict,
     all_data: dict,
