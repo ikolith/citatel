@@ -1,6 +1,8 @@
 ---
 title: Shield and Armor Creation
+toc: True
 ---
+
 These mechanics have much less testing done on them than most others. They will likely see a lot of changes.
 
 Shields and armor share the same doc because of their mechanical and functional similarities. Both are primarily defensive equipment, both can be used to alter a characters To-Hit, and both can be used for type-specific ((B)ludgeoning, (P)iercing, (S)lashing) damage reduction.
