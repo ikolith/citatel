@@ -9,14 +9,9 @@ import py_utils.vars as v
 import py_utils.minipages as m
 import py_utils.entity_text_generators as g
 
-all_data = t.get_entities(
-    invocations=os.path.join(".", "docs", "_data", "entities", "invocations.csv"),
-    items=os.path.join(".", "docs", "_data", "entities", "items.csv"),
-    weapons=os.path.join(".", "docs", "_data", "entities", "weapons.csv"),
-    npcs=os.path.join(".", "docs", "_data", "entities", "npcs.csv"),
-    # npcs=os.path.join(".", "tests", "npc_test_of_saint_ives.csv"),
-    skills=os.path.join(".", "docs", "_data", "entities", "skills.csv"),
-)
+# yamlify the test stuff
+
+all_data = t.get_entities(os.path.join("docs", "_data", "entities"))
 
 
 def cli_single_curly_parser(

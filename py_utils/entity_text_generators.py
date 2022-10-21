@@ -1,8 +1,9 @@
-import pandas as pd
 from pylatex.utils import NoEscape
 import py_utils.vars as v
 import os
 from collections.abc import Callable
+from pprint import pprint
+import re
 
 # single entity text generators. used for cli and various utilities.
 
@@ -27,28 +28,6 @@ emph = curry_wrap("emph")
 # latex section formatting
 
 
-def if_field_exists_latex(
-    text: str, field_text: str = "", end_with_newline: bool = True
-) -> str:
-    if text:
-        return emph(field_text) + text
-    else:
-        return ""
-
-
-def if_exists(text: str) -> str:
-    return text if text else ""
-
-
-def name_latex(text: str) -> str:
-    return bold(large(text))
-
-
-def flavor_latex(text: str) -> str:
-    return skipline + italic(text) if text else ""
-
-
-# flushright and...
 def tag_latex(text: str) -> str:
     return f_note("Tags: " + text) + "\n" + r" \normalsize" + "\n\n"
 
@@ -90,65 +69,9 @@ def footer_latex(clean_name: str, encumbrance: str = ""):
 # latex entity text generation
 
 
-def generate_invocation_latex(row: pd.Series) -> str:
-    return NoEscape(
-        name_latex(row["name"])
-        + if_field_exists_latex(row["target"], "Target: ")
-        + skipline
-        + if_field_exists_latex(row["effect"])
-        + flavor_latex(row["flavor_text"])
-        + footer_latex(row["clean_name"])
-    )
-
-
-def generate_item_latex(row: pd.Series) -> str:
-    return NoEscape(
-        name_latex(row["name"])
-        + row["effect"]
-        + flavor_latex(row["flavor_text"])
-        + footer_latex(row["clean_name"], row["encumbrance"])
-    )
-
-
-def generate_npc_latex(row: pd.Series) -> str:
-    return NoEscape(
-        name_latex(row["name"])
-        + if_field_exists_latex(row["hp"], "HP: ")
-        + if_field_exists_latex(row["scores"], "Scores: ")
-        + if_field_exists_latex(row["skills"], "Skills: ")
-        + if_field_exists_latex(row["holds"], "Holds: ", False)
-        + if_field_exists_latex(flavor_latex(row["flavor_text"]))
-        + footer_latex(row["clean_name"])
-    )
-
-
-def generate_weapon_latex(row: pd.Series) -> str:
-    return NoEscape(
-        name_latex(row["name"])
-        + tag_latex(row["tags"])
-        + if_field_exists_latex(row["requirements"], "Requirements: ")
-        + if_field_exists_latex(row["speed"], "Speed: ")
-        + if_field_exists_latex(row["to_hit"], "To-Hit: ", False)
-        + attacks_latex(row["basic_attacks"])
-        + if_exists(if_field_exists_latex(row["effect"], "", False))
-        + flavor_latex(row["flavor_text"])
-        + footer_latex(row["clean_name"], row["encumbrance"])
-    )
-
-
-def generate_skill_latex(row: pd.Series) -> str:
-    return NoEscape(
-        name_latex(row["name"])
-        + if_field_exists_latex(row["requirements"], "Requirements: ")
-        + if_field_exists_latex(row["cost"], "Cost: ")
-        + skill_effect_latex(row["effect"])
-        + footer_latex(row["clean_name"])
-    )
-
-
 def if_exists_format_latex(
     text: str,
-    text_formatter: Callable = None,
+    text_formatter: Callable = lambda text: text,
     field_text: str = "",
     field_text_formatter: Callable = None,
     add_newline: bool = True,
@@ -157,13 +80,12 @@ def if_exists_format_latex(
 ) -> str:
     if hide:
         return ""
-    newline = " \n \n" if add_newline else ""
-    skipline = skipline if add_skipline else ""
+    if_newline = " \n \n" if add_newline else ""
+    if_skipline = skipline if add_skipline else ""
     if field_text:
-        return field_text_formatter(field_text) + " " + text + newline
-        # field_text_formatter here will often be emph()
+        return field_text_formatter(field_text) + " " + text + if_skipline + if_newline
     elif text_formatter:
-        return text_formatter(text) + newline
+        return text_formatter(text) + if_skipline + if_newline
 
 
 formatting_dict_latex = {
@@ -171,7 +93,7 @@ formatting_dict_latex = {
     "cost": {"field_text": "Cost", "field_text_formatter": emph},
     "effect": {},
     "encumbrance": {"field_text": "Encumbrance", "field_text_formatter": emph},
-    #need to put this and maybe encumbrance on the footer..
+    # need to put this and maybe encumbrance on the footer..
     "filter_tags": {"hide": True},
     "flavor_text": {"text_formatter": lambda text: skipline + italic(text)},
     "holds": {"field_text": "Holds", "field_text_formatter": emph},
@@ -179,7 +101,7 @@ formatting_dict_latex = {
     "name": {"text_formatter": lambda text: bold(large(text))},
     "requirements": {"field_text": "Requirements", "field_text_formatter": emph},
     "scores": {"field_text": "Scores", "field_text_formatter": emph},
-    "skills": {"field_text": "Skills", "field_text_formatter": emph},
+    "skills": {"field_text": "Skills", "field_text_formatter": skill_effect_latex},
     "speed": {"field_text": "Speed", "field_text_formatter": emph},
     "tags": {"field_text": "Tags", "field_text_formatter": emph},
     "target": {
@@ -197,7 +119,7 @@ def generate_latex(entity: dict, formatting: dict = formatting_dict_latex) -> st
         result_text += if_exists_format_latex(
             text=str(text), **formatting_dict_latex[key]
         )
-    
+
     return result_text
 
 
@@ -209,7 +131,7 @@ def if_exists_format_md(
     text_wrapper: str = "",
     prefix: str = "",
     field_text: str = "",
-    field_wrapper: str = "**",
+    field_wrapper: str = "**",  # note that this one is the only one that doesnt default empty
     newline: bool = True,
     hide: bool = False,
 ) -> str:
@@ -223,7 +145,6 @@ def if_exists_format_md(
     return text_wrapper + text + text_wrapper + newline
 
 
-#     row["basic_attacks"] = row["basic_attacks"].replace(",", "\n-")
 formatting_dict_md = {
     "basic_attacks": {},
     "cost": {"field_text": "Cost"},
@@ -257,66 +178,63 @@ def generate_entity_text(
     html_characters: bool = False,
 ) -> str:
     if text_type == "md":
-        text = generate_md(entity)
-        # if html_characters:
-        #     arrow = "&#8658;"
-        #     empty_triangle_r = "&#9655;"
-        #     filled_triangle_r = "&#9654;"
-        #     triangle_up = "&#9650;"
-        #     row = row.str.replace(
-        #         r"[_]", r"\_", regex=True
-        #     )
-        #     row = row.str.replace(r"->", f"{arrow}", regex=True)
-
-        #     row = row.str.replace(
-        #         r"\[swinging: following]",
-        #         f"{filled_triangle_r} {empty_triangle_r} {empty_triangle_r}",
-        #         regex=True,
-        #     )
-        #     row = row.str.replace(
-        #         r"\[swinging: neutral]",
-        #         f"{empty_triangle_r} {filled_triangle_r} {empty_triangle_r}",
-        #         regex=True,
-        #     )
-        #     row = row.str.replace(
-        #         r"\[swinging: leading]",
-        #         f"{empty_triangle_r} {empty_triangle_r} {filled_triangle_r}",
-        #         regex=True,
-        #     )
-        #     row = row.str.replace(
-        #         r"\[thrusting]",
-        #         f"{triangle_up}",
-        #         regex=True,
-        #     )
-
-    if text_type == "latex":
-        # row = row.str.replace(r"[{}]", "", regex=True)
-        # row = row.str.replace(r"[_]", r"\_", regex=True)
-        # row = row.str.replace(r"->", "$\\\Rightarrow$", regex=True)
-        # # replacing text with latex glyphs for the [swinging: ...], [thrusting] tags
-        # row = row.str.replace(
-        #     r"\[swinging: following]",
-        #     r"$\\blacktriangleright\\mkern-7mu\\triangleright\\mkern-7mu\\triangleright$",
-        #     regex=True,
-        # )
-        # row = row.str.replace(
-        #     r"\[swinging: neutral]",
-        #     r"$\\triangleright\\mkern-7mu\\blacktriangleright\\mkern-7mu\\triangleright$",
-        #     regex=True,
-        # )
-        # row = row.str.replace(
-        #     r"\[swinging: leading]",
-        #     r"$\\triangleright\\mkern-7mu\\triangleright\\mkern-7mu\\blacktriangleright$",
-        #     regex=True,
-        # )
-        # row = row.str.replace(
-        #     r"\[thrusting]",
-        #     r"$\\blacktriangle$",
-        #     regex=True,
-        # )
-
-        text = generate_latex(entity)
-    return text
+        if html_characters:
+            arrow = "&#8658;"
+            empty_triangle_r = "&#9655;"
+            filled_triangle_r = "&#9654;"
+            triangle_up = "&#9650;"
+            for text in entity.values():
+                text = re.sub(r"[_]", r"\_", text)
+                text = re.sub(r"->", f"{arrow}", text)
+                text = re.sub(
+                    r"\[swinging: following]",
+                    f"{filled_triangle_r} {empty_triangle_r} {empty_triangle_r}",
+                    text,
+                )
+                text = re.sub(
+                    r"\[swinging: neutral]",
+                    f"{empty_triangle_r} {filled_triangle_r} {empty_triangle_r}",
+                    text,
+                )
+                text = re.sub(
+                    r"\[swinging: leading]",
+                    f"{empty_triangle_r} {empty_triangle_r} {filled_triangle_r}",
+                    text,
+                )
+                text = re.sub(
+                    r"\[thrusting]",
+                    f"{triangle_up}",
+                    text,
+                )
+            return generate_md(entity)
+    elif text_type == "latex":
+        for text in entity.values():
+            #     row["basic_attacks"] = row["basic_attacks"].replace(",", "\n-")
+            text = re.sub(r"[{}]", "", text)
+            text = re.sub(r"[_]", r"\_", text)
+            text = re.sub(r"->", "$\\\Rightarrow$", text)
+            # replacing text with latex glyphs for the [swinging: ...], [thrusting] tags
+            text = re.sub(
+                r"\[swinging: following]",
+                r"$\\blacktriangleright\\mkern-7mu\\triangleright\\mkern-7mu\\triangleright$",
+                text,
+            )
+            text = re.sub(
+                r"\[swinging: neutral]",
+                r"$\\triangleright\\mkern-7mu\\blacktriangleright\\mkern-7mu\\triangleright$",
+                text,
+            )
+            text = re.sub(
+                r"\[swinging: leading]",
+                r"$\\triangleright\\mkern-7mu\\triangleright\\mkern-7mu\\blacktriangleright$",
+                text,
+            )
+            text = re.sub(
+                r"\[thrusting]",
+                r"$\\blacktriangle$",
+                text,
+            )
+            return generate_latex(entity)
 
 
 # TODO rewrite this for the new system

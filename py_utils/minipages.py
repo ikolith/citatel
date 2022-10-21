@@ -1,5 +1,6 @@
 import re
 import py_utils.text_utils as t
+import py_utils.entity_text_generators as g
 import os.path
 from pylatex import Document, Command, MiniPage, UnsafeCommand, NewPage
 from pylatex.base_classes import Arguments, Options, CommandBase
@@ -52,7 +53,7 @@ def generate_cards(
     )
     entity_texts = []
     for entity in card_entities:
-        entity_texts.append(t.search_for_text(entity, all_data, text_type="latex"))
+        entity_texts.append(g.generate_entity_text(all_data[entity], "latex"))
     # setup document and generate the preamble
     doc = Document(geometry_options=geometry_options, indent=False)
     doc.append(card_com)
