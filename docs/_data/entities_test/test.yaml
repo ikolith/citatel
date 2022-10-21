@@ -1,0 +1,18 @@
+- name: Man From Saint Ives
+  hp: "{d3 wife_from_saint_ives}"
+
+- name: Wife From Saint Ives
+  hp: "{d3 sack_from_saint_ives}"
+
+- name: Sack from Saint Ives
+  hp: "0 {cat_from_saint_ives}"
+
+- name: Cat From Saint Ives
+  hp: "{d3 kit_from_saint_ives}"
+
+- name: Kit From Saint Ives
+  hp: sweet fuck-all
+
+- name: Wife I Box
+  hp: "{10d6-5}"
+  flavor_text: '"son, i already cant click the book"'

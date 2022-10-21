@@ -102,10 +102,11 @@ def text_has_children(text: str) -> bool:
 # TODO: these need to be updated to be able to use the new data..  but it relies on better text generation, and so i will go off and do the text generation first!
 def generate_entity_tree_and_non_unique(
     base_curly: dict,
-    all_data: dict,
-    expand_entities=False,
-    roll_dice=False,
-    text_type="md",
+    entities: dict[dict],
+    expand_entities: bool = False,
+    roll_dice: bool = False,
+    html_characters: bool = False,
+    text_type: str = "md",
 ) -> tuple[
     list, dict
 ]:  # this typing could be more verbose.. but really we just need curlies to be a NewType
@@ -120,7 +121,9 @@ def generate_entity_tree_and_non_unique(
             # skips case where the curly is just a roll.
             if not curly["entity"]:
                 continue
-            entity_text = search_for_text(curly["entity"], all_data, text_type)
+            entity_text = g.generate_entity_text(
+                entities[curly["entity"]], text_type, html_characters
+            )
             unique = text_is_unique(entity_text)
             # deals with case where this is not unique...
             if not unique:
@@ -163,28 +166,29 @@ def generate_entity_tree_and_non_unique(
 
 def generate_entity_tree_text(
     base_curly: dict,
-    all_data: dict,
-    expand_entities=False,
-    roll_dice=False,
-    text_type="md",
+    entities: dict[dict],
+    expand_entities: bool = False,
+    roll_dice: bool = False,
+    html_characters: bool = False,
+    text_type: str = "md",
 ) -> str:
     base_quantity = base_curly["quantity"]
     # just need this line for the fancy name:
-    _, base_row = search_all_data(base_curly["entity"], all_data)
-    base_text = search_for_text(
-        base_curly["entity"], all_data, text_type
-    )  # this just means calling text twice... eh
-    if not expand_entities or not text_has_children(base_text):
+    base_entity = entities[base_curly["entity"]]
+    base_entity_text = g.generate_entity_text(
+        entities[base_curly["entity"]], text_type, html_characters
+    )
+    if not expand_entities or not text_has_children(base_entity_text):
         if roll_dice:
-            n_base_entity = str(base_quantity) + " " + base_row["name"] + "\n"
-            curlies_parsed = parse_curlies(base_text)
+            n_base_entity = str(base_quantity) + " " + base_entity["name"] + "\n"
+            curlies_parsed = parse_curlies(base_entity_text)
             return n_base_entity + get_replacement_text(
-                base_text=base_text, curlies_parsed=curlies_parsed
+                base_text=base_entity_text, curlies_parsed=curlies_parsed
             )
         else:
-            return base_text
+            return base_entity_text
     entity_tree, non_unique_entities = generate_entity_tree_and_non_unique(
-        base_curly, all_data, expand_entities, roll_dice
+        base_curly, entities, expand_entities, roll_dice
     )
 
     non_unique_text = """--------\nNon Unique Entities:\n--------"""

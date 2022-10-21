@@ -9,13 +9,13 @@ import py_utils.vars as v
 import py_utils.minipages as m
 import py_utils.entity_text_generators as g
 
-# yamlify the test stuff
+# TODO: move commands to commands.py
 
-all_data = t.get_entities(os.path.join("docs", "_data", "entities"))
+entities = t.get_entities(os.path.join("docs", "_data", "entities_test"))
 
 
 def cli_single_curly_parser(
-    text: str, all_data: pd.DataFrame, expand_entities: False, roll_dice: False
+    text: str, entities: dict[dict], expand_entities: False, roll_dice: False
 ) -> str:
     if not (text.startswith("{") and text.endswith("}")):
         text = "{" + text + "}"
@@ -28,18 +28,18 @@ def cli_single_curly_parser(
         return str(d.die_parser_roller(base_curly["roll"]))
 
     # all other cases
-    return t.generate_entity_tree_text(base_curly, all_data, expand_entities, roll_dice)
+    return t.generate_entity_tree_text(base_curly, entities, expand_entities, roll_dice)
 
 
 def enlist(
-    all_data: dict[pd.DataFrame],
+    entities: dict[dict],
     e_type: str = "",
     filter_tags_include: str = "",
     filter_tags_exclude: str = "",
     output_filepath: str = None,
 ):
     enlist_base = {
-        e_type: df[["filter_tags", "clean_name"]] for e_type, df in all_data.items()
+        e_type: df[["filter_tags", "clean_name"]] for e_type, df in entities.items()
     }
     if e_type:
         enlist_base = {e_type: enlist_base[e_type]}
@@ -90,7 +90,7 @@ def command_generate_cards(
     assert card_entities
     if not output_filepath:
         output_filepath = os.path.join("output", "cards")
-    m.generate_cards(card_entities, all_data, card_type, output_filepath)
+    m.generate_cards(card_entities, entities, card_type, output_filepath)
 
 
 def filter_by_filter_tags(
@@ -196,7 +196,7 @@ if __name__ == "__main__":
     if args.command == "curly":
         print(
             cli_single_curly_parser(
-                args.curly, all_data, args.expand_entities, args.roll_dice
+                args.curly, entities, args.expand_entities, args.roll_dice
             )
         )
 
@@ -207,7 +207,7 @@ if __name__ == "__main__":
 
     elif args.command == "enlist":
         enlist(
-            all_data,
+            entities,
             args.type,
             args.filter_tags_include,
             args.filter_tags_exclude,

@@ -1,3 +1,6 @@
+
+
+
 cli_curly_help = """ TODO: rewrite this so it's in standard cli format.
     
     "curly" parses input as if it is within curly braces ({}).
@@ -11,7 +14,7 @@ x: Optional. Specifies whether the dice are "exploding", that is, rolling a max 
 + or -: allows you to add or subtract some non-fraction from the result.
 
 Entities:
-An entity is any valid entry in the csvs that the all_data function can see. You do not have to specify whether the entity is an npc, weapon, etc. That is handled automatically.
+An entity is any valid entry in the csvs that the entities function can see. You do not have to specify whether the entity is an npc, weapon, etc. That is handled automatically.
 
 A valid input can be one of the following:
 - A die roll. Ex: {d3}, {9d9x-10}.

@@ -2,7 +2,6 @@ from pylatex.utils import NoEscape
 import py_utils.vars as v
 import os
 from collections.abc import Callable
-from pprint import pprint
 import re
 
 # single entity text generators. used for cli and various utilities.
@@ -28,7 +27,10 @@ emph = curry_wrap("emph")
 # latex section formatting
 
 
-def tag_latex(text: str) -> str:
+def tag_latex(
+    text: str,
+) -> str:
+    # havent gotten rid of this one because im not decided on whether ill use it, not using it for now
     return f_note("Tags: " + text) + "\n" + r" \normalsize" + "\n\n"
 
 
@@ -50,7 +52,10 @@ def attacks_latex(attacks: str) -> str:
     )  # do not need to line break after this ending an itemize creates a line break
 
 
-def skill_effect_latex(text: str) -> str:
+def skill_effect_latex(
+    text: str,
+) -> str:
+    # TODO: entities still have that fucking :: in them... need to get rid of that and adjust this function
     return NoEscape(
         skipline
         + text.replace(
@@ -97,7 +102,7 @@ def if_exists_format_latex(
 formatting_dict_latex = {
     "basic_attacks": {"text_formatter": attacks_latex},
     "cost": {"field_text": "Cost", "field_text_formatter": emph},
-    "effect": {},
+    "effect": {skill_effect_latex},
     "encumbrance": {"hide": True},
     # need to put this and maybe encumbrance on the footer..
     "filter_tags": {"hide": True},
@@ -252,7 +257,7 @@ def generate_entity_text(
 
 # TODO rewrite this for the new system
 # def all_entities_md(
-#     all_data: dict,
+#     entities: dict,
 #     html_characters: bool = False,
 #     output_filepath: str = os.path.join(
 #         "docs", "_pages", "talaje", "generated_entities.md"
@@ -260,9 +265,9 @@ def generate_entity_text(
 #     front_matter=v.all_entities_front_matter,
 # ) -> None:
 #     contents = front_matter
-#     for entity_type in all_data:
+#     for entity_type in entities:
 #         contents += "## " + entity_type.capitalize() + "  \n\n"
-#         df = all_data[entity_type].sort_index()
+#         df = entities[entity_type].sort_index()
 #         for index, row in df.iterrows():
 #             contents += (
 #                 generate_entity_text(entity_type, row, "md", html_characters)

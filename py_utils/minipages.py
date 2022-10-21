@@ -10,7 +10,7 @@ from pylatex.utils import NoEscape
 
 def generate_cards(
     card_entities: list,
-    all_data: dict,
+    entities: dict[dict],
     card_type: str = "poker",
     output_filepath: str = os.path.join("cards", "cards"),
 ) -> None:
@@ -53,7 +53,7 @@ def generate_cards(
     )
     entity_texts = []
     for entity in card_entities:
-        entity_texts.append(NoEscape(g.generate_entity_text(all_data[entity], "latex")))
+        entity_texts.append(NoEscape(g.generate_entity_text(entities[entity], "latex")))
     # setup document and generate the preamble
     doc = Document(geometry_options=geometry_options, indent=False)
     doc.append(card_com)

@@ -24,13 +24,7 @@ async def post_text(text: str, interaction: discord.Interaction) -> None:
         )
 
 
-all_data = t.get_entities(
-    invocations=os.path.join(".", "docs", "_data", "entities", "invocations.csv"),
-    items=os.path.join(".", "docs", "_data", "entities", "items.csv"),
-    weapons=os.path.join(".", "docs", "_data", "entities", "weapons.csv"),
-    npcs=os.path.join(".", "docs", "_data", "entities", "npcs.csv"),
-    skills=os.path.join(".", "docs", "_data", "entities", "skills.csv"),
-)
+entities = t.get_entities(os.path.join("docs", "_data", "entities"))
 
 load_dotenv()
 TOKEN = os.getenv("TOKEN")
@@ -68,7 +62,7 @@ async def self(
 ) -> None:
 
     await post_text(
-        g.cli_single_curly_parser(curly, all_data, expand_entities, roll_dice),
+        g.cli_single_curly_parser(curly, entities, expand_entities, roll_dice),
         interaction,
     )
 
@@ -86,7 +80,7 @@ async def self(
     list_name: str = "enlist",
 ) -> None:
     g.enlist(
-        all_data,
+        entities,
         e_type,
         filter_tags_include,
         filter_tags_exclude,
