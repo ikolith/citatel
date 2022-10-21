@@ -20,7 +20,7 @@ def get_entities(dir_path: str) -> dict[dict]:
     entities = {}
     entity_files = []
     for file in os.listdir(dir_path):
-        if file[-5:] == ".yaml":
+        if file.endswith(".yaml"):
             entity_files.append(os.path.join(dir_path, file))
     for file in entity_files:
         with open(file) as f:

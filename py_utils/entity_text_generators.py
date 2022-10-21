@@ -2,71 +2,9 @@ import pandas as pd
 from pylatex.utils import NoEscape
 import py_utils.vars as v
 import os
+from collections.abc import Callable
 
 # single entity text generators. used for cli and various utilities.
-
-
-def if_field_exists_md(text: str, field_text: str = "") -> str:
-    return field_md(field_text) + " " + text if text else ""
-
-
-def field_md(field_text: str) -> str:
-    return f"**{field_text}**" if field_text else ""
-
-
-def name_md(text: str) -> str:
-    return f"""### {text}"""
-
-
-def flavor_md(text: str) -> str:
-    return "*" + text + "*" if text else ""
-
-
-def generate_weapon_md(row: pd.Series) -> str:
-    row["basic_attacks"] = row["basic_attacks"].replace(",", "\n-")
-    return f"""{name_md(row['name'])}  
-{if_field_exists_md(row['tags'],'Tags:')}  
-{if_field_exists_md(row['requirements'], 'Requirements:')}    
-{if_field_exists_md(row['speed'], "Speed:")}, {if_field_exists_md(row['to_hit'],"To Hit:")} 
-- {row['basic_attacks']}  
-
-{if_field_exists_md(row['effect'])}  
-
-{if_field_exists_md(flavor_md(row['flavor_text']))}""".strip()
-
-
-def generate_invocation_md(row: pd.Series) -> str:
-    return f"""{name_md(row['name'])}  
-{if_field_exists_md(row['target'],"Target:")}    
-{row['effect']}  
-  
-{if_field_exists_md(flavor_md(row['flavor_text']))}""".strip()
-
-
-def generate_item_md(row: pd.Series) -> str:
-    return f"""{name_md(row['name'])}  
-{row['effect']}  
-  
-{if_field_exists_md(flavor_md(row['flavor_text']))}""".strip()
-
-
-def generate_npc_md(row: pd.Series) -> str:
-    row["skills"] = row["skills"].replace(",", "\n-")
-    return f"""{name_md(row['name'])}  
-{if_field_exists_md(row['hp'],"HP:")}  
-{if_field_exists_md(row['scores'],"Scores:")}    
-{if_field_exists_md(row['skills'],"Skills:")}  
-{if_field_exists_md(row['holds'], "Holds:")}  
-  
-{flavor_md(row['flavor_text'])}""".strip()
-
-
-def generate_skill_md(row: pd.Series) -> str:
-    return f"""{name_md(row['name'])}  
-{if_field_exists_md(row["requirements"],"Requirements:")}  
-{if_field_exists_md(row["cost"],"Cost:")}    
-{(row["effect"])}""".strip()
-
 
 # start of latex formatting section
 smallskip = r"\smallskip "
@@ -92,10 +30,8 @@ emph = curry_wrap("emph")
 def if_field_exists_latex(
     text: str, field_text: str = "", end_with_newline: bool = True
 ) -> str:
-    newline = "\n" + "\n" if end_with_newline else ""
-    field_text = emph(field_text) if field_text else ""
     if text:
-        return field_text + text + newline
+        return emph(field_text) + text
     else:
         return ""
 
@@ -105,12 +41,11 @@ def if_exists(text: str) -> str:
 
 
 def name_latex(text: str) -> str:
-    return bold(large(text)) + "\n\n"
+    return bold(large(text))
 
 
-def line_section_if_exists_latex(text: str, use_italics: bool = True) -> str:
-    text = italic(text) if use_italics and text else text
-    return skipline + text if text else ""
+def flavor_latex(text: str) -> str:
+    return skipline + italic(text) if text else ""
 
 
 # flushright and...
@@ -161,7 +96,7 @@ def generate_invocation_latex(row: pd.Series) -> str:
         + if_field_exists_latex(row["target"], "Target: ")
         + skipline
         + if_field_exists_latex(row["effect"])
-        + line_section_if_exists_latex(row["flavor_text"])
+        + flavor_latex(row["flavor_text"])
         + footer_latex(row["clean_name"])
     )
 
@@ -170,7 +105,7 @@ def generate_item_latex(row: pd.Series) -> str:
     return NoEscape(
         name_latex(row["name"])
         + row["effect"]
-        + line_section_if_exists_latex(row["flavor_text"])
+        + flavor_latex(row["flavor_text"])
         + footer_latex(row["clean_name"], row["encumbrance"])
     )
 
@@ -182,7 +117,7 @@ def generate_npc_latex(row: pd.Series) -> str:
         + if_field_exists_latex(row["scores"], "Scores: ")
         + if_field_exists_latex(row["skills"], "Skills: ")
         + if_field_exists_latex(row["holds"], "Holds: ", False)
-        + if_field_exists_latex(line_section_if_exists_latex(row["flavor_text"]))
+        + if_field_exists_latex(flavor_latex(row["flavor_text"]))
         + footer_latex(row["clean_name"])
     )
 
@@ -196,7 +131,7 @@ def generate_weapon_latex(row: pd.Series) -> str:
         + if_field_exists_latex(row["to_hit"], "To-Hit: ", False)
         + attacks_latex(row["basic_attacks"])
         + if_exists(if_field_exists_latex(row["effect"], "", False))
-        + line_section_if_exists_latex(row["flavor_text"])
+        + flavor_latex(row["flavor_text"])
         + footer_latex(row["clean_name"], row["encumbrance"])
     )
 
@@ -211,104 +146,180 @@ def generate_skill_latex(row: pd.Series) -> str:
     )
 
 
-# the entity text generator
+def if_exists_format_latex(
+    text: str,
+    text_formatter: Callable = None,
+    field_text: str = "",
+    field_text_formatter: Callable = None,
+    add_newline: bool = True,
+    add_skipline: bool = False,
+    hide: bool = False,
+) -> str:
+    if hide:
+        return ""
+    newline = " \n \n" if add_newline else ""
+    skipline = skipline if add_skipline else ""
+    if field_text:
+        return field_text_formatter(field_text) + " " + text + newline
+        # field_text_formatter here will often be emph()
+    elif text_formatter:
+        return text_formatter(text) + newline
+
+
+formatting_dict_latex = {
+    "basic_attacks": {"text_formatter": attacks_latex},
+    "cost": {"field_text": "Cost", "field_text_formatter": emph},
+    "effect": {},
+    "encumbrance": {"field_text": "Encumbrance", "field_text_formatter": emph},
+    #need to put this and maybe encumbrance on the footer..
+    "filter_tags": {"hide": True},
+    "flavor_text": {"text_formatter": lambda text: skipline + italic(text)},
+    "holds": {"field_text": "Holds", "field_text_formatter": emph},
+    "hp": {"field_text": "HP", "field_text_formatter": emph},
+    "name": {"text_formatter": lambda text: bold(large(text))},
+    "requirements": {"field_text": "Requirements", "field_text_formatter": emph},
+    "scores": {"field_text": "Scores", "field_text_formatter": emph},
+    "skills": {"field_text": "Skills", "field_text_formatter": emph},
+    "speed": {"field_text": "Speed", "field_text_formatter": emph},
+    "tags": {"field_text": "Tags", "field_text_formatter": emph},
+    "target": {
+        "field_text": "Target",
+        "field_text_formatter": emph,
+        "add_skipline": True,
+    },
+    "to_hit": {"field_text": "To-Hit", "field_text_formatter": emph},
+}
+
+
+def generate_latex(entity: dict, formatting: dict = formatting_dict_latex) -> str:
+    result_text = ""
+    for key, text in entity.items():
+        result_text += if_exists_format_latex(
+            text=str(text), **formatting_dict_latex[key]
+        )
+    
+    return result_text
+
+
+# md generation
+
+
+def if_exists_format_md(
+    text: str,
+    text_wrapper: str = "",
+    prefix: str = "",
+    field_text: str = "",
+    field_wrapper: str = "**",
+    newline: bool = True,
+    hide: bool = False,
+) -> str:
+    if hide:
+        return ""
+    newline = "  \n" if newline else ""
+    if field_text:
+        return field_wrapper + field_text + ":" + field_wrapper + " " + text + newline
+    elif prefix:
+        return prefix + " " + text + newline
+    return text_wrapper + text + text_wrapper + newline
+
+
+#     row["basic_attacks"] = row["basic_attacks"].replace(",", "\n-")
+formatting_dict_md = {
+    "basic_attacks": {},
+    "cost": {"field_text": "Cost"},
+    "effect": {},
+    "encumbrance": {"field_text": "Encumbrance"},
+    "filter_tags": {"hide": True},
+    "flavor_text": {"text_wrapper": "*"},
+    "holds": {"field_text": "Holds"},
+    "hp": {"field_text": "HP"},
+    "name": {"prefix": "### "},
+    "requirements": {"field_text": "Requirements"},
+    "scores": {"field_text": "Scores"},
+    "skills": {"field_text": "Skills"},
+    "speed": {"field_text": "Speed"},
+    "tags": {"field_text": "Tags"},
+    "target": {"field_text": "Target"},
+    "to_hit": {"field_text": "To-Hit"},
+}
+
+
+def generate_md(entity: dict, formatting: dict = formatting_dict_md) -> str:
+    result_text = ""
+    for key, text in entity.items():
+        result_text += if_exists_format_md(text=str(text), **formatting_dict_md[key])
+    return result_text
 
 
 def generate_entity_text(
-    entity_type: str,
-    row: pd.Series,
+    entity: dict,
     text_type: str = "md",
     html_characters: bool = False,
 ) -> str:
     if text_type == "md":
-        if html_characters:
-            # these are all in some html version??
-            arrow = "&#8658;"
-            empty_triangle_r = "&#9655;"
-            filled_triangle_r = "&#9654;"
-            triangle_up = "&#9650;"
-            row = row.str.replace(
-                r"[_]", r"\_", regex=True
-            )  # not sure if md needs this but probably does!
-            row = row.str.replace(r"->", f"{arrow}", regex=True)
-            # replacing text with latex glyphs for the [swinging: ...], [thrusting] tags
-            row = row.str.replace(
-                r"\[swinging: following]",
-                f"{filled_triangle_r} {empty_triangle_r} {empty_triangle_r}",
-                regex=True,
-            )
-            row = row.str.replace(
-                r"\[swinging: neutral]",
-                f"{empty_triangle_r} {filled_triangle_r} {empty_triangle_r}",
-                regex=True,
-            )
-            row = row.str.replace(
-                r"\[swinging: leading]",
-                f"{empty_triangle_r} {empty_triangle_r} {filled_triangle_r}",
-                regex=True,
-            )
-            row = row.str.replace(
-                r"\[thrusting]",
-                f"{triangle_up}",
-                regex=True,
-            )
+        text = generate_md(entity)
+        # if html_characters:
+        #     arrow = "&#8658;"
+        #     empty_triangle_r = "&#9655;"
+        #     filled_triangle_r = "&#9654;"
+        #     triangle_up = "&#9650;"
+        #     row = row.str.replace(
+        #         r"[_]", r"\_", regex=True
+        #     )
+        #     row = row.str.replace(r"->", f"{arrow}", regex=True)
 
-        if entity_type == "armors":
-            pass  # dont have csvs for armor yet
-        elif entity_type == "invocations":
-            text = generate_invocation_md(row)
-        elif entity_type == "items":
-            text = generate_item_md(row)
-        elif entity_type == "npcs":
-            text = generate_npc_md(row)
-        elif entity_type == "weapons":
-            text = generate_weapon_md(row)
-        elif entity_type == "skills":
-            text = generate_skill_md(row)
-        else:
-            raise Exception("Unsupported entity type.")
+        #     row = row.str.replace(
+        #         r"\[swinging: following]",
+        #         f"{filled_triangle_r} {empty_triangle_r} {empty_triangle_r}",
+        #         regex=True,
+        #     )
+        #     row = row.str.replace(
+        #         r"\[swinging: neutral]",
+        #         f"{empty_triangle_r} {filled_triangle_r} {empty_triangle_r}",
+        #         regex=True,
+        #     )
+        #     row = row.str.replace(
+        #         r"\[swinging: leading]",
+        #         f"{empty_triangle_r} {empty_triangle_r} {filled_triangle_r}",
+        #         regex=True,
+        #     )
+        #     row = row.str.replace(
+        #         r"\[thrusting]",
+        #         f"{triangle_up}",
+        #         regex=True,
+        #     )
+
     if text_type == "latex":
-        row = row.str.replace(r"[{}]", "", regex=True)
-        row = row.str.replace(r"[_]", r"\_", regex=True)
-        row = row.str.replace(r"->", "$\\\Rightarrow$", regex=True)
-        # replacing text with latex glyphs for the [swinging: ...], [thrusting] tags
-        row = row.str.replace(
-            r"\[swinging: following]",
-            r"$\\blacktriangleright\\mkern-7mu\\triangleright\\mkern-7mu\\triangleright$",
-            regex=True,
-        )
-        row = row.str.replace(
-            r"\[swinging: neutral]",
-            r"$\\triangleright\\mkern-7mu\\blacktriangleright\\mkern-7mu\\triangleright$",
-            regex=True,
-        )
-        row = row.str.replace(
-            r"\[swinging: leading]",
-            r"$\\triangleright\\mkern-7mu\\triangleright\\mkern-7mu\\blacktriangleright$",
-            regex=True,
-        )
-        row = row.str.replace(
-            r"\[thrusting]",
-            r"$\\blacktriangle$",
-            regex=True,
-        )
-        if entity_type == "armors":
-            pass  # dont have csvs for armor yet
-        elif entity_type == "invocations":
-            text = generate_invocation_latex(row)
-        elif entity_type == "items":
-            text = generate_item_latex(row)
-        elif entity_type == "npcs":
-            text = generate_npc_latex(row)
-        elif entity_type == "weapons":
-            text = generate_weapon_latex(row)
-        elif entity_type == "skills":
-            text = generate_skill_latex(row)
-        else:
-            raise Exception("Unsupported entity type.")
+        # row = row.str.replace(r"[{}]", "", regex=True)
+        # row = row.str.replace(r"[_]", r"\_", regex=True)
+        # row = row.str.replace(r"->", "$\\\Rightarrow$", regex=True)
+        # # replacing text with latex glyphs for the [swinging: ...], [thrusting] tags
+        # row = row.str.replace(
+        #     r"\[swinging: following]",
+        #     r"$\\blacktriangleright\\mkern-7mu\\triangleright\\mkern-7mu\\triangleright$",
+        #     regex=True,
+        # )
+        # row = row.str.replace(
+        #     r"\[swinging: neutral]",
+        #     r"$\\triangleright\\mkern-7mu\\blacktriangleright\\mkern-7mu\\triangleright$",
+        #     regex=True,
+        # )
+        # row = row.str.replace(
+        #     r"\[swinging: leading]",
+        #     r"$\\triangleright\\mkern-7mu\\triangleright\\mkern-7mu\\blacktriangleright$",
+        #     regex=True,
+        # )
+        # row = row.str.replace(
+        #     r"\[thrusting]",
+        #     r"$\\blacktriangle$",
+        #     regex=True,
+        # )
+
+        text = generate_latex(entity)
     return text
 
 
+# TODO rewrite this for the new system
 def all_entities_md(
     all_data: dict,
     html_characters: bool = False,
