@@ -14,7 +14,7 @@ skipline = smallskip + r" \hrule " + smallskip
 
 def curry_wrap(latex: str) -> str:  # latex formatting wrapper
     """Sidëf̈ect: sounds delicious."""
-    return lambda text: "\\" + latex + r"{" + text + r"}"
+    return lambda text: NoEscape("\\" + latex + r"{" + text + r"}")
 
 
 bold = curry_wrap("textbf")
@@ -83,7 +83,13 @@ def if_exists_format_latex(
     if_newline = " \n \n" if add_newline else ""
     if_skipline = skipline if add_skipline else ""
     if field_text:
-        return field_text_formatter(field_text) + " " + text + if_skipline + if_newline
+        return (
+            field_text_formatter(field_text + ":")
+            + " "
+            + text
+            + if_skipline
+            + if_newline
+        )
     elif text_formatter:
         return text_formatter(text) + if_skipline + if_newline
 
@@ -92,13 +98,13 @@ formatting_dict_latex = {
     "basic_attacks": {"text_formatter": attacks_latex},
     "cost": {"field_text": "Cost", "field_text_formatter": emph},
     "effect": {},
-    "encumbrance": {"field_text": "Encumbrance", "field_text_formatter": emph},
+    "encumbrance": {"hide": True},
     # need to put this and maybe encumbrance on the footer..
     "filter_tags": {"hide": True},
     "flavor_text": {"text_formatter": lambda text: skipline + italic(text)},
     "holds": {"field_text": "Holds", "field_text_formatter": emph},
     "hp": {"field_text": "HP", "field_text_formatter": emph},
-    "name": {"text_formatter": lambda text: bold(large(text))},
+    "name": {"text_formatter": lambda text: NoEscape(bold(large(text)))},
     "requirements": {"field_text": "Requirements", "field_text_formatter": emph},
     "scores": {"field_text": "Scores", "field_text_formatter": emph},
     "skills": {"field_text": "Skills", "field_text_formatter": skill_effect_latex},
@@ -113,13 +119,19 @@ formatting_dict_latex = {
 }
 
 
-def generate_latex(entity: dict, formatting: dict = formatting_dict_latex) -> str:
+def generate_latex(
+    entity: dict, formatting: dict = formatting_dict_latex, footer: bool = True
+) -> str:
     result_text = ""
     for key, text in entity.items():
         result_text += if_exists_format_latex(
             text=str(text), **formatting_dict_latex[key]
         )
-
+    if footer and "encumbrance" in entity.keys():
+        filter_tags = entity["filter_tags"] if "filter_tags" in entity.keys() else ""
+        result_text += rf"""\vfill
+        {filter_tags} \hfill {"Enc: " + entity["encumbrance"]} 
+        """  # this used to include clean name before the \hfill (so on the left side) and i dont really think thats necessary anymore ... though maybe filter_tags would be nice still
     return result_text
 
 
@@ -183,79 +195,80 @@ def generate_entity_text(
             empty_triangle_r = "&#9655;"
             filled_triangle_r = "&#9654;"
             triangle_up = "&#9650;"
-            for text in entity.values():
-                text = re.sub(r"[_]", r"\_", text)
-                text = re.sub(r"->", f"{arrow}", text)
-                text = re.sub(
+            for key in entity.keys():  # untested.. yet
+                entity[key] = re.sub(r"[_]", r"\_", entity[key])
+                entity[key] = re.sub(r"->", f"{arrow}", entity[key])
+                entity[key] = re.sub(
                     r"\[swinging: following]",
                     f"{filled_triangle_r} {empty_triangle_r} {empty_triangle_r}",
-                    text,
+                    entity[key],
                 )
-                text = re.sub(
+                entity[key] = re.sub(
                     r"\[swinging: neutral]",
                     f"{empty_triangle_r} {filled_triangle_r} {empty_triangle_r}",
-                    text,
+                    entity[key],
                 )
-                text = re.sub(
+                entity[key] = re.sub(
                     r"\[swinging: leading]",
                     f"{empty_triangle_r} {empty_triangle_r} {filled_triangle_r}",
-                    text,
+                    entity[key],
                 )
-                text = re.sub(
+                entity[key] = re.sub(
                     r"\[thrusting]",
                     f"{triangle_up}",
-                    text,
+                    entity[key],
                 )
-            return generate_md(entity)
+        return generate_md(entity)
     elif text_type == "latex":
-        for text in entity.values():
-            #     row["basic_attacks"] = row["basic_attacks"].replace(",", "\n-")
-            text = re.sub(r"[{}]", "", text)
-            text = re.sub(r"[_]", r"\_", text)
-            text = re.sub(r"->", "$\\\Rightarrow$", text)
+        if "basic_attacks" in entity.keys():
+            entity["basic_attacks"] = re.sub(r",", r"\n-", entity["basic_attacks"])
+        for key in entity.keys():
+            entity[key] = re.sub(r"[{}]", "", entity[key])
+            entity[key] = re.sub(r"_", r"\_", entity[key])
+            entity[key] = re.sub(r"->", "$\\\Rightarrow$", entity[key])
             # replacing text with latex glyphs for the [swinging: ...], [thrusting] tags
-            text = re.sub(
-                r"\[swinging: following]",
+            entity[key] = re.sub(
+                r"\[swinging\: following]",
                 r"$\\blacktriangleright\\mkern-7mu\\triangleright\\mkern-7mu\\triangleright$",
-                text,
+                entity[key],
             )
-            text = re.sub(
-                r"\[swinging: neutral]",
+            entity[key] = re.sub(
+                r"\[swinging\: neutral]",
                 r"$\\triangleright\\mkern-7mu\\blacktriangleright\\mkern-7mu\\triangleright$",
-                text,
+                entity[key],
             )
-            text = re.sub(
-                r"\[swinging: leading]",
+            entity[key] = re.sub(
+                r"\[swinging\: leading]",
                 r"$\\triangleright\\mkern-7mu\\triangleright\\mkern-7mu\\blacktriangleright$",
-                text,
+                entity[key],
             )
-            text = re.sub(
+            entity[key] = re.sub(
                 r"\[thrusting]",
                 r"$\\blacktriangle$",
-                text,
+                entity[key],
             )
-            return generate_latex(entity)
+        return generate_latex(entity)
 
 
 # TODO rewrite this for the new system
-def all_entities_md(
-    all_data: dict,
-    html_characters: bool = False,
-    output_filepath: str = os.path.join(
-        "docs", "_pages", "talaje", "generated_entities.md"
-    ),
-    front_matter=v.all_entities_front_matter,
-) -> None:
-    contents = front_matter
-    for entity_type in all_data:
-        contents += "## " + entity_type.capitalize() + "  \n\n"
-        df = all_data[entity_type].sort_index()
-        for index, row in df.iterrows():
-            contents += (
-                generate_entity_text(entity_type, row, "md", html_characters)
-                + "\n  "
-                + "\n  "
-                + "--- \n"
-            )
-    with open(output_filepath, "w") as f:
-        f.write(contents)
+# def all_entities_md(
+#     all_data: dict,
+#     html_characters: bool = False,
+#     output_filepath: str = os.path.join(
+#         "docs", "_pages", "talaje", "generated_entities.md"
+#     ),
+#     front_matter=v.all_entities_front_matter,
+# ) -> None:
+#     contents = front_matter
+#     for entity_type in all_data:
+#         contents += "## " + entity_type.capitalize() + "  \n\n"
+#         df = all_data[entity_type].sort_index()
+#         for index, row in df.iterrows():
+#             contents += (
+#                 generate_entity_text(entity_type, row, "md", html_characters)
+#                 + "\n  "
+#                 + "\n  "
+#                 + "--- \n"
+#             )
+#     with open(output_filepath, "w") as f:
+#         f.write(contents)

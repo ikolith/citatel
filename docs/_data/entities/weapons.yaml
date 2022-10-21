@@ -194,7 +194,7 @@
 
 - name: Cutlass
   tags: one-handed, hilted, bladed
-  speed: (1n1)->(2n1)
+  speed: "(1n1)->(2n1)"
   to_hit: +AGI
   basic_attacks: "1d8 (S) [swinging: leading], 1d6 (P) [thrusting]"
   encumbrance: 1

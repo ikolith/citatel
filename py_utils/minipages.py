@@ -53,7 +53,7 @@ def generate_cards(
     )
     entity_texts = []
     for entity in card_entities:
-        entity_texts.append(g.generate_entity_text(all_data[entity], "latex"))
+        entity_texts.append(NoEscape(g.generate_entity_text(all_data[entity], "latex")))
     # setup document and generate the preamble
     doc = Document(geometry_options=geometry_options, indent=False)
     doc.append(card_com)

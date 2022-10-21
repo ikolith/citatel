@@ -26,8 +26,8 @@ def get_entities(dir_path: str) -> dict[dict]:
         with open(file) as f:
             data = yaml.safe_load(f)
             for entity in data:
-                for value in entity.values():
-                    value = str(value)
+                for k, v in entity.items():
+                    entity[k] = str(v)
                 clean_name = get_clean_name(entity["name"])
                 assert not clean_name in entities
                 entities[clean_name] = entity
