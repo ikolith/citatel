@@ -9,27 +9,10 @@ from dotenv import load_dotenv
 import asyncio
 
 
-async def post_text(text: str, interaction: discord.Interaction) -> None:
-    if len(text) < 2000:
-        await interaction.response.send_message(text)
-    else:
-        with open(
-            os.path.join("output", "bot_output", "long_message.txt"), mode="w"
-        ) as f:
-            f.write(text)
-        await interaction.response.send_message(
-            file=discord.File(
-                fp=os.path.join("output", "bot_output", "long_message.txt")
-            )
-        )
-
-
 entities = t.get_entities(os.path.join("docs", "_data", "entities"))
-
 load_dotenv()
 TOKEN = os.getenv("TOKEN")
 GUILD = os.getenv("GUILD")
-
 bot = commands.Bot(command_prefix="$", intents=discord.Intents.all(), help_command=None)
 
 
@@ -48,6 +31,21 @@ class abot(discord.Client):
 
 bot = abot()
 tree = app_commands.CommandTree(bot)
+
+
+async def post_text(text: str, interaction: discord.Interaction) -> None:
+    if len(text) < 2000:
+        await interaction.response.send_message(text)
+    else:
+        with open(
+            os.path.join("output", "bot_output", "long_message.txt"), mode="w"
+        ) as f:
+            f.write(text)
+        await interaction.response.send_message(
+            file=discord.File(
+                fp=os.path.join("output", "bot_output", "long_message.txt")
+            )
+        )
 
 
 @tree.command(
@@ -75,14 +73,12 @@ async def self(
 )
 async def self(
     interaction: discord.Interaction,
-    e_type: str = "",
     filter_tags_include: str = "",
     filter_tags_exclude: str = "",
     list_name: str = "enlist",
 ) -> None:
     g.enlist(
         entities,
-        e_type,
         filter_tags_include,
         filter_tags_exclude,
         os.path.join("output", "bot_output", (list_name + ".txt")),
