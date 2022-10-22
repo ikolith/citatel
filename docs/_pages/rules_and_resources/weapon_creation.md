@@ -116,23 +116,7 @@ If a weapon deals multiple damage types, both damage types are affected by armor
 
 This has been a long document. Understanding what each tag is meant to represent and how a given tag follows from the construction and use of a weapon requires a fair bit of explanation, but it shouldn't require so much knowledge to use, the work of weapon interpretation should be done almost entirely in the process of creating it, players should get a relatively concise and straightforward statblock, something that easily fits in a card, with each potentially mechanical tag in brackets "[]".
 
-You can just write out whatever weapon on paper, it doesn't have to follow a specific format. When I give a couple examples later in this doc, I will not be following any particular format. I will be writing weapons in a format similar to what the plaintext generation functions produce based on a weapon entry in the weapons.csv at the time of writing. If you want to know more about adding weapons to the .csv, read the next section, else skip it and head to examples.
-
-## Adding Weapons to the .csv
-
-Weapons are stored in a csv, which should be called weapons.csv. They are transformed into whatever format whether it be, markdown, pdf, printable card, or a plaintext block in discord or on a command line.
-
-The .csv contains the fields 
-- name: The name of the weapon with punctuation and capitalization.
-- tags: Broad tags like one-handed, two-handed, giant, etc.
-- requirements: Required scores for the use of the weapon.
-- speed: The attack speeds.
-- to_hit: What to add to your to-hit roll.
-- basic_attacks: A list of the attacks that are inherent to the weapon.
-- effect: Extra text, special features.
-- flavor_text: Descriptions, lore, stories.
-- filter_tag: Extra tags used in filtering and searches, maybe this weapon is often found in a [swamp] or associated with some specific faction. These do not typically show up in cards and generated text, these are just for searching.
-- clean_name: This is generated programmatically. It is the name but where all the letters are lowercase, all the spaces are replaced by underscores, and all the punctuation is removed. This is for easily programmatically referring to the weapon. You don't have to worry about this and it typically doesn't show up in a card or text.
+<!-- TODO: mention adding weapons to the yaml ehre -->
 
 ## Actually Making a Weapon, Finally
 

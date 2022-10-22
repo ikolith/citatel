@@ -5,7 +5,9 @@ toc: True
 
 NPCs are described mechanically in the same way that a player is described, so NPC generation doesn't differ much from character creation. NPCs meant for combat are not very different from NPCs not meant for combat.  
 NPCs can be generated a variety of ways, there can be simple NPCs with a couple of stats and basic weapons and there can be NPCs like Legions which have a whole unique process for generation.
-In this doc I'm going to focus on creating enemies for addition to the NPC .csv, but the same ideas can be used to create NPCs on paper or in some other system. When generating and using NPCs, you should always leave room for improvisation. Like any other system, this system should aid improvisation and spontaneity.
+<!-- TODO: that vvv but for the yamls -->
+
+<!-- In this doc I'm going to focus on creating enemies for addition to the NPC .csv, but the same ideas can be used to create NPCs on paper or in some other system. When generating and using NPCs, you should always leave room for improvisation. Like any other system, this system should aid improvisation and spontaneity. -->
 
 ## Why randomize?
 

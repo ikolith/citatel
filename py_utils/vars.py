@@ -1,5 +1,4 @@
-
-
+# TODO: all of these need to be fixed for the csv -> yaml switch... gonna just have to ctrl f this one to fix it
 
 cli_curly_help = """ TODO: rewrite this so it's in standard cli format.
     

@@ -3,6 +3,10 @@ title: Known Issues and Todo
 ---
 <!-- TODO: these -->
 
-- Most of the content lives in csvs, not on this website, and there is no real connection between csv content and site content. A simple link would be alright, something programmatic using the existing clean_name would be better.
+- Most of the content lives in YAMLs, not on this website. There is no good generated connection anymore, not since the switch to YAMLs from CSVs.
 
 - Scores are too cheap, skills are two expensive. Skills all cost basically the same amount, that seems bad.
+
+- Armor probably needs a rework
+
+- Need a more thoroughly described procedure for turn-taking, what level of initiative we are currently at, when to announce such a thing
