@@ -57,3 +57,8 @@ One way to shape or limit combat skills is to require that some condition is met
 - Lower defender move speed.
 - Lower defender SCORE.
 - Stop defender movement.
+
+# Non-Combat Skills
+
+Guide coming soon!
+<!-- TODO:MAKE THE GUIDE -->

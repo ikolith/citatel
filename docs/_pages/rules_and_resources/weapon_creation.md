@@ -179,7 +179,7 @@ The point is not to make an extremely powerful weapon a character will definitel
 
 Now for something less serious.
 
-# TODO: create some fantasy nonsense, probably that climbing hook/scythe idea.
+## TODO: create some fantasy nonsense, probably that climbing hook/scythe idea.
 
 And of course, for more examples you can just go through the existing weapons.
 
