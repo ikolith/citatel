@@ -28,6 +28,7 @@ entities = t.get_entities(os.path.join("docs", "_data", "entities"))
 
 load_dotenv()
 TOKEN = os.getenv("TOKEN")
+GUILD = os.getenv("GUILD")
 
 bot = commands.Bot(command_prefix="$", intents=discord.Intents.all(), help_command=None)
 
@@ -40,7 +41,7 @@ class abot(discord.Client):
     async def on_ready(self):
         await self.wait_until_ready()
         if not self.synced:
-            await tree.sync(guild=discord.Object(id=943687451036250162))
+            await tree.sync(guild=discord.Object(id=GUILD))
             self.synced = True
         print(f"loggered as {self.user}.")
 
@@ -52,7 +53,7 @@ tree = app_commands.CommandTree(bot)
 @tree.command(
     name="curly",
     description="Pass in some parsable curly-statement, curly optional. Ex. {sword}, {2d6}, or {2d6 sword}",
-    guild=discord.Object(id=943687451036250162),
+    guild=discord.Object(id=GUILD),
 )
 async def self(
     interaction: discord.Interaction,
@@ -70,7 +71,7 @@ async def self(
 @tree.command(
     name="enlist",
     description="Make a named entity list for /cards to use.",
-    guild=discord.Object(id=943687451036250162),
+    guild=discord.Object(id=GUILD),
 )
 async def self(
     interaction: discord.Interaction,
@@ -92,7 +93,7 @@ async def self(
 @tree.command(
     name="cards",
     description="Make cards, requires a list of entities entered manually or from /enlist.",
-    guild=discord.Object(id=943687451036250162),
+    guild=discord.Object(id=GUILD),
 )
 async def self(
     interaction: discord.Interaction,
@@ -119,7 +120,7 @@ async def self(
 @tree.command(
     name="help",
     description="What that bot doin?",
-    guild=discord.Object(id=943687451036250162),
+    guild=discord.Object(id=GUILD),
 )
 async def self(
     interaction: discord.Interaction,

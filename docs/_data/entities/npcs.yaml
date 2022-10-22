@@ -89,6 +89,7 @@
 - name: Gold Eater
   hp: "{5d6} or 18"
   scores: "{1d4-1} or 2 STR, -2 AGI and DEX, 0 PERCEPTION"
+  filter_tags: npc
 
 - name: Ibex Duke
   hp: "{1d12} or 6 "

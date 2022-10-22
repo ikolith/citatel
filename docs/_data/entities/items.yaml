@@ -2,7 +2,7 @@
   effect: >-
     A cloak with bright silver stitching. When worn, DC 9 illusion of a full
     plate set of armor.
-
+  filter_tags: item
 - name: Lost
   effect: >-
     Two stone birds that constantly tug towards each other, regardless of
@@ -80,6 +80,7 @@
   flavor_text: >-
     A small, worn, and stained frog idol on a fraying cord of twine. It's
     wearing an even smaller straw hat. He seems to be smiling.
+  filter_tags: item
 
 - name: Battle Egg Carton and Bandolier
   effect: >-
@@ -88,6 +89,7 @@
   flavor_text: >-
     A wooden case made from solid hardwood with round impressions chipped into
     it. The inside is padded with soft moss.
+  filter_tags: item
 
 - name: Bag of Salt
   effect: Worth {1d12}*10f.
@@ -110,6 +112,7 @@
 - name: Curse Eye
   effect: When crushed, all characters within 3 spaces gain 1d4 CURSE.
   flavor_text: A brittle dull black sphere with a layer of veins on one side.
+  filter_tags: item
 
 - name: Rucksack
   effect: "Max encumbrance: 6 + STR, [encumbered] threshold: 3 + STR."

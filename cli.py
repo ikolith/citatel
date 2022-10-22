@@ -1,17 +1,46 @@
 import argparse
 import os.path
 import pandas as pd
-import copy
+from copy import deepcopy
 import warnings
 import py_utils.text_utils as t
 import py_utils.dice_utils as d
 import py_utils.vars as v
 import py_utils.minipages as m
 import py_utils.entity_text_generators as g
+from pprint import pprint
 
 # TODO: move commands to commands.py
 
-entities = t.get_entities(os.path.join("docs", "_data", "entities_test"))
+entities = t.get_entities(os.path.join("docs", "_data", "entities"))
+
+
+def filter_entities_by_filter_tags(
+    entities: dict[dict],
+    filter_tags_include: str = "",
+    filter_tags_exclude: str = "",
+) -> dict[dict]:
+    # enlist only uses the clean names, so filtered_entities.keys() but we build the entire dict for... futureproofing???
+    fti = filter_tags_include.replace(" ", "").split(",") if filter_tags_include else []
+    ftx = filter_tags_exclude.replace(" ", "").split(",") if filter_tags_exclude else []
+    filtered_entities = {}
+    for clean_name, entity in entities.items():
+        if "filter_tags" not in entity.keys():  # untested
+            if not fti:
+                filtered_entities[clean_name] = entity
+            else:
+                continue
+        filter_tags = entity["filter_tags"].replace(" ", "").split(",")
+        if ftx:
+            if any(ft in ftx for ft in filter_tags):
+                continue
+        if fti:
+            if any(ft in fti for ft in filter_tags):
+                # could also do set(a) & set(b) but that seems likely slower? at least, less readable
+                filtered_entities[clean_name] = entity
+        else:
+            filtered_entities[clean_name] = entity
+    return filtered_entities
 
 
 def cli_single_curly_parser(
@@ -33,41 +62,24 @@ def cli_single_curly_parser(
 
 def enlist(
     entities: dict[dict],
-    e_type: str = "",
     filter_tags_include: str = "",
     filter_tags_exclude: str = "",
     output_filepath: str = None,
-):
-    enlist_base = {
-        e_type: df[["filter_tags", "clean_name"]] for e_type, df in entities.items()
-    }
-    if e_type:
-        enlist_base = {e_type: enlist_base[e_type]}
+) -> None:
+    enlist_entities = deepcopy(entities)  # seems kinda heavy for this...
     if filter_tags_include or filter_tags_exclude:
-        enlist_base = filter_by_filter_tags(
-            enlist_base, filter_tags_include, filter_tags_exclude
+        enlist_entities = filter_entities_by_filter_tags(
+            enlist_entities, filter_tags_include, filter_tags_exclude
         )
-    for e_type, df in enlist_base.copy().items():
-        if df.empty:
-            enlist_base.pop(e_type)
     if not output_filepath:
         output_filepath = os.path.join("output", "entities.txt")
-    entities = ""
-    for df in enlist_base.values():
-        entities += (
-            df["clean_name"]
-            .to_string(header=False, index=False)
-            .replace("\n", ",")
-            .replace(" ", "")
-        ) + ","
-    entities = entities[:-1]
-    if not entities:
+    enlist = ",".join(list(enlist_entities.keys()))
+    if not enlist:
         warnings.warn(
             "No entities will be written. Consider checking your filters and requested type."
         )
     with open(output_filepath, mode="w") as f:
-        f.write(entities)
-    return True
+        f.write(enlist)
 
 
 def command_generate_cards(
@@ -91,27 +103,6 @@ def command_generate_cards(
     if not output_filepath:
         output_filepath = os.path.join("output", "cards")
     m.generate_cards(card_entities, entities, card_type, output_filepath)
-
-
-def filter_by_filter_tags(
-    data: dict[str, pd.DataFrame],
-    filter_tags_include: str = "",
-    filter_tags_exclude: str = "",
-) -> dict[str, pd.DataFrame]:
-    filter_tags_include = filter_tags_include.strip().split(",")
-    for e_type, df in data.items():
-        if filter_tags_include:
-            fi_bools = df.filter_tags.apply(
-                lambda x: any(tag in filter_tags_include for tag in x)
-            )
-            df = df[fi_bools]
-        if filter_tags_exclude:
-            fx_bools = df.filter_tags.apply(
-                lambda x: not any(tag in filter_tags_exclude for tag in x)
-            )
-            df = df[fx_bools]
-        data[e_type] = df
-    return data
 
 
 # subparsers
@@ -168,12 +159,6 @@ enlist_p = subparsers.add_parser(
 Use "enlist" to create a .txt list of entities. By default all entities will be gathered and the output file will be at output/entities.txt""",
 )
 enlist_p.add_argument(
-    "-t",
-    "--type",
-    help="""Enlist entities belonging to one of the following groups: weapons, npcs, items, invocations, armors.
-    Example: -t weapons.""",
-)
-enlist_p.add_argument(
     "-fi",
     "--filter_tags_include",
     help="""Enlist entities matching some set of filter_tags
@@ -208,7 +193,6 @@ if __name__ == "__main__":
     elif args.command == "enlist":
         enlist(
             entities,
-            args.type,
             args.filter_tags_include,
             args.filter_tags_exclude,
             args.output_filepath,
