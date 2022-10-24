@@ -51,7 +51,6 @@ def cli_single_curly_parser(
     curlies_parsed = t.parse_curlies(text)
     assert len(curlies_parsed) == 1
     base_curly = curlies_parsed[0]
-    print(base_curly)
     # case when only die roll is present
     if not base_curly["entity"]:
         return str(d.die_parser_roller(base_curly["roll"]))
