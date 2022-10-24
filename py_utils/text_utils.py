@@ -1,12 +1,11 @@
-from typing import NewType
-from functools import cache
 import pandas as pd
+import yaml
 import py_utils.dice_utils as d
 import py_utils.entity_text_generators as g
 from pprint import pprint
 import re
 import os
-import yaml
+import logging  # TODO: add logging
 
 
 def get_clean_name(name: str) -> str:
@@ -34,7 +33,6 @@ def get_entities(dir_path: str) -> dict[dict]:
     return entities
 
 
-@cache
 def parse_curlies(text: str) -> list[dict[str, str, str, int]]:
     curlies = re.findall(r"{[^}]*}", text)
     curlies_parsed = []
@@ -56,7 +54,7 @@ def parse_curlies(text: str) -> list[dict[str, str, str, int]]:
                     break
                 elif (n := re.search(r"(?<={)\d+(?=\s)", match)) is not None:
                     roll = ""
-                    quantity = n.group()
+                    quantity = int(n.group())
                 else:
                     roll = ""
             curlies_parsed.append(
@@ -99,6 +97,7 @@ def text_has_children(text: str) -> bool:
 
 # entity tree functions
 
+
 def generate_entity_tree_and_non_unique(
     base_curly: dict,
     entities: dict[dict],
@@ -112,13 +111,15 @@ def generate_entity_tree_and_non_unique(
     non_unique_entities = {}
     entity_tree = []
     curly_queue = [[base_curly] * base_curly["quantity"]]
+    # TODO: passing like {2 salt_wretch} is broken... im so tired...
+    # TODO: if you get {1d4 salt_wretch} they will all be identical.. which is the opposite of what we want... kill me
     while len(curly_queue) != 0 and len(entity_tree) < 100:
         # TODO: looking back up the tree to not recurse
         curlies = curly_queue.pop(0)
         parent_id = len(entity_tree) - 1
         for curly in curlies:  # note that this single element is a list of curlies
             # skips case where the curly is just a roll.
-            if not curly["entity"]:
+            if not curly["entity"]:  # ???
                 continue
             entity_text = g.generate_entity_text(
                 entities[curly["entity"]], text_type, html_characters
@@ -135,8 +136,8 @@ def generate_entity_tree_and_non_unique(
                         "text": entity_text,
                         "count": 1,
                     }
-                entity_text = ""
-            if roll_dice:
+                entity_text = ""  # ??? why do we do this...
+            if roll_dice:  # and unique???
                 curlies_parsed = parse_curlies(entity_text)
                 entity_text = get_replacement_text(
                     base_text=entity_text, curlies_parsed=curlies_parsed

@@ -255,6 +255,8 @@ def generate_entity_text(
         return generate_latex(entity)
 
 
+# md doc generation
+
 # TODO rewrite this for the new system
 # def all_entities_md(
 #     entities: dict,

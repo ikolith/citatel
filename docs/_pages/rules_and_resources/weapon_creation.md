@@ -116,8 +116,6 @@ If a weapon deals multiple damage types, both damage types are affected by armor
 
 This has been a long document. Understanding what each tag is meant to represent and how a given tag follows from the construction and use of a weapon requires a fair bit of explanation, but it shouldn't require so much knowledge to use, the work of weapon interpretation should be done almost entirely in the process of creating it, players should get a relatively concise and straightforward statblock, something that easily fits in a card, with each potentially mechanical tag in brackets "[]".
 
-<!-- TODO: mention adding weapons to the yaml ehre -->
-
 ## Actually Making a Weapon, Finally
 
 Let's make a simple one-handed spear using this framework.
@@ -185,3 +183,5 @@ Weapons are classified loosely by weight and ease-of-handling which determines h
 - [3n1]
 
 "*" indicates that a weapon attack speed/series is less common.
+
+If you want to add weapons to the .yamls so that you can use the Python/automation tools to generate cards etc. head over to [the .yaml entity creation doc](./../code_and_downloads/yaml_entity_creation.md).
