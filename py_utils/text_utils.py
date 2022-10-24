@@ -111,15 +111,13 @@ def generate_entity_tree_and_non_unique(
     non_unique_entities = {}
     entity_tree = []
     curly_queue = [[base_curly] * base_curly["quantity"]]
-    # TODO: passing like {2 salt_wretch} is broken... im so tired...
-    # TODO: if you get {1d4 salt_wretch} they will all be identical.. which is the opposite of what we want... kill me
     while len(curly_queue) != 0 and len(entity_tree) < 100:
         # TODO: looking back up the tree to not recurse
         curlies = curly_queue.pop(0)
         parent_id = len(entity_tree) - 1
         for curly in curlies:  # note that this single element is a list of curlies
             # skips case where the curly is just a roll.
-            if not curly["entity"]:  # ???
+            if not curly["entity"]:
                 continue
             entity_text = g.generate_entity_text(
                 entities[curly["entity"]], text_type, html_characters
@@ -136,8 +134,8 @@ def generate_entity_tree_and_non_unique(
                         "text": entity_text,
                         "count": 1,
                     }
-                entity_text = ""  # ??? why do we do this...
-            if roll_dice:  # and unique???
+                entity_text = ""
+            if roll_dice:
                 curlies_parsed = parse_curlies(entity_text)
                 entity_text = get_replacement_text(
                     base_text=entity_text, curlies_parsed=curlies_parsed
