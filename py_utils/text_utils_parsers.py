@@ -1,4 +1,3 @@
-import pandas as pd
 import yaml
 import py_utils.dice_utils as d
 import py_utils.entity_text_generators as g
@@ -100,7 +99,7 @@ def text_has_children(text: str) -> bool:
 
 def generate_entity_tree_and_non_unique(
     base_curly: dict,
-    entities: dict[dict],
+    entities: dict[str, dict[str, str]],
     expand_entities: bool = False,
     roll_dice: bool = False,
     html_characters: bool = False,
@@ -164,7 +163,7 @@ def generate_entity_tree_and_non_unique(
 
 def generate_entity_tree_text(
     base_curly: dict,
-    entities: dict[dict],
+    entities: dict[str, dict[str, str]],
     expand_entities: bool = False,
     roll_dice: bool = False,
     html_characters: bool = False,

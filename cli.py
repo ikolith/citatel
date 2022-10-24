@@ -1,6 +1,5 @@
 import argparse
 import os.path
-import pandas as pd
 from copy import deepcopy
 import warnings
 import py_utils.text_utils_parsers as t
@@ -14,11 +13,12 @@ from pprint import pprint
 
 entities = t.get_entities(os.path.join("docs", "_data", "entities"))
 
+
 def filter_entities_by_filter_tags(
-    entities: dict[dict],
+    entities: v.Entities,
     filter_tags_include: str = "",
     filter_tags_exclude: str = "",
-) -> dict[dict]:
+) -> v.Entities:
     # enlist only uses the clean names, so filtered_entities.keys() but we build the entire dict for... futureproofing???
     fti = filter_tags_include.replace(" ", "").split(",") if filter_tags_include else []
     ftx = filter_tags_exclude.replace(" ", "").split(",") if filter_tags_exclude else []
@@ -43,7 +43,10 @@ def filter_entities_by_filter_tags(
 
 
 def cli_single_curly_parser(
-    text: str, entities: dict[dict], expand_entities: False, roll_dice: False
+    text: str,
+    entities: v.Entities,
+    expand_entities: bool = False,
+    roll_dice: bool = False,
 ) -> str:
     if not (text.startswith("{") and text.endswith("}")):
         text = "{" + text + "}"
@@ -59,7 +62,7 @@ def cli_single_curly_parser(
 
 
 def enlist(
-    entities: dict[dict],
+    entities: v.Entities,
     filter_tags_include: str = "",
     filter_tags_exclude: str = "",
     output_filepath: str = None,
@@ -81,10 +84,10 @@ def enlist(
 
 
 def command_generate_cards(
-    card_type: str = None,
-    cards: str = None,
-    input_filepath: str = None,
-    output_filepath: str = None,
+    card_type: str = "",
+    cards: str = "",
+    input_filepath: str = "",
+    output_filepath: str = "",
 ) -> None:
     # set card type
     card_type = "poker" if not card_type else card_type

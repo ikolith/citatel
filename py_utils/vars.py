@@ -1,5 +1,9 @@
 # TODO: all of these need to be fixed for the csv -> yaml switch... gonna just have to ctrl f this one to fix it
 
+from typing import NewType
+
+Entities = NewType("Entities", dict[str, dict[str, str]])
+
 cli_curly_help = """ TODO: rewrite this so it's in standard cli format.
     
     "curly" parses input as if it is within curly braces ({}).

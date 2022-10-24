@@ -102,7 +102,7 @@ def if_exists_format_latex(
 formatting_dict_latex = {
     "basic_attacks": {"text_formatter": attacks_latex},
     "cost": {"field_text": "Cost", "field_text_formatter": emph},
-    "effect": {skill_effect_latex},
+    "effect": {"text_formatter": skill_effect_latex},
     "encumbrance": {"hide": True},
     # need to put this and maybe encumbrance on the footer..
     "filter_tags": {"hide": True},
@@ -112,7 +112,11 @@ formatting_dict_latex = {
     "name": {"text_formatter": lambda text: NoEscape(bold(large(text)))},
     "requirements": {"field_text": "Requirements", "field_text_formatter": emph},
     "scores": {"field_text": "Scores", "field_text_formatter": emph},
-    "skills": {"field_text": "Skills", "field_text_formatter": skill_effect_latex},
+    "skills": {
+        "field_text": "Skills",
+        "field_text_formatter": emph,
+        "text_formatter": skill_effect_latex,
+    },
     "speed": {"field_text": "Speed", "field_text_formatter": emph},
     "tags": {"field_text": "Tags", "field_text_formatter": emph},
     "target": {
@@ -129,6 +133,7 @@ def generate_latex(
 ) -> str:
     result_text = ""
     for key, text in entity.items():
+        print(formatting_dict_latex[key])
         result_text += if_exists_format_latex(
             text=str(text), **formatting_dict_latex[key]
         )
@@ -253,6 +258,7 @@ def generate_entity_text(
                 entity[key],
             )
         return generate_latex(entity)
+
 
 # md doc generation
 
