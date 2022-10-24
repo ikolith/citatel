@@ -93,7 +93,7 @@ async def self(
 )
 async def self(
     interaction: discord.Interaction,
-    card_type: str = "poker",
+    card_type: str = "",
     cards: str = "",
     list_name: str = "",
 ) -> None:

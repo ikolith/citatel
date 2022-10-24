@@ -133,7 +133,6 @@ def generate_latex(
 ) -> str:
     result_text = ""
     for key, text in entity.items():
-        print(formatting_dict_latex[key])
         result_text += if_exists_format_latex(
             text=str(text), **formatting_dict_latex[key]
         )
