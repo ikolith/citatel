@@ -1,5 +1,5 @@
 import re
-import py_utils.text_utils as t
+import py_utils.text_utils_parsers as t
 import py_utils.entity_text_generators as g
 import os.path
 from pylatex import Document, Command, MiniPage, UnsafeCommand, NewPage

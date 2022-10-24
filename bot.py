@@ -1,6 +1,6 @@
 import os
 import cli as g
-import py_utils.text_utils as t
+import py_utils.text_utils_parsers as t
 import argparse
 import discord
 from discord.ext import commands

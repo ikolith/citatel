@@ -3,17 +3,16 @@ import os.path
 import pandas as pd
 from copy import deepcopy
 import warnings
-import py_utils.text_utils as t
+import py_utils.text_utils_parsers as t
 import py_utils.dice_utils as d
 import py_utils.vars as v
-import py_utils.minipages as m
+import py_utils.cards as m
 import py_utils.entity_text_generators as g
 from pprint import pprint
 
 # TODO: move commands to commands.py
 
 entities = t.get_entities(os.path.join("docs", "_data", "entities"))
-
 
 def filter_entities_by_filter_tags(
     entities: dict[dict],
