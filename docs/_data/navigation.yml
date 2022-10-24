@@ -42,7 +42,7 @@ sidebar:
         url: _pages/code_and_downloads/why_code
       - title: "Curly Templating"
         url: _pages/code_and_downloads/templating
-      - title: "Character Sheets, Handouts, Tables"
+      - title: "Character Sheets, Handouts, Downloads"
         url: _pages/code_and_downloads/handouts
       - title: ".yaml Entity Creation"
         url: _pages/code_and_downloads/yaml_entity_creation
