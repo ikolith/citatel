@@ -47,8 +47,6 @@ bot_enlist_help = """/enlist lets you create a list of entities that you can pas
 
 Leaving every field blank will create a list of all entities with the default name, "enlist".
 
-e_type: e_type allows you to ask for one type of entity. The available types of entity are weapons, skills, items, invocations, and npcs.
-
 filter_tags_include: This allows you to filter for only entities that have one of the filter tags given. 
 
 filter_tags_exclude: This allows you to only get entities that do *not* have the given filter tags.
@@ -60,6 +58,8 @@ Common filter tags are:
 - "basic" which specifies entities that you would know about at the beginning of the game. "basic" allows you to avoid spoilers. 
 
 - "large" which is used to tag entities with too much text to fit in the standard poker size card. At the moment the only entities that large are complex magic skills.
+
+- "weapon", "npc", "item" etc.
 """
 
 bot_cards_help = """/cards lets you create cards, they will be sent in the form of a pdf called "cards.pdf" in the reply to the command.

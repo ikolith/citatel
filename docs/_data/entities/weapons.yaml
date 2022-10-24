@@ -1,3 +1,16 @@
+# typical weapon example:
+#
+# - name: 
+#   tags: 
+#   requirements:
+#   speed:
+#   to_hit:
+#   basic_attacks:
+#   effect:
+#   flavor_text:
+#   encumbrance:
+#   filter_tags: weapon
+
 - name: Giant Feasting Club
   tags: two-handed, giant, hilted
   requirements: 4 STR
@@ -170,7 +183,7 @@
   to_hit: +AGI
   basic_attacks: "2d6 (S) [swinging: neutral]"
   effect: >-
-    Ignore 1 Armor. All sharpening takes 3 times longer. Requires 2 CLARITY:
+    Ignore 1 Armor. All sharpening takes 3 times longer. Requires 2 PSYCHIC:
     Before you attempt an attack you can choose to either move one space when
     you attack or use your To-Hit as a check against the opponents STR. If you
     pass the check they are pushed back one space.

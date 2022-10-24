@@ -11,7 +11,7 @@ x: Optional. Specifies whether the dice are "exploding", that is, rolling a max 
 + or -: allows you to add or subtract some non-fraction from the result.
 
 Entities:
-An entity is any valid entry in the csvs that the entities function can see. You do not have to specify whether the entity is an npc, weapon, etc. That is handled automatically.
+An entity is any valid entry in the .yamls that the entities function can see.
 
 A valid input can be one of the following:
 - A die roll. Ex: {d3}, {9d9x-10}.
@@ -37,8 +37,6 @@ ENLIST +++++++++++++++++++++++++++++ ENLIST
 /enlist lets you create a list of entities that you can pass to the cards command instead of having to manually name all the cards you want.
 
 Leaving every field blank will create a list of all entities with the default name, "enlist".
-
-e_type: e_type allows you to ask for one type of entity. The available types of entity are weapons, skills, items, invocations, and npcs.
 
 filter_tags_include: This allows you to filter for only entities that have one of the filter tags given. 
 

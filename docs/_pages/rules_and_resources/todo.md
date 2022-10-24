@@ -1,7 +1,6 @@
 ---
 title: Known Issues and Todo
 ---
-<!-- TODO: these -->
 
 - Most of the content lives in YAMLs, not on this website. There is no good generated connection anymore, not since the switch to YAMLs from CSVs.
 
@@ -10,3 +9,4 @@ title: Known Issues and Todo
 - Armor probably needs a rework
 
 - Need a more thoroughly described procedure for turn-taking, what level of initiative we are currently at, when to announce such a thing
+

@@ -99,7 +99,6 @@ def text_has_children(text: str) -> bool:
 
 # entity tree functions
 
-# TODO: these need to be updated to be able to use the new data..  but it relies on better text generation, and so i will go off and do the text generation first!
 def generate_entity_tree_and_non_unique(
     base_curly: dict,
     entities: dict[dict],

@@ -1,3 +1,11 @@
+# typical skill example:
+#
+# - name:
+#   requirements:
+#   effect:
+#   cost:
+#   filter_tags: skill
+
 - name: Charge
   requirements: 1 STR
   effect: >-

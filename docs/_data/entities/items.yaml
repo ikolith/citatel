@@ -1,12 +1,19 @@
+# typical item looks like
+#
+# - name:
+#   effect:
+#   flavor_text:
+#   filter_tags:
+
 - name: The Braggart
   effect: >-
-    A cloak with bright silver stitching. When worn, DC 9 illusion of a full
-    plate set of armor.
+    A cloak with bright silver stitching. 
+    When worn, DC 9 illusion of a full set of plate armor.
   filter_tags: item
+
 - name: Lost
-  effect: >-
-    Two stone birds that constantly tug towards each other, regardless of
-    distance.
+  effect: Two stone birds that constantly tug towards each other, regardless of distance.
+  filter_tags: item
 
 - name: Bandage
   effect: Spend (3n1). Remove 1 bleed. Bandages can be improvised out of any cloth.
@@ -15,19 +22,19 @@
 
 - name: Simple Whetstone
   effect: >-
-    Apply [sharpened] to a [bladed] weapon, takes 30 minutes to apply. Weapon
-    does +1 damage and ignores 1 armor. [sharpened] is lost when you roll a 1
-    with a damage die.
+    Apply [sharpened] to a [bladed] weapon, takes 30 minutes to apply.
+    The weapon does +1 damage and ignores 1 armor.
+    [sharpened] is lost when you roll a 1 with a damage die.
   flavor_text: A large flat stone bearing faded inscriptions.
   filter_tags: item, whetstone, basic
 
 - name: Troll Salts
   effect: >-
-    Remove 1 [exhaustion], after 10 minutes take 2 [exhaustion]. Wake up from
-    unconsciousness not caused by negative health.
+    Remove 1 [exhaustion], after 10 minutes take 2 [exhaustion].
+    Wake up from unconsciousness not caused by negative health.
   flavor_text: >-
-    A small earthenware jar filled with a strong-smelling coarse powder, sealed
-    with a waxed ball of plant fiber.
+    A small earthenware jar filled with a strong-smelling coarse powder,
+    sealed with a waxed ball of plant fiber.
   filter_tags: item, medicine
 
 - name: Stolen Ichor
@@ -44,9 +51,9 @@
 
 - name: Valiikon's Whetstone
   effect: >-
-    Takes 30 minutes to apply [sharpened]. Inflict 1 poison on hit. Inflict 1
-    poison if you do 2 poison in one turn. Rolling minimum damage removes
-    [sharpened].
+    Takes 30 minutes to apply [sharpened]. Inflict 1 poison on hit.
+    Inflict 1 poison if you do 2 poison in one turn.
+    Rolling minimum damage removes [sharpened].
   filter_tags: item, whetstone
 
 - name: Vial of Verdant Sap

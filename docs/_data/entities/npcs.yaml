@@ -1,3 +1,13 @@
+# typical npc example:
+#
+# - name:
+#   hp:
+#   scores:
+#   skills:
+#   holds:
+#   flavor_text:
+#   filter_tags: npc
+
 - name: Salt Wretch
   hp: "{1d10} or 4"
   scores: 1 STR
