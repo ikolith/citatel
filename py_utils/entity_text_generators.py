@@ -1,5 +1,6 @@
 from pylatex.utils import NoEscape
 import py_utils.vars as v
+import py_utils.commands as c
 import os
 from collections.abc import Callable
 import re
@@ -261,25 +262,39 @@ def generate_entity_text(
 
 # md doc generation
 
-# TODO rewrite this for the new system
-# def all_entities_md(
-#     entities: dict,
+# def generate_entity_text(
+#     entity: dict,
+#     text_type: str = "md",
 #     html_characters: bool = False,
-#     output_filepath: str = os.path.join(
-#         "docs", "_pages", "talaje", "generated_entities.md"
-#     ),
-#     front_matter=v.all_entities_front_matter,
-# ) -> None:
-#     contents = front_matter
-#     for entity_type in entities:
-#         contents += "## " + entity_type.capitalize() + "  \n\n"
-#         df = entities[entity_type].sort_index()
-#         for index, row in df.iterrows():
-#             contents += (
-#                 generate_entity_text(entity_type, row, "md", html_characters)
-#                 + "\n  "
-#                 + "\n  "
-#                 + "--- \n"
-#             )
-#     with open(output_filepath, "w") as f:
-#         f.write(contents)
+# ) -> str:
+
+
+
+def generate_doc_text(  # this is called "text" not "md"... and the params suggest it would work okay with latex, but im not sure thats actually true.
+    entities: v.Entities,
+    entity_filter_sections: list[
+        dict[str, str]
+    ],  # the entity_filter_sections typing is probably not ideal
+    front_text: str = "",
+    end_text: str = "",
+    text_type: str = "md",
+    html_characters: bool = False,
+) -> str:
+    doc = front_text
+    for section in entity_filter_sections:
+        doc += section["text"] + "  \n\n"
+        if "clean_name" in section.keys():
+            doc += generate_entity_text(
+                entities[section["clean_name"]], text_type, html_characters
+            )
+            continue
+        fi, fx = "", ""
+        if "fi" in section.keys():
+            fi = section["fi"]
+        if "fx" in section.keys():
+            fx = section["fx"]
+        filtered_entities = c.filter_entities_by_filter_tags(entities, fi, fx)
+        for entity in filtered_entities.values():
+            print(entity)
+            doc += generate_entity_text(entity, text_type, html_characters) + "  \n\n"
+    return doc + end_text

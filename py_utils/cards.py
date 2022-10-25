@@ -34,11 +34,9 @@ def generate_cards(
         "square": 3,
     }
     geometry_options = {"margin": ".07in"}
-
     if card_type not in cards_per_page.keys():
         raise ValueError("Invalid card type.")
     assert card_entities
-
     # define the LaTex command to generate a minipage of given dimensions, and populate it with content
     class CardCommand(CommandBase):
         _latex_name = "card"
@@ -58,19 +56,15 @@ def generate_cards(
     doc = Document(geometry_options=geometry_options, indent=False)
     doc.append(card_com)
     doc.packages.append(Package("fdsymbol"))
-
-    for count, text in enumerate(entity_texts):
+    for count, text in enumerate(entity_texts): 
         count += 1
-
         doc.append(
             CardCommand(
                 arguments=Arguments(card_height[card_type], card_width[card_type], text)
             )
         )
-
         if count % cards_per_row[card_type] == 0 and count > 1:
             doc.append(NoEscape("\\newline"))
         if count % cards_per_page[card_type] == 0:
             doc.append(NewPage())
-
     doc.generate_pdf(output_filepath, clean_tex=False)

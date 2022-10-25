@@ -1,7 +1,7 @@
 import os
 import cli as g
 import py_utils.text_utils_parsers as t
-import argparse
+import py_utils.commands as c
 import discord
 from discord.ext import commands
 from discord import app_commands
@@ -61,7 +61,7 @@ async def self(
 ) -> None:
 
     await post_text(
-        g.cli_single_curly_parser(curly, entities, expand_entities, roll_dice),
+        c.single_curly_parser(curly, entities, expand_entities, roll_dice),
         interaction,
     )
 
@@ -77,13 +77,13 @@ async def self(
     filter_tags_exclude: str = "",
     list_name: str = "enlist",
 ) -> None:
-    g.enlist(
+    c.enlist(
         entities,
         filter_tags_include,
         filter_tags_exclude,
         os.path.join("output", "bot_output", (list_name + ".txt")),
     )
-    await interaction.response.send_message(":white_check_mark:")
+    await interaction.response.send_message(f"Created list named: {list_name}")
 
 
 @tree.command(
@@ -102,7 +102,8 @@ async def self(
     list_name = (
         os.path.join("output", "bot_output", (list_name + ".txt")) if list_name else ""
     )
-    g.command_generate_cards(
+    c.command_generate_cards(
+        entities,
         card_type,
         cards,
         list_name,

@@ -1,8 +1,21 @@
 # TODO: all of these need to be fixed for the csv -> yaml switch... gonna just have to ctrl f this one to fix it
 
-from typing import NewType
+from typing import NewType, TypedDict
+
+# types
 
 Entities = NewType("Entities", dict[str, dict[str, str]])
+
+# should be:...
+# [{"text": "text",
+#  "filter_tags_include":"",
+# "filter_tags_exclude":"",
+# "clean_name":""},{...}...]
+
+# class EntityFilterSections(TypedDict):
+#     text: NotRequired[str]
+
+
 
 cli_curly_help = """ TODO: rewrite this so it's in standard cli format.
     
@@ -94,3 +107,30 @@ This page tchok-full of spoilers. This is all the content in the entity tables (
 There will probably be better online documentation generators down the line. This is here for the sake of completeness and because I thought it couldn't be *that* hard to get them all up here.
 
 """
+
+# doc dicts for generate doc_text
+
+basic_docs = {
+    "entity_filter_sections": [
+        {"text": "## Basic Skills", "fi": "skill, basic"},
+        {"text": "## Basic Weapons", "fi": "weapon, basic"},
+        {
+            "text": "## Basic Items",
+            "fi": "item, basic",
+        },
+        # {
+        #     "text": "## Basic Invocations",
+        #     "fi": "weapon, basic",
+        # },
+        # invocations need to be looked over again.
+        # {
+        #     "text": "## Basic NPCs"
+        #     "fi": "npc, basic"
+        # }
+        # there aren't any.
+    ],
+    "front_text": """This is a collection of all the basic weapons, skills, items""",
+    "end_text": """This file was auto-generated.""",
+    "text_type": "md",
+    "html_characters": True,
+}
