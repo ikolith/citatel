@@ -24,11 +24,11 @@ def filter_entities_by_filter_tags(
                 continue
         filter_tags = entity["filter_tags"].replace(" ", "").split(",")
         if ftx:
-            if any(ft in ftx for ft in filter_tags):
+            if all(ft in filter_tags for ft in ftx):
+                # possibly users should be able to choose between any() and all() as filtering behaviour...
                 continue
         if fti:
-            if any(ft in fti for ft in filter_tags):
-                # could also do set(a) & set(b) but that seems likely slower? at least, less readable
+            if all(ft in filter_tags for ft in fti):
                 filtered_entities[clean_name] = entity
         else:
             filtered_entities[clean_name] = entity

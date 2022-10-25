@@ -56,7 +56,7 @@ def generate_cards(
     doc = Document(geometry_options=geometry_options, indent=False)
     doc.append(card_com)
     doc.packages.append(Package("fdsymbol"))
-    for count, text in enumerate(entity_texts): 
+    for count, text in enumerate(entity_texts):
         count += 1
         doc.append(
             CardCommand(

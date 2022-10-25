@@ -28,8 +28,8 @@ sidebar:
     children:
       - title: "Lore and Setting Rules"
         url: _pages/talaje/lore
-      - title: "All Entities"
-        url: _pages/talaje/generated_entities
+      - title: "Basic Entities"
+        url: _pages/talaje/basic
       - title: "NPCs and Factions"
         url: _pages/talaje/npcs_and_factions
       - title: "Pre-Rolls"
@@ -43,6 +43,6 @@ sidebar:
       - title: "Curly Templating"
         url: _pages/code_and_downloads/templating
       - title: "Character Sheets, Handouts, Downloads"
-        url: _pages/code_and_downloads/handouts
+        url: _pages/code_and_downloads/downloads
       - title: ".yaml Entity Creation"
         url: _pages/code_and_downloads/yaml_entity_creation

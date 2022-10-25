@@ -288,6 +288,5 @@ def generate_doc_text(  # this is called "text" not "md"... and the params sugge
             fx = section["fx"]
         filtered_entities = c.filter_entities_by_filter_tags(entities, fi, fx)
         for entity in filtered_entities.values():
-            print(entity)
             doc += generate_entity_text(entity, text_type, html_characters) + "  \n\n"
     return doc + end_text

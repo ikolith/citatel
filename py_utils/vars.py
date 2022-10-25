@@ -110,28 +110,3 @@ There will probably be better online documentation generators down the line. Thi
 """
 
 # doc dicts for generate doc_text
-
-basic_docs = {
-    "entity_filter_sections": [
-        {"text": "## Basic Skills", "fi": "skill, basic"},
-        {"text": "## Basic Weapons", "fi": "weapon, basic"},
-        {
-            "text": "## Basic Items",
-            "fi": "item, basic",
-        },
-        # {
-        #     "text": "## Basic Invocations",
-        #     "fi": "weapon, basic",
-        # },
-        # invocations need to be looked over again.
-        # {
-        #     "text": "## Basic NPCs"
-        #     "fi": "npc, basic"
-        # }
-        # there aren't any.
-    ],
-    "front_text": """This is a collection of all the basic weapons, skills, items""",
-    "end_text": """This file was auto-generated.""",
-    "text_type": "md",
-    "html_characters": True,
-}
