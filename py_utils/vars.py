@@ -12,9 +12,10 @@ Entities = NewType("Entities", dict[str, dict[str, str]])
 # "filter_tags_exclude":"",
 # "clean_name":""},{...}...]
 
+
+# TODO: once discord.py has new fresh wheels and is functional again ill implement the python 3.11 advanced dict nonsense... and ill put off really getting mypy in until that point anyway too.. ohwell
 # class EntityFilterSections(TypedDict):
 #     text: NotRequired[str]
-
 
 
 cli_curly_help = """ TODO: rewrite this so it's in standard cli format.

@@ -260,14 +260,7 @@ def generate_entity_text(
         return generate_latex(entity)
 
 
-# md doc generation
-
-# def generate_entity_text(
-#     entity: dict,
-#     text_type: str = "md",
-#     html_characters: bool = False,
-# ) -> str:
-
+# doc gen
 
 
 def generate_doc_text(  # this is called "text" not "md"... and the params suggest it would work okay with latex, but im not sure thats actually true.

@@ -1,6 +1,8 @@
 import os
 import cli as g
 import py_utils.text_utils_parsers as t
+
+# import py_utils.entity_text_generators as g
 import py_utils.commands as c
 import discord
 from discord.ext import commands
@@ -112,6 +114,21 @@ async def self(
     await interaction.response.send_message(
         file=discord.File(fp=os.path.join("output", "bot_output", "cards.pdf"))
     )
+
+
+# TODO: this probably works but i can't test it locally due to 3.11 nonsense
+# when that is cleared up, uncomment, test, push
+# @tree.command( # the discord wheels have not been updated for 3.11, so im just flying blind here im gonna be honest
+#     name="entity-filter-dump"
+#     description="Use filters to generate many entities."
+#     guild=discord.Object(id=Guild)
+# )
+# async def self(interaction: discord.Interaction,
+#     fi: str = "",
+#     fx: str = "",) -> None:
+#     await post_text(
+#         g.generate_doc_text(entities,[{"text":"## Results:","fi":fi,"fx":fx}]),interaction
+#     )
 
 
 @tree.command(
