@@ -2,7 +2,7 @@ import argparse
 import os.path
 import py_utils.text_utils_parsers as t
 import py_utils.vars as v
-import py_utils.commands as c
+import py_utils.commands as co
 
 # TODO: move commands to commands.py
 
@@ -83,18 +83,18 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if args.command == "curly":
         print(
-            c.single_curly_parser(
+            co.single_curly_parser(
                 args.curly, entities, args.expand_entities, args.roll_dice
             )
         )
 
     elif args.command == "cards":
-        c.command_generate_cards(
+        co.command_generate_cards(
             entities, args.type, args.cards, args.input_filepath, args.output_filepath
         )
 
     elif args.command == "enlist":
-        c.enlist(
+        co.enlist(
             entities,
             args.filter_tags_include,
             args.filter_tags_exclude,

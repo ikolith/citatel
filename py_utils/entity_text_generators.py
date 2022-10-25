@@ -1,6 +1,6 @@
 from pylatex.utils import NoEscape
 import py_utils.vars as v
-import py_utils.commands as c
+import py_utils.commands as co
 import os
 from collections.abc import Callable
 import re
@@ -286,7 +286,7 @@ def generate_doc_text(  # this is called "text" not "md"... and the params sugge
             fi = section["fi"]
         if "fx" in section.keys():
             fx = section["fx"]
-        filtered_entities = c.filter_entities_by_filter_tags(entities, fi, fx)
+        filtered_entities = co.filter_entities_by_filter_tags(entities, fi, fx)
         for entity in filtered_entities.values():
             doc += generate_entity_text(entity, text_type, html_characters) + "  \n\n"
     return doc + end_text
