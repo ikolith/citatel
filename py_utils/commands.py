@@ -1,5 +1,5 @@
 import py_utils.vars as v
-import py_utils.cards as c
+import py_utils.cards as cr
 import py_utils.text_utils_parsers as t
 import py_utils.dice_utils as d
 import warnings
@@ -24,7 +24,7 @@ def filter_entities_by_filter_tags(
                 continue
         filter_tags = entity["filter_tags"].replace(" ", "").split(",")
         if ftx:
-            if all(ft in filter_tags for ft in ftx):
+            if any(ft in ftx for ft in filter_tags):
                 # possibly users should be able to choose between any() and all() as filtering behaviour...
                 continue
         if fti:
@@ -56,7 +56,7 @@ def command_generate_cards(
     assert card_entities
     if not output_filepath:
         output_filepath = os.path.join("output", "cards")
-    c.generate_cards(card_entities, entities, card_type, output_filepath)
+    cr.generate_cards(card_entities, entities, card_type, output_filepath)
 
 
 def enlist(
@@ -67,7 +67,7 @@ def enlist(
 ) -> None:
     enlist_entities = deepcopy(entities)  # seems kinda heavy for this...
     if filter_tags_include or filter_tags_exclude:
-        enlist_entities = c.filter_entities_by_filter_tags(
+        enlist_entities = filter_entities_by_filter_tags(
             enlist_entities, filter_tags_include, filter_tags_exclude
         )
     if not output_filepath:
