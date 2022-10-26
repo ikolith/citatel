@@ -108,13 +108,13 @@ The full list of features an entity can have is:
 - target
 - to_hit
   
-These all have special rules for formatting, they can be changed if you want to [plumb the code](https://github.com/loafee/citatel/blob/main/py_utils/entity_text_generators.py) but you don't need to.  
+These all have special rules for formatting, they can be changed if you want to [plumb the code](https://github.com/ikolith/citatel/blob/main/py_utils/entity_text_generators.py) but you don't need to.  
 
 When you use entity generators (card generators, .md file generators, etc.) the features for the entity will be and added in whatever order they're in in the .yaml. If you choose a weird order nothing bad will happen, but the card might not look like other similar cards.
 
 ### Where are the Entity .yamls, where should new ones go?
 
-In the repo, the .yamls live in [./docs/_data/entities](https://github.com/loafee/citatel/tree/main/docs/_data/entities). There are a bunch of different .yamls for different sorts of entities. There's a `weapons.yaml`, an `items.yaml`, etc. This has no impact on the code. The code will just look in the folder and read every .yaml file present, the only reason for the separation is that I think it's easier to keep track of things that way. At the beginning of every .yaml there's a commented out blank example entity with every feature used in the .yaml in the default order.  
+In the repo, the .yamls live in [./docs/_data/entities](https://github.com/ikolith/citatel/tree/main/docs/_data/entities). There are a bunch of different .yamls for different sorts of entities. There's a `weapons.yaml`, an `items.yaml`, etc. This has no impact on the code. The code will just look in the folder and read every .yaml file present, the only reason for the separation is that I think it's easier to keep track of things that way. At the beginning of every .yaml there's a commented out blank example entity with every feature used in the .yaml in the default order.  
 
 An example from the weapons.yaml:
 
