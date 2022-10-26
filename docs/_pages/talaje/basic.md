@@ -3,7 +3,7 @@ title: Basic Entities
 toc: true
 ---
 
-This is a collection of all the basic weapons, skills, and items. No spoilers here. More pre-made pages and cards are available at the [downloads page](../code_and_downloads/downloads.md).
+This is a collection of all the basic weapons, skills, and items. No spoilers here.
 
 ## Basic Skills  
 
