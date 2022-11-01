@@ -1,13 +1,3 @@
-# typical npc example:
-#
-# - name:
-#   hp:
-#   scores:
-#   skills:
-#   holds:
-#   flavor_text:
-#   filter_tags: npc
-
 - name: Salt Wretch
   hp: "{1d10} or 4"
   scores: 1 STR
@@ -31,44 +21,6 @@
   scores: "-1 STR, 1 AGI "
   skills: "- Peck and Scratch, (3n1): 1d4-1 (S) + 1 (P). "
   filter_tags: npc, cave, beast
-
-- name: Isopod Peacekeeper
-  hp: "{3d10} or 16"
-  scores: 1 STR, 2 CON
-  holds: 2 {shell_buckler}, 1 {great_claw}, {sap}.
-  filter_tags: npc, cave, isopod
-
-- name: Isopod Trophy Hunter
-  hp: "{3d12} or 19"
-  scores: 1 STR, 2 CON, 1 STEALTH
-  holds: "{hunting_knife}, {1d4 hunting_net}, {1d4 great_claw}, {1d4 shell_buckler}."
-  filter_tags: npc, cave, isopod
-
-- name: Isopod Ambassador
-  hp: "{2d12} or  13"
-  scores: 1 DEX, 2 PERSUASION, 2 STEALTH
-  filter_tags: npc, cave, isopod
-
-- name: Radiat Thrall
-  hp: "{2d12} or 13"
-  scores: 1 STR, 1 CON, 1 PSYCHIC
-  skills: "- Screech (3n1): 1d6 + PSYCHIC (P) reach: 2 spaces."
-  filter_tags: npc, cave, radiat
-
-- name: Radiat Priest
-  hp: "{4d10} or 18"
-  scores: 1 STR, 3 PSYCHIC
-  holds: "{radiat_dagger}. Ceremonial robes."
-  filter_tags: npc, cave, radiat
-
-- name: Radiat Crusader
-  hp: "{5d12} or 32"
-  scores: 3 STR, 2 AGI, 2 CON, 3 PSYCHIC
-  holds: >-
-    {radiat_greatsword} sometimes. Any large sword. Sometimes a shield. The
-    heaviest armor they would reasonably have in the situation.
-    {radiat_crusader_armor} potentially.
-  filter_tags: npc, cave, radiat
 
 - name: Starving Harvester
   hp: "{2d12} 13"

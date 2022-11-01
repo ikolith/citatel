@@ -1,16 +1,3 @@
-# typical weapon example:
-#
-# - name: 
-#   tags: 
-#   requirements:
-#   speed:
-#   to_hit:
-#   basic_attacks:
-#   effect:
-#   flavor_text:
-#   encumbrance:
-#   filter_tags: weapon
-
 - name: Giant Feasting Club
   tags: two-handed, giant, hilted
   requirements: 4 STR

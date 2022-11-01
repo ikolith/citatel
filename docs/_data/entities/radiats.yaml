@@ -1,0 +1,22 @@
+# NPCs
+
+- name: Radiat Thrall
+  hp: "{2d12} or 13"
+  scores: 1 STR, 1 CON, 1 PSYCHIC
+  skills: "- Screech (3n1): 1d6 + PSYCHIC (P) reach: 2 spaces."
+  filter_tags: npc, cave, radiat
+
+- name: Radiat Priest
+  hp: "{4d10} or 18"
+  scores: 1 STR, 3 PSYCHIC
+  holds: "{radiat_dagger}. Ceremonial robes."
+  filter_tags: npc, cave, radiat
+
+- name: Radiat Crusader
+  hp: "{5d12} or 32"
+  scores: 3 STR, 2 AGI, 2 CON, 3 PSYCHIC
+  holds: >-
+    {radiat_greatsword} sometimes. Any large sword. Sometimes a shield. The
+    heaviest armor they would reasonably have in the situation.
+    {radiat_crusader_armor} potentially.
+  filter_tags: npc, cave, radiat

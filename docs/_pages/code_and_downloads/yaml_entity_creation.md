@@ -114,9 +114,7 @@ When you use entity generators (card generators, .md file generators, etc.) the 
 
 ### Where are the Entity .yamls, where should new ones go?
 
-In the repo, the .yamls live in [./docs/_data/entities](https://github.com/ikolith/citatel/tree/main/docs/_data/entities). There are a bunch of different .yamls for different sorts of entities. There's a `weapons.yaml`, an `items.yaml`, etc. This has no impact on the code. The code will just look in the folder and read every .yaml file present, the only reason for the separation is that I think it's easier to keep track of things that way. At the beginning of every .yaml there's a commented out blank example entity with every feature used in the .yaml in the default order.  
-
-An example from the weapons.yaml:
+In the repo, the .yamls live in [./docs/_data/entities](https://github.com/ikolith/citatel/tree/main/docs/_data/entities). There are a bunch of different .yamls for different sorts of entities, different groups of entities, themes, etc. This is just because they are easier to work on this way. This has no impact on the code. The code will just look in the folder and read every .yaml file present, it takes no note of what .yaml an entity is from. In the folder there is one special .yaml, `templates.yaml`. This .yaml has no actual entities in it, the only thing it contains are blank entity examples that have been commented out. These blank templates have all of the fields that the most complicated (typical) example might have. For example, this is the entry for a weapon entity:
 
 ```yaml
 # typical weapon example:
@@ -132,6 +130,8 @@ An example from the weapons.yaml:
 #   encumbrance:
 #   filter_tags: weapon
 ```
+
+[Link here](https://github.com/ikolith/citatel/blob/main/docs/_data/entities/templates.yaml). 
 
 If you want to add to the .yaml files you can edit them directly. You can also make your own .yaml in the same folder and it will be picked up with everything else when data is loaded. If you don't want something to be loaded, delete it or just move it out of the folder.
 

@@ -1,0 +1,16 @@
+- name: Isopod Peacekeeper
+  hp: "{3d10} or 16"
+  scores: 1 STR, 2 CON
+  holds: 2 {shell_buckler}, 1 {great_claw}, {sap}.
+  filter_tags: npc, cave, isopod
+
+- name: Isopod Trophy Hunter
+  hp: "{3d12} or 19"
+  scores: 1 STR, 2 CON, 1 STEALTH
+  holds: "{hunting_knife}, {1d4 hunting_net}, {1d4 great_claw}, {1d4 shell_buckler}."
+  filter_tags: npc, cave, isopod
+
+- name: Isopod Ambassador
+  hp: "{2d12} or  13"
+  scores: 1 DEX, 2 PERSUASION, 2 STEALTH
+  filter_tags: npc, cave, isopod

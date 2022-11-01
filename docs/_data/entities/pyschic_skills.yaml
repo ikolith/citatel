@@ -1,0 +1,9 @@
+# typical skill example:
+#
+# - name:
+#   requirements:
+#   effect:
+#   cost:
+#   filter_tags: skill
+
+# A skill that lets you 
