@@ -234,7 +234,7 @@ def generate_entity_text(
             entity["basic_attacks"] = re.sub(r",", r"\n-", entity["basic_attacks"])
         for key in entity.keys():
             entity[key] = re.sub(r"[{}]", "", entity[key])
-            entity[key] = re.sub(r"_", r"\_", entity[key])
+            entity[key] = re.sub(r"([a-z0-9])(_)", r"\1\_", entity[key])
             entity[key] = re.sub(r"->", "$\\\Rightarrow$", entity[key])
             # replacing text with latex glyphs for the [swinging: ...], [thrusting] tags
             entity[key] = re.sub(

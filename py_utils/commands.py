@@ -20,6 +20,7 @@ def filter_entities_by_filter_tags(
         if "filter_tags" not in entity.keys():  # untested
             if not fti:
                 filtered_entities[clean_name] = entity
+                continue
             else:
                 continue
         filter_tags = entity["filter_tags"].replace(" ", "").split(",")
@@ -33,30 +34,6 @@ def filter_entities_by_filter_tags(
         else:
             filtered_entities[clean_name] = entity
     return filtered_entities
-
-
-def command_generate_cards(
-    entities: v.Entities,
-    card_type: str = "",
-    cards: str = "",
-    input_filepath: str = "",
-    output_filepath: str = "",
-) -> None:
-    # set card type
-    card_type = "poker" if not card_type else card_type
-    # get entity list either from file or passed arguments
-    if input_filepath:
-        if input_filepath == "e":
-            input_filepath = os.path.join("output", "entities.txt")
-            # just a little shortcut to the default
-        with open(input_filepath) as f:
-            card_entities = f.readline().split(sep=",")
-    else:
-        card_entities = cards.split(",")
-    assert card_entities
-    if not output_filepath:
-        output_filepath = os.path.join("output", "cards")
-    cr.generate_cards(card_entities, entities, card_type, output_filepath)
 
 
 def enlist(
@@ -79,6 +56,43 @@ def enlist(
         )
     with open(output_filepath, mode="w") as f:
         f.write(enlist)
+
+
+def filter_generate_cards(
+    entities: v.Entities,
+    card_type: str = "",
+    filter_tags_include: str = "",
+    filter_tags_exclude: str = "",
+    output_filepath: str = os.path.join("output", "filter_cards"),
+) -> None:
+    card_entities = filter_entities_by_filter_tags(
+        entities, filter_tags_include, filter_tags_exclude
+    ).keys()
+    cr.generate_cards(card_entities, entities, card_type, output_filepath)
+
+
+def enlist_generate_cards(
+    entities: v.Entities,
+    card_type: str = "",
+    cards: str = "",
+    input_filepath: str = "",  # maybe this should just be replaced with fi/fx tbh
+    output_filepath: str = "",
+) -> None:
+    # set card type
+    card_type = "poker" if not card_type else card_type
+    # get entity list either from file or passed arguments
+    if input_filepath:
+        if input_filepath == "e":
+            input_filepath = os.path.join("output", "entities.txt")
+            # just a little shortcut to the default
+        with open(input_filepath) as f:
+            card_entities = f.readline().split(sep=",")
+    else:
+        card_entities = cards.split(",")
+    assert card_entities
+    if not output_filepath:
+        output_filepath = os.path.join("output", "cards")
+    cr.generate_cards(card_entities, entities, card_type, output_filepath)
 
 
 def single_curly_parser(

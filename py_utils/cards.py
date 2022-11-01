@@ -10,9 +10,9 @@ from pylatex.utils import NoEscape
 
 def generate_cards(
     card_entities: list,
-    entities: dict[dict],
+    entities: dict[dict],  # this order should probably be swapped..
     card_type: str = "poker",
-    output_filepath: str = os.path.join("cards", "cards"),
+    output_filepath: str = os.path.join("output", "cards"),
 ) -> None:
     cards_per_page = {"quarter": 4, "tarot": 6, "poker": 9, "square": 12}
     card_height = {

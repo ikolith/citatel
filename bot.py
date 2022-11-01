@@ -104,7 +104,7 @@ async def self(
     list_name = (
         os.path.join("output", "bot_output", (list_name + ".txt")) if list_name else ""
     )
-    co.command_generate_cards(
+    co.enlist_generate_cards(
         entities,
         card_type,
         cards,
@@ -118,16 +118,19 @@ async def self(
 
 # TODO: this probably works but i can't test it locally due to 3.11 nonsense
 # when that is cleared up, uncomment, test, push
-@tree.command( # the discord wheels have not been updated for 3.11, so im just flying blind here im gonna be honest
+@tree.command(  # the discord wheels have not been updated for 3.11, so im just flying blind here im gonna be honest
     name="entity-filter-dump",
     description="Use filters to generate many entities.",
     guild=discord.Object(id=GUILD),
 )
-async def self(interaction: discord.Interaction,
+async def self(
+    interaction: discord.Interaction,
     fi: str = "",
-    fx: str = "",) -> None:
+    fx: str = "",
+) -> None:
     await post_text(
-        g.generate_doc_text(entities,[{"text":"## Results:","fi":fi,"fx":fx}]),interaction
+        g.generate_doc_text(entities, [{"text": "## Results:", "fi": fi, "fx": fx}]),
+        interaction,
     )
 
 

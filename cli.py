@@ -89,7 +89,7 @@ if __name__ == "__main__":
         )
 
     elif args.command == "cards":
-        co.command_generate_cards(
+        co.enlist_generate_cards(
             entities, args.type, args.cards, args.input_filepath, args.output_filepath
         )
 

@@ -23,6 +23,8 @@ def get_entities(dir_path: str) -> dict[dict]:
     for file in entity_files:
         with open(file) as f:
             data = yaml.safe_load(f)
+            if data is None:
+                continue
             for entity in data:
                 for k, v in entity.items():
                     entity[k] = str(v)
