@@ -83,5 +83,5 @@ co.filter_generate_cards(entities, "poker", "skill", "", dl_path("skill_cards"))
 co.filter_generate_cards(entities, "poker", "weapon", "", dl_path("weapon_cards"))
 
 ## generating docs
-
+# TODO: getting started doc with the skills and items and such
 md_updater(entities, docs_to_update)

@@ -258,11 +258,12 @@ If you win you act first. The opponent can still take their action afterwards. Y
 ### Coordinating Actions around the Table  
 
 Say Alice has 3 initiative, Bob has 2, and both try to do something at the start of every round. Alice is faster than Bob and will always end up going before ("overruling") Bob, but some time is wasted establishing that *every single round*. We want to minimize these sorts of predictable action-taking collisions.  
-<!--
-This method of turn coordination was made to capture three ideas.
+<!-- TODO: wile made a good case for the y=1 implicitly in XnY, so probably change stuff to fit, or leave this note as a reminder that that is an option! -->
+
+<!-- This method of turn coordination was made to capture three ideas.
 - Characters with higher initiative will always overrule characters with lower initiative, so characters with higher initiative should be given an opportunity to go before characters with lower initiative.
 - Characters with lower initiatives can't be blocked from taking any action because they can always attempt to interrupt a character with higher initiative.
-- Characters with higher initiative can still take actions after characters with lower initiatives have started taking actions.  -->
+- Characters with higher initiative can still take actions after characters with lower initiatives have started taking actions. -->
 
 An initiative tracker should be kept somewhere where all players and the DM can see it. As NPCs take actions they should be added to the initiative tracker. The DM announces the highest level of initiative present and gives those characters a chance to take actions. Once those characters have had a chance to act, the DM announces the next level of initiative, and so on down the list.  
 
