@@ -10,3 +10,5 @@ title: Known Issues and Todo
 
 - Need a more thoroughly described procedure for turn-taking, what level of initiative we are currently at, when to announce such a thing
 
+<!-- TODO: make a lot more NPCs and prerolled characters (make .yamls for the prerolls). -->
+<!-- TODO: make a random N or PC character generator (probably focus on N) -->

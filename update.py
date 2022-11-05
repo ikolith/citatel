@@ -49,12 +49,22 @@ This is a collection of all the basic weapons, skills, and items. No spoilers he
     "text_type": "md",
     "html_characters": True,
 }
+# getting_started_docs = {
+#     # Trouble with this doc of course is that mostly it does what basic_md already does
+#     "entity_filter_sections": [
+#         {
+#             "text": "",
+#             "fi": "",
+#             "fx": "",
+#         }
+#     ],
+#     "front_text": v.getting_started_docs_front_text,
+#     "end_text": end_text,
+#     "text_type": "md",
+#     "html_characters": True,
+# }
 
 docs_to_update = [
-    {
-        "doc": basic_docs,
-        "path": os.path.join(".", "docs", "_pages", "talaje", "basic.md"),
-    },
     {
         "doc": basic_docs,
         "path": os.path.join(".", "docs", "_pages", "talaje", "basic.md"),
