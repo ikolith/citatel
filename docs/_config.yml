@@ -39,15 +39,16 @@ plugins:
 #   - vendor/ruby/
 
 # Site Settings
-domain: ikolith.github.io/citatel/
+domain: ikolith.com # ikolith.github.io/citatel/
 locale                   : "en-US"
 title                    : "citatel"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "tactile"
 description              : "A website."
-url                      : "https://ikolith.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/citatel/" # the subpath of your site, e.g. "/blog"
+url                      : "https://ikolith.com" #"https://ikolith.github.io" # the base hostname & protocol #for your site e.g. "https://mmistakes.github.io" 
+# TODO: needs to be moved to ikolith.com at some point
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
 
 # Reading Files
 include:
@@ -187,7 +188,7 @@ defaults:  # this is just for posts.. this works, i'm going to try one for _page
       share:  false #true
       related: false #true
 
-repository: "loafee/citatel" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository: "ikolith/citatel" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 
 search: false # false (default)
 search_full_content: false # false (default)

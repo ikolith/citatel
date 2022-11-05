@@ -109,4 +109,11 @@ There will probably be better online documentation generators down the line. Thi
 
 """
 
-# doc dicts for generate doc_text
+# doc dicts for generated docs
+
+
+getting_started_docs_front_text = """
+If you haven't read the [rules](../docs/_pages/rules_and_resources/rules) you should do that first.  
+
+These docs have all the skills, weapons, and equipment you'll need to make a character once you assign attributes through point buy or randomization.
+"""
