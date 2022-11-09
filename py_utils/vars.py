@@ -1,22 +1,5 @@
-# TODO: all of these need to be fixed for the csv -> yaml switch... gonna just have to ctrl f this one to fix it
 
-from typing import NewType, TypedDict
-
-# types
-
-Entities = NewType("Entities", dict[str, dict[str, str]])
-
-# should be:...
-# [{"text": "text",
-#  "filter_tags_include":"",
-# "filter_tags_exclude":"",
-# "clean_name":""},{...}...]
-
-
-# TODO: once discord.py has new fresh wheels and is functional again ill implement the python 3.11 advanced dict nonsense... and ill put off really getting mypy in until that point anyway too.. ohwell
-# class EntityFilterSections(TypedDict):
-#     text: NotRequired[str]
-
+# Big Strings #################################
 
 cli_curly_help = """ TODO: rewrite this so it's in standard cli format.
     

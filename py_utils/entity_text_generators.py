@@ -1,5 +1,5 @@
 from pylatex.utils import NoEscape
-import py_utils.vars as v
+import py_utils.my_types as ty
 import py_utils.commands as co
 import os
 from collections.abc import Callable
@@ -12,7 +12,7 @@ smallskip = r"\smallskip "
 skipline = smallskip + r" \hrule " + smallskip
 
 
-def curry_wrap(latex: str) -> str:  # latex formatting wrapper
+def curry_wrap(latex: str) -> Callable[[str], str]:  # latex formatting wrapper
     """Sidëf̈ect: sounds delicious."""
     return lambda text: NoEscape("\\" + latex + r"{" + text + r"}")
 
@@ -76,15 +76,15 @@ def footer_latex(clean_name: str, encumbrance: str = ""):
 
 
 def if_exists_format_latex(
-    text: str,
+    text: str = "",
     text_formatter: Callable = lambda text: text,
     field_text: str = "",
-    field_text_formatter: Callable = None,
+    field_text_formatter: Callable = lambda text: text,
     add_newline: bool = True,
     add_skipline: bool = False,
     hide: bool = False,
 ) -> str:
-    if hide:
+    if hide or not text:
         return ""
     if_newline = " \n \n" if add_newline else ""
     if_skipline = skipline if add_skipline else ""
@@ -96,11 +96,11 @@ def if_exists_format_latex(
             + if_skipline
             + if_newline
         )
-    elif text_formatter:
-        return text_formatter(text) + if_skipline + if_newline
+    return text_formatter(text) + if_skipline + if_newline
+    # TODO: go back and test this but it seems fine???
 
 
-formatting_dict_latex = {
+formatting_dict_latex: dict[str, dict] = {
     "basic_attacks": {"text_formatter": attacks_latex},
     "cost": {"field_text": "Cost", "field_text_formatter": emph},
     "effect": {"text_formatter": skill_effect_latex},
@@ -130,7 +130,9 @@ formatting_dict_latex = {
 
 
 def generate_latex(
-    entity: dict, formatting: dict = formatting_dict_latex, footer: bool = True
+    entity: dict,
+    formatting: dict[str, dict] = formatting_dict_latex,
+    footer: bool = True,
 ) -> str:
     result_text = ""
     for key, text in entity.items():
@@ -159,15 +161,15 @@ def if_exists_format_md(
 ) -> str:
     if hide:
         return ""
-    newline = "  \n" if newline else ""
+    a_newline = "  \n" if newline else ""
     if field_text:
-        return field_wrapper + field_text + ":" + field_wrapper + " " + text + newline
+        return field_wrapper + field_text + ":" + field_wrapper + " " + text + a_newline
     elif prefix:
-        return prefix + " " + text + newline
-    return text_wrapper + text + text_wrapper + newline
+        return prefix + " " + text + a_newline
+    return text_wrapper + text + text_wrapper + a_newline
 
 
-formatting_dict_md = {
+formatting_dict_md: dict[str, dict] = {
     "basic_attacks": {},
     "cost": {"field_text": "Cost"},
     "effect": {},
@@ -195,7 +197,7 @@ def generate_md(entity: dict, formatting: dict = formatting_dict_md) -> str:
 
 
 def generate_entity_text(
-    entity: dict,
+    entity: ty.Entity,
     text_type: str = "md",
     html_characters: bool = False,
 ) -> str:
@@ -258,16 +260,18 @@ def generate_entity_text(
                 entity[key],
             )
         return generate_latex(entity)
+    else:
+        raise Exception("text_type needs to be either 'latex' or 'md'.")
 
+
+# TODO: the card gen seems to be barfing separator lines out everywhere... need to make it not do that...
 
 # doc gen
 
 
 def generate_doc_text(  # this is called "text" not "md"... and the params suggest it would work okay with latex, but im not sure thats actually true.
-    entities: v.Entities,
-    entity_filter_sections: list[
-        dict[str, str]
-    ],  # the entity_filter_sections typing is probably not ideal
+    entities: ty.Entities,
+    entity_filter_sections: ty.EFSs,
     front_text: str = "",
     end_text: str = "",
     text_type: str = "md",
