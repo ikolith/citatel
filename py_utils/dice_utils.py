@@ -1,9 +1,15 @@
 import itertools
 import re
 import random
+import logging
+from typing import Union, Any
 
 
-def all_rolls(dice: list, result_type: str = "all") -> dict:
+def all_rolls(
+    # TODO: come back and be more concerned about this stuff that isnt used anywhere else.. type with not "Any"
+    dice: list,
+    result_type: str = "all",
+) -> dict[int, Union[int, float, list[tuple[int]]]]:
     """Pass in a list where each die is represented by an integer corresponding to its maximum value.
     Returns a dictionary where keys are the totals (or result) of the rolls.
     The values are dependent on result_type.
@@ -11,14 +17,13 @@ def all_rolls(dice: list, result_type: str = "all") -> dict:
     If 'count' a count of how many distinct combinations there are.
     If 'probabilities', the probability of the result."""
     dice_ranges = [range(1, die + 1) for die in dice]
-    all_rolls = {}
+    all_rolls: dict = {}
 
     for i in itertools.product(*dice_ranges):
         if sum(i) in all_rolls.keys():
             all_rolls[sum(i)].append(i)
         else:
             all_rolls[sum(i)] = [i]
-
     if result_type == "all":
         return all_rolls
     elif result_type == "counts":
@@ -86,9 +91,8 @@ def get_pass_probability(score: int, dc: int) -> float:
 
 
 def die_parser_roller(curly_match: str) -> int:
-    quantity, top_face, x, mod = re.search(
-        r"(\d*)d(\d+)(x?)([-+]?\d*)", curly_match
-    ).groups()
+    if result := re.search(r"(\d*)d(\d+)(x?)([-+]?\d*)", curly_match):
+        quantity, top_face, x, mod = result.groups()
     assert top_face
     top_face = int(top_face)
     if not quantity:
