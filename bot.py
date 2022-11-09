@@ -1,8 +1,6 @@
 import os
-import py_utils.entity_text_generators as g
-import py_utils.text_utils_parsers as t
-
-# import py_utils.entity_text_generators as g
+import py_utils.entity_text_generators as ge
+import py_utils.text_utils_parsers as tu
 import py_utils.commands as co
 import discord
 from discord.ext import commands
@@ -11,7 +9,7 @@ from dotenv import load_dotenv
 import asyncio
 
 
-entities = t.get_entities(os.path.join("docs", "_data", "entities"))
+entities = tu.get_entities(os.path.join("docs", "_data", "entities"))
 load_dotenv()
 TOKEN = os.getenv("TOKEN")
 GUILD = os.getenv("GUILD")
@@ -129,7 +127,7 @@ async def self(
     fx: str = "",
 ) -> None:
     await post_text(
-        g.generate_doc_text(entities, [{"text": "## Results:", "fi": fi, "fx": fx}]),
+        ge.generate_doc_text(entities, [{"text": "## Results:", "fi": fi, "fx": fx}]),
         interaction,
     )
 

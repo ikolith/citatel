@@ -1,6 +1,7 @@
 import yaml
-import py_utils.dice_utils as d
-import py_utils.entity_text_generators as g
+import py_utils.dice_utils as du
+import py_utils.entity_text_generators as ge
+import py_utils.my_types as ty
 from pprint import pprint
 import re
 import os
@@ -14,8 +15,8 @@ def get_clean_name(name: str) -> str:
     )
 
 
-def get_entities(dir_path: str) -> dict[dict]:
-    entities = {}
+def get_entities(dir_path: str) -> ty.Entities:
+    entities = ty.Entities({})
     entity_files = []
     for file in os.listdir(dir_path):
         if file.endswith(".yaml"):
@@ -34,7 +35,7 @@ def get_entities(dir_path: str) -> dict[dict]:
     return entities
 
 
-def parse_curlies(text: str) -> list[dict[str, str, str, int]]:
+def parse_curlies(text: str) -> list[ty.Curly]:
     curlies = re.findall(r"{[^}]*}", text)
     curlies_parsed = []
     if curlies:
@@ -48,7 +49,7 @@ def parse_curlies(text: str) -> list[dict[str, str, str, int]]:
             # Check for dice...
             if r := re.search(r"(?<={)\d*?d\d+x?[+-]?\d*", match):
                 roll = r.group()
-                quantity = d.die_parser_roller(roll)
+                quantity = du.die_parser_roller(roll)
             # Check for number
             else:
                 if entity == "":
@@ -59,12 +60,14 @@ def parse_curlies(text: str) -> list[dict[str, str, str, int]]:
                 else:
                     roll = ""
             curlies_parsed.append(
-                {
-                    "match": match,
-                    "roll": roll,
-                    "entity": entity,
-                    "quantity": quantity,
-                }
+                ty.Curly(
+                    {
+                        "match": match,
+                        "roll": roll,
+                        "entity": entity,
+                        "quantity": quantity,
+                    }
+                )
             )
     return curlies_parsed
 
@@ -100,17 +103,17 @@ def text_has_children(text: str) -> bool:
 
 
 def generate_entity_tree_and_non_unique(
-    base_curly: dict,
-    entities: dict[str, dict[str, str]],
+    base_curly: ty.Curly,
+    entities: ty.Entities,
     expand_entities: bool = False,
     roll_dice: bool = False,
     html_characters: bool = False,
     text_type: str = "md",
 ) -> tuple[
-    list, dict
+    ty.EntityTree, ty.NonUniqueEntities
 ]:  # this typing could be more verbose.. but really we just need curlies to be a NewType
-    non_unique_entities = {}
-    entity_tree = []
+    non_unique_entities = ty.NonUniqueEntities({})
+    entity_tree = ty.EntityTree([])
     curly_queue = [[base_curly] * base_curly["quantity"]]
     while len(curly_queue) != 0 and len(entity_tree) < 100:
         # TODO: looking back up the tree to not recurse
@@ -120,7 +123,7 @@ def generate_entity_tree_and_non_unique(
             # skips case where the curly is just a roll.
             if not curly["entity"]:
                 continue
-            entity_text = g.generate_entity_text(
+            entity_text = ge.generate_entity_text(
                 entities[curly["entity"]], text_type, html_characters
             )
             unique = text_is_unique(entity_text)
@@ -151,21 +154,24 @@ def generate_entity_tree_and_non_unique(
             if parent_id >= 0:
                 entity_tree[parent_id]["children"].append(len(entity_tree) - 1)
             entity_tree.append(
-                {
-                    "id": len(entity_tree),
-                    "entity": curly["entity"],
-                    "children": [],
-                    "unique": unique,
-                    "text": entity_text,
-                    "curly": curly,
-                }
+                ty.TreeEntry(
+                    {
+                        "id": len(entity_tree),
+                        "entity": curly["entity"],
+                        "children": [],
+                        "unique": unique,
+                        "text": entity_text,
+                        "curly": curly,
+                    }
+                )
             )
+    print(entity_tree[1])
     return entity_tree, non_unique_entities
 
 
 def generate_entity_tree_text(
-    base_curly: dict,
-    entities: dict[str, dict[str, str]],
+    base_curly: ty.Curly,
+    entities: ty.Entities,
     expand_entities: bool = False,
     roll_dice: bool = False,
     html_characters: bool = False,
@@ -174,7 +180,7 @@ def generate_entity_tree_text(
     base_quantity = base_curly["quantity"]
     # just need this line for the fancy name:
     base_entity = entities[base_curly["entity"]]
-    base_entity_text = g.generate_entity_text(
+    base_entity_text = ge.generate_entity_text(
         entities[base_curly["entity"]], text_type, html_characters
     )
     if not expand_entities or not text_has_children(base_entity_text):

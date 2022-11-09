@@ -1,12 +1,12 @@
 import argparse
 import os.path
-import py_utils.text_utils_parsers as t
-import py_utils.vars as v
+import py_utils.text_utils_parsers as tu
+import py_utils.vars as vs
 import py_utils.commands as co
 
 # TODO: move commands to commands.py
 
-entities = t.get_entities(os.path.join("docs", "_data", "entities"))
+entities = tu.get_entities(os.path.join("docs", "_data", "entities"))
 
 # subparsers
 
@@ -17,7 +17,7 @@ curly_p = subparsers.add_parser("curly")
 curly_p.add_argument(
     "curly",
     type=str,
-    help=v.cli_curly_help,
+    help=vs.cli_curly_help,
 )
 curly_p.add_argument(
     "-e",
@@ -38,7 +38,7 @@ card_p.add_argument(
     "-t",
     "--type",
     action="store",
-    help=v.cli_card_size_help,
+    help=vs.cli_card_size_help,
 )
 card_p.add_argument(
     "-i",

@@ -1,21 +1,21 @@
-import py_utils.vars as v
+import py_utils.my_types as ty
 import py_utils.cards as cr
-import py_utils.text_utils_parsers as t
-import py_utils.dice_utils as d
+import py_utils.text_utils_parsers as tu
+import py_utils.dice_utils as du
 import warnings
 from copy import deepcopy
 import os
 
 
 def filter_entities_by_filter_tags(
-    entities: v.Entities,
+    entities: ty.Entities,
     filter_tags_include: str = "",
     filter_tags_exclude: str = "",
-) -> v.Entities:
+) -> ty.Entities:
     # enlist only uses the clean names, so filtered_entities.keys() but we build the entire dict for... futureproofing???
     fti = filter_tags_include.replace(" ", "").split(",") if filter_tags_include else []
     ftx = filter_tags_exclude.replace(" ", "").split(",") if filter_tags_exclude else []
-    filtered_entities = {}
+    filtered_entities = ty.Entities({})
     for clean_name, entity in entities.items():
         if "filter_tags" not in entity.keys():  # untested
             if not fti:
@@ -37,10 +37,10 @@ def filter_entities_by_filter_tags(
 
 
 def enlist(
-    entities: v.Entities,
+    entities: ty.Entities,
     filter_tags_include: str = "",
     filter_tags_exclude: str = "",
-    output_filepath: str = None,
+    output_filepath: str = "",
 ) -> None:
     enlist_entities = deepcopy(entities)  # seems kinda heavy for this...
     if filter_tags_include or filter_tags_exclude:
@@ -59,20 +59,22 @@ def enlist(
 
 
 def filter_generate_cards(
-    entities: v.Entities,
+    entities: ty.Entities,
     card_type: str = "",
     filter_tags_include: str = "",
     filter_tags_exclude: str = "",
     output_filepath: str = os.path.join("output", "filter_cards"),
 ) -> None:
-    card_entities = filter_entities_by_filter_tags(
-        entities, filter_tags_include, filter_tags_exclude
-    ).keys()
+    card_entities = list(
+        filter_entities_by_filter_tags(
+            entities, filter_tags_include, filter_tags_exclude
+        ).keys()
+    )
     cr.generate_cards(card_entities, entities, card_type, output_filepath)
 
 
 def enlist_generate_cards(
-    entities: v.Entities,
+    entities: ty.Entities,
     card_type: str = "",
     cards: str = "",
     input_filepath: str = "",  # maybe this should just be replaced with fi/fx tbh
@@ -97,18 +99,20 @@ def enlist_generate_cards(
 
 def single_curly_parser(
     text: str,
-    entities: v.Entities,
+    entities: ty.Entities,
     expand_entities: bool = False,
     roll_dice: bool = False,
 ) -> str:
     if not (text.startswith("{") and text.endswith("}")):
         text = "{" + text + "}"
-    curlies_parsed = t.parse_curlies(text)
+    curlies_parsed = tu.parse_curlies(text)
     assert len(curlies_parsed) == 1
     base_curly = curlies_parsed[0]
     # case when only die roll is present
     if not base_curly["entity"]:
-        return str(d.die_parser_roller(base_curly["roll"]))
+        return str(du.die_parser_roller(base_curly["roll"]))
 
     # all other cases
-    return t.generate_entity_tree_text(base_curly, entities, expand_entities, roll_dice)
+    return tu.generate_entity_tree_text(
+        base_curly, entities, expand_entities, roll_dice
+    )

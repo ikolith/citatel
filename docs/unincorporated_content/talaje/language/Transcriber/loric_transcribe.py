@@ -1,3 +1,5 @@
+# type: ignore
+
 #   A script for converting from the ASCII (normal keyboard) romanization scheme to the "official" one
 #   that includes diacritics for long vowels and geminate consonants
 #   Can output as unicode text or TeX code

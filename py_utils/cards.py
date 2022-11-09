@@ -1,6 +1,7 @@
 import re
-import py_utils.text_utils_parsers as t
-import py_utils.entity_text_generators as g
+import py_utils.text_utils_parsers as tu
+import py_utils.my_types as ty
+import py_utils.entity_text_generators as ge
 import os.path
 from pylatex import Document, Command, MiniPage, UnsafeCommand, NewPage
 from pylatex.base_classes import Arguments, Options, CommandBase
@@ -10,7 +11,7 @@ from pylatex.utils import NoEscape
 
 def generate_cards(
     card_entities: list,
-    entities: dict[dict],  # this order should probably be swapped..
+    entities: ty.Entities,  # this order should probably be swapped..
     card_type: str = "poker",
     output_filepath: str = os.path.join("output", "cards"),
 ) -> None:
@@ -51,7 +52,9 @@ def generate_cards(
     )
     entity_texts = []
     for entity in card_entities:
-        entity_texts.append(NoEscape(g.generate_entity_text(entities[entity], "latex")))
+        entity_texts.append(
+            NoEscape(ge.generate_entity_text(entities[entity], "latex"))
+        )
     # setup document and generate the preamble
     doc = Document(geometry_options=geometry_options, indent=False)
     doc.append(card_com)
