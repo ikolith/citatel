@@ -5,5 +5,5 @@ PyYAML
 # just for cards, you're also going to want mklatex or similar
 pylatex
 # just for the discord bot
-discord.py
+discord.py # TODO: BORKED
 python-dotenv
