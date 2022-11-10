@@ -495,4 +495,4 @@ Max encumbrance: 8+STR. [enumbered] threshold: 2+STR.
 Can be carried while wearing another bag. Stick must be held with one hand. Max encumbrance: 2 + STR.  
   
 
-This file was last auto-generated on 2022-11-08.
+This file was last auto-generated on 2022-11-09.

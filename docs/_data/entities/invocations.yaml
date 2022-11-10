@@ -1,91 +1,91 @@
 - name: Void
-  effect: Next time you or your weapon would be affected by an invocation, negate it.
   target: Self
+  effect: Next time you or your weapon would be affected by an invocation, negate it.
   filter_tags: invocation
 
 - name: Flinch
+  target: Self
   effect: >-
     Next time you would take 7 or more damage, gain magical armor (-7 (B), -7
     (P), -7 (S)), only for that attack.
-  target: Self
   filter_tags: invocations
 
 - name: Bolster
-  effect: Raise CON by 1 for an hour.
   target: Self
+  effect: Raise CON by 1 for an hour.
   filter_tags: invocation
 
 - name: Strain
-  effect: Raise STR by 1 for an hour.
   target: Self
+  effect: Raise STR by 1 for an hour.
   filter_tags: invocation
 
 - name: Grace
-  effect: Raise AGI by 1 for an hour.
   target: Self
+  effect: Raise AGI by 1 for an hour.
   filter_tags: invocation
 
 - name: Leap
-  effect: Jump 30 feet, ignore 30 feet of fall damage
   target: Self
+  effect: Jump 30 feet, ignore 30 feet of fall damage
   filter_tags: invocation
 
 - name: Valiikon's Blessing
-  effect: (1n1) to consume. For 6 rounds, any poison damage you take heals you.
   target: Self
+  effect: (1n1) to consume. For 6 rounds, any poison damage you take heals you.
   flavor_text: >-
     A perpetually green and dewy strip of leaf. Wearing it engenders a sense of
     peace.
   filter_tags: invocation
 
 - name: Invocation of Harm
-  effect: Roll max damage for one die (up to 6 damage). Consumed on hit.
   target: Weapon
+  effect: Roll max damage for one die (up to 6 damage). Consumed on hit.
   filter_tags: invocation
 
 - name: Folly of the Strong
+  target: Weapon
   effect: >-
     Activates on parrying a blow from a weapon. That weapon becomes much
     heavier. The weapon's STR requirement goes up by 2 for 1 hour.
-  target: Weapon
   filter_tags: invocation
 
 - name: Cunning
+  target: Weapon
   effect: >-
     If you parry a weapon that has an invocation, break this invocation, this
     invocation becomes what that one was.
-  target: Weapon
   filter_tags: invocation
 
 - name: Blunder
-  effect: On attack take 2d6 damage, DC 12 DEX check or drop your weapon.
   target: Weapon
+  effect: On attack take 2d6 damage, DC 12 DEX check or drop your weapon.
   filter_tags: invocation
 
 - name: Greater Deft and Dreaming
+  target: Weapon
   effect: >-
     While applied to a weapon, the weapon is invisible and the weapon passes
     through objects and walls. On attack, ignore all armor. When attacking with
     this invocation, lower enemy dodge by 4. Consumed on hit.
-  target: Weapon
   flavor_text: >-
     Free floating edges and inscriptions dancing with reflections from unseen
     light. The ribbon of runes is entirely weightless and nearly invisible.
   filter_tags: invocation
 
 - name: Lesser Deft and Dreaming
+  target: Weapon
   effect: >-
     While applied to a weapon and held, the weapon passes through non-organic
     material. On attack, ignore non-natural armor. Consumed on hit.
-  target: Weapon
   flavor_text: >-
     A smooth silvery strip of fabric, the edges and inscriptions dance with
     reflections from unseen light. The ribbon of runes is entirely weightless.
   filter_tags: invocation
 
 - name: True Edge
+  target: Weapon
   effect: >-
     While applied to a weapon, if the weapon would lose [bladed], break this
     invocation instead.
-  target: Weapon
   filter_tags: invocation, basic
