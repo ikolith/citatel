@@ -123,7 +123,6 @@ formatting_dict_latex: dict[str, dict] = {
     "target": {
         "field_text": "Target",
         "field_text_formatter": emph,
-        "add_skipline": True,
     },
     "to_hit": {"field_text": "To-Hit", "field_text_formatter": emph},
 }
