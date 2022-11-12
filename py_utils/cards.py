@@ -51,10 +51,11 @@ def generate_cards(
         ),
     )
     entity_texts = []
-    for entity in card_entities:
-        entity_texts.append(
-            NoEscape(ge.generate_entity_text(entities[entity], "latex"))
-        )
+    for clean_name in card_entities:
+        entity = entities[clean_name]
+        if "filter_tags" in entity.keys() and "no_card" in entity["filter_tags"]:
+            continue
+        entity_texts.append(NoEscape(ge.generate_entity_text(entity, "latex")))
     # setup document and generate the preamble
     doc = Document(geometry_options=geometry_options, indent=False)
     doc.append(card_com)

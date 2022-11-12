@@ -6,8 +6,18 @@ import os
 from datetime import date
 
 
-def dl_path(filename: str) -> str:
+def get_dl_path(filename: str) -> str:
     return os.path.join("docs", "downloads", filename)
+
+
+def get_front_text(name: str, toc: bool = False) -> str:
+    toc_text = "toc: true" if toc else ""
+    return rf"""---
+title: {name}
+{toc_text}
+---
+
+"""
 
 
 entities = tu.get_entities(os.path.join("docs", "_data", "entities"))
@@ -27,13 +37,13 @@ def md_updater(entities: ty.Entities, to_update: ty.DocsToUpdate) -> None:
 
 # Docs
 
-basic_docs = ty.Doc(
+basic_doc = ty.Doc(
     {
-        "entity_filter_sections": ty.EFSs(
+        "entity_sections": ty.ESs(
             [
-                ty.EFS({"text": "## Basic Skills", "fi": "skill, basic"}),
-                ty.EFS({"text": "## Basic Weapons", "fi": "weapon, basic"}),
-                ty.EFS(
+                ty.ES({"text": "## Basic Skills", "fi": "skill, basic"}),
+                ty.ES({"text": "## Basic Weapons", "fi": "weapon, basic"}),
+                ty.ES(
                     {
                         "text": "## Basic Items",
                         "fi": "item, basic",
@@ -56,11 +66,47 @@ This is a collection of all the basic weapons, skills, and items. No spoilers he
     }
 )
 
+## NPC docs
+
+legion_doc = ty.Doc(
+    {
+        "entity_sections": ty.ESs(
+            [ty.ES({"clean_name": "legion", "include_full_text": True})]
+        ),
+        "front_text": get_front_text("Legions"),
+        "end_text": end_text,
+        "html_characters": True,
+        "skip_generation": True,
+    }
+)
+#
+tchok_doc = ty.Doc(
+    {
+        "entity_sections": ty.ESs(
+            [ty.ES({"clean_name": "tchok", "include_full_text": True})]
+        ),
+        "front_text": get_front_text("Tchoks"),
+        "end_text": end_text,
+        "html_characters": True,
+    }
+)
 docs_to_update = ty.DocsToUpdate(
     [
         ty.DocPath(
             {
-                "doc": basic_docs,
+                "doc": tchok_doc,
+                "path": os.path.join(".", "docs", "_npcs_and_factions", "tchoks.md"),
+            }
+        ),
+        ty.DocPath(
+            {
+                "doc": legion_doc,
+                "path": os.path.join(".", "docs", "_npcs_and_factions", "legions.md"),
+            }
+        ),
+        ty.DocPath(
+            {
+                "doc": basic_doc,
                 "path": os.path.join(".", "docs", "_pages", "talaje", "basic.md"),
             }
         ),
@@ -72,21 +118,21 @@ docs_to_update = ty.DocsToUpdate(
 ## generating cards
 
 ### all
-co.filter_generate_cards(entities, "poker", "", "", dl_path("all_cards"))
+co.filter_generate_cards(entities, "poker", "", "", get_dl_path("all_cards"))
 ### basic
-co.filter_generate_cards(entities, "poker", "basic", "", dl_path("basic_cards"))
+co.filter_generate_cards(entities, "poker", "basic", "", get_dl_path("basic_cards"))
 ### invocations
 co.filter_generate_cards(
-    entities, "poker", "invocation", "", dl_path("invocation_cards")
+    entities, "poker", "invocation", "", get_dl_path("invocation_cards")
 )
 ### items
-co.filter_generate_cards(entities, "poker", "item", "", dl_path("item_cards"))
+co.filter_generate_cards(entities, "poker", "item", "", get_dl_path("item_cards"))
 ### npcs
-co.filter_generate_cards(entities, "poker", "npc", "", dl_path("npc_cards"))
+co.filter_generate_cards(entities, "poker", "npc", "", get_dl_path("npc_cards"))
 ### skills
-co.filter_generate_cards(entities, "poker", "skill", "", dl_path("skill_cards"))
+co.filter_generate_cards(entities, "poker", "skill", "", get_dl_path("skill_cards"))
 ### weapons
-co.filter_generate_cards(entities, "poker", "weapon", "", dl_path("weapon_cards"))
+co.filter_generate_cards(entities, "poker", "weapon", "", get_dl_path("weapon_cards"))
 
 ## generating docs
 # TODO: getting started doc with the skills and items and such

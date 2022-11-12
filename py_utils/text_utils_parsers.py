@@ -5,7 +5,6 @@ import py_utils.my_types as ty
 from pprint import pprint
 import re
 import os
-import logging  # TODO: add logging
 
 
 def get_clean_name(name: str) -> str:
@@ -165,7 +164,6 @@ def generate_entity_tree_and_non_unique(
                     }
                 )
             )
-    print(entity_tree[1])
     return entity_tree, non_unique_entities
 
 

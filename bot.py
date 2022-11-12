@@ -114,9 +114,7 @@ async def self(
     )
 
 
-# TODO: this probably works but i can't test it locally due to 3.11 nonsense
-# when that is cleared up, uncomment, test, push
-@tree.command(  # the discord wheels have not been updated for 3.11, so im just flying blind here im gonna be honest
+@tree.command(
     name="entity-filter-dump",
     description="Use filters to generate many entities.",
     guild=discord.Object(id=GUILD),

@@ -1,5 +1,7 @@
 from typing import NewType, TypedDict
 
+# mypy doesn't want this called "types.py". fine.
+
 
 class Curly(TypedDict):
     match: str
@@ -12,24 +14,26 @@ Entity = NewType("Entity", dict[str, str])
 Entities = NewType("Entities", dict[str, Entity])
 
 
-class EFS(TypedDict, total=False):
+class ES(TypedDict, total=False):
     text: str
     clean_name: str
+    include_full_text: bool
     fi: str
     fx: str
 
 
-EFSs = NewType("EFSs", list[EFS])
+ESs = NewType("ESs", list[ES])
 
 
 class Doc(TypedDict, total=False):
     # because total=False, none of these are required
     # possible this should be revised because of how totality affects inheritance...
-    entity_filter_sections: EFSs
+    entity_sections: ESs
     front_text: str
     end_text: str
     text_type: str
     html_characters: bool
+    skip_generation: bool
 
 
 class DocPath(TypedDict, total=False):

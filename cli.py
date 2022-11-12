@@ -4,8 +4,6 @@ import py_utils.text_utils_parsers as tu
 import py_utils.vars as vs
 import py_utils.commands as co
 
-# TODO: move commands to commands.py
-
 entities = tu.get_entities(os.path.join("docs", "_data", "entities"))
 
 # subparsers
