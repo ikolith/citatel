@@ -97,7 +97,6 @@ def if_exists_format_latex(
             + if_newline
         )
     return text_formatter(text) + if_skipline + if_newline
-    # TODO: go back and test this but it seems fine???
 
 
 formatting_dict_latex: dict[str, dict] = {
@@ -125,6 +124,7 @@ formatting_dict_latex: dict[str, dict] = {
         "field_text_formatter": emph,
     },
     "to_hit": {"field_text": "To-Hit", "field_text_formatter": emph},
+    "full_text": {"hide": True},
 }
 
 
@@ -185,20 +185,40 @@ formatting_dict_md: dict[str, dict] = {
     "tags": {"field_text": "Tags"},
     "target": {"field_text": "Target"},
     "to_hit": {"field_text": "To-Hit"},
+    "full_text": {
+        "hide": True
+    },  # generate_full_text_md() handles this instead of generate_md()
 }
 
 
-def generate_md(entity: dict, formatting: dict = formatting_dict_md) -> str:
+def generate_md(
+    entity: dict,
+    formatting: dict = formatting_dict_md,
+) -> str:
     result_text = ""
     for key, text in entity.items():
-        result_text += if_exists_format_md(text=str(text), **formatting_dict_md[key])
+        result_text += if_exists_format_md(text=str(text), **formatting[key])
     return result_text
+
+
+def generate_full_text_md(entity: dict) -> str:
+    # not sure how i want this to be built in yet, so its a different step..
+    # TODO: come back after building and review the setup here
+    if "full_text" in entity.keys():
+        return entity["full_text"] + "  \n\n\n"
+    else:
+        return ""
 
 
 def generate_entity_text(
     entity: ty.Entity,
     text_type: str = "md",
     html_characters: bool = False,
+    include_full_text: bool = False,  # only used by .md right now..
+    skip_generation: bool = False  # only used by .md right now!
+    # TODO: maybe look into pushing latex book generation up forward a bit
+    # stuff keeps getting built that only works for .md, latex really is just for cards atm
+    # TODO: this doesn't show up in the curly command and probably it should! and maybe some other ones too
 ) -> str:
     if text_type == "md":
         if html_characters:
@@ -229,7 +249,10 @@ def generate_entity_text(
                     f"{triangle_up}",
                     entity[key],
                 )
-        return generate_md(entity)
+        md_text = generate_md(entity) if not skip_generation else ""
+        if include_full_text:
+            md_text = generate_full_text_md(entity) + md_text + "  \n\n"
+        return md_text
     elif text_type == "latex":
         if "basic_attacks" in entity.keys():
             entity["basic_attacks"] = re.sub(r",", r"\n-", entity["basic_attacks"])
@@ -263,33 +286,50 @@ def generate_entity_text(
         raise Exception("text_type needs to be either 'latex' or 'md'.")
 
 
-# TODO: the card gen seems to be barfing separator lines out everywhere... need to make it not do that...
-
-# doc gen
-
-
 def generate_doc_text(  # this is called "text" not "md"... and the params suggest it would work okay with latex, but im not sure thats actually true.
     entities: ty.Entities,
-    entity_filter_sections: ty.EFSs,
+    entity_sections: ty.ESs,
     front_text: str = "",
     end_text: str = "",
     text_type: str = "md",
     html_characters: bool = False,
+    skip_generation: bool = False,
 ) -> str:
-    doc = front_text
-    for section in entity_filter_sections:
-        doc += section["text"] + "  \n\n"
-        if "clean_name" in section.keys():
-            doc += generate_entity_text(
-                entities[section["clean_name"]], text_type, html_characters
-            )
-            continue
-        fi, fx = "", ""
-        if "fi" in section.keys():
-            fi = section["fi"]
-        if "fx" in section.keys():
-            fx = section["fx"]
-        filtered_entities = co.filter_entities_by_filter_tags(entities, fi, fx)
-        for entity in filtered_entities.values():
-            doc += generate_entity_text(entity, text_type, html_characters) + "  \n\n"
-    return doc + end_text
+    if text_type == "md":
+        doc = front_text
+        for section in entity_sections:
+            if "include_full_text" not in section.keys():
+                include_full_text = False
+            else:
+                include_full_text = section["include_full_text"]
+            if "text" in section.keys():
+                doc += section["text"] + "  \n\n"
+            if "clean_name" in section.keys():
+                doc += generate_entity_text(
+                    entities[section["clean_name"]],
+                    text_type,
+                    html_characters,
+                    include_full_text,
+                    skip_generation,
+                )
+                continue
+            fi, fx = "", ""
+            if "fi" in section.keys():
+                fi = section["fi"]
+            if "fx" in section.keys():
+                fx = section["fx"]
+            filtered_entities = co.filter_entities_by_filter_tags(entities, fi, fx)
+            for entity in filtered_entities.values():
+                doc += (
+                    generate_entity_text(
+                        entity,
+                        text_type,
+                        html_characters,
+                        include_full_text,
+                        skip_generation,
+                    )
+                    + "  \n\n"
+                )
+        return doc + end_text
+    else:
+        raise Exception("text_type needs to be 'md'. Only 'md' is supported right now.")
