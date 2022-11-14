@@ -2,7 +2,7 @@
 title: Ataarra
 ---
 
-Ataarrans are amphibians with long bodies, short limbs, and blunt snouts. They are traders and travelers. They are one of the few mist dwelling peoples that stray far from the great masses of mist. Due to their friendliness relative to other denizens of the mist they make for valuable guides and contacts.
+Ataarrans are amphibians with long bodies, short limbs, and blunt snouts. They are traders and travelers. They are one of the few mist dwelling peoples that stray far from the great masses of mist. They are valuable guides and contacts.
 
 ### Ataarra Base Scores, Playing as an Ataarra
 
