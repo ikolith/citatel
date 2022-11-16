@@ -203,3 +203,27 @@
   basic_attacks: "1d8 (S) [swinging: leading], 1d6 (P) [thrusting]"
   encumbrance: 1
   filter_tags: weapon, basic
+
+- name: Adze
+  tags: one-handed, shafted, bladed
+  speed: (1n1)->(1n2)
+  to_hit: +STR
+  basic_attacks: "1d4 (S) [swinging: leading]"
+  effect: |-
+    If Adze does 4 or more damage it becomes stuck in the target. 
+    Removing it is (2n1) and does 1d4+STR (S) damage.
+  encumbrance: 1
+  filter_tags: weapon, basic
+
+  # typical weapon example:
+#
+# - name:
+#   tags:
+#   requirements:
+#   speed:
+#   to_hit:
+#   basic_attacks:
+#   effect:
+#   flavor_text:
+#   encumbrance:
+#   filter_tags: weapon
