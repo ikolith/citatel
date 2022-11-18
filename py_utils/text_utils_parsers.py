@@ -14,7 +14,7 @@ def get_clean_name(name: str) -> str:
     )
 
 
-def get_entities(dir_path: str) -> ty.Entities:
+def get_entities(dir_path: str, keep_type_whitelist: list[str] = []) -> ty.Entities:
     entities = ty.Entities({})
     entity_files = []
     for file in os.listdir(dir_path):
@@ -27,7 +27,10 @@ def get_entities(dir_path: str) -> ty.Entities:
                 continue
             for entity in data:
                 for k, v in entity.items():
-                    entity[k] = str(v)
+                    if k not in keep_type_whitelist:
+                        entity[k] = str(v)
+                    else:
+                        entity[k] = v
                 clean_name = get_clean_name(entity["name"])
                 assert not clean_name in entities
                 entities[clean_name] = entity
