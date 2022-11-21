@@ -4,10 +4,11 @@ from typing import NewType, TypedDict
 
 
 class Curly(TypedDict):
-    match: str
-    roll: str
     entity: str
-    quantity: int
+    quantity_roll: str
+    quantity_result: int
+    determiner_roll: str
+    determiner_result: str
 
 
 Entity = NewType("Entity", dict[str, str])

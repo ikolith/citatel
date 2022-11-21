@@ -7,3 +7,9 @@ pylatex
 # just for the discord bot
 discord.py
 python-dotenv
+
+# you will also need a latex compiler
+# if youre on debian you can use the following command
+# disclaimer: this installs way more than you need to install... this just grabs everything instead of the couple packages you need!
+# but im lazy and normally just install everything and then compilation Just Works, anyway its
+# sudo apt-get install texlive-full 

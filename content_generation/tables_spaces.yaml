@@ -1,45 +1,54 @@
 # The tables are currently flat.
 # By this I mean that the outcomes are right below the top level, rather than being in an "outcome: " feature or similar.
 
-- table: test
+- table: test_table
   roll: 1d4 # alternatively... roll_for_outcome...?
-  1: rolled a 1
-  2: rolled a 2
-  3: rolled a 3
-  4: rolled a 4
+  outcomes:
+    1-3: rolled a 1 or 2
+    4: rolled a 2
+
+  filter_tags: table, no_card
 
 - table: cave_space
-  1: "{den}"
-  2: "{passage}"
-  3: "{room}"
-  4: "{expanse}"
+  outcomes:
+    1: "{den}"
+    2: "{passage}"
+    3: "{room}"
+    4: "{expanse}"
+  filter_tags: table, no_card
 
 - table: cave_features
-  1: a pit
-  2: bones
-  3: flowing water
-  4: glowing mushrooms
+  outcomes:
+    1: a pit
+    2: bones
+    3: flowing water
+    4: glowing mushrooms
+  filter_tags: table, no_card
 
 - table: cave_size
-  1: Only a widening of the tunnel, space for letting other parties pass or to sleep on the side of the road.
-  2: the size of a small room
-  3: the size of a large room, about 10 spaces wide
-  4: the size of a small house
-  5: the size of an ampitheater
-  6: the size of a stadium
+  outcomes:
+    1: Only a widening of the tunnel, space for letting other parties pass or to sleep on the side of the road.
+    2: the size of a small room
+    3: the size of a large room, about 10 spaces wide
+    4: the size of a small house
+    5: the size of an ampitheater
+    6: the size of a stadium
+  filter_tags: table, no_card
 
 - table: travel_time
-  1: a couple of minutes
-  2: half an hour
-  3: an hour
-  4: "{1d4} hours"
-  6: "half a day"
-  7: "a day"
-  8: "{1d4} days"
-  9: "{1d6} days"
-  10: "{1d8} days"
-  11: "{1d10} days"
-  12: "{1d12} days"
+  outcomes:
+    1: a couple of minutes
+    2: half an hour
+    3: an hour
+    4: "{1d4} hours"
+    6: "half a day"
+    7: "a day"
+    8: "{1d4} days"
+    9: "{1d6} days"
+    10: "{1d8} days"
+    11: "{1d10} days"
+    12: "{1d12} days"
+  filter_tags: table, no_card
 
 # "space" entities
 
@@ -49,7 +58,7 @@
 
 - name: passage
   size: "A passage leading from one cave to another."
-  travel_time: "{1d4 travel_time}"
+  travel_time: "{travel_time}" # should be... 1d4 rolled on this table...
   # holy shit you should clearly be able to pass the die you want to use if youre calling a table!
   filter_tags: no_card, space
 
@@ -64,4 +73,5 @@
     2: "You see an enormous flooded cave. You hear running water and the gentle rain of water running down stalactites and dropping into the water below. Irregular stalagmite islands rise from the water throughout."
     3: "The ground in front of the entrance to the cave drops away, the entrance leads directly into a great black abyss. You cannot see the bottom. You cannot see the other side. Warm air is pushed gently upward then is pulled back down every few minutes. The empty space breathes slowly."
     4: "Great crystal columns reach from every direction and branch out freely in every direction. You can't see very far in the dense forest of crystal."
-  travel_time: "{d6+6 travel_time}"
+  travel_time: "{travel_time}" # should be d6+6 rolled on this table
+  filter_tags: no_card, space

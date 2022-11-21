@@ -26,12 +26,21 @@ def get_entities(dir_path: str, keep_type_whitelist: list[str] = []) -> ty.Entit
             if data is None:
                 continue
             for entity in data:
-                for k, v in entity.items():
-                    if k not in keep_type_whitelist:
-                        entity[k] = str(v)
-                    else:
-                        entity[k] = v
-                clean_name = get_clean_name(entity["name"])
+                if "table" in entity.keys():
+                    # TABLE PROCESSING, also cast stuff as types
+                    for k, v in entity.items():
+                        print(k, v)
+                        if (match_k := re.search(r"(\d*)-(\d*)", k)) is not None:
+                            print(match_k.group())
+                            pass
+                    clean_name = get_clean_name(entity["table"])
+                else:
+                    for k, v in entity.items():
+                        if k not in keep_type_whitelist:
+                            entity[k] = str(v)
+                        else:
+                            entity[k] = v
+                    clean_name = get_clean_name(entity["name"])
                 assert not clean_name in entities
                 entities[clean_name] = entity
     return entities
