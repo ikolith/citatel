@@ -167,21 +167,60 @@ And of course, for more examples you can just go through the existing weapons.
 
 Weapons are classified loosely by weight and ease-of-handling which determines how quick their attacks are. Daggers and finesse weapons are light, most swords, clubs, and basic hammers are medium, and giant weapons are heavy. 
 
-### Light:
+### Light Weapons:
 
-1. [1n1]
-2. [1n1], [1n1], [1n2]*
+- [1n1] 3 attacks per turn. shivs. 
+- [1n1], [1n1], [1n2]* 2.5 attacks per turn.
 
-### Medium:
+### Medium Weapons:
 
-- [1n1], [1n2]
-- [1n2], [2n1]
+- [1n1], [1n2] 2 attacks per turn.
+- [1n1], [2n1] 2 attacks per turn, no options.
 
-### Heavy:
+### Heavy Weapons
 
-- [2n1]
-- [3n1]
+- [1n2], [2n1] 1.5 attacks per turn.
 
-"*" indicates that a weapon attack speed/series is less common.
+### Giant Weapons:
+(clearly you should be able to trade a 2n1 for 1n3)...
+
+- [1n3], [2n1] 2->1->1... bit over 1 per turn.
+- [2n1]* 1 per turn.
+- 
+<!--
+
+as a table now...
+the thing really to note here is the size of the 2 SCORE bonus, how a [1n1] doing 1d4+SCORE does an expected 13.5 per turn, with 3 SCORE its 16.5!
+which is equivalent to 5d6-1 when maybe you would have expected 3d4
+
+| Speed  | AP Costs             | Max Attacks Per Turn | Notes/Context                                                                  | 2 SCORE Bonus |
+| ------ | -------------------- | -------------------- | ------------------------------------------------------------------------------ | ------------- |
+| Light  | [1n1]                | 3                    | Most flexible. Likely range: 0.                                                | 6             |
+|        | [1n1], [1n1], [1n2]* | 2.5                  | Relatively rare speed.                                                         | 5             |
+| Medium | [1n1], [1n2]         | 2                    | Either 2 attacks per turn or 3, then 1, then 3, etc. Still very flexible.      | 4             |
+|        | [1n1], [2n1]         | 2                    | Not very flexible.                                                             | 4             |
+| Heavy  | [1n2], [2n1]         | 1.5                  | Should hit very hard.                                                          | 3             |
+| Giant  | [1n3], [2n1]         | 1.5                  | A little bit over 1, really. Can do two attacks if have both AP. Big AP drain. | 3             |
+|        | [2n1]*               | 1                    | Very inflexible.                                                               | 2             |
+         
+useful table for me, probably should build this into the docs
+
+| Qualitative                                 | Light                | Actions Per Turn | Damage Per Attack | Platos Weapon Closet | Damage Per Turn | w/ + 2 SCORE | w/ + 3 SCORE |
+| ------------------------------------------- | -------------------- | ---------------- | ----------------- | -------------------- | --------------- | ------------ | ------------ |
+|                                             |                      |                  |                   |                      |                 | 2            | 3            |
+|                                             |                      |                  |                   |                      |                 |              |              |
+| LIGHT, brass knuckles, small enemy          | [1n1]                | 3                | 1                 | "Unarmed"            | 3               | 9            | 12           |
+| LIGHT, very fast, very fast knife or a shiv | [1n1]                | 3                | 2.5               | 1d4                  | 7.5             | 13.5         | 16.5         |
+| LIGHT, large knives, small fast weapons     | [1n1], [1n1], [1n2]* | 2.5              | 3.5               | 1d6                  | 8.75            | 13.75        | 16.25        |
+| MEDIUM, single handed weapon                | [1n1], [1n2]         | 2                | 4.5               | Medium 1d8           | 9               | 13           | 15           |
+| HEAVY, heavy weapon, hits very hard         | [1n2], [2n1]         | 1.5              | 6.5               | Heavy 1d12           | 9.75            | 12.75        | 14.25        |
+| GIANT weapons                               | [1n3], [2n1]         | 1.3              | 11                | Giant 2d10           | 14.3            | 16.9         | 18.2         |
+| GIANT heavy weapons                         | [2n1]                | 1                | 13.5              | Giant 3d8            | 13.5            | 15.5         | 16.5         |
+
+-->
+
+
+
+"*" Indicates that a weapon attack speed/series is less common.
 
 If you want to add weapons to the .yamls so that you can use the Python/automation tools to generate cards etc. head over to [the .yaml entity creation doc](./../code_and_downloads/yaml_entity_creation.md).

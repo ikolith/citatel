@@ -1,0 +1,72 @@
+## hylic
+
+- name: Chitinous Strata
+  requirements: 1 HYLIC
+  effect: >
+    (2n1) to start. Continuously burn 1 SALT for 1 hour. Generate a layer of
+    salt armor with (-1d6 B, -1d8 P, -1d8 S). Lower your to-hit difficulty by 1.
+    While using Salt Armor, you're able to use an unarmed attack of +AGI to hit,
+    1d4 (B) [range: close]. Disadvantage on anything requiring fine motor
+    skills. You cannot wear other armor while using this ability. You can use
+    this ability multiple times.
+
+
+    Flare Effect: Must currently have Salt Armor. Burn 1 Salt. Triple armor
+    bonus from this source for 1 turn.
+  cost: 1 SP
+  filter_tags: skill, hylic, salt, quarter_size
+
+- name: Violent Accretion
+  requirements: 1 HYLIC
+  effect: >-
+    (1n1) to start. Continuously burn 1 SALT for 1 hour. Salt rapidly accrues on
+    an arm, covering it in thick plates and amplifying its strength. While using
+    Violent Accretion you have minimal use of the hand which is encased in thick
+    plates of armor with few joints and little to no finger separation. Take
+    disadvantage on anything requiring fine motor skills, and take disadvantage
+    when using other weapons. When using Violent Accretion the arm functions as
+    the following weapon:
+
+    [one-handed] [range: close]
+
+
+    Speed: (1n1)->(2n1) To Hit: 2*STR  
+
+    - 1d8+STR (B)
+
+    If flared for 1 SALT, lasting for 1 attack:
+
+    [one-handed]
+
+    Speed: (2n1) To Hit: 2*STR
+
+    - 1d8 (B) 2d8 (P) +STR
+  cost: 1 SP
+  filter_tags: skill, hylic, salt, quarter_size
+
+- name: Salubrity
+  requirements: 1 HYLIC
+  effect: >-
+    This ability allows you to augment scores and abilities by burning SALT.
+    This skill will probably have to be streamlined, rewritten.
+
+    (1n1) to start all of these moves.
+
+    STR: Increase STR by 2 for 1 hour by continuously burning SALT.
+
+    CON: Increase CON by 2 for 1 hour by continuously burning SALT.
+
+    Both of these can be flared to increase by 1 more for 1 minute.  
+
+
+
+    If you have at least 2 HYLIC: 
+
+    AGI: Increase AGI and move speed by 1 and move for 1 hour by continuously
+    burning SALT. Can be flared for 1 SALT to leap 6 spaces.
+
+    PERCEPTION: Increase perception by 1 for 6 hours by continuously burning
+    SALT, can replace 4 hours of sleep. Can be flared by burning 1 SALT to add
+    +3 to checks made with one sense for 5 minutes.
+  cost: 1 SP
+  filter_tags: skill, hylic, salt, quarter_size
