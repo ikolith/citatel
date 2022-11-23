@@ -12,6 +12,8 @@ class Curly(TypedDict):
 
 
 Entity = NewType("Entity", dict[str, str])
+# here is where the table type goes
+# and vvv entities needs to be changed
 Entities = NewType("Entities", dict[str, Entity])
 
 

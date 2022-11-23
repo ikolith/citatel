@@ -1,2 +1,2 @@
 #!/bin/sh
-mypy update.py cli.py 
+mypy update.py cli.pyl; black .

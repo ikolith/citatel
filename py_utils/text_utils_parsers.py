@@ -14,6 +14,26 @@ def get_clean_name(name: str) -> str:
     )
 
 
+def expand_table(entry: dict) -> dict:
+    expanded_table = {"outcomes": {}}
+
+    for k, v in entry.items():
+        if k == "outcomes":
+            for outcome_k, outcome_v in entry["outcomes"].items():
+                if (
+                    type(outcome_k) == str
+                    and (match_k := re.search(r"(\d*)-(\d*)", outcome_k)) is not None
+                ):
+                    start, end = match_k.groups()
+                    for new_k in range(int(start), int(end) + 1):
+                        expanded_table["outcomes"][int(new_k)] = outcome_v
+                else:
+                    expanded_table["outcomes"][int(outcome_k)] = outcome_v
+        else:
+            expanded_table[k] = v
+        return expand_table
+
+
 def get_entities(dir_path: str, keep_type_whitelist: list[str] = []) -> ty.Entities:
     entities = ty.Entities({})
     entity_files = []
@@ -25,24 +45,21 @@ def get_entities(dir_path: str, keep_type_whitelist: list[str] = []) -> ty.Entit
             data = yaml.safe_load(f)
             if data is None:
                 continue
-            for entity in data:
-                if "table" in entity.keys():
-                    # TABLE PROCESSING, also cast stuff as types
-                    for k, v in entity.items():
-                        print(k, v)
-                        if (match_k := re.search(r"(\d*)-(\d*)", k)) is not None:
-                            print(match_k.group())
-                            pass
-                    clean_name = get_clean_name(entity["table"])
+            for entry in data:
+                if "table" in entry.keys():
+                    clean_name = get_clean_name(entry["table"])
+                    expanded_table = expand_table(entry)
+                    assert not clean_name in entities
+                    entities[clean_name] = expanded_table
                 else:
-                    for k, v in entity.items():
+                    for k, v in entry.items():
                         if k not in keep_type_whitelist:
-                            entity[k] = str(v)
+                            entry[k] = str(v)
                         else:
-                            entity[k] = v
-                    clean_name = get_clean_name(entity["name"])
-                assert not clean_name in entities
-                entities[clean_name] = entity
+                            entry[k] = v
+                    clean_name = get_clean_name(entry["name"])
+                    assert not clean_name in entities
+                    entities[clean_name] = entry
     return entities
 
 

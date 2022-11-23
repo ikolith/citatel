@@ -4,8 +4,8 @@
 - table: test_table
   roll: 1d4 # alternatively... roll_for_outcome...?
   outcomes:
-    1-3: rolled a 1 or 2
-    4: rolled a 2
+    1-3: rolled a 1 2 or 3
+    4: rolled a 4
 
   filter_tags: table, no_card
 
@@ -50,6 +50,13 @@
     12: "{1d12} days"
   filter_tags: table, no_card
 
+- table: expanse_table
+  outcomes:
+    1: "You see a massive underground fungal forest. Glowing lichen hangs down, obscuring the ceiling. You can't tell how large the forest is."
+    2: "You see an enormous flooded cave. You hear running water and the gentle rain of water running down stalactites and dropping into the water below. Irregular stalagmite islands rise from the water throughout."
+    3: "The ground in front of the entrance to the cave drops away, the entrance leads directly into a great black abyss. You cannot see the bottom. You cannot see the other side. Warm air is pushed gently upward then is pulled back down every few minutes. The empty space breathes slowly."
+    4: "Great crystal columns reach from every direction and branch out freely in every direction. You can't see very far in the dense forest of crystal."
+
 # "space" entities
 
 - name: den
@@ -68,10 +75,6 @@
   filter_tags: no_card, space
 
 - name: expanse
-  table:
-    1: "You see a massive underground fungal forest. Glowing lichen hangs down, obscuring the ceiling. You can't tell how large the forest is."
-    2: "You see an enormous flooded cave. You hear running water and the gentle rain of water running down stalactites and dropping into the water below. Irregular stalagmite islands rise from the water throughout."
-    3: "The ground in front of the entrance to the cave drops away, the entrance leads directly into a great black abyss. You cannot see the bottom. You cannot see the other side. Warm air is pushed gently upward then is pulled back down every few minutes. The empty space breathes slowly."
-    4: "Great crystal columns reach from every direction and branch out freely in every direction. You can't see very far in the dense forest of crystal."
+  size: "{expanse_table}"
   travel_time: "{travel_time}" # should be d6+6 rolled on this table
   filter_tags: no_card, space
