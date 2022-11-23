@@ -25,8 +25,6 @@
 
 ### following
 
-#### planned: karambit... sometimes??
-
 ### neutral
 
 #### planned parry stuff: parrying dagger, swordbreaker
@@ -280,14 +278,6 @@
   encumbrance: 1
   filter_tags: weapon, basic
 
-- name: Pickaxe
-  tags: two-handed, shafted
-  speed: (2n1)
-  to_hit: STR
-  basic_attacks: "1d6+STR (P) [swinging: leading]"
-  encumbrance: 1
-  filter_tags: weapon, basic
-
 - name: Cutter Mattock
   tags: two-handed, shafted, heavy
   requirements: 1 STR
@@ -296,6 +286,16 @@
   basic_attacks: "1d8 (S) [swinging: leading]"
   encumbrance: 1
   filter_tags: weapon, basic
+
+- name: Pickaxe
+  tags: two-handed, shafted
+  speed: (2n1)
+  to_hit: STR
+  basic_attacks: "1d6+STR (P) [swinging: leading]"
+  encumbrance: 1
+  filter_tags: weapon, basic
+
+
 
 # ranged
 
