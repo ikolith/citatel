@@ -14,9 +14,8 @@ def get_clean_name(name: str) -> str:
     )
 
 
-def expand_table(entry: dict) -> dict:
+def expand_table(entry: dict) -> ty.Table:
     expanded_table = {"outcomes": {}}
-
     for k, v in entry.items():
         if k == "outcomes":
             for outcome_k, outcome_v in entry["outcomes"].items():
@@ -31,7 +30,7 @@ def expand_table(entry: dict) -> dict:
                     expanded_table["outcomes"][int(outcome_k)] = outcome_v
         else:
             expanded_table[k] = v
-        return expand_table
+    return expand_table
 
 
 def get_entities(dir_path: str, keep_type_whitelist: list[str] = []) -> ty.Entities:

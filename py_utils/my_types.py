@@ -1,4 +1,4 @@
-from typing import NewType, TypedDict
+from typing import NewType, TypedDict, Union
 
 # mypy doesn't want this called "types.py". fine.
 
@@ -11,10 +11,17 @@ class Curly(TypedDict):
     determiner_result: str
 
 
+class Table(TypedDict, total=False):
+    roll: str  # this should be optional
+    outcomes: dict[int, str]  # required
+    filter_tags: str  # optional
+    # this is doable in python 3.11...
+    # but discord.py doesn't support 3.11,
+    # so they're just all optional
+
+
 Entity = NewType("Entity", dict[str, str])
-# here is where the table type goes
-# and vvv entities needs to be changed
-Entities = NewType("Entities", dict[str, Entity])
+Entities = NewType("Entities", dict[str, Union[Entity, Table]])
 
 
 class ES(TypedDict, total=False):
