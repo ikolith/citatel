@@ -53,7 +53,7 @@
 - name: Butcher's Cleaver
   tags: "one-handed, hilted, bladed, reach: close, stealth"
   speed: (1n2)
-  to-hit: +STR
+  to_hit: +STR
   basic_attacks: "1d4+STR (S) [swinging: leading]"
   flavor_text: |-
     A heavy, crude cleaver of black pocked metal.
@@ -200,7 +200,7 @@
   tags: "two-handed, bladed, reach: 2"
   requirements: 1 STR
   speed: (1n1)->(1n2)
-  to-hit: "+AGI +STR"
+  to_hit: "+AGI"
   basic_attacks: "1d6 (P) + 1d6 (S) [swinging: leading], 1d8 (P) [thrusting]"
   flavor_text: -|
     The long blade of the Rhomphaia curves aggressively toward the enemy, like a great bladed claw.
