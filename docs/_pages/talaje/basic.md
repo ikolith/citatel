@@ -32,8 +32,8 @@ Every turn, you can move 1 space for free (as long as you can currently move).
   
 
 ###  Parry  
-**Requirements:** 1 AGI, a [finesse] weapon or shield.   
-Parry can be used to attempt to [interrupt] a melee attack. Pay (2n1). Contest the attack roll with a Parry attempt, a check + AGI or DEX. If you win, the attack does no damage and you gain 2 Temp AP.  
+**Requirements:** 2 AGI, a hilted weapon that uses AGI or DEX To-Hit  
+Parry can be used to attempt to [interrupt] a melee attack. Pay (1n2). Contest the attack roll with a Parry attempt, a check + AGI or DEX.  If you win, the attack does no damage and you gain 2 Temp AP  (you can only gain 2 Temp AP per turn this way). If you fail, you are [vulnerable] until your next action.  
 **Cost:** 1 SP  
   
 
@@ -220,8 +220,12 @@ Ignore 1 extra armor when using a [bladed] weapon. The first time you would lose
   
 
 ###  Defensive Perimeter  
-**Requirements:** A melee weapon with [reach] and [hafted] and an attack with $\blacktriangle$, STR 1  
-(1n1). You brace the weapon, typically a spear. If an enemy moves into a space threatened by you, you get to use an attack immediately for 1 AP less than you would have to spend otherwise. If your attack does damage, Roll a STR contest. If you win, their action ends and they stop moving, stopping outside of your range. You get 1 Temp AP. You can spend it to immediately get back into “Defensive Perimeter”.  
+**Requirements:** A melee weapon with [reach] and [hafted] and an attack with $\blacktriangle$, STR 1.  
+(1n1). You brace the weapon, typically a spear. 
+If an enemy moves into a space threatened by you, you get to use an attack immediately for 1 AP less than you would have to spend otherwise. 
+If your attack does damage, Roll a STR contest. 
+If you win, their action ends and they stop moving, stopping outside of your range. 
+You get 1 Temp AP. You can spend it to immediately get back into “Defensive Perimeter”.  
 **Cost:** 1 SP  
   
 
@@ -309,13 +313,84 @@ Spend an extra AP when entering a grapple check. If you can hold the grapple for
 
 ## Basic Weapons  
 
-###  Estoc  
-**Tags:** hilted, two-handed, reach  
-**Requirements:** 2 AGI  
+###  Dagger  
+**Tags:** one-handed, hilted, bladed, reach: close, stealth  
+**Speed:** (1n1)  
+**To-Hit:** +DEX  
+1d4 (P) $\blacktriangle$ or (S) $\triangleright\mkern-7mu\blacktriangleright\mkern-7mu\triangleright$  
+**Encumbrance:** 1/3  
+  
+
+###  Long Tooth  
+**Tags:** one-handed, hilted, bladed, reach: close, stealth  
+**Speed:** (1n1)$\Rightarrow$(1n2)  
+**To-Hit:** +DEX  
+1d4 + AGI (P) $\blacktriangle$  
+Ignore 5 Armor.  
+**Encumbrance:** 1/3  
+*A narrow bladeless rondel dagger, a long spike with a reinforced point.*  
+  
+
+###  Butcher's Cleaver  
+**Tags:** one-handed, hilted, bladed, reach: close, stealth  
 **Speed:** (1n2)  
+**To-Hit:** +STR  
+1d4+STR (S) $\triangleright\mkern-7mu\triangleright\mkern-7mu\blacktriangleright$  
+*A heavy, crude cleaver of black pocked metal.*  
+**Encumbrance:** 1/3  
+  
+
+###  Bushman's Kukri  
+**Tags:** one-handed, hilted, bladed, reach: close, stealth  
+**Speed:** (1n1)$\Rightarrow$(1n1)$\Rightarrow$(1n2)  
+**To-Hit:** +DEX  
+1d4 (P) $\blacktriangle$ or (S) $\triangleright\mkern-7mu\triangleright\mkern-7mu\blacktriangleright$  
+**Encumbrance:** 1/3  
+  
+
+###  Gleaming Sabre  
+**Tags:** one-handed, hilted, bladed  
+**Requirements:** 2 DEX  
+**Speed:** (1n1)$\Rightarrow$(1n1)$\Rightarrow$(1n2)  
 **To-Hit:** +AGI  
-2d6 + AGI (P) $\blacktriangle$  
-Ignore armor equal to piercing damage.  
+1d4 + AGI (S) $\blacktriangleright\mkern-7mu\triangleright\mkern-7mu\triangleright$  
+*The fine pale blade curves backwards, the sword is deceptively light, the blade is thin and fickle.*  
+  
+
+###  Simple Shortsword  
+**Tags:** one-handed, hilted, bladed  
+**Speed:** (1n1)$\Rightarrow$(1n2)  
+**To-Hit:** +AGI  
+1d8 (P) $\blacktriangle$ or (S) $\triangleright\mkern-7mu\blacktriangleright\mkern-7mu\triangleright$  
+*"An anadorned straight sword. A simple and reliable weapon."*  
+**Encumbrance:** 1  
+  
+
+###  Machete  
+**Tags:** one-handed, hilted, bladed  
+**Speed:** (1n1)$\Rightarrow$(1n2)  
+**To-Hit:** +STR  
+1d6 (S) $\triangleright\mkern-7mu\blacktriangleright\mkern-7mu\triangleright$  
+*A simple tool for cutting down brush.*  
+**Encumbrance:** 1  
+  
+
+###  Falx  
+**Tags:** one-handed, hilted, bladed  
+**Speed:** (1n1)$\Rightarrow$(1n2)  
+**To-Hit:** +AGI  
+1d6 (P) + 2 (S) $\triangleright\mkern-7mu\triangleright\mkern-7mu\blacktriangleright$
+- 1d4 (S) $\blacktriangle$  
+*A sword adapted from a sickle. The blade curves forward, it is swung with the point toward the enemy.*  
+  
+
+###  Heavy Cutlass  
+**Tags:** one-handed, hilted, bladed  
+**Speed:** (1n1)$\Rightarrow$(2n1)  
+**To-Hit:** +AGI  
+1d8 (S) $\triangleright\mkern-7mu\triangleright\mkern-7mu\blacktriangleright$
+- 1d6 (P) $\blacktriangle$  
+*A broad, unrefined sword for hacking through enemies.*  
 **Encumbrance:** 1  
   
 
@@ -329,45 +404,13 @@ Inflict 2 [bleed]
 **Encumbrance:** 1  
   
 
-###  Shortsword  
-**Tags:** one-handed, hilted, bladed  
-**Speed:** (1n1)$\Rightarrow$(1n2)  
+###  Estoc  
+**Tags:** hilted, two-handed, reach  
+**Requirements:** 2 AGI  
+**Speed:** (1n2)  
 **To-Hit:** +AGI  
-1d8 (P) $\blacktriangle$ or (S) $\triangleright\mkern-7mu\blacktriangleright\mkern-7mu\triangleright$  
-**Encumbrance:** 1  
-  
-
-###  Kukri  
-**Tags:** one-handed, hilted, bladed, reach: close, stealth  
-**Speed:** (1n1)$\Rightarrow$(1n1)$\Rightarrow$(1n2)  
-**To-Hit:** +DEX  
-1d4 (P) $\blacktriangle$ or (S) $\triangleright\mkern-7mu\triangleright\mkern-7mu\blacktriangleright$  
-**Encumbrance:** 1/3  
-  
-
-###  Rondel  
-**Tags:** one-handed, hilted, bladed, reach: close, stealth  
-**Speed:** (1n1)$\Rightarrow$(1n1)$\Rightarrow$(1n2)   
-**To-Hit:** +DEX  
-1d4 + AGI (P) $\blacktriangle$  
-If doing piercing damage, ignore 5 non-shield armor  
-**Encumbrance:** 1/3  
-  
-
-###  Dagger  
-**Tags:** one-handed, hilted, bladed, reach: close, stealth  
-**Speed:** (1n1)  
-**To-Hit:** +DEX  
-1d4 (P) $\blacktriangle$ or (S) $\triangleright\mkern-7mu\blacktriangleright\mkern-7mu\triangleright$  
-**Encumbrance:** 1/3  
-  
-
-###  Machete  
-**Tags:** one-handed, hilted, bladed  
-**Speed:** (1n1)$\Rightarrow$(1n2)  
-**To-Hit:** +STR  
-1d6 (S) $\triangleright\mkern-7mu\triangleright\mkern-7mu\blacktriangleright$  
-*A simple tool for cutting down brush.*  
+2d6 + AGI (P) $\blacktriangle$  
+Ignore armor equal to piercing damage.  
 **Encumbrance:** 1  
   
 
@@ -382,49 +425,92 @@ Robust Edge: increase low rolls required to lose [sharpened] buff by 2
 **Encumbrance:** 1  
   
 
-###  Mace  
-**Tags:** shafted, one-handed  
+###  Rhomphaia  
+**Tags:** two-handed, bladed, reach: 2  
 **Requirements:** 1 STR  
-**Speed:** (1n2)  
-**To-Hit:** +STR  
-1d8 + STR (B) $\triangleright\mkern-7mu\triangleright\mkern-7mu\blacktriangleright$  
-Ignore 3 armor  
+**Speed:** (1n1)$\Rightarrow$(1n2)  
+**To-Hit:** +AGI  
+1d6 (P) + 1d6 (S) $\triangleright\mkern-7mu\triangleright\mkern-7mu\blacktriangleright$
+- 1d8 (P) $\blacktriangle$  
+*The long blade of the Rhomphaia curves aggressively toward the enemy, like a great bladed claw.*  
 **Encumbrance:** 1  
   
 
-###  Club  
+###  Crude Club  
 **Tags:** hilted, one-handed  
 **Speed:** (2n1)  
 **To-Hit:** +STR  
-1d8 (B) $\triangleright\mkern-7mu\blacktriangleright\mkern-7mu\triangleright$  
+1d8 + STR (B) $\triangleright\mkern-7mu\blacktriangleright\mkern-7mu\triangleright$  
+*Bonk.*  
 **Encumbrance:** 1  
   
 
-###  Battleaxe  
-**Tags:** two-handed, shafted, bladed  
-**Requirements:** 1 STR  
-**Speed:** (2n1)  
-**To-Hit:** +STR  
-1d8 + 2*STR (S) $\triangleright\mkern-7mu\triangleright\mkern-7mu\blacktriangleright$  
+###  One Handed Spear  
+**Tags:** shafted, one-handed, reach: 2  
+**Speed:** (1n1)$\Rightarrow$(1n2)  
+1d8 (P) $\blacktriangle$  
 **Encumbrance:** 1  
   
 
 ###  Javelin  
 **Tags:** one-handed, shafted  
 **Requirements:** 1 AGI  
-**Speed:** (1n1)$\Rightarrow$(2n1)  
+**Speed:** (1n1)$\Rightarrow$(1n2)  
 **To-Hit:** +AGI  
 1d6 (P) $\blacktriangle$
-- (2n1) To-Hit: PERCEPTION  :: 1d6 + STR (P) [thrown] [range: 5+STR]  
+Can be thrown for (2n1)
+- PER To-Hit
+- 1d6 + STR (P)
+- range: 5+STR  
 **Encumbrance:** 1/3  
   
 
-###  Pickaxe  
-**Tags:** two-handed, shafted  
-**Speed:** (2n1)  
-**To-Hit:** STR  
-1d6+STR (P) $\triangleright\mkern-7mu\triangleright\mkern-7mu\blacktriangleright$  
+###  Adze  
+**Tags:** one-handed, shafted, bladed  
+**Speed:** (1n1)$\Rightarrow$(1n2)  
+**To-Hit:** +STR  
+1d4 (S) $\triangleright\mkern-7mu\triangleright\mkern-7mu\blacktriangleright$  
+If Adze does 4 or more damage it becomes stuck in the target. 
+Removing it is (2n1) and does 1d4+STR (S) damage.  
 **Encumbrance:** 1  
+  
+
+###  Giant Club  
+**Tags:** two-handed, giant, shafted  
+**Requirements:** 3 STR  
+**Speed:** (1n3) $\Rightarrow$ (2n1)  
+**To-Hit:** +2*STR  
+1d10+2*STR  
+*BONK.*  
+  
+
+###  Goedendag!  
+**Tags:** shafted, two-handed, reach: 2  
+**Requirements:** 1 STR  
+**Speed:** (1n2)$\Rightarrow$(2n1)  
+**To-Hit:** +STR  
+1d8+STR (B) $\triangleright\mkern-7mu\blacktriangleright\mkern-7mu\triangleright$
+- 1d8+STR (P) $\blacktriangle$  
+Ignore 2 armor.  
+**Encumbrance:** 2  
+  
+
+###  Pitchfork  
+**Tags:** shafted, two-handed, reach: 2  
+**Speed:** (1n1)$\Rightarrow$(1n2)  
+**To-Hit:** +AGI  
+1d8 (P) $\blacktriangle$  
+If your STR is greater or equal to the enemy, you can choose to send them 1 space back on a hit.  
+**Encumbrance:** 1  
+  
+
+###  Battleaxe  
+**Tags:** two-handed, shafted, bladed  
+**Requirements:** 1 STR  
+**Speed:** (1n2)$\Rightarrow$(2n1)  
+**To-Hit:** +STR  
+1d8 + 2*STR (S) $\triangleright\mkern-7mu\triangleright\mkern-7mu\blacktriangleright$  
+**Encumbrance:** 2  
   
 
 ###  Cutter Mattock  
@@ -433,15 +519,30 @@ Ignore 3 armor
 **Speed:** (2n1)  
 **To-Hit:** +STR  
 1d8 (S) $\triangleright\mkern-7mu\triangleright\mkern-7mu\blacktriangleright$  
-**Encumbrance:** 1  
+**Encumbrance:** 2  
   
 
-###  Cutlass  
-**Tags:** one-handed, hilted, bladed  
+###  Pickaxe  
+**Tags:** two-handed, shafted  
+**Speed:** (2n1)  
+**To-Hit:** STR  
+1d6+STR (P) $\triangleright\mkern-7mu\triangleright\mkern-7mu\blacktriangleright$  
+**Encumbrance:** 2  
+  
+
+###  Sling  
+**Tags:** range: 6*DEX  
+**Speed:** (2n1)  
+**To-Hit:** +PER  
+1d6+PER (B)  
+  
+
+###  Shortbow  
+**Tags:** range: 15  
+**Requirements:** 1 DEX, 1 STR  
 **Speed:** (1n1)$\Rightarrow$(2n1)  
-**To-Hit:** +AGI  
-1d8 (S) $\triangleright\mkern-7mu\triangleright\mkern-7mu\blacktriangleright$
-- 1d6 (P) $\blacktriangle$  
+**To-Hit:** +PER  
+1d6+PER (P)  
 **Encumbrance:** 1  
   
 
@@ -495,4 +596,4 @@ Max encumbrance: 8+STR. [enumbered] threshold: 2+STR.
 Can be carried while wearing another bag. Stick must be held with one hand. Max encumbrance: 2 + STR.  
   
 
-This file was last auto-generated on 2022-11-11.
+This file was last auto-generated on 2022-11-26.
