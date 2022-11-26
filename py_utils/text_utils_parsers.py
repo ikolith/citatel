@@ -30,7 +30,7 @@ def expand_table(entry: dict) -> ty.Table:
                     expanded_table["outcomes"][int(outcome_k)] = outcome_v
         else:
             expanded_table[k] = v
-    return expand_table
+    return expanded_table
 
 
 def get_entities(dir_path: str, keep_type_whitelist: list[str] = []) -> ty.Entities:

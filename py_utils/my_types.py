@@ -24,8 +24,8 @@ Entity = NewType("Entity", dict[str, str])
 Entities = NewType("Entities", dict[str, Union[Entity, Table]])
 
 
-class ES(TypedDict, total=False): 
-    # ES = "Entity Sections" thought I guess they aren't strictly for entities anymore!
+class ES(TypedDict, total=False):
+    # ES: I guess these are "Entry Sections" Now
     text: str
     clean_name: str
     include_full_text: bool
