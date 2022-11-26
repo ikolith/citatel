@@ -1,4 +1,3 @@
-
 # Big Strings #################################
 
 cli_curly_help = """ TODO: rewrite this so it's in standard cli format.
