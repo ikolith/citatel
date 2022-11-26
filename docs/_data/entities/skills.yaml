@@ -37,11 +37,13 @@
   filter_tags: skill, agi, basic
 
 - name: Parry
-  requirements: "1 AGI, a [finesse] weapon or shield. "
+  requirements: "2 AGI, a hilted weapon that uses AGI or DEX To-Hit"
   effect: >-
-    Parry can be used to attempt to [interrupt] a melee attack. Pay (2n1).
-    Contest the attack roll with a Parry attempt, a check + AGI or DEX. If you
-    win, the attack does no damage and you gain 2 Temp AP.
+    Parry can be used to attempt to [interrupt] a melee attack. Pay (1n2).
+    Contest the attack roll with a Parry attempt, a check + AGI or DEX. 
+    If you win, the attack does no damage and you gain 2 Temp AP 
+    (you can only gain 2 Temp AP per turn this way).
+    If you fail, you are [vulnerable] until your next action.
   cost: 1 SP
   filter_tags: skill, agi, basic
 
@@ -342,16 +344,14 @@
 ## (P) thrusting... spear stuff
 
 - name: Defensive Perimeter
-  requirements: >-
-    A melee weapon with [reach] and [hafted] and an attack with [thrusting], STR
-    1
-  effect: >-
-    (1n1). You brace the weapon, typically a spear. If an enemy moves into a
-    space threatened by you, you get to use an attack immediately for 1 AP less
-    than you would have to spend otherwise. If your attack does damage, Roll a
-    STR contest. If you win, their action ends and they stop moving, stopping
-    outside of your range. You get 1 Temp AP. You can spend it to immediately
-    get back into “Defensive Perimeter”.
+  requirements: |-
+    A melee weapon with [reach] and [hafted] and an attack with [thrusting], STR 1.
+  effect: |-
+    (1n1). You brace the weapon, typically a spear. 
+    If an enemy moves into a space threatened by you, you get to use an attack immediately for 1 AP less than you would have to spend otherwise. 
+    If your attack does damage, Roll a STR contest. 
+    If you win, their action ends and they stop moving, stopping outside of your range. 
+    You get 1 Temp AP. You can spend it to immediately get back into “Defensive Perimeter”.
   cost: 1 SP
   filter_tags: skill, melee, basic
 
@@ -473,5 +473,3 @@
     for 6 turns, the grappled creature is knocked out for 1d12 hours.
   cost: 1 SP
   filter_tags: skill, wrestling, basic
-
-
