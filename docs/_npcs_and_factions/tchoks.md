@@ -11,7 +11,7 @@ One of the only formal records of their behavior comes from S. Bevlins, a schola
 
 
 ###  Tchok  
-**HP:** 3d8+1 or 13  
+**HP:** {3d8+1} or 13  
 **Scores:** 1 CON  
 **Skills:** Jibbering (1n1): All checks related to magic made within earshot of a
 jibbering Tchok are made with -3. This effect stacks with multiple instances
@@ -23,4 +23,4 @@ poison before reapplication is necessary.
 *Slimy, stupid, and inane.*  
   
 
-This file was last auto-generated on 2022-11-26.
+This file was last auto-generated on 2022-12-01.
