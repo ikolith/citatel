@@ -26,7 +26,7 @@ end_text = f"This file was last auto-generated on {date.today()}."
 
 
 def write(text: str, path: str) -> None:
-    with open(path, mode="w") as f:
+    with open(path, mode="w", encoding="utf-8") as f:
         f.write(text)
 
 
