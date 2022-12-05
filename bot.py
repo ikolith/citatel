@@ -38,7 +38,7 @@ async def post_text(text: str, interaction: discord.Interaction) -> None:
         await interaction.response.send_message(text)
     else:
         with open(
-            os.path.join("output", "bot_output", "long_message.txt"), mode="w"
+            os.path.join("output", "bot_output", "long_message.txt"), mode="w", encoding="utf-8"
         ) as f:
             f.write(text)
         await interaction.response.send_message(

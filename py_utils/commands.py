@@ -54,7 +54,7 @@ def enlist(
         warnings.warn(
             "No entities will be written. Consider checking your filters and requested type."
         )
-    with open(output_filepath, mode="w") as f:
+    with open(output_filepath, mode="w", encoding="utf-8") as f:
         f.write(enlist)
 
 
@@ -87,7 +87,7 @@ def enlist_generate_cards(
         if input_filepath == "e":
             input_filepath = os.path.join("output", "entities.txt")
             # just a little shortcut to the default
-        with open(input_filepath) as f:
+        with open(input_filepath, encoding="utf-8") as f:
             card_entities = f.readline().split(sep=",")
     else:
         card_entities = cards.split(",")
