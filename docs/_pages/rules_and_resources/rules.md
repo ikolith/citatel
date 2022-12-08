@@ -167,11 +167,11 @@ Using this tracker you should never have to remember how many AP you’re suppos
 
 Let's say you have a longsword in one hand and you're fighting a guy with chainmail armor. The longsword has a Basic Attack AP cost:“(1n1)->(2n1)" and has a slashing (S) [swinging: neutral] move that does a d8 in damage as well as a piercing (P) [thrusting] move that does a d6 of damage. You slash first, paying (1n1). This does poorly against the opponents chain mail, so you try to the (P) piercing attack for (2n1) (the second AP cost, because this is the second time you've used an attack this turn) and this does better. You don't have enough AP to do a third attack, but if you did it would cost (2n1).
 
-## Initiative Rules B
+## Initiative Rules
 
-There is a more standard initiative ruleset with people taking turns in initiative order, "Initiative Rules A". I didn't like it. The ruleset that follows has not been tested much and will likely see some changes. This is the current state.
+The ruleset that follows has not been tested much and will likely see some changes. This is the current state.
 
-Initiative is equal to AGI + or - any bonuses or penalties to initiative. 
+A character's initiative is their AGI + or - any relevant bonuses or penalties.
 
 The initiative scores of the players should always be public on some form of initiative tracker. As other characters reveal their initiative, they should be added to the tracker (and removed when they are no longer relevant). 
 
@@ -179,16 +179,16 @@ Every round is divided into two phases, the Beginning Phase and the Main Phase.
 
 ### Beginning Phase - "Beginning of the Round"
 
-This is mostly referred to as the "beginning of the round" by skills and effects. The whole table does not need to be synced up for this, everyone can just manage their own character. There are three sub-phases to the beginning of the round. Most of the time this will not matter, but if there are multiple things that happen "at the beginning of the round" this describes the order in which they happen.  
+This is mostly referred to as the "beginning of the round" by skills and effects. The whole table does not need to be synced up for this, everyone can just manage their own character. There are three sub-phases to the beginning of the round. Most of the time this will not matter and you won't have to think about it, but if there are multiple things that happen "at the beginning of the round" this describes the order in which they happen.  
 If there are multiple things that happen in the same sub-phase, you get to choose the order in which they happen.
 
 #### 1. Effect Activation
 
-Any effects that happen "at the beginning of a round" happen now. They happen before anything else in the round does. This includes taking damage from [poison] or [bleed] or gaining health from [heal] as well as any rolls, contests, or effects that happen "at the beginning of the round".
+Any *already active* effects that trigger "at the beginning of a round" happen now. They happen before anything else in the round does. This includes taking damage from [poison] or [bleed] or gaining health from [heal]. If you have an effect active that causes you to do some sort of rolls or contests, do those now.
 
 #### 2. Status Management
 
-At this point any effect or mechanic that deals with rounds passing is accounted for. Here the "new round" officially starts for effects. AP is regained, a point of [poison] is removed, a point of [heal] is removed, anything that would end at the beginning of this round ends now.
+At this point any effect or mechanic that involves rounds passing is accounted for. AP is regained a, a point of [poison] is removed, a point of [heal] is removed, anything that would end at the "beginning" of this round ends *now*.
 
 #### 3. Moves and Skills
 
@@ -196,15 +196,15 @@ Some moves and skills get can be used "at the beginning of the round". These can
 
 #### An example
 
-Say you have 1 HP, 1 [poison], and an ability that causes [poison] to heal you instead of harm you which can be used at the beginning of the round. The order in this case matters, do you reduce [poison] by 1 first and avoid the damage? Can you use the ability before the damage from [poison] kicks in? No and no. First damage happens, then you remove the [poison], and then you can use an ability (though in this hypothetical you would already be downed).  
-Let's say that instead of having an ability that lets you heal from [poison], you have some effect active that makes poison heal you. In this case you would heal 1 HP from the poison damage and then remove the poison.  
-Another example: let's say that in addition to the passive healing [poison] effect you have an item that activates when you would take [poison] damage and nullifies the damage. In this case you have two effects that happen in the same phase, so do you heal from the poison or ignore the poison? In the case of this sort of tie, you get to choose. Presumably you would choose to heal which means the item would not be triggered.
+Say you have 1 HP, 1 [poison], and an ability that causes [poison] to heal you instead of harm you which can be used at the beginning of the round. The order in this case matters, do you reduce [poison] by 1 first and avoid the damage? Can you use the ability before the damage from [poison] kicks in? No and no. First damage happens, then you remove the [poison], and then you can use an ability (though in this hypothetical you would already be at 0 HP).  
+Let's say that instead of having an ability that lets you heal from [poison], you already have an effect active that makes poison heal you. In this case you would heal 1 HP from the poison damage and then remove the poison.  
+An even more complex example: let's say that in addition to the passive healing [poison] effect you have an item that activates when you would take [poison] damage and nullifies the damage. In this case you have two effects that happen in the same phase, so do you heal from the poison or ignore the poison? In the case of this sort of tie, you get to choose. Presumably you would choose to heal which means the item would not be triggered because its no longer the case that you would otherwise take poison damage.
 
 ### Main Phase
 
-This is where basically everything happens.
+This is where basically everything in the round happens.
 
-If you want to do something, you say what you want to do. If multiple characters want to do something at the same time, the order they take actions in is based on their initiative. If there is a tie of two or more characters, the character that went most recently goes last, the character that went most recently before them goes second to last, etc. If a couple characters haven't gone at all, roll a contest.
+If you want to do something, you say what you want to do. If multiple characters want to do something at the same time, the order they take actions in is based on their initiative. If there is a tie of two or more characters, the character that went most recently goes last, the character that went most recently before them goes second to last, etc. If several characters haven't gone at all, roll a contest between them.
 
 ### Interrupting and [interrupt]
 
@@ -226,11 +226,11 @@ The DM announces the highest level of initiative present according to the initia
 
 Slower characters can attempt to interrupt faster characters at any time. Characters can keep acting as long as they have the AP to do so, even if they already had a chance to take actions.  
 
-### Using Only the Amount of Rules and Coordination that You Need
+### Using Only the Amount of Coordination that You Need
 
-In the section above, all of the rules for initiative and when-exactly-effects-happen were explained, but often you won't need to actively use all of these rules. It will probably be useful to make every step very explicit for beginners, but once players have a handle on how this system works combat should be able to function without every step being made explicit, rules for determining who goes first can just be invoked when there is some conflict. Rules for "phases" can be invoked only when there are many effects that seem to happen at the same time, and there is some reason why the order matters.
+In the section above, all of the rules for initiative and when-exactly-effects-happen were explained, but often you won't need to actively use all of these rules. It will probably be useful to make every step very explicit for beginners, but once players have a handle on how this system works, combat should be able to function without every step being made explicit, rules for determining who goes first can just be invoked when there is some conflict. You can choose to invoke rules for "phases" only when there are many effects that seem to happen at the same time and there is some reason why the order matters.
 
-As an example, in a fight between two people the DM doesn't need to be announcing the current highest level of initiative, there are at most two levels! The combatants will quickly figure out who is faster. The DM *will* often have to determine when the new round starts in combat, but this isn't always true either. If there are only two combatants and they're out of AP they can just agree to start a new round, though, of course, the DM could still overrule them and describe something external happening that neither expected before they get a chance to start a new round.
+As an example, in a fight between two people the DM doesn't need to be announcing the current highest level of initiative, there are at most two levels! The combatants will quickly figure out who is faster. The DM *will* often have to determine when the new round starts in combat, but this isn't always true either. If there are only two combatants and they're out of AP they can just agree to start a new round. Of course, the DM could still overrule them and describe something external happening that neither expected before they get a chance to start a new round.
 
 ## AP Shenanigans: Temp AP, Losing AP, Gaining AP, the "Wait" skill
 
