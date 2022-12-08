@@ -30,50 +30,14 @@ Here's an example of a basic character sheet with 0s all the way down.
 
 18 + (6*CON) Health, To-Hit: 6
 
-<table>
-  <tr>
-   <td>ATTRIBUTE
-   </td>
-   <td>SCORE
-   </td>
-  </tr>
-  <tr>
-   <td>STR
-   </td>
-   <td>0
-   </td>
-  </tr>
-  <tr>
-   <td>AGI
-   </td>
-   <td>0
-   </td>
-  </tr>
-  <tr>
-   <td>DEX
-   </td>
-   <td>0
-   </td>
-  </tr>
-  <tr>
-   <td>CON
-   </td>
-   <td>0
-   </td>
-  </tr>
-  <tr>
-   <td>PERCEPTION
-   </td>
-   <td>0
-   </td>
-  </tr>
-  <tr>
-   <td>SOCIAL
-   </td>
-   <td>0
-   </td>
-  </tr>
-</table>
+| ATTRIBUTE | SCORE |
+| --------- | ----- |
+| STR       | 0     |
+| AGI       | 0     |
+| DEX       | 0     |
+| CON       | 0     |
+| PERC      | 0     |
+| SOC       | 0     |
 
 ### HP and CON
 
@@ -91,42 +55,17 @@ To-Hit is a quality like HP or AP. It can’t be directly raised or lowered with
 
 The cost of increasing a score from 0 to 1 is 1, the cost of going from 1 to 2 is 2, 2 to 3 is 3, etc. The cost of increasing from X to Y is Y. So, going directly from 0 to 3 costs 1+2+3, or 6 SP.  To go up from a negative score to the next score only costs 1 SP.
 
-<table>
-  <tr>
-   <td>
-   </td>
-   <td colspan="5" >How much does it cost to go from 0 straight to…?
-   </td>
-  </tr>
-  <tr>
-   <td>Score
-   </td>
-   <td>1
-   </td>
-   <td>2
-   </td>
-   <td>3
-   </td>
-   <td>4
-   </td>
-   <td>5
-   </td>
-  </tr>
-  <tr>
-   <td>SP Cost
-   </td>
-   <td>1
-   </td>
-   <td>3
-   </td>
-   <td>6
-   </td>
-   <td>10
-   </td>
-   <td>15
-   </td>
-  </tr>
-</table>
+
+<!-- How much does it cost to go from 0 straight to...? -->
+How much does it cost to go from 0 straight to…?
+
+| Score | SP Cost |
+| ----- | ------- |
+| 1     | 1       |
+| 2     | 3       |
+| 3     | 6       |
+| 4     | 10      |
+| 5     | 15      |
 
 ## Character Creation
 
@@ -310,11 +249,11 @@ Instead, we can just describe the weapon itself and some basic qualities about t
 
 It's a judgement call. If the blade has a bit of a curve backward but it's basically just a normal sword, not particularly fast or light, just make the move [swinging: neutral]. If you have a club that is really big and heavy but there isn't necessarily a pronounced leading striking head, just make it [swinging: leading] so it has access to those skills. The system is there to express how the weapon is used, don't fret too much about whether the striking head is "really leading enough". If the intended use is more like weapons that are [swinging: leading] than [swinging: neutral], give it [swinging: leading].
 
-Re: notation, yeah it kinda sucks. [swinging: leading] ends up taking about as much space as the rest of the attack and it's one of the less important elements! However [S: L], [S: N] is just kind of ugly and incomprehensible. When making cards or other reference material we replace these tags with glyps. ▲ for [thrusting], ▷▷▶for [swinging: leading], ▶▷▷for [swinging: following] etc. These are rendered a little more nicely in pdf reference material. The glyphs should be pretty intuitive, the filled triangle indicates the striking head relative to the swing (or the subjective "aggressiveness" of the attack).
+<!-- this line is a problem for latex.. -->
+Re: notation, yeah it kinda sucks. [swinging: leading] ends up taking about as much space as the rest of the attack and it's one of the less important elements! However [S: L], [S: N] is just kind of ugly and incomprehensible. When making cards or other reference material we replace these tags with glyps. ▲ for [thrusting], ▷▷▶ for [swinging: leading], ▶▷▷for [swinging: following] etc. These are rendered a little more nicely in pdf reference material. The glyphs should be pretty intuitive, the filled triangle indicates the striking head relative to the swing (or the subjective "aggressiveness" of the attack).
 
 #### Nice, how can I use this to make my own weapons?
-
-TODO: this.
+<!-- TODO: links and such... this -->
 Head over to the Weapon Creation Doc in the Creation References. If those words weren't links it's because I still need to clean it up and upload it. Stay tuned. 
 
 ### Weapon Switching
@@ -432,9 +371,9 @@ communicative skills include persuasion, deception, and performance. Perceptive 
 
 | Score | Name              | Description                                                                                                                                                                                                                                                             |
 | ----- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| -6    | Reviled           | You are vilified and reviled. A group will send paid assassins and soldiers after you. Your name, face, and terrible actions are known. An individual will go to great lengths and take on great risk and personal cost in order to do as much harm as possible to you. |
+| -6    | Reviled           | You are vilified and reviled. Your name, face, and terrible actions are known. A group will send paid assassins and soldiers after you. An individual will go to great lengths and take on great risk and personal cost in order to do as much harm as possible to you. |
 | -5    | Despised          | You will be attacked on sight. There is probably a bounty on your head.                                                                                                                                                                                                 |
-| -4    | Hated             | You will be attacked. If someone is attacking you, they will be given help.                                                                                                                                                                                             |
+| -4    | Hated             | You will be attacked. If someone is attacking you, they will be given help.                                                                                                                                                                                          |
 | -3    | Loathed           | You are a pariah.  A group might throw you in jail, an individual might do you harm opportunistically. People will actively try to get rid of you.                                                                                                                      |
 | -2    | Strongly Disliked | People do not want to talk or trade. They want you to go away.                                                                                                                                                                                                          |
 | -1    | Disliked          | People will give you bad deals in trade. They do not particularly want to talk to you. They do not want to barter.                                                                                                                                                      |
