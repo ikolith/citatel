@@ -10,27 +10,9 @@ Every rule comes with an attached "unless otherwise specified" as is standard in
 
 ## Characters, Scores, and Attributes
 
-All characters, player and non-player characters, use the same system and follow the same rules. Any NPC character sheet could conceivably be used as a player character (subject to GM decisions about balance). The basic character sheet consists of HP, a list of attribute scores, and a Defense score. Most characters will also have skills, items, etc.
+The basic character sheet consists of HP, a list of attribute scores, and a defense score. Different types of characters have different base defense, HP etc. The base sheet for a human looks like this:
 
-An attribute score and a "modifier" are the same thing. We refer to both as a "score". If you have 0 STR and use a weapon that adds STR to hit, you add 0. A character with 0s all the way down their sheet is analogous to someone who is generally healthy, without any notable deficiencies or strengths. Scores can go negative. Having 0 in a score does not mean you cannot perform actions related to that score. Instead, a -3 in a score means you can't perform actions related to that score and anything you do related to that score fails.
-
-### [special] Scores
-
-Some scores have the [special] tag. Examples include PYROMANCY and PSYCHIC. If you attempt to perform any action with a [special] score you don't have, nothing happens. You fail all contests related to the score. Having a PYROMANCY of 0 means you are a mediocre pyromancer, having no PYROMANCY at all means you are not a pyromancer. When in doubt, check if the score is [special], sometimes the [special] tag is notated [s] in references.
-
-### "Standard" Scores
-
-"Standard" scores are mechanically identical to any other non-[special] scores. They are just non-[special] scores that are very common or important in a given setting. When creating an NPC you should consider what the NPC would have for each standard score, though you could still leave scores off the sheet entirely if they are at 0 for brevity.
-
-As an example, for a fantasy setting STR is important enough that any PC will likely keep track of it on their sheet even if their STR is 0, but MEDICINE is not that important. If you're playing in a sci-fi setting with spying, hacking, and intrigue it could be the case that STR just does not come up enough to be considered "standard" but TECHNOLOGY does come up that often. What you choose as "standard" in a setting is just a convention to make character creation/management easier by limiting the number of scores people have to think about, there are no mechanical implications. 
-
-In these docs STR, AGI, DEX, CON, PERCEPTION, and SOCIAL are the standard scores.
-
-## The Character Sheet
-
-Here's an example of a basic character sheet with 0s all the way down.
-
-18 + (6*CON) Health, Defense: 6
+HP: 18 + (6*CON), Defense: 6, Movement Speed: 4
 
 | ATTRIBUTE | SCORE |
 | --------- | ----- |
@@ -40,6 +22,41 @@ Here's an example of a basic character sheet with 0s all the way down.
 | CON       | 0     |
 | PERC      | 0     |
 | SOC       | 0     |
+
+> PERC is short for PERCEPTION, SOC is short for SOCIAL
+
+You'll notice that every score on this sheet is 0. A character with 0s all the way down their sheet is analogous to someone who is generally healthy, without any notable deficiencies or strengths. Having 0 in a score does not mean you cannot perform actions related to that score. 
+
+You *can* have a negative score in an attribute. A -3 in a score means you can't perform actions related to that score and anything you do related to that score fails.
+
+All characters, player and non-player characters, use the same system and follow the same rules. Any NPC character sheet could conceivably be used as a player character (subject to GM decisions about balance). 
+
+### What are scores used for?
+
+Scores can show up pretty much anywhere, most commonly they are used as modifiers. For example, if you have 2 STR and use a weapon that is +STR to hit, you add 2 to your roll to-hit. Some weapons also add scores to damage.
+Scores are also used as prerequisites for obtaining skills or using a particular weapon. Learning to pick pockets might require some minimum DEX, a giant club might require some minimum STR for effective use.
+
+### "Passive" Scores
+
+When you roll "against" someone else's score the DC is 6 + SCORE. The passive participant doesn't roll (another way of thinking about it is that they are "assumed" to have rolled a 6). This is covered in greater detail in the section on checks and contests.
+
+### How many scores *are* there?
+
+ ¯\\_(ツ)_/¯ 
+
+Practically speaking, any given setting will only have so many scores, but the system has no opinion on what those scores can be. If you're asked to perform a check with a score that you don't see on your sheet, you can assume your score is 0 unless otherwise stated, or unless the score has the [special] tag.
+
+#### [special] Scores
+
+If you attempt to perform any action with a [special] score you don't have, nothing happens. You fail all contests related to the score. PSYCHIC and PYROMANCY are both [special] scores. Having a PYROMANCY of 0 on your sheet means you are a mediocre pyromancer, not having PYROMANCY on your sheet means you are not a pyromancer. Sometimes the [special] tag is notated [s] for the sake of brevity.
+
+#### "Standard" Scores
+
+"Standard" scores are not mechanically special in any way. They are just non-[special] scores that are very common or important in a given setting. When creating a character you should consider what the character would have for each standard score.
+
+As an example, for a fantasy setting STR is important enough that any PC will likely keep track of it on their sheet even if their STR is 0, but MEDICINE is not that important. If you're playing in a sci-fi setting with spying, hacking, and intrigue it could be the case that STR just does not come up enough to be considered "standard" but TECHNOLOGY does. What is "standard" in a setting is just a convention to make character creation/management easier by limiting the number of scores people have to think about, there are no mechanical implications. 
+
+In these docs STR, AGI, DEX, CON, PERCEPTION, and SOCIAL are the standard scores.
 
 ### HP and CON
 
@@ -91,13 +108,16 @@ To determine stats at the start of the game, I suggest you either use d4-2 or d6
 
 I recommend d4-2. It gives characters a bit more room to grow and develop during the game. d6-3 will mean that you will likely get a 3 in some stat, which is so valuable it could quickly define your character before you've had a chance to play them.
 
-### A Note on Skills and Backgrounds
-<!-- this doesnt need to be in rules, i think -->
-Consider how your background and the skills you start with might support each other. Picking specific skills for relevance to your background rather than building an optimal character can give your character a lot of interesting moments, especially early on.
+<!-- ### A Note on Skills and Backgrounds -->
+<!-- Consider how your background and the skills you start with might support each other. Picking specific skills for relevance to your background rather than building an optimal character can give your character a lot of interesting moments, especially early on. -->
 
-<!-- # Rules/Mechanics: -->
+<!-- ### Aside: Setting Agnosticism and Edge Cases
 
-<!-- ah, here we go! back to the... ding dang rules! damnit! -->
+These rules are setting agnostic. You should be able to play only with material from one setting, or pick and choose mechanics from many settings, or move characters between settings. The rules are written so that the game is easy to extend, modify, and improvise with.
+
+Say you have created a character in a fantasy setting with the standard scores used throughout this doc (STR, AGI, DEX etc.). This character somehow ends up in a sci-fi setting where TECH is a standard score, they went through a portal or something. It would be unreasonable to treat that character's TECH score as 0 given that they've never even seen a computer. They should treat TECH as a [special] score or have a very negative score in TECH, say -5 (expressing that it would take them a good deal of work to get to the point where they can even begin to interact with technology). There is no rule that expresses this. It is expected that if you mix settings and mechanics in this way you will have some edge cases to iron out and you will have to make up some rules on the fly. The rules are (hopefully) written to be flexible, consistent, and simple in a way that makes doing this easy.  -->
+
+
 ## Checks and Contests, "Doing Stuff"
 <!-- annoying here that i mention a DC and explain it... though i have previously mentioned the idea of a DC! -->
 When you're trying to do something that you might fail at e.g. hitting someone with an axe or jumping over a chasm, you roll two six sided dice (notated 2d6) and add the relevant score. This number is your "roll". To figure out if you succeed, you compare your roll to the "Difficulty Class" (or DC). The DC might be determined by the GM, or it might be determined by something in the world, like another character. If the DC is stable and dependent on something in the world, it's a check. If the DC is dependent on another character's roll, then it's a contest. When two characters roll opposing rolls, that's a contest. When one character rolls, that's a check.
@@ -129,7 +149,6 @@ Doing basic tasks like pulling a lever or moving an object costs (1n1). Minor ta
 You are always *conceptually* spending AP to do things, but you only really have to track it when in initiative. (unless, for example, you have some status effect that lowers your max AP, thus making you able to take fewer move actions per turn, making you move slower than the rest of your party. This might be relevant if, for example, you’re trying to travel quickly to get away from something, but you’re not in combat). You can track your AP by using the AP tracker on the top of your character sheet, it looks like four boxes numbered 0-3.
 
 Put some objects, tokens, or dice on the tracker at “0”, these represent your AP. You can spend any AP that is at 0.  
-
 
 #### Moves that have Multiple Costs
 If you see a move that looks like “(1n1)->(2n1)->(3n1)” then the first time you do that action on your turn you pay the first cost, the second time you pay the second cost, the third time you pay the third. You’ll notice there is no fourth cost. If you want to use the move again, you would just pay the last listed cost again, (3n1). 
