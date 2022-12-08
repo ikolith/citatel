@@ -3,24 +3,26 @@ title: Rules
 toc: true
 layout: single
 ---
-
+<!-- this note likely should be moved... or just put at the first mention of one of these... maybe in one of those sidenote-blocks  -->
 Every rule comes with an attached "unless otherwise specified" as is standard in games like this. "GM" is "Game Master" which is interchangeable with "DM"/"Dungeon Master". "TTYGM" is "talk to your GM".
 
-## Characters and Scores
+<!-- # How Characters Work -->
 
-All characters, player and non-player characters, use the same system and follow the same rules. Any NPC character sheet could be used as a player character (TTYGM about balance, etc.). The basic character sheet consists of Health, a list of attribute scores, and a To-Hit score. Most characters will also have skills, items, descriptions, etc.
+## Characters, Scores, and Attributes
 
-An attribute score and a "modifier" are the same thing. We refer to both as a "score". If you have 0 STR and use a weapon that adds STR to hit, you add 0. 0 STR does not mean that you have no strength. A character with 0s all the way down their sheet is analogous to someone who is generally healthy, without any notable deficiencies or strengths. Scores can go negative. Having 0 in a score does not mean you cannot perform actions related to that score, instead a -3 in a score means you can't perform actions related to that score and anything you do related to that score fails.
+All characters, player and non-player characters, use the same system and follow the same rules. Any NPC character sheet could conceivably be used as a player character (subject to GM decisions about balance). The basic character sheet consists of HP, a list of attribute scores, and a Defense score. Most characters will also have skills, items, etc.
+
+An attribute score and a "modifier" are the same thing. We refer to both as a "score". If you have 0 STR and use a weapon that adds STR to hit, you add 0. A character with 0s all the way down their sheet is analogous to someone who is generally healthy, without any notable deficiencies or strengths. Scores can go negative. Having 0 in a score does not mean you cannot perform actions related to that score. Instead, a -3 in a score means you can't perform actions related to that score and anything you do related to that score fails.
 
 ### [special] Scores
 
-Some scores have the [special] tag. Examples include PYROMANCY and PSYCHIC. None of the "standard" scores on the sheet are [special]. If you attempt to perform any action with a [special] score you don't have, nothing happens. You fail all contests related to the score. PYROMANCY is a [special] score, having a PYROMANCY of 0 means you are a mediocre pyromancer, having no PYROMANCY at all means you are not a pyromancer. When in doubt, check if the score is [special], sometimes the [special] tag is notated [s] in references.
+Some scores have the [special] tag. Examples include PYROMANCY and PSYCHIC. If you attempt to perform any action with a [special] score you don't have, nothing happens. You fail all contests related to the score. Having a PYROMANCY of 0 means you are a mediocre pyromancer, having no PYROMANCY at all means you are not a pyromancer. When in doubt, check if the score is [special], sometimes the [special] tag is notated [s] in references.
 
 ### "Standard" Scores
 
-"Standard" scores are just non-[special] scores that are important enough to the setting and come up often enough that they should probably stay on a PC character sheet even if they are at 0. When creating an NPC you should consider the NPC would have for each "standard" score, though for the sake of brevity it's still recommended that you leave scores at 0 off the sheet or statblock entirely. Standard scores are mechanically identical to any other non-[special] scores.
+"Standard" scores are mechanically identical to any other non-[special] scores. They are just non-[special] scores that are very common or important in a given setting. When creating an NPC you should consider what the NPC would have for each standard score, though you could still leave scores off the sheet entirely if they are at 0 for brevity.
 
-For a fantasy setting STR is important enough that any PC will likely keep track of it on their sheet even if their score is 0, but MEDICINE is not. If you're playing in a sci-fi setting with spying, hacking, and an emphasis on social interactions it could be the case that STR just does not come up enough to be considered "standard" but TECHNOLOGY does (additionally, it might be shortened to TECH while STR is STRENGTH). What you choose as "standard" in a setting is just a convention to make character creation/management easier by limiting the number of scores people have to think about, it has no mechanical implications. 
+As an example, for a fantasy setting STR is important enough that any PC will likely keep track of it on their sheet even if their STR is 0, but MEDICINE is not that important. If you're playing in a sci-fi setting with spying, hacking, and intrigue it could be the case that STR just does not come up enough to be considered "standard" but TECHNOLOGY does come up that often. What you choose as "standard" in a setting is just a convention to make character creation/management easier by limiting the number of scores people have to think about, there are no mechanical implications. 
 
 In these docs STR, AGI, DEX, CON, PERCEPTION, and SOCIAL are the standard scores.
 
@@ -28,7 +30,7 @@ In these docs STR, AGI, DEX, CON, PERCEPTION, and SOCIAL are the standard scores
 
 Here's an example of a basic character sheet with 0s all the way down.
 
-18 + (6*CON) Health, To-Hit: 6
+18 + (6*CON) Health, Defense: 6
 
 | ATTRIBUTE | SCORE |
 | --------- | ----- |
@@ -41,22 +43,21 @@ Here's an example of a basic character sheet with 0s all the way down.
 
 ### HP and CON
 
-CON is used to resist status effects like POISON and EXHAUSTION. For every point of CON you have you can choose to ignore the effects of 1 stack of any number of status effects you have. You still have the status effect, meaning other effects that rely on that status effect can still be triggered. The ignored status effects are resolved or wear off at the same rate as is normal.  
+CON is used to resist status effects like POISON and EXHAUSTION. For every point of CON you have you can choose to ignore the effects of 1 stack of any number of status effects you have. You still have the status effect, meaning other effects that rely on that status effect can still be triggered. The ignored status effects are resolved or wear off at the same rate as they would otherwise.  
 
 If you have 1 CON and you've been given 1 bleed and 3 poison, at the beginning of the round you can choose to take 2 damage from the poison and ignore the bleed. You still have that 1 bleed until you remove it.  
 
 CON increases your max health by 6 * CON. 
 
-### To-Hit
+### Defense
 
-To-Hit is a quality like HP or AP. It can’t be directly raised or lowered with skill points the way an attribute can be, it has to be affected by some other mechanic. To-Hit can be raised by actions like “Dodge” and it can be lowered by bulky armor. Skills might also alter it, but the baseline is 6.
+Defense can be raised by actions like “Dodge” and it can be lowered by bulky armor. Skills might also alter it, but the baseline is 6. When someone rolls to hit you, they are rolling their To-Hit check against your current Defense as the DC (or "Difficulty Class"). 
 
-### Increasing Scores
+## Character Creation and Management
 
-The cost of increasing a score from 0 to 1 is 1, the cost of going from 1 to 2 is 2, 2 to 3 is 3, etc. The cost of increasing from X to Y is Y. So, going directly from 0 to 3 costs 1+2+3, or 6 SP.  To go up from a negative score to the next score only costs 1 SP.
+### Increasing Your Scores
+You can increase your scores at any time using skill points. <!--  TODO: I still don't like this, and very likely skill points and score points will become different things, somehow! I dont know! --> The cost of increasing a score from 0 to 1 is 1, the cost of going from 1 to 2 is 2, 2 to 3 is 3, etc. The cost of increasing from X to Y is Y. So, going directly from 0 to 3 costs 1+2+3, or 6 SP.  To go up from a negative score to the next score only costs 1 SP.
 
-
-<!-- How much does it cost to go from 0 straight to...? -->
 How much does it cost to go from 0 straight to…?
 
 | Score | SP Cost |
@@ -67,15 +68,18 @@ How much does it cost to go from 0 straight to…?
 | 4     | 10      |
 | 5     | 15      |
 
-## Character Creation
 
-Character creation allows you to modify the basic character sheet, add skills, create a backstory, all of that good stuff. There are two primary ways of doing this, point buy and randomization. Point buy is the simplest and it uses the same mechanics that are used throughout the game to increase scores and buy skills so it will be explained first.
+<!-- why is this here? this really just gestures at the bigger problem that i straightforwardly do not know in what order i should talk about things! it seemed reasonable to me that i should talk about what a character looks like, but then it seems like i should immediately talk about character creation.. and it seems straightforwardly wrong to talk a about character creation before AP?? surely all this character creation and character sheets... should maybe go in another doc entirely? should character creation be part of the base rules? maybe not... maybe not.. -->
+### Character Creation
+
+Character creation allows you to modify the basic character sheet, add skills, create a backstory, choose starting equipment, etc. There are two primary ways of doing this, point buy and randomization. Point buy is the simplest and it uses the same mechanics that are used throughout the game to increase scores and buy skills so it will be explained first.
 
 ### Point Buy
 
 You get some number of skill points (SP) to spend at character creation; how many points is determined by how exactly you want to start your game, TTYDM. Starting with 0 points to spend is good for a longer campaign where you want to start as entirely mundane commoners -- you might even start with negative points. 9 SP is a good amount to start with to create semi-competent adventurers. Remember that you can spend SP on either scores or skills, the SP cost of a skill and any prerequisites are listed along with the skill.
  
-You can lower a standard score to -1 to get a point out of it, by default you can only do this to 2 standard scores.
+You can lower a standard score to -1 to get a point out of it, you can only do this to 3 standard scores at character creation.
+<!-- im considering that it may be a lot more interesting to make more negative scores worse... where... i guess you would have to pay the price of the negative score you are leaving... so -2 -> -1 would be 2 points. -->
 
 ### Randomized Character Creation
 
@@ -88,64 +92,57 @@ To determine stats at the start of the game, I suggest you either use d4-2 or d6
 I recommend d4-2. It gives characters a bit more room to grow and develop during the game. d6-3 will mean that you will likely get a 3 in some stat, which is so valuable it could quickly define your character before you've had a chance to play them.
 
 ### A Note on Skills and Backgrounds
-
+<!-- this doesnt need to be in rules, i think -->
 Consider how your background and the skills you start with might support each other. Picking specific skills for relevance to your background rather than building an optimal character can give your character a lot of interesting moments, especially early on.
 
+<!-- # Rules/Mechanics: -->
+
+<!-- ah, here we go! back to the... ding dang rules! damnit! -->
 ## Checks and Contests, "Doing Stuff"
-
-When you're trying to do something that you might fail at e.g. hitting someone with an axe or jumping over a chasm, you roll two six sided dice (notated 2d6) and add the relevant score. This number is your "roll". To figure out if you succeed, you compare your roll to some minimum score required for success, this is the "Difficulty Class" (or DC). The DC might be determined by the GM, or it might be determined by something in the world, like another character. If the DC is stable and dependent on something in the world, it's a check. If the DC is dependent on another character's roll, then it's a contest.
-In general, when two characters have opposing rolls, that's a contest. When one character rolls, that's a check.
-
-### An Example of a "Contest"
-
-Arm wrestling is a good example of a contest. There's no obvious number you have to beat, you just need to do better than the other guy. When participating in contests, you roll and then compare your roll to the "opposing" roll, that is, the roll representing the efforts of whoever you are trying to beat. If theres is a tie, the person with the higher relevant score wins (having a higher STR score in a STR contest where the rolls are tied means you win. If you rolled 4 and added 3 from STR and the other guy rolled a 7 and added nothing, you win). If _that’s_ a tie, either treat it as a tie in game, or if that makes no sense, do the contest again. 
-Contests are good for directly comparing the active efforts of two characters. Contests show up in mechanics like grappling.
-
-### A Simple Example of a "Check"
-
-You might decide that you want to jump a large chasm, your GM tells you to roll agility (AGI), so you roll 2d6 and add your AGI score. The GM knows the DC which in this example might be 8. If you pass the DC you succeed. If you don't, you fail, and the GM decides how that's resolved.  
-You will almost never know the DC of a check before you try it, and you might not even know afterwards if the GM decides not to tell you. However, you should be able to get a good idea of a DC by the GMs description of the situation or by asking questions. If the GM describes the chasm as nearly impossible to jump over, you can be sure you're looking at a DC above 10, probably around 12. If the GM says the gap is pretty small, barely worth worrying about, you can guess it's probably a DC around 3 or 4.
+<!-- annoying here that i mention a DC and explain it... though i have previously mentioned the idea of a DC! -->
+When you're trying to do something that you might fail at e.g. hitting someone with an axe or jumping over a chasm, you roll two six sided dice (notated 2d6) and add the relevant score. This number is your "roll". To figure out if you succeed, you compare your roll to the "Difficulty Class" (or DC). The DC might be determined by the GM, or it might be determined by something in the world, like another character. If the DC is stable and dependent on something in the world, it's a check. If the DC is dependent on another character's roll, then it's a contest. When two characters roll opposing rolls, that's a contest. When one character rolls, that's a check.
 
 ### Performing a Check Against a Score
 
 When a check is made "against a score", the DC is 6 + SCORE. If you're trying to poison someone and have to roll "against" their CON the DC is 6 + CON. The character that initiated the action and rolls is the "active" party, or "attacker". The party that is being rolled against is the "passive" party, or "defender".  
 Defender wins ties.
 
-## Rules/Mechanics:
+### An Example of a "Contest"
+
+Arm wrestling is a good example of a contest. There's no obvious number you have to beat, you just need to do better than the other guy. When participating in contests, you roll and then compare your roll to the "opposing" roll, that is, the roll representing the efforts of whoever you are trying to beat. If theres is a tie, the person with the higher relevant score wins (having a higher STR score in a STR contest where the rolls are tied means you win. If you rolled 4 and added 3 from STR and the other guy rolled a 7 and added nothing, you win). If _that’s_ a tie, either treat it as a tie in game, or if that makes no sense, do the contest again. 
+Contests are good for directly comparing the active efforts of two characters. Grappling is a contest.
+
+### A Simple Example of a "Check"
+
+You might decide that you want to jump a large chasm, your GM tells you to roll agility (AGI), so you roll 2d6 and add your AGI score. The GM knows the DC which in this example might be 8. If you pass the DC you succeed. If you don't, you fail, and the GM decides how that's resolved.  
+You will almost never know the DC of a check before you try it, and you might not even know afterwards if the GM decides not to tell you. However, you should be able to get a good idea of a DC by the GMs description of the situation or by asking questions. If the GM describes the chasm as nearly impossible to jump over, you can be sure you're looking at a DC above 10, probably around 12. If the GM says the gap is pretty small, barely worth worrying about, you can guess it's probably a DC around 3 or 4.
+
 
 ### Action Points (AP), Moving, and the AP Tracker
 
-Action Points (AP) are the resource you use to do anything and everything. You get 3 AP per round. Rounds, or the time it takes for everyone to act, take about 6 seconds. All actions have two parts, the AP cost to perform the action, and the number of turns you have to wait to get that AP back. X AP cost, return the AP in Y turns, or X in Y, notated as “(XnY)”. Most basic actions (including moving) are (1n1). That is to say, you spend 1 AP to do it and you get that AP back at the beginning of your next turn. There are some exhausting or difficult spells that might have a cost like (2n3 or 3n1). If you see this, you can choose either cost.  
+Action Points (AP) are the resource you use to do anything and everything. You get 3 AP per round. Rounds, or the time it takes for everyone to act, take about 6 seconds. All actions have two parts, the AP cost to perform the action, and the number of turns you have to wait to get that AP back. X AP cost, return the AP in Y turns, or X in Y, notated as “(XnY)”. Most basic actions (including moving) are (1n1). You spend 1 AP to do it and you get that AP back at the beginning of your next turn. There are some exhausting or difficult spells that might have a cost like (2n3 or 3n1). If you see "or", you can choose either cost.  
 
-You can move a number of spaces equal to your speed (typically 20 feet or 4 spaces) for every move action you take. Move actions cost (1n1). You could, for example, move for (1n1) do something that costs (1n2) then move for (1n1) again. You don't have to take certain types of actions in a certain order. If you spend your whole turn moving, that’s just 3 move actions, moving you 20\*3 or 60 feet (or 4*3 spaces). If you have enough AP to do something, you can do it. There are no “standard” or “bonus” actions.  
+You can move a number of spaces equal to your speed (typically 20 feet or 4 spaces) for every move action you take. Move actions cost (1n1). You could, for example, move for (1n1) do something that costs (1n2) then move for (1n1) again. If you spend your whole turn moving, that’s just 3 move actions, moving you 20\*3 or 60 feet (or 4*3 spaces). If you have enough AP to do something, you can do it.
 
-Doing basic tasks like pulling a lever or moving an object costs (1n1). Minor tasks like speaking or dropping something are free actions, you can do a “reasonable” amount of free actions during your turn, up to GM discretion (you could not, for example, read an entire book aloud during your six second turn because “talking is a free action”).  
+Doing basic tasks like pulling a lever or moving an object costs (1n1). Minor tasks like speaking or dropping something are free actions, you can do a “reasonable” amount of free actions during your turn, up to GM discretion.
 
-You are always *conceptually* spending AP to do things, but you only really have to track it when in initiative. (unless, for example, you have some status effect that lowers your max AP, thus making you able to take fewer move actions per turn, making you move slower than the rest of your party. This might be relevant if, for example, you’re trying to travel quickly to get away from something, but you’re not in combat). You can track your AP by using the AP tracker on the top of your character sheet, it looks like this:
-
-
-<table>
-  <tr>
-   <td>0
-   </td>
-   <td>1
-   </td>
-   <td>2
-   </td>
-   <td>3
-   </td>
-  </tr>
-</table>
-
+You are always *conceptually* spending AP to do things, but you only really have to track it when in initiative. (unless, for example, you have some status effect that lowers your max AP, thus making you able to take fewer move actions per turn, making you move slower than the rest of your party. This might be relevant if, for example, you’re trying to travel quickly to get away from something, but you’re not in combat). You can track your AP by using the AP tracker on the top of your character sheet, it looks like four boxes numbered 0-3.
 
 Put some objects, tokens, or dice on the tracker at “0”, these represent your AP. You can spend any AP that is at 0.  
 
-**Let’s run through an example of how to use the AP tracker.**  
-You do a move that is (2n2), so you move 2 tokens to the “2” square. You then “move”, which is (1n1), so you move 1 token to the “1” square. You're out of AP, and the round has ended. On the next round you move all of the tokens one cell to the left, so you have 1 token at “0” and 2 tokens at “1”. That means you can spend 1 AP this turn. Let’s say you move, which is (1n1), you move 1 AP to cell “1”. You end your turn. Now you have all 3 tokens on the “1” cell. At the start of your next turn, you move all tokens one step down, so that means you move all of the tokens to the “0” cell and you can use them all again.
 
-By using this tracker you should never have to remember how many AP you’re supposed to have or when you get them back, you just spend AP that is at “0” and move all tokens to the left at the start of your turn.   
+#### Moves that have Multiple Costs
+If you see a move that looks like “(1n1)->(2n1)->(3n1)” then the first time you do that action on your turn you pay the first cost, the second time you pay the second cost, the third time you pay the third. You’ll notice there is no fourth cost. If you want to use the move again, you would just pay the last listed cost again, (3n1). 
 
-**If some move has several costs in a row**, like “(1n1)->(2n1)->(3n1)” then the first time you do that action on your turn you pay the first cost, the second time you pay the second cost, the third time you pay the third. You’ll notice there is no fourth cost. If you want to attack a fourth time, you would just pay the last listed cost again, (3n1). Attacks all count as the “same” sort of attack for the purpose of tracking the cost of your next attack.  
+**All attacks with all weapons count as the “same” sort of move for the purpose of determining the cost of your next attack.**
+<!-- hey, maybe this shouldnt be true! i dont remember why it was important that it should be! i see why different attacks with the same weapon should not count as the same.. but why not attacks with different weapons? shouldnt those be different? anyway... one thing i dont love is that you do have to just remember how many times youve attacked in a turn... of course there could be another tracker, but no, thats stupid, one tracker is more than enough. -->
+
+#### An example of tracking AP with the AP tracker
+
+You start with 3 AP at the "0" space, so you have 3 AP to spend. You perform an action that is (2n2) so you move 2 tokens to the “2” square. You then “move”, which is (1n1), so you move 1 token from the "0" square to the “1” square. You're out of AP. At the start of the next round you move all of the tokens one cell to the left, so you have 1 token at “0” and 2 tokens at “1”. That means you can spend 1 AP this turn. You decide to move, which is (1n1), so you move 1 AP to cell “1”. Now you have all 3 tokens on the “1” cell. At the start of the next round, all tokens move one step down, so they all go to the “0” cell and you have 3 AP to spend again.
+
+Using this tracker you should never have to remember how many AP you’re supposed to have or when you get them back, you just spend AP that is at “0” and move all tokens to the left at the start of the round.   
+
 
 #### Attacking using AP
 
@@ -153,9 +150,11 @@ Let's say you have a longsword in one hand and you're fighting a guy with chainm
 
 ## Initiative Rules B
 
-There is a more standard initiative ruleset with people taking turns in initiative order, "Initiative Rules A". I didn't like it. This has not been tested much and will likely see some changes but this is the current state.
+There is a more standard initiative ruleset with people taking turns in initiative order, "Initiative Rules A". I didn't like it. The ruleset that follows has not been tested much and will likely see some changes. This is the current state.
 
-Initiative is determined by AGI. The initiative scores of the players should always be public on some form of initiative tracker. As other characters reveal their initiative, they should be added to the tracker (and removed when they are no longer relevant). 
+Initiative is equal to AGI + or - any bonuses or penalties to initiative. 
+
+The initiative scores of the players should always be public on some form of initiative tracker. As other characters reveal their initiative, they should be added to the tracker (and removed when they are no longer relevant). 
 
 Every round is divided into two phases, the Beginning Phase and the Main Phase.
 
@@ -204,11 +203,17 @@ Say Alice has 3 initiative, Bob has 2, and both try to do something at the start
 - Characters with lower initiatives can't be blocked from taking any action because they can always attempt to interrupt a character with higher initiative.
 - Characters with higher initiative can still take actions after characters with lower initiatives have started taking actions. -->
 
-An initiative tracker should be kept somewhere where all players and the DM can see it. As NPCs take actions they should be added to the initiative tracker. The DM announces the highest level of initiative present and gives those characters a chance to take actions. Once those characters have had a chance to act, the DM announces the next level of initiative, and so on down the list.  
+The DM announces the highest level of initiative present according to the initiative tracker and gives those characters a chance to take actions. Once those characters have had a chance to act, the DM announces the next level of initiative and so on down the list. At the end of the list the DM should have a "last call" for actions and then announce the start of a new round.
 
 Slower characters can attempt to interrupt faster characters at any time. Characters can keep acting as long as they have the AP to do so, even if they already had a chance to take actions.  
 
-### AP Shenanigans: Temp AP, Losing AP, Gaining AP, the "Wait" skill
+### Using Only the Amount of Rules and Coordination that You Need
+
+In the section above, all of the rules for initiative and when-exactly-effects-happen were explained, but often you won't need to actively use all of these rules. It will probably be useful to make every step very explicit for beginners, but once players have a handle on how this system works combat should be able to function without every step being made explicit, rules for determining who goes first can just be invoked when there is some conflict. Rules for "phases" can be invoked only when there are many effects that seem to happen at the same time, and there is some reason why the order matters.
+
+As an example, in a fight between two people the DM doesn't need to be announcing the current highest level of initiative, there are at most two levels! The combatants will quickly figure out who is faster. The DM *will* often have to determine when the new round starts in combat, but this isn't always true either. If there are only two combatants and they're out of AP they can just agree to start a new round, though, of course, the DM could still overrule them and describe something external happening that neither expected before they get a chance to start a new round.
+
+## AP Shenanigans: Temp AP, Losing AP, Gaining AP, the "Wait" skill
 
 Temp AP goes right into the “0” cell where you can spend it. It only lasts until the beginning of the next round.
 
@@ -217,9 +222,9 @@ Some moves and conditions might make you gain an AP. Whenever you gain AP it goe
 
 You can always “wait” for a round. If you “wait”, you can do nothing else during that round. Gain 1 AP at the beginning of the next round. if you have no AP to spend, you might as well “wait”.
 
-### Double 1s, Double 6s
+## Double 1s, Double 6s
 
-Double 1s are critical failures, they are context dependent. If you roll double 1s in combat, your GM might give you a couple different failures you can choose from, or if you are playing a more cinematic game you might improvise a failure. The GM could also just tell you what you do, maybe you are [vulnerable] briefly. If you roll double 6s, roll double damage dice and get 1 Temp AP.
+Double 1s are critical failures, they are context dependent. If you roll double 1s in combat, your GM might give you a couple different failures you can choose from, or if you are playing a more cinematic game you might improvise a failure. The GM could also just tell you what you do, maybe you are [vulnerable] briefly. If you roll double 6s in combat, roll double damage dice and get 1 Temp AP. If you roll double 6s outside of combat, you perform whatever action you were trying to perform as well as you possibly could, this is very context dependent.
 
 ## Weapon Rules
 
@@ -239,6 +244,7 @@ The two major tag types are [thrusting] and [swinging] where [swinging] has thre
 
 ***[swinging: following]*** is the oddest of the bunch. Attacks of this sort tend to be the fastest and weakest, relying on skills, conditions, or just an overwhelming flurry of attacks for damage. The central example of [swinging: following] is a saber, specifically a polish saber. These attacks will nearly always be (S). You can construct weapons that have (P) [swinging: following] attacks, but they don't make a huge amount of sense. What would a (B) [swinging: following] attack be? Hitting a guy with the scabbard for your saber. Magic abilities, skills, and exotic weapons can flesh out this category but there aren't many historical examples of [swinging: following] besides curved swords and some glaives.
 
+<!-- probably... probably this section should go somewhere else... maybe its helpful in rules? dont know -->
 #### Why use this system?
 
 Say you have a character who gets some bonus with axes and hammers, this expresses that you're a strong character who does overwhelming strikes with heavy STR-based weapons, you're not some sort of saber duelist. Do you get advantage with a warhammer? What if you're trying to use the pick side? It's the same motion right, so you shouldn't you get the same bonus with warpicks? What if you find a sword with a forward curving blade so dramatic that it's basically just an axe with a hilt? Shouldn't you get your bonus with that? This is without getting into the migraine that is "pole weapons" (poleaxe, bill, partizan, halberd, bardiche, glaive, pike...). This system allows us to neatly avoid the question of what weapon or what attack is axe-like or spear-like in some context or another and it allows us to avoid having a rigid taxonomy of weapons all while still engaging with the different advantages or features of different weapons. It also lets us create all sorts of goofy fantasy weapons without having to quickly patch the taxonomy, all we do is describe how the fantasy weapon is built and the attacks you do with it and it will neatly work with existing skills and characters.
@@ -252,9 +258,9 @@ It's a judgement call. If the blade has a bit of a curve backward but it's basic
 <!-- this line is a problem for latex.. -->
 Re: notation, yeah it kinda sucks. [swinging: leading] ends up taking about as much space as the rest of the attack and it's one of the less important elements! However [S: L], [S: N] is just kind of ugly and incomprehensible. When making cards or other reference material we replace these tags with glyps. ▲ for [thrusting], ▷▷▶ for [swinging: leading], ▶▷▷for [swinging: following] etc. These are rendered a little more nicely in pdf reference material. The glyphs should be pretty intuitive, the filled triangle indicates the striking head relative to the swing (or the subjective "aggressiveness" of the attack).
 
-#### Nice, how can I use this to make my own weapons?
-<!-- TODO: links and such... this -->
-Head over to the Weapon Creation Doc in the Creation References. If those words weren't links it's because I still need to clean it up and upload it. Stay tuned. 
+<!-- eh, probably this doesnt need to be there -->
+<!-- #### Can I use this to make my own weapons?
+Head over to the [Weapon Creation Doc](./weapon_creation.md) in the Creation References. -->
 
 ### Weapon Switching
 
@@ -264,11 +270,11 @@ An example: You want to drop your [two-handed] greatsword, pick up a handaxe fro
 
 ### Being Below a Weapon’s Requirements
 
-If you’re below a weapon’s requirements, you get no score based damage scaling (+SCORE) when using that weapon. Your max to-hit bonus is 0 with that weapon. For every point you are below a score requirement, drop a damage die. If there is only one damage die left, make it one die smaller. If you get below d4 you cannot wield the weapon at all. Weapons without specific requirements can be treated as having a requirement for -1 of whatever score is used to hit. 
+If you’re below a weapon’s requirements, you get no score based damage scaling (+SCORE) when using that weapon. Your max + To-Hit is 0 with that weapon. For every point you are below a score requirement, drop a damage die. If there is only one damage die left, make it one die smaller. If you get below d4 you cannot wield the weapon at all. Weapons without specific requirements can be treated as having a requirement for -1 of whatever score is used to hit. 
 
 ### Two-handing a [one-handed] weapon, One-handing a [two-handed] weapon
 
-If you’re 2 STR above the requirements for a [two-handed] weapon, you can effectively wield it with one hand. If you use two hands on a [one-handed] weapon, raise your effective STR by 2. 
+If you’re 2 STR above the requirements for a [two-handed] weapon, you can effectively wield it with one hand. If you use two hands on a [one-handed] weapon, raise your effective STR with the weapon by 2. 
 
 ### Throwing a spear or a dagger without a specific [thrown] move
 
@@ -373,7 +379,7 @@ communicative skills include persuasion, deception, and performance. Perceptive 
 | ----- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | -6    | Reviled           | You are vilified and reviled. Your name, face, and terrible actions are known. A group will send paid assassins and soldiers after you. An individual will go to great lengths and take on great risk and personal cost in order to do as much harm as possible to you. |
 | -5    | Despised          | You will be attacked on sight. There is probably a bounty on your head.                                                                                                                                                                                                 |
-| -4    | Hated             | You will be attacked. If someone is attacking you, they will be given help.                                                                                                                                                                                          |
+| -4    | Hated             | You will be attacked. If someone is attacking you, they will be given help.                                                                                                                                                                                             |
 | -3    | Loathed           | You are a pariah.  A group might throw you in jail, an individual might do you harm opportunistically. People will actively try to get rid of you.                                                                                                                      |
 | -2    | Strongly Disliked | People do not want to talk or trade. They want you to go away.                                                                                                                                                                                                          |
 | -1    | Disliked          | People will give you bad deals in trade. They do not particularly want to talk to you. They do not want to barter.                                                                                                                                                      |
@@ -413,7 +419,7 @@ When a player asks a question that would fall under "social perception" about an
 
 Social perception rolls are very similar to other character conflicts, they can be either a check or a contest.
 
-### Checks
+### Social Checks
 
 When the roll is a check, the DC will likely be a default DC of 6 + SOCIAL (and/or relevant skills). If you are trying to read a character who is is lying the DC will be set by their initial attempt to lie, which will have been a check + SOCIAL (and/or relevant skills) against your passive social perception. If they attempt to lie and fail this check, then whatever they said will be described as highly suspicious or likely a lie. If they succeed in their initial check, but you pass their DC when you attempt to read them, you will notice that something seems wrong, or suspicious, or you'll notice strange nervous habits.
 
@@ -421,7 +427,7 @@ Social perception rolls are almost always checks. If you are lying to someone, y
 
 If every lie was a contest, the fact that you had a contest to begin with would tip you off to the lie.
 
-#### Check Resolution
+#### Social Check Resolution
 
 In the case of a tie, resolution is the same as any other check. Defender wins. Otherwise there are four possible outcomes. 
 
