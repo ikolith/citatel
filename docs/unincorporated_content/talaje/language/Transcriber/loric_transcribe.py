@@ -46,7 +46,7 @@ def texify(input_string):
 
 output_text = "ERROR"
 
-with open(input_filename, "r") as input_file:
+with open(input_filename, "r", encoding="utf-8") as input_file:
     input_text = input_file.read()
     if "-l" in args:
         output_text = texify(input_text)
@@ -55,5 +55,5 @@ with open(input_filename, "r") as input_file:
 
 if "-v" in args:
     print(output_text)
-with open(output_filename, "w") as output_file:
+with open(output_filename, "w", encoding="utf-8") as output_file:
     output_file.write(output_text)

@@ -40,7 +40,7 @@ def get_entities(dir_path: str, keep_type_whitelist: list[str] = []) -> ty.Entit
         if file.endswith(".yaml"):
             entity_files.append(os.path.join(dir_path, file))
     for file in entity_files:
-        with open(file) as f:
+        with open(file, encoding="utf-8") as f:
             data = yaml.safe_load(f)
             if data is None:
                 continue

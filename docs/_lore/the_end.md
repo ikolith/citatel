@@ -14,9 +14,9 @@ The End is always visible reaching into the sky to the east. It becomes a backdr
 
 ## On the Efforts of the Suicidally Greedy, the Desperate, the Religious Zealot, and the Insane
 
-Abutting the end are lawless highlands, ruins, small towns that survive by catering to travelers journeying to the end
+Abutting the end are lawless highlands, ruins, and small towns that survive by catering to travelers journeying to the end. 
 
 In some places the End hangs over the land, creating permanent twilight and shadow.
-Sailors find what seem at first to be passageways down which the ocean is gradually restricted to a winding river with towering rock on either side, the sky all clouds. Some attempt to climb the End, some attempt to go through the vast cave network in the End.
+Sailors find what seem passageways into the end. Passageways in which the ocean is gradually restricted to a winding river with towering rock on either side, the sky all clouds. The boundary between the ocean and the End is full of these passageways, though none have ever been confirmed to go through the End. Some pilgrims have attempted to climb the End, others go through the vast cave networks in the End.
 
-Expeditions to the End rarely return, but when they do they bear strange artifacts and conflicting stories of terrible and incredible creatures, entire civilizations. It is a temptation for the powerful and a focal point of conspiracies. 
+Expeditions to the End rarely return, but when they do they bear strange artifacts and conflicting stories of terrible and incredible creatures as well as entire civilizations. The End a temptation for the powerful and a focal point of conspiracies.

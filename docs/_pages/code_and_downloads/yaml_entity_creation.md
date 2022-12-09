@@ -48,7 +48,7 @@ The pattern here is pretty simple. Every entity starts with a name like this `- 
 - name: Haver of Flavor
   flavor: >-
     The Haver of Flavor leaves a strong impression. 
-    It looks a certain way, it sounds a certain way, it tastes a certain way, but it weighs nothing, does nothing, and can't be killed.
+    It looks a certain way, it sounds a certain way, and it tastes a certain way, but it weighs nothing, does nothing, and can't be killed.
   filter_tags: haver
 ```
 
@@ -58,7 +58,7 @@ This is just a little trick to make writing long blocks of text easier without n
 ```yaml
   flavor: >-
   The Haver of Flavor leaves a strong impression. 
-  It looks a certain way, it sounds a certain way, it tastes a certain way, but it weighs nothing, does nothing, and can't be killed.
+  It looks a certain way, it sounds a certain way, and it tastes a certain way, but it weighs nothing, does nothing, and can't be killed.
 ```
 
 Will be parsed as:  
@@ -73,14 +73,14 @@ But
   flavor: >-
   The Haver of Flavor leaves a strong impression. 
   
-  It looks a certain way, it sounds a certain way, it tastes a certain way, but it weighs nothing, does nothing, and can't be killed.
+  It looks a certain way, it sounds a certain way, and it tastes a certain way, but it weighs nothing, does nothing, and can't be killed.
 ```
 
 Will be parsed as:  
 
 ```
 The Haver of Flavor leaves a strong impression. 
-It looks a certain way, it sounds a certain way, it tastes a certain way, but it weighs nothing, does nothing, and can't be killed.
+It looks a certain way, it sounds a certain way, and it tastes a certain way, but it weighs nothing, does nothing, and can't be killed.
 ```
 
 If that seems annoying, you can just not use `>-` or [similar little editing tricks](https://learnxinyminutes.com/docs/yaml/), instead just write your text in one big line.  
