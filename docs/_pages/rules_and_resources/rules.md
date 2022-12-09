@@ -265,23 +265,20 @@ The two major tag types are [thrusting] and [swinging]. [swinging] has three sub
 
 ***[thrusting]*** includes thrusts with a spear, sword, or dagger. The vast majority of thrusting attacks have the (P) damage type.
 
+These tags describe something physical about the weapon, "striking surface relative to swing" or just the motion as in the [thrusting] tag, but more importantly the tags describe the way the weapon is *used* for the attack. They describe what sort of attack the attack is, so a slow-ish sword with a slightly curved blade might still be counted as [swinging: neutral] if it makes more sense for skills, etc. If you want more info about these distinctions and how weapons are made, refer to the [Weapon Creation doc](weapon_creation.md).
+
+
+
+#### An Aside on Notation
+
+Unfortunately, [swinging: leading] ends up taking about as much space as the rest of the attack and it's one of the less important elements of the attack! However [S: L], [S: N] is ugly and incomprehensible. When making cards or other reference material we replace these tags with glyps. ▲ for [thrusting], ▷▷▶ for [swinging: leading], ▶▷▷for [swinging: following] etc. These are rendered a little more nicely in pdf reference material. The glyphs should be pretty intuitive, the filled triangle indicates the striking head relative to the swing (or the subjective "aggressiveness" of the attack).
+
 <!-- probably... probably this section should go somewhere else... maybe its helpful in rules? dont know -->
 <!-- #### Why use this system?
 
 Say you have a character who gets some bonus with axes and hammers, this expresses that you're a strong character who does overwhelming strikes with heavy STR-based weapons, you're not some sort of saber duelist. Do you get advantage with a warhammer? What if you're trying to use the pick side of a warhammer? Using the pick is the same motion as using the hammer, and its the same weapon, so shouldn't you get the same bonus? Doesn't it follow, then, that you should get the same bonus with warpicks? What if you find a sword with a forward curving blade so dramatic that the sword is basically just an axe with a hilt? Shouldn't you get your axe bonus with that? This is without getting into the migraine that is "pole weapons" (poleaxe, bill, partizan, halberd, bardiche, glaive, pike...). This system allows us to neatly avoid the question of what weapon or what attack is axe-like or spear-like in some context or another and it allows us to avoid having a rigid taxonomy of weapons all while still engaging with the different advantages or features of different weapons. It also lets us create all sorts of goofy fantasy weapons without having to quickly change the taxonomy, all we do is describe how the fantasy weapon is built and the attacks you do with it and the weapon will work with existing skills and characters.
 
 In this system we just describe the weapon itself and some basic qualities about the attack. A particular poleaxe is just a [two-handed] [shafted] weapon with [reach: 1-3] a particular Speed and To-Hit, and a couple moves. Maybe it has an axe head, a pick, and a spear. So it has a (P) [thrusting] attack, an (S) [swinging: leading] and a (P) [swinging: leading]. Maybe you have skills that work very well with axes, but you expect that this sort of multi-use weapon with a lot of reach might come in handy for hunting down a specific type of monster. You might choose then to take this pole-weapon with a relatively better (S) [swinging: leading] attack so you can leverage the axe-related skills you already have. This also helps us express skill transfer from different types of weapons. Your character is very good at two-handed axes and you find a one-handed axe that is really useful in some situations, maybe it applies some particular status effect. There's going to be a lot of skill overlap, you just won't get anything that requires [two-handed]. That's all there is to it. -->
-
-#### When *exactly* is a move leading vs. neutral or neutral vs. following? This notation system seems kind of heavy...
-
-It's a judgement call. If the blade has a bit of a curve backward but it's basically just a normal sword, not particularly fast or light, just make the move [swinging: neutral]. If you have a club that is really big and heavy but there isn't necessarily a pronounced leading striking head, just make it [swinging: leading] so it has access to those skills. The system is there to express how the weapon is used, don't fret too much about whether the striking head is "really leading enough". If the intended use is more like weapons that are [swinging: leading] than [swinging: neutral], give it [swinging: leading].
-
-<!-- this line is a problem for latex.. -->
-Re: notation, yeah it kinda sucks. [swinging: leading] ends up taking about as much space as the rest of the attack and it's one of the less important elements! However [S: L], [S: N] is ugly and incomprehensible. When making cards or other reference material we replace these tags with glyps. ▲ for [thrusting], ▷▷▶ for [swinging: leading], ▶▷▷for [swinging: following] etc. These are rendered a little more nicely in pdf reference material. The glyphs should be pretty intuitive, the filled triangle indicates the striking head relative to the swing (or the subjective "aggressiveness" of the attack).
-
-<!-- #### Can I use this to make my own weapons?
-Head over to the [Weapon Creation Doc](./weapon_creation.md) in the Creation References. -->
-
 ### Weapon Switching
 
 Dropping a weapon is a free action. Putting a second (open) hand on a one-handed weapon is a free action, same for removing a hand from a weapon or any such minor adjustment, if in doubt TTYDM.
