@@ -271,7 +271,7 @@ These tags describe something physical about the weapon, "striking surface relat
 
 #### An Aside on Notation
 
-Unfortunately, [swinging: leading] ends up taking about as much space as the rest of the attack and it's one of the less important elements of the attack! However [S: L], [S: N] is ugly and incomprehensible. When making cards or other reference material we replace these tags with glyps. ▲ for [thrusting], ▷▷▶ for [swinging: leading], ▶▷▷for [swinging: following] etc. These are rendered a little more nicely in pdf reference material. The glyphs should be pretty intuitive, the filled triangle indicates the striking head relative to the swing (or the subjective "aggressiveness" of the attack).
+Unfortunately, [swinging: leading] ends up taking about as much space as the rest of the attack and it's one of the less important elements of the attack! However [S: L], [S: N] is ugly and incomprehensible. When making cards or other reference material we replace these tags with glyphs. ▲ for [thrusting], ▷▷▶ for [swinging: leading], ▶▷▷for [swinging: following] etc. These are rendered a little more nicely in pdf reference material. The glyphs should be pretty intuitive, the filled triangle indicates the striking head relative to the swing (or the subjective "aggressiveness" of the attack).
 
 <!-- probably... probably this section should go somewhere else... maybe its helpful in rules? dont know -->
 <!-- #### Why use this system?
