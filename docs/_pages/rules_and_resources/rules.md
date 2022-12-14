@@ -42,7 +42,7 @@ When you roll "against" someone else's score the DC is 6 + SCORE. The passive pa
 
 ### How many scores *are* there?
 
- ¯\\_(ツ)_/¯ 
+ ¯\\\_(ツ)\_/¯
 
 Practically speaking, any given setting will only have so many scores, but the system has no opinion on what those scores can be. If you're asked to perform a check with a score that you don't see on your sheet, you can assume your score is 0 unless otherwise stated, or unless the score has the [special] tag.
 
