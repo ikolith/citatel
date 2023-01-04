@@ -1,0 +1,31 @@
+---
+title: Talaje
+---
+  
+## HYLIC and PSYCHIC
+
+Two new attributes are introduced in Talaje. These are HYLIC and PSYCHIC. PSYCHIC is used for channeling and accessing powers beyond oneself. It's used for fine manipulation of complex things far away. PSYCHIC is the main score for mist related magic. HYLIC is for exerting control over the immediate, the physical, and the self. HYLIC allows you to efficiently and effectively manipulate SALT to augment physical abilities. It roughly maps to a force of will, embeddedness within the physical world and control of one's own body. If you are using an external resource and shaping yourself or the world through yourself, it is HYLIC.
+
+HYLIC for SALT.
+
+PSYCHIC for MIST.
+
+## SALT
+
+"Salt" comes in two forms. The first is the alchemically active SALT found deep in the earth or in the End (this is used as a magical resource, so to avoid confusion it's written in all caps, "SALT"). The second is any adulterated form of the first, including the sort of salt used in cooking. Alchemical SALT can be transformed into a much larger amount of conventional salt, or it might be used to fuel some spell. SALT is the most common currency in the End and especially underground. SALT is measured in "flakes" denoted "f". 1 full unit of SALT used in casting is equivalent in mass to 100f. SALT when ingested and used as a casting resource is like \[poison] or \[bleed], it's a status effect tracked by tokens. Sometimes this is notated as \[SALT]. \[SALT] naturally wears off at the rate of 1 \[SALT] per hour. Having \[SALT] equal to or greater than 6 + HYLIC at the beginning of your turn causes you to take 20 damage.
+
+### Casting, but Salty
+
+There are two common ways to use \[SALT], "burning" over a long period, typically an hour, and "flaring", or spending a lot of \[SALT] in a short period for a larger effect. Flaring lasts anywhere from a single move to several hours depending on the ability. Burning and flaring both cost about 1-3 \[SALT], typically. Anyone can learn to burn \[SALT] though doing so is dangerous.
+
+#### SALT/HYLIC Casting Rules
+
+- If your \[SALT] is above 6 + HYLIC at the beginning of your turn, take 20 damage and lose 1 \[SALT].
+
+- The total amount of \[SALT] you are burning and flaring at any one time cannot exceed your HYLIC score (though your \[SALT] itself *can* exceed your HYLIC).
+
+- While you are burning \[SALT] for an ability, that \[SALT] still counts towards your total \[SALT]. If you choose to shut off an ability before it would naturally go away, the ability ends, but the \[SALT] still has to go away naturally.
+
+## PSYCHIC 
+
+PSYCHIC rules coming soon.

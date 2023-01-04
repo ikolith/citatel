@@ -1,12 +1,15 @@
 import os
-import py_utils.entity_text_generators as ge
-import py_utils.text_utils_parsers as tu
-import py_utils.commands as co
+import asyncio
+
+from citutils import (
+    entity_text_generators as ge,
+    text_utils_parsers as tu,
+    commands as co,
+)
 import discord
 from discord.ext import commands
 from discord import app_commands
 from dotenv import load_dotenv
-import asyncio
 
 
 entities = tu.get_entities(os.path.join("docs", "_data", "entities"))

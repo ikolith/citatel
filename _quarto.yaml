@@ -1,0 +1,47 @@
+project:
+  output-dir: docs
+  type: website
+
+number-sections: true
+#bibliography: references.bib
+
+website:
+  title: "citatel"
+  description: "The fooligan's curse."
+  page-navigation: true
+  # open-graph: true
+  # navbar:
+  #   search: true
+  sidebar:
+    style: "docked"
+    contents:
+      - section: "Test"
+        contents:
+          - book_workspace/book/p0_testing/test.qmd
+      - section: "About and Quickstart"
+      - section: "Rules"
+        contents:
+          - book_workspace/book/p1_rules_and_character_creation/s1_rules/sixtem.md
+          - book_workspace/book/p1_rules_and_character_creation/s1_rules/tactile.md
+          - book_workspace/book/p1_rules_and_character_creation/s1_rules/talaje.md
+      - section: "Character Creation"
+        contents:
+          - book_workspace/book/p1_rules_and_character_creation/s2_character_creation/how_to_character_creation.md
+          - book_workspace/book/p1_rules_and_character_creation/s2_character_creation/prerolls.md
+          - book_workspace/book/p1_rules_and_character_creation/s2_character_creation/shopping.md
+      - section: "Entities and Content"
+        contents:
+          - book_workspace/book/p2_content/s1_content/unaffiliated_entities.md
+          - book_workspace/book/p2_content/s1_content/unaffiliated_npcs_and_their_entities.md
+          - book_workspace/book/p2_content/s1_content/groups_and_their_entities.md
+      - section: Lore and Worldbuilding
+      - section: Campaigns and Adventures
+      - section: Addendums, Motivations, and Miscellaneous
+
+format:
+  html:
+    number-sections: false
+    toc: true
+    theme:
+      - litera
+      - custom.scss
