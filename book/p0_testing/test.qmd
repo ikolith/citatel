@@ -1,0 +1,20 @@
+---
+title: Testing
+execute: 
+  echo: false
+  output: asis
+---
+
+There are various python doc automation functions I want to be able to use. I'll test them here.
+
+```{python}
+# testing snippets, some from update.py, some from scratch.py
+import os
+from citutils import text_utils_parsers as tu
+from citutils import entity_text_generators as ge
+
+entities = tu.get_entities(os.path.join("..", "..","data", "entities"))
+
+print(ge.generate_entity_text(entities["salt_wretch"]))
+
+```
