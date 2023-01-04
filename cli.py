@@ -1,10 +1,9 @@
 import argparse
 import os.path
-import py_utils.text_utils_parsers as tu
-import py_utils.vars as vs
-import py_utils.commands as co
 
-entities = tu.get_entities(os.path.join("docs", "_data", "entities"))
+from citutils import text_utils_parsers as tu, vars as vs, commands as co
+
+entities = tu.get_entities(os.path.join("data", "entities"))
 
 # subparsers
 
@@ -77,6 +76,8 @@ enlist_p.add_argument(
     help="""Where the .txt should be written and what it should be named. By default it will be written at output/entities.txt""",
 )
 
+
+# As cli...
 if __name__ == "__main__":
     args = parser.parse_args()
     if args.command == "curly":

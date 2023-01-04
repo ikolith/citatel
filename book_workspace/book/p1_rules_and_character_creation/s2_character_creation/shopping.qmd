@@ -1,0 +1,29 @@
+---
+title: Shopping
+execute: 
+  echo: false
+  output: asis
+---
+
+# skeleton
+
+## Species/Peoples of Talaje
+ 
+There are currently only a couple to choose from. TODO: add those/that one??. Another problem is that base-sheets really don't fit in the .yamls right now. Given that the .yamls were also going to be extended to be able to deal with tables and the way to do that was uncertain, it seems like this really should prompt a change in how the .yamls work fundamentally! Are both base-sheets and tables things `entity`s?
+
+## Backgrounds
+
+None yet exist. There should be premade backgrounds as well as a background-component-selection-process
+
+Backgrounds determine how many flakes (currency) you start with. 
+
+## Starting Gear
+
+This should be composed of premade loadouts that group some set of .yaml entities, as well as a generated list of all the gear with the `basic` .yaml tag. This will likely involve the existing doc-generation functions. Either this will mean uploading a .md to the doc generation functions for processing, or it will mean just making the whole doc in python... the second is easier to do right now, but the first is clearly the right answer!
+
+## Starting Skills
+
+Basically the same issues/ideas as in the previous section. Need a couple skill-point priced-out builds, and then all the `basic` skills.
+ 
+<!-- ### A Note on Skills and Backgrounds -->
+<!-- Consider how your background and the skills you start with might support each other. Picking specific skills for relevance to your background rather than building an optimal character can give your character a lot of interesting moments, especially early on. -->

@@ -1,0 +1,97 @@
+/*-- all the variables available:
+https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+
+quarto docs on themes:
+https://quarto.org/docs/output-formats/html-themes.html#theme-options
+
+quart docs more on themes:
+https://quarto.org/docs/output-formats/html-themes-more.html
+
+how quarto thinks of these... themes
+https://github.com/quarto-dev/quarto-cli/tree/main/src/resources/formats/html/bootstrap/themes
+
+and finally, litera... which is the theme this config file is fighting.
+https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/formats/html/bootstrap/themes/litera.scss
+--*/
+
+/*-- scss:defaults --*/
+
+//$theme: "toasted" !default;
+
+// # colors
+
+// ## custom nonsense
+// #F7F0DF ivory paper
+// #F5F2E8 newspaper
+$paper: #F7F0DF;
+// ## the colors that...  bootstrap/quarto cares about
+
+$white: $paper !default;
+$gray-100: darken($white, 10%) !default;
+$gray-200: darken($white, 20%) !default;
+$gray-300: darken($white, 30%) !default;
+$gray-400: darken($white, 40%) !default;
+$gray-500: darken($white, 50%) !default;
+$gray-600: darken($white, 60%) !default;
+$gray-700: darken($white, 70%) !default;
+$gray-800: darken($white, 80%) !default;
+$gray-900: darken($white, 90%) !default;
+$black: #000 !default;
+
+$blue: #0000b3 !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #a42828 !default;
+$orange: #fd7e14 !default;
+$yellow: #f0ad4e !default;
+$green: #02b875 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+$primary: $red !default;
+$secondary: $gray-500 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
+
+$min-contrast-ratio: 1.85 !default;
+
+// # body
+
+$body-bg: $white !default;
+$body-color: $black !default;
+
+// # options
+
+$enable-rounded: false !default;
+
+// # fonts
+
+// ## mono.
+
+$font-family-monospace: Consolas, Monaco, "Liberation Mono", "Courier New", monospace !default;
+
+// ## i want it SERIF. really, really i do, i promise.
+
+$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif !default;
+$font-family-base: font-family-serif !default;
+$font-family: $font-family-serif !important;
+$btn-font-family: $font-family-serif;
+
+p {
+    font-family: $font-family-serif;
+}
+
+.lead {
+    font-family: $font-family-serif;
+}
+
+.alert {
+    p {
+        font-family: $font-family-serif;
+    }
+}

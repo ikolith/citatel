@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"f0206417747c151c","x":-1066,"y":-215,"width":864,"height":834,"type":"file","file":"gnosis/gnosis_abilities_concretely.md"},
+		{"id":"a657fa94e447507a","x":-901,"y":-584,"width":864,"height":283,"type":"file","file":"gnosis/gnosis.md"},
+		{"id":"285125b68be20484","x":23,"y":-1037,"width":400,"height":906,"type":"file","file":"gnosis/gnostic_typology.md"},
+		{"id":"a184020bd3287e62","x":-152,"y":-66,"width":751,"height":537,"type":"file","file":"gnosis/consequences_of_having_gnosis.md"}
+	],
+	"edges":[]
+}

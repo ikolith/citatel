@@ -1,0 +1,359 @@
+[
+  {
+    "objectID": "book_workspace/book/p0_testing/test.html",
+    "href": "book_workspace/book/p0_testing/test.html",
+    "title": "Testing",
+    "section": "",
+    "text": "There are various python doc automation functions I want to be able to use. I’ll test them here.\n\nSalt Wretch\nHP: {1d10} or 4\nScores: 1 STR\nSkills: - Claw (2n1): 1d4 (S). Enemies take damage = to their current SALT on the beginning of their turn and lose one SALT when within 1 space of the Wretch.\nHolds: {1d4-3 pickaxe}, {1d4-2 curse_eye}.\nA bent creature, shriviled and distended. Rattling sandpaper breathing and muttering. Eyes shriveled and wasted, or a dull black."
+  },
+  {
+    "objectID": "book_workspace/book/old_scratch.html",
+    "href": "book_workspace/book/old_scratch.html",
+    "title": "Old Scratch",
+    "section": "",
+    "text": "Weapons without specific requirements can be treated as having a requirement for -1 of whatever score is used to hit.\nRounds or the time it takes for everyone to act, take about 6 seconds.\nAll attacks with all weapons count as the “same” sort of move for the purpose of determining the cost of your next attack. \n\n\nHow many scores are there?\nPractically speaking, any given setting will only have so many scores, but the system has no opinion on what those scores can be.\n\n\nCON (This should just be a skill)\nCON is used to resist status effects like POISON and EXHAUSTION. For every point of CON you have you can choose to ignore the effects of 1 stack of any number of status effects you have. You still have the status effect, meaning other effects that rely on that status effect can still be triggered. The ignored status effects are resolved or wear off at the same rate as they would otherwise.\nIf you have 1 CON and you’ve been given 1 [bleed] and 3 [poison], at the beginning of the round you can choose to take 2 damage from the [poison] and ignore the [bleed]. You still have that 1[bleed] until you remove it."
+  },
+  {
+    "objectID": "book_workspace/book/p5_addendums_motivations_and_misc/motivations.html",
+    "href": "book_workspace/book/p5_addendums_motivations_and_misc/motivations.html",
+    "title": "citatel",
+    "section": "",
+    "text": "why are the rules the way they are\n\nthis was re: the very cooked tactile weapon system\n\nWhy use this system?\nSay you have a character who gets some bonus with axes and hammers, this expresses that you’re a strong character who does overwhelming strikes with heavy STR-based weapons, you’re not some sort of saber duelist. Do you get advantage with a warhammer? What if you’re trying to use the pick side of a warhammer? Using the pick is the same motion as using the hammer, and its the same weapon, so shouldn’t you get the same bonus? Doesn’t it follow, then, that you should get the same bonus with warpicks? What if you find a sword with a forward curving blade so dramatic that the sword is basically just an axe with a hilt? Shouldn’t you get your axe bonus with that? This is without getting into the migraine that is “pole weapons” (poleaxe, bill, partizan, halberd, bardiche, glaive, pike…). This system allows us to neatly avoid the question of what weapon or what attack is axe-like or spear-like in some context or another and it allows us to avoid having a rigid taxonomy of weapons all while still engaging with the different advantages or features of different weapons. It also lets us create all sorts of goofy fantasy weapons without having to quickly change the taxonomy, all we do is describe how the fantasy weapon is built and the attacks you do with it and the weapon will work with existing skills and characters.\nIn this system we just describe the weapon itself and some basic qualities about the attack. A particular poleaxe is just a [two-handed] [shafted] weapon with [reach: 1-3] a particular Speed and To-Hit, and a couple moves. Maybe it has an axe head, a pick, and a spear. So it has a (P) [thrusting] attack, an (S) [swinging: leading] and a (P) [swinging: leading]. Maybe you have skills that work very well with axes, but you expect that this sort of multi-use weapon with a lot of reach might come in handy for hunting down a specific type of monster. You might choose then to take this pole-weapon with a relatively better (S) [swinging: leading] attack so you can leverage the axe-related skills you already have. This also helps us express skill transfer from different types of weapons. Your character is very good at two-handed axes and you find a one-handed axe that is really useful in some situations, maybe it applies some particular status effect. There’s going to be a lot of skill overlap, you just won’t get anything that requires [two-handed]. That’s all there is to it.\n\n\n\nA Case for Encumbrance, Rations, etc.\nLogistical rules for encumbrance, rations, etc. have a bad reputation. Often they feel like meaningless and slow bookkeeping. These rules are meant to be light enough that they should not slow the game down, but I want quickly go over why these rules are worth having in the first place.\nThese rules force players to make decisions about what they’re going to take with them and what they’re going to prepare for. Players and NPCs are very close to one another in HP and damage output in this game. The way you get an edge on someone else in combat is figuring out what your best option is given what you’ve prepared and the resources you have. The strength of most items and abilities are contextual, but this won’t matter or make the game more interesting if you can carry around a tool for every context.\nEncumbrance rules also add depth outside of combat. When trading with someone on the road, you have to trade with something you brought. If you’re delivering something to someone or hiding something, you have to keep it somewhere. These logistical questions should cause you to engage with the world like it’s a real place and make decisions about what you want to take with you and what you want to leave, what is important to your character and why. If your character is a rugged outlander that knows how to survive in the wilderness, you have an important role in the party, you’re the reason the party is able to pack light and travel quickly, you’re the reason that the party can survive at all when you run out of rations. There are many more opportunities for non-combat character decisions to be important.\nAll of this allows different weapons, items, and characters to shine in different contexts. This encourages different people in the party to take up different roles, acquire skills, and character adapts to situations they find themselves in."
+  },
+  {
+    "objectID": "book_workspace/book/p5_addendums_motivations_and_misc/case_for_encumbrance.html",
+    "href": "book_workspace/book/p5_addendums_motivations_and_misc/case_for_encumbrance.html",
+    "title": "A Case for Encumbrance, Rations, etc.",
+    "section": "",
+    "text": "Logistical rules for encumbrance, rations, etc. have a bad reputation. Often they feel like meaningless and slow bookkeeping. These rules are meant to be light enough that they should not slow the game down, but I want quickly go over why these rules are worth having in the first place.\nThese rules force players to make decisions about what they’re going to take with them and what they’re going to prepare for. Players and NPCs are very close to one another in HP and damage output in this game. The way you get an edge on someone else in combat is figuring out what your best option is given what you’ve prepared and the resources you have. The strength of most items and abilities are contextual, but this won’t matter or make the game more interesting if you can carry around a tool for every context.\nEncumbrance rules also add depth outside of combat. When trading with someone on the road, you have to trade with something you brought. If you’re delivering something to someone or hiding something, you have to keep it somewhere. These logistical questions should cause you to engage with the world like it’s a real place and make decisions about what you want to take with you and what you want to leave, what is important to your character and why. If your character is a rugged outlander that knows how to survive in the wilderness, you have an important role in the party, you’re the reason the party is able to pack light and travel quickly, you’re the reason that the party can survive at all when you run out of rations. There are many more opportunities for non-combat character decisions to be important.\nAll of this allows different weapons, items, and characters to shine in different contexts. This encourages different people in the party to take up different roles, acquire skills, and character adapts to situations they find themselves in."
+  },
+  {
+    "objectID": "book_workspace/book/p5_addendums_motivations_and_misc/rulesbad.html",
+    "href": "book_workspace/book/p5_addendums_motivations_and_misc/rulesbad.html",
+    "title": "I hate rules and I want as few of them as possible in my game.",
+    "section": "",
+    "text": "All poasts are my own opinion and preference and as such are infallible and perfect.\nEvery mechanic and every rule introduced to a game imposes a cost. The game becomes heavier. Everything you do now has more friction. You’re in a tense fight, you duck behind a crate and shoot at your assailants. Someone half-remembers a rule about half cover, or maybe this counts as full cover, how tall is this crate exactly? Someone else remembers that there is a rule about shooting from behind cover and anyway can you really take cover twice in a move? Shouldn’t you just shoot and then take cover? Or do you count as “in-cover” the entire time? And so it begins. The rulebooks come out. Your cool move that seemed totally reasonable as part of the fiction is now being deliberated by the Supreme Court.\nI’m told that once everyone has spent long enough with a system everything really starts moving smoothly. That sounds plausible but more often it seems that everyone remembers slightly different versions of the same rule, or at least two people disagree and the rulebooks come out anyway. Often tables end up just making something up that makes more sense contextually anyway. People who didn’t even know the rule existed would have done something that made sense contextually and moved on.\nObviously games like this need rules but rules should help the game more than they hurt. That requirement should be enforced for every rule, especially small ones. Every rule should be simultaneously as modular and as load-bearing as possible. If a whole set of rules can be replaced by a framework or rule of thumb without hurting the game, even better. There are many ways of doing this. Advantage, disadvantage, adding a score, whatever.\nSystems and rulesets in this game often look very similar and use the same minimal set of mechanics in order to try to and achieve this. They often cover a very broad set of situations. This should make it easy for a table to make up another rule on the fly that will work just fine with everything else. This is also why numbers in the system tend to stay small, every point should ideally feel meaningful. The shape of the 2d6 probability curve is very useful for making small bonuses meaningful, especially small differences in bonuses. But that’s for another post.\nI’m not going to talk about making good rules here because I’ve never made one. All I want to do here is explain my general dislike of single-purpose and specific rules, which is why try to avoid overly specific rules for specific situations. Sometimes this is hard to avoid. There is a rule for attempting to use two hands for a weapon that is [one-handed]. That is not all that dissimilar from cover, half-cover, or shooting from cover. Likely I will end up having to cut, add, change rules like that so that they won’t get in the way.\nI think the use of small rigid rules over broad reusable frameworks tends to shape the game into one that is built around the small rules too much. These rules corall players into coloring within the lines, thinking that the available options are only what there are rules for and not engaging with the actual place and world of the ttrpg. By overspecifying small things the tactility of the world is undermined. This is my attempt to find some set of rules that should only ever encourage players to engage with the tactile detail of the world.\nIt’s about the rules you don’t write, maaan."
+  },
+  {
+    "objectID": "book_workspace/book/p5_addendums_motivations_and_misc/addendeums.html",
+    "href": "book_workspace/book/p5_addendums_motivations_and_misc/addendeums.html",
+    "title": "citatel",
+    "section": "",
+    "text": "The Sixtem rules are setting agnostic. You should be able to play only with material from one setting, or pick and choose mechanics from many settings, or move characters between settings. The rules are written so that the game is easy to extend, modify, and improvise with.\nSay you have created a character in a fantasy setting with the standard scores used throughout this doc (STR, AGI, DEX etc.). This character somehow ends up in a sci-fi setting where TECH is a standard score, they went through a portal or something. It would be unreasonable to treat that character’s TECH score as 0 given that they’ve never even seen a computer. They should treat TECH as a [special] score or have a very negative score in TECH, say -5 (expressing that it would take them a good deal of work to get to the point where they can even begin to interact with technology). There is no rule that expresses this. It is expected that if you mix settings and mechanics in this way you will have some edge cases to iron out and you will have to make up some rules on the fly. The rules are (hopefully) written to be flexible, consistent, and simple in a way that makes doing this easy."
+  },
+  {
+    "objectID": "book_workspace/book/p5_addendums_motivations_and_misc/addendeums.html#character-creation",
+    "href": "book_workspace/book/p5_addendums_motivations_and_misc/addendeums.html#character-creation",
+    "title": "citatel",
+    "section": "Character Creation",
+    "text": "Character Creation\n\nIncreasing Scores\nIf you want to know how much it costs to go from 0 to any number where the number is x, use this equation: (x(x+1))/2. You can also just use summation notation (Σn).\n\n\nSome Basic Statistics for Making Your Own Randomized Character Creation Rolls\nAt a glance it might seem like d6-3 and d4-2 should be equally good. The expected value of a d6 is 3.5, so 3.5 - 3 = 0.5. EV of a d4 is 2.5, 2.5 - 2 = 0.5 as well, so why is d6-3 twice as good as d4-2?\nGetting to 2 in a score costs 3 SP (1 + 2), but getting to 3 costs 6 SP (1 + 2 + 3). Crucially, raising your score from a negative number always costs 1 SP, so if you roll a 1 on d6-3, you end up with -2, which is only equivalent to getting -2 SP (that is, you only have to spend 2 more SP than if you never bothered rolling at all) but if you roll a 6, you get a score of 3 which is worth 6 SP. High rolls are a lot more rewarding than low rolls are punishing at character creation.\nIf you want to figure out your own randomization schemes (that involve a single die) and what their equivalent average SP value is, doing so is relatively simple. First, you figure out all of the possible rolls. For d6-3, these rolls are -2, -1, 0, 1, 2, 3 (a roll of 1 - 3 = -2, etc.). Then find the “values” or SP you would have to spend to get that score for the rolls. For d6-3 these are -2, -1, 0, 1, 3, 6. To get the average value, just add up all the SP values and divide by the number of rolls (because all of the rolls will be equally likely). In the case of d6-3, you get 1.5. Finally, multiply the per-roll-SP-value you just found by the number of scores you’re rolling for to see the equivalent SP.\nRemember that randomization means PCs will end up with characters whose scores are “worth” different amounts of SP. Finally, consider giving players some points specifically to buy skills with. Or don’t!"
+  },
+  {
+    "objectID": "book_workspace/book/p5_addendums_motivations_and_misc/addendeums.html#odder-and-ender",
+    "href": "book_workspace/book/p5_addendums_motivations_and_misc/addendeums.html#odder-and-ender",
+    "title": "citatel",
+    "section": "Odder and Ender",
+    "text": "Odder and Ender\nAtl-atls can only be used with [one-handed] spears. Using an atl-atl requires 1 STR, 1 DEX and adds 3 to the spear’s thrown range and +AGI to damage."
+  },
+  {
+    "objectID": "book_workspace/book/p5_addendums_motivations_and_misc/dexhorse.html",
+    "href": "book_workspace/book/p5_addendums_motivations_and_misc/dexhorse.html",
+    "title": "Do We Really Need to Know How Dextrous a Horse Isn’t?",
+    "section": "",
+    "text": "Any scores not listed for a character are treated as being at 0. This has worked fine for humanoid characters but it quickly breaks down for a horse. A horse doesn’t have many relevant scores so the reasonable and quick way to create a horse NPC would be to just list movement speed and maybe STR. Of course, this means that the horse has as much DEX as a normal person. Horses do not have thumbs, they don’t even have fingers. There’s a problem here.\nThere are a couple ways of dealing with this.\n\nGroup-Relative Scores\nMaybe a 0 here means that the horse is only as DEXtrous as any other horse. This isn’t too inelegant. Unfortunately, this is not how scores work anywhere else in the game. They are used in contests, so a 1 DEX mod should mean basically the same thing no matter who has it. Contests are not graded on a curve. This does not work.\nThis failed rule does gesture at another issue though. What it means for a horse to be agile will be different from what it means for a person to be agile. If we grant that the base score system is on a human scale, how agile is a horse on that same scale? Is that a meaningful question?\n\n\n“Simple” NPCs\nMaybe a [simple] tag could be added to some NPCs. The score of any non-listed score for one of these NPCs could be considered -3, or automatic failure. Of course the problem here is that now one has to specify every score that might come up in a way that violates the goal of modularity. Also, it sucks. Surely the horse has more than -3 CON right? Maybe for an NPC that is simple enough this won’t be an issue, a horse can’t be expected to have a TECHNOLOGY score or whatever.\nThis isn’t a rule that contributes to the game and fits in nicely with the rest of the rules. It’s just a rule for the sake of having a rule.\n\n\nPreferring Not To\nRules are bad. An edge case like this should prompt one to reexamine the ruleset in question. If there is an elegant intuitive change that would make the rules more useful and expressive, then that change should be made. If there is a small rule or condition that fixes the edge case, rounds the rules out, and gives players some more options, then that rule should be put in place. Neither of those things seem true.\nWe could make people check more boxes when creating entities. Every score could come with a set of requirements. NPCs can be jammed into a typology where each type has slightly different rules and mechanics. When faced with ambiguity you can refer to rules for what a certain score means in a certain context in order to execute a predictable algorithm. This sounds miserable.\nI call this DEX-rolling horse an edge case, but am I right about that? Yes. Is this really an edge case? Yes. There may be plenty of settings with lots of horses, but why would a horse be rolling a DEX check? How would you plan for that beforehand when creating the horse NPC? If you’re in a prison cell trying to get your tied up horse to quietly grab the keys and toss them to you, friend you’re in an edge case. The inconsistency that the original rule causes seems to demand a fix, a new rule. But I would prefer not to. Just play the game, either the horse can’t make the DEX check or you just make up something that lines up with the tone of your game, it’s fine.\nIf you need more of a framework, the score is probably between 0 and -3 for this sort of thing. You could have the check made with one die. In a more serious game the horse just cannot make a DEX check. In a more goofy game the horse might make its first DEX check at -3, immediately roll two sixes, pickpocket the key from the guard with his tongue and now you’ve got a 2 DEX thiefhorse with a circus-related backstory and a quest for revenge against a clown named Bilphus. Sick."
+  },
+  {
+    "objectID": "book_workspace/book/p3_lore_and_worldbuilding/skeleton.html",
+    "href": "book_workspace/book/p3_lore_and_worldbuilding/skeleton.html",
+    "title": "citatel",
+    "section": "",
+    "text": "Time to order how to set this up!"
+  },
+  {
+    "objectID": "book_workspace/book/p3_lore_and_worldbuilding/scrapbin/the_end.html",
+    "href": "book_workspace/book/p3_lore_and_worldbuilding/scrapbin/the_end.html",
+    "title": "The End of the World",
+    "section": "",
+    "text": "As you head east you approach the End of the World. You climb gentle hills that drop down to valleys only to climb again up to higher plateaus. As you near the End, the climbs and descents both become steeper but every peak is higher than the last. The geographical features become like nested moats and taluses guarding the End. The End itself is more like a sheer wall of stone than a mountain range, there is no peak visible. The layers of stone extend up into the sky and away forever.\nYou reach the End. You stand in the highlands at its foot with your back to it. You look back at the infinite horizon formed by the sky and the land below you. You then turn around to face the End again and look straight up to see another infinite horizon. This horizon is the line between the rock formations and hanging forests of the End and the sky, with mists and clouds dancing between them.\nThis journey is long, dangerous, and expensive. It means going right up to the limit of the known world. To go past this point, to go into the End itself is for the suicidally greedy, the desperate, religious zealots, and the insane."
+  },
+  {
+    "objectID": "book_workspace/book/p3_lore_and_worldbuilding/scrapbin/the_end.html#the-end-in-culture",
+    "href": "book_workspace/book/p3_lore_and_worldbuilding/scrapbin/the_end.html#the-end-in-culture",
+    "title": "The End of the World",
+    "section": "The End in Culture",
+    "text": "The End in Culture\nThe End is always visible reaching into the sky to the east. It becomes a backdrop, forgotten in day-to-day life by the people below who have to attend to lower things. It is the setting of legends and stories. Religions teach that their Gods live here in this world but just past the End, or that one passes through the End only on death, or that the End is the end of everything, and there can be nothing past it."
+  },
+  {
+    "objectID": "book_workspace/book/p3_lore_and_worldbuilding/scrapbin/the_end.html#on-the-efforts-of-the-suicidally-greedy-the-desperate-the-religious-zealot-and-the-insane",
+    "href": "book_workspace/book/p3_lore_and_worldbuilding/scrapbin/the_end.html#on-the-efforts-of-the-suicidally-greedy-the-desperate-the-religious-zealot-and-the-insane",
+    "title": "The End of the World",
+    "section": "On the Efforts of the Suicidally Greedy, the Desperate, the Religious Zealot, and the Insane",
+    "text": "On the Efforts of the Suicidally Greedy, the Desperate, the Religious Zealot, and the Insane\nAbutting the end are lawless highlands, ruins, and small towns that survive by catering to travelers journeying to the end.\nIn some places the End hangs over the land, creating permanent twilight and shadow. Sailors find what seem passageways into the end. Passageways in which the ocean is gradually restricted to a winding river with towering rock on either side, the sky all clouds. The boundary between the ocean and the End is full of these passageways, though none have ever been confirmed to go through the End. Some pilgrims have attempted to climb the End, others go through the vast cave networks in the End.\nExpeditions to the End rarely return, but when they do they bear strange artifacts and conflicting stories of terrible and incredible creatures as well as entire civilizations. The End a temptation for the powerful and a focal point of conspiracies."
+  },
+  {
+    "objectID": "book_workspace/book/p2_content/skeleton.html",
+    "href": "book_workspace/book/p2_content/skeleton.html",
+    "title": "citatel",
+    "section": "",
+    "text": "At a high level, this goes from more generic to less.\nImportant in this section to be able to jump around in relative safety from spoilers. Also, in the notes for this was stored the idea of some lore gated behind some kind of LORE or KNOWLEDGE score. Required reading for skill upgrades, yay?!\nAt several points I’ll be referring to a “Standard Block”. This is a repeated sorting of entities of various types, so that weapons, skills, etc are all presented in a consistent order. This block looks like:\n\nSkills\nWeapons\nShields\nArmor\nInvocations\nOther Items\n\n\n\nNotably, Section 1 is nearly all programmatically generated!\n\n\n\n“Standard Block”\n\n\n\n\n\n“Standard Block”\n\n\n\n\n\nLore\n“Standard Block”\nNPCs\nUnique NPCs and their unique “things”\n\n\n\n\n\nEnding with a series of indexes separated by “type of thing” that lists page numbers of all weapons, skills, etc."
+  },
+  {
+    "objectID": "book_workspace/book/p2_content/s2_reference/reference.html",
+    "href": "book_workspace/book/p2_content/s2_reference/reference.html",
+    "title": "citatel",
+    "section": "",
+    "text": "This is an interesting part because its just a programmatically generated index! Likely won’t even involve a .md file."
+  },
+  {
+    "objectID": "book_workspace/book/p2_content/s1_content/unaffiliated_npcs_and_their_entities.html",
+    "href": "book_workspace/book/p2_content/s1_content/unaffiliated_npcs_and_their_entities.html",
+    "title": "Unaffiliated NPCs and their Entities",
+    "section": "",
+    "text": "Lacking automation."
+  },
+  {
+    "objectID": "book_workspace/book/p2_content/s1_content/unaffiliated_entities.html",
+    "href": "book_workspace/book/p2_content/s1_content/unaffiliated_entities.html",
+    "title": "Unaffiliated Entities",
+    "section": "",
+    "text": "Lacking automation."
+  },
+  {
+    "objectID": "book_workspace/book/p2_content/s1_content/scrapbin/bureaucrats.html",
+    "href": "book_workspace/book/p2_content/s1_content/scrapbin/bureaucrats.html",
+    "title": "Bureaucrats",
+    "section": "",
+    "text": "The Bureaucrats are a faction endemic to civilizations. They are a memeplex and a collection of methods more than they are a group of agents. Their kind is not spread through the means of spores and disease as the Legions are, but through information and the soft tissue of social connections. They share the same fundamental aim as the Legions, to self-perpetuate, consume, and multiply.\nThey are a dense autonomous patchwork of contracts, debts, obligations, and records. Many of these documents have outlived any who could read their contents, but through addendums, conditions, and stipulations, they persist as perversions of their original forms. It isn’t known who started the network or whether its creation was intentional. It may have been an attempt to create laws that could themselves govern, interpret, and enforce.\nThe Bureau’s strength lies in the arcane use of information and agreements, not brute force. For force they work alongside civilizations and other existing groups. Sometimes this takes the form of a formally recognized partnership, sometimes they slowly permeate, infect, and ultimately capture the group."
+  },
+  {
+    "objectID": "book_workspace/book/p2_content/s1_content/scrapbin/bureaucrats.html#the-forerunner-receptionist",
+    "href": "book_workspace/book/p2_content/s1_content/scrapbin/bureaucrats.html#the-forerunner-receptionist",
+    "title": "Bureaucrats",
+    "section": "The Forerunner / Receptionist",
+    "text": "The Forerunner / Receptionist\n\nDescription\nA black cylinder is driven through a thick stack of written records and into the head of the slumped creature. Only the thing’s gumless wheezing mouth is visible. The pages covering its face are of all sizes. They are small cards, letters, entire scrolls, they are made of ancient papyrus and fine white cardstock, they are clay tablets, leaves, scalps, hides. Covering these records are handprints, wild script, dead languages, moving glyphs, bright red blood, every form of marking. Curdled black fluid oozes lazily from around the stack and down the front of the its atrophied body. It is fat and weak. It smells like mildew. It sits hunched over a thin table. It wears a collared shirt.\n\n\nFirst Encounter\nIt’s friendly. It asks questions about superficial qualities, name, eye color, height, etc. Then it starts asking innocuous questions about both the subject’s current state and some recent events the subject has experienced. It knows things it should not know. It requires answers from the subject, it requires that information is confirmed. As the conversation progresses it asks increasingly meaningless semantic questions. The questions become more invasive. It to asks its questions while darkly hinting at terrible consequences should the wrong answer be given. It asks the subject to pick from a set of nearly identical options. It is patient. It is meticulous.\nAs answers are given, it will tear out a stake from its pale flesh. The stake might be a pen or it might just be used as one. It patiently records what is said. It asks the same questions over and over in slightly different forms, explaining how the questions are different when challenged.\nIt will insist that the subject is lucky to have run across the Bureau when they did, otherwise their debts and obligations may have grown to catastrophic proportions, now at least the subject can take control.\nAs the stake runs out of ink the Bureaucrat will drive it back into the wound to refill it. As the interaction progresses it will insist that the subject take certain forms and pens, filling out the forms, recording and reporting their actions, submitting the forms. It will insist that, to better make sure the forms are tracked and kept safe, the subject must allow the creature to attach the form directly with a small pin. Just a small note to be attached with a small pin, a convenient magic that allows the subject to never misplace the form.\nThe more information a subject gives and the more a subject engages, the more power the Bureau has over the subject. The Receptionist might first appear when the character is weak or in need, offering a service, information, or healing. It never specifies what it wants in return, if asked it will give a long explanation about how the service is not only free but it also entitles you to unspecified future services, advantages, and “opportunities”. If pressed it might admit that yes there could be some minor service fees but these are merely a formality, they can be waived or some arrangement could be found.\nThe Receptionist is after two things, information and some reason to be involved. It wants the subject to be visible, registered, quantified. It wants a confirmation of some instance in which the subject was wronged or perhaps wronged another. It wants the subject to accept some aid from the Bureau or accept some deal with the Bureau. The Receptionist is almost always the first member of the Bureau that any given character meets.\n\n\nOther Mechanisms\nWhen faced with a Receptionist the best move is to say nothing and kill it where it sits. This will make an enemy of the faction unless it is done from stealth or in some other way they do not see or cannot understand.\nThey cannot see art, it is literally invisible to them, its effects unknowable. Because of this it is not uncommon for illiterate travelers to carry books of poetry in order to beat to death Bureaucrats that appear in front of them.\nThe body of a Bureaucrat is good as a source of cheap ink and kindling."
+  },
+  {
+    "objectID": "book_workspace/book/p2_content/s1_content/scrapbin/those_who_belong.html",
+    "href": "book_workspace/book/p2_content/s1_content/scrapbin/those_who_belong.html",
+    "title": "Those Who Belong",
+    "section": "",
+    "text": "Those without a cure will deny their disease. They live apart from the earth in a feverish half consciousness before multiplying their fitful confusions and flaring out, leaving only a stain and a memory that fades faster even than themselves.\nThose of the World have kept their gifts to themselves for millennia while creating great works spanning geologic time, but contemplation is broken again and again by those without time for themselves or each other. They have no patience for beauty.\nThey must be shown the right way. If given the time, they will learn the error of their ways. The People carry great slow blades formed by the perfection of chance. They bring the gift of life without panic, without a diseased flurry of activity.\nIt must be noted that some among the People take another path, they walk quietly to the bottom of a waterway. They let the slow deposit of earth encase them. They wait that they might find themselves in another place and another time, eventually."
+  },
+  {
+    "objectID": "book_workspace/book/p2_content/s1_content/scrapbin/those_who_belong.html#appearance",
+    "href": "book_workspace/book/p2_content/s1_content/scrapbin/those_who_belong.html#appearance",
+    "title": "Those Who Belong",
+    "section": "Appearance",
+    "text": "Appearance\nThey are humanoid. They are a dense black clay slowly shifting between carefully curated and arranged stones. Their heads are great rounded shapes, dull and pocked. Inside of their heads are crystals of incomparable beauty. Priceless gems, highly coveted."
+  },
+  {
+    "objectID": "book_workspace/book/p2_content/s1_content/scrapbin/harvesters.html",
+    "href": "book_workspace/book/p2_content/s1_content/scrapbin/harvesters.html",
+    "title": "Harvesters",
+    "section": "",
+    "text": "The bones of things persist long after the soul has left, substantiating essences and legacies. The skin is superficial. It has no truth. It is temporary protection against the world. The bones do not lie, they persist long after life, but they do not cling to the soul. The skin does cling, if only weakly.\nThe Harvester’s mind howls with the whirling souls of his victims, trapped under his skin. Harvesters carry large cruel bludgeoning weapons to kill or incapacitate while preserving the skin. They carry razor sharp sickles and knives, peelers with which they flay the living or recently deceased. They eat their victim’s skin, trapping the soul before it leaves the body. They worship the Flayed God who is said to have been a man who ate a thousand great souls before eating his own skin and ascending to Godhood. As they consume they grow more powerful and more mad. They are hated and feared by anything that might become their victim. Bugs, funginids, and constructs are often accused of working with them."
+  },
+  {
+    "objectID": "book_workspace/book/p2_content/s1_content/scrapbin/ataarra.html",
+    "href": "book_workspace/book/p2_content/s1_content/scrapbin/ataarra.html",
+    "title": "Ataarra",
+    "section": "",
+    "text": "Ataarrans are amphibians with long bodies, short limbs, and blunt snouts. They are traders and travelers. They are one of the few mist dwelling peoples that stray far from the great masses of mist. They are valuable guides and contacts.\n\nAtaarra Base Scores, Playing as an Ataarra\nHP: 12 To-Hit: 7\nSTR: -1, Every increase in STR costs x2 as many points up to 4 STR.\nAGI: 1\nDEX: 0\nCON: 0\nPERC: 0\nSOCIAL: 0\nPSYCHIC: 1 Every increase in PSYCHIC costs half as many points (rounded down) up to 4 PSYCHIC.\nSpeed when crawling or swimming is 6. Bipedal speed is 3 and it’s a funny looking waddle.\nLower the [reach] of any weapon you use by 1 (minimum 0)."
+  },
+  {
+    "objectID": "book_workspace/book/p2_content/s1_content/scrapbin/tchoks.html",
+    "href": "book_workspace/book/p2_content/s1_content/scrapbin/tchoks.html",
+    "title": "Tchoks",
+    "section": "",
+    "text": "Webbed fingers in unfocused disarray squat the terminations of slimy limbs. Freely swiveling eyes perch on dull sloped faces above rows of lost-and-found teeth. The Tchoks, named after the sound that composes half of their vocabulary, stalk the eternally over-saturated mud and swollen brush between dirty water and watery dirt. They cling under branches and flatten their baggy bodies against walls. They prepare to ambush any shape passing by.\nThey are as barely functional in water as they are on land. What their awkward and spasmodic movement excels at is propelling them through mud. Their lapses into atonal jibbering make coherent thought, and seemingly magic, very difficult. The superstitious believe them to harbor some deep well of cryptic knowledge that they presumably cultivate when not clubbing each other or being eaten by the giant eyeless catfish that also live in the mud.\nOne of the only formal records of their behavior comes from S. Bevlins, a scholar intrigued by stories of their mystical abilities. After weeks spent in careful hidden observation of constant slapstick inanity, Bevlins observed an elaborately painted Tchok pick up a stick and stumble around dragging it through the mud, creating a complex symmetrical pattern before realizing he couldn’t find his way out of it. The Tchok then angrily beat the lines in the mud with his stick, losing his grip and flinging the stick outside of the pattern. The Tchok howled and gurgled for several minutes before tiring himself out and falling asleep in the mud. The rising tide washed him and the pattern away. Belvins ended his observations.\n\nTchok\nHP: {3d8+1} or 13\nScores: 1 CON\nSkills: Jibbering (1n1): All checks related to magic made within earshot of a jibbering Tchok are made with -3. This effect stacks with multiple instances of jibbering.\nHolds: Carrying 1d4 daggers, 1d6 short spears. 1d6 clubs. 1d2 blowguns. More rarely poisons that push back the furthest AP token by 1 slot on hit, consumed on hit. Even more rarely, daggers that can deliver 3 doses of poison before reapplication is necessary.\nSlimy, stupid, and inane.\nThis file was last auto-generated on 2022-12-01."
+  },
+  {
+    "objectID": "book_workspace/book/p2_content/s1_content/scrapbin/crust_punks.html",
+    "href": "book_workspace/book/p2_content/s1_content/scrapbin/crust_punks.html",
+    "title": "Crust Punks",
+    "section": "",
+    "text": "Salt encrusted and delusional, they know the Art of Continuous Secretion. Their skin is covered in layers of hard grey crystal salt. Their body constantly produces SALT, so they have to constantly burn SALT to stay alive. Having a lot of SALT makes them near superhuman, having little cripples them. They must always stay awake, SALT buildup would kill them in their sleep. The solution to the exhaustion and mental toll of their sleeplessness is burning more SALT. This abuse of SALT wears them down mentally and physically, a side effect that can only really be addressed with, of course, even more SALT. Their dependence on SALT tends to outpace their production, and they live in a frantic search for more.\nTheir fingers are sharp clumsy daggers of salt. Their limited hand mobility makes them poor with most weapons. When they fight, the increased production of salt armor covers and envelopes their hands, so they fight “unarmed”, with enormous spiked fists made of salt. In combat most are terrifying incoherently screaming superhuman brawlers in grinding mineral plate armor. Some rare crust punks can burn their salt by moving very quickly, cutting with enormous katars fused to their closed fist during combat. They cannot use armor, it just constrains their natural shifting salt armor.\nSome crust punks are miners who rejected a life of toil, preferring a short brutal life of glorious combat. It’s common for powerful or sloppy crust punks to die crystallized by their own continuous salt production, leaving behind a sparkling statue.\n\nGameplay Note\nPlayers might be able to learn unarmed techniques (including with brass knuckles, push-daggers) and improved physical augmentation through salt from them, but more likely they’re going to get jumped by a bunch of crust punks who beat them and take their SALT."
+  },
+  {
+    "objectID": "book_workspace/book/p2_content/s1_content/scrapbin/isopods.html",
+    "href": "book_workspace/book/p2_content/s1_content/scrapbin/isopods.html",
+    "title": "Isopods",
+    "section": "",
+    "text": "The Isopods are an ancient people with courts, politics, philosophy, and dynasties. They can communicate through writing and speech. They can bypass language entirely to communicate complex feelings and even full thoughts directly to one another via pheromones. They do this instinctively, like a person moves their face.\nThe Isopod word for what we would call thought is approximately “inner thought” where pheromones are “outer thought”. Their word for themselves is approximately “thinker”, whereas their words for other groups relate the members of those groups to objects.\nIn the ornate and ancient Isopod courts, richly painted Isopods attempt to subtly manipulate each other by precisely deploying pheromones, even using bottled pheromones to mislead and persuade. They might strategically steer the mood of a room through highly trained covert manipulators though an Isopod gentleman would never admit this.\nIsopods view life in the caves as beautiful, ancient, and harmonious. In the caves their pheromones are not tossed to the wind as on the surface. It seems natural and just, then, that the underground should be so vast and varied where the surface is merely the end of useful space. They believe the world must be a sphere, as a sphere would maximize underground volume while minimizing surface area. They find it tremendously convenient that when a form of life is meant to be eaten they generally have their hard structure on the inside which could only serve the purpose of making them more suitable as food. They see their ability to speak to lower life as a great convenience, like being able to order around your coat rack. They are not a religious group generally, so a question their philosophers must grapple with is “Why, if there is no God, is the world so just?”\nIsopods also have philosophy on the nature of being and consciousness. They hold that, because they can directly communicate and transfer thoughts and emotions, they can verify and understand the experience and the consciousness of other Isopods. Groups that do not have this ability cannot meaningfully be said to be conscious. Most isopods think of mammals and similar as a sort of automata, not capable of any true thought or complex socialization. They are not generally hostile or even rude to mammals. To mistreat a lower life form would not be immoral per se, but it would be tremendously gauche. If you tell an Isopod your name, say “Tod” and it has reason to remember your name, it may refer to you as “It Calls Itself Tod”, though this is typically shortened to “itsa Tod”.\nIsopods converse in great halls built into the cave along the ceiling and on the walls as well as on the floor.\nIsopods once ruled the earth and they believe their time will come again. They are one of the oldest forms of life, persisting largely unchanged through time.\nThey have mixed views on other bugs, depending on their ability to communicate.\nThey absolutely revile the ants and would see them exterminated. They read what primitive “pheromones” the ants create as a sort of repugnant malignancy below the level of thought. Their hate and fear is magnified by the growing numbers of the ants."
+  },
+  {
+    "objectID": "book_workspace/book/p2_content/s1_content/scrapbin/isopods.html#isopod-anatomy-movement-fighting",
+    "href": "book_workspace/book/p2_content/s1_content/scrapbin/isopods.html#isopod-anatomy-movement-fighting",
+    "title": "Isopods",
+    "section": "Isopod Anatomy, Movement, Fighting",
+    "text": "Isopod Anatomy, Movement, Fighting\nIsopods have thick layered bands of chitin along their top side. This forms their natural armor. They have seven pairs of jointed appendages. Each appendage ends in two articulated long sticky fingers. The two front pairs of appendages are the longest, with long fingers meant for fine manipulation. Lacking thumbs, the Isopods use their arms in vertical pairs with the two suspended top fingers and two suspended bottom fingers working in tandem, each finger opposable. The appendages after the foremost pairs become shorter and their main purpose shifts from manipulation to movement. They move low, using all of the limbs that line their body. They move parallel to the ground, with the bulk of their limbs folded under them. Isopods are larger than humans, though of course they are shorter when walking. They do not call their movement “crawling”.\nThey will tip their front portions upward in only a couple of situations. The first is when engaged in some especially demanding manual task where lifting something in front of themselves using only a couple of limb pairs will not suffice, as in the use of most of their instruments. The second is when in a posture of deference or trust.\nThey fight primarily through quickly throwing out rope darts or barbed blades with their long powerful fore-limbs and then either retracting the projectiles or attaching the ropes to the surfaces of the cave, suspending their victim from multiple points. They do this while moving rapidly along the cave walls. They employ long specialized patas and katars in close combat. They use nets to slow down their enemies."
+  },
+  {
+    "objectID": "book_workspace/book/p2_content/s1_content/scrapbin/isopods.html#isopod-npcs",
+    "href": "book_workspace/book/p2_content/s1_content/scrapbin/isopods.html#isopod-npcs",
+    "title": "Isopods",
+    "section": "Isopod NPCs",
+    "text": "Isopod NPCs\nIsopod NPCs (minimal stats): Isopod Spy, Isopod Gentleman, Isopod Senator, Isopod Philosopher, Isopod NPCs (full stats): Isopod Trophy Hunter, Isopod Raider, Isopod Exile, Isopod Soldier, Isopod Guard"
+  },
+  {
+    "objectID": "book_workspace/book/p2_content/s1_content/scrapbin/legions.html",
+    "href": "book_workspace/book/p2_content/s1_content/scrapbin/legions.html",
+    "title": "Legions",
+    "section": "",
+    "text": "The Legion is a shambling fuzzy mass of branching fungal pathways and rudimentary sensors, swinging limbs, distended faces, exposed organs. Its shapes are highly varied, the colony that comprises its body improvised out of the bodies of found, slain, caught, or purchased creatures. It can be a mindless mass of claws or a giant psychic centipede of cobbled together human limbs and faces. Its entire body is a fungal colony.\nTo create a Legion, roll d20s. Decide beforehand how many Legions you want and of what size.\nFor every d20 rolled in its creation, the Legion gains a size category. 1: small. 2: medium, 4: large, 6: giant.\nEverytime the d20 lands on 20, raise the Legions intelligence.\n0: As a stupid rabid chimp.\n1: Single words, sentence fragments.\n2: It speaks as an intelligent hivemind, pulling information, preferences, and memories from the intelligent creatures it has consumed. It flits between personalities during conversation.\n3: It is hyper-intelligent, capable of inscrutable magic, a powerful being comparable to a sage, a demigod, or a great demon, depending.\n4: As a minor deity.\nFor every 10 health the legion has, roll:\n1d4-1 limbs\n1d4-1 stat points, can be put in any stat that any creature it has consumed has possessed.\nWith no legs a Legion can roll at 2 spaces per move. Every leg gives it 1 extra space of speed, up to 6 legs. Up to 10 legs it gets another 1 space per pair.\nNon-leg limbs can include stingers, arms with hands, claws, pincers, torsos reduced to short spines with jaws mounted on the ends, etc. Just grab attacks from other enemies at random.\nRoll 1d4-2 for every 10 health the Legion has. The Legion has that many exposed organs randomly placed along the outside perimeter of its space. The organ can be targeted for double damage with Called Shot. If a called shot is performed doing over 8 slashing damage, the legion loses that limb, (3n3 to reattach).\nLegions take double damage from fire and take a max of two damage from piercing attacks (unless performed on an organ).\nWhen a Legion’s HP is reduced to 0, it can no longer move or function.\nRoll one fewer d20 than was used to create it. For every d20 rolled, the Legion has a day to reform. Every day it rolls a d20 to regain health. If it hits half health within the time allotted, it can reform. If its parts are scattered they might reform as smaller Legions, DM discretion. Reformed Legions retain their memories. Burned portions of the Legion are fully dead. Players may try other means to fully neutralize remains.\nLegions are generally hostile. They are driven by the desire to consume enough to grow larger, more powerful, more intelligent. They have to consume many times the amount of mass another creature of their size would have to. Legions do not need sleep. They are constantly hunting and eating. They hold grudges.\nGiven that they prey on everything they are universally hated. That is, of course, unless they grow large enough to become powerful allies. They are extremely difficult to eradicate. Their invisible spores hang in the air waiting to colonize the sick or recently deceased. There are whispered stories of those who, in a desperate bid to survive, seek a symbiotic relationship by cultivating Legion within themselves. There is no documented case of this working.\nThis file was last auto-generated on 2022-12-01."
+  },
+  {
+    "objectID": "book_workspace/book/p2_content/s1_content/groups_and_their_entities.html",
+    "href": "book_workspace/book/p2_content/s1_content/groups_and_their_entities.html",
+    "title": "Groups and their Entities",
+    "section": "",
+    "text": "Lacking automation."
+  },
+  {
+    "objectID": "book_workspace/gnosis/gnostic_typology.html",
+    "href": "book_workspace/gnosis/gnostic_typology.html",
+    "title": "citatel",
+    "section": "",
+    "text": "Different gnostic abilities and effects manifest differently. It is helpful to sort gnostic phenomenah along two axes, “persistence” and “use restricitons”. “Persistence” refers to the degree to which the knowledge can be preserved, “use restriction” refers to what is required to use the knowledge.\n\n\nIn increasing order of persistence as well as cost and difficulty:\n\n\nSingle use. Sometimes context-specific. Understood for a single moment, then lost.\n\n\n\nFixed multi-use or breaking on some condition (likely random, semi-random, or at least hard to avoid: a failed roll, doubles on the d6s, rolling a 1 on a die, etc.)\n\n\n\nContinuing to function as representation until broken or destroyed. Sacred artifacts, monuments, great works, for example. Rare, valuable, difficult to create.\n\n\n\n\nIn decreasing order of restriction and increasing order of cost and difficulty:\n\n\nRequires activation by a specific individual with enough GNOSIS at time of activation.\n\n\n\nRequires activation by a specific individual.\n\n\n\nRequiring any user with sufficient GNOSIS and the abillity to engage with abstract concepts.\n\n\n\nRequiring any being capable of engaging with abstract concepts as medium. Capacity is granted at time of activationd\n\n\n\nRequiring some condition to activate. Forbidden knowledge that has been granted the ability to “conceptualize” itself.\n\n\n\nKnowledge able to conceptualize itself and continuously doing so.\n\n\n\n\n\n\nMost casting performed by a character with GNOSIS, the easiest and cheapest method of casting. The caster writes down the spell and only the caster can use it, provided they have the capacity.\n\n\n\nMost invocations. Can be used by anyone, but only once.\n\n\n\nGnostic focuses that require a minimum gnostic capacity from the wielder.\n\n\n\nAn artifact that can be used by anyone.\n\n\n\nReflecting basins."
+  },
+  {
+    "objectID": "book_workspace/gnosis/gnosis_abilities_concretely.html",
+    "href": "book_workspace/gnosis/gnosis_abilities_concretely.html",
+    "title": "citatel",
+    "section": "",
+    "text": "Skill that could, if you fail, bring back a clone of you that you cant coexist with"
+  },
+  {
+    "objectID": "book_workspace/gnosis/gnosis_abilities_concretely.html#bullshit-pulled-from-the-wall",
+    "href": "book_workspace/gnosis/gnosis_abilities_concretely.html#bullshit-pulled-from-the-wall",
+    "title": "citatel",
+    "section": "Bullshit pulled from the wall",
+    "text": "Bullshit pulled from the wall\n\nClown to Clown Communication\nCommunicating to another, speaking to them, appearing a dream or vision.\n\n\n“I’m an Empath”\nSensing motivations, mind reading, seeing through the eyes of another, hearing through the ears of another.\n\n\n“I’m a Sociopath”\nInfluence -> Command -> Possession\n\n\nEyes Emoji\nAbility to augment Gnostic abilities of perception to extend to… some large radius, creatures you are aware of, not just distance+line of sight. While used, also allows you to sense the location and power of anyone else using Gnostic abilities.\n\n\nCozmik Debris\nGnostic defense, “closedness”, “reversal”"
+  },
+  {
+    "objectID": "book_workspace/gnosis/gnosis_abilities_concretely.html#guy-with-a-pocket-full-of-sticky-notes",
+    "href": "book_workspace/gnosis/gnosis_abilities_concretely.html#guy-with-a-pocket-full-of-sticky-notes",
+    "title": "citatel",
+    "section": "Guy with a Pocket Full of Sticky Notes",
+    "text": "Guy with a Pocket Full of Sticky Notes\nGnostic invocation writer.\nEach invocation known takes 1 minute of thought to create, and each consumes 1 gnostic capacity until it is used. You are able to combine invocations on the same sheet.\n\nHomesickness\nWill continuously tell you how far it is from you and in what direction.\n\n\nHandwarmer\nWill catch on fire when torn. Has the heat of a burning pile of branches. Will burn for about half a minute before going out.\n\n\nMemo\nAbility to consume thoughts/impressions/memories, shows them to the individual holding it when it is torn.\n\n\nEcho\nMust be created while hearing a sound or looking at an image. Able to reproduce those sounds and images. Sounds can be very loud, as loud as an avalanche. Images must not be larger than a small room.\n\n\nChoreography\nWill record the motion it experiences on its first activation. Will reproduce that motion when damaged. Motion must not be longer than a couple seconds, and can only be as strong as the force of a man with 2*(invested GNOSTIC) STR.\n\n\nSynchronization\nTwo invocations. When one half moves, the other moves with about half the force, up to 2*(invested GNOSTIC) STR.\n\n\nBinding\nWhen initially damaged, it becomes extremely sticky and tough. Requires DC of 6 + 3(invested GNOSTIC) STR to break. Lasts 1(invested GNOSTIC) hours.\npoisoning/healing seems like too much is remote activation another set of symbols? stamps that can produce these, extremely valuable"
+  },
+  {
+    "objectID": "book_workspace/gnosis/gnosis_abilities_concretely.html#mental-illnesses",
+    "href": "book_workspace/gnosis/gnosis_abilities_concretely.html#mental-illnesses",
+    "title": "citatel",
+    "section": "Mental Illnesses",
+    "text": "Mental Illnesses\n\nScrying\nYou ask a question, GM rolls on some table to determine the quality of your scrying, from “heavy handed metaphor” to “oh shit he ate the whole pack of bennys”."
+  },
+  {
+    "objectID": "book_workspace/gnosis/gnosis.html",
+    "href": "book_workspace/gnosis/gnosis.html",
+    "title": "citatel",
+    "section": "",
+    "text": "GNOSIS is the capacity to obtain and retain “forbidden” knowledge, knowledge past the ken of human cognition. It can be thought of as psychic ability, openness to the universal mind, the ability to grasp and maintain knowledge of pure forms, the ability to glimpse the fundamental functions/nature being. This knowledge is very “slippery”, difficult to hold on to, often ephemeral, grasped in a fleeting moment of enlightenment, then slipping away.\nGnostic knowledge is extremely difficult to hold entirely in one’s head, typically it must be written down or otherwise represented. Writing is the most common, consistent, and stable means of doing this, writing creates quick, convenient portable artifacts. Other means do exist."
+  },
+  {
+    "objectID": "book_workspace/gnosis/consequences_of_having_gnosis.html",
+    "href": "book_workspace/gnosis/consequences_of_having_gnosis.html",
+    "title": "citatel",
+    "section": "",
+    "text": "GNOSIS is a liability as much as it is an advantage. Gnostic abilities often have more dramatic effects against those with positive GNOSIS attribute scores, and they can often be used without fulfilling some casting requirements against individuals with GNOSIS. GNOSIS is openness of the mind, and an open mind is more easily entered and manipulated. Gnostic abilities might also leverage or change their effect based on the max GNOSIS of the target, so having a higher max GNOSIS (either from your passive score or temp increases in max GNOSIS) is a liability.\nGNOSIS should feel like a liability, using gnostic abilities should always feel risky. Pulling this off might involve a consequence table that is rolled on when gnostic effects are created.\nGNOSIS is knowledge, information, so failed attempts to use gnostic abilities will result in the user believing things that are wrong.\nMaybe at the beginning of a day, or after meditation, you “refill” your gnostic capacity up to your GNOSIS. Other items that refill your GNOSIS also raise your max GNOSIS temporarily, which can be harmful."
+  },
+  {
+    "objectID": "book_workspace/gnosis/consequences_of_having_gnosis.html#scraps",
+    "href": "book_workspace/gnosis/consequences_of_having_gnosis.html#scraps",
+    "title": "citatel",
+    "section": "scraps",
+    "text": "scraps\nThere could be other informational problems that show up for GNOSIS users, weird little consequences for limited periods. Examples:\n\nYou can no longer see things that are currently in motion.\nYou cannot understand or differentiate faces.\nYou forget the entire day up to this point.\nYou are convinced that you are going to fall into the sky (coupled with a small probability that you, in fact, will fall into the sky if you are exposed to it).\n\nPotentially weird stuff like:\n\nYou are constantly sinking slowly into the ground.\n\nThis could be potentially helpful, but difficult to control, like:\n\nObjects around you all start talking to you and telling you their history as they remember it."
+  },
+  {
+    "objectID": "book_workspace/meta/autospec.html",
+    "href": "book_workspace/meta/autospec.html",
+    "title": "citatel",
+    "section": "",
+    "text": "The game is stored in a series of markdown and yaml files. Python scripts automate typesetting, some document generation (including printable cards), and some content generation (rolling for the health of NPCs, etc).\nCurly brackets “{}” in text are used to call out sections that can be automated and entities that exist in the .yamls.\nThe usual syntax ([text](path), etc.) is used to link between markdown files.\nStructure is not stored in a unified way right now. The location of files in the doc/ directory config files like navigation.yaml determine the site structure, while the order in which generated .tex files are imported into the main book.tex file determine the structure of the book.\nThe actual editing is often done in obsidian markdown, but this basically shouldn’t matter for the purposes of automation, etc."
+  },
+  {
+    "objectID": "book_workspace/meta/autospec.html#problems-not-including-things-that-have-not-been-built",
+    "href": "book_workspace/meta/autospec.html#problems-not-including-things-that-have-not-been-built",
+    "title": "citatel",
+    "section": "Problems (Not including things that have not been built)",
+    "text": "Problems (Not including things that have not been built)\n.md->.tex tables is fucked.\n.md links do not become latex page numbers."
+  },
+  {
+    "objectID": "book_workspace/meta/autospec.html#goals",
+    "href": "book_workspace/meta/autospec.html#goals",
+    "title": "citatel",
+    "section": "Goals",
+    "text": "Goals\nStart from .md, publish site and print books with minimal fuckery, better handling of custom python-script-markup in .mds.\nThe links between different mds should resolve to page numbers in latex."
+  },
+  {
+    "objectID": "book_workspace/meta/autospec.html#next-steps",
+    "href": "book_workspace/meta/autospec.html#next-steps",
+    "title": "citatel",
+    "section": "Next Steps?",
+    "text": "Next Steps?\nIn the end, there should be a two shell scripts, one for building the website, one for building the book. They should both use custom Python preprocessing.\nIn addition to the relatively simple curly templating of the sort {die-roll entity (die-roll??)}, there should be a more robust templating syntax that will just pass the contained text to argparse. Maybe this will be: {$ enlist -fi weapons -fx basic} or similar… Worth noting here that enlist would basically never be used for this on its own, rather a new CLI command needs to be written to allow the user to run a filter to return a custom-sorted format-specified set of entities, similar to what is done in update.py, but more specifically md_updater() and similar.\nWile made a set of regex replaces that might fix the ol’ longtable fuckery problem."
+  },
+  {
+    "objectID": "book_workspace/meta/autospec.html#notes",
+    "href": "book_workspace/meta/autospec.html#notes",
+    "title": "citatel",
+    "section": "Notes",
+    "text": "Notes\nStatic sites will likely continue requiring or using .yaml-syntax frontmatter at the beginning of .mds. Might as well use this to our advantage(??)."
+  },
+  {
+    "objectID": "book_workspace/meta/npcs.html",
+    "href": "book_workspace/meta/npcs.html",
+    "title": "citatel",
+    "section": "",
+    "text": "There are not enough NPCs and there is not enough interest or cohesion among npcs that exist! So there need to be goals, minimum numbers of a certain type, and then there needs to be a spec for what npc is going to fill those requirements, and then there needs to be a plan for definitely actually fucking creating them!!??"
+  },
+  {
+    "objectID": "book_workspace/meta/npcs.html#unique-10",
+    "href": "book_workspace/meta/npcs.html#unique-10",
+    "title": "citatel",
+    "section": "Unique (10)",
+    "text": "Unique (10)\n\n5 faction-based unique\n\n\n5 faction-agnostic unique"
+  },
+  {
+    "objectID": "book_workspace/meta/npcs.html#legendary",
+    "href": "book_workspace/meta/npcs.html#legendary",
+    "title": "citatel",
+    "section": "5 Legendary",
+    "text": "5 Legendary\nboss-fight-type NPCs"
+  },
+  {
+    "objectID": "book_workspace/meta/npcs.html#great",
+    "href": "book_workspace/meta/npcs.html#great",
+    "title": "citatel",
+    "section": "5 Great",
+    "text": "5 Great\nhard to kill, very dangerous"
+  },
+  {
+    "objectID": "book_workspace/meta/npcs.html#normal",
+    "href": "book_workspace/meta/npcs.html#normal",
+    "title": "citatel",
+    "section": "10 Normal",
+    "text": "10 Normal\nas dangerous as most things… around as dangerous as a competent player\n\n5 faction-based\n\n\n5 faction-agnostic"
+  },
+  {
+    "objectID": "book_workspace/meta/npcs.html#weak",
+    "href": "book_workspace/meta/npcs.html#weak",
+    "title": "citatel",
+    "section": "15 Weak",
+    "text": "15 Weak\nenemies that are a good deal less dangerous than the players\n\n5 faction-based\n\n\n10 faction-agnostic"
+  },
+  {
+    "objectID": "book_workspace/meta/npcs.html#cannonfodder",
+    "href": "book_workspace/meta/npcs.html#cannonfodder",
+    "title": "citatel",
+    "section": "10 Cannonfodder",
+    "text": "10 Cannonfodder\nenemies that are disposable, probably fought in great numbers"
+  },
+  {
+    "objectID": "book_workspace/meta/todo.html",
+    "href": "book_workspace/meta/todo.html",
+    "title": "citatel",
+    "section": "",
+    "text": "I’ll admit I’m not 100% on this: change score increases from costing 1 SP to 100 SP, change skill costs accordingly. Skill pricing guide?\nMake an extended about section, write about how the game is meant to play, the emphasis on exploration and improvisation, write about how one should be able to GM the game.\nProbably around that area, mention how most fights should probably not be to the death."
+  }
+]

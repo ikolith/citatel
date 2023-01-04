@@ -1,0 +1,163 @@
+{
+  "main": {
+    "id": "9b5013c61b0510fd",
+    "type": "split",
+    "children": [
+      {
+        "id": "e7072a1f21e15a6f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3233fbb3b9019987",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "book/p1_rules_and_character_creation/s1_rules/sixtem.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ebb02d0f1bf3826a",
+    "type": "split",
+    "children": [
+      {
+        "id": "c9009097e506e164",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b255f643466aedf0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "80fd7a6d8cd75518",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f7a33b8d26d842a9",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e9d6206e37731a8c",
+    "type": "split",
+    "children": [
+      {
+        "id": "e82e5bf6db9e5e4f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c2f20bc08012dd55",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "book/p1_rules_and_character_creation/s1_rules/sixtem.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ea3ef824f78a707a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "book/p1_rules_and_character_creation/s1_rules/sixtem.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f67de2614fde07a4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1afc32c35fed06e2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "book/p1_rules_and_character_creation/s1_rules/sixtem.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian42-brat:BRAT": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "3233fbb3b9019987",
+  "lastOpenFiles": [
+    "book/p1_rules_and_character_creation/s1_rules/tactile.md",
+    "book/p1_rules_and_character_creation/s1_rules/intro.md",
+    "book/p1_rules_and_character_creation/s2_character_creation/shopping.md",
+    "book/p1_rules_and_character_creation/s2_character_creation/skeleton_shopping.md",
+    "book/p1_rules_and_character_creation/skeleton.md",
+    "book/p1_rules_and_character_creation/s2_character_creation/prerolls.md",
+    "book/p2_content/s1_content/unaffiliated_entities.md",
+    "book/p2_content/s1_content/groups_and_their_entities.md",
+    "book/p2_content/s1_content/unaffiliated_npcs_and_their_entities.md",
+    "book/p1_rules_and_character_creation/s2_character_creation/how_to_character_creation.md"
+  ]
+}
