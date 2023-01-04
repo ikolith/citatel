@@ -1,10 +1,13 @@
 mypy
-# for everything
 PyYAML
-# just for cards, you're also going to want mklatex or similar
+jupyter
+build
+setuptools
+# just for cards, you're also going to want mklatex, texlive-full or similar
+# TODO: maybe texlive-full is overkill now given that quarto uses... xetex or something??
 pylatex
 # just for the discord bot
 discord.py
 python-dotenv
-# setuptools???
-# -e citutils???
+# you also have to drop into citutils and run:
+# pip install --editable .
