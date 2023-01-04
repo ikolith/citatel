@@ -29,7 +29,7 @@ website:
       - section: Adventures # previously "Campaigns and Adventures"
       - text: "---"
       - section: "Creation Guides"
-      - section: Motivations, and Misc. # previously "Addendeums, Motivations, and Miscellaneous"
+      - section: Motivations and Misc. # previously "Addendeums, Motivations, and Miscellaneous"
 
 format:
   html:
