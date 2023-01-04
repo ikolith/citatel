@@ -15,9 +15,6 @@ website:
   sidebar:
     style: "docked"
     contents:
-      - section: "Test"
-        contents:
-          - book_workspace/book/p0_testing/test.qmd
       - section: "About and Quickstart"
       - section: "Rules"
         contents:
