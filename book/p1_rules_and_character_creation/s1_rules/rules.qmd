@@ -502,3 +502,31 @@ PSYCHIC rules coming soon. -->
 ## GNOSTIC, PSYCHIC, MIST, etc.
 
 Casting mechanics keep evolving with the setting, the attribute used to by PSYCHIC, now it's probably going to be GNOSTIC. When it's finished it will be added here.
+
+## Common Status Effects
+
+### [bleed]
+
+At the beginning of the round, take damage equal to the amount of [bleed] you have. [bleed] does not go away on its own and must be removed.
+
+### [curse]
+
+For every point of [curse] a character has, they suffer -1 to all rolls. 1 [curse] is removed at the beginning of every round.  
+Points of [curse] are often inflicted so that the attacker might use up the [curse] points on a defender in order to cast a specific and sometimes longer lasting curse.
+
+### [frail]
+
+Frail causes you to take double damage from poison and bleeding and lowers max CON by 2 until [frail] is removed.
+
+### [heal]
+
+At the beginning of the round, increase your HP by the amount of [heal] you have, then remove 1 [heal].
+
+### [poison]
+
+At the beginning of the round, take damage equal to the amount of [poison] you have, then remove 1 [poison].
+
+### [vulnerable]
+
+If attacked while [vulnerable], the enemy gets to roll an extra d6 to hit and rolls double their damage dice.
+Many skills and situations inflict the [vulnerable] status, for example: being distracted, blinded, grappled, or unaware.

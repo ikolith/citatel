@@ -1,0 +1,19 @@
+---
+title: Rules are Bad
+---
+
+I hate rules and I want as few of them as possible in my game.
+
+Every mechanic and every rule introduced to a game imposes a cost. The game becomes heavier, slower, there is increased friction in every interaction. Let's say you're in a tense fight and you dive behind a crate before shooting at your assailants. Someone half-remembers a rule about half cover, or maybe this counts as full cover, how tall is this crate exactly? Someone else remembers that there is a rule about shooting from behind cover and anyway can you really take cover twice in a move? Shouldn't you just shoot and then take cover? Or do you count as "in-cover" the entire time? And so it begins. The rulebooks come out. Your cool move that seemed totally reasonable as part of the fiction is being deliberated by the Supreme Court.
+
+I'm told that once everyone has spent long enough with a system everything really starts moving smoothly. That sounds plausible. More often it seems that everyone remembers slightly different versions of the same rule, at least two people disagree and the rulebooks come out anyway. Often tables end up just making something up that makes more sense contextually anyway. People who didn't even know the rule existed would have done something that made sense contextually and moved on.
+
+Obviously games like this need rules, but rules should help the game more than they hurt. That requirement should be enforced for every rule, *especially* small ones. Every rule should be simultaneously as modular and as load-bearing as possible. If a whole set of rules can be replaced by a framework or rule of thumb without hurting the game, even better. There are many ways of doing this. Advantage, disadvantage, adding a score, whatever.
+
+Systems and rulesets in this game often look very similar and use the same minimal set of mechanics in order to try to and achieve this. They often cover a very broad set of situations. This should make it easy for a table to make up a context specific rule on the fly that will work just fine with all the other ones. This is also why numbers in the system tend to stay small, every point should feel meaningful. The shape of the 2d6 probability distribution is very useful for making small bonuses meaningful, especially small differences in bonuses. Going over that in more detail is for another time.
+
+I'm not going to talk about making good rules here because I've never made one. All I want to do here is explain my general dislike of single-purpose and specific rules, which is why try to avoid overly specific rules for specific situations. Sometimes this is hard to avoid. There is a rule for attempting to use two hands for a weapon that is [one-handed]. That is not all that dissimilar from cover, half-cover, or shooting from cover. Likely I will end up having to cut, add, change rules like that so that they won't get in the way.
+
+I think the use of small rigid rules over broad reusable frameworks tends to shape the game into one that is built around the small rules too much. These rules corall players into coloring within the lines, thinking that the available options are only what there are rules for and not engaging with the actual place and world of the ttrpg. By overspecifying small things the tactility of the world is undermined. This is my attempt to find some set of rules that should only ever encourage players to engage with the tactile detail of the world.
+
+It's about the rules you *don't* write, maaan.
