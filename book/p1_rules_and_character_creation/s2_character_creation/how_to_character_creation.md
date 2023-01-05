@@ -1,11 +1,13 @@
-# Character Creation and Management
+---
+title: Character Creation and Management
+---
 
 The base sheet for a human character looks like this:
 
 HP: 18 + (6\*CON), Defense: 6, Movement Speed: 4  
 
-| ATTRIBUTE | SCORE |
-| --------- | ----- |
+| ATTRIBUTE      | SCORE |
+| -------------- | ----- |
 | STR(ENGTH)     | 0     |
 | AGI(LITY)      | 0     |
 | DEX(TERITY)    | 0     |
