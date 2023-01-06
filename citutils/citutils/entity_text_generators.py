@@ -295,9 +295,9 @@ def filter_generate_text(  # this is called "text" not "md"... and the params su
     filter_tags_include: str = "",
     filter_tags_exclude: str = "",
     include_full_text: bool = False,
-    text_type: str = "md",
     html_characters: bool = False,
     skip_generation: bool = False,
+    text_type: str = "md",
 ) -> str:
     if text_type == "md":
         text = ""

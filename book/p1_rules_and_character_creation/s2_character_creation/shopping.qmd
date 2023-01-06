@@ -9,6 +9,7 @@ execute:
 import os
 from citutils import text_utils_parsers as tu
 entities = tu.get_entities(os.path.join("..","..","..","data","entities"))
+#TODO: LET IT B E S O R T E D
 ```
 
 ## Species/Peoples of Talaje
@@ -27,8 +28,8 @@ TODO: need some premade loadouts
 
 ```{python}
 from citutils import entity_text_generators as ge
-print("### Weapons \n" + ge.filter_generate_text(entities, "basic, weapon"))
-print("### Items \n" + ge.filter_generate_text(entities,"basic, item"))
+print("### Weapons \n" + ge.filter_generate_text(entities, "basic, weapon", html_characters = True))
+print("### Items \n" + ge.filter_generate_text(entities,"basic, item", html_characters = True))
 ```
 
 ## Starting Skills
@@ -36,7 +37,7 @@ print("### Items \n" + ge.filter_generate_text(entities,"basic, item"))
 TODO: need some skill-paths... potentially i need to generate in smaller chunks, and probably organize these, once the list is more stable
 
 ```{python}
-print(ge.filter_generate_text(entities, "basic, skill"))
+print(ge.filter_generate_text(entities, "basic, skill", html_characters = True))
 ```
  
 <!-- ### A Note on Skills and Backgrounds -->

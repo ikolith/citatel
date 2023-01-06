@@ -1,6 +1,5 @@
 import argparse
 import os.path
-
 from citutils import text_utils_parsers as tu, vars as vs, commands as co
 
 entities = tu.get_entities(os.path.join("data", "entities"))

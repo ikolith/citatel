@@ -7,10 +7,6 @@ import os
 from datetime import date
 
 
-def get_dl_path(filename: str) -> str:
-    return os.path.join("docs", "downloads", filename)
-
-
 def get_front_text(name: str, toc: bool = False) -> str:
     toc_text = "toc: true" if toc else ""
     return rf"""---
@@ -19,9 +15,6 @@ title: {name}
 ---
 
 """
-
-
-entities = tu.get_entities(os.path.join("docs", "_data", "entities"))
 
 end_text = f"This file was last auto-generated on {date.today()}."
 
@@ -113,29 +106,3 @@ tchok_doc = ty.Doc(
 #         ),
 #     ]
 # )
-
-# running updates
-
-## generating cards
-
-### all
-co.filter_generate_cards(entities, "poker", "", "", get_dl_path("all_cards"))
-### basic
-co.filter_generate_cards(entities, "poker", "basic", "", get_dl_path("basic_cards"))
-### invocations
-co.filter_generate_cards(
-    entities, "poker", "invocation", "", get_dl_path("invocation_cards")
-)
-### items
-co.filter_generate_cards(entities, "poker", "item", "", get_dl_path("item_cards"))
-### npcs
-co.filter_generate_cards(entities, "poker", "npc", "", get_dl_path("npc_cards"))
-### skills
-co.filter_generate_cards(entities, "poker", "skill", "", get_dl_path("skill_cards"))
-### weapons
-co.filter_generate_cards(entities, "poker", "weapon", "", get_dl_path("weapon_cards"))
-
-## generating docs
-# TODO: getting started doc with the skills and items and such
-# TODO: figure out what will replace this old section
-# md_updater(entities, docs_to_update)
