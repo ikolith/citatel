@@ -66,7 +66,7 @@ async def self(
 ) -> None:
 
     await post_text(
-        co.single_curly_parser(curly, entities, expand_entities, roll_dice),
+        tu.single_curly_parser(curly, entities, expand_entities, roll_dice),
         interaction,
     )
 

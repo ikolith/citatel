@@ -203,3 +203,25 @@ def generate_entity_tree_text(
         if n["unique"]:
             entity_text += "\n" + n["text"]
     return non_unique_text + entity_text
+
+
+# misc. parsers
+
+
+def single_curly_parser(
+    text: str,
+    entities: ty.Entities,
+    expand_entities: bool = False,
+    roll_dice: bool = False,
+) -> str:
+    if not (text.startswith("{") and text.endswith("}")):
+        text = "{" + text + "}"
+    curlies_parsed = parse_curlies(text)
+    assert len(curlies_parsed) == 1
+    base_curly = curlies_parsed[0]
+    # case when only die roll is present
+    if not base_curly["entity"]:
+        return str(du.die_parser_roller(base_curly["roll"]))
+
+    # all other cases
+    return generate_entity_tree_text(base_curly, entities, expand_entities, roll_dice)

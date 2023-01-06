@@ -1,10 +1,15 @@
-import citutils.my_types as ty
-import citutils.cards as cr
-import citutils.text_utils_parsers as tu
-import citutils.dice_utils as du
 import warnings
 from copy import deepcopy
 import os
+
+from citutils import (
+    my_types as ty,
+    dice_utils as du,
+    text_utils_parsers as tu,
+    cards as cr,
+)
+
+# im not sure that these should be organized in "commands"...
 
 
 def filter_entities_by_filter_tags(
@@ -72,11 +77,12 @@ def filter_generate_cards(
     )
     cr.generate_cards(card_entities, entities, card_type, output_filepath)
 
+
 def enlist_generate_cards(
     entities: ty.Entities,
     card_type: str = "",
     cards: str = "",
-    input_filepath: str = "",  # maybe this should just be replaced with fi/fx tbh
+    input_filepath: str = "",
     output_filepath: str = "",
 ) -> None:
     # set card type
@@ -94,24 +100,3 @@ def enlist_generate_cards(
     if not output_filepath:
         output_filepath = os.path.join("output", "cards")
     cr.generate_cards(card_entities, entities, card_type, output_filepath)
-
-
-def single_curly_parser(
-    text: str,
-    entities: ty.Entities,
-    expand_entities: bool = False,
-    roll_dice: bool = False,
-) -> str:
-    if not (text.startswith("{") and text.endswith("}")):
-        text = "{" + text + "}"
-    curlies_parsed = tu.parse_curlies(text)
-    assert len(curlies_parsed) == 1
-    base_curly = curlies_parsed[0]
-    # case when only die roll is present
-    if not base_curly["entity"]:
-        return str(du.die_parser_roller(base_curly["roll"]))
-
-    # all other cases
-    return tu.generate_entity_tree_text(
-        base_curly, entities, expand_entities, roll_dice
-    )
