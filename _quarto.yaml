@@ -28,6 +28,8 @@ website:
           - book/p2_content/s1_content/unaffiliated_npcs_and_their_entities.md
           - book/p2_content/s1_content/groups_and_their_entities.md
       - section: Worldbuilding # previously "Lore and Worldbuilding", will include the Language section
+        contents:
+          - auto: book/p3_worldbuilding/shipped/*
       - section: Adventures # previously "Campaigns and Adventures"
       - text: "---"
       - section: "Creation Guides"
