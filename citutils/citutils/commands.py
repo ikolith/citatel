@@ -13,23 +13,23 @@ def filter_entities_by_filter_tags(
     filter_tags_exclude: str = "",
 ) -> ty.Entities:
     # enlist only uses the clean names, so filtered_entities.keys() but we build the entire dict for... futureproofing???
-    fti = filter_tags_include.replace(" ", "").split(",") if filter_tags_include else []
-    ftx = filter_tags_exclude.replace(" ", "").split(",") if filter_tags_exclude else []
+    fi = filter_tags_include.replace(" ", "").split(",") if filter_tags_include else []
+    fx = filter_tags_exclude.replace(" ", "").split(",") if filter_tags_exclude else []
     filtered_entities = ty.Entities({})
     for clean_name, entity in entities.items():
         if "filter_tags" not in entity.keys():  # untested
-            if not fti:
+            if not fi:
                 filtered_entities[clean_name] = entity
                 continue
             else:
                 continue
         filter_tags = entity["filter_tags"].replace(" ", "").split(",")
-        if ftx:
-            if any(ft in ftx for ft in filter_tags):
+        if fx:
+            if any(ft in fx for ft in filter_tags):
                 # possibly users should be able to choose between any() and all() as filtering behaviour...
                 continue
-        if fti:
-            if all(ft in filter_tags for ft in fti):
+        if fi:
+            if all(ft in filter_tags for ft in fi):
                 filtered_entities[clean_name] = entity
         else:
             filtered_entities[clean_name] = entity
@@ -71,7 +71,6 @@ def filter_generate_cards(
         ).keys()
     )
     cr.generate_cards(card_entities, entities, card_type, output_filepath)
-
 
 def enlist_generate_cards(
     entities: ty.Entities,

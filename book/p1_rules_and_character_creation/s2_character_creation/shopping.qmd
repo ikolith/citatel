@@ -5,7 +5,11 @@ execute:
   output: asis
 ---
 
-# skeleton
+```{python}
+import os
+from citutils import text_utils_parsers as tu
+entities = tu.get_entities(os.path.join("..","..","..","data","entities"))
+```
 
 ## Species/Peoples of Talaje
  
@@ -19,11 +23,21 @@ Backgrounds determine how many flakes (currency) you start with.
 
 ## Starting Gear
 
-This should be composed of premade loadouts that group some set of .yaml entities, as well as a generated list of all the gear with the `basic` .yaml tag. This will likely involve the existing doc-generation functions. Either this will mean uploading a .md to the doc generation functions for processing, or it will mean just making the whole doc in python... the second is easier to do right now, but the first is clearly the right answer!
+TODO: need some premade loadouts
+
+```{python}
+from citutils import entity_text_generators as ge
+print("### Weapons \n" + ge.filter_generate_text(entities, "basic, weapon"))
+print("### Items \n" + ge.filter_generate_text(entities,"basic, item"))
+```
 
 ## Starting Skills
 
-Basically the same issues/ideas as in the previous section. Need a couple skill-point priced-out builds, and then all the `basic` skills.
+TODO: need some skill-paths... potentially i need to generate in smaller chunks, and probably organize these, once the list is more stable
+
+```{python}
+print(ge.filter_generate_text(entities, "basic, skill"))
+```
  
 <!-- ### A Note on Skills and Backgrounds -->
 <!-- Consider how your background and the skills you start with might support each other. Picking specific skills for relevance to your background rather than building an optimal character can give your character a lot of interesting moments, especially early on. -->

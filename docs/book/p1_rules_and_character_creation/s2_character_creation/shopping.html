@@ -265,13 +265,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#skeleton" id="toc-skeleton" class="nav-link active" data-scroll-target="#skeleton">skeleton</a>
-  <ul class="collapse">
-  <li><a href="#speciespeoples-of-talaje" id="toc-speciespeoples-of-talaje" class="nav-link" data-scroll-target="#speciespeoples-of-talaje">Species/Peoples of Talaje</a></li>
+  <li><a href="#speciespeoples-of-talaje" id="toc-speciespeoples-of-talaje" class="nav-link active" data-scroll-target="#speciespeoples-of-talaje">Species/Peoples of Talaje</a></li>
   <li><a href="#backgrounds" id="toc-backgrounds" class="nav-link" data-scroll-target="#backgrounds">Backgrounds</a></li>
-  <li><a href="#starting-gear" id="toc-starting-gear" class="nav-link" data-scroll-target="#starting-gear">Starting Gear</a></li>
-  <li><a href="#starting-skills" id="toc-starting-skills" class="nav-link" data-scroll-target="#starting-skills">Starting Skills</a></li>
+  <li><a href="#starting-gear" id="toc-starting-gear" class="nav-link" data-scroll-target="#starting-gear">Starting Gear</a>
+  <ul class="collapse">
+  <li><a href="#weapons" id="toc-weapons" class="nav-link" data-scroll-target="#weapons">Weapons</a></li>
+  <li><a href="#items" id="toc-items" class="nav-link" data-scroll-target="#items">Items</a></li>
   </ul></li>
+  <li><a href="#starting-skills" id="toc-starting-skills" class="nav-link" data-scroll-target="#starting-skills">Starting Skills</a></li>
   </ul>
 </nav>
     </div>
@@ -295,8 +296,6 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="skeleton" class="level1">
-<h1>skeleton</h1>
 <section id="speciespeoples-of-talaje" class="level2">
 <h2 class="anchored" data-anchor-id="speciespeoples-of-talaje">Species/Peoples of Talaje</h2>
 <p>There are currently only a couple to choose from. TODO: add those/that one??. Another problem is that base-sheets really don’t fit in the .yamls right now. Given that the .yamls were also going to be extended to be able to deal with tables and the way to do that was uncertain, it seems like this really should prompt a change in how the .yamls work fundamentally! Are both base-sheets and tables things <code>entity</code>s?</p>
@@ -308,11 +307,580 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="starting-gear" class="level2">
 <h2 class="anchored" data-anchor-id="starting-gear">Starting Gear</h2>
-<p>This should be composed of premade loadouts that group some set of .yaml entities, as well as a generated list of all the gear with the <code>basic</code> .yaml tag. This will likely involve the existing doc-generation functions. Either this will mean uploading a .md to the doc generation functions for processing, or it will mean just making the whole doc in python… the second is easier to do right now, but the first is clearly the right answer!</p>
+<p>TODO: need some premade loadouts</p>
+<section id="weapons" class="level3">
+<h3 class="anchored" data-anchor-id="weapons">Weapons</h3>
+<section id="dagger" class="level4">
+<h4 class="anchored" data-anchor-id="dagger">Dagger</h4>
+<p><strong>Tags:</strong> one-handed, hilted, bladed, reach: close, stealth<br>
+<strong>Speed:</strong> (1n1)<br>
+<strong>To-Hit:</strong> +DEX<br>
+1d4 (P) [thrusting] or (S) [swinging: neutral]<br>
+<strong>Encumbrance:</strong> 1/3</p>
+</section>
+<section id="long-tooth" class="level4">
+<h4 class="anchored" data-anchor-id="long-tooth">Long Tooth</h4>
+<p><strong>Tags:</strong> one-handed, hilted, bladed, reach: close, stealth<br>
+<strong>Speed:</strong> (1n1)-&gt;(1n2)<br>
+<strong>To-Hit:</strong> +DEX<br>
+1d4 + AGI (P) [thrusting]<br>
+Ignore 5 Armor.<br>
+<strong>Encumbrance:</strong> 1/3<br>
+<em>A narrow bladeless rondel dagger, a long spike with a reinforced point.</em></p>
+</section>
+<section id="butchers-cleaver" class="level4">
+<h4 class="anchored" data-anchor-id="butchers-cleaver">Butcher’s Cleaver</h4>
+<p><strong>Tags:</strong> one-handed, hilted, bladed, reach: close, stealth<br>
+<strong>Speed:</strong> (1n2)<br>
+<strong>To-Hit:</strong> +STR<br>
+1d4+STR (S) [swinging: leading]<br>
+<em>A heavy, crude cleaver of black pocked metal.</em><br>
+<strong>Encumbrance:</strong> 1/3</p>
+</section>
+<section id="bushmans-kukri" class="level4">
+<h4 class="anchored" data-anchor-id="bushmans-kukri">Bushman’s Kukri</h4>
+<p><strong>Tags:</strong> one-handed, hilted, bladed, reach: close, stealth<br>
+<strong>Speed:</strong> (1n1)-&gt;(1n1)-&gt;(1n2)<br>
+<strong>To-Hit:</strong> +DEX<br>
+1d4 (P) [thrusting] or (S) [swinging: leading]<br>
+<strong>Encumbrance:</strong> 1/3</p>
+</section>
+<section id="gleaming-sabre" class="level4">
+<h4 class="anchored" data-anchor-id="gleaming-sabre">Gleaming Sabre</h4>
+<p><strong>Tags:</strong> one-handed, hilted, bladed<br>
+<strong>Requirements:</strong> 2 DEX<br>
+<strong>Speed:</strong> (1n1)-&gt;(1n1)-&gt;(1n2)<br>
+<strong>To-Hit:</strong> +AGI<br>
+1d4 + AGI (S) [swinging: following]<br>
+<em>The fine pale blade curves backwards, the sword is deceptively light, the blade is thin and fickle.</em></p>
+</section>
+<section id="simple-shortsword" class="level4">
+<h4 class="anchored" data-anchor-id="simple-shortsword">Simple Shortsword</h4>
+<p><strong>Tags:</strong> one-handed, hilted, bladed<br>
+<strong>Speed:</strong> (1n1)-&gt;(1n2)<br>
+<strong>To-Hit:</strong> +AGI<br>
+1d8 (P) [thrusting] or (S) [swinging: neutral]<br>
+<em>“An anadorned straight sword. A simple and reliable weapon.”</em><br>
+<strong>Encumbrance:</strong> 1</p>
+</section>
+<section id="machete" class="level4">
+<h4 class="anchored" data-anchor-id="machete">Machete</h4>
+<p><strong>Tags:</strong> one-handed, hilted, bladed<br>
+<strong>Speed:</strong> (1n1)-&gt;(1n2)<br>
+<strong>To-Hit:</strong> +STR<br>
+1d6 (S) [swinging: neutral]<br>
+<em>A simple tool for cutting down brush.</em><br>
+<strong>Encumbrance:</strong> 1</p>
+</section>
+<section id="falx" class="level4">
+<h4 class="anchored" data-anchor-id="falx">Falx</h4>
+<p><strong>Tags:</strong> one-handed, hilted, bladed<br>
+<strong>Speed:</strong> (1n1)-&gt;(1n2)<br>
+<strong>To-Hit:</strong> +AGI<br>
+1d6 (P) + 2 (S) [swinging: leading], 1d4 (S) [thrusting]<br>
+<em>A sword adapted from a sickle. The blade curves forward, it is swung with the point toward the enemy.</em></p>
+</section>
+<section id="heavy-cutlass" class="level4">
+<h4 class="anchored" data-anchor-id="heavy-cutlass">Heavy Cutlass</h4>
+<p><strong>Tags:</strong> one-handed, hilted, bladed<br>
+<strong>Speed:</strong> (1n1)-&gt;(2n1)<br>
+<strong>To-Hit:</strong> +AGI<br>
+1d8 (S) [swinging: leading], 1d6 (P) [thrusting]<br>
+<em>A broad, unrefined sword for hacking through enemies.</em><br>
+<strong>Encumbrance:</strong> 1</p>
+</section>
+<section id="boar-sword" class="level4">
+<h4 class="anchored" data-anchor-id="boar-sword">Boar Sword</h4>
+<p><strong>Tags:</strong> hilted two-handed reach<br>
+<strong>Requirements:</strong> 2 AGI<br>
+<strong>Speed:</strong> (1n2)-&gt;(2n1)<br>
+<strong>To-Hit:</strong> +AGI<br>
+2d6 + AGI (P) [thrusting]<br>
+Inflict 2 [bleed]<br>
+<strong>Encumbrance:</strong> 1</p>
+</section>
+<section id="estoc" class="level4">
+<h4 class="anchored" data-anchor-id="estoc">Estoc</h4>
+<p><strong>Tags:</strong> hilted, two-handed, reach<br>
+<strong>Requirements:</strong> 2 AGI<br>
+<strong>Speed:</strong> (1n2)<br>
+<strong>To-Hit:</strong> +AGI<br>
+2d6 + AGI (P) [thrusting]<br>
+Ignore armor equal to piercing damage.<br>
+<strong>Encumbrance:</strong> 1</p>
+</section>
+<section id="greatsword" class="level4">
+<h4 class="anchored" data-anchor-id="greatsword">Greatsword</h4>
+<p><strong>Tags:</strong> hilted, two-handed, bladed<br>
+<strong>Requirements:</strong> 1 AGI, 2 STR<br>
+<strong>Speed:</strong> (1n2)<br>
+<strong>To-Hit:</strong> +AGI +STR<br>
+2d8 (P) [thrusting], 2d10 (S) [swinging: neutral]<br>
+Robust Edge: increase low rolls required to lose [sharpened] buff by 2<br>
+<strong>Encumbrance:</strong> 1</p>
+</section>
+<section id="rhomphaia" class="level4">
+<h4 class="anchored" data-anchor-id="rhomphaia">Rhomphaia</h4>
+<p><strong>Tags:</strong> two-handed, bladed, reach: 2<br>
+<strong>Requirements:</strong> 1 STR<br>
+<strong>Speed:</strong> (1n1)-&gt;(1n2)<br>
+<strong>To-Hit:</strong> +AGI<br>
+1d6 (P) + 1d6 (S) [swinging: leading], 1d8 (P) [thrusting]<br>
+<em>The long blade of the Rhomphaia curves aggressively toward the enemy, like a great bladed claw.</em><br>
+<strong>Encumbrance:</strong> 1</p>
+</section>
+<section id="crude-club" class="level4">
+<h4 class="anchored" data-anchor-id="crude-club">Crude Club</h4>
+<p><strong>Tags:</strong> hilted, one-handed<br>
+<strong>Speed:</strong> (2n1)<br>
+<strong>To-Hit:</strong> +STR<br>
+1d8 + STR (B) [swinging: neutral]<br>
+<em>Bonk.</em><br>
+<strong>Encumbrance:</strong> 1</p>
+</section>
+<section id="one-handed-spear" class="level4">
+<h4 class="anchored" data-anchor-id="one-handed-spear">One Handed Spear</h4>
+<p><strong>Tags:</strong> shafted, one-handed, reach: 2<br>
+<strong>Speed:</strong> (1n1)-&gt;(1n2)<br>
+1d8 (P) [thrusting]<br>
+<strong>Encumbrance:</strong> 1</p>
+</section>
+<section id="javelin" class="level4">
+<h4 class="anchored" data-anchor-id="javelin">Javelin</h4>
+<p><strong>Tags:</strong> one-handed, shafted<br>
+<strong>Requirements:</strong> 1 AGI<br>
+<strong>Speed:</strong> (1n1)-&gt;(1n2)<br>
+<strong>To-Hit:</strong> +AGI<br>
+1d6 (P) [thrusting] Can be thrown for (2n1), PER To-Hit, 1d6 + STR (P), range: 5+STR<br>
+<strong>Encumbrance:</strong> 1/3</p>
+</section>
+<section id="adze" class="level4">
+<h4 class="anchored" data-anchor-id="adze">Adze</h4>
+<p><strong>Tags:</strong> one-handed, shafted, bladed<br>
+<strong>Speed:</strong> (1n1)-&gt;(1n2)<br>
+<strong>To-Hit:</strong> +STR<br>
+1d4 (S) [swinging: leading]<br>
+If Adze does 4 or more damage it becomes stuck in the target. Removing it is (2n1) and does 1d4+STR (S) damage.<br>
+<strong>Encumbrance:</strong> 1</p>
+</section>
+<section id="giant-club" class="level4">
+<h4 class="anchored" data-anchor-id="giant-club">Giant Club</h4>
+<p><strong>Tags:</strong> two-handed, giant, shafted<br>
+<strong>Requirements:</strong> 3 STR<br>
+<strong>Speed:</strong> (1n3) -&gt; (2n1)<br>
+<strong>To-Hit:</strong> +2<em>STR<br>
+1d10+2</em>STR<br>
+<em>BONK.</em></p>
+</section>
+<section id="goedendag" class="level4">
+<h4 class="anchored" data-anchor-id="goedendag">Goedendag!</h4>
+<p><strong>Tags:</strong> shafted, two-handed, reach: 2<br>
+<strong>Requirements:</strong> 1 STR<br>
+<strong>Speed:</strong> (1n2)-&gt;(2n1)<br>
+<strong>To-Hit:</strong> +STR<br>
+1d8+STR (B) [swinging: neutral], 1d8+STR (P) [thrusting]<br>
+Ignore 2 armor.<br>
+<strong>Encumbrance:</strong> 2</p>
+</section>
+<section id="pitchfork" class="level4">
+<h4 class="anchored" data-anchor-id="pitchfork">Pitchfork</h4>
+<p><strong>Tags:</strong> shafted, two-handed, reach: 2<br>
+<strong>Speed:</strong> (1n1)-&gt;(1n2)<br>
+<strong>To-Hit:</strong> +AGI<br>
+1d8 (P) [thrusting]<br>
+If your STR is greater or equal to the enemy, you can choose to send them 1 space back on a hit.<br>
+<strong>Encumbrance:</strong> 1</p>
+</section>
+<section id="battleaxe" class="level4">
+<h4 class="anchored" data-anchor-id="battleaxe">Battleaxe</h4>
+<p><strong>Tags:</strong> two-handed, shafted, bladed<br>
+<strong>Requirements:</strong> 1 STR<br>
+<strong>Speed:</strong> (1n2)-&gt;(2n1)<br>
+<strong>To-Hit:</strong> +STR<br>
+1d8 + 2*STR (S) [swinging: leading]<br>
+<strong>Encumbrance:</strong> 2</p>
+</section>
+<section id="cutter-mattock" class="level4">
+<h4 class="anchored" data-anchor-id="cutter-mattock">Cutter Mattock</h4>
+<p><strong>Tags:</strong> two-handed, shafted, heavy<br>
+<strong>Requirements:</strong> 1 STR<br>
+<strong>Speed:</strong> (2n1)<br>
+<strong>To-Hit:</strong> +STR<br>
+1d8 (S) [swinging: leading]<br>
+<strong>Encumbrance:</strong> 2</p>
+</section>
+<section id="pickaxe" class="level4">
+<h4 class="anchored" data-anchor-id="pickaxe">Pickaxe</h4>
+<p><strong>Tags:</strong> two-handed, shafted<br>
+<strong>Speed:</strong> (2n1)<br>
+<strong>To-Hit:</strong> STR<br>
+1d6+STR (P) [swinging: leading]<br>
+<strong>Encumbrance:</strong> 2</p>
+</section>
+<section id="sling" class="level4">
+<h4 class="anchored" data-anchor-id="sling">Sling</h4>
+<p><strong>Tags:</strong> range: 6*DEX<br>
+<strong>Speed:</strong> (2n1)<br>
+<strong>To-Hit:</strong> +PER<br>
+1d6+PER (B)</p>
+</section>
+<section id="shortbow" class="level4">
+<h4 class="anchored" data-anchor-id="shortbow">Shortbow</h4>
+<p><strong>Tags:</strong> range: 15<br>
+<strong>Requirements:</strong> 1 DEX, 1 STR<br>
+<strong>Speed:</strong> (1n1)-&gt;(2n1)<br>
+<strong>To-Hit:</strong> +PER<br>
+1d6+PER (P)<br>
+<strong>Encumbrance:</strong> 1</p>
+</section>
+</section>
+<section id="items" class="level3">
+<h3 class="anchored" data-anchor-id="items">Items</h3>
+<section id="bandage" class="level4">
+<h4 class="anchored" data-anchor-id="bandage">Bandage</h4>
+<p>Spend (3n1). Remove 1 bleed. Bandages can be improvised out of any cloth.<br>
+<em>A roll of clean cloth.</em></p>
+</section>
+<section id="simple-whetstone" class="level4">
+<h4 class="anchored" data-anchor-id="simple-whetstone">Simple Whetstone</h4>
+<p>Apply [sharpened] to a [bladed] weapon, takes 30 minutes to apply. The weapon does +1 damage and ignores 1 armor. [sharpened] is lost when you roll a 1 with a damage die.<br>
+<em>A large flat stone bearing faded inscriptions.</em></p>
+</section>
+<section id="variigoshlovr-root" class="level4">
+<h4 class="anchored" data-anchor-id="variigoshlovr-root">Variigoshlovr Root</h4>
+<p>(1n1). Remove 1 bleed.</p>
+</section>
+<section id="bag-of-salt" class="level4">
+<h4 class="anchored" data-anchor-id="bag-of-salt">Bag of Salt</h4>
+<p>Worth {1d12}*10f.</p>
+</section>
+<section id="salorbrious" class="level4">
+<h4 class="anchored" data-anchor-id="salorbrious">Salorbrious</h4>
+<p>For 6 turns, gain 1 SALT every turn.<br>
+<em>A smooth waxed sphere of pure SALT, it feels heavy in the hand. It’s just enough to kill a man.</em></p>
+</section>
+<section id="tall-salted-peter" class="level4">
+<h4 class="anchored" data-anchor-id="tall-salted-peter">Tall Salted Peter</h4>
+<p>Gain 3 SALT.<br>
+<em>A long clay vial filled with salt suspended in a dark brown oil and continuously swirling and glittering .</em></p>
+</section>
+<section id="rucksack" class="level4">
+<h4 class="anchored" data-anchor-id="rucksack">Rucksack</h4>
+<p>Max encumbrance: 6 + STR, [encumbered] threshold: 3 + STR.</p>
+</section>
+<section id="sling-bag" class="level4">
+<h4 class="anchored" data-anchor-id="sling-bag">Sling Bag</h4>
+<p>Can be worn with another bag. Max encumbrance: 3. This bag can be switched from being worn on your front or back for [1n1]. Searching and grabbing something from this bag is [2n1].</p>
+</section>
+<section id="scouts-bag" class="level4">
+<h4 class="anchored" data-anchor-id="scouts-bag">Scout’s Bag</h4>
+<p>Max encumbrance: 4 + STR.</p>
+</section>
+<section id="frame-bag" class="level4">
+<h4 class="anchored" data-anchor-id="frame-bag">Frame Bag</h4>
+<p>Max encumbrance: 8+STR. [enumbered] threshold: 2+STR.</p>
+</section>
+<section id="stick-bag" class="level4">
+<h4 class="anchored" data-anchor-id="stick-bag">Stick Bag</h4>
+<p>Can be carried while wearing another bag. Stick must be held with one hand. Max encumbrance: 2 + STR.</p>
+</section>
+</section>
 </section>
 <section id="starting-skills" class="level2">
 <h2 class="anchored" data-anchor-id="starting-skills">Starting Skills</h2>
-<p>Basically the same issues/ideas as in the previous section. Need a couple skill-point priced-out builds, and then all the <code>basic</code> skills.</p>
+<p>TODO: need some skill-paths… potentially i need to generate in smaller chunks, and probably organize these, once the list is more stable</p>
+<section id="charge" class="level4">
+<h4 class="anchored" data-anchor-id="charge">Charge</h4>
+<p><strong>Requirements:</strong> 1 STR<br>
+Charge is (1n1). Move double your movement speed in a straight line, must move at least two hexes. Once you reach an enemy, you may perform an attack. If your attack hits you can choose to add your STR to the damage. If you are entering a STR contest of some kind, add your STR to your roll again.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="crush" class="level4">
+<h4 class="anchored" data-anchor-id="crush">Crush</h4>
+<p><strong>Requirements:</strong> 2 STR, a [swinging] (B) attack that uses +STR to-hit<br>
+Spend an extra 1 AP. If crush hits, use the attack roll as a check against the enemies STR. If the attacking roll is higher, the defender is knocked prone and [vulnerable].<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="quick-to-act" class="level4">
+<h4 class="anchored" data-anchor-id="quick-to-act">Quick to Act</h4>
+<p><strong>Requirements:</strong> 1 AGI<br>
+Raise your initiative by 3.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="mobility" class="level4">
+<h4 class="anchored" data-anchor-id="mobility">Mobility</h4>
+<p><strong>Requirements:</strong> 1 AGI<br>
+Every turn, you can move 1 space for free (as long as you can currently move).<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="parry" class="level4">
+<h4 class="anchored" data-anchor-id="parry">Parry</h4>
+<p><strong>Requirements:</strong> 2 AGI, a hilted weapon that uses AGI or DEX To-Hit<br>
+Parry can be used to attempt to [interrupt] a melee attack. Pay (1n2). Contest the attack roll with a Parry attempt, a check + AGI or DEX. If you win, the attack does no damage and you gain 2 Temp AP (you can only gain 2 Temp AP per turn this way). If you fail, you are [vulnerable] until your next action.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="evasive" class="level4">
+<h4 class="anchored" data-anchor-id="evasive">Evasive</h4>
+<p><strong>Requirements:</strong> Requires: 2 AGI, a [finesse] weapon or shield.<br>
+Add 2 to your to-hit difficulty for every [finesse] weapon or [finesse] shield you are wielding, up to 4.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="feint" class="level4">
+<h4 class="anchored" data-anchor-id="feint">Feint</h4>
+<p><strong>Requirements:</strong> 1 AGI<br>
+(1n2). Roll a check +AGI against your enemies passive AGI or PERCEPTION, whichever is higher. If you win, you can perform 1 action without triggering [interrupt]s from that enemy. The enemy is considered [vulnerable] until your (or your allies’) next action.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="pulling-punches" class="level4">
+<h4 class="anchored" data-anchor-id="pulling-punches">Pulling Punches</h4>
+<p><strong>Requirements:</strong> 1 DEX<br>
+When you roll damage dice for an attack, you can choose to set a max damage, (example: treat any number above a 4 as a 4). You can also choose to do non-lethal damage if the damage type is (B).<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="draw" class="level4">
+<h4 class="anchored" data-anchor-id="draw">Draw!</h4>
+<p><strong>Requirements:</strong> 1 DEX<br>
+You may ignore weapon switching costs if you either switch [one-handed] weapons or draw a one handed weapon and immediately attempt an attack.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="fast-recovery" class="level4">
+<h4 class="anchored" data-anchor-id="fast-recovery">Fast Recovery</h4>
+<p><strong>Requirements:</strong> 1 CON<br>
+Your recovery dice are d10s rather than d6s.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="hearty" class="level4">
+<h4 class="anchored" data-anchor-id="hearty">Hearty</h4>
+<p><strong>Requirements:</strong> 2 CON<br>
+Get +6 Health. You can take this skill twice.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="precision" class="level4">
+<h4 class="anchored" data-anchor-id="precision">Precision</h4>
+<p><strong>Requirements:</strong> 1 PERCEPTION<br>
+(1n1). You can use Precision right before any attack, including an interrupt. If the attack lands, treat one damage die (up to d8) as landing on max damage.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="focus" class="level4">
+<h4 class="anchored" data-anchor-id="focus">Focus</h4>
+<p><strong>Requirements:</strong> 1 PERCEPTION<br>
+(1n1). You can use Focus right before any attack, including an interrupt. Add your PERCEPTION to hit.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="finisher" class="level4">
+<h4 class="anchored" data-anchor-id="finisher">Finisher</h4>
+<p>Use this before performing an attack. Lose 1 AP. If double the damage would kill the opponent, treat the attack as dealing double damage (max +10), if you kill with the move regain 1 AP.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="momentum" class="level4">
+<h4 class="anchored" data-anchor-id="momentum">Momentum</h4>
+<p>When you kill an opponent, regain 1 AP.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="dual-wielding-1-ambidextrous" class="level4">
+<h4 class="anchored" data-anchor-id="dual-wielding-1-ambidextrous">Dual Wielding 1: Ambidextrous</h4>
+<p><strong>Requirements:</strong> AGI 1<br>
+You can attack with your offhand as well as you attack with your main hand. Track the costs from their [BA]s separately, attacks with one do not affect the other.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="dual-wielding-2-simultaneous-attack" class="level4">
+<h4 class="anchored" data-anchor-id="dual-wielding-2-simultaneous-attack">Dual Wielding 2: Simultaneous Attack</h4>
+<p><strong>Requirements:</strong> AGI 1, STR 1, Dual Wielding 1<br>
+Once per turn, you can attack with both of your weapons at the same time spending 1 less AP than you would to do the attacks separately. Perform the attacks as normal otherwise.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="dual-wielding-3-flurry" class="level4">
+<h4 class="anchored" data-anchor-id="dual-wielding-3-flurry">Dual Wielding 3: Flurry</h4>
+<p><strong>Requirements:</strong> AGI 2, STR 2, Dual Wielding 2<br>
+If you roll max damage with one of your weapons, you can attack again with the other spending 1 AP less than you normally would. You can use Simultaneous Attack multiple times per turn.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="large-weapon-1-two-handed-proficiency" class="level4">
+<h4 class="anchored" data-anchor-id="large-weapon-1-two-handed-proficiency">Large Weapon 1: [two-handed] Proficiency</h4>
+<p><strong>Requirements:</strong> 2 STR<br>
+Treat your Strength as 1 higher (for weapon related rolls) when wielding two handed weapons.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="large-weapon-2-sweep" class="level4">
+<h4 class="anchored" data-anchor-id="large-weapon-2-sweep">Large Weapon 2: Sweep</h4>
+<p><strong>Requirements:</strong> Large Weapon 1, STR 2<br>
+You can perform a given [swinging] melee attack to attack two adjacent enemies in one strike, or spend an extra 1 AP and attack up to four adjacent enemies (that you could hit normally) while using a [two-handed] weapon.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="large-weapon-2-giant-weapon-proficiency" class="level4">
+<h4 class="anchored" data-anchor-id="large-weapon-2-giant-weapon-proficiency">Large Weapon 2: Giant Weapon Proficiency</h4>
+<p><strong>Requirements:</strong> Large Weapon 1<br>
+Treat your Strength as 1 higher (for weapon related rolls) when wielding a weapon with the [giant] tag.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="large-weapon-2-giant-weapon-efficiency" class="level4">
+<h4 class="anchored" data-anchor-id="large-weapon-2-giant-weapon-efficiency">Large Weapon 2: Giant Weapon Efficiency</h4>
+<p><strong>Requirements:</strong> Large Weapon 2: Giant Weapon Proficiency, AGI 2<br>
+When you land a hit with a [giant] weapon, gain 1 Temp AP.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="storm-gate" class="level4">
+<h4 class="anchored" data-anchor-id="storm-gate">Storm Gate</h4>
+<p><strong>Requirements:</strong> LIGHTNING 1<br>
+Spend 1 recovery die (do not heal). Immediately lose 1 max AP. At the beginning of every turn, (after AP is regained) gain 1 charge for every AP you have. This ability lasts a number of hours equal to your LIGHTNING score. Once the ability ends, regain 1 max AP.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="skillful-conduit" class="level4">
+<h4 class="anchored" data-anchor-id="skillful-conduit">Skillful Conduit</h4>
+<p><strong>Requirements:</strong> LIGHTNING 1<br>
+You’re able to transfer up to your LIGHTNING score in charges with every hit, including when using [ranged] attacks.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="crashing-step" class="level4">
+<h4 class="anchored" data-anchor-id="crashing-step">Crashing Step</h4>
+<p><strong>Requirements:</strong> LIGHTNING 1<br>
+Spend 1 charge and (1n1). Move 6 spaces, you are able to turn at any angle, but only once. You must be able to move through the space normally. You move from space to space near instantaneously, and cannot be attacked or interrupted while moving. When you arrive at your target space, you can choose to transfer 1 charge to an enemy within 2 spaces.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="watched-by-dark-clouds" class="level4">
+<h4 class="anchored" data-anchor-id="watched-by-dark-clouds">Watched by Dark Clouds</h4>
+<p><strong>Requirements:</strong> LIGHTNING 1<br>
+You must be using Storm Gate to use this ability. Spend 1 charge. You’re able to keep 1 entity (including yourself) from losing charge at the end of their turn (as long as they are within your range). If you cast this on another creature, you know the direction they are in and a rough estimate of distance. If you cast it on yourself, you know the direction and the rough distance to a number of creatures equal to your LIGHTNING score. This ability ignores stealth or other concealment. This means that, for example, you could not be caught unaware in melee. This effect ends when Storm Gate does.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="silent-light" class="level4">
+<h4 class="anchored" data-anchor-id="silent-light">Silent Light</h4>
+<p><strong>Requirements:</strong> LIGHTNING 1<br>
+Spend 1 extra charge when you perform a LIGHTNING magic. You can choose either to prevent light or sound from being produced.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="fingers-of-light" class="level4">
+<h4 class="anchored" data-anchor-id="fingers-of-light">Fingers of Light</h4>
+<p><strong>Requirements:</strong> LIGHTNING 1<br>
+An attack. The target must have at least 1 charge. Range: 3 spaces. Costs (1n3) and all of your charge. +3*LIGHTNING to hit, roll a d6 for every charge you have (P).<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="spark" class="level4">
+<h4 class="anchored" data-anchor-id="spark">Spark</h4>
+<p><strong>Requirements:</strong> LIGHTNING 1<br>
+An attack. Range: 3 spaces. (2n1), 1d4 (P) damage. Transfer 1 charge between yourself and whoever is hit. Call Lightning: a much bigger move, sort of a signature move for the class, lightning hits whatever has the most charge, doing tons of damage<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="improvised-medicine" class="level4">
+<h4 class="anchored" data-anchor-id="improvised-medicine">Improvised Medicine</h4>
+<p><strong>Requirements:</strong> 2 MED, 1 DEX<br>
+You are able to do your work under quite poor conditions. You can performing surgery with a dagger, tear the stitching out of a backpack and use it to close a wound, and quickly create makeshift bandages from a torn cloak. Lower your effective MED by 1 to replace 1 point of medical equipment up to 3 points of medical equipment. Explain where you’re getting this material and how getting that material changes the source of the material (i.e.&nbsp;Your patients cloak now has a strip torn out, the haft of an axe was broken in half to be used as a splint).</p>
+</section>
+<section id="severe-case" class="level4">
+<h4 class="anchored" data-anchor-id="severe-case">Severe Case</h4>
+<p><strong>Requirements:</strong> 2 MED, 1 DEX<br>
+If the character has no more recovery dice to spend but a MED skill requires spending recovery dice you can attempt to perform the MED skill anyway. Spend the resources and time required to perform the skill as usual but then make a MED check against a DC of 9. If you pass, you succeed. Otherwise, nothing happens.</p>
+</section>
+<section id="emergency-care" class="level4">
+<h4 class="anchored" data-anchor-id="emergency-care">Emergency Care</h4>
+<p><strong>Requirements:</strong> 2 MED, 1 DEX<br>
+This skill is to be used on someone who is downed and rolling death checks. Take (2n1), add your MED score to their death check. Consume 1 point of medical equipment. You can do this multiple times in a turn.</p>
+</section>
+<section id="tend-to-the-wounded" class="level4">
+<h4 class="anchored" data-anchor-id="tend-to-the-wounded">Tend to the Wounded</h4>
+<p><strong>Requirements:</strong> 1 MED, 1 DEX<br>
+Tend to someone taking one hour to rest and spend 1 recovery die. They only spend the 1 recovery die, but they get to roll to gain 3 recovery dice + your MED score. Consume 3 points of medical equipment. They have to rest that full hour, but you only have to tend to them for 30 minutes.</p>
+</section>
+<section id="triage" class="level4">
+<h4 class="anchored" data-anchor-id="triage">Triage</h4>
+<p><strong>Requirements:</strong> 1 MED<br>
+Consume 1 point of medical equipment, allow a conscious character to immediately roll a recovery die. Takes 5 minutes.</p>
+</section>
+<section id="dissection" class="level4">
+<h4 class="anchored" data-anchor-id="dissection">Dissection</h4>
+<p><strong>Requirements:</strong> 1 MED<br>
+Dissect a human or humanoid specimen that has recently died. Takes 2 hours. Roll a MED check against a DC of 9 - the number of additional hours taken dissecting the specimen. If you succeed, gain 1 SP that must be spent on your MED score or MED skills. This is considered desecrating a corpse my most groups. Having dissections attributed to you will tend to lower your reputation with a group.</p>
+</section>
+<section id="edge-alignment" class="level4">
+<h4 class="anchored" data-anchor-id="edge-alignment">Edge Alignment</h4>
+<p><strong>Requirements:</strong> 1 AGI, 1 DEX<br>
+Ignore 1 extra armor when using a [bladed] weapon. The first time you would lose [sharpened] after sharpening a weapon, don’t.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="defensive-perimeter" class="level4">
+<h4 class="anchored" data-anchor-id="defensive-perimeter">Defensive Perimeter</h4>
+<p><strong>Requirements:</strong> A melee weapon with [reach] and [hafted] and an attack with [thrusting], STR 1.<br>
+(1n1). You brace the weapon, typically a spear. If an enemy moves into a space threatened by you, you get to use an attack immediately for 1 AP less than you would have to spend otherwise. If your attack does damage, Roll a STR contest. If you win, their action ends and they stop moving, stopping outside of your range. You get 1 Temp AP. You can spend it to immediately get back into “Defensive Perimeter”.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="sharpshooter" class="level4">
+<h4 class="anchored" data-anchor-id="sharpshooter">Sharpshooter</h4>
+<p><strong>Requirements:</strong> 1 PERCEPTION<br>
+When making [ranged] attacks, treat your PERCEPTION as 1 higher.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="trick-shot" class="level4">
+<h4 class="anchored" data-anchor-id="trick-shot">Trick Shot</h4>
+<p><strong>Requirements:</strong> 1 PERCEPTION<br>
++2 To-Hit when using “Called Shot” with a [ranged] attack.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="shield-training" class="level4">
+<h4 class="anchored" data-anchor-id="shield-training">Shield Training</h4>
+<p>Raise your To-Hit by 2 against melee attacks and by 3 against ranged attacks when using a shield.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="shield-bash" class="level4">
+<h4 class="anchored" data-anchor-id="shield-bash">Shield Bash</h4>
+<p>You can attack with a shield as +STR to hit, 1d4+STR.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="sneak-attack-1-lucky-strike" class="level4">
+<h4 class="anchored" data-anchor-id="sneak-attack-1-lucky-strike">Sneak Attack 1: Lucky Strike</h4>
+<p><strong>Requirements:</strong> AGI 1, [stealth] weapon<br>
+Sneak attack dice are exploding (if you get the max value on a die, roll another, if it happens again, roll another, etc.). If a die is set to max, roll another die.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="sneak-attack-2-precision-strike" class="level4">
+<h4 class="anchored" data-anchor-id="sneak-attack-2-precision-strike">Sneak Attack 2: Precision Strike</h4>
+<p><strong>Requirements:</strong> 1 STEALTH , [stealth] or [finesse] weapon<br>
+Before you attack, you can choose to increase the cost of your attack by 1 AP to roll an extra damage die.</p>
+<p>Max 1 damage die when you attack a [vulnerable] opponent (unaware opponents are [vulnerable]).<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="sneak-attack-2-twist-the-knife" class="level4">
+<h4 class="anchored" data-anchor-id="sneak-attack-2-twist-the-knife">Sneak Attack 2: Twist the Knife</h4>
+<p><strong>Requirements:</strong> 1 STEALTH , [stealth] weapon<br>
+After performing an attack you can spend [1n2] to roll another damage die and add it to the attack before damage multipliers are calculated. If this attack kills, regain 1 AP.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="sneak-attack-3-assassinate" class="level4">
+<h4 class="anchored" data-anchor-id="sneak-attack-3-assassinate">Sneak Attack 3: Assassinate</h4>
+<p><strong>Requirements:</strong> 2 STEALTH, 2 DEX, [stealth] weapon<br>
+Assassinate can only be used on an opponent who is unaware of you.</p>
+<p>If you roll 3 dice at max damage, double your damage. If you roll 4, triple it. Ignore 8 armor on when using a Sneak Attack.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="deception" class="level4">
+<h4 class="anchored" data-anchor-id="deception">Deception</h4>
+<p><strong>Requirements:</strong> 1 SOCIAL<br>
++2 to SOCIAL checks when lying. You can buy this skill twice.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="disguise" class="level4">
+<h4 class="anchored" data-anchor-id="disguise">Disguise</h4>
+<p><strong>Requirements:</strong> 1 SOCIAL<br>
+You can create disguises, within reason. Roll a check +3 to set a DC for your disguise, you can create a disguise for another person this way. When using a disguise you get +3 to SOCIAL or STEALTH rolls relevant to your use of the disguise.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="wrestling-1-rasslin" class="level4">
+<h4 class="anchored" data-anchor-id="wrestling-1-rasslin">Wrestling 1: Rasslin’</h4>
+<p><strong>Requirements:</strong> AGI 2, STR 2<br>
++2 to Grapple checks.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="wrestling-2-gottem" class="level4">
+<h4 class="anchored" data-anchor-id="wrestling-2-gottem">Wrestling 2: Gottem</h4>
+<p><strong>Requirements:</strong> AGI 2, STR 2, Wrestling 1<br>
+If you’re successfully grappling a humanoid in your size category or lower, get +4 to subsequent grapple checks. If you’re successfully grappling a non-humanoid in your size category, +2 to subsequent grapple checks. Otherwise, if you’re successfully grappling, +1 to subsequent grapple checks.<br>
+<strong>Cost:</strong> 1 SP</p>
+</section>
+<section id="wrestling-2-choosin-a-snoozin" class="level4">
+<h4 class="anchored" data-anchor-id="wrestling-2-choosin-a-snoozin">Wrestling 2: Choosin’ a Snoozin’</h4>
+<p><strong>Requirements:</strong> AGI 2, STR 2, Wrestling 1<br>
+Can only be performed on something that needs to breathe and… Has a neck.</p>
+<p>Spend an extra AP when entering a grapple check. If you can hold the grapple for 6 turns, the grappled creature is knocked out for 1d12 hours.<br>
+<strong>Cost:</strong> 1 SP</p>
 <!-- ### A Note on Skills and Backgrounds -->
 <!-- Consider how your background and the skills you start with might support each other. Picking specific skills for relevance to your background rather than building an optimal character can give your character a lot of interesting moments, especially early on. -->
 
