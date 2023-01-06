@@ -6,11 +6,13 @@ number-sections: true
 
 website:
   title: "citatel"
+  repo-url: https://github.com/ikolith/citatel
   favicon: "./assets/images/favicons/favicon.ico"
   description: "The fooligan's curse."
   page-navigation: true
   sidebar:
     style: "docked"
+    collapse-level: 1
     contents:
       - book/about.qmd # ABOUT
       - book/quickstart.qmd # QUICKSTART

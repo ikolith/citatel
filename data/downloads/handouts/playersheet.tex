@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage[ margin= .5in]{geometry}
+\usepackage[thinlines]{easytable}
+\pagestyle{empty}
+\begin{document}
+
+\setlength{\columnsep}{.1cm}
+\newpage
+\newgeometry{left = 5cm}
+{\bfseries
+  \large
+  \begin{center}
+    \begin{tabular}{|p{2in}| p{1in}| p{1in}|}
+      \hline
+      \textbf{Name} & \textbf{HP} & \textbf{To-Hit} \\
+                    &             &                 \\
+                    &             &                 \\
+      \hline
+    \end{tabular}
+  \end{center}
+}
+{\bfseries
+  \begin{center}
+    \huge
+    \begin{TAB}(@,3cm,3cm){|c|c|c|c|}{|c|}
+      0 & 1 & 2 & 3 \\
+    \end{TAB}
+  \end{center}
+}
+\bigskip
+
+\LARGE
+\begin{minipage}[l]{0.5\textwidth}
+  \centering
+  \begin{tabular}{|c c|| c c|}
+    \hline
+    \multicolumn{2}{|c|}{STR} &  & \\
+    \hline
+    \multicolumn{2}{|c|}{AGI} &  & \\
+    \hline
+    \multicolumn{2}{|c|}{DEX} &  & \\
+    \hline
+    \multicolumn{2}{|c|}{CON} &  & \\
+    \hline
+    \multicolumn{2}{|c|}{PER} &  & \\
+    \hline
+    \multicolumn{2}{|c|}{SOC} &  & \\
+    \hline
+    \multicolumn{2}{|c|}{}    &  & \\
+    \hline
+    \multicolumn{2}{|c|}{}    &  & \\
+    \hline
+  \end{tabular}
+  \normalsize
+\end{minipage}
+\begin{minipage}[l]{5cm}
+  \centering
+  \begin{tabular}{c c c c c c c c c c c c c c c c}
+    \multicolumn{16}{c}{NOTES}                    \\
+
+     &  &  &  &  &  &  &  &                       \\
+    \hline
+     &  &  &  &  &  &  &  &   &  &  &  &  &  &  & \\
+    \hline
+     &  &  &  &  &  &  &  &                       \\
+    \hline
+     &  &  &  &  &  &  &  &                       \\
+    \hline
+     &  &  &  &  &  &  &  &                       \\
+    \hline
+     &  &  &  &  &  &  &  &                       \\
+  \end{tabular}
+
+\end{minipage}
+
+\end{document}
