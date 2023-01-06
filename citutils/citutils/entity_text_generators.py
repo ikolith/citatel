@@ -178,7 +178,7 @@ formatting_dict_md: dict[str, dict] = {
     "flavor_text": {"text_wrapper": "*"},
     "holds": {"field_text": "Holds"},
     "hp": {"field_text": "HP"},
-    "name": {"prefix": "### "},
+    "name": {"prefix": "#### "},
     "requirements": {"field_text": "Requirements"},
     "scores": {"field_text": "Scores"},
     "skills": {"field_text": "Skills"},
@@ -290,6 +290,36 @@ def generate_entity_text(
         raise Exception("text_type needs to be either 'latex' or 'md'.")
 
 
+def filter_generate_text(  # this is called "text" not "md"... and the params suggest it would work okay with latex, but im not sure thats actually true.
+    entities: ty.Entities,
+    filter_tags_include: str = "",
+    filter_tags_exclude: str = "",
+    include_full_text: bool = False,
+    text_type: str = "md",
+    html_characters: bool = False,
+    skip_generation: bool = False,
+) -> str:
+    if text_type == "md":
+        text = ""
+        filtered_entities = co.filter_entities_by_filter_tags(
+            entities, filter_tags_include, filter_tags_exclude
+        )
+        for entity in filtered_entities.values():
+            text += (
+                generate_entity_text(
+                    entity,
+                    text_type,
+                    html_characters,
+                    include_full_text,
+                    skip_generation,
+                )
+                + "  \n\n"
+            )
+        return text
+    else:
+        raise Exception("text_type needs to be 'md'. Only 'md' is supported right now.")
+
+
 def generate_doc_text(  # this is called "text" not "md"... and the params suggest it would work okay with latex, but im not sure thats actually true.
     entities: ty.Entities,
     entity_sections: ty.ESs,
@@ -299,6 +329,7 @@ def generate_doc_text(  # this is called "text" not "md"... and the params sugge
     html_characters: bool = False,
     skip_generation: bool = False,
 ) -> str:
+    """DEPRECATED: not really necessary given quarto"""
     if text_type == "md":
         doc = front_text
         for section in entity_sections:
