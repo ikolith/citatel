@@ -2,7 +2,13 @@ project:
   output-dir: docs
   type: website
 
-number-sections: true
+format:
+  html:
+    number-sections: false
+    toc: true
+    theme:
+      - litera
+      - custom.scss
 
 website:
   title: "citatel"
@@ -41,11 +47,3 @@ website:
       - section: Motivations and Misc. # previously "Addendeums, Motivations, and Miscellaneous"
         contents:
           - auto: book/p5_addendums_motivations_misc/shipped/*
-
-format:
-  html:
-    number-sections: false
-    toc: true
-    theme:
-      - litera
-      - custom.scss
