@@ -2,4 +2,21 @@
 title: No Place Like Homepage
 ---
 
-aw yea
+This is "citatel", home of what started as the "tactile" TTRPG system. You can learn more about the game [here](book/about.qmd). The [github repo](https://github.com/ikolith/citatel) includes the code for the site itself, all of the tooling, and the data used to generate enemies, weapons, etc. You can learn more about the role of the code [here](book/code_and_downloads/why_code.md) or just peruse the Code and Downloads section in the sidebar. 
+
+The site is setup so you can read down through the whole thing starting at [about](book/about.qmd) as if it were a book. Eventually this should all be a physical honest to god book in addition to being a website. You don't have to read the whole thing. In fact, you probably shouldn't.
+
+## How much do I need to read?
+
+If you want to hop right into a game as a player, use [quickstart](book/quickstart.qmd). If you've got some time, read the [rules](book/p1_rules_and_character_creation/s1_rules/rules.qmd) and [create a character](/book/p1_rules_and_character_creation/s2_character_creation/how_to_character_creation). If you want to GM using Talaje, you probably want to read up to and through the Adventures section, you probably want to also read the content generation section (TODO: once such a thing exists).
+
+If you want to make your own setting or rules the rules are intentionally split into three sections "Sixtem" (core rules), "Tactile" (context specific low-fantasy mechanics) and "Talaje" (setting-specific rules) so that you can easily replace or modify sections. There are also creation guides in the sidebar and information about the code and automation tools.
+
+## What do I need to play this game?
+ 
+You'll need your standard TTRPG d20, d12, d10, d8, d6, d4 dice, though you should really have 2 d6s. You'll need pen and paper, you don't *need* anything else. There are [downloads](/book/code_and_downloads/downloads.md) including entity cards, handouts, and character sheets. A GM might want to consider using some of the Python tools to quickly look things up and generate enemies, encounters, etc.
+
+## Notes
+
+This site is still being migrated over from Jekyll and I'm not a webdev so things are in disarray and will continue to be for some amount of time!
+Additionally, Quarto (the site generator) does not make very printable pages for some reason, despite being able to produce .pdfs! Eventually there will be better printed material, for now using reader mode in your browser before printing makes the results a little nicer.

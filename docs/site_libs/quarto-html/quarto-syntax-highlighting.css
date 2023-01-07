@@ -33,7 +33,7 @@
 
 /* other quarto variables */
 :root {
-  --quarto-font-monospace: Consolas, Monaco, "Liberation Mono", "Courier New", monospace;
+  --quarto-font-monospace: Consolas, Monaco, "Liberation Mono", "Courier New", monospace !important;
 }
 
 pre > code.sourceCode > span {
