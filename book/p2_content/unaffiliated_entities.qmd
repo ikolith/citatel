@@ -1,0 +1,24 @@
+---
+title: "1. Stuff"
+execute: 
+  echo: false
+  output: asis
+---
+
+Here, all non-basic (i.e. spoiler-containing) weapons, items, and skills are listed.
+
+```{python}
+import os
+from citutils import (entity_text_generators as ge,
+    text_utils_parsers as tu)
+
+text = ""
+entities = tu.get_entities(os.path.join("..","..","data","entities"), True)
+
+print("### Weapons \n" + 
+    ge.filter_generate_text(entities, "weapon","basic",html_characters = True))
+print("### Items \n" + 
+    ge.filter_generate_text(entities,"item","basic", html_characters = True))
+print("### Skills \n" +
+    ge.filter_generate_text(entities, "skill", "basic", html_characters = True))
+```

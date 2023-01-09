@@ -22,7 +22,9 @@ website:
     contents:
       - book/about.qmd # ABOUT
       - book/quickstart.qmd # QUICKSTART
-      - "book/p1_rules_and_character_creation/s1_rules/rules.qmd" # RULES, previously a whole folder
+      - section: "Rules"
+        contents:
+          - auto: "book/p1_rules_and_character_creation/s1_rules/*"
       - section: "Character Creation"
         contents:
           - book/p1_rules_and_character_creation/s2_character_creation/how_to_character_creation.md
@@ -30,9 +32,7 @@ website:
           - book/p1_rules_and_character_creation/s2_character_creation/shopping.qmd
       - section: "Content"
         contents:
-          - book/p2_content/s1_content/unaffiliated_entities.md
-          - book/p2_content/s1_content/unaffiliated_npcs_and_their_entities.md
-          - book/p2_content/s1_content/groups_and_their_entities.md
+          - auto: book/p2_content/*
       - section: Worldbuilding # previously "Lore and Worldbuilding", will include the Language section
         contents:
           - auto: book/p3_worldbuilding/shipped/*

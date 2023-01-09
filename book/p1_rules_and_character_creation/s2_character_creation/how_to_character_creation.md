@@ -1,5 +1,5 @@
 ---
-title: Character Creation and Management
+title: 1. Character Creation and Management
 ---
 
 The base sheet for a human character looks like this:
@@ -15,7 +15,7 @@ HP: 18 + (6\*CON), Defense: 6, Movement Speed: 4
 | PER(CEPTION)   | 0     |
 | SOC(IAL)       | 0     |
 
-The base sheet for other species in Talaje might have different attributes and scores, different base HP, defense, and movement speeds, as well as unique skills. These options are covered in the [LINK THE SPECIES SHOPPING SECTION HERE BUT IN A BETTER WAY](shopping.md) section.
+The base sheet for other species in Talaje might have different attributes and scores, different base HP, defense, and movement speeds, as well as unique skills. These options are covered in the [LINK THE SPECIES SHOPPING SECTION HERE BUT IN A BETTER WAY](shopping.qmd#base sheets) section.
 
 Defense, HP, and movement speed can't be changed directly. CON influences HP. Defense can be raised by actions like “Dodge” and it can be lowered by bulky armor. Skills and conditions can be used to alter all three qualities from the base sheet, but the base sheet remains the same.
 

@@ -1,6 +1,5 @@
 ---
 title: Tchoks
-
 ---
 
 Webbed fingers in unfocused disarray squat the terminations of slimy limbs. Freely swiveling eyes perch on dull sloped faces above rows of lost-and-found teeth. The Tchoks, named after the sound that composes half of their vocabulary, stalk the eternally over-saturated mud and swollen brush between dirty water and watery dirt. They cling under branches and flatten their baggy bodies against walls. They prepare to ambush any shape passing by. 
@@ -11,6 +10,7 @@ One of the only formal records of their behavior comes from S. Bevlins, a schola
 
 
 ###  Tchok  
+
 **HP:** {3d8+1} or 13  
 **Scores:** 1 CON  
 **Skills:** Jibbering (1n1): All checks related to magic made within earshot of a
@@ -21,6 +21,3 @@ More rarely poisons that push back the furthest AP token by 1 slot on hit,
 consumed on hit. Even more rarely, daggers that can deliver 3 doses of
 poison before reapplication is necessary.  
 *Slimy, stupid, and inane.*  
-  
-
-This file was last auto-generated on 2022-12-01.

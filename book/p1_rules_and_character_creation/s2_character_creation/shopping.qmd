@@ -1,5 +1,5 @@
 ---
-title: Shopping
+title: 3. Shopping
 execute: 
   echo: false
   output: asis
@@ -8,13 +8,14 @@ execute:
 ```{python}
 import os
 from citutils import text_utils_parsers as tu
-entities = tu.get_entities(os.path.join("..","..","..","data","entities"))
-#TODO: LET IT B E S O R T E D
+entities = tu.get_entities(os.path.join("..","..","..","data","entities"), True)
 ```
 
-## Species/Peoples of Talaje
+## Base Sheets
  
 There are currently only a couple to choose from. TODO: add those/that one??. Another problem is that base-sheets really don't fit in the .yamls right now. Given that the .yamls were also going to be extended to be able to deal with tables and the way to do that was uncertain, it seems like this really should prompt a change in how the .yamls work fundamentally! Are both base-sheets and tables things `entity`s?
+
+{{< include ../../p2_content/base_sheets/ataara.qmd >}}
 
 ## Backgrounds
 
@@ -23,6 +24,8 @@ None yet exist. There should be premade backgrounds as well as a background-comp
 Backgrounds determine how many flakes (currency) you start with. 
 
 ## Starting Gear
+
+### Premade Loadouts
 
 TODO: need some premade loadouts
 

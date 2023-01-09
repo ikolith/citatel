@@ -1,0 +1,15 @@
+---
+title: "0. Intro"
+---
+
+## Terminology and Disclaimers
+
+"GM" is "Game Master" which is interchangeable with "Dungeon Master", "Referee", etc.  They run the game, control the NPCs, etc. GM fiat overrides everything.  "TTYGM" is "Talk to Your GM" and is used to call out things that you should definitely ask your GM about before you proceed. Rules can be overwritten by more specific rules or effect text. Every rule is "unless otherwise specified".
+
+You'll notice that the rules are grouped into three sections: "Sixtem", "Tactile", and "Talaje"."Sixtem" is the core ruleset, this includes how checks and attributes work. "Tactile" includes roles for mechanics like social interactions, combat, and being reduced to 0 HP. "Talaje" covers setting specific rules and mechanics.
+
+## Why Three Rulesets?
+
+The rules are split into three sections: "Sixtem" (core rules), "Tactile" (context specific low-fantasy mechanics) and "Talaje" (setting-specific rules). This is done so you can easily replace or modify sections. 
+
+Additionally, this should make the rules a bit easier to navigate.

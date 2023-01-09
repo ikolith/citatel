@@ -14,7 +14,7 @@ def get_clean_name(name: str) -> str:
     )
 
 
-def get_entities(dir_path: str) -> ty.Entities:
+def get_entities(dir_path: str, sort: bool = False) -> ty.Entities:
     entities = ty.Entities({})
     entity_files = []
     for file in os.listdir(dir_path):
@@ -31,6 +31,8 @@ def get_entities(dir_path: str) -> ty.Entities:
                 clean_name = get_clean_name(entity["name"])
                 assert not clean_name in entities
                 entities[clean_name] = entity
+    if sort:
+        entities = dict(sorted(entities.items()))
     return entities
 
 
