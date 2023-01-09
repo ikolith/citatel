@@ -7,8 +7,8 @@ format:
     number-sections: false
     toc: true
     theme:
-      - litera
-      - custom.scss
+      light: custom-light.scss
+      dark: custom-dark.scss
 
 website:
   title: "citatel"

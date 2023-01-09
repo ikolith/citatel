@@ -1,0 +1,78 @@
+/*-- scss:defaults --*/
+
+$paper: #F7F0DF;
+$white: $paper !default;
+
+$gray-50: darken($white, 5%) !default;
+$gray-100: darken($white, 10%) !default;
+$gray-200: darken($white, 20%) !default;
+$gray-300: darken($white, 30%) !default;
+$gray-400: darken($white, 40%) !default;
+$gray-500: darken($white, 50%) !default;
+$gray-600: darken($white, 60%) !default;
+$gray-700: darken($white, 70%) !default;
+$gray-800: darken($white, 80%) !default;
+$gray-900: darken($white, 90%) !default;
+$gray-950: darken($white, 95%) !default;
+$black: #000 !default;
+$red: #cf2d2d !default;
+$yellow: #f0ad4e !default;
+$green: #28A428 !default;
+$cyan: #26c5de !default;
+
+$min-contrast-ratio: 2 !default; // no idea what this means...
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$dark: $gray-800 !default;
+
+$code-block-bg-alpha: -.8;
+
+$light: $gray-50 !default;
+$primary: $red !default;
+
+// # body
+
+$body-bg: $white !default;
+$body-color: $black !default;
+
+// # options
+
+$enable-rounded: false !default;
+
+// # text colors
+// this simply doesnt seem to do anything... why? seems the sidebar is inhereting from something else... that is not the navbar settings maybe???
+
+// # fonts
+
+// ## mono.
+
+$font-family-monospace: Consolas, Monaco, "Liberation Mono", "Courier New", monospace !default;
+
+// ## i want it SERIF. really, really i do, i promise.
+
+$font-family-serif: serif !important;
+// nothing fucking matters anymore barkeep
+// just give me any serif font, i wont taste it
+// "Bookman", "Century Schoolbook", Garamond, Cambria, "Times New Roman", Times, !default;
+$font-family-base: font-family-serif !important;
+$font-family: $font-family-serif !important;
+$btn-font-family: $font-family-serif !important;
+
+p {
+    font-family: $font-family-serif;
+}
+
+.lead {
+    font-family: $font-family-serif;
+}
+
+.alert {
+    p {
+        font-family: $font-family-serif;
+    }
+}
+
+$font-size-base: 1.1rem !default;
+$headings-font-weight: 700 !default;
