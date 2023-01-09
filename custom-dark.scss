@@ -1,0 +1,32 @@
+/*-- scss:defaults --*/
+
+$white: #ffffff !default;
+$black: #000 !default;
+$cyan: #26c5de !default;
+
+$code-block-bg-alpha: -.8;
+
+$light: darken($white, 96%) !default;
+$primary: $cyan !default;
+
+// Base document colors
+$body-bg: $black;
+$body-color: darken($white, 10%);
+// Code blocks
+
+$font-size-base: 1.1rem !default;
+$headings-font-weight: 700 !default;
+
+/*-- all the variables available:
+https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+
+quarto docs on themes:
+https://quarto.org/docs/output-formats/html-themes.html#theme-options
+
+quart docs more on themes:
+https://quarto.org/docs/output-formats/html-themes-more.html
+
+how quarto thinks of these... themes
+https://github.com/quarto-dev/quarto-cli/tree/main/src/resources/formats/html/bootstrap/themes
+
+--*/
