@@ -20,7 +20,7 @@ Mark things that should be handled by templating with {}. The dice go first, the
   holds: "{1d4-3 pickaxe}, {1d4-2 curse_eye}."
   flavor_text: >-
     A bent creature, shriviled and distended. Rattling sandpaper breathing and
-    muttering. Eyes shriveled and wasted, or a dull black.
+    muttering. Eyes shriveled and wasted or a dull black.
   filter_tags: npc, cave, salt
 ```
 

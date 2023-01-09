@@ -1,5 +1,5 @@
 ---
-title: Premade Characters
+title: 2. Premade Characters
 ---
 
 ## SALTy Surgeon
