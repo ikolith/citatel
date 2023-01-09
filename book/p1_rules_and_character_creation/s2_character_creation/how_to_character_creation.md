@@ -15,7 +15,7 @@ HP: 18 + (6\*CON), Defense: 6, Movement Speed: 4
 | PER(CEPTION)   | 0     |
 | SOC(IAL)       | 0     |
 
-The base sheet for other species in Talaje might have different attributes and scores, different base HP, defense, and movement speeds, as well as unique skills. These options are covered in the [LINK THE SPECIES SHOPPING SECTION HERE BUT IN A BETTER WAY](shopping.qmd#base sheets) section.
+The base sheet for other species in Talaje might have different attributes and scores, different base HP, defense, and movement speeds, as well as unique skills. These options are covered in the [Shopping](shopping.qmd#base sheets) section.
 
 Defense, HP, and movement speed can't be changed directly. CON influences HP. Defense can be raised by actions like “Dodge” and it can be lowered by bulky armor. Skills and conditions can be used to alter all three qualities from the base sheet, but the base sheet remains the same.
 
@@ -51,6 +51,6 @@ Alternatively, you can generate a random character by rolling dice for every sco
 
 #### A Couple of Randomization Schemes
 
-To determine stats at the start of the game, I suggest you either use d4-2 or d6-3. d6-3 is straightforwardly "better" than rolling d4-2. d6-3 is statistically equivalent to putting 1.5 SP into each score. If you are just rolling for the core skills, that's a total value of 6 \* 1.5 = 9. d4-2 is equivalent to 0.75 SP per score, or 6 \* 0.75 = 4.5 (more explanation of this is in the [EXTRA RULES?? WHAT IS THIS CALLED]() section). Given that standard point buy gets 9, I would give randomized characters 4 or 5 points to spend on skills, depending on how competent you want your character to be right at the beginning of the game.
+To determine stats at the start of the game, I suggest you either use d4-2 or d6-3. d6-3 is straightforwardly "better" than rolling d4-2. d6-3 is statistically equivalent to putting 1.5 SP into each score. If you are just rolling for the core skills, that's a total value of 6 \* 1.5 = 9. d4-2 is equivalent to 0.75 SP per score, or 6 \* 0.75 = 4.5 (more explanation of this is in the [Addendums section](../../p5_addendums_motivations_misc/shipped/addendeums.md#some-basic-statistics-for-making-your-own-randomized-character-creation-rolls)). Given that standard point buy gets 9, I would give randomized characters 4 or 5 points to spend on skills, depending on how competent you want your character to be right at the beginning of the game.
 
 I recommend rolling d4-2 to determine starting attributes. It gives characters a bit more room to grow and develop during the game. d6-3 will mean that you will likely get a 3 in some stat, which is so valuable it could quickly define your character before you've had a chance to play them.
