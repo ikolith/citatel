@@ -2,7 +2,7 @@
 title:  A Case for Encumbrance, Rations, etc.
 ---
 
-Logistical rules for encumbrance, rations, etc. have a bad reputation. Often they feel like meaningless and slow bookkeeping. These rules are meant to be light enough that they should not slow the game down, but I want quickly go over why these rules are worth having in the first place.
+Logistical rules for encumbrance, rations, etc have a bad reputation. Often they feel like meaningless and slow bookkeeping. These rules are meant to be light enough that they should not slow the game down, but I want quickly go over why these rules are worth having in the first place.
 
 These rules force players to make decisions about what they're going to take with them and what they're going to prepare for. Players and NPCs are very close to one another in HP and damage output in this game. The way you get an edge on someone else in combat is figuring out what your best option is given what you've prepared and the resources you have. The strength of most items and abilities are contextual, but this won't matter or make the game more interesting if you can carry around a tool for every context.
 
