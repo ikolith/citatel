@@ -19,7 +19,7 @@ You're a wanted now and you have no way of paying your debts. You've thrown away
 #### Sheet:
 
 Name:  
-HP: 18, To-Hit: 6  
+HP: 18, Defense: 6  
 STR: -1  
 AGI: 0  
 DEX: 2  
