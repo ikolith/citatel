@@ -2,8 +2,6 @@
 title: "Loicenseposting"
 ---
 
-Edit
-
 No [funging](https://probablynotfungible.ignatius.coffee/)!
 
 I have not chosen a license. Here I will describe ~~what I want out of a license.~~ how I feel about such things. To quickly get this out of the way, there's no way I'm picking OGL, fuck that trash fire. It'll probably be some Creative Commons or Copyleft nonsense.
