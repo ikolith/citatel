@@ -2,6 +2,8 @@
 title: "Loicense"
 ---
 
+No [funging](https://probablynotfungible.ignatius.coffee/)!
+
 I have not chosen a license. ~~Here I will describe what I want out of a license.~~ How I feel about such things. To quickly get this out of the way, there's no way I'm picking OGL, fuck that trash fire. It'll probably be some Creative Commons or Copyleft nonsense.
 
 I'm tired of seeing cool databases, tooling, or projects limited by copyright. I'm tired of DRM, licenses, censure, "platforms", "live service", subscriptions, and paywalls. Why do we need this in TTRPGs? It seems to me that this medium especially would benefit from being open and collaborative, allowing for works to be transferred, shared, altered, transformed, etc with no strings attached. Not only should this be "allowed" it should be encouraged and supported! Rather than paying lip service to this idea and then only presenting the data in a shitty pdf, just distribute the source so people don't have to sit around copying and scraping! You have the data! If you want people to engage with it, just *give them the data already!*
