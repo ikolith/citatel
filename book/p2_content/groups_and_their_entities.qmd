@@ -3,3 +3,12 @@ title: "3. Groups"
 ---
 
 In progress.
+
+
+<!-- {{< include ./groups/bureaucrats.qmd >}} -->
+
+<!-- {{< include ./groups/crust_punks.qmd >}} -->
+
+<!-- {{< include ./groups/harvesters.qmd >}} -->
+
+<!-- {{< include ./groups/isopods.qmd >}}  -->

@@ -1,8 +1,6 @@
----
-title: Bureaucrats
----
+# Bureaucrats
 
-The Bureaucrats are a faction endemic to civilizations. They are a memeplex and a collection of methods more than they are a group of agents. Their kind is not spread through the means of spores and disease as the Legions are, but through information and the soft tissue of social connections. They share the same fundamental aim as the Legions, to self-perpetuate, consume, and multiply.  
+The Bureaucrats are a faction endemic to civilizations. They are a memeplex and a collection of methods more than they are a group of individual agents. Their kind is not spread through the means of spores and disease as the Legions are, but through information and the soft tissue of social connections. They share the same fundamental aim as the Legions, to self-perpetuate, consume, and multiply.  
 
 They are a dense autonomous patchwork of contracts, debts, obligations, and records. Many of these documents have outlived any who could read their contents, but through addendums, conditions, and stipulations, they persist as perversions of their original forms. It isn't known who started the network or whether its creation was intentional. It may have been an attempt to create laws that could themselves govern, interpret, and enforce.  
 
@@ -38,4 +36,5 @@ The body of a Bureaucrat is good as a source of cheap ink and kindling.
 
 <!-- Need to add more mobs, men in paper armor, slimes but all paper, look at historical paper armor -->
 <!-- This should be a [curse] heavy faction, inflecting nonsense curses like only being able to move left (you can just turn so that whatever direction you want to move is relatively left of you...) having to follow all sorts of bizarre arcane requirements before doing basic tasks, not being able to do basic tasks-->
+<!-- the health insurance faction -->
 
