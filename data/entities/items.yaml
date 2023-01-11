@@ -9,7 +9,7 @@
   filter_tags: item
 
 - name: Bandage
-  effect: Spend (3n1). Remove 1 bleed. Bandages can be improvised out of any cloth.
+  effect: Spend (3n1). Remove 1 [bleed]. Bandages can be improvised out of any cloth.
   flavor_text: A roll of clean cloth.
   filter_tags: item, medicine, gear, basic
 
@@ -31,11 +31,11 @@
   filter_tags: item, medicine
 
 - name: Stolen Ichor
-  effect: (2n1). Get 4 heal.
+  effect: (2n1). Get 4 [heal].
   filter_tags: item, medicine, gear
 
 - name: "Variigoshlovr Root "
-  effect: (1n1). Remove 1 bleed.
+  effect: (1n1). Remove 1 [bleed].
   filter_tags: item, medicine, gear, basic
 
 - name: Glowing Root Bundle
@@ -50,7 +50,7 @@
   filter_tags: item, whetstone
 
 - name: Vial of Verdant Sap
-  effect: (2n1). Gain 2 heal.
+  effect: (2n1). Gain 2 [heal].
   filter_tags: item, medicine, gear
 
 - name: Footsoldier's Whetstone
