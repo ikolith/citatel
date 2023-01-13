@@ -1,0 +1,24 @@
+- name: End taBle
+  hp: 1
+  encumbrance: 3
+  flavor_text: Tastes like chicken.
+  table:
+    roll: 2d6
+    outcomes:
+      1: "{just Table}"
+      2-11: yep, you rolled
+      12: golly fuck what a roll
+
+- name: just Table
+  table:
+    roll: 1d10
+    outcomes:
+      1-5: yeet
+      6-10: pete
+
+- name: A(D)JUST MAN
+  flavor_text: "{2d1 END TABLE 1d1s}"
+  # god fucking damnit. if you just put in a curly .yaml interprets it as some other type, and casting to string staples ": None" onto it?... So thats something to deal with, put into documentation...
+  # i dont really think i should modify the base behaviour of yaml parsing... but hey, maybe....
+  # better to just establish "best practices" for making .yaml entries... which is just tell the goddamn thing its a string
+  effect: "{just_table}"
