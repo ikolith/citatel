@@ -334,13 +334,57 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>There are various python doc automation functions I want to be able to use. I’ll test them here.</p>
-<section id="salt-wretch" class="level4">
-<h4 class="anchored" data-anchor-id="salt-wretch">Salt Wretch</h4>
-<p><strong>HP:</strong> {1d10} or 4<br>
-<strong>Scores:</strong> 1 STR<br>
-<strong>Skills:</strong> - Claw (2n1): 1d4 (S). Enemies take damage = to their current SALT on the beginning of their turn and lose one SALT when within 1 space of the Wretch.<br>
-<strong>Holds:</strong> {1d4-3 pickaxe}, {1d4-2 curse_eye}.<br>
-<em>A bent creature, shriviled and distended. Rattling sandpaper breathing and muttering. Eyes shriveled and wasted, or a dull black.</em></p>
+<section id="end-table" class="level4">
+<h4 class="anchored" data-anchor-id="end-table">End taBle!!</h4>
+<p><strong>HP:</strong> 1<br>
+<strong>Encumbrance:</strong> 3<br>
+<em>Tastes like chicken.</em></p>
+<p>Unless otherwise specified, roll 2d6 on this table.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Roll</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>not possible</td>
+</tr>
+<tr class="even">
+<td>2-11</td>
+<td>yep, you rolled</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>golly fuck what a roll</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ```{python}
+# type: ignore
+import os
+from pprint import pprint
+
+from citutils import (
+    text_utils_parsers as tu,
+    dice_utils as du,
+    entity_text_generators as ge,
+    commands as co,
+)
+
+entities = tu.get_entities(os.path.join("..", "..","data", "entities_test", "table"))
+# print(tu.parse_curlies("asdasdf {2d6 adjust man 1d10+2}"))
+# print(ge.generate_entity_text(entities["adjust_man"]))
+print(
+    tu.generate_entity_tree_text(
+        entities, tu.parse_curlies("asdasdf {2d6 adjust man 1d10+2}")[0], True
+    )
+)
+
+``` -->
 
 
 </section>

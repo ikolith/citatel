@@ -126,6 +126,9 @@ formatting_dict_latex: dict[str, dict] = {
     },
     "to_hit": {"field_text": "To-Hit", "field_text_formatter": emph},
     "full_text": {"hide": True},
+    "table": {"hide": True},  # TODO: THERE ARE NO LATEX TABLES
+    # due to the many issues with pandoc and latex, theres a good chance this will be handled in some other way entirely
+    # but until then, latex will simply skip tables
 }
 
 
@@ -143,7 +146,8 @@ def generate_latex(
         filter_tags = entity["filter_tags"] if "filter_tags" in entity.keys() else ""
         result_text += rf"""\vfill
         {filter_tags} \hfill {"Enc: " + entity["encumbrance"]} 
-        """  # this used to include clean name before the \hfill (so on the left side) and i dont really think thats necessary anymore ... though maybe filter_tags would be nice still
+        """
+        # this used to include clean name before the \hfill (so on the left side) and i dont really think thats necessary anymore ... though maybe filter_tags would be nice still
     return result_text
 
 
@@ -189,6 +193,7 @@ formatting_dict_md: dict[str, dict] = {
     "full_text": {
         "hide": True
     },  # generate_full_text_md() handles this instead of generate_md()
+    "table": {"hide": True},  # handled during generate_md(),
 }
 
 
@@ -200,6 +205,16 @@ def generate_md(
     for key, text in entity.items():
         result_text += if_exists_format_md(text=str(text), **formatting[key])
     return result_text
+
+
+def generate_md_table(table: ty.Table) -> str:
+    md_table = (
+        f"""  \n\nUnless otherwise specified, roll {table["roll"]} on this table.  """
+        + "\n\n| Roll | Outcome |  \n| --- | --- |  "
+    )
+    for roll, outcome in table["outcomes"].items():
+        md_table += "\n" + f"| {roll} | {outcome} |  "
+    return md_table
 
 
 def generate_full_text_md(entity: dict) -> str:
@@ -216,10 +231,10 @@ def generate_entity_text(
     text_type: str = "md",
     html_characters: bool = False,
     include_full_text: bool = False,  # only used by .md right now..
-    skip_generation: bool = False  # only used by .md right now!
-    # TODO: maybe look into pushing latex book generation up forward a bit
-    # stuff keeps getting built that only works for .md, latex really is just for cards atm
+    skip_feature_generation: bool = False,
     # TODO: this doesn't show up in the curly command and probably it should! and maybe some other ones too
+    skip_table: bool = False,  # only used by .md right now..
+    # TODO: the latex here is really only for cards... probably it should still be able to handle tables though
 ) -> str:
     entity_local = deepcopy(entity)
     if text_type == "md":
@@ -251,9 +266,13 @@ def generate_entity_text(
                     f"{triangle_up}",
                     entity_local[key],
                 )
-        md_text = generate_md(entity_local) if not skip_generation else ""
+                entity_local[key] = re.sub("\*", r"\*", entity_local[key])
+        md_text = generate_md(entity_local) if not skip_feature_generation else ""
         if include_full_text:
             md_text = generate_full_text_md(entity_local) + md_text + "  \n\n"
+        if not skip_table:
+            if "table" in entity.keys():
+                md_text += generate_md_table(entity["table"])
         return md_text
     elif text_type == "latex":
         if "basic_attacks" in entity_local.keys():
