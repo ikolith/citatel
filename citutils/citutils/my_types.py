@@ -66,7 +66,6 @@ class TreeEntry(TypedDict):
 EntityTree = NewType("EntityTree", list[TreeEntry])
 
 
-
 ## The next types are from the old doc-generation workflow which will be removed soon.
 
 

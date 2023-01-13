@@ -260,7 +260,7 @@ def generate_entity_tree_text(
     # just need this line for the fancy name:
     base_entity = entities[base_curly["entity"]]
     base_entity_text = ge.generate_entity_text(
-        entities[base_curly["entity"]], html_characters
+        entities[base_curly["entity"]], html_characters=html_characters
     )
     if not expand_entities or not text_has_children(base_entity_text):
         if roll_dice:
@@ -275,12 +275,12 @@ def generate_entity_tree_text(
         entities, base_curly, expand_entities, roll_dice
     )
     if not len(non_unique_entities) == 0:
-        non_unique_text = """--------\nNon Unique Entities:\n--------\n"""
+        non_unique_text = """### Non Unique Entities:\n"""
         for clean_name, v in non_unique_entities.items():
-            non_unique_text += f"\n{v['count']} {clean_name}\n{v['text']}"
+            non_unique_text += f"\n{v['count']} {clean_name}  \n\n{v['text']}"
     else:
         non_unique_text = ""
-    entity_text = """\n--------\nUnique Entities, Full Tree:\n--------\n"""
+    entity_text = """\n### Unique Entities, Full Tree:\n"""
     for n in entity_tree:
         if n["unique"]:
             entity_text += "\n" + n["text"]

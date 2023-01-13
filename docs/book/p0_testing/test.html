@@ -311,7 +311,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#non-unique-entities" id="toc-non-unique-entities" class="nav-link active" data-scroll-target="#non-unique-entities">Non Unique Entities:</a></li>
+  <li><a href="#unique-entities-full-tree" id="toc-unique-entities-full-tree" class="nav-link" data-scroll-target="#unique-entities-full-tree">Unique Entities, Full Tree:</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -334,8 +341,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>There are various python doc automation functions I want to be able to use. I’ll test them here.</p>
+
+<!-- ```{python}
+# testing snippets, some from update.py, some from scratch.py
+import os
+
+from citutils import text_utils_parsers as tu
+from citutils import entity_text_generators as ge
+
+entities = tu.get_entities(os.path.join("..", "..","data", "entities_test","table"))
+print(ge.generate_entity_text(entities["end_table"]))
+``` -->
+<section id="non-unique-entities" class="level3">
+<h3 class="anchored" data-anchor-id="non-unique-entities">Non Unique Entities:</h3>
+<p>2 end_table</p>
 <section id="end-table" class="level4">
-<h4 class="anchored" data-anchor-id="end-table">End taBle!!</h4>
+<h4 class="anchored" data-anchor-id="end-table">End taBle</h4>
 <p><strong>HP:</strong> 1<br>
 <strong>Encumbrance:</strong> 3<br>
 <em>Tastes like chicken.</em></p>
@@ -350,7 +371,7 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>1</td>
-<td>not possible</td>
+<td>{just Table}</td>
 </tr>
 <tr class="even">
 <td>2-11</td>
@@ -362,29 +383,10 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-
-<!-- ```{python}
-# type: ignore
-import os
-from pprint import pprint
-
-from citutils import (
-    text_utils_parsers as tu,
-    dice_utils as du,
-    entity_text_generators as ge,
-    commands as co,
-)
-
-entities = tu.get_entities(os.path.join("..", "..","data", "entities_test", "table"))
-# print(tu.parse_curlies("asdasdf {2d6 adjust man 1d10+2}"))
-# print(ge.generate_entity_text(entities["adjust_man"]))
-print(
-    tu.generate_entity_tree_text(
-        entities, tu.parse_curlies("asdasdf {2d6 adjust man 1d10+2}")[0], True
-    )
-)
-
-``` -->
+</section>
+</section>
+<section id="unique-entities-full-tree" class="level3">
+<h3 class="anchored" data-anchor-id="unique-entities-full-tree">Unique Entities, Full Tree:</h3>
 
 
 </section>
