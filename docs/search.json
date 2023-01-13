@@ -375,7 +375,7 @@
     "href": "book/p0_testing/test.html",
     "title": "Testing",
     "section": "",
-    "text": "There are various python doc automation functions I want to be able to use. I’ll test them here.\n\nEnd taBle!!\nHP: 1\nEncumbrance: 3\nTastes like chicken.\nUnless otherwise specified, roll 2d6 on this table.\n\n\n\nRoll\nOutcome\n\n\n\n\n1\nnot possible\n\n\n2-11\nyep, you rolled\n\n\n12\ngolly fuck what a roll"
+    "text": "There are various python doc automation functions I want to be able to use. I’ll test them here.\n\n\n\nNon Unique Entities:\n2 end_table\n\nEnd taBle\nHP: 1\nEncumbrance: 3\nTastes like chicken.\nUnless otherwise specified, roll 2d6 on this table.\n\n\n\nRoll\nOutcome\n\n\n\n\n1\n{just Table}\n\n\n2-11\nyep, you rolled\n\n\n12\ngolly fuck what a roll\n\n\n\n\n\n\nUnique Entities, Full Tree:"
   },
   {
     "objectID": "book/old_scratch.html",
