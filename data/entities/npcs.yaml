@@ -6,7 +6,7 @@
     beginning of their turn and lose one SALT when within 1 space of the Wretch.
   holds: "{1d4-3 pickaxe}, {1d4-2 curse_eye}."
   flavor_text: >-
-    A bent creature, shriviled and distended. Rattling sandpaper breathing and
+    A bent creature, shriveled and distended. Rattling sandpaper breathing and
     muttering. Eyes shriveled and wasted, or a dull black.
   filter_tags: npc, cave, salt
 

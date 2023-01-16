@@ -14,3 +14,14 @@
   hp: "{2d12} or  13"
   scores: 1 DEX, 2 PERSUASION, 2 STEALTH
   filter_tags: npc, cave, isopod
+
+- name: Isopod Name
+  table:
+    outcomes:
+      1: "MOST RESPECTED"
+      2: "!!"
+      3: "Sheldon"
+      4: "Tsess"
+      5: "Gentleman"
+      6: "Setsket"
+  

@@ -130,7 +130,7 @@
   filter_tags: item, bag, basic
 
 - name: Frame Bag
-  effect: "Max encumbrance: 8+STR. [enumbered] threshold: 2+STR."
+  effect: "Max encumbrance: 8+STR. [encumbered] threshold: 2+STR."
   filter_tags: item, bag, basic
 
 - name: Stick Bag
