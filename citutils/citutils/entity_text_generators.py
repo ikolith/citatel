@@ -315,7 +315,7 @@ def filter_generate_text(  # this is called "text" not "md"... and the params su
     filter_tags_exclude: str = "",
     include_full_text: bool = False,
     html_characters: bool = False,
-    skip_generation: bool = False,
+    skip_feature_generation: bool = False,
     text_type: str = "md",
 ) -> str:
     if text_type == "md":
@@ -330,7 +330,7 @@ def filter_generate_text(  # this is called "text" not "md"... and the params su
                     text_type,
                     html_characters,
                     include_full_text,
-                    skip_generation,
+                    skip_feature_generation,
                 )
                 + "  \n\n"
             )
@@ -346,7 +346,7 @@ def generate_doc_text(  # this is called "text" not "md"... and the params sugge
     end_text: str = "",
     text_type: str = "md",
     html_characters: bool = False,
-    skip_generation: bool = False,
+    skip_feature_generation: bool = False,
 ) -> str:
     """DEPRECATED: not really necessary given quarto"""
     if text_type == "md":
@@ -364,7 +364,7 @@ def generate_doc_text(  # this is called "text" not "md"... and the params sugge
                     text_type,
                     html_characters,
                     include_full_text,
-                    skip_generation,
+                    skip_feature_generation,
                 )
                 continue
             fi, fx = "", ""
@@ -380,7 +380,7 @@ def generate_doc_text(  # this is called "text" not "md"... and the params sugge
                         text_type,
                         html_characters,
                         include_full_text,
-                        skip_generation,
+                        skip_feature_generation,
                     )
                     + "  \n\n"
                 )

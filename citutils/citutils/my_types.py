@@ -87,7 +87,7 @@ class Doc(TypedDict, total=False):
     end_text: str
     text_type: str
     html_characters: bool
-    skip_generation: bool
+    skip_feature_generation: bool
 
 
 class DocPath(TypedDict, total=False):

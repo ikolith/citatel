@@ -15,7 +15,7 @@
   filter_tags: table, no_card
 
 - name: travel_time
-- table:
+  table:
     outcomes:
       1: a couple of minutes
       2: half an hour
