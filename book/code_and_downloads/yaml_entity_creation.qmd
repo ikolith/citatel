@@ -154,7 +154,7 @@ The most important filter tag might be `basic`. `basic` marks entities that any 
 
 Tables are a new feature, and not as well covered in these docs as they should be!
 
-```{yaml}
+```yaml
 - name: Haver of Table
   table:
     roll: 1d4 # (Optional)
@@ -167,7 +167,7 @@ Tables are a new feature, and not as well covered in these docs as they should b
 
 Every entity can only have one `table` feature, but you can use {} templating to embed any number of tables in an entity, just like you can embed any number of die rolls.
 
-```{yaml}
+```yaml
 - name: Roller of Haver of Table
   table:
     outcomes: 
