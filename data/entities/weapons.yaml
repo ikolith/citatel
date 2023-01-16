@@ -281,7 +281,7 @@
     The shaft is of a fine red wood, the engravings and the blade shine in the light.
   filter_tags: weapon
 
-- name: One-Handed Waraxe
+- name: One-Handed War Axe
   tags: one-handed, shafted, bladed
   requirements: 1 STR
   speed: (1n2)
@@ -289,7 +289,7 @@
   basic_attacks: "1d12 (S) [swinging: leading]"
   filter_tags: weapon
 
-- name: One-Handed Warhammer
+- name: One-Handed War Hammer
   tags: one-handed, shafted
   requirements: 1 STR
   speed: (1n2)

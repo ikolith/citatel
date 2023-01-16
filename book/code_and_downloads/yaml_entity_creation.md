@@ -105,8 +105,11 @@ The full list of features an entity can have is:
 - tags
 - target
 - to_hit
-  
-These all have special rules for formatting, they can be changed if you want to [plumb the code](https://github.com/ikolith/citatel/blob/7a36a1d906e802601cc6d651087de3e70b0a9100/citutils/citutils/entity_text_generators.py#L103) but you don't need to.  
+- table (NEW!)
+
+These all have special rules for formatting, they can be changed if you want to [plumb the code](https://github.com/ikolith/citatel/blob/7a36a1d906e802601cc6d651087de3e70b0a9100/citutils/citutils/entity_text_generators.py#L103) but you don't need to.
+
+**Every entity can only have one of each feature.** Entities cannot have two `name`s, two sets of `filter_tag`s etc.
 
 When you use entity generators (card generators, .md file generators, etc.) the features for the entity will be presented in whatever order they're in inside of the .yaml. If you choose a weird order nothing bad will happen but the card might not look like other cards.
 
@@ -133,7 +136,7 @@ In the repo, the .yamls live in [./data/entities](https://github.com/ikolith/cit
 
 If you want to add to the .yaml files you can edit them directly. You can also make your own .yaml in the same folder and it will be picked up with everything else when data is loaded. If you don't want something to be loaded, delete it or just move it out of the folder.
 
-### filter_tags?
+### filter_tags 
 
 `filter_tags` does what it says on the tin, it's set of tags that people can use to filter entities that they see when generating text, cards, or when searching through entities. You'll notice that `filter_tags` is the only feature that isn't blank in the template. This is a weapon template so presumably it would have the weapon tag. If you want to print cards for every weapon you would just search for entities with 'weapon' in their `filter_tags`.  
 
@@ -146,3 +149,42 @@ The only strict rule is that multiple `filter_tags` should be separated by comma
 Entity type filter tags are very common and useful. These are `invocation, item, npc, skill, weapon`.  
 
 The most important filter tag might be `basic`. `basic` marks entities that any character should know about at the start of the game, these are explicitly *not* spoilers. The `basic` tag allows players and DMs to confidently generate a full list of spoiler-free content from any set of entities.
+
+### table
+
+Tables are a new feature, and not as well covered in these docs as they should be!
+
+```{yaml}
+- name: Haver of Table
+  table:
+    roll: 1d4 # (Optional)
+    outcomes: # (Required)
+      1: A bad roll.
+      2-3: An okay roll.
+      4: A great roll!
+      5-6: An impossibly good roll.
+```
+
+Every entity can only have one `table` feature, but you can use {} templating to embed any number of tables in an entity, just like you can embed any number of die rolls.
+
+```{yaml}
+- name: Roller of Haver of Table
+  table:
+    outcomes: 
+      1: Do nothing.
+      2-3: Roll {Haver of Table}
+      4: You're very good at rolling. You roll {Haver of Table d4+2}
+```
+
+Let's go over these two entities with tables. You'll notice that the table is contained in the `table` feature which itself contains (with indentation!) `outcomes` and `roll`.  
+
+`outcomes` is required. It is what makes up the table, it associates some roll or rolls with some outcome. You can specify some range between X and Y for outcomes. You cannot have overlap, so one table cannot have both ranges from `1-3` and `2-4`.  
+
+`roll` determines what die you roll when rolling on the table. If `roll` is not specified, you roll a single die with the lowest face equal to the minimum outcome and the highest face equal to the maximum outcome.
+
+You'll notice that the Haver of Table has a roll of 1d4 and outcomes from 1-6. This means if you just call `{Haver of Table}`, you'll roll a d4 and you'll never get the `An impossibly good roll.` outcome. Notice also that if you roll a 4 on the `Roller of Haver of Table`s entity, you'll roll `{Haver of Table d4+2}`. This trailing `d4+2` specifies that if the entity `Haver of Table` *has* a table in it, you should ignore it's range and `roll` and roll `d4+2` instead. This means that through rolling a 4 on `Roller of Haver of Table`s table, and then rolling a 4 when you roll `d4+2`, you can get `An impossibly good roll.`!
+
+The way the program determines what to roll on the table is this:  
+If the roll was specified after the entity was called, use that roll, whatever it is. Otherwise, use whatever the table in the entity said to roll. If the table in the called entity does not specify a roll, just randomly pick a number between the biggest and smallest outcome.
+
+Being able to specify what die to roll on a table can allow you to reuse tables more easily. You can create one weapon table for a faction which contains 20 weapons ranked in quality. Lower ranked enemies can roll a smaller die to get weaker weapons from this table, while more dangerous enemies can roll something like 1d10+10 on the weapons table, guaranteeing that they have at least the weapon at outcome 11. You can also use this to reuse area generation tables, or to allow a player to be able to add some score when rolling on a table, accessing better outcomes. You can also ignore it entirely.

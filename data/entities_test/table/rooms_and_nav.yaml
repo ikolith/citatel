@@ -1,0 +1,40 @@
+# - name: cave_room
+#   size: "{cave_size}"
+#   travel_time: "{travel_time}"
+#   filter_tags: no_card, space
+
+- name: cave_size
+  table:
+    outcomes:
+      1: Only a widening of the tunnel, space for letting other parties pass or to sleep on the side of the road.
+      2: the size of a small room
+      3: the size of a large room, about 10 spaces wide
+      4: the size of a small house
+      5: the size of an ampitheater
+      6: the size of a stadium
+  filter_tags: table, no_card
+
+- name: travel_time
+- table:
+    outcomes:
+      1: a couple of minutes
+      2: half an hour
+      3: an hour
+      4: "{1d4} hours"
+      6: "half a day"
+      7: "a day"
+      8: "{1d4} days"
+      9: "{1d6} days"
+      10: "{1d8} days"
+      11: "{1d10} days"
+      12: "{1d12} days"
+    filter_tags: table, no_card
+
+- name: expanse
+  table:
+    outcomes:
+      1: "You see a massive underground fungal forest. Glowing lichen hangs down, obscuring the ceiling. You can't tell how large the forest is."
+      2: "You see an enormous flooded cave. You hear running water and the gentle rain of water running down stalactites and dropping into the water below. Irregular stalagmite islands rise from the water throughout."
+      3: "The ground in front of the entrance to the cave drops away, the entrance leads directly into a great black abyss. You cannot see the bottom. You cannot see the other side. Warm air is pushed gently upward then is pulled back down every few minutes. The empty space breathes slowly."
+      4: "Great crystal columns reach from every direction and branch out freely in every direction. You can't see very far in the dense forest of crystal."
+  #travel_time: "{travel_time d6+6}"

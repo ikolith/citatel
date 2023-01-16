@@ -22,3 +22,4 @@
   # i dont really think i should modify the base behaviour of yaml parsing... but hey, maybe....
   # better to just establish "best practices" for making .yaml entries... which is just tell the goddamn thing its a string
   effect: "{just_table}"
+

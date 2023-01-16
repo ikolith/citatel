@@ -8,7 +8,7 @@ Templating is a standardized way of presenting some sort of information so that 
 
 ## How to Use Templating
 
-Mark things that should be handled by templating with {}. The dice go first, then the entity. Either can be left out. This can be done in any of the fields of an [entity .yaml](yaml_entity_creation.md).
+Mark things that should be handled by templating with {}. The quantity dice go first, then the entity, then dice determining what should be rolled on the table inside the entity, if it has has a table (more on tables in the [.yaml entity creation doc!](yaml_entity_creation.md#table)). Any of these can be left out. This can be done in any of the fields of an [entity .yaml](yaml_entity_creation.md).
 
 ```yaml
 - name: Salt Wretch
@@ -27,7 +27,7 @@ Mark things that should be handled by templating with {}. The dice go first, the
 `{1d4-2 curse_eye}` in this case will be processed as some number of Curse Eyes (not less than 0).  
 
 I'm going to describe the syntax here with each optional unit in parentheses.  
-`{((#)d#(x)(+ or - #)) (entity)}`  
+`{((#)d#(x)(+ or - #)) (entity) ((#)d#(x)(+ or - #)}`  
 Where # is any positive integer and "x" indicates that the die is exploding, (every time the die lands on its max face, another roll is performed).  
 
 You can give an NPC `{3d10+10}` HP, or `{2d6x}`, or just `{2d6}`. There is no restriction on where you can use any kind of templating, so you could make the HP of a creature some variable number of Curse Eyes, your only problem will be that people may not understand what you mean by that.
@@ -38,12 +38,8 @@ As an example, the basic curly parse command has a lot of options regarding temp
 
 ## Why "curse_eye" instead of "Curse Eye"?
 
-Names can include special characters, apostrophes, symbols, weird capitalization, etc. This can make working with names a bit of a pain. Within the code, the Names are converted in to `clean_name`s. These are names but lowercase, with all special characters removed, and with spaces replaced by underscores. Numbers are left in, mostly for the sake of certain skill progressions. So "Salt Wretch 2: SALTY!" becomes `salt_wretch_2_salty`.
+Names can include special characters, apostrophes, symbols, weird capitalization, etc. This can make working with names a bit of a pain. Within the code, names are converted into `clean_name`s. These are names but lowercase, with all special characters removed, and with spaces replaced by underscores. Numbers are left in, mostly for the sake of certain skill progressions. So "Salt Wretch 2: SALTY!" becomes `salt_wretch_2_salty` internally. It used to be the case that to use templating you had to give a `clean_name`. This is no longer true. Now, if there is something like an entity within the curly braces, the conversion to clean_name will be done internally, so all of the following are treated the same way: `{2d4 curse_eye}`, `{2d4 Curse Eye}`, `{2d4 CuRsE EyE<><><><>!!!}`.  
 
-## TODO:
-
-It should be the case that people can just write {2d4 Salt Wretch} and the name is converted into a clean_name at time of processing (notice that a `clean_name` converted to a `clean_name` is still just a `clean_name` so it doesn't matter whether the conversion was already done for us). It should also be the case that someone can just specify arbitrary die rolls, so `{3+2d10-1d6 Salt Wretch}` should be valid. Neither of these things are true right now. Dropping this TODO here so that I get around to it at some point.
-
-The good news is that when this change does happen, all the old templating will still be valid, so don't worry that the code will change under you as you use it and your old entities won't be valid anymore.
+Every entity `clean_name` must unique, so you can't have a "Curse Eye" and a "Curse Eye++", these will look like the same name to the code and it will throw an error.
 
 <!-- Die rolling does not support arbitrary equations, kisi and wile. It should, eventually. -->
