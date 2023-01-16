@@ -15,7 +15,7 @@ text = ""
 entities = tu.get_entities(os.path.join("..","..","data","entities"))
 
 entities_to_generate = dict(sorted({
-    "legion":{"include_full_text":True,"skip_generation":True},
+    "legion":{"include_full_text":True,"skip_feature_generation":True},
     "tchok":{"include_full_text":True},
     }.items()))
 

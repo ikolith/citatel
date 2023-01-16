@@ -387,7 +387,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul class="collapse">
   <li><a href="#available-features-for-entities-what-do-different-entities-look-like" id="toc-available-features-for-entities-what-do-different-entities-look-like" class="nav-link" data-scroll-target="#available-features-for-entities-what-do-different-entities-look-like">Available Features for Entities, What do Different Entities Look Like?</a></li>
   <li><a href="#where-are-the-entity-.yamls-where-should-new-ones-go" id="toc-where-are-the-entity-.yamls-where-should-new-ones-go" class="nav-link" data-scroll-target="#where-are-the-entity-.yamls-where-should-new-ones-go">Where are the Entity .yamls, where should new ones go?</a></li>
-  <li><a href="#filter_tags" id="toc-filter_tags" class="nav-link" data-scroll-target="#filter_tags">filter_tags?</a></li>
+  <li><a href="#filter_tags" id="toc-filter_tags" class="nav-link" data-scroll-target="#filter_tags">filter_tags</a></li>
+  <li><a href="#table" id="toc-table" class="nav-link" data-scroll-target="#table">table</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -486,8 +487,10 @@ It looks a certain way, it sounds a certain way, and it tastes a certain way, bu
 <li>tags</li>
 <li>target</li>
 <li>to_hit</li>
+<li>table (NEW!)</li>
 </ul>
 <p>These all have special rules for formatting, they can be changed if you want to <a href="https://github.com/ikolith/citatel/blob/7a36a1d906e802601cc6d651087de3e70b0a9100/citutils/citutils/entity_text_generators.py#L103">plumb the code</a> but you don’t need to.</p>
+<p><strong>Every entity can only have one of each feature.</strong> Entities cannot have two <code>name</code>s, two sets of <code>filter_tag</code>s etc.</p>
 <p>When you use entity generators (card generators, .md file generators, etc.) the features for the entity will be presented in whatever order they’re in inside of the .yaml. If you choose a weird order nothing bad will happen but the card might not look like other cards.</p>
 </section>
 <section id="where-are-the-entity-.yamls-where-should-new-ones-go" class="level3">
@@ -509,13 +512,39 @@ It looks a certain way, it sounds a certain way, and it tastes a certain way, bu
 <p>If you want to add to the .yaml files you can edit them directly. You can also make your own .yaml in the same folder and it will be picked up with everything else when data is loaded. If you don’t want something to be loaded, delete it or just move it out of the folder.</p>
 </section>
 <section id="filter_tags" class="level3">
-<h3 class="anchored" data-anchor-id="filter_tags">filter_tags?</h3>
+<h3 class="anchored" data-anchor-id="filter_tags">filter_tags</h3>
 <p><code>filter_tags</code> does what it says on the tin, it’s set of tags that people can use to filter entities that they see when generating text, cards, or when searching through entities. You’ll notice that <code>filter_tags</code> is the only feature that isn’t blank in the template. This is a weapon template so presumably it would have the weapon tag. If you want to print cards for every weapon you would just search for entities with ‘weapon’ in their <code>filter_tags</code>.</p>
 <p>There is no restriction to the number of <code>filter_tags</code> an entity can have. You do not have to pick from a restricted set of <code>filter_tags</code> and you can add as many <code>filter_tags</code> as you want (though of course, common or relevant ones will be much more useful to people).</p>
 <p>The <code>filter_tags</code> field shouldn’t be confused with the <code>tags</code> field. <code>filter_tags</code> are for searching and filtering, they have no in-game use. <code>tags</code> have in-game mechanical uses, they are things like <code>bladed</code> or <code>two-handed</code>. In the future this distinction might be cleaned up, but right now just remember that they are totally different things, you cannot filter by <code>tags</code> and you cannot use <code>filter_tags</code> like normal <code>tags</code> in-game.</p>
 <p>The only strict rule is that multiple <code>filter_tags</code> should be separated by commas. The preferred style for <code>filter_tags</code> is all lowercase with no special characters. If you need to add a space, use an underscore.</p>
 <p>Entity type filter tags are very common and useful. These are <code>invocation, item, npc, skill, weapon</code>.</p>
 <p>The most important filter tag might be <code>basic</code>. <code>basic</code> marks entities that any character should know about at the start of the game, these are explicitly <em>not</em> spoilers. The <code>basic</code> tag allows players and DMs to confidently generate a full list of spoiler-free content from any set of entities.</p>
+</section>
+<section id="table" class="level3">
+<h3 class="anchored" data-anchor-id="table">table</h3>
+<p>Tables are a new feature, and not as well covered in these docs as they should be!</p>
+<pre class="{yaml}"><code>- name: Haver of Table
+  table:
+    roll: 1d4 # (Optional)
+    outcomes: # (Required)
+      1: A bad roll.
+      2-3: An okay roll.
+      4: A great roll!
+      5-6: An impossibly good roll.</code></pre>
+<p>Every entity can only have one <code>table</code> feature, but you can use {} templating to embed any number of tables in an entity, just like you can embed any number of die rolls.</p>
+<pre class="{yaml}"><code>- name: Roller of Haver of Table
+  table:
+    outcomes: 
+      1: Do nothing.
+      2-3: Roll {Haver of Table}
+      4: You're very good at rolling. You roll {Haver of Table d4+2}</code></pre>
+<p>Let’s go over these two entities with tables. You’ll notice that the table is contained in the <code>table</code> feature which itself contains (with indentation!) <code>outcomes</code> and <code>roll</code>.</p>
+<p><code>outcomes</code> is required. It is what makes up the table, it associates some roll or rolls with some outcome. You can specify some range between X and Y for outcomes. You cannot have overlap, so one table cannot have both ranges from <code>1-3</code> and <code>2-4</code>.</p>
+<p><code>roll</code> determines what die you roll when rolling on the table. If <code>roll</code> is not specified, you roll a single die with the lowest face equal to the minimum outcome and the highest face equal to the maximum outcome.</p>
+<p>You’ll notice that the Haver of Table has a roll of 1d4 and outcomes from 1-6. This means if you just call <code>{Haver of Table}</code>, you’ll roll a d4 and you’ll never get the <code>An impossibly good roll.</code> outcome. Notice also that if you roll a 4 on the <code>Roller of Haver of Table</code>s entity, you’ll roll <code>{Haver of Table d4+2}</code>. This trailing <code>d4+2</code> specifies that if the entity <code>Haver of Table</code> <em>has</em> a table in it, you should ignore it’s range and <code>roll</code> and roll <code>d4+2</code> instead. This means that through rolling a 4 on <code>Roller of Haver of Table</code>s table, and then rolling a 4 when you roll <code>d4+2</code>, you can get <code>An impossibly good roll.</code>!</p>
+<p>The way the program determines what to roll on the table is this:<br>
+If the roll was specified after the entity was called, use that roll, whatever it is. Otherwise, use whatever the table in the entity said to roll. If the table in the called entity does not specify a roll, just randomly pick a number between the biggest and smallest outcome.</p>
+<p>Being able to specify what die to roll on a table can allow you to reuse tables more easily. You can create one weapon table for a faction which contains 20 weapons ranked in quality. Lower ranked enemies can roll a smaller die to get weaker weapons from this table, while more dangerous enemies can roll something like 1d10+10 on the weapons table, guaranteeing that they have at least the weapon at outcome 11. You can also use this to reuse area generation tables, or to allow a player to be able to add some score when rolling on a table, accessing better outcomes. You can also ignore it entirely.</p>
 
 
 </section>

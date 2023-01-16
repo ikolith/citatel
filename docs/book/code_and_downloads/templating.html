@@ -383,7 +383,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#what-is-templating-when-to-use-templating" id="toc-what-is-templating-when-to-use-templating" class="nav-link active" data-scroll-target="#what-is-templating-when-to-use-templating">What is Templating, When to Use Templating</a></li>
   <li><a href="#how-to-use-templating" id="toc-how-to-use-templating" class="nav-link" data-scroll-target="#how-to-use-templating">How to Use Templating</a></li>
   <li><a href="#why-curse_eye-instead-of-curse-eye" id="toc-why-curse_eye-instead-of-curse-eye" class="nav-link" data-scroll-target="#why-curse_eye-instead-of-curse-eye">Why “curse_eye” instead of “Curse Eye”?</a></li>
-  <li><a href="#todo" id="toc-todo" class="nav-link" data-scroll-target="#todo">TODO:</a></li>
   </ul>
 </nav>
     </div>
@@ -413,7 +412,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="how-to-use-templating" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-use-templating">How to Use Templating</h2>
-<p>Mark things that should be handled by templating with {}. The dice go first, then the entity. Either can be left out. This can be done in any of the fields of an <a href="../../book/code_and_downloads/yaml_entity_creation.html">entity .yaml</a>.</p>
+<p>Mark things that should be handled by templating with {}. The quantity dice go first, then the entity, then dice determining what should be rolled on the table inside the entity, if it has has a table (more on tables in the <a href="yaml_entity_creation.md#table">.yaml entity creation doc!</a>). Any of these can be left out. This can be done in any of the fields of an <a href="yaml_entity_creation.md">entity .yaml</a>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Salt Wretch</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">hp</span><span class="kw">:</span><span class="at"> </span><span class="st">"{1d10} or 4"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">scores</span><span class="kw">:</span><span class="at"> 1 STR</span></span>
@@ -427,7 +426,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">filter_tags</span><span class="kw">:</span><span class="at"> npc, cave, salt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>{1d4-2 curse_eye}</code> in this case will be processed as some number of Curse Eyes (not less than 0).</p>
 <p>I’m going to describe the syntax here with each optional unit in parentheses.<br>
-<code>{((#)d#(x)(+ or - #)) (entity)}</code><br>
+<code>{((#)d#(x)(+ or - #)) (entity) ((#)d#(x)(+ or - #)}</code><br>
 Where # is any positive integer and “x” indicates that the die is exploding, (every time the die lands on its max face, another roll is performed).</p>
 <p>You can give an NPC <code>{3d10+10}</code> HP, or <code>{2d6x}</code>, or just <code>{2d6}</code>. There is no restriction on where you can use any kind of templating, so you could make the HP of a creature some variable number of Curse Eyes, your only problem will be that people may not understand what you mean by that.</p>
 <p>Use templating to set up automation for rolls and to refer to other entities, how templating is actually handled varies from tool to tool, you don’t have to worry about that level of implementation when including templated rolls or entities.</p>
@@ -435,12 +434,8 @@ Where # is any positive integer and “x” indicates that the die is exploding,
 </section>
 <section id="why-curse_eye-instead-of-curse-eye" class="level2">
 <h2 class="anchored" data-anchor-id="why-curse_eye-instead-of-curse-eye">Why “curse_eye” instead of “Curse Eye”?</h2>
-<p>Names can include special characters, apostrophes, symbols, weird capitalization, etc. This can make working with names a bit of a pain. Within the code, the Names are converted in to <code>clean_name</code>s. These are names but lowercase, with all special characters removed, and with spaces replaced by underscores. Numbers are left in, mostly for the sake of certain skill progressions. So “Salt Wretch 2: SALTY!” becomes <code>salt_wretch_2_salty</code>.</p>
-</section>
-<section id="todo" class="level2">
-<h2 class="anchored" data-anchor-id="todo">TODO:</h2>
-<p>It should be the case that people can just write {2d4 Salt Wretch} and the name is converted into a clean_name at time of processing (notice that a <code>clean_name</code> converted to a <code>clean_name</code> is still just a <code>clean_name</code> so it doesn’t matter whether the conversion was already done for us). It should also be the case that someone can just specify arbitrary die rolls, so <code>{3+2d10-1d6 Salt Wretch}</code> should be valid. Neither of these things are true right now. Dropping this TODO here so that I get around to it at some point.</p>
-<p>The good news is that when this change does happen, all the old templating will still be valid, so don’t worry that the code will change under you as you use it and your old entities won’t be valid anymore.</p>
+<p>Names can include special characters, apostrophes, symbols, weird capitalization, etc. This can make working with names a bit of a pain. Within the code, names are converted into <code>clean_name</code>s. These are names but lowercase, with all special characters removed, and with spaces replaced by underscores. Numbers are left in, mostly for the sake of certain skill progressions. So “Salt Wretch 2: SALTY!” becomes <code>salt_wretch_2_salty</code> internally. It used to be the case that to use templating you had to give a <code>clean_name</code>. This is no longer true. Now, if there is something like an entity within the curly braces, the conversion to clean_name will be done internally, so all of the following are treated the same way: <code>{2d4 curse_eye}</code>, <code>{2d4 Curse Eye}</code>, <code>{2d4 CuRsE EyE&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;!!!}</code>.</p>
+<p>Every entity <code>clean_name</code> must unique, so you can’t have a “Curse Eye” and a “Curse Eye++”, these will look like the same name to the code and it will throw an error.</p>
 <!-- Die rolling does not support arbitrary equations, kisi and wile. It should, eventually. -->
 
 
