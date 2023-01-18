@@ -8,7 +8,7 @@ Templating is a standardized way of presenting some sort of information so that 
 
 ## How to Use Templating
 
-Mark things that should be handled by templating with {}. The quantity dice go first, then the entity, then dice determining what should be rolled on the table inside the entity, if it has has a table (more on tables in the [.yaml entity creation doc!](yaml_entity_creation.md#table)). Any of these can be left out. This can be done in any of the fields of an [entity .yaml](yaml_entity_creation.md).
+Mark things that should be handled by templating with {}. The quantity dice go first, then the entity, then dice determining what should be rolled on the table inside the entity, if it has has a table (more on tables in the [.yaml entity creation doc!](./yaml_entity_creation.qmd)). Any of these can be left out. This can be done in any of the fields of an [entity .yaml](./yaml_entity_creation.qmd).
 
 ```yaml
 - name: Salt Wretch

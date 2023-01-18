@@ -150,7 +150,7 @@
 #### planned: longsword, where did the executioners greatsword go???
 
 - name: Boar Sword
-  tags: hilted two-handed reach
+  tags: hilted two-handed, reach
   requirements: 2 AGI
   speed: (1n2)->(2n1)
   to_hit: "+AGI"
@@ -180,7 +180,7 @@
   filter_tags: weapon, basic
 
 - name: Primary of the Night-Heron
-  tags: "hilted, two-handed, bladed, reach: 2 spaces"
+  tags: "hilted, two-handed, bladed, reach: 2"
   requirements: 1 STR
   speed: (1n1)->(1n2)
   to_hit: +AGI
@@ -203,7 +203,7 @@
   to_hit: "+AGI"
   basic_attacks: "1d6 (P) + 1d6 (S) [swinging: leading], 1d8 (P) [thrusting]"
   flavor_text: |-
-    The long blade of the Rhomphaia curves aggressively toward the enemy, like a great bladed claw.
+    The long blade of the Rhomphaia curves aggressively toward the enemy like a shining claw.
   encumbrance: 1
   filter_tags: weapon, basic
 

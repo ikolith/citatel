@@ -2,8 +2,117 @@
 title: Quickstart
 ---
 
-Simply start quickly.
+<!-- Simply start quickly.
 
 (Section in progress)
 
-<!-- TODO: quickstart -->
+TODO: quickstart -->
+
+## Reading?!
+
+You want to play a game, not read about one! I understand. Here is a *very* condensed summary of the rules with links to the accompanying sections in the actual rules documents. As you end up in situations where you have to engage with the specifics of the rules, follow the included links and read those rules.
+
+You also need a character and might not have time to to [create your own](./p1_rules_and_character_creation/s2_character_creation/how_to_character_creation.md). In that case, just grab one of the [premade characters](./p1_rules_and_character_creation/s2_character_creation/prerolls.md).
+
+# The Rules
+
+***[The following is from "Intro"](./p1_rules_and_character_creation/s1_rules/intro.qmd)***
+
+GM = Game Master, all rules are "unless otherwise stated". Change the rules and improvise new ones.
+
+Rules are split into three section, "Sixtem" for core rules, "Tactile" for low fantasy mechanics, "Talaje" for setting specific rules.
+
+***[The following is from "Sixtem"](./p1_rules_and_character_creation/s1_rules/sixtem.qmd)***
+
+
+## [Characters](./p1_rules_and_character_creation/s1_rules/sixtem.qmd#how-characters-work) and [Doin' Stuff](./p1_rules_and_character_creation/s1_rules/sixtem.qmd#doing-things)
+
+Character sheet looks like this
+
+HP: 18 + (6\*CON), Defense: 6, Movement Speed: 4  
+
+| ATTRIBUTE      | SCORE |
+| -------------- | ----- |
+| STR(ENGTH)     | 0     |
+| AGI(LITY)      | 0     |
+| DEX(TERITY)    | 0     |
+| CON(STITUTION) | 0     |
+| PER(CEPTION)   | 0     |
+| SOC(IAL)       | 0     |
+
+When someone does damage to you they lower your HP, when it reaches 0 [bad stuff happens](./p1_rules_and_character_creation/s1_rules/tactile.qmd#injury-and-death). "Defense" determines how hard you are to hit. "Movement speed" is how many spaces you move per move action.  
+
+When you try to do something your roll 2d6s, add the relevant attribute score, and tell the DM how you did. If you're directly contesting another character, it's a ["contest"](./p1_rules_and_character_creation/s1_rules/sixtem.qmd#an-example-of-a-contest). Most of the time you're not doing that, so it's a ["check"](p1_rules_and_character_creation/s1_rules/sixtem.qmd#an-example-of-a-check). Your ["passive" score](./p1_rules_and_character_creation/s1_rules/sixtem.qmd#passive-scores) in an attribute is 6 + SCORE. [Rolling double 6s is especially good, rolling double 1s is especially bad](./p1_rules_and_character_creation/s1_rules/sixtem.qmd#double-1s-double-6s). 
+
+## [AP](./p1_rules_and_character_creation/s1_rules/sixtem.qmd#ap-moving-and-the-ap-tracker) 
+
+You have 3 (A)ction (P)oints. You use that AP to do everything, including moving. Most of the time you don't have to track AP, in combat or any other highly time-sensitive context you do.  
+
+AP costs look like "(1n1)" or more generally (XnY) where X is the cost of doing the thing and Y is the number of rounds that have to pass before you get that AP back. (1n1) means the action takes 1 AP and you get it back on the next turn. The "move" action costs (1n1).  
+
+You can track AP by keeping 3 tokens on the "0" square on the [AP tracker](./p1_rules_and_character_creation/s1_rules/sixtem.qmd#the-ap-tracker) (the boxes from 0 to 3 on your character sheet) and moving X tokens to the Y cell (where the cost is "(XnY)", remember) when you spend AP. At the beginning of every round move all of your tokens one cell to the left, towards the 0 cell. If you see a move that has [multiple costs strung together](./p1_rules_and_character_creation/s1_rules/sixtem.qmd#moves-that-have-multiple-costs) with little arrows like "->" that means that the first time you use the move in the round you use the first cost, the second time you use the second cost, etc. Once you run out of costs you just keep using the last cost. [Link to an example of attacking using AP.](./p1_rules_and_character_creation/s1_rules/sixtem.qmd#pulling-it-all-together-an-example-of-attacking-using-ap).
+
+[AP shenanigans!](./p1_rules_and_character_creation/s1_rules/sixtem.qmd#ap-shenanigans-temp-ap-losing-ap-gaining-ap-the-wait-action) Temp AP goes away next turn, losing AP means you drop the one furthest from the 0 cell, gaining AP means you either put one on the 0 cell if you're below 3 AP or move the furthest one from the 0 cell to the 0 cell if you have 3 AP already. You can "Wait", spending no AP for a round and regaining 1 AP at the end.
+
+## Initiative 
+
+A character's "initiative" is their AGI (+- bonuses/penalties). Stuff happens in "rounds".  
+
+At the [beginning of the round](./p1_rules_and_character_creation/s1_rules/sixtem.qmd#beginning-phase---beginning-of-the-round) everyone manages their character, "beginning of the round" effects happen, people take poison damage and recover AP, and characters can use "beginning of the round" skills and moves. 
+
+[Then](./p1_rules_and_character_creation/s1_rules/sixtem.qmd#main-phase) you say what you want to do. The character with highest initiative goes first unless another character *really* wants to go first, in which case they can spend (1n1) to try and [interrupt](./p1_rules_and_character_creation/s1_rules/sixtem.qmd#interrupting-and-interrupt) some faster character. If their are a lot of characters your GM might be a little more hands on, giving higher initiative characters a chance to move first. If there are few characters, your GM might be more hands off.
+
+**There is nothing to prompt you to take your turn and if you're not paying attention the rounds will continue without you.**
+
+***[The following is from "Tactile"](./p1_rules_and_character_creation/s1_rules/tactile.qmd)***
+
+## [Weapons](./p1_rules_and_character_creation/s1_rules/tactile.qmd#weapon-rules)
+
+"Speed" is the set of AP costs used to attack with the weapon. Weapons can have multiple different attacks, but those attacks share the same "Speed". "To-Hit" is what you add to your check against the Defense of the character your attacking. The dice of an attack (+ something, possibly) is the damage you roll. The letter after the damage dice is the damage type, one of (B)ludgeoning, (P)iercing, or (S)lashing. 
+
+Attacks also have a tag that describes what "sort" of attack they are. This is often replaced with a glyph made of filled and empty triangles in various orientations. These are referenced by skills and effects, but if you have no relevant skills you can simply ignore them or use them to inform your description of the sort of attack you are doing.
+
+***[swinging: leading]*** or &#9655; &#9655; &#9654; is for aggressive chopping and bashing, think axes and hammers.
+
+***[swinging: neutral]*** or &#9655; &#9654; &#9655; is for normal straight sword and stick swingin'.
+
+***[swinging: following]*** or &#9654; &#9655; &#9655; is for quick slashy attacks, think sabres.
+
+***\[thrusting]*** or &#9650; is for spearin' and stabbin'.
+
+There are others, but you get the idea. [But maybe you don't.](./p1_rules_and_character_creation/s1_rules/tactile.qmd#attack-tags-in-a-more-detail)  
+
+[Weapon switching](./p1_rules_and_character_creation/s1_rules/tactile.qmd#weapon-switching) costs (1n1) most of the time. If you're [below the requirements for a weapon](./p1_rules_and_character_creation/s1_rules/tactile.qmd#being-below-a-weapon’s-requirements), you're worse at using it. Maybe you can try [using both hands](./p1_rules_and_character_creation/s1_rules/tactile.qmd#two-handing-a-one-handed-weapon-one-handing-a-two-handed-weapon) if you're not strong enough to use it one-handed. You could try [throwing it](./p1_rules_and_character_creation/s1_rules/tactile.qmd#throwing-a-spear-or-a-dagger-without-a-specific-thrown-move) too.
+
+## [Resting](./p1_rules_and_character_creation/s1_rules/tactile.qmd#resting-and-healing)
+
+Everytime you rest for 8 hours your "recovery dice" are refilled. You get one d6 recovery die for every 6 HP you have and you can roll one by resting for an hour first, rolling it, and then adding it to your HP.
+
+## [Injury and Death](./p1_rules_and_character_creation/s1_rules/tactile.qmd#being-reduced-to-0-hp-being-downed)
+
+If you're reduced to 0 HP you'll have a bunch of extra free time to read the [Injury and Death](./p1_rules_and_character_creation/s1_rules/tactile.qmd#being-reduced-to-0-hp-being-downed) rules properly! Congratulations!
+
+If you are reduced to -(Max HP/2) you die instantly, but otherwise you are simply "downed" and slowly dying. The longer you are downed, the more likely you end up in a weakened state for a while, permanently injured, or dead.
+
+If you are brought above 0 HP you are stabilized and aren't at further risk. If you are brought above 6 HP you are conscious, though you still suffer whatever consequences you accrued. ~~Lose~~ Break a leg out there, bud!
+
+## [Social](./p1_rules_and_character_creation/s1_rules/tactile.qmd#social-rolls)
+
+SOCIAL rolls augment what you say or do rather than replacing it. You might be able to cause another character to view you more or less favorably than they would otherwise. This is systematized in a [reputation table](./p1_rules_and_character_creation/s1_rules/tactile.qmd#communicative-skills-bias-and-reputation) that your GM may or may not use. Social checks can be used to gain insight into another person but they might also cause you to fumble the interaction [depending on if you passed or failed the check, and by how much](./p1_rules_and_character_creation/s1_rules/tactile.qmd#social-check-resolution). There can also be [SOCIAL contests](./p1_rules_and_character_creation/s1_rules/tactile.qmd#contests) in some contexts, they work similarly.
+
+## Odds and Ends
+
+[Stealth](./p1_rules_and_character_creation/s1_rules/tactile.qmd#stealth) is based on AGI. [Grappling](./p1_rules_and_character_creation/s1_rules/tactile.qmd#grappling) takes (2n1), puts both characters into the \[grappling] state, and makes the defender \[vulnerable]. Fall damage is a d6 for every 6 spaces up to 25d6. You can take 10 minutes to work at something (that you can try repeatedly at where there is no cost for failure) to treat your check as a 10 + relevant modifiers.
+
+## [Encumbrance and Rations](./p1_rules_and_character_creation/s1_rules/tactile.qmd#the-encumbered-threshold-and-maximum-encumbrance)
+
+
+Encumbrance is measured in encs. A days worth of food and water is 1, most weapons are 1, a bunch of small weapons together (around 3) are 1 enc. You can carry 3 + STR items without being [encumbered]. You can 6 + STR encs in total. All of these values can be changed by different bags, a bag can let you carry more without being [encumbered].
+
+The \[encumbered] status lowers your move speed by 1. Your Defense is lowered by 3. Additionally, take a -1 to all AGI checks.
+
+***[The following is from "Talaje"](./p1_rules_and_character_creation/s1_rules/talaje.qmd)***
+
+## Casting
+
+The Talaje rules are only for [special casting mechanics](./p1_rules_and_character_creation/s1_rules/talaje.qmd), they are still changing, and they are pretty small. Read the section relevant to whatever sort of casting you want to do. The sections are too brief to be worth summarizing here.
