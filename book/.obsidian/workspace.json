@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "p3_worldbuilding/maps/map_notes.md",
+                "file": "p2_content/groups/isopods.qmd",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "16ba34487a00d420",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "generation/generation.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "p3_worldbuilding/maps/map_notes.md",
+                "file": "generation/generation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "p3_worldbuilding/maps/map_notes.md",
+                "file": "generation/generation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "p3_worldbuilding/maps/map_notes.md"
+                "file": "generation/generation.md"
               }
             }
           }
@@ -147,17 +160,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3233fbb3b9019987",
+  "active": "b255f643466aedf0",
   "lastOpenFiles": [
-    "p3_worldbuilding/maps/labeled_first_run.pdf",
-    "p3_worldbuilding/maps/blank_river.pdf",
-    "p3_worldbuilding/maps/blank.pdf",
-    "p2_content/unaffiliated_npcs_and_their_entities.qmd",
-    "p2_content/unaffiliated_entities.qmd",
+    "p2_content/groups/isopods.qmd",
+    "p2_content/groups/harvesters.qmd",
+    "p2_content/groups/crust_punks.qmd",
+    "p2_content/groups/bureaucrats.qmd",
     "p2_content/groups_and_their_entities.qmd",
-    "p1_rules_and_character_creation/s2_character_creation/prerolls.md",
-    "p1_rules_and_character_creation/s2_character_creation/shopping.qmd",
-    "p1_rules_and_character_creation/s2_character_creation/how_to_character_creation.md",
-    "p5_addendums_motivations_misc/shipped/loicense.md"
+    "p2_content/unaffiliated_entities.qmd",
+    "p1_rules_and_character_creation/s1_rules/tactile.qmd",
+    "p1_rules_and_character_creation/s1_rules/sixtem.qmd",
+    "p1_rules_and_character_creation/s1_rules/intro.qmd",
+    "p2_content/base_sheets/ataara.qmd"
   ]
 }

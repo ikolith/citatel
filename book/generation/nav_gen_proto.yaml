@@ -38,3 +38,17 @@
       3: "The ground in front of the entrance to the cave drops away, the entrance leads directly into a great black abyss. You cannot see the bottom. You cannot see the other side. Warm air is pushed gently upward then is pulled back down every few minutes. The empty space breathes slowly."
       4: "Great crystal columns reach from every direction and branch out freely in every direction. You can't see very far in the dense forest of crystal."
   #travel_time: "{travel_time d6+6}"
+
+## exits??
+
+- name: Cave Exit Locations
+  table:
+    outcomes:
+      1: Near
+      2: Right
+      3: Up (Ceiling)
+      4: Down (Floor)
+      5: Left
+      6: Far
+    # oriented as if projected from a cube in center of cave room, with players entering through the 1 side.
+# of course properly generating caves would include some more context, "spice" for these... larger more complex caves, rolling on cave exit table more... i see a note here about "bayesian generation"....

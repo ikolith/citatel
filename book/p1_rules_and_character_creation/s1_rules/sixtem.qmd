@@ -59,7 +59,6 @@ When a check is made "against a score", the DC is 6 + SCORE. If you're trying to
 
 ### An Example of a "Contest"
 
-  echo: false
 Contests directly compare the efforts of two characters. Arm wrestling is a good example of a contest. There's no obvious number you have to beat, you just need to do better than the other guy. When participating in contests, you roll and then compare your roll to the "opposing" roll. If there's is a tie, the person with the higher relevant score wins. If _that’s_ a tie, either treat it as a tie in game, or if that makes no sense, do the contest again.
 
 ### An Example of a "Check"
@@ -67,7 +66,7 @@ Contests directly compare the efforts of two characters. Arm wrestling is a good
 You might decide that you want to jump a large chasm, your GM tells you to roll agility (AGI), so you roll 2d6 and add your AGI score. The GM knows the DC which in this example might be 8. If you pass the DC you succeed. If you don't, you fail, and the GM decides how that's resolved.  
 You will almost never know the DC of a check before you try it, and you might not even know afterwards if the GM decides not to tell you. However, you should be able to get a good idea of a DC by the GMs description of the situation or by asking questions. If the GM describes the chasm as nearly impossible to jump over, you can be sure you're looking at a DC above 10, probably around 12. If the GM says the gap is pretty small, barely worth worrying about, you can guess it's probably a DC around 3 or 4.
 
-### Action Points (AP), Moving, and the AP Tracker
+### AP, Moving, and the AP Tracker
 
 Action Points (AP) are the resource you use to do anything and everything. Characters have 3 AP unless otherwise stated. AP is regained at the beginning of every round. Every round takes about six seconds.
 

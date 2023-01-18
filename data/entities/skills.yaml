@@ -204,7 +204,7 @@
     you have. This ability lasts a number of hours equal to your LIGHTNING
     score. Once the ability ends, regain 1 max AP.
   cost: 1 SP
-  filter_tags: skill, lightning, basic
+  filter_tags: skill, lightning
 
 - name: Skillful Conduit
   requirements: "LIGHTNING 1 "
@@ -212,7 +212,7 @@
     You're able to transfer up to your LIGHTNING score in charges with every
     hit, including when using [ranged] attacks.
   cost: 1 SP
-  filter_tags: skill, lightning, basic
+  filter_tags: skill, lightning
 
 - name: Crashing Step
   requirements: "LIGHTNING 1"
@@ -223,7 +223,7 @@
     interrupted while moving. When you arrive at your target space, you can
     choose to transfer 1 charge to an enemy within 2 spaces.
   cost: 1 SP
-  filter_tags: skill, lightning, basic
+  filter_tags: skill, lightning
 
 - name: Watched by Dark Clouds
   requirements: "LIGHTNING 1"
@@ -238,7 +238,7 @@
     you could not be caught unaware in melee. This effect ends when Storm Gate
     does.
   cost: 1 SP
-  filter_tags: skill, lightning, basic
+  filter_tags: skill, lightning
 
 - name: Silent Light
   requirements: "LIGHTNING 1"
@@ -246,7 +246,7 @@
     Spend 1 extra charge when you perform a LIGHTNING magic. You can choose
     either to prevent light or sound from being produced.
   cost: 1 SP
-  filter_tags: skill, lightning, basic
+  filter_tags: skill, lightning
 
 - name: Fingers of Light
   requirements: "LIGHTNING 1"
@@ -256,7 +256,7 @@
 
     +3*LIGHTNING to hit, roll a d6 for every charge you have (P).
   cost: 1 SP
-  filter_tags: skill, lightning, basic
+  filter_tags: skill, lightning
 
 - name: Spark
   requirements: "LIGHTNING 1"
@@ -267,7 +267,7 @@
     Call Lightning: a much bigger move, sort of a signature move for the class,
     lightning hits whatever has the most charge, doing tons of damage
   cost: 1 SP
-  filter_tags: skill, lightning, basic
+  filter_tags: skill, lightning
 
 ## medicine
 

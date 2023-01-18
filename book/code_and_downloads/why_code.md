@@ -4,7 +4,7 @@ title: Why Code?
 
 ## Do I need to interact with any code or computers to play this game?
 
-**No.** You can download and print the rules and any documentation. You can download and print pre-made card sets or entity documentation. You can ignore [templating](./templating.md) and just roll the dice and find the mentioned entities yourself. You don't need an internet connection or a computer or any of that.
+**No.** You can download and print the rules and any documentation. You can download and print pre-made card sets or entity documentation. You can ignore [templating](./templating.qmd) and just roll the dice and find the mentioned entities yourself. You don't need an internet connection or a computer or any of that.
 
 ## Why is the Code here then?
 

@@ -223,4 +223,4 @@ useful table for me, probably should build this into the docs
 
 "*" Indicates that a weapon attack speed/series is less common.
 
-If you want to add weapons to the .yamls so that you can use the Python/automation tools to generate cards etc. head over to [the .yaml entity creation doc](./../code_and_downloads/yaml_entity_creation.md).
+If you want to add weapons to the .yamls so that you can use the Python/automation tools to generate cards etc. head over to [the .yaml entity creation doc](./../code_and_downloads/yaml_entity_creation.qmd).
