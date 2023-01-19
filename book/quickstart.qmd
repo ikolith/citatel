@@ -2,12 +2,6 @@
 title: Quickstart
 ---
 
-<!-- Simply start quickly.
-
-(Section in progress)
-
-TODO: quickstart -->
-
 ## Reading?!
 
 You want to play a game, not read about one! I understand. Here is a *very* condensed summary of the rules with links to the accompanying sections in the actual rules documents. As you end up in situations where you have to engage with the specifics of the rules, follow the included links and read those rules.
@@ -18,7 +12,7 @@ You also need a character and might not have time to to [create your own](./p1_r
 
 ***[The following is from "Intro"](./p1_rules_and_character_creation/s1_rules/intro.qmd)***
 
-GM = Game Master, all rules are "unless otherwise stated". Change the rules and improvise new ones.
+GM = Game Master, the person who runs the game. All rules are "unless otherwise stated". Change the rules and improvise new ones.
 
 Rules are split into three section, "Sixtem" for core rules, "Tactile" for low fantasy mechanics, "Talaje" for setting specific rules.
 
