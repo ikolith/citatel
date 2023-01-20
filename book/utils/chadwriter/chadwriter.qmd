@@ -1,0 +1,142 @@
+---
+title: "Chadwriter"
+# format: html
+# css: lettermapping.css
+---
+
+***Writing for Chads (in Loric)***
+
+This seems pretty broken, and so is not included in then nav information. Additionally, it seems the actual html file cant be "included" through quarto doc inclusion. Sad!
+
+```{=html}
+<!DOCTYPE html>
+<meta charset="utf-8"> 
+
+<!-- OK, so here's the deal: img with srcs tags have been replaced with classes that display the source image, so that we can be O(n) on letter glyphs instead of letter tokens.-->
+<head>
+<link rel="stylesheet" href="lettermapping.css">
+</head>
+
+<style>
+img { content:url('invalid_input_indicator.png'); width: 64px; height: 64px; } /* defaults for all symbols, including an error case graphic*/
+</style>
+
+<script>
+function is_diacritic(letter){return "_haeiouc".includes(letter.toLowerCase());}
+function is_consonant(letter){return "bdfgjklmnpqrstvwxyz".includes(letter.toLowerCase());}
+function is_punctuation(letter){return "(). ~\n:-—;\/?@#$*!".includes(letter.toLowerCase());}
+
+function outprint(letter, folder_prefix_override = null){
+  letter = letter.toLowerCase();
+  //replace punctuation marks that don't play well with microsoft windows, html, css (most of them), bash, command line tools, or linux, which turns out to be all of them except _:
+  if(letter=="—"){letter = "-";}
+  if(letter=="-"){letter = "dash";}
+  if(letter==" "){letter = "space";}
+  if(letter=="/"){letter = "silly";}
+  if(letter=="\\"){letter = "sarcasm";} // literal \ for the sarcasm sarc.
+  if(letter=="?"){letter = "confusion";}
+  if(letter=="~"){letter = "pondering";}
+  if(letter==":"){letter = "bollocks";}
+  if(letter=="*"){letter = "fleuron";}
+  if(letter=="@"){letter = "eop";}
+  if(letter=="#"){letter = "eot";}
+  if(letter=="."){letter = "period";}
+  if(letter==";"){letter = "semicolon";}
+  if(letter=="("){letter = "left_comma";}
+  if(letter==")"){letter = "right_comma";}
+  if(letter==";"){letter = "semicolon";}
+  if(letter=="!"){letter = "interrobang";}
+  if(letter=="$"){letter = "jovaun";}
+  //used to be //if(letter=="'"){letter = "dot";}
+
+  //early out for newline
+  if(letter=="\n"){outputNode.appendChild(document.createElement("br")); return;}
+
+  //this folder_prefix_override stuff is just for my coding convenience; it's not a very elegant thing.
+  old_folder_prefix = folder_prefix;
+  if(folder_prefix_override){ folder_prefix = folder_prefix_override; }
+
+  //note that folder_prefix should read our global we set in the main function from the radio boxes, unless overridden
+  //not sure how to style this for best look
+  var image = document.createElement("img");
+  image.title = letter; //good for troubleshooting
+  image.className=(folder_prefix + "_" + letter);
+  outputNode.appendChild(image);
+
+  folder_prefix = old_folder_prefix; //restore if need be, idempotent if need not.
+}
+
+function really_outprint(){ //this is to minimize DOM manipulations, for performance reasons.
+  //output.innerHTML = outprinting;
+  output.replaceWith(outputNode);
+}
+function display_loric(string_of_letters){
+  //var output = document.getElementById("output"); //doesn't work, so the output box just has to be above the wordbox.
+
+  //make bools for checking which output we should do
+  var cursive = document.getElementById("cursive").checked;
+  var straightive = document.getElementById("straightive").checked;
+  var unlinated_straightive = document.getElementById("unlinated_straightive").checked;
+
+  outputNode = document.createElement("div");
+  outputNode.id = "output";
+
+  var lexeme = ""; //clear parser state
+
+  if(cursive){ //if it's cursive, we have to do a bunch of parsing to make sure we have everything right
+    folder_prefix = "cursive";
+    for (letter of string_of_letters){
+
+      {//romanization distinctions turned into loric symbol equivalences
+        if(letter=="g"){letter="k";}
+        if(letter=="d"){letter="t";}
+      }
+
+      if(is_punctuation(letter)){
+        lexeme && outprint(lexeme);
+        lexeme = letter;
+        outprint(lexeme);
+        lexeme="";
+        continue;
+      }
+      if(is_consonant(letter)){
+        lexeme && outprint(lexeme);
+        lexeme = letter;
+        continue;
+      }
+      lexeme+=letter;
+    }
+    lexeme && outprint(lexeme);
+  } else {
+    if(straightive){ folder_prefix = "straightive"; }
+    if(unlinated_straightive){ folder_prefix = "unlinated_straightive"; }
+    for (letter of string_of_letters){
+
+      {//romanization distinctions turned into loric symbol equivalences
+        if(letter=="g"){letter="k";}
+        if(letter=="d"){letter="t";}
+      }
+
+      outprint(letter);
+    }
+  }
+  really_outprint();
+  //"Thank you so much for a-playing my function!" —mario, he of video game fame, if he were this computer program.
+}
+</script>
+
+<p>Just type Loric ASCII-romanization into the input box, and loric glyphs for that text will appear below. G maps to K and D to T, as those distinctions are not found in written loric. C represents the extremely rare optional explicit "null vowel" letter. In cursive, if you type an invalid sequence of vowels and consonants, this will result in a broken image. Stacked dashes are unimplemented, but the rest of the punctuation is implemented—with fairly arbitrary ascii characters for many of them. Not all of the conventions of this project would seem idiomatic to a Loric speaker. </p>
+<!-- If you don't have lettermapping.css in this directory, run <code>./make-css-classes > lettermapping.css</code> in this directory to generate it. -->
+<!-- _.png is used for the null consonant, internally.-->
+<label>Writing style:
+<input type="radio" name="writing_style" id="cursive" value="cursive" checked onchange="display_loric(wordbox.value)">
+<label for="cursive">cursive</label>
+<input type="radio" name="writing_style" id="straightive" value="straightive" onchange="display_loric(wordbox.value)">
+<label for="straightive">straightive </label>
+<input type="radio" name="writing_style" id="unlinated_straightive" value="unlinated straightive" onchange="display_loric(wordbox.value)">
+<label for="unlinated_straightive">unlinated straightive</label>
+</label>
+
+<div id="output"></div>
+<textarea id="wordbox" oninput="display_loric(wordbox.value)"></textarea>
+```
