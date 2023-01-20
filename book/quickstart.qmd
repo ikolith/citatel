@@ -48,7 +48,7 @@ You can track AP by keeping 3 tokens on the "0" square on the [AP tracker](./p1_
 
 [AP shenanigans!](./p1_rules_and_character_creation/s1_rules/sixtem.qmd#ap-shenanigans-temp-ap-losing-ap-gaining-ap-the-wait-action) Temp AP goes away next turn, losing AP means you drop the one furthest from the 0 cell, gaining AP means you either put one on the 0 cell if you're below 3 AP or move the furthest one from the 0 cell to the 0 cell if you have 3 AP already. You can "Wait", spending no AP for a round and regaining 1 AP at the end.
 
-## Initiative 
+## [Initiative](./p1_rules_and_character_creation/s1_rules/sixtem.qmd#initiative-rules)
 
 A character's "initiative" is their AGI (+- bonuses/penalties). Stuff happens in "rounds".  
 
@@ -94,7 +94,7 @@ If you are brought above 0 HP you are stabilized and aren't at further risk. If 
 
 SOCIAL rolls augment what you say or do rather than replacing it. You might be able to cause another character to view you more or less favorably than they would otherwise. This is systematized in a [reputation table](./p1_rules_and_character_creation/s1_rules/tactile.qmd#communicative-skills-bias-and-reputation) that your GM may or may not use. Social checks can be used to gain insight into another person but they might also cause you to fumble the interaction [depending on if you passed or failed the check, and by how much](./p1_rules_and_character_creation/s1_rules/tactile.qmd#social-check-resolution). There can also be [SOCIAL contests](./p1_rules_and_character_creation/s1_rules/tactile.qmd#contests) in some contexts, they work similarly.
 
-## Odds and Ends
+## [Odds and Ends](./p1_rules_and_character_creation/s1_rules/tactile.qmd#odds-and-ends)
 
 [Stealth](./p1_rules_and_character_creation/s1_rules/tactile.qmd#stealth) is based on AGI. [Grappling](./p1_rules_and_character_creation/s1_rules/tactile.qmd#grappling) takes (2n1), puts both characters into the \[grappling] state, and makes the defender \[vulnerable]. Fall damage is a d6 for every 6 spaces up to 25d6. You can take 10 minutes to work at something (that you can try repeatedly at where there is no cost for failure) to treat your check as a 10 + relevant modifiers.
 
