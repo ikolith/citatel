@@ -415,7 +415,7 @@
 - name: Pickaxe
   tags: two-handed, shafted
   speed: (2n1)
-  to_hit: STR
+  to_hit: +STR
   basic_attacks: "1d6+STR (P) [swinging: leading]"
   encumbrance: 2
   filter_tags: weapon, basic
@@ -426,7 +426,7 @@
   tags: "two-handed, shafted, reach: 2"
   requirements: 2 STR
   speed: (1n2)->(2n1)
-  to_hit: STR
+  to_hit: +STR
   basic_attacks: "1d12+STR (P) [swinging: thrusting]"
   effect: Ignore 5 armor.
   encumbrance: 2
