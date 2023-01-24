@@ -18,5 +18,4 @@ You'll need a d20, d12, d10, d8, 2d6s, and a d4. You'll need pen and paper, you 
 
 ## Notes
 
-This site is still being migrated over from Jekyll and I'm not a webdev so things are in disarray and will continue to be for some amount of time!
-Additionally, Quarto (the site generator) does not make very printable pages for some reason, despite being able to produce pdfs! Eventually there will be better printed material, for now using reader mode in your browser before printing makes the results a little nicer.
+Quarto (the site generator) does not make very printable pages for some reason, despite being able to produce pdfs! Eventually there will be better printed material, for now using reader mode in your browser before printing makes the results a little nicer.
