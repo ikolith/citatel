@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "p2_content/groups/isopods.qmd",
+                "file": "quickstart.qmd",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "p2_content/groups/isopods.qmd",
+                "file": "quickstart.qmd",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "p2_content/groups/isopods.qmd",
+                "file": "quickstart.qmd",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "p2_content/groups/isopods.qmd"
+                "file": "quickstart.qmd"
               }
             }
           }
@@ -161,15 +161,15 @@
   },
   "active": "3233fbb3b9019987",
   "lastOpenFiles": [
-    "generation/generation.md",
+    "old_scratch.md",
+    "about.qmd",
     "p2_content/groups/isopods.qmd",
+    "generation/generation.md",
     "p2_content/groups/harvesters.qmd",
     "p2_content/groups/crust_punks.qmd",
     "p2_content/groups/bureaucrats.qmd",
     "p2_content/groups_and_their_entities.qmd",
     "p2_content/unaffiliated_entities.qmd",
-    "p1_rules_and_character_creation/s1_rules/tactile.qmd",
-    "p1_rules_and_character_creation/s1_rules/sixtem.qmd",
-    "p1_rules_and_character_creation/s1_rules/intro.qmd"
+    "p1_rules_and_character_creation/s1_rules/tactile.qmd"
   ]
 }
