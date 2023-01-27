@@ -6,6 +6,12 @@ The site lives at https://ikolith.com/.
 
 This is the repo, it includes all of the files used to generate the site with Quarto, all of the tooling and Python scripts, and all of the data.
 
+#TODO
+
+This is a brief list things that must be done, and must be coordinated (otherwise someone would just do them!)
+
+* Currently, run_site.sh *only* does what is needed to generate the files needed to view on this site, using quarto preview. Specifically, this means old, now-erroneous generated files are not deleted, which clutters up the git history and the site search function. Quarto render deletes the old files before rendering all, but this takes too long to want to put it in run_site.sh each time, imo. If there was some way for quarto to process documents in parallel (this seems technically possible, but there is no setting for it in quarto yet. See https://github.com/quarto-dev/quarto-cli/discussions/2749 ) maybe it would be fast enough. However, as it stands, it should be a git hook maybe? I'm not sure if our git hooks do anything right now. I am escalating this to THE HIGHEST AUTHORTIY to review.
+
 ## Documentation by file-listing, 2023-01-21
 
 Here is a brief overview of the layout of this project, as it stand now, which hopefully will be of help.
