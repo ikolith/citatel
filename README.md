@@ -29,7 +29,7 @@ Here is a brief overview of the layout of this project, as it stand now, which h
 * bot.py - Runs a discord bot that can run these utilities.
 * git_hooks/ - currently this just enforces python formatting or something.
 * license.md - The license of this project, in all its glory.
-* run.sh - Run the website (locally).
+* run_site.sh - Run the website (locally).
 * update.py - Render cards for weapons from their source texts, I guess.
 
 ### Trash-tier
