@@ -3,6 +3,6 @@ echo "Git pre-commit hook running now."
 #mypy update.py cli.py; 
 echo "Python's Black:"
 black .
-echo "Quarto render (clean):"
-. .venv/bin/activate
-quarto render
+# echo "Quarto render (clean):" #this was way too slow.
+# . .venv/bin/activate
+#quarto render
