@@ -15,7 +15,7 @@ then
     echo "You already seem to have quarto, so I won't try to install it again."
   fi
   echo "Installing python3 and python3.10-venv."
-  sudo apt install -y quarto python3 python3.10-venv
+  sudo apt install -y quarto python3 python3.10-venv black
   echo "Making and activing venv."
   python3 -m venv .venv
   source .venv/bin/activate
