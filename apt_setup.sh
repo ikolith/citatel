@@ -3,7 +3,7 @@ inverted_T=`echo -e "\e[7mT\e[0m"` #the \e[7m illuminates (via color inversion) 
 fraktur_T=`echo -e "\e[20mT\e[0m"` #the \e[20m illuminates (via fraktur) the first letter, sort of, in terminals that support that ansi code, which is almost none.
 illuminated_T=`echo -e "\e[7;20mT\e[0m"` #Ideally, the illumination would be fraktur and inverted, probably, but alas I do not have a terminal on which to test such things, as mine does not support fraktur.
 
-read -p "${illuminated_T}his is a quick and dirty setup script. It installs quarto via wget and apt; installs python3 & python3.10-venv via apt, creates and activates a venv, installs python packages, then checks if you have a latex engine (if you don't, it tries to install texlive-full). Are you sure you want to run this script? (y if yes)." -n 1 -r
+read -p "${illuminated_T}his is a quick and dirty setup script. It installs quarto via wget and apt; installs python3, python3.10-venv, black, and mypy via apt, creates and activates a venv, installs python packages, then checks if you have a latex engine (if you don't, it tries to install texlive-full). Are you sure you want to run this script? (y if yes)." -n 1 -r
 echo # move further output to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
@@ -15,7 +15,7 @@ then
     echo "You already seem to have quarto, so I won't try to install it again."
   fi
   echo "Installing python3 and python3.10-venv."
-  sudo apt install -y quarto python3 python3.10-venv black
+  sudo apt install -y quarto python3 python3.10-venv black mypy
   echo "Making and activing venv."
   python3 -m venv .venv
   source .venv/bin/activate
