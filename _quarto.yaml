@@ -44,7 +44,7 @@ website:
       - section: Code and Downloads
         contents:
           - auto: book/code_and_downloads/*
-          #- book/utils/chadwriter/chadwriter.qmd
+          - book/utils/chadwriter/chadwriter.qmd
       - section: Motivations and Misc. # previously "Addendeums, Motivations, and Miscellaneous"
         contents:
           - auto: book/p5_addendums_motivations_misc/shipped/*
