@@ -1,3 +1,8 @@
 #!/bin/sh
+echo "Git pre-commit hook running now."
 #mypy update.py cli.py; 
+echo "Python's Black:"
 black .
+echo "Quarto render (clean):"
+. .venv/bin/activate
+quarto render
