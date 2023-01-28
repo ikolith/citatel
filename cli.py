@@ -1,6 +1,11 @@
+#!/usr/bin/env python3
 import argparse
 import os.path
-from citutils import text_utils_parsers as tu, vars as vs, commands as co
+try:
+  from citutils import text_utils_parsers as tu, vars as vs, commands as co
+except:
+  print("citutils not found. Have you tried running . .venv/bin/activate ?")
+  exit()
 
 entities = tu.get_entities(os.path.join("data", "entities"))
 
@@ -8,8 +13,8 @@ entities = tu.get_entities(os.path.join("data", "entities"))
 
 parser = argparse.ArgumentParser()
 subparsers = parser.add_subparsers(dest="command")
-
-curly_p = subparsers.add_parser("curly")
+subparsers.add_parser("help",help="Show this help message and exit. Still need more help? Try calling the various commands with the --help flag to get better explanations of them and their options. TODO: make help messages better.")
+curly_p = subparsers.add_parser("curly", help="Evaluate a string as a single curly. Example: curly 'salt wretch' will evaluate to the info block of the salt wretch." )
 curly_p.add_argument(
     "curly",
     type=str,
@@ -28,7 +33,7 @@ curly_p.add_argument(
     help="Roll dice during entity generation if an entity is detected.",
 )
 
-card_p = subparsers.add_parser("cards")
+card_p = subparsers.add_parser("cards", help="I guess this makes cards or something.")
 card_p.add_argument("cards", type=str, nargs="?", help="TODO: explain how this works")
 card_p.add_argument(
     "-t",
@@ -54,8 +59,7 @@ card_p.add_argument(
 
 enlist_p = subparsers.add_parser(
     "enlist",
-    help="""TODO: improve this
-Use "enlist" to create a .txt list of entities. By default all entities will be gathered and the output file will be at output/entities.txt""",
+    help="""Use "enlist" to create a .txt list of entities. By default all entities will be gathered and the output file will be at output/entities.txt""",
 )
 enlist_p.add_argument(
     "-fi",
@@ -79,6 +83,10 @@ enlist_p.add_argument(
 # As cli...
 if __name__ == "__main__":
     args = parser.parse_args()
+    if args.command == None or args.command == "help":
+      parser.print_help()
+      # for subparser in [curly_p, card_p, enlist_p]: # Something like this kind of thing is probably a good idea, but as it stands the output is just too large.
+        # subparser.print_help()
     if args.command == "curly":
         print(
             tu.single_curly_parser(
