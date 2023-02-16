@@ -75,7 +75,7 @@ def filter_generate_cards(
             entities, filter_tags_include, filter_tags_exclude
         ).keys()
     )
-    cr.generate_cards(card_entities, entities, card_type, output_filepath)
+    cr.generate_cards(entities, card_entities, card_type, output_filepath)
 
 
 def enlist_generate_cards(
@@ -99,4 +99,4 @@ def enlist_generate_cards(
     assert card_entities
     if not output_filepath:
         output_filepath = os.path.join("output", "cards")
-    cr.generate_cards(card_entities, entities, card_type, output_filepath)
+    cr.generate_cards(entities, card_entities, card_type, output_filepath)

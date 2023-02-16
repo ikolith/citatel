@@ -10,8 +10,8 @@ from pylatex.utils import NoEscape
 
 
 def generate_cards(
+    entities: ty.Entities,
     card_entities: list,
-    entities: ty.Entities,  # this order should probably be swapped..
     card_type: str = "poker",
     output_filepath: str = os.path.join("output", "cards"),
 ) -> None:
