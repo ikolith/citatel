@@ -291,8 +291,8 @@ def generate_entity_tree_text(
 
 
 def single_curly_parser(
-    text: str,
     entities: ty.Entities,
+    text: str,
     expand_entities: bool = False,
     roll_dice: bool = False,
 ) -> str:
