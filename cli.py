@@ -13,11 +13,13 @@ entities = tu.get_entities(os.path.join("data", "entities"))
 # subparsers
 
 parser = argparse.ArgumentParser()
+
 subparsers = parser.add_subparsers(dest="command")
 subparsers.add_parser(
     "help",
-    help="Show this help message and exit. Still need more help? Try calling the various commands with the --help flag to get better explanations of them and their options. TODO: make help messages better.",
+    help="Show this help message and exit. Still need more help? Try calling the various commands with the --help flag to get better explanations of them and their options. #TODO: make help messages better.",
 )
+
 curly_p = subparsers.add_parser(
     "curly",
     help="Evaluate a string as a single curly. Example: curly 'salt wretch' will evaluate to the info block of the salt wretch.",

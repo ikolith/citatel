@@ -11,24 +11,8 @@
             "id": "3233fbb3b9019987",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "p1_rules_and_character_creation/s1_rules/tactile.qmd",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "16ba34487a00d420",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "generation/generation.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -97,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "p1_rules_and_character_creation/s1_rules/tactile.qmd",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "p1_rules_and_character_creation/s1_rules/tactile.qmd",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "p1_rules_and_character_creation/s1_rules/tactile.qmd"
-              }
+              "state": {}
             }
           }
         ]
@@ -159,17 +139,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3233fbb3b9019987",
+  "active": "b255f643466aedf0",
   "lastOpenFiles": [
+    "p1_rules_and_character_creation/s1_rules/sixtem.qmd",
+    "Untitled.canvas",
+    "p1_rules_and_character_creation/s1_rules/talaje.qmd",
+    "p2_content/groups/ataara.qmd",
+    "p2_content/groups/crust_punks.qmd",
     "quickstart.qmd",
+    "generation/generation.md",
     "old_scratch.md",
     "about.qmd",
+    "p3_worldbuilding/language/history_of_loric_writing_epistle.md",
+    "p3_worldbuilding/language/Reference Grammar/Phonology/phonology.pdf",
+    "p1_rules_and_character_creation/s1_rules/tactile.qmd",
     "p2_content/groups/isopods.qmd",
-    "generation/generation.md",
     "p2_content/groups/harvesters.qmd",
-    "p2_content/groups/crust_punks.qmd",
-    "p2_content/groups/bureaucrats.qmd",
-    "p2_content/groups_and_their_entities.qmd",
-    "p2_content/unaffiliated_entities.qmd"
+    "p2_content/groups/bureaucrats.qmd"
   ]
 }
