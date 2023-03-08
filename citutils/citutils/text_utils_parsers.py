@@ -193,7 +193,7 @@ def generate_entity_tree_and_non_unique(
                 skip_table=roll_dice,
                 # if we are rolling dice, then we dont want the whole table, instead we just handle the result of the table!
             )
-            if roll_dice:  # now we handle that table we skipped!
+            if roll_dice and has_table:  # now we handle that table we skipped!
                 entity_text += (
                     f"Table Result:  \n" + roll_on_table(entities, curly) + "\n"
                 )
@@ -264,7 +264,7 @@ def generate_entity_tree_text(
     )
     if not expand_entities or not text_has_children(base_entity_text):
         if roll_dice:
-            n_base_entity = str(base_quantity) + " " + base_entity["name"] + "\n"
+            n_base_entity = str(base_quantity) + " " + base_entity["name"] + "  \n"
             curlies_parsed = parse_curlies(base_entity_text)
             return n_base_entity + get_replacement_text(
                 base_text=base_entity_text, curlies_parsed=curlies_parsed
