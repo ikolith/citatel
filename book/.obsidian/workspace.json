@@ -11,8 +11,12 @@
             "id": "3233fbb3b9019987",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "p1_rules_and_character_creation/s1_rules/sixtem.qmd",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "p1_rules_and_character_creation/s1_rules/sixtem.qmd",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "p1_rules_and_character_creation/s1_rules/sixtem.qmd",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "p1_rules_and_character_creation/s1_rules/sixtem.qmd"
+              }
             }
           }
         ]
@@ -139,11 +147,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b255f643466aedf0",
+  "active": "3233fbb3b9019987",
   "lastOpenFiles": [
+    "p1_rules_and_character_creation/s1_rules/tactile.qmd",
     "p1_rules_and_character_creation/s1_rules/sixtem.qmd",
-    "Untitled.canvas",
+    "p1_rules_and_character_creation/s1_rules/intro.qmd",
     "p1_rules_and_character_creation/s1_rules/talaje.qmd",
+    "Untitled.canvas",
     "p2_content/groups/ataara.qmd",
     "p2_content/groups/crust_punks.qmd",
     "quickstart.qmd",
@@ -152,9 +162,7 @@
     "about.qmd",
     "p3_worldbuilding/language/history_of_loric_writing_epistle.md",
     "p3_worldbuilding/language/Reference Grammar/Phonology/phonology.pdf",
-    "p1_rules_and_character_creation/s1_rules/tactile.qmd",
     "p2_content/groups/isopods.qmd",
-    "p2_content/groups/harvesters.qmd",
-    "p2_content/groups/bureaucrats.qmd"
+    "p2_content/groups/harvesters.qmd"
   ]
 }

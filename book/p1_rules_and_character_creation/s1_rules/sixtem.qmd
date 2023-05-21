@@ -4,7 +4,7 @@ title: "1. Sixtem"
 
 ## How Characters Work
 
-A basic character consists of a  a list of attribute scores, a defense score, movement speed, and max HP (Health Points).  The particular values for HP, defense, etc. will vary. Here is an example:
+A basic character consists of a list of attribute scores, a defense score, movement speed, and max HP (Health Points).  The particular values for HP, defense, etc. will vary. Here is an example:
 
 HP: 18 + (6\*CON), Defense: 6, Movement Speed: 4  
 
