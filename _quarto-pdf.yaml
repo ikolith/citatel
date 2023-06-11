@@ -1,0 +1,26 @@
+#Something like this, mostly:
+project:
+  title: "blast my book"
+  type: book
+  render:
+    - bookblast.pdf
+  output-dir: pdf_output
+book:
+  title: "mybook"
+  author: "Jane Doe"
+  date: "8/18/2021"
+  chapters:
+    - index.qmd
+    - 404.qmd
+    - assets/images/favicons/android-chrome-192x192.png
+    - archive_unincorporated/npcs_and_factions.md #it seems that nesting dirs just doesn't work for book chapters :( maybe quarto will fix this one day
+ #   - book/quickstart.qmd
+
+format:
+  pdf:
+    number-sections: false
+    toc: true
+
+
+
+
