@@ -19,8 +19,8 @@ website:
   sidebar:
     style: "docked"
     collapse-level: 1
-    contents:
-      - book/about.qmd # ABOUT
+    # contents:
+      # - book/about.qmd # ABOUT
       # - section: "Rules"
       #   contents:
       #     - auto: "actlite/rules_and_character_creation/rules.qmd"

@@ -1,0 +1,137 @@
+---
+title: Sixtem Bare
+---
+
+## ???
+
+These are the actlite rules. They are very condensed, there are no examples, there is little clarification. This doc will be continuously edited and updated as the rules for actlite are revised. Changing the longer more complete rules-docs takes way too long for fast iteration to be practical.
+
+# SixtemF
+
+## Characters
+
+Character sheet for a "baseline adventurer":
+
+**HEALTH: 3:9** 
+
+**DEFENSE: 6** 
+
+**MOVEMENT SPEED: 4**
+
+| ATTRIBUTE      | SCORE |
+| -------------- | ----- |
+| STR(ENGTH)     | 0     |
+| AGI(LITY)      | 0     |
+| DEX(TERITY)    | 0     |
+| CON(STITUTION) | 0     |
+| PER(CEPTION)   | 0     |
+| SOC(IAL)       | 0     |
+
+### Health
+
+Health is X:Y where X is standard health and Y is critical or "crit" health. When a character runs out of standard health, subsequent damage is to crit health. When a character runs out of crit health, that is bad.
+
+Where one could expect children and the elderly to be closer to 1:~3, some other people ~2:~6.
+~5:~12 makes one extremely tough.
+
+### Defense and Movement Speed
+
+Moving costs 1 AP and you move a number of spaces equal to your MOVEMENT. When an enemy rolls to hit you, they roll a check against your DEFENSE.
+
+### What are scores and attributes used for?
+
+Scores are added to all sorts of rolls, checks, modifiers, the passive score, etc.
+
+### The Passive Score
+
+Your passive score in something is 6 + SCORE. 
+
+### I don't have that score I was asked for
+
+If you're asked about a score you don't have, your score is 0, unless that score is a [special] score.
+
+#### [special] Scores
+
+If you don't have a [special] score you fail any check, contest, roll, whatever related to that score. The [S] tag is just a shorter version of the [special] tag.
+
+#### "Standard" Scores
+
+Just a convention for non-[s] scores that are important for the current setting. Make a decision about these scores when creating something for this setting. This is a convention, not a strict rule.
+
+## Doin
+
+When you do something roll 2d6s and add the relevant score. Tell your result to the DM to find out how your attempt went.
+
+### "Check" vs "Contest" 
+
+If one character is rolling to try to do something, that's a check. If two character's are rolling in direct competition, that's a contest. Most rolls are checks. Attacks are checks.
+
+### Double 1s, Double 6s
+
+Double 1s are bad. You did as bad as you could possibly do, it has gone as badly as it could have (~3% probability). Double 6s are good. You did as good as you could have. In combat this means that uh 
+TODO: ??? Double Damage? Full damage don't spend any AP? What is fun and interesting to do here? Def should at least do an extra crit damage.
+
+## Initiative and AP
+
+The core rules have so much more explanation of this. Maybe it's outdated, but probably not!
+
+Initiative and AP are used when several characters are trying to do things at roughly the same time and the order that they get to act in matters. Combat, chases, races, etc.
+
+A character's initiative is their AGI.
+
+### AP
+
+You have 3 AP, you use AP to do things. Most things cost 1 AP, you can do some limited amount of negligible things like talking for free.
+
+Doing things requires spending X AP this turn and recovering that AP in Y turns. This is notated XnY. 2n2 means spend 2 now recover it in 2 turns. When Y is 1 (when you get the AP back next turn) "n1" is omitted. So "1n1" is just written as "1", "2n1" is just 2 etc. 
+
+Some types of actions also have multiple AP costs. The first time you do the thing in a round it costs the first amount, the second time it costs the second, etc. These costs are connected with arrows, like this: 1->2->3 or 1n2->2n3->3n3.
+
+#### The AP Tracker
+
+You can track your AP by using the AP tracker on the top of your character sheet, it is the four boxes in a row numbered 0-3. Put three tokens on the tracker at “0”, these represent your AP. You can spend any AP that is at 0. When you spend AP, move the tokens for the spent AP to the box on the tracker with the number corresponding to the number of rounds that you have to wait to get the AP back. At the start of every round, move all tokens one space to the left (closer to 0) unless they're already at 0.
+
+#### AP Shenanigans: Temp AP, Losing AP, Gaining AP, the "Wait" action
+
+"Temp AP" goes right into the “0” cell where you can spend it. It only lasts until the beginning of the next round. Losing AP means you take the furthest token from 0 off of the tracker. Gaining AP means adding an AP at 0 if you have less than your total AP on the tracker. If you aren't missing any AP when you gain an AP just move the furthest AP to 0.
+
+You can always “Wait” for a round. If you “Wait”, you can do nothing else during that round. Gain 1 AP at the beginning of the next round. if you have no AP to spend, you might as well “Wait”.
+
+### Initiative
+
+TODO: basically just copy pasted whats in the rules should consider slimming this fella down
+
+The initiative scores of the players should always be public on some form of initiative tracker. As other characters reveal their initiative, they should be added to the tracker.
+
+Every round is divided into two phases, the Beginning Phase and the Main Phase.
+
+### Beginning Phase - "Beginning of the Round"
+
+This is mostly referred to as the "beginning of the round" by skills and effects. The whole table does not need to be synced up for this, everyone can manage their own character. There are three sub-phases to the beginning of the round. Most of the time this will not matter and you won't have to think about it, but if there are multiple things that happen "at the beginning of the round" this describes the order in which they happen.  
+If there are multiple things that happen in the same sub-phase, you get to choose the order in which they happen.
+
+#### 1. Effect Activation
+
+Any *already active* effects that trigger "at the beginning of a round" happen now. They happen before anything else in the round does. This includes taking damage from \[poison] or \[bleed] or gaining health from \[heal]. If you have an effect active that causes you to do some sort of rolls or contests, do those now.
+
+#### 2. Status Management
+
+At this point any effect or mechanic that involves rounds passing is accounted for. AP is regained a, a point of \[poison] is removed, a point of \[heal] is removed, anything that would end at the "beginning" of this round ends *now*.
+
+#### 3. Moves and Skills
+
+Some moves and skills get can be used "at the beginning of the round". These can only be used *after* effects happen and then are managed and AP is regained.
+
+### Main Phase
+
+This is where basically everything in the round happens.
+
+If you want to do something, you say what you want to do. If multiple characters want to do something at the same time, the order they take actions in is based on their initiative. If there is a tie of two or more characters, the character that went most recently goes last, the character that went most recently before them goes second to last, etc. If several characters haven't gone yet, roll a contest between them.
+
+### Interrupting and \[interrupt]
+
+If you want to directly interfere with another character's action roll an initiative contest. Spend 1 when you attempt to interrupt. If you win you act first. The opponent can still take their action afterwards. You cannot attempt to interrupt the same action twice.
+
+### Coordinating Actions Around the Table
+
+Simply coordinate. Maybe the DM announces the highest initiative level present, those people get a chance to act first. Maybe you just play it by ear. Use as much coordination as feels right for the situation. Most of the time you don't need to worry about phases and interacting effects, most combat is not that complicated. It's there if you need it, otherwise just pull it in as it is necessary.
