@@ -6,7 +6,7 @@ title: Sixtem Bare
 
 These are the actlite rules. They are very condensed, there are no examples, there is little clarification. This doc will be continuously edited and updated as the rules for actlite are revised. Changing the longer more complete rules-docs takes way too long for fast iteration to be practical.
 
-# SixtemF
+# Sixtem
 
 ## Characters
 
