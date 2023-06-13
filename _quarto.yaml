@@ -9,6 +9,8 @@ format:
     theme:
       light: custom-light.scss
       dark: custom-dark.scss
+#  pdf: #how do I make this all go into the same pdf instead of multiple files? Is that the "book" "type" setting in "project"?? This is poorly documented...
+#    number-sections: true
 
 website:
   title: "citatel"

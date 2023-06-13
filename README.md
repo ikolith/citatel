@@ -30,12 +30,12 @@ Here is a brief overview of the layout of this project, as it stand now, which h
 ### Useful for maintainers
 
 * _quarto.yaml - This is the quarto configuration file. It may potentially be useful to modify this iff you need to modify how the website or book are generated.
-* apt_setup.sh - This is a shell script (bash) that installs the requirements to run the website locally, on systems with the apt package manager.
+* setup_via_apt.bash - This is a shell script (bash) that installs the requirements to run the website locally, on systems with the apt package manager.
 * archive_unincorporated/ - Stuff from the old version of the site that didn't get sorted into the new version of the site, yet. Eventually, it should be sorted out or deleted. At which point the folder will be gone and this line of documentation should be removed.
 * bot.py - Runs a discord bot that can run these utilities.
 * git_hooks/ - currently this just enforces python formatting or something.
 * license.md - The license of this project, in all its glory.
-* run_site.sh - Run the website (locally).
+* run.sh - Run the website (locally) and/or generate the pdf sourcebook.
 * update.py - Render cards for weapons from their source texts, I guess.
 
 ### Trash-tier
