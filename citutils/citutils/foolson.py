@@ -14,75 +14,109 @@ Foolson is a serialization format like json except:
 7. Not many people realize this explicitly, but implicitly in the JSON standards is the implication that each json file/record/text may only contain one value (although this value may be a compound (like array or object) that contains many other values, itself). This is also true in foolson. Just letting you know.
 """
 indenton = "  "
-foolson_magic_number = 'foolson\n'
-foolson_rebmun_cigam = '\nnosloof'
+foolson_magic_number = "foolson\n"
+foolson_rebmun_cigam = "\nnosloof"
 
-#TODO: this is bad, "string typing". We should have a foolson and json type that subtype of str (unless this is not pythonic). I could look into this, but I choose not to at the moment.
-def foolson_to_json(foolson: str) -> str: #TODO: consider using the "json_from_foolson" convention instead of the "foolson_to_json" convention.
-  #Validate magic number:
-  if foolson.startswith(foolson_magic_number):
-    foolson = foolson.removeprefix(foolson_magic_number)
-  else:
-    raise SyntaxError("The foolson data does not begin with the foolson magic number, 'foolson\n'.")
+# TODO: this is bad, "string typing". We should have a foolson and json type that subtype of str (unless this is not pythonic). I could look into this, but I choose not to at the moment.
+def foolson_to_json(
+    foolson: str,
+) -> str:  # TODO: consider using the "json_from_foolson" convention instead of the "foolson_to_json" convention.
+    # Validate magic number:
+    if foolson.startswith(foolson_magic_number):
+        foolson = foolson.removeprefix(foolson_magic_number)
+    else:
+        raise SyntaxError(
+            "The foolson data does not begin with the foolson magic number, 'foolson\n'."
+        )
 
-  #Validate rebmun cigam:
-  if foolson.endswith(foolson_rebmun_cigam):
-    foolson = foolson.removesuffix(foolson_rebmun_cigam)
-  elif foolson.endswith(foolson_rebmun_cigam+"\n"):
-    foolson = foolson.removesuffix(foolson_rebmun_cigam+"\n")
-  else:
-    raise SyntaxError("The foolson data does not end with the foolson rebmun cigam '\nnosloof'.")
+    # Validate rebmun cigam:
+    if foolson.endswith(foolson_rebmun_cigam):
+        foolson = foolson.removesuffix(foolson_rebmun_cigam)
+    elif foolson.endswith(foolson_rebmun_cigam + "\n"):
+        foolson = foolson.removesuffix(foolson_rebmun_cigam + "\n")
+    else:
+        raise SyntaxError(
+            "The foolson data does not end with the foolson rebmun cigam '\nnosloof'."
+        )
 
-  json_buffer = ""
-  linecount = 0
-  prev_indenton_level = 0
-  for line in foolson.splitlines(): #going line-by-line might be dumb, or might necessitate we repair the lines later, but whatever.
-    linecount+=1
-    stripped_line = line.lstrip(' ')
-    prefix_len = len(line) - len(stripped_line)
+    json_buffer = ""
+    linecount = 0
+    prev_indenton_level = 0
+    for (
+        line
+    ) in (
+        foolson.splitlines()
+    ):  # going line-by-line might be dumb, or might necessitate we repair the lines later, but whatever.
+        linecount += 1
+        stripped_line = line.lstrip(" ")
+        prefix_len = len(line) - len(stripped_line)
 
-    #extra, perhaps misguided, whitespace enforcement
-    if prefix_len % len(indenton) != 0:
-      raise IndentationError("Indentation is not uniformly composed of whole indentons; perhaps you only typed half an indenton? An indenton, which makes a level of indentation, is two spaces. Problem is on line %d." % linecount)
-    if line.lstrip() != stripped_line:
-      raise IndentationError("You seem to have tried to include some non-space whitespace character in the indentation. This is illegal in the foolson spec (forthcoming). Problem is on line %d." % linecount)
+        # extra, perhaps misguided, whitespace enforcement
+        if prefix_len % len(indenton) != 0:
+            raise IndentationError(
+                "Indentation is not uniformly composed of whole indentons; perhaps you only typed half an indenton? An indenton, which makes a level of indentation, is two spaces. Problem is on line %d."
+                % linecount
+            )
+        if line.lstrip() != stripped_line:
+            raise IndentationError(
+                "You seem to have tried to include some non-space whitespace character in the indentation. This is illegal in the foolson spec (forthcoming). Problem is on line %d."
+                % linecount
+            )
 
-    #OK, let's actually do the transformation.
-    indenton_count = prefix_len//len(indenton)
-    if indenton_count > prev_indenton_level:
-      if indenton_count == prev_indenton_level+1:
-        json_buffer += "{\n"
-      else:
-        raise IndentationError("You seem to have tried to indent more than one level at once, as the indenton level has gone from %d to %d. Problem is on line %d." % (prev_indenton_level,indenton_count,linecount) )
-    elif indenton_count < prev_indenton_level:
-      json_buffer += "}"*(prev_indenton_level-indenton_count) #It's perfectly fine to close multiple levels at once.
-    #we always add the line of json...
-    json_buffer += line
-    prev_indenton_level = indenton_count
-  json_buffer += "}"*prev_indenton_level #as we are now done with the string, we may close all remaining json objects
-  return json_buffer
+        # OK, let's actually do the transformation.
+        indenton_count = prefix_len // len(indenton)
+        if indenton_count > prev_indenton_level:
+            if indenton_count == prev_indenton_level + 1:
+                json_buffer += "{\n"
+            else:
+                raise IndentationError(
+                    "You seem to have tried to indent more than one level at once, as the indenton level has gone from %d to %d. Problem is on line %d."
+                    % (prev_indenton_level, indenton_count, linecount)
+                )
+        elif indenton_count < prev_indenton_level:
+            json_buffer += "}" * (
+                prev_indenton_level - indenton_count
+            )  # It's perfectly fine to close multiple levels at once.
+        # we always add the line of json...
+        json_buffer += line
+        prev_indenton_level = indenton_count
+    json_buffer += (
+        "}" * prev_indenton_level
+    )  # as we are now done with the string, we may close all remaining json objects
+    return json_buffer
+
 
 def json_to_foolson(json: str) -> str:
-  raise NotImplementedError("Literally no one has ever needed json→foolson capability up to this point, so it has not been implemented. Please file a bug report if you need this.")
+    raise NotImplementedError(
+        "Literally no one has ever needed json→foolson capability up to this point, so it has not been implemented. Please file a bug report if you need this."
+    )
+
 
 def values_to_foolson(obj) -> str:
-  raise NotImplementedError("Literally no one has ever needed value→foolson capability up to this point, so it has not been implemented. Please file a bug report if you need this.")
+    raise NotImplementedError(
+        "Literally no one has ever needed value→foolson capability up to this point, so it has not been implemented. Please file a bug report if you need this."
+    )
+
 
 def foolson_to_values(foolson: str):
-  return json.loads(foolson_to_json(foolson))
+    return json.loads(foolson_to_json(foolson))
+
 
 def test():
-  print( foolson_to_json('foolson\n  "blah":\n    "blah": "blah"\nnosloof') )
-  print( foolson_to_values('foolson\n{"blah":\n  "blah": "blah"}\nnosloof') )
-  #Example from https://docs.python.org/3/library/json.html
-  print(
-    json.loads("""["foo", {"bar":["baz", null, 1.0, 2]}]""") == #print(
-      foolson_to_values("""foolson\n["foo",\n  "bar":  ["baz", null, 1.0, 2]\n]\nnosloof""")
-    #)
-  )
-  print(
-  #Example from https://json.org/example.html
-  json.loads("""
+    print(foolson_to_json('foolson\n  "blah":\n    "blah": "blah"\nnosloof'))
+    print(foolson_to_values('foolson\n{"blah":\n  "blah": "blah"}\nnosloof'))
+    # Example from https://docs.python.org/3/library/json.html
+    print(
+        json.loads("""["foo", {"bar":["baz", null, 1.0, 2]}]""")
+        == foolson_to_values(  # print(
+            """foolson\n["foo",\n  "bar":  ["baz", null, 1.0, 2]\n]\nnosloof"""
+        )
+        # )
+    )
+    print(
+        # Example from https://json.org/example.html
+        json.loads(
+            """
 {
     "glossary": {
         "title": "example glossary",
@@ -105,7 +139,10 @@ def test():
         }
     }
 }
-""") == foolson_to_values("""foolson
+"""
+        )
+        == foolson_to_values(
+            """foolson
   "glossary": 
     "title": "example glossary",
     "GlossDiv": 
@@ -122,7 +159,9 @@ def test():
             "GlossSeeAlso": ["GML", "XML"]
           ,
           "GlossSee": "markup"
-nosloof""")
-  )
+nosloof"""
+        )
+    )
+
 
 test()
