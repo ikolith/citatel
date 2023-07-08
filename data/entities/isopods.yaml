@@ -28,10 +28,10 @@
 - name: Isopodan Fork # this needs a proper Isopod name
   tags: "shafted, two-handed, reach: 2"
   requirements: 2 DEX, 1 AGI
-  speed: 1 -> 2
+  speed: 1->2
   to_hit: +AGI
   basic_attacks: "1d8 [P], 1d4 (S) + 2 [Pulling]"
-  flavor_text: The lithe organic polearm has a long tapering point and a scythe-like arm lined with jagged teeth. It can be used to trip opponents, entrap, or keep opponents at bay.
+  flavor_text: The lithe organic polearm has a long tapering point and a scythe-like arm lined with jagged teeth. It can be used to trip, ensnare, or keep opponents at bay.
   # gotta write a section in the isopod doc about this weapon..
   encumbrance: 2
   filter_tags: weapon, cave, isopod

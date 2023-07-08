@@ -19,7 +19,7 @@
 - name: Jaw Axe
   tags: "one-handed, hilted"
   requirements: 1 STR
-  speed: (1n2)->(2n1)
+  speed: 1->2
   to_hit: +STR
   basic_attacks: "1d6 (B) + 2 [Severing], 1d8 [B]"
   flavor_text: "A rudimentary axe crafted from an enormous white bovine jawbone. The coronoid of the cone has been ground down to a wedge approximating an axe blade. The protruding back of the bone can be used as a hammer. The leather wrapping rests above the chin and below the teeth."
@@ -29,7 +29,7 @@
 - name: Dogman Jawblade
   tags: "one-handed, hilted"
   requirements: 1 STR
-  speed: (1n2)
+  speed: 1->2
   to_hit: +STR
   basic_attacks: "1d4 (B) + 2 [Picking]"
   flavor_text: An enormous bovine lower jawbone chopped down to function as something between a sword and a club. The "blade" is composed of the jagged teeth of the jawbone. The handle is wrapped in leather.

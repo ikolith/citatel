@@ -31,7 +31,7 @@
 
 - name: Dagger
   tags: "one-handed, hilted, bladed, reach: close, stealth"
-  speed: (1n1)
+  speed: "1"
   to_hit: "+DEX"
   basic_attacks: "2 [P] or 1 [S]"
   encumbrance: 1/3
@@ -39,7 +39,7 @@
 
 - name: Long Tooth
   tags: "one-handed, hilted, bladed, reach: close, stealth"
-  speed: "(1n1)->(1n2)"
+  speed: 1->1->2
   to_hit: "+DEX"
   basic_attacks: 1d4 + AGI [P]
   effect: Ignore 5 Armor.
@@ -52,7 +52,7 @@
 
 - name: Butcher's Cleaver
   tags: "one-handed, hilted, bladed, reach: close, stealth"
-  speed: (1n2)
+  speed: "1->1->2"
   to_hit: +STR
   basic_attacks: "1d4+STR [Severing]"
   flavor_text: |-
@@ -62,7 +62,7 @@
 
 - name: Bushman's Kukri
   tags: "one-handed, hilted, bladed, reach: close, stealth"
-  speed: (1n1)->(1n1)->(1n2)
+  speed: 1->1->2
   to_hit: "+DEX"
   basic_attacks: "1d4 [P] or [Severing]"
   encumbrance: 1/3
@@ -75,7 +75,7 @@
 - name: Gleaming Sabre
   tags: one-handed, hilted, bladed
   requirements: 2 DEX
-  speed: (1n1)->(1n1)->(1n2)
+  speed: 1->1->2
   to_hit: +AGI
   basic_attacks: "1d4 + AGI [Slicing]"
   flavor_text: |-
@@ -84,7 +84,7 @@
 
 - name: Dueling Sabre
   tags: one-handed, hilted, bladed
-  speed: (1n1)->(1n2)
+  speed: 1->1->2
   to_hit: +AGI or +DEX
   basic_attacks: "1d8 [Slicing], 1d6 [P]"
 
@@ -94,7 +94,7 @@
 
 - name: Simple Shortsword
   tags: one-handed, hilted, bladed
-  speed: (1n1)->(1n2)
+  speed: 1->2
   to_hit: "+AGI"
   basic_attacks: "1d8 [P] or [S]"
   flavor_text: |-
@@ -104,7 +104,7 @@
 
 - name: Machete
   tags: one-handed, hilted, bladed
-  speed: "(1n1)->(1n2)"
+  speed: "1->2"
   to_hit: "+STR"
   basic_attacks: "1d6 [S]"
   flavor_text: A simple tool for cutting down brush.
@@ -115,7 +115,7 @@
 
 - name: Falx
   tags: one-handed, hilted, bladed
-  speed: (1n1)->(1n2)
+  speed: 1->2
   to_hit: +AGI
   basic_attacks: "1d6 (P) + 2 [Severing], 1d4 [S]"
   flavor_text: |-
@@ -124,7 +124,7 @@
 
 - name: Heavy Cutlass
   tags: one-handed, hilted, bladed
-  speed: "1 -> 2"
+  speed: "1->2"
   to_hit: +AGI
   basic_attacks: "1d8 [Severing], 1d6 [P]"
   flavor_text: |-
@@ -135,7 +135,7 @@
 - name: Black Shotel
   tags: one-handed, hilted, bladed
   requirements: 2 DEX
-  speed: (1n1)->(1n2)
+  speed: 1->2
   to_hit: +AGI
   basic_attacks: "1d4+DEX [Picking], 1d6 [Severing]"
 
@@ -152,7 +152,7 @@
 - name: Boar Sword
   tags: hilted two-handed, reach
   requirements: 2 AGI
-  speed: (1n2)->(2n1)
+  speed: 1->2
   to_hit: "+AGI"
   basic_attacks: 2d6 + AGI [P]
   effect: Inflict 2 [bleed]
@@ -162,7 +162,7 @@
 - name: Estoc
   tags: hilted, two-handed, reach
   requirements: 2 AGI
-  speed: (1n2)
+  speed: 1->2
   to_hit: "+AGI"
   basic_attacks: 2d6 + AGI [P]
   effect: Ignore armor equal to piercing damage.
@@ -172,7 +172,7 @@
 - name: Greatsword
   tags: hilted, two-handed, bladed
   requirements: 1 AGI, 2 STR
-  speed: (1n2)
+  speed: 1->2
   to_hit: "+AGI +STR"
   basic_attacks: "2d8 [P], 2d10 [S]"
   effect: "Robust Edge: increase low rolls required to lose [sharpened] buff by 2"
@@ -182,7 +182,7 @@
 - name: Primary of the Night-Heron
   tags: "hilted, two-handed, bladed, reach: 2"
   requirements: 1 STR
-  speed: (1n1)->(1n2)
+  speed: 1->1->2
   to_hit: +AGI
   basic_attacks: "2d6 [S]"
   effect: >-
@@ -199,7 +199,7 @@
 - name: Rhomphaia
   tags: "two-handed, bladed, reach: 2"
   requirements: 1 STR
-  speed: (1n1)->(1n2)
+  speed: 1->2
   to_hit: "+AGI"
   basic_attacks: "1d6 [P] + 1d6 [Severing], 1d8 [P]"
   flavor_text: |-
@@ -210,7 +210,7 @@
 - name: The Serpent Lord's Coiled Greatsword
   tags: two-handed, bladed
   requirements: 2 AGI, 2 STR
-  speed: (2n1)
+  speed: 1->2
   to_hit: "+AGI +STR"
   basic_attacks: "3d6 [Severing]"
   effect: On rolling 6, inflict 1 Poison.
@@ -233,7 +233,7 @@
 
 - name: Crude Club
   tags: hilted, one-handed
-  speed: (2n1)
+  speed: 2
   to_hit: "+STR"
   basic_attacks: "1d8 + STR [B]"
   flavor_text: "Bonk."
@@ -243,7 +243,7 @@
 - name: Mace
   tags: shafted, one-handed
   requirements: 1 STR
-  speed: (1n2)
+  speed: 2
   to_hit: "+STR"
   basic_attacks: "1d8 + STR [B]"
   effect: Ignore 3 armor
@@ -251,7 +251,7 @@
 
 - name: One Handed Spear
   tags: "shafted, one-handed, reach: 2"
-  speed: (1n1)->(1n2)
+  speed: 1->2
   basic_attacks: 1d8 [P]
   encumbrance: 1
   filter_tags: weapon, basic
@@ -259,11 +259,11 @@
 - name: Javelin
   tags: "one-handed, shafted"
   requirements: 1 AGI
-  speed: (1n1)->(1n2)
+  speed: 1->2
   to_hit: "+AGI"
   basic_attacks: |-
     1d6 [P]
-    Can be thrown for (2n1), PER To-Hit, 1d6 + STR (P), range: 5+STR
+    Can be thrown for 2, PER To-Hit, 1d6 + STR (P), range: 5+STR
   encumbrance: 1/3
   filter_tags: weapon, basic
 
@@ -274,7 +274,7 @@
 - name: Fine Engraved Axe
   tags: one-handed, shafted, bladed
   requirements: 1 AGI
-  speed: (1n2)
+  speed: 1->2
   to_hit: +AGI
   basic_attacks: "1d8+STR [Severing]"
   flavor_text: |-
@@ -284,7 +284,7 @@
 - name: One-Handed War Axe
   tags: one-handed, shafted, bladed
   requirements: 1 STR
-  speed: (1n2)
+  speed: 1->2
   to_hit: +STR
   basic_attacks: "1d12 [Severing]"
   filter_tags: weapon
@@ -292,7 +292,7 @@
 - name: One-Handed War Hammer
   tags: one-handed, shafted
   requirements: 1 STR
-  speed: (1n2)
+  speed: 2
   to_hit: +STR
   basic_attacks: "1d10 [Bashing]"
   effect: Ignore 3 Armor.
@@ -301,12 +301,12 @@
 
 - name: Adze
   tags: one-handed, shafted, bladed
-  speed: (1n1)->(1n2)
+  speed: 2
   to_hit: +STR
   basic_attacks: "1d4 [Severing]"
   effect: |-
     If Adze does 4 or more damage it becomes stuck in the target. 
-    Removing it is (2n1) and does 1d4+STR (S) damage.
+    Removing it is 2 and does 1d4+STR (S) damage.
   encumbrance: 1
   filter_tags: weapon, basic
 
@@ -321,7 +321,7 @@
 - name: Cactus Greatclub
   tags: hilted, two-handed
   requirements: 2 STR
-  speed: "(2n1)"
+  speed: "2->3"
   to_hit: "+2*STR"
   basic_attacks: "3d6 (B) + 3 [P]"
   effect: >-
@@ -333,7 +333,7 @@
 - name: Giant Club
   tags: two-handed, giant, shafted
   requirements: 3 STR
-  speed: (1n3) -> (2n1)
+  speed: 3
   to_hit: +2*STR
   basic_attacks: "1d10+2*STR"
   flavor_text: "BONK."
@@ -342,7 +342,7 @@
 - name: Giant Feasting Club
   tags: two-handed, giant, hilted
   requirements: 4 STR
-  speed: (1n3)->(2n1)
+  speed: 2->3
   to_hit: "+2*STR"
   basic_attacks: "3d4 (B) 2d4 [P]"
   effect: |-
@@ -358,7 +358,7 @@
 - name: Goedendag!
   tags: "shafted, two-handed, reach: 2"
   requirements: 1 STR
-  speed: (1n2)->(2n1)
+  speed: 2
   to_hit: +STR
   basic_attacks: "1d8+STR [B], 1d8+STR [P]"
   effect: Ignore 2 armor.
@@ -368,14 +368,14 @@
 - name: Greatclub
   tags: "shafted, two-handed, reach: 2"
   requirements: 1 STR
-  speed: (1n2)->(2n1)
+  speed: 2
   basic_attacks: "1d8+STR"
   encumbrance: 2
   filter_tags: weapon
 
 - name: Pitchfork
   tags: "shafted, two-handed, reach: 2"
-  speed: (1n1)->(1n2)
+  speed: 1->2
   to_hit: +AGI
   basic_attacks: 1d8 [P]
   effect: If your STR is greater or equal to the enemy, you can choose to send them 1 space back on a hit.
@@ -384,7 +384,7 @@
 
 - name: Two Handed Spear
   tags: "shafted, two-handed, reach: 3"
-  speed: (1n1)->(1n2)
+  speed: 1->2
   to_hit: +AGI
   basic_attacks: "1d10 [P]"
   encumbrance: 1
@@ -397,7 +397,7 @@
 - name: Battleaxe
   tags: two-handed, shafted, bladed
   requirements: 1 STR
-  speed: (1n2)->(2n1)
+  speed: 2
   to_hit: "+STR"
   basic_attacks: "1d8 + 2*STR [Severing]"
   encumbrance: 2
@@ -406,7 +406,7 @@
 - name: Cutter Mattock
   tags: two-handed, shafted, heavy
   requirements: 1 STR
-  speed: (2n1)
+  speed: 2
   to_hit: +STR
   basic_attacks: "1d8 [Severing]"
   encumbrance: 2
@@ -414,7 +414,7 @@
 
 - name: Pickaxe
   tags: two-handed, shafted
-  speed: (2n1)
+  speed: 2
   to_hit: +STR
   basic_attacks: "1d6+STR [Picking]"
   encumbrance: 2
@@ -425,7 +425,7 @@
 - name: Warpick
   tags: "two-handed, shafted, reach: 2"
   requirements: 2 STR
-  speed: (1n2)->(2n1)
+  speed: 2
   to_hit: +STR
   basic_attacks: "1d12+STR (P) [swinging: thrusting]"
   effect: Ignore 5 armor.
@@ -442,7 +442,7 @@
 
 - name: Sling
   tags: "range: 6*DEX" #??? what the hell is the effective range on these things???
-  speed: (2n1)
+  speed: 2
   to_hit: +PER
   basic_attacks: 1d6+PER (B)
   filter_tags: weapon, basic
@@ -452,7 +452,7 @@
 - name: Shortbow
   tags: "range: 15" #??? range???
   requirements: 1 DEX, 1 STR
-  speed: 1 -> 2
+  speed: 2
   to_hit: +PER
   basic_attacks: 1d6+PER (P)
   encumbrance: 1
@@ -461,7 +461,7 @@
 - name: Longbow
   tags: "range: 25" #???
   requirements: 1 DEX, 2 STR
-  speed: (2n1)
+  speed: 2
   to_hit: +PER
   basic_attacks: 1d10+STR (P)
   encumbrance: 1
@@ -474,7 +474,7 @@
 - name: Crossbow
   tags: "range: 45"
   requirements: "To reload: 2 STR"
-  speed: "(1n1) to fire, (3n1) to reload"
+  speed: "1 to fire, 3 to reload"
   to_hit: +PER
   basic_attacks: 2d8 (P)
   encumbrance: 2
@@ -484,7 +484,7 @@
 
 - name: Putrefying Egg
   tags: "range: 3*STR, thrown"
-  speed: (1n1) to throw
+  speed: 1 to throw
   to_hit: +PER
   effect: >-
     Brittle, bursts extremely easily. When it bursts, create a 7 hex sphere centered on impact. 

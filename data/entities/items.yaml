@@ -9,7 +9,7 @@
   filter_tags: item
 
 - name: Bandage
-  effect: Spend (3n1). Remove 1 [bleed]. Bandages can be improvised out of any cloth.
+  effect: Spend 2 AP. Remove 1 [bleed]. Bandages can be improvised out of any cloth.
   flavor_text: A roll of clean cloth.
   filter_tags: item, medicine, gear, basic
 
@@ -17,7 +17,7 @@
   effect: >-
     Apply [sharpened] to a [bladed] weapon, takes 30 minutes to apply.
     The weapon does +1 damage and ignores 1 armor.
-    [sharpened] is lost when you roll a 1 with a damage die.
+    [Lose [sharpened] when you crit fail.
   flavor_text: A large flat stone bearing faded inscriptions.
   filter_tags: item, whetstone, basic
 
@@ -31,32 +31,32 @@
   filter_tags: item, medicine
 
 - name: Stolen Ichor
-  effect: (2n1). Get 4 [heal].
+  effect: Use costs 2 AP. Get 4 [heal].
   filter_tags: item, medicine, gear
 
 - name: "Variigoshlovr Root "
-  effect: (1n1). Remove 1 [bleed].
+  effect: Use costs 1 AP. Remove 1 [bleed].
   filter_tags: item, medicine, gear, basic
 
 - name: Glowing Root Bundle
-  effect: (1n1). Instantly gain 4 HP.
+  effect: Use costs 1 AP. Instantly gain 4 HP.
   filter_tags: item, medicine, gear
 
 - name: Valiikon's Whetstone
   effect: >-
     Takes 30 minutes to apply [sharpened]. Inflict 1 poison on hit.
     Inflict 1 poison if you do 2 poison in one turn.
-    Rolling minimum damage removes [sharpened].
+    Rolling a crit fail removes [sharpened].
   filter_tags: item, whetstone
 
 - name: Vial of Verdant Sap
-  effect: (2n1). Gain 2 [heal].
+  effect: Use costs 2 AP. Gain 2 [heal].
   filter_tags: item, medicine, gear
 
 - name: Footsoldier's Whetstone
   effect: >-
     Takes 30 minutes to apply [sharpened] to a [bladed] weapon. Ignore 3 armor.
-    Rolling 1 for damage twice removes [sharpened].
+    Rolling a crit fail removes [sharpened].
   flavor_text: >-
     A fragment of a relief etched into heavy white stone. The relief depicts a
     phalanx of soldiers in formation bearing partisans against an unseen force.
@@ -65,17 +65,17 @@
 
 - name: Cannibal Whetstone
   effect: >-
-    Takes 2 hours to apply [sharpened] to a [bladed] weapon. Whetstone must be
-    soaked in blood before use. Inflict 1 [bleed] on hit. Gain 1 HP at the
+    Take 1 hour to apply [sharpened] to a [bladed] weapon. Whetstone must be
+    soaked in blood for 1 hour before use. Inflict 1 [bleed] on hit. Gain 1 HP at the
     beginning of your turn as long as the opponent is bleeding.
   flavor_text: >-
     A warm mass of striated stone writhing almost imperceptibly. It bears a
-    closed eye on one side, it emanates a silent screaming call.
+    closed eye on one side. It scrapes against your hand. It screams in your head.
   filter_tags: item, whetstone
 
 - name: Crude Frog Idol
   effect: >-
-    (3n1). Must be holding the idol with both hands. Ignore 3 poison damage next
+    Use costs 3 AP. Must be holding the idol with both hands. Ignore 3 poison damage next
     turn.
   flavor_text: >-
     A small, worn, and stained frog idol on a fraying cord of twine. It's
@@ -85,7 +85,7 @@
 - name: Battle Egg Carton and Bandolier
   effect: >-
     Carton holds 24 Putrefying Eggs. Carton will break if it or the person
-    wearing it takes 12 damage in one turn.
+    wearing it takes 6 damage in one turn.
   flavor_text: >-
     A wooden case made from solid hardwood with round impressions chipped into
     it. The inside is padded with soft moss.

@@ -1,0 +1,3 @@
+This should not include stats unless they are brought in through .qmd.
+This should be "Evergreen".
+A lot of this will be notes, whims, ideas.
