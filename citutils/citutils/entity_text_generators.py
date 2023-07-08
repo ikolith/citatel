@@ -240,32 +240,9 @@ def generate_entity_text(
     if text_type == "md":
         if html_characters:
             arrow = "&#8658;"
-            empty_triangle_r = "&#9655;"
-            filled_triangle_r = "&#9654;"
-            triangle_up = "&#9650;"
             for key in entity_local.keys():  # untested.. yet
                 entity_local[key] = re.sub(r"[_]", r"\_", entity_local[key])
                 entity_local[key] = re.sub(r"->", f"{arrow}", entity_local[key])
-                entity_local[key] = re.sub(
-                    r"\[swinging: following]",
-                    f"{filled_triangle_r} {empty_triangle_r} {empty_triangle_r}",
-                    entity_local[key],
-                )
-                entity_local[key] = re.sub(
-                    r"\[swinging: neutral]",
-                    f"{empty_triangle_r} {filled_triangle_r} {empty_triangle_r}",
-                    entity_local[key],
-                )
-                entity_local[key] = re.sub(
-                    r"\[swinging: leading]",
-                    f"{empty_triangle_r} {empty_triangle_r} {filled_triangle_r}",
-                    entity_local[key],
-                )
-                entity_local[key] = re.sub(
-                    r"\[thrusting]",
-                    f"{triangle_up}",
-                    entity_local[key],
-                )
                 entity_local[key] = re.sub("\*", r"\*", entity_local[key])
         md_text = generate_md(entity_local) if not skip_feature_generation else ""
         if include_full_text:
@@ -286,26 +263,6 @@ def generate_entity_text(
                 entity_local[key] = re.sub(r"([a-z0-9])(_)", r"\1\_", entity_local[key])
                 entity_local[key] = re.sub(r"->", "$\\\Rightarrow$", entity_local[key])
                 # replacing text with latex glyphs for the [swinging: ...], [thrusting] tags
-                entity_local[key] = re.sub(
-                    r"\[swinging\: following]",
-                    r"$\\blacktriangleright\\mkern-7mu\\triangleright\\mkern-7mu\\triangleright$",
-                    entity_local[key],
-                )
-                entity_local[key] = re.sub(
-                    r"\[swinging\: neutral]",
-                    r"$\\triangleright\\mkern-7mu\\blacktriangleright\\mkern-7mu\\triangleright$",
-                    entity_local[key],
-                )
-                entity_local[key] = re.sub(
-                    r"\[swinging\: leading]",
-                    r"$\\triangleright\\mkern-7mu\\triangleright\\mkern-7mu\\blacktriangleright$",
-                    entity_local[key],
-                )
-                entity_local[key] = re.sub(
-                    r"\[thrusting]",
-                    r"$\\blacktriangle$",
-                    entity_local[key],
-                )
         return generate_latex(entity_local)
     else:
         raise Exception("text_type needs to be either 'latex' or 'md'.")

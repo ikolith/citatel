@@ -33,7 +33,7 @@
   tags: "one-handed, hilted, bladed, reach: close, stealth"
   speed: (1n1)
   to_hit: "+DEX"
-  basic_attacks: "1d4 (P) [thrusting] or (S) [swinging: neutral]"
+  basic_attacks: "2 [P] or 1 [S]"
   encumbrance: 1/3
   filter_tags: weapon, basic
 
@@ -41,7 +41,7 @@
   tags: "one-handed, hilted, bladed, reach: close, stealth"
   speed: "(1n1)->(1n2)"
   to_hit: "+DEX"
-  basic_attacks: 1d4 + AGI (P) [thrusting]
+  basic_attacks: 1d4 + AGI [P]
   effect: Ignore 5 Armor.
   encumbrance: 1/3
   filter_tags: weapon, basic
@@ -54,7 +54,7 @@
   tags: "one-handed, hilted, bladed, reach: close, stealth"
   speed: (1n2)
   to_hit: +STR
-  basic_attacks: "1d4+STR (S) [swinging: leading]"
+  basic_attacks: "1d4+STR [Severing]"
   flavor_text: |-
     A heavy, crude cleaver of black pocked metal.
   encumbrance: 1/3
@@ -64,7 +64,7 @@
   tags: "one-handed, hilted, bladed, reach: close, stealth"
   speed: (1n1)->(1n1)->(1n2)
   to_hit: "+DEX"
-  basic_attacks: "1d4 (P) [thrusting] or (S) [swinging: leading]"
+  basic_attacks: "1d4 [P] or [Severing]"
   encumbrance: 1/3
   filter_tags: weapon, basic
 
@@ -77,7 +77,7 @@
   requirements: 2 DEX
   speed: (1n1)->(1n1)->(1n2)
   to_hit: +AGI
-  basic_attacks: "1d4 + AGI (S) [swinging: following]"
+  basic_attacks: "1d4 + AGI [Slicing]"
   flavor_text: |-
     The fine pale blade curves backwards, the sword is deceptively light, the blade is thin and fickle.
   filter_tags: weapon, basic
@@ -86,7 +86,7 @@
   tags: one-handed, hilted, bladed
   speed: (1n1)->(1n2)
   to_hit: +AGI or +DEX
-  basic_attacks: "1d8 (S) [swinging: following], 1d6 (P) [thrusting]"
+  basic_attacks: "1d8 [Slicing], 1d6 [P]"
 
 ### neutral
 
@@ -96,7 +96,7 @@
   tags: one-handed, hilted, bladed
   speed: (1n1)->(1n2)
   to_hit: "+AGI"
-  basic_attacks: "1d8 (P) [thrusting] or (S) [swinging: neutral]"
+  basic_attacks: "1d8 [P] or [S]"
   flavor_text: |-
     "An anadorned straight sword. A simple and reliable weapon."
   encumbrance: 1
@@ -106,7 +106,7 @@
   tags: one-handed, hilted, bladed
   speed: "(1n1)->(1n2)"
   to_hit: "+STR"
-  basic_attacks: "1d6 (S) [swinging: neutral]"
+  basic_attacks: "1d6 [S]"
   flavor_text: A simple tool for cutting down brush.
   encumbrance: 1
   filter_tags: weapon, basic
@@ -117,16 +117,16 @@
   tags: one-handed, hilted, bladed
   speed: (1n1)->(1n2)
   to_hit: +AGI
-  basic_attacks: "1d6 (P) + 2 (S) [swinging: leading], 1d4 (S) [thrusting]"
+  basic_attacks: "1d6 (P) + 2 [Severing], 1d4 [S]"
   flavor_text: |-
     A sword adapted from a sickle. The blade curves forward, it is swung with the point toward the enemy.
   filter_tags: weapon, basic
 
 - name: Heavy Cutlass
   tags: one-handed, hilted, bladed
-  speed: "(1n1)->(2n1)"
+  speed: "1 -> 2"
   to_hit: +AGI
-  basic_attacks: "1d8 (S) [swinging: leading], 1d6 (P) [thrusting]"
+  basic_attacks: "1d8 [Severing], 1d6 [P]"
   flavor_text: |-
     A broad, unrefined sword for hacking through enemies.
   encumbrance: 1
@@ -137,7 +137,7 @@
   requirements: 2 DEX
   speed: (1n1)->(1n2)
   to_hit: +AGI
-  basic_attacks: "1d4+DEX (P) [swinging: leading], 1d6 (S) [swinging: leading]"
+  basic_attacks: "1d4+DEX [Picking], 1d6 [Severing]"
 
 ## 2-H + hilted "big sword"
 
@@ -154,7 +154,7 @@
   requirements: 2 AGI
   speed: (1n2)->(2n1)
   to_hit: "+AGI"
-  basic_attacks: 2d6 + AGI (P) [thrusting]
+  basic_attacks: 2d6 + AGI [P]
   effect: Inflict 2 [bleed]
   encumbrance: 1
   filter_tags: weapon, basic
@@ -164,7 +164,7 @@
   requirements: 2 AGI
   speed: (1n2)
   to_hit: "+AGI"
-  basic_attacks: 2d6 + AGI (P) [thrusting]
+  basic_attacks: 2d6 + AGI [P]
   effect: Ignore armor equal to piercing damage.
   encumbrance: 1
   filter_tags: weapon, basic
@@ -174,7 +174,7 @@
   requirements: 1 AGI, 2 STR
   speed: (1n2)
   to_hit: "+AGI +STR"
-  basic_attacks: "2d8 (P) [thrusting], 2d10 (S) [swinging: neutral]"
+  basic_attacks: "2d8 [P], 2d10 [S]"
   effect: "Robust Edge: increase low rolls required to lose [sharpened] buff by 2"
   encumbrance: 1
   filter_tags: weapon, basic
@@ -184,7 +184,7 @@
   requirements: 1 STR
   speed: (1n1)->(1n2)
   to_hit: +AGI
-  basic_attacks: "2d6 (S) [swinging: neutral]"
+  basic_attacks: "2d6 [S]"
   effect: >-
     Ignore 1 Armor. All sharpening takes 3 times longer. Requires 2 PSYCHIC:
     Before you attempt an attack you can choose to either move one space when
@@ -201,7 +201,7 @@
   requirements: 1 STR
   speed: (1n1)->(1n2)
   to_hit: "+AGI"
-  basic_attacks: "1d6 (P) + 1d6 (S) [swinging: leading], 1d8 (P) [thrusting]"
+  basic_attacks: "1d6 [P] + 1d6 [Severing], 1d8 [P]"
   flavor_text: |-
     The long blade of the Rhomphaia curves aggressively toward the enemy like a shining claw.
   encumbrance: 1
@@ -212,7 +212,7 @@
   requirements: 2 AGI, 2 STR
   speed: (2n1)
   to_hit: "+AGI +STR"
-  basic_attacks: "3d6 (S) [swinging: leading]"
+  basic_attacks: "3d6 [Severing]"
   effect: On rolling 6, inflict 1 Poison.
   flavor_text: |-
     The end of the blade is coiled into a heavy spiral. The metal has a green shine.
@@ -235,7 +235,7 @@
   tags: hilted, one-handed
   speed: (2n1)
   to_hit: "+STR"
-  basic_attacks: "1d8 + STR (B) [swinging: neutral]"
+  basic_attacks: "1d8 + STR [B]"
   flavor_text: "Bonk."
   encumbrance: 1
   filter_tags: weapon, basic
@@ -245,14 +245,14 @@
   requirements: 1 STR
   speed: (1n2)
   to_hit: "+STR"
-  basic_attacks: "1d8 + STR (B) [swinging: neutral]"
+  basic_attacks: "1d8 + STR [B]"
   effect: Ignore 3 armor
   encumbrance: 1
 
 - name: One Handed Spear
   tags: "shafted, one-handed, reach: 2"
   speed: (1n1)->(1n2)
-  basic_attacks: 1d8 (P) [thrusting]
+  basic_attacks: 1d8 [P]
   encumbrance: 1
   filter_tags: weapon, basic
 
@@ -262,7 +262,7 @@
   speed: (1n1)->(1n2)
   to_hit: "+AGI"
   basic_attacks: |-
-    1d6 (P) [thrusting]
+    1d6 [P]
     Can be thrown for (2n1), PER To-Hit, 1d6 + STR (P), range: 5+STR
   encumbrance: 1/3
   filter_tags: weapon, basic
@@ -276,7 +276,7 @@
   requirements: 1 AGI
   speed: (1n2)
   to_hit: +AGI
-  basic_attacks: "1d8+STR (S) [swinging: leading]"
+  basic_attacks: "1d8+STR [Severing]"
   flavor_text: |-
     The shaft is of a fine red wood, the engravings and the blade shine in the light.
   filter_tags: weapon
@@ -286,7 +286,7 @@
   requirements: 1 STR
   speed: (1n2)
   to_hit: +STR
-  basic_attacks: "1d12 (S) [swinging: leading]"
+  basic_attacks: "1d12 [Severing]"
   filter_tags: weapon
 
 - name: One-Handed War Hammer
@@ -294,7 +294,7 @@
   requirements: 1 STR
   speed: (1n2)
   to_hit: +STR
-  basic_attacks: "1d10 (B) [swinging: leading]"
+  basic_attacks: "1d10 [Bashing]"
   effect: Ignore 3 Armor.
   encumbrance: 1
   filter_tags: weapon
@@ -303,7 +303,7 @@
   tags: one-handed, shafted, bladed
   speed: (1n1)->(1n2)
   to_hit: +STR
-  basic_attacks: "1d4 (S) [swinging: leading]"
+  basic_attacks: "1d4 [Severing]"
   effect: |-
     If Adze does 4 or more damage it becomes stuck in the target. 
     Removing it is (2n1) and does 1d4+STR (S) damage.
@@ -323,7 +323,7 @@
   requirements: 2 STR
   speed: "(2n1)"
   to_hit: "+2*STR"
-  basic_attacks: "3d6 (B) + 3 (P) [swinging: leading]"
+  basic_attacks: "3d6 (B) + 3 [P]"
   effect: >-
     If cactus greatclub takes 10 damage in one turn (or more) explodes, doing
     2d6 (P) in short radius (half as effective against armor)
@@ -344,7 +344,7 @@
   requirements: 4 STR
   speed: (1n3)->(2n1)
   to_hit: "+2*STR"
-  basic_attacks: "3d4 (B) 2d4 (P) [swinging: leading]"
+  basic_attacks: "3d4 (B) 2d4 [P]"
   effect: |-
     Everytime you roll a 4 for damage, inflict 1 bleeding and 1 poison. Crush
     only requires 1 extra STR.
@@ -360,7 +360,7 @@
   requirements: 1 STR
   speed: (1n2)->(2n1)
   to_hit: +STR
-  basic_attacks: "1d8+STR (B) [swinging: neutral], 1d8+STR (P) [thrusting]"
+  basic_attacks: "1d8+STR [B], 1d8+STR [P]"
   effect: Ignore 2 armor.
   encumbrance: 2
   filter_tags: weapon, basic
@@ -377,7 +377,7 @@
   tags: "shafted, two-handed, reach: 2"
   speed: (1n1)->(1n2)
   to_hit: +AGI
-  basic_attacks: 1d8 (P) [thrusting]
+  basic_attacks: 1d8 [P]
   effect: If your STR is greater or equal to the enemy, you can choose to send them 1 space back on a hit.
   encumbrance: 1
   filter_tags: weapon, basic
@@ -386,7 +386,7 @@
   tags: "shafted, two-handed, reach: 3"
   speed: (1n1)->(1n2)
   to_hit: +AGI
-  basic_attacks: "1d10 (P) [thrusting]"
+  basic_attacks: "1d10 [P]"
   encumbrance: 1
   filter_tags:
 
@@ -399,7 +399,7 @@
   requirements: 1 STR
   speed: (1n2)->(2n1)
   to_hit: "+STR"
-  basic_attacks: "1d8 + 2*STR (S) [swinging: leading]"
+  basic_attacks: "1d8 + 2*STR [Severing]"
   encumbrance: 2
   filter_tags: weapon, basic
 
@@ -408,7 +408,7 @@
   requirements: 1 STR
   speed: (2n1)
   to_hit: +STR
-  basic_attacks: "1d8 (S) [swinging: leading]"
+  basic_attacks: "1d8 [Severing]"
   encumbrance: 2
   filter_tags: weapon, basic
 
@@ -416,7 +416,7 @@
   tags: two-handed, shafted
   speed: (2n1)
   to_hit: +STR
-  basic_attacks: "1d6+STR (P) [swinging: leading]"
+  basic_attacks: "1d6+STR [Picking]"
   encumbrance: 2
   filter_tags: weapon, basic
 
@@ -452,7 +452,7 @@
 - name: Shortbow
   tags: "range: 15" #??? range???
   requirements: 1 DEX, 1 STR
-  speed: (1n1)->(2n1)
+  speed: 1 -> 2
   to_hit: +PER
   basic_attacks: 1d6+PER (P)
   encumbrance: 1
