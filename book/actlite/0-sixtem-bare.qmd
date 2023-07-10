@@ -1,0 +1,123 @@
+---
+title: Sixtem Bare
+---
+
+## ???
+
+These are the actlite rules. They are very condensed, there are no examples, there is little clarification. This doc will be continuously edited and updated as the rules for actlite are revised. Changing the longer more complete rules-docs takes way too long for fast iteration to be practical.
+
+# Sixtem
+
+## Characters
+
+Character sheet for a "baseline adventurer":
+
+**HEALTH: 3:9** 
+
+**DEFENSE: 6** 
+
+**MOVEMENT SPEED: 4**
+
+| ATTRIBUTE      | SCORE |
+| -------------- | ----- |
+| STR(ENGTH)     | 0     |
+| AGI(LITY)      | 0     |
+| DEX(TERITY)    | 0     |
+| CON(STITUTION) | 0     |
+| PER(CEPTION)   | 0     |
+| SOC(IAL)       | 0     |
+
+### Health
+
+Health is X:Y where X is standard health and Y is critical or "crit" health. When a character runs out of standard health, subsequent damage is to crit health. When a character runs out of crit health, that is bad.
+
+Where one could expect children and the elderly to be closer to 1:~3, some other people ~2:~6.
+~5:~12 makes one extremely tough.
+
+### Defense and Movement Speed
+
+Moving costs 1 AP and you move a number of spaces equal to your MOVEMENT. When an enemy rolls to hit you, they roll a check against your DEFENSE.
+
+### What are scores and attributes used for?
+
+Scores are added to all sorts of rolls, checks, modifiers, the passive score, etc.
+
+### The Passive Score
+
+Your passive score in something is 6 + SCORE. 
+
+### I don't have that score I was asked for
+
+If you're asked about a score you don't have, your score is 0, unless that score is a [special] score.
+
+#### [special] Scores
+
+If you don't have a [special] score you fail any check, contest, roll, whatever related to that score. The [S] tag is just a shorter version of the [special] tag.
+
+#### "Standard" Scores
+
+Just a convention for non-[s] scores that are important for the current setting. Make a decision about these scores when creating something for this setting. This is a convention, not a strict rule.
+
+## Doin
+
+When you do something roll 2d6s and add the relevant score. Tell your result to the DM to find out how your attempt went.
+
+### "Check" vs "Contest" 
+
+If one character is rolling to try to do something, that's a check. If two character's are rolling in direct competition, that's a contest. Most rolls are checks. Attacks are checks.
+
+### Double 1s, Double 6s
+
+Double 1s are bad. You did as bad as you could possibly do, it has gone as badly as it could have (~3% probability). Double 6s are good. You did as good as you could have. If this is an attack roll, do 1 crit damage. 
+
+## Initiative and AP
+
+Cards. Many cards.
+
+You have 3 AP, you use AP to do things. Most things cost 1 AP, you can do some limited amount of negligible things like talking for free.
+
+Terminology will change to be more clear. Categories will change.  
+  
+Terms
+
+**Table Deck**: The deck of cards that the DM (or whoever) draws from during initiative. The deck that the whole table uses.  
+**Table Discard**: The discard pile for the whole table.  
+**Table Set**: The set of cards belonging to each character that those characters add to the table deck when initiative starts.  
+**Hand**: The cards that you have been dealt and are holding on to.  
+**Discard/Pay/Spend**: Cards that have been used or removed that go to the discard and are shuffled together next round to make the table deck.  
+**Trashed/Removed**: Cards that have been used or removed and do not get shuffled back in every round.  
+**Trash**: The trash pile for the whole table.  
+
+By "default" every character has 3 identical cards. They say "1 AP" and indicate what character they belong to.  
+
+When initiative starts all characters pass their table sets to the DM. The DM shuffles them together. The DM pulls a card from the top of the deck and deals the card to the character/player that it belongs to. When a character is dealt a card they can choose to act, spending however many cards they want to. They can also just hold on to the card. Cards that are not spent by the end of the round are discarded and shuffled back in.  
+If you want to act, speak up before the DM moves on!  
+
+You can spend 1 AP at any time to act immediately.  
+
+You can only have 6 cards in the table deck at a time.
+
+### Multiple -> AP -> Costs
+
+Some types of actions also have multiple AP costs. The first time you do the thing in a round it costs the first amount, the second time it costs the second, etc. These costs are connected with arrows, like this: 1->2->3.
+
+#### AP Shenanigans: Temp AP, Losing AP, Gaining AP, the "Wait" action
+
+"Temp AP" must be spend in the same round it is recieved. If you do nothing for a round, regain 1 AP from the trash (if you have lost any).
+
+### "Beginning of the Round"
+
+Sometimes the *particular* order things happen in the "beginning of the round" will matter. In that case, they resolve in this order.
+ 
+#### 1. Effect Managment
+
+Any *already active* effects that trigger "at the beginning of a round" happen first. They happen before anything else in the round does. Examples includes taking damage from \[poison] or \[bleed] or gaining health from \[heal]. If you have an effect active that causes you to do some sort of rolls or contests, do those now.
+
+#### 2. Status Management
+
+Statuses are added or removed now. A point of \[poison] is removed, a point of \[heal] is removed, anything that would end at the "beginning" of this round ends *now*.
+
+### 3. Skills
+
+Some moves and skills can be used "at the beginning of the round". These must be used **after** effects and statuses resolve. They happen at the beginning of this "Main Phase".  
+The main phase is where cards are drawn an actions are performed.

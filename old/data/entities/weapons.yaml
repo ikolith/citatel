@@ -33,7 +33,7 @@
   tags: "one-handed, hilted, bladed, reach: close, stealth"
   speed: "1"
   to_hit: "+DEX"
-  basic_attacks: "2 [P] or 1 [S]"
+  basic_attacks: "2 [P], 1 [S]"
   encumbrance: 1/3
   filter_tags: weapon, basic
 
@@ -41,8 +41,8 @@
   tags: "one-handed, hilted, bladed, reach: close, stealth"
   speed: 1->1->2
   to_hit: "+DEX"
-  basic_attacks: 1d4 + AGI [P]
-  effect: Ignore 5 Armor.
+  basic_attacks: 2 [P]
+  effect: Ignore 2 Armor. 1 crit damage on crit.
   encumbrance: 1/3
   filter_tags: weapon, basic
   flavor_text: |-
@@ -52,11 +52,13 @@
 
 - name: Butcher's Cleaver
   tags: "one-handed, hilted, bladed, reach: close, stealth"
+  requirements: 1 STR
   speed: "1->1->2"
   to_hit: +STR
-  basic_attacks: "1d4+STR [Severing]"
+  basic_attacks: "2 [Severing]"
   flavor_text: |-
     A heavy, crude cleaver of black pocked metal.
+  effect: "Inflict 1 [bleed] on crit."
   encumbrance: 1/3
   filter_tags: weapon, basic
 
@@ -64,7 +66,7 @@
   tags: "one-handed, hilted, bladed, reach: close, stealth"
   speed: 1->1->2
   to_hit: "+DEX"
-  basic_attacks: "1d4 [P] or [Severing]"
+  basic_attacks: "1 [P], 2 [Severing]"
   encumbrance: 1/3
   filter_tags: weapon, basic
 
@@ -77,16 +79,17 @@
   requirements: 2 DEX
   speed: 1->1->2
   to_hit: +AGI
-  basic_attacks: "1d4 + AGI [Slicing]"
+  basic_attacks: "3 [Slicing]" #considered making this a d4, too much?
+  effect: "Inflict 1 [bleed] on crit."
   flavor_text: |-
-    The fine pale blade curves backwards, the sword is deceptively light, the blade is thin and fickle.
+    The fine pale blade curves back gracefully. The sword is deceptively light in the hand, it is thin and fickle.
   filter_tags: weapon, basic
 
 - name: Dueling Sabre
   tags: one-handed, hilted, bladed
   speed: 1->1->2
   to_hit: +AGI or +DEX
-  basic_attacks: "1d8 [Slicing], 1d6 [P]"
+  basic_attacks: "d4 [Slicing], 2 [P]"
 
 ### neutral
 
@@ -96,9 +99,9 @@
   tags: one-handed, hilted, bladed
   speed: 1->2
   to_hit: "+AGI"
-  basic_attacks: "1d8 [P] or [S]"
+  basic_attacks: "d4 [P] or [S]"
   flavor_text: |-
-    "An anadorned straight sword. A simple and reliable weapon."
+    "An unadorned straight sword. A simple and reliable weapon."
   encumbrance: 1
   filter_tags: weapon, basic
 
@@ -106,7 +109,7 @@
   tags: one-handed, hilted, bladed
   speed: "1->2"
   to_hit: "+STR"
-  basic_attacks: "1d6 [S]"
+  basic_attacks: "d4 [S]"
   flavor_text: A simple tool for cutting down brush.
   encumbrance: 1
   filter_tags: weapon, basic
@@ -117,7 +120,7 @@
   tags: one-handed, hilted, bladed
   speed: 1->2
   to_hit: +AGI
-  basic_attacks: "1d6 (P) + 2 [Severing], 1d4 [S]"
+  basic_attacks: "1 [P] + 2 [Severing]"
   flavor_text: |-
     A sword adapted from a sickle. The blade curves forward, it is swung with the point toward the enemy.
   filter_tags: weapon, basic
@@ -125,8 +128,8 @@
 - name: Heavy Cutlass
   tags: one-handed, hilted, bladed
   speed: "1->2"
-  to_hit: +AGI
-  basic_attacks: "1d8 [Severing], 1d6 [P]"
+  to_hit: +STR
+  basic_attacks: "d4 [Severing], 2 [P]"
   flavor_text: |-
     A broad, unrefined sword for hacking through enemies.
   encumbrance: 1
@@ -134,10 +137,10 @@
 
 - name: Black Shotel
   tags: one-handed, hilted, bladed
-  requirements: 2 DEX
-  speed: 1->2
+  requirements: 1 DEX
+  speed: 1->1->2
   to_hit: +AGI
-  basic_attacks: "1d4+DEX [Picking], 1d6 [Severing]"
+  basic_attacks: "d4 [Picking], d4 [Severing]"
 
 ## 2-H + hilted "big sword"
 
@@ -151,20 +154,20 @@
 
 - name: Boar Sword
   tags: hilted two-handed, reach
-  requirements: 2 AGI
+  requirements: 1 AGI
   speed: 1->2
   to_hit: "+AGI"
-  basic_attacks: 2d6 + AGI [P]
-  effect: Inflict 2 [bleed]
+  basic_attacks: d4 [P]
+  effect: Inflict 1 [bleed]
   encumbrance: 1
   filter_tags: weapon, basic
 
 - name: Estoc
   tags: hilted, two-handed, reach
-  requirements: 2 AGI
-  speed: 1->2
+  requirements: 1 AGI
+  speed: 1->1->2
   to_hit: "+AGI"
-  basic_attacks: 2d6 + AGI [P]
+  basic_attacks: 3 [P]
   effect: Ignore armor equal to piercing damage.
   encumbrance: 1
   filter_tags: weapon, basic
@@ -174,8 +177,8 @@
   requirements: 1 AGI, 2 STR
   speed: 1->2
   to_hit: "+AGI +STR"
-  basic_attacks: "2d8 [P], 2d10 [S]"
-  effect: "Robust Edge: increase low rolls required to lose [sharpened] buff by 2"
+  basic_attacks: "d6 [P], d6 [S]"
+  effect: "Robust Edge: increase number of low rolls required to lose [sharpened] buff by 2"
   encumbrance: 1
   filter_tags: weapon, basic
 
@@ -184,7 +187,7 @@
   requirements: 1 STR
   speed: 1->1->2
   to_hit: +AGI
-  basic_attacks: "2d6 [S]"
+  basic_attacks: "d8 [Slicing]"
   effect: >-
     Ignore 1 Armor. All sharpening takes 3 times longer. Requires 2 PSYCHIC:
     Before you attempt an attack you can choose to either move one space when
@@ -201,7 +204,7 @@
   requirements: 1 STR
   speed: 1->2
   to_hit: "+AGI"
-  basic_attacks: "1d6 [P] + 1d6 [Severing], 1d8 [P]"
+  basic_attacks: "2 [P] + 2 [Severing], 3 [P]"
   flavor_text: |-
     The long blade of the Rhomphaia curves aggressively toward the enemy like a shining claw.
   encumbrance: 1
@@ -209,11 +212,11 @@
 
 - name: The Serpent Lord's Coiled Greatsword
   tags: two-handed, bladed
-  requirements: 2 AGI, 2 STR
+  requirements: 1 AGI, 2 STR
   speed: 1->2
   to_hit: "+AGI +STR"
-  basic_attacks: "3d6 [Severing]"
-  effect: On rolling 6, inflict 1 Poison.
+  basic_attacks: "d6 [Severing]"
+  effect: Inflict 1 [poison].
   flavor_text: |-
     The end of the blade is coiled into a heavy spiral. The metal has a green shine.
   encumbrance: 1
@@ -235,7 +238,7 @@
   tags: hilted, one-handed
   speed: 2
   to_hit: "+STR"
-  basic_attacks: "1d8 + STR [B]"
+  basic_attacks: "3 [B]"
   flavor_text: "Bonk."
   encumbrance: 1
   filter_tags: weapon, basic
@@ -245,14 +248,14 @@
   requirements: 1 STR
   speed: 2
   to_hit: "+STR"
-  basic_attacks: "1d8 + STR [B]"
+  basic_attacks: "3 [B]"
   effect: Ignore 3 armor
   encumbrance: 1
 
 - name: One Handed Spear
   tags: "shafted, one-handed, reach: 2"
   speed: 1->2
-  basic_attacks: 1d8 [P]
+  basic_attacks: d4 [P]
   encumbrance: 1
   filter_tags: weapon, basic
 
@@ -262,8 +265,8 @@
   speed: 1->2
   to_hit: "+AGI"
   basic_attacks: |-
-    1d6 [P]
-    Can be thrown for 2, PER To-Hit, 1d6 + STR (P), range: 5+STR
+    d4 [P]
+    Can be thrown for 2 AP, +PER To-Hit, d4 [P], range: 5+STR
   encumbrance: 1/3
   filter_tags: weapon, basic
 
@@ -276,7 +279,7 @@
   requirements: 1 AGI
   speed: 1->2
   to_hit: +AGI
-  basic_attacks: "1d8+STR [Severing]"
+  basic_attacks: "3 [Severing]"
   flavor_text: |-
     The shaft is of a fine red wood, the engravings and the blade shine in the light.
   filter_tags: weapon
@@ -286,7 +289,7 @@
   requirements: 1 STR
   speed: 1->2
   to_hit: +STR
-  basic_attacks: "1d12 [Severing]"
+  basic_attacks: "3 [Severing]"
   filter_tags: weapon
 
 - name: One-Handed War Hammer
@@ -294,7 +297,7 @@
   requirements: 1 STR
   speed: 2
   to_hit: +STR
-  basic_attacks: "1d10 [Bashing]"
+  basic_attacks: "3 [Bashing]"
   effect: Ignore 3 Armor.
   encumbrance: 1
   filter_tags: weapon
@@ -303,10 +306,10 @@
   tags: one-handed, shafted, bladed
   speed: 2
   to_hit: +STR
-  basic_attacks: "1d4 [Severing]"
+  basic_attacks: "d4 [Severing]"
   effect: |-
     If Adze does 4 or more damage it becomes stuck in the target. 
-    Removing it is 2 and does 1d4+STR (S) damage.
+    Removing it costs 2 AP and does d4 (S) damage.
   encumbrance: 1
   filter_tags: weapon, basic
 
@@ -323,10 +326,10 @@
   requirements: 2 STR
   speed: "2->3"
   to_hit: "+2*STR"
-  basic_attacks: "3d6 (B) + 3 [P]"
+  basic_attacks: "d8 (B) + 2 [P]"
   effect: >-
     If cactus greatclub takes 10 damage in one turn (or more) explodes, doing
-    2d6 (P) in short radius (half as effective against armor)
+    d6 (P) in short radius (half as effective against armor)
   encumbrance: 2
   filter_tags: weapon
 
@@ -335,8 +338,9 @@
   requirements: 3 STR
   speed: 3
   to_hit: +2*STR
-  basic_attacks: "1d10+2*STR"
+  basic_attacks: "2d6+STR"
   flavor_text: "BONK."
+  effect: "Inflict 1 [stun]"
   filter_tags: weapon, basic
 
 - name: Giant Feasting Club
@@ -344,9 +348,9 @@
   requirements: 4 STR
   speed: 2->3
   to_hit: "+2*STR"
-  basic_attacks: "3d4 (B) 2d4 [P]"
+  basic_attacks: "2d4 (B) d4 [P]"
   effect: |-
-    Everytime you roll a 4 for damage, inflict 1 bleeding and 1 poison. Crush
+    Everytime you roll a 4 for damage, inflict 1 [bleeding] and 1 [poison]. Crush
     only requires 1 extra STR.
   flavor_text: >-
     Only the handle of the dark hardwood club is visible. The rest is covered
@@ -360,7 +364,7 @@
   requirements: 1 STR
   speed: 2
   to_hit: +STR
-  basic_attacks: "1d8+STR [B], 1d8+STR [P]"
+  basic_attacks: "d6+STR [B], d6+STR [P]"
   effect: Ignore 2 armor.
   encumbrance: 2
   filter_tags: weapon, basic
@@ -369,7 +373,7 @@
   tags: "shafted, two-handed, reach: 2"
   requirements: 1 STR
   speed: 2
-  basic_attacks: "1d8+STR"
+  basic_attacks: "10 [B]"
   encumbrance: 2
   filter_tags: weapon
 
@@ -377,7 +381,7 @@
   tags: "shafted, two-handed, reach: 2"
   speed: 1->2
   to_hit: +AGI
-  basic_attacks: 1d8 [P]
+  basic_attacks: d6 [P]
   effect: If your STR is greater or equal to the enemy, you can choose to send them 1 space back on a hit.
   encumbrance: 1
   filter_tags: weapon, basic
@@ -386,7 +390,7 @@
   tags: "shafted, two-handed, reach: 3"
   speed: 1->2
   to_hit: +AGI
-  basic_attacks: "1d10 [P]"
+  basic_attacks: "d6 [P]"
   encumbrance: 1
   filter_tags:
 
@@ -399,24 +403,24 @@
   requirements: 1 STR
   speed: 2
   to_hit: "+STR"
-  basic_attacks: "1d8 + 2*STR [Severing]"
+  basic_attacks: "d10 [Severing]"
   encumbrance: 2
   filter_tags: weapon, basic
 
 - name: Cutter Mattock
   tags: two-handed, shafted, heavy
   requirements: 1 STR
-  speed: 2
+  speed: 2->3
   to_hit: +STR
-  basic_attacks: "1d8 [Severing]"
+  basic_attacks: "4 [Severing]"
   encumbrance: 2
   filter_tags: weapon, basic
 
 - name: Pickaxe
   tags: two-handed, shafted
-  speed: 2
+  speed: 2->3
   to_hit: +STR
-  basic_attacks: "1d6+STR [Picking]"
+  basic_attacks: "4 [Picking]"
   encumbrance: 2
   filter_tags: weapon, basic
 
@@ -427,7 +431,7 @@
   requirements: 2 STR
   speed: 2
   to_hit: +STR
-  basic_attacks: "1d12+STR (P) [swinging: thrusting]"
+  basic_attacks: "d10 [Picking]"
   effect: Ignore 5 armor.
   encumbrance: 2
   filter_tags: weapon
@@ -440,60 +444,62 @@
 
 ## sling-like
 
-- name: Sling
-  tags: "range: 6*DEX" #??? what the hell is the effective range on these things???
-  speed: 2
-  to_hit: +PER
-  basic_attacks: 1d6+PER (B)
-  filter_tags: weapon, basic
+# I give up I'll finish this conversion later
 
-## bow-like
+# - name: Sling
+#   tags: "range: 6*DEX" #??? what the hell is the effective range on these things???
+#   speed: 2
+#   to_hit: +PER
+#   basic_attacks: d6+PER [B]
+#   filter_tags: weapon, basic
 
-- name: Shortbow
-  tags: "range: 15" #??? range???
-  requirements: 1 DEX, 1 STR
-  speed: 2
-  to_hit: +PER
-  basic_attacks: 1d6+PER (P)
-  encumbrance: 1
-  filter_tags: weapon, basic
+# ## bow-like
 
-- name: Longbow
-  tags: "range: 25" #???
-  requirements: 1 DEX, 2 STR
-  speed: 2
-  to_hit: +PER
-  basic_attacks: 1d10+STR (P)
-  encumbrance: 1
-  filter_tags: basic
+# - name: Shortbow
+#   tags: "range: 15" #??? range???
+#   requirements: 1 DEX, 1 STR
+#   speed: 2
+#   to_hit: +PER
+#   basic_attacks: d6+PER [P]
+#   encumbrance: 1
+#   filter_tags: weapon, basic
 
-## pistol-like
+# - name: Longbow
+#   tags: "range: 25" #???
+#   requirements: 1 DEX, 2 STR
+#   speed: 2
+#   to_hit: +PER
+#   basic_attacks: d10+STR [P]
+#   encumbrance: 1
+#   filter_tags: basic
 
-## rifle-like
+# ## pistol-like
 
-- name: Crossbow
-  tags: "range: 45"
-  requirements: "To reload: 2 STR"
-  speed: "1 to fire, 3 to reload"
-  to_hit: +PER
-  basic_attacks: 2d8 (P)
-  encumbrance: 2
-  filter_tags: weapon
+# ## rifle-like
 
-## thrown
+# - name: Crossbow
+#   tags: "range: 45"
+#   requirements: "To reload: 2 STR"
+#   speed: "1 to fire, 3 to reload"
+#   to_hit: +PER
+#   basic_attacks: 2d8 [P]
+#   encumbrance: 2
+#   filter_tags: weapon
 
-- name: Putrefying Egg
-  tags: "range: 3*STR, thrown"
-  speed: 1 to throw
-  to_hit: +PER
-  effect: >-
-    Brittle, bursts extremely easily. When it bursts, create a 7 hex sphere centered on impact. 
-    Inflict 1 poison on every creature present when the egg bursts. 
-    Every time a creature starts an action within the cloud it gains 1 poison.
-  flavor_text: >-
-    A dark form floats in cloudy fluid enveloped by a thin membrane. Like a
-    detached pupil floating blindly in an eye entirely consumed by cataracts.
-    Prolonged contact with the egg causes irritation of the skin, then rashes,
-    lesions, necrosis.
-  encumbrance: 1/3
-  filter_tags: weapon
+# ## thrown
+
+# - name: Putrefying Egg
+#   tags: "range: 3*STR, thrown"
+#   speed: 1 to throw
+#   to_hit: +PER
+#   effect: >-
+#     Brittle, bursts extremely easily. When it bursts, create a 7 hex sphere centered on impact. 
+#     Inflict 1 poison on every creature present when the egg bursts. 
+#     Every time a creature starts an action within the cloud it gains 1 poison.
+#   flavor_text: >-
+#     A dark form floats in cloudy fluid enveloped by a thin membrane. Like a
+#     detached pupil floating blindly in an eye entirely consumed by cataracts.
+#     Prolonged contact with the egg causes irritation of the skin, then rashes,
+#     lesions, necrosis.
+#   encumbrance: 1/3
+#   filter_tags: weapon
