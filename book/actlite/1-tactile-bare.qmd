@@ -16,29 +16,31 @@ Many weapon damage amounts are flat, with a lot of expression of skill and weapo
 
 - Giant: 3
 
-### Attack Types
-
-These tags describe the type of attack and are mostly used for skills and effects. The tags are:  
-
-- [whack]: A heavy chopping motion. Axes, hammers, warpicks. Glyph: ▷▶  
-- [slice]: A pulling cutting motion. Various curved swords. Glyph: ▶▷  
-- [thrust]: A stabbing motion. Spears, estocs. Glyph: ▲
-
-Potential other tags for exotic weapons:  
-
-- [whip]? Maybe [flail]? something like that.  
-- [pulling]: For scythes.  
-
 ### Attack Damage Types
 
 These tags describe the type of damage that the weapon does. 
 
--[Bludgeoning]: [B] for short.  
--[Piercing]: [P].  
--[Slashing]: [S].  
+There are three major types of damage. They are: [B] for "Bludgeoning", [P] for "Piercing" and [S] for "Slashing". There are also sub-types like [Severing], [Slicing], and [Picking]. [Severing] counts as the more generic [S], but [S] does not count as [Severing]. The damage sub-type will share the first letter of the more generic damage type. This has worked so far because there are very many words in english and they are conveniently placed. I am not afraid to resort to attic greek or something to keep this stupid system working.
 
 Some weapons do two types of damage only for the purposes of armor damage reduction, only the first gets to be used for skills (that's bad). This looks like: [B]/[P]  
+
+Some common damage types: 
+
+\[Slicing]: What a saber does. Long fast drawing cut, often with a curved blade.  
+\[Severing]: What an axe does. Chop chop.  
+\[Picking]: What a warpick does.
   
+Unused damage types:
+
+\[Bashing]: Not sure what sort of blunt weapon would blunt in a way that is different enough to justify it, but it is there.  
+
+Damage types that will remain unused:
+
+\[Poking]: Too silly.
+\[Bonking]: Boooo!  
+\[Pickling]: What a warpickle does.  
+\[Striking]: Confusing! See: \[Stabbing].
+
 ### Weapon Damage
 
 https://docs.google.com/spreadsheets/d/1F0dQgrzN-6pcHPDZExC7pSu5xIdd3tqt3Z-oVc8CK0g/edit?pli=1#gid=437119287
@@ -65,9 +67,7 @@ Throwing a spear or dagger costs 2 AP, uses PER(CEPTION) to hit, has no damage s
 
 This part needs to be reworked given the new health stuff.  
 
-
 **Strict**: Every day you recover 1 crit health if you are missing crit health, or 3 standard health if you are not.
-
 
 **Under-Die**: Every long rest you roll the largest die that is under your standard health. If you have 7 standard health, you roll a d6.
 
