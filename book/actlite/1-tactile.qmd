@@ -1,7 +1,6 @@
 ---
-title: "Tactile Bare"
+title: "Tactile"
 ---
-
 ## Weapon Rules
 
 Many weapon damage amounts are flat, with a lot of expression of skill and weapon uniqueness coming from effects/conditions/crit damage triggered by the numbers rolled in successful to-hit rolls.
@@ -24,22 +23,27 @@ There are three major types of damage. They are: [B] for "Bludgeoning", [P] for 
 
 Some weapons do two types of damage only for the purposes of armor damage reduction, only the first gets to be used for skills (that's bad). This looks like: [B]/[P]  
 
-Some common damage types: 
+#### Some common damage subtypes: 
 
-\[Slicing]: What a saber does. Long fast drawing cut, often with a curved blade.  
-\[Severing]: What an axe does. Chop chop.  
-\[Picking]: What a warpick does.
+**\[Slicing]**: What a saber does. Long fast drawing cut, often with a curved blade.  
+
+**\[Severing]**: What an axe does. Chop chop.  
+
+**\[Picking]**: What a warpick does.  
   
-Unused damage types:
+#### Unused damage types:  
+  
+**\[Bashing]**: Not sure what sort of blunt weapon would blunt in a way that is different enough to justify it, but it is there.  
+  
+<!-- #### Damage types that will remain unused:  
+  
+**\[Poking]**: Silly.  
 
-\[Bashing]: Not sure what sort of blunt weapon would blunt in a way that is different enough to justify it, but it is there.  
+**\[Bonking]**: Even more silly.  
 
-Damage types that will remain unused:
+**\[Pickling]**: What a warpickle does.  
 
-\[Poking]: Too silly.
-\[Bonking]: Boooo!  
-\[Pickling]: What a warpickle does.  
-\[Striking]: Confusing! See: \[Stabbing].
+**\[Striking]**: Confusing! See: \[Stabbing]. -->
 
 ### Weapon Damage
 

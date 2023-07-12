@@ -48,8 +48,18 @@ website:
     # - section: Adventures # previously "Campaigns and Adventures"
     # - text: "---"
     # - section: "Creation Guides"
+
     contents:
-      - auto: book/actlite_bare/*
+      - book/mutiny.qmd
+      - book/-1-about.qmd
+      - section: "Rules"
+        contents:
+          - book/actlite/0-sixtem.qmd
+          - book/actlite/1-tactile.qmd
+          - book/actlite/1.5-social.qmd
+          - book/actlite/2-mechanics-misc.qmd
+          - book/actlite/3-talaje.qmd
+          #- auto: book/actlite/*
       # - section: Code and Downloads
       #   contents:
       #     - auto: book/code_and_downloads/*

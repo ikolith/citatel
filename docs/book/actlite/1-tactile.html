@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>citatel - Tactile Bare</title>
+<title>citatel - Tactile</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../book/actlite/1.5-social.html" rel="next">
+<link href="../../book/actlite/0-sixtem.html" rel="prev">
 <link href="../.././assets/images/favicons/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -71,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Tactile Bare</h1>
+      <h1 class="quarto-secondary-nav-title">Tactile</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -97,27 +99,47 @@ ul.task-list li input[type="checkbox"] {
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../book/mutiny.html" class="sidebar-item-text sidebar-link">Pardon the Dust</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../book/-1-about.html" class="sidebar-item-text sidebar-link">About</a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">Rules</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Rules</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/actlite/-1-about.html" class="sidebar-item-text sidebar-link">About</a>
+  <a href="../../book/actlite/0-sixtem.html" class="sidebar-item-text sidebar-link">Sixtem</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/actlite/0-sixtem.html" class="sidebar-item-text sidebar-link">Sixtem Bare</a>
+  <a href="../../book/actlite/1-tactile.html" class="sidebar-item-text sidebar-link active">Tactile</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/actlite/-1-about.html" class="sidebar-item-text sidebar-link">About</a>
+  <a href="../../book/actlite/1.5-social.html" class="sidebar-item-text sidebar-link">Social</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../book/actlite/2-mechanics-misc.html" class="sidebar-item-text sidebar-link">Misc. Mechanics Reference</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../book/actlite/3-talaje.html" class="sidebar-item-text sidebar-link">Talaje</a>
   </div>
 </li>
       </ul>
@@ -179,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Tactile Bare</h1>
+<h1 class="title d-none d-lg-block">Tactile</h1>
 </div>
 
 
@@ -211,16 +233,25 @@ ul.task-list li input[type="checkbox"] {
 <p>These tags describe the type of damage that the weapon does.</p>
 <p>There are three major types of damage. They are: [B] for “Bludgeoning”, [P] for “Piercing” and [S] for “Slashing”. There are also sub-types like [Severing], [Slicing], and [Picking]. [Severing] counts as the more generic [S], but [S] does not count as [Severing]. The damage sub-type will share the first letter of the more generic damage type. This has worked so far because there are very many words in english and they are conveniently placed. I am not afraid to resort to attic greek or something to keep this stupid system working.</p>
 <p>Some weapons do two types of damage only for the purposes of armor damage reduction, only the first gets to be used for skills (that’s bad). This looks like: [B]/[P]</p>
-<p>Some common damage types:</p>
-<p>[Slicing]: What a saber does. Long fast drawing cut, often with a curved blade.<br>
-[Severing]: What an axe does. Chop chop.<br>
-[Picking]: What a warpick does.</p>
-<p>Unused damage types:</p>
-<p>[Bashing]: Not sure what sort of blunt weapon would blunt in a way that is different enough to justify it, but it is there.</p>
-<p>Damage types that will remain unused:</p>
-<p>[Poking]: Too silly. [Bonking]: Boooo!<br>
-[Pickling]: What a warpickle does.<br>
-[Striking]: Confusing! See: [Stabbing].</p>
+<section id="some-common-damage-subtypes" class="level4">
+<h4 class="anchored" data-anchor-id="some-common-damage-subtypes">Some common damage subtypes:</h4>
+<p><strong>[Slicing]</strong>: What a saber does. Long fast drawing cut, often with a curved blade.</p>
+<p><strong>[Severing]</strong>: What an axe does. Chop chop.</p>
+<p><strong>[Picking]</strong>: What a warpick does.</p>
+</section>
+<section id="unused-damage-types" class="level4">
+<h4 class="anchored" data-anchor-id="unused-damage-types">Unused damage types:</h4>
+<p><strong>[Bashing]</strong>: Not sure what sort of blunt weapon would blunt in a way that is different enough to justify it, but it is there.</p>
+<!-- #### Damage types that will remain unused:  
+  
+**\[Poking]**: Silly.  
+
+**\[Bonking]**: Even more silly.  
+
+**\[Pickling]**: What a warpickle does.  
+
+**\[Striking]**: Confusing! See: \[Stabbing]. -->
+</section>
 </section>
 <section id="weapon-damage" class="level3">
 <h3 class="anchored" data-anchor-id="weapon-damage">Weapon Damage</h3>
@@ -715,6 +746,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../book/actlite/0-sixtem.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Sixtem</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../book/actlite/1.5-social.html" class="pagination-link">
+        <span class="nav-page-text">Social</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

@@ -1,0 +1,17 @@
+# typical skill example:
+#
+# - name:
+#   requirements:
+#   effect:
+#   cost:
+#   filter_tags: skill
+
+- name: Dodge
+  effect: +3 Defense for the rest of the round.
+  cost: 1 AP
+  filter_tags: skill
+
+- name: Mobility
+  effect: Add this card to the table deck when initiative starts. Treat this card as 1 AP that can only be spent on movement. Any effects that affect AP cards affect this card.
+
+-
