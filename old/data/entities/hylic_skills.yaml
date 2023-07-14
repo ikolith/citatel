@@ -30,7 +30,7 @@
     [one-handed] [range: close]
 
 
-    Speed: (1n1)->(2n1) To Hit: 2*STR  
+    Speed: 1->2 To Hit: 2*STR  
 
     - 1d8+STR (B)
 
@@ -38,7 +38,7 @@
 
     [one-handed]
 
-    Speed: (2n1) To Hit: 2*STR
+    Speed: 2 To Hit: 2*STR
 
     - 1d8 (B) 2d8 (P) +STR
   cost: 1 SP
@@ -57,8 +57,6 @@
     CON: Increase CON by 2 for 1 hour by continuously burning SALT.
 
     Both of these can be flared to increase by 1 more for 1 minute.  
-
-
 
     If you have at least 2 HYLIC: 
 

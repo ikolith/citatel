@@ -1,0 +1,8 @@
+---
+title: Currently Untitled New TTRPG
+---
+<!-- TODO: at some point in the future, it will probably make sense to put some message like "Sourcebook pamphlet. Edition 1. Run 1. By Ikolith Consolidated Recreations" here, and then everything will have to be rejiggered around this. -->
+\thispagestyle{empty} <!-- suppress page number in tex -->
+\centering <!-- center image in tex -->
+![Cover image: the lil guy](../assets/images/lil_guy_1.svg "Cover image: subject 1 from Les songes drolatiques de Pantagruel."){height=588px}
+ <!-- This height is simply chosen to make the lil guy fit all on one pdf page with the title. Probably there's a more dynamic way to ensure this but I don't know it. If the page size changes, this height probably also has to change. -->

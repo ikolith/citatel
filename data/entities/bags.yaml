@@ -1,0 +1,24 @@
+- name: Rucksack
+  effect: "Max encumbrance: 6 + STR, [encumbered] threshold: 3 + STR."
+  filter_tags: item, bag, basic
+
+- name: Sling Bag
+  effect: >-
+    Can be worn with another bag. Max encumbrance: 3. This bag can be switched
+    from being worn on your front or back for [1n1]. Searching and grabbing
+    something from this bag is [2n1].
+  filter_tags: item, bag, basic
+
+- name: Scout's Bag
+  effect: "Max encumbrance: 4 + STR."
+  filter_tags: item, bag, basic
+
+- name: Frame Bag
+  effect: "Max encumbrance: 8+STR. [encumbered] threshold: 2+STR."
+  filter_tags: item, bag, basic
+
+- name: Stick Bag
+  effect: >-
+    Can be carried while wearing another bag. Stick must be held with one hand.
+    Max encumbrance: 2 + STR.
+  filter_tags: item, bag, basic
