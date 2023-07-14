@@ -85,6 +85,10 @@ This part needs to be reworked given the new health stuff.
 
 This part consistently needs reworking.
 
+### Injury
+
+Injuries are unique conditions that typically come with crit damage. Injuries are removed when the character reaches full crit health.
+
 ### Dying Instantly or Being Stabilized
 
 If you are reduced to -(Max HP/2) you die instantly.  

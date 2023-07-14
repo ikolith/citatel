@@ -22,19 +22,11 @@
 
 ## agi
 
-- name: Quick to Act
-  requirements: 1 AGI
-  effect: Raise your initiative by 3.
-  cost: 1 SP
-  filter_tags: skill, agi, basic
-
-- name: Mobility
-  requirements: 1 AGI
-  effect: >-
-    Every turn, you can move 1 space for free (as long as you can currently
-    move).
-  cost: 1 SP
-  filter_tags: skill, agi, basic
+# - name: Quick to Act
+#   requirements: 1 AGI
+#   effect: Raise your initiative by 3.
+#   cost: 1 SP
+#   filter_tags: skill, agi, basic
 
 - name: Parry
   requirements: "2 AGI, a hilted weapon that uses AGI or DEX To-Hit"
@@ -65,24 +57,7 @@
   cost: 1 SP
   filter_tags: skill, agi, basic
 
-## dex
 
-- name: Pulling Punches
-  requirements: 1 DEX
-  effect: >-
-    When you roll damage dice for an attack, you can choose to set a max damage,
-    (example: treat any number above a 4 as a 4). You can also choose to do
-    non-lethal damage if the damage type is (B).
-  cost: 1 SP
-  filter_tags: skill, dex, basic
-
-- name: Draw!
-  requirements: 1 DEX
-  effect: >-
-    You may ignore weapon switching costs if you either switch [one-handed]
-    weapons or draw a one handed weapon and immediately attempt an attack.
-  cost: 1 SP
-  filter_tags: skill, dex, basic
 
 ## con
 
@@ -100,19 +75,19 @@
 
 ## perception
 
-- name: Precision
-  requirements: 1 PERCEPTION
-  effect: >-
-    (1n1). You can use Precision right before any attack, including an
-    interrupt. If the attack lands, treat one damage die (up to d8) as landing
-    on max damage.
-  cost: 1 SP
-  filter_tags: skill, perception, basic
+# - name: Precision
+#   requirements: 1 PERCEPTION
+#   effect: >-
+#     Costs 1 AP. You can use Precision right before any attack, including an
+#     interrupt. If the attack lands, treat one damage die (up to d8) as landing
+#     on max damage.
+#   cost: 1 SP
+#   filter_tags: skill, perception, basic
 
 - name: Focus
   requirements: 1 PERCEPTION
   effect: >-
-    (1n1). You can use Focus right before any attack, including an interrupt.
+    Costs 1 AP. You can use Focus right before any attack, including an interrupt.
     Add your PERCEPTION to hit.
   cost: 1 SP
   filter_tags: skill, perception, basic
@@ -132,67 +107,6 @@
   cost: 1 SP
   filter_tags: skill, basic
 
-## dual wielding
-
-- name: "Dual Wielding 1: Ambidextrous"
-  requirements: AGI 1
-  effect: >-
-    You can attack with your offhand as well as you attack with your main hand.
-    Track the costs from their [BA]s separately, attacks with one do not affect
-    the other.
-  cost: 1 SP
-  filter_tags: skill, dual_wielding, basic
-
-- name: "Dual Wielding 2: Simultaneous Attack"
-  requirements: AGI 1, STR 1, Dual Wielding 1
-  effect: >-
-    Once per turn, you can attack with both of your weapons at the same time
-    spending 1 less AP than you would to do the attacks separately. Perform the
-    attacks as normal otherwise.
-  cost: 1 SP
-  filter_tags: skill, dual_wielding, basic
-
-- name: "Dual Wielding 3: Flurry"
-  requirements: AGI 2, STR 2, Dual Wielding 2
-  effect: >-
-    If you roll max damage with one of your weapons, you can attack again with
-    the other spending 1 AP less than you normally would. You can use
-    Simultaneous Attack multiple times per turn.
-  cost: 1 SP
-  filter_tags: skill, dual_wielding, basic
-
-## large weapon
-
-- name: "Large Weapon 1: [two-handed] Proficiency"
-  requirements: 2 STR
-  effect: >-
-    Treat your Strength as 1 higher (for weapon related rolls) when wielding two
-    handed weapons.
-  cost: 1 SP
-  filter_tags: skill, large_weapon, basic
-
-- name: "Large Weapon 2: Sweep"
-  requirements: "Large Weapon 1, STR 2 "
-  effect: >-
-    You can perform a given [swinging] melee attack to attack two adjacent
-    enemies in one strike, or spend an extra 1 AP and attack up to four adjacent
-    enemies (that you could hit normally) while using a [two-handed] weapon.
-  cost: 1 SP
-  filter_tags: skill, large_weapon, basic
-
-- name: "Large Weapon 2: Giant Weapon Proficiency"
-  requirements: Large Weapon 1
-  effect: >-
-    Treat your Strength as 1 higher (for weapon related rolls) when wielding a
-    weapon with the [giant] tag.
-  cost: 1 SP
-  filter_tags: skill, large_weapon, basic
-
-- name: "Large Weapon 2: Giant Weapon Efficiency"
-  requirements: "Large Weapon 2: Giant Weapon Proficiency, AGI 2"
-  effect: When you land a hit with a [giant] weapon, gain 1 Temp AP.
-  cost: 1 SP
-  filter_tags: skill, large_weapon, basic
 
 ## lightning
 
@@ -345,9 +259,9 @@
 
 - name: Defensive Perimeter
   requirements: |-
-    A melee weapon with [reach] and [hafted] and an attack with [thrusting], STR 1.
+    A melee weapon with [reach] and [hafted] and an attack with [P], STR 1.
   effect: |-
-    (1n1). You brace the weapon, typically a spear. 
+    Spend 1 AP. You brace the weapon. 
     If an enemy moves into a space threatened by you, you get to use an attack immediately for 1 AP less than you would have to spend otherwise. 
     If your attack does damage, Roll a STR contest. 
     If you win, their action ends and they stop moving, stopping outside of your range. 
@@ -355,33 +269,7 @@
   cost: 1 SP
   filter_tags: skill, melee, basic
 
-## ranged
 
-- name: Sharpshooter
-  requirements: 1 PERCEPTION
-  effect: When making [ranged] attacks, treat your PERCEPTION as 1 higher.
-  cost: 1 SP
-  filter_tags: skill, ranged, basic
-
-- name: Trick Shot
-  requirements: 1 PERCEPTION
-  effect: +2 To-Hit when using "Called Shot" with a [ranged] attack.
-  cost: 1 SP
-  filter_tags: skill, ranged, basic
-
-## shield
-
-- name: Shield Training
-  effect: >-
-    Raise your To-Hit by 2 against melee attacks and by 3 against ranged attacks
-    when using a shield.
-  cost: 1 SP
-  filter_tags: skill, shield, basic
-
-- name: Shield Bash
-  effect: "You can attack with a shield as +STR to hit, 1d4+STR. "
-  cost: 1 SP
-  filter_tags: skill, shield, basic
 
 ## sneak attack
 
@@ -426,50 +314,5 @@
   cost: 1 SP
   filter_tags: skill, sneak_attack, basic
 
-## social
-
-- name: Deception
-  requirements: 1 SOCIAL
-  effect: +2 to SOCIAL checks when lying. You can buy this skill twice.
-  cost: 1 SP
-  filter_tags: skill, social, basic
-
-- name: Disguise
-  requirements: 1 SOCIAL
-  effect: >-
-    You can create disguises, within reason. Roll a check +3 to set a DC for
-    your disguise, you can create a disguise for another person this way. When
-    using a disguise you get +3 to SOCIAL or STEALTH rolls relevant to your use
-    of the disguise.
-  cost: 1 SP
-  filter_tags: skill, social, basic
-
-## wrestling
-
-- name: "Wrestling 1: Rasslin'"
-  requirements: AGI 2, STR 2
-  effect: +2 to Grapple checks.
-  cost: 1 SP
-  filter_tags: skill, wrestling, basic
-
-- name: "Wrestling 2: Gottem"
-  requirements: AGI 2, STR 2, Wrestling 1
-  effect: >-
-    If you're successfully grappling a humanoid in your size category or lower,
-    get +4 to subsequent grapple checks. If you're successfully grappling a
-    non-humanoid in your size category, +2 to subsequent grapple checks.
-    Otherwise, if you're successfully grappling, +1 to subsequent grapple
-    checks.
-  cost: 1 SP
-  filter_tags: skill, wrestling, basic
-
-- name: "Wrestling 2: Choosin' a Snoozin'"
-  requirements: AGI 2, STR 2, Wrestling 1
-  effect: >-
-    Can only be performed on something that needs to breathe and... Has a neck. 
 
 
-    Spend an extra AP when entering a grapple check. If you can hold the grapple
-    for 6 turns, the grappled creature is knocked out for 1d12 hours.
-  cost: 1 SP
-  filter_tags: skill, wrestling, basic

@@ -1,0 +1,11 @@
+- name: "Chronomancy: Slippage"
+  requirements: 1 CRONO
+  effect: Pay 3 AP. Add this card to the table deck. For the next 3 rounds, whenever this card is drawn the round immediately ends.
+
+- name: "Chronomancy: Sustain"
+  requirements: 1 CRONO
+  effect: Pay 3 AP. Add this card to the table deck. For the next 3 rounds, the first time this card is drawn, reshuffle all the table deck cards as if a new round is starting and continue the round.
+
+- name: "Chronomancy: Tension"
+  requirements: 1 CRONO
+  effect: Spend 1 AP. Draw 2 cards from the table deck for each character in initiative. They don't get to act unless it is the last card they can get from the table deck.

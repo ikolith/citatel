@@ -13,13 +13,7 @@
   flavor_text: A roll of clean cloth.
   filter_tags: item, medicine, gear, basic
 
-- name: Simple Whetstone
-  effect: >-
-    Apply [sharpened] to a [bladed] weapon, takes 30 minutes to apply.
-    The weapon does +1 damage and ignores 1 armor.
-    [Lose [sharpened] when you crit fail.
-  flavor_text: A large flat stone bearing faded inscriptions.
-  filter_tags: item, whetstone, basic
+
 
 - name: Troll Salts
   effect: >-
@@ -31,7 +25,7 @@
   filter_tags: item, medicine
 
 - name: Stolen Ichor
-  effect: Use costs 2 AP. Get 4 [heal].
+  effect: Use costs 2 AP. Get 3 [heal].
   filter_tags: item, medicine, gear
 
 - name: "Variigoshlovr Root "
@@ -42,36 +36,15 @@
   effect: Use costs 1 AP. Instantly gain 4 HP.
   filter_tags: item, medicine, gear
 
-- name: Valiikon's Whetstone
-  effect: >-
-    Takes 30 minutes to apply [sharpened]. Inflict 1 poison on hit.
-    Inflict 1 poison if you do 2 poison in one turn.
-    Rolling a crit fail removes [sharpened].
-  filter_tags: item, whetstone
+
 
 - name: Vial of Verdant Sap
   effect: Use costs 2 AP. Gain 2 [heal].
   filter_tags: item, medicine, gear
 
-- name: Footsoldier's Whetstone
-  effect: >-
-    Takes 30 minutes to apply [sharpened] to a [bladed] weapon. Ignore 3 armor.
-    Rolling a crit fail removes [sharpened].
-  flavor_text: >-
-    A fragment of a relief etched into heavy white stone. The relief depicts a
-    phalanx of soldiers in formation bearing partisans against an unseen force.
-    The relief is etched deeply with identical runes in various styles.
-  filter_tags: item, whetstone
 
-- name: Cannibal Whetstone
-  effect: >-
-    Take 1 hour to apply [sharpened] to a [bladed] weapon. Whetstone must be
-    soaked in blood for 1 hour before use. Inflict 1 [bleed] on hit. Gain 1 HP at the
-    beginning of your turn as long as the opponent is bleeding.
-  flavor_text: >-
-    A warm mass of striated stone writhing almost imperceptibly. It bears a
-    closed eye on one side. It scrapes against your hand. It screams in your head.
-  filter_tags: item, whetstone
+
+
 
 - name: Crude Frog Idol
   effect: >-
@@ -113,28 +86,3 @@
   effect: When crushed, all characters within 3 spaces gain 1d4 CURSE.
   flavor_text: A brittle dull black sphere with a layer of veins on one side.
   filter_tags: item
-
-- name: Rucksack
-  effect: "Max encumbrance: 6 + STR, [encumbered] threshold: 3 + STR."
-  filter_tags: item, bag, basic
-
-- name: Sling Bag
-  effect: >-
-    Can be worn with another bag. Max encumbrance: 3. This bag can be switched
-    from being worn on your front or back for [1n1]. Searching and grabbing
-    something from this bag is [2n1].
-  filter_tags: item, bag, basic
-
-- name: Scout's Bag
-  effect: "Max encumbrance: 4 + STR."
-  filter_tags: item, bag, basic
-
-- name: Frame Bag
-  effect: "Max encumbrance: 8+STR. [encumbered] threshold: 2+STR."
-  filter_tags: item, bag, basic
-
-- name: Stick Bag
-  effect: >-
-    Can be carried while wearing another bag. Stick must be held with one hand.
-    Max encumbrance: 2 + STR.
-  filter_tags: item, bag, basic
