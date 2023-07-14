@@ -13,23 +13,25 @@
   requirements: 1 DEX
   effect: >-
     You may ignore weapon switching costs if you either switch [one-handed]
-    weapons or draw a one handed weapon and immediately attempt an attack.
+    weapons or draw a [one-handed] weapon and immediately attempt an attack.
   cost: 1 SP
   filter_tags: skill, dex, basic
 
 ## [Severing]
 - name: Butchery I
   requirements: 1 STR
-  effect: "When you roll matching dice with a [Severing] weapon, do 1 crit damage and apply apply an Injury that disables one of the enemy's limbs."
+  effect: "When you roll matching dice with a [Severing] weapon, do 1 crit damage and apply apply an [injury] that disables one of the enemy's limbs."
   # this is "matching" with the requirement that the roll passes, which i dont want to have to specify every single time. Should "matching" be "[matching]"? should brackets be used to express that something is a keyword? {} is for entities, [] was for tags, now its not i think, but it is for damage types...
   # maybe rules and context are entities??? so they can be followed??? certainly poison cards and such will be entities so they can be printed.
   # How should the effect of Injury be specified?
   # the head is not a limb
+  filter_tags: skill, str, basic
 
 - name: Butchery II
   requirements: 3 STR, Butchery I
-  effect: Replaces Butchery I. When you roll a half crit with a [Severing] weapon, do 1 crit damage and apply an Injury that disables one of the enemy's limbs. On crit, remove the limb.
+  effect: Replaces Butchery I. When you roll a half crit with a [Severing] weapon, do 1 crit damage and apply an [injury] that disables one of the enemy's limbs. On crit, remove the limb.
   # there are not rules for the removal of limbs right now. i should probably write them but also like... just be reasonable
+  filter_tags: skill, str, basic
 
 ## Large Weapon
 
