@@ -1,0 +1,28 @@
+---
+title: "Skills"
+execute:
+    echo: false
+    output: asis
+---
+
+```{python}
+import os 
+from citutils import (entity_text_generators as ge,
+    text_utils_parsers as tu)
+
+text = ""
+entities = tu.get_entities(os.path.join("..","..","data","entities"), True)
+
+print("## Basic Skills (No Spoilers) \n" + 
+    ge.filter_generate_text(entities, 
+    filter_tags_include = "skill, basic",
+    filter_tags_exclude = "",
+    html_characters = True))
+
+print("## The Rest of the Skills (Spoilers) \n" + 
+    ge.filter_generate_text(entities, 
+    filter_tags_include = "skill",
+    filter_tags_exclude = "basic",
+    html_characters = True))
+
+```

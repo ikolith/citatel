@@ -24,46 +24,31 @@ website:
   sidebar:
     style: "docked"
     collapse-level: 1
-    # contents:
-    # - book/about.qmd # ABOUT
-    # - section: "Rules"
-    #   contents:
-    #     - auto: "actlite/rules_and_character_creation/rules.qmd"
-
-    # - book/quickstart.qmd # QUICKSTART
-    # - section: "Rules"
-    #   contents:
-    #     - auto: "book/p1_rules_and_character_creation/s1_rules/*"
-    # - section: "Character Creation"
-    #   contents:
-    #     - book/p1_rules_and_character_creation/s2_character_creation/how_to_character_creation.md
-    #     - book/p1_rules_and_character_creation/s2_character_creation/prerolls.md
-    #     - book/p1_rules_and_character_creation/s2_character_creation/shopping.qmd
-    # - section: "Content"
-    #   contents:
-    #     - auto: book/p2_content/*
-    # - section: Worldbuilding # previously "Lore and Worldbuilding", will include the Language section
-    #   contents:
-    #     - auto: book/p3_worldbuilding/shipped/*
-    # - section: Adventures # previously "Campaigns and Adventures"
-    # - text: "---"
-    # - section: "Creation Guides"
-
     contents:
-      - book/mutiny.qmd
-      - book/-1-about.qmd
+      - section: "About"
+        contents:
+          - book/about/mutiny.qmd
+          - book/about/about.qmd
       - section: "Rules"
         contents:
-          - book/actlite/0-sixtem.qmd
-          - book/actlite/1-tactile.qmd
-          - book/actlite/1.5-social.qmd
-          - book/actlite/2-mechanics-misc.qmd
-          - book/actlite/3-talaje.qmd
-          #- auto: book/actlite/*
-      # - section: Code and Downloads
+          - book/actlite/sixtem.qmd
+          - book/actlite/tactile.qmd
+          - book/actlite/social.qmd
+          - book/actlite/mechanics-misc.qmd
+          - book/actlite/talaje.qmd
+      - section: "Stuff"
+        contents:
+          - book/stuff/weapons.qmd
+          - book/stuff/items.qmd
+          - book/stuff/skills.qmd
+      # - section: "Fellas"
       #   contents:
-      #     - auto: book/code_and_downloads/*
-      #     - book/utils/chadwriter/chadwriter.qmd
-      # - section: Motivations and Misc. # previously "Addendeums, Motivations, and Miscellaneous"
+
+      # - section: "Adventures"
       #   contents:
-      #     - auto: book/p5_addendums_motivations_misc/shipped/*
+
+      # - section: "Resources"
+      #   contents:
+
+      # - section: "Posts"
+      #   contets:

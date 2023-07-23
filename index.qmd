@@ -2,19 +2,19 @@
 title: No Page Like Homepage
 ---
 
-This is "citatel", home of what started as the "tactile" TTRPG system. You can learn more about the game [here](book/about.qmd). The [GitHub repo](https://github.com/ikolith/citatel) includes the code for the site itself, as well as all of the tooling and data used to generate enemies, weapons, etc. You can learn more about the role of the code [here](book/code_and_downloads/why_code.md).
+This is "citatel", home of what started as the "tactile" TTRPG system. You can learn more about the game [here](book/about/about.qmd). The [GitHub repo](https://github.com/ikolith/citatel) includes the code for the site itself, as well as all of the tooling and data used to generate enemies, weapons, etc. You can learn more about the role of the code [here](book/resources/why_code.md).
 
-The site is set up so you can read through the whole thing starting at [About](book/about.qmd) like a book. Eventually this should all be a physical honest-to-god-book in addition to being a website.
+The site is set up so you can read through the whole thing starting at [About](book/about/about.qmd) like a book. Eventually this should all be a physical honest-to-god-book in addition to being a website.
 
-## How much do I need to read?
+<!-- ## How much do I need to read?
 
 If you want to hop right into a game as a player, read [Quickstart](book/quickstart.qmd). If you've got some time, read [Rules](book/p1_rules_and_character_creation/s1_rules/intro.qmd) and [create a character](/book/p1_rules_and_character_creation/s2_character_creation/how_to_character_creation). If you want to GM using Talaje, you probably want to read up to and through the Adventures section, you probably want to also read the Creation Guides section.
 
-The rules are split into three sections: "Sixtem" (core rules), "Tactile" (context specific low-fantasy mechanics) and "Talaje" (setting-specific rules). This is done so you can easily replace or modify sections.
+The rules are split into three sections: "Sixtem" (core rules), "Tactile" (context specific low-fantasy mechanics) and "Talaje" (setting-specific rules). This is done so you can easily replace or modify sections. -->
 
-## What do I need to play this game?
+<!-- ## What do I need to play this game?
  
-You'll need a d20, d12, d10, d8, 2d6s, and a d4. You'll need pen and paper, you don't *need* anything else. There are [downloads](/book/code_and_downloads/downloads.md) including entity cards, handouts, and character sheets. A GM might want to consider using some of the Python tools to quickly look things up and generate enemies, encounters, etc.
+You'll need a d20, d12, d10, d8, 2d6s, and a d4. You'll need pen and paper, you don't *need* anything else. There are [downloads](/book/code_and_downloads/downloads.md) including entity cards, handouts, and character sheets. A GM might want to consider using some of the Python tools to quickly look things up and generate enemies, encounters, etc. -->
 
 ## Notes
 
