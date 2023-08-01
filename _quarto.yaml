@@ -41,7 +41,7 @@ website:
           - book/stuff/weapons.qmd
           - book/stuff/items.qmd
           - book/stuff/skills.qmd
-      # - section: "Fellas"
+      # - section: "Menagerie"
       #   contents:
 
       # - section: "Adventures"
