@@ -19,3 +19,7 @@ You'll need a d20, d12, d10, d8, 2d6s, and a d4. You'll need pen and paper, you 
 ## Notes
 
 Quarto (the site generator) does not make very printable pages for some reason, despite being able to produce pdfs. Eventually there will be better printed material, for now using reader mode in your browser before printing makes the results a little nicer.
+
+## Beta
+
+Ikolith Consolidated Recreation is currently in "stealth mode". Click [here](beta) to get our beta.
