@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 from citutils import (
     entity_text_generators as ge,
-    text_utils_parsers as tu,
+    parsers as tu,
     commands as co,
 )
 
@@ -65,7 +65,6 @@ async def self(
     expand_entities: bool = False,
     roll_dice: bool = False,
 ) -> None:
-
     await post_text(
         tu.single_curly_parser(entities, curly, expand_entities, roll_dice),
         interaction,
@@ -144,7 +143,6 @@ async def self(
 async def self(
     interaction: discord.Interaction,
 ) -> None:
-
     await interaction.response.send_message(
         file=discord.File(fp=os.path.join("py_utils", "help.txt"))
     )

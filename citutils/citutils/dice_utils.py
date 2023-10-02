@@ -1,12 +1,14 @@
 import itertools
 import re
 import random
-import logging
-from typing import Union, Any
+from typing import Union
+
+import citutils.my_types as ty
+from random import randint
+import citutils.database as dt
 
 
 def all_rolls(
-    # TODO: come back and be more concerned about this stuff that isnt used anywhere else.. type with not "Any"
     dice: list,
     result_type: str = "all",
 ) -> dict[int, Union[int, float, list[tuple[int]]]]:
@@ -33,6 +35,26 @@ def all_rolls(
         return {i: roll_counts[i] / sum(roll_counts.values()) for i in roll_counts}
     else:
         raise Exception("Invalid result_type passed.")
+
+
+def roll_on_table(entity: ty.Entity, curly: ty.Curly, bound_roll: bool = True) -> str:
+    # bound_roll means that if the roll is lower than min, it becomes min, if it is higher than max, it becomes max
+    table = entity["table"]
+    roll_min = int(min(table["expanded_outcomes"].keys()))
+    roll_max = int(max(table["expanded_outcomes"].keys()))
+    if curly["table_dice"]:
+        roll = curly["table_result"]
+    elif "roll" in table.keys():
+        roll = die_parser_roller((table["roll"]))
+    else:
+        roll = randint(
+            roll_min,
+            roll_max,
+        )
+    if bound_roll:
+        roll = max(roll_min, min(roll, roll_max))
+    # doesnt seem like the preprocess buys as much as i thought it might!
+    return table["expanded_outcomes"][str(roll)]
 
 
 def get_ev(dice: list, mod="") -> float:

@@ -3,9 +3,7 @@ from typing import NewType, TypedDict, Union
 
 class Curly(TypedDict):
     match: str
-    quantity_dice: str  # used to be "roll",
-    # important to note that if there is only dice, no entity,
-    # the dice-statement is counted as quantity_dice, *not* table_dice
+    quantity_dice: str
     table_dice: str
     entity: str
     quantity: int
@@ -21,25 +19,25 @@ class Table(TypedDict, total=False):
 
 
 class Entity(TypedDict, total=False):
-    basic_attacks: str
+    attacks: list
+    clean_name: str
     cost: str
     effect: str
     encumbrance: str
-    filter_tags: str
     flavor_text: str
     holds: str
     hp: str
+    meta_tags: list
     name: str  # this would be required, everything else would be optional
     # if i could use python 3.11! discord.py!!!
-    requirements: str
-    scores: str
-    skills: str
+    requirements: list
+    scores: list
+    skills: list
     speed: str
-    tags: str
+    tags: list
     target: str
     to_hit: str
     full_text: str
-
     table: Table
 
 

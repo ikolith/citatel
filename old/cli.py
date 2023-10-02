@@ -3,7 +3,7 @@ import argparse
 import os.path
 
 try:
-    from citutils import text_utils_parsers as tu, vars as vs, commands as co
+    from citutils import parsers as tu, vars as vs, commands as co
 except:
     print("citutils not found. Have you tried running . .venv/bin/activate ?")
     exit()

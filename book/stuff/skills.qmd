@@ -8,7 +8,7 @@ execute:
 ```{python}
 import os 
 from citutils import (entity_text_generators as ge,
-    text_utils_parsers as tu)
+    parsers as tu)
 
 text = ""
 entities = tu.get_entities(os.path.join("..","..","data","entities"), True)

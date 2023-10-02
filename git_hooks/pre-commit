@@ -1,8 +1,11 @@
 #!/bin/sh
 echo "Git pre-commit hook running now."
 #mypy update.py cli.py; 
-echo "Python's Black:"
-black .
-# echo "Quarto render (clean):" #this was way too slow.
-# . .venv/bin/activate
-#quarto render
+if pytest citutils/citutils/tests.py; then
+    echo "Python's Black:"
+    black .
+    # Add any other commands you want to run if tests pass here
+else
+    echo "Tests failed. Commit aborted."
+    exit 1
+fi

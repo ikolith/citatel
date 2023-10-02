@@ -1,17 +1,20 @@
 import re
-import citutils.text_utils_parsers as tu
-import citutils.my_types as ty
-import citutils.entity_text_generators as ge
 import os.path
+from pprint import pprint
+
 from pylatex import Document, Command, MiniPage, UnsafeCommand, NewPage
 from pylatex.base_classes import Arguments, Options, CommandBase
 from pylatex.package import Package
 from pylatex.utils import NoEscape
 
+import citutils.parsers as tu
+import citutils.my_types as ty
+import citutils.text_generators as ge
+import citutils.database as dt
+
 
 def generate_cards(
-    entities: ty.Entities,
-    card_entities: list,
+    entities,
     card_type: str = "poker",
     output_filepath: str = os.path.join("output", "cards"),
 ) -> None:
@@ -37,7 +40,7 @@ def generate_cards(
     geometry_options = {"margin": ".07in"}
     if card_type not in cards_per_page.keys():
         raise ValueError("Invalid card type.")
-    assert card_entities
+
     # define the LaTex command to generate a minipage of given dimensions, and populate it with content
     class CardCommand(CommandBase):
         _latex_name = "card"
@@ -51,9 +54,8 @@ def generate_cards(
         ),
     )
     entity_texts = []
-    for clean_name in card_entities:
-        entity = entities[clean_name]
-        if "filter_tags" in entity.keys() and "no_card" in entity["filter_tags"]:
+    for entity in entities:
+        if "meta_tags" in entity and "no_card" in entity["meta_tags"]:
             continue
         entity_texts.append(NoEscape(ge.generate_entity_text(entity, "latex")))
     # setup document and generate the preamble

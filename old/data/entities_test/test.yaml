@@ -5,7 +5,7 @@
   hp: "{d3 sack_from_saint_ives}"
 
 - name: Sack from Saint Ives
-  hp: "0 {cat_from_saint_ives}"
+  hp: "{cat_from_saint_ives}"
 
 - name: Cat From Saint Ives
   hp: "{d3 kit_from_saint_ives}"

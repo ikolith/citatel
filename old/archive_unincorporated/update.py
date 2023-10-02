@@ -1,8 +1,7 @@
 # TODO: this will require probably the most changing...
-import citutils.citutils.entity_text_generators as ge
-import citutils.citutils.text_utils_parsers as tu
-import commands as co
-import citutils.citutils.my_types as ty
+import citutils.text_generators as ge
+import citutils.commands as co
+import citutils.my_types as ty
 import os
 from datetime import date
 

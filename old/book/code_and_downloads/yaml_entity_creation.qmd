@@ -24,7 +24,7 @@ First, let's get used to what entities in the .yaml files actually look like:
   tags: one-handed, hilted, bladed
   speed: "(1n1)->(1n2)"
   to_hit: "+STR"
-  basic_attacks: "1d6 (S) [swinging: leading]"
+  attacks: "1d6 (S) [swinging: leading]"
   flavor_text: A simple tool for cutting down brush.
   encumbrance: 1
   filter_tags: weapon, basic
@@ -89,7 +89,7 @@ You'll notice there is a line break between the two entities in the file. This i
 
 The full list of features an entity can have is:  
 
-- basic_attacks
+- attacks
 - cost 
 - effect
 - encumbrance
@@ -125,7 +125,7 @@ In the repo, the .yamls live in [./data/entities](https://github.com/ikolith/cit
 #   requirements:
 #   speed:
 #   to_hit:
-#   basic_attacks:
+#   attacks:
 #   effect:
 #   flavor_text:
 #   encumbrance:

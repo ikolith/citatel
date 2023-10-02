@@ -8,7 +8,7 @@ This page involves some automation that I'm still dialing in, so the formatting 
 
 ```{python}
 import os
-from citutils import (text_utils_parsers as tu, 
+from citutils import (parsers as tu, 
     entity_text_generators as ge)
 
 text = ""

@@ -5,10 +5,11 @@ inverted_T=`echo -e "\e[7mT\e[0m"` #the \e[7m illuminates (via color inversion) 
 fraktur_T=`echo -e "\e[20mT\e[0m"` #the \e[20m illuminates (via fraktur) the first letter, sort of, in terminals that support that ansi code, which is almost none.
 illuminated_T=`echo -e "\e[7;20mT\e[0m"` #Ideally, the illumination would be fraktur and inverted, probably, but alas I do not have a terminal on which to test such things, as mine does not support fraktur.
 
-read -p "${illuminated_T}his is a quick and dirty setup script. It installs quarto via wget and apt; installs python3, python3.10-venv, black, and mypy via apt, creates and activates a venv, installs python packages, then checks if you have a latex engine (if you don't, it tries to install texlive-full). Are you sure you want to run this script? (y if yes)." -n 1 -r
+read -p "${illuminated_T}his is a quick and dirty setup script. It installs quarto via wget and apt; installs python3, python3.10-venv, black, and mypy via apt, creates and activates a venv, installs python packages, then checks if you have a latex engine (if you don't, it tries to install texlive). Are you sure you want to run this script? (y if yes)." -n 1 -r
 echo # move further output to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
+  sudo apt update
   echo "Checking quarto."
   if ! command -v quarto &> /dev/null
   then
@@ -26,9 +27,9 @@ then
   cd citutils;pip install --editable .;cd ..
   if ! command -v pdflatex &> /dev/null
   then
-    sudo apt install -y texlive-full
+    sudo apt install -y texlive
   else
-    echo "You already seem to have a latex engine, so texlive-full won't be installed. If you run into issues with tex, try installing texlive-full."
+    echo "You already seem to have a latex engine, so texlive won't be installed. If you run into issues with tex, try installing texlive."
   fi
 else
 echo "Exiting without doing anything."
