@@ -10,15 +10,39 @@ import citutils.text_formatters as tf
 
 # single entity text generators. used for cli and various utilities.
 
+key_order = [
+    "name",
+    "clean_name",
+    "hp",
+    "scores",
+    "skills",
+    "holds",
+    "tags",
+    "requirements",
+    "cost",
+    "speed",
+    "target",
+    "to_hit",
+    "attacks",
+    "effect",
+    "table",
+    "flavor_text",
+    "full_text",
+    "encumbrance",
+    "meta_tags",
+]
+
 
 def generate_latex(
     entity: dict,
     formatting: dict[str, dict] = tf.formatting_dict_latex,
     footer: bool = True,
+    key_order: list = key_order,
 ) -> str:
     result_text = ""
-    for k, v in entity.items():
-        result_text += tf.if_exists_format_latex(text=v, **tf.formatting_dict_latex[k])
+    for k in key_order:
+        if k in entity.keys():
+            result_text += tf.if_exists_format_latex(text=entity[k], **formatting[k])
     if footer and "encumbrance" in entity.keys():
         result_text += rf"""\vfill
         \hfill {"Enc: " + entity["encumbrance"]} 
@@ -29,10 +53,12 @@ def generate_latex(
 def generate_md(
     entity: dict,
     formatting: dict = tf.formatting_dict_md,
+    key_order: list = key_order,
 ) -> str:
     result_text = ""
-    for key, text in entity.items():
-        result_text += tf.if_exists_format_md(text=text, **formatting[key])
+    for k in key_order:
+        if k in entity.keys():
+            result_text += tf.if_exists_format_md(text=entity[k], **formatting[k])
     return result_text
 
 

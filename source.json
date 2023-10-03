@@ -34,9 +34,9 @@
       },
       "disguise": {
         "name": "Disguise",
+        "cost": ["1 SP"],
         "requirements": ["1 SOC"],
         "effect": "You can create disguises. Roll a check +3 to set a DC for your disguise, you can create a disguise for another person this way. When using a disguise you get +3 to SOCIAL or STEALTH rolls relevant to your use of the disguise.",
-        "cost": ["1 SP"],
         "meta_tags": ["skill", "social", "basic"]
       }
     },
