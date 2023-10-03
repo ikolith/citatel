@@ -4,26 +4,26 @@
       "robust": {
         "name": "Robust",
         "requirements": ["1 CON"],
-        "effect": "For every point you have in CON you can ignore the effects of a stack of [poison] and [bleed]. You still have the status until it is removed.",
-        "meta_tags": ["skill", "con"]
+        "effect": "For every point you have in CON you can ignore the effects of one stack of [poison] and/or [bleed]. You still have the status until it is removed.",
+        "meta_tags": ["skill", "con", "basic"]
       },
       "unstoppable": {
         "name": "Unstoppable",
         "requirements": ["2 CON", "{Robust}"],
         "effect": "You can ignore the effect (but not the damage) of up to CON injuries.",
-        "meta_tags": ["skill", "con"]
+        "meta_tags": ["skill", "con", "basic"]
       },
       "coordination_1": {
         "name": "Coordination 1",
         "requirements": ["1 SOC"],
-        "effect": "At the beginning of initiative you can choose to separate your team's table cards into a table deck separate from the main table deck (must be a team of at least 2 characters). Cards will be drawn alternating from each deck with your team deck going first. If you do this you can pay 1 AP so that the next 3 cards are drawn from your deck. Characters can choose to affect either deck.",
-        "meta_tags": ["skill", "soc"]
+        "effect": "At the beginning of initiative you can choose to separate your team's table cards into a deck separate from the main table deck. Cards will be drawn alternating from each deck with your team's deck going first. You can pay 1 AP so that the next 3 cards are drawn from your deck. Characters can choose to affect either deck with their abilities.",
+        "meta_tags": ["skill", "soc", "basic"]
       },
       "coordination_2": {
         "name": "Coordination 2",
         "requirements": ["2 SOC"],
         "effect": "If you have separated your team's deck you can also pay 1 AP out of the deck at any time to rearrange the cards in your team's table deck.",
-        "meta_tags": ["skill", "soc"]
+        "meta_tags": ["skill", "soc", "basic"]
       },
       "deception": {
         "name": "Deception",
@@ -51,17 +51,20 @@
       "chronomancy_slippage": {
         "name": "Chronomancy: Slippage",
         "requirements": ["1 CHRONO"],
-        "effect": "Pay 3 AP. Add this card to the table deck. For the next 3 rounds, whenever this card is drawn the round immediately ends."
+        "effect": "Pay 3 AP. Add this card to the table deck. For the next 3 rounds, whenever this card is drawn the round immediately ends.",
+        "meta_tags": ["skill", "chrono"]
       },
       "chronomancy_sustain": {
         "name": "Chronomancy: Sustain",
         "requirements": ["1 CHRONO"],
-        "effect": "Pay 3 AP. Add this card to the table deck. For the next 3 rounds, the first time this card is drawn, reshuffle all the table deck cards as if a new round is starting and continue the round."
+        "effect": "Pay 3 AP. Add this card to the table deck. For the next 3 rounds, the first time this card is drawn, reshuffle all the table deck cards as if a new round is starting and continue the round.",
+        "meta_tags": ["skill", "chrono"]
       },
       "chronomancy_tension": {
         "name": "Chronomancy: Tension",
         "requirements": ["1 CHRONO"],
-        "effect": "Spend 1 AP. Draw 2 cards from the table deck for each character in initiative. They don't get to act unless it is the last card they can get from the table deck."
+        "effect": "Spend 1 AP. Draw 2 cards from the table deck for each character in initiative. They don't get to act unless it is the last card they can get from the table deck.",
+        "meta_tags": ["skill", "chrono"]
       }
     },
     "ap_card_skills": {
@@ -69,26 +72,30 @@
         "name": "Dodge",
         "effect": "+3 Defense for the rest of the round.",
         "cost": ["1 AP"],
-        "meta_tags": ["skill"]
+        "meta_tags": ["skill", "basic"]
       },
       "mobility": {
         "name": "Mobility",
-        "effect": "Add this card to the table deck when initiative starts. Treat the card as 1 AP that can only be spent on movement. Any effects that affect AP cards affect this card."
+        "effect": "Add this card to the table deck when initiative starts. Treat the card as 1 AP that can only be spent on movement. Any effects that affect AP cards affect this card.",
+        "meta_tags": ["skill", "basic"]
       },
       "bruiser": {
         "name": "Bruiser",
         "requirements": ["1 STR"],
-        "effect": "Add this card to the table deck when initiative starts. Treat the card as 1 AP that can only be spent on attacks costing 2 or more AP. Any effects that affect AP cards affect this card."
+        "effect": "Add this card to the table deck when initiative starts. Treat the card as 1 AP that can only be spent on attacks costing 2 or more AP. Any effects that affect AP cards affect this card.",
+        "meta_tags": ["skill", "basic"]
       },
       "scheming": {
         "name": "Scheming",
         "requirements": ["1 DEX"],
-        "effect": "Add this card to the table deck when initiative starts. Treat the card as 1 AP that cannot be spent on movement or attacks. Any effects that affect AP cards affect this card."
+        "effect": "Add this card to the table deck when initiative starts. Treat the card as 1 AP that cannot be spent on movement or attacks. Any effects that affect AP cards affect this card.",
+        "meta_tags": ["skill", "basic"]
       },
       "blitz": {
         "name": "Blitz",
         "requirements": ["1 AGI"],
-        "effect": "Add this card to the table deck when initiative starts. Treat the card as 1 AP that can only be spent to make a 1 AP attack. Any effects that affect AP cards affect this card."
+        "effect": "Add this card to the table deck when initiative starts. Treat the card as 1 AP that can only be spent to make a 1 AP attack. Any effects that affect AP cards affect this card.",
+        "meta_tags": ["skill", "basic"]
       }
     },
     "weapons": {
@@ -282,7 +289,8 @@
         "to_hit": "+STR",
         "attacks": ["3 [B]"],
         "effect": "Ignore 3 armor",
-        "encumbrance": "1"
+        "encumbrance": "1",
+        "meta_tags": ["weapon", "basic"]
       },
       "one_handed_spear": {
         "name": "One Handed Spear",
@@ -631,30 +639,22 @@
   "test": {
     "man_from_saint_ives": {
       "name": "Man From Saint Ives",
-      "attacks": ["1d8 [B]", "1 [S]"],
-      "cost": "Not for sale.",
-      "effect": "Polygamy",
-      "encumbrance": "7",
-      "flavor_text": "As I was going to St. Ives,\nUpon the road I met seven wives;\nEvery wife had seven sacks,\nEvery sack had seven cats,\nEvery cat had seven kits:\nKits, cats, sacks, and wives,\nHow many were going to St. Ives?",
       "holds": "{2d1 Wife From Saint Ives}",
       "hp": "7:7 or {2d6}:{2d6}",
       "meta_tags": ["test"],
       "requirements": ["7 WIFE", "49 CAT", "1 ETC"],
       "scores": ["7 Defense", "7 STR"],
-      "skills": ["1 AP: Do a flip.", "1 AP: Ambulate"],
       "speed": "7->7",
       "tags": ["giant", "heavy"],
       "target": "Self",
       "to_hit": "+STR",
-      "full_text": "full_text",
-      "table": {
-        "outcomes": {
-          "1": "RIGHT!",
-          "2-7": "WRONG!",
-          "8": "RIGHT!",
-          "9": "WRONG!"
-        }
-      }
+      "flavor_text": "Tastes like Ivar's.",
+      "attacks": ["1d8 [B]", "1 [S]"],
+      "cost": ["Not for sale."],
+      "effect": "Polygamy",
+      "encumbrance": "7",
+      "skills": ["1 AP: Do a flip.", "1 AP: Ambulate"],
+      "full_text": "As I was going to St. Ives,\nUpon the road I met seven wives;\nEvery wife had seven sacks,\nEvery sack had seven cats,\nEvery cat had seven kits:\nKits, cats, sacks, and wives,\nHow many were going to St. Ives?"
     },
     "wife_from_saint_ives": {
       "name": "Wife From Saint Ives",
@@ -1100,7 +1100,7 @@
         "hp": "{2d6}",
         "scores": ["1 STR", "1 AGI", "7 Defense"],
         "holds": "{Dogman Weapons}",
-        "full_text": "The dogmen of the hills travel in packs. They care for nothing and no one besides their own kin. They are immune to ideas like nations and news from far off places. They are deaf to the words of people they will never meet. Their hearts and minds are closed to abstractions and alien dreams. Dogmen cannot consider hypotheticals, they do not worry, they do not lie. They will attack you on the road, take your things, feed you to their pack, boil your bones for broth, then chew on what's left. All will be right, all will be as it should be.\nThey are gangly hunched little weirdos with scrubby yellow fur, big beady black eyes, saggy stretchy skin, and floppy ears that are always twitching, tucking, pointing, turning, always out of sync with one another.\nWhen not attacking travelers they craft surprisingly nice drums of all shapes and sizes with which they accompany their hungry howling. They are remarkably good leatherworkers, all things considered.",
+        "full_text": "The dogmen of the hills travel in packs. They care for nothing and no one besides their own kin. They are immune to ideas like morals and nations. They have no interest in news from far off places. They are deaf to the words of people they will never meet. Dogmen cannot consider hypotheticals. They do not worry, they do not yearn, they do not lie. If they meet you on the road they will rob you, kill you, eat you, boil your bones for broth, then chew on what is left.\nDogmen are gangly hunched little weirdos with scrubby yellow fur, big beady black eyes, sagging skin, and floppy ears that are always twitching, tucking, and pointing, always out of sync with one another.\nWhen not attacking travelers they craft surprisingly nice skin-and-bone drums of all shapes and sizes with which they accompany their hungry howling. They are remarkably good leatherworkers.",
         "meta_tags": ["npc", "hills"]
       },
       "dogman_weapons": {
