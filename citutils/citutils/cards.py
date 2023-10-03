@@ -62,6 +62,7 @@ def generate_cards(
     doc = Document(geometry_options=geometry_options, indent=False)
     doc.append(card_com)
     doc.packages.append(Package("fdsymbol"))
+    doc.packages.append(Package("tabularx"))
     for count, text in enumerate(entity_texts):
         count += 1
         doc.append(
@@ -70,7 +71,7 @@ def generate_cards(
             )
         )
         if count % cards_per_row[card_type] == 0 and count > 1:
-            doc.append(NoEscape("\\newline"))
+            doc.append(NoEscape("\\vspace{-1pt} \\newline "))
         if count % cards_per_page[card_type] == 0:
             doc.append(NewPage())
     doc.generate_pdf(output_filepath, clean_tex=False)

@@ -86,6 +86,7 @@ def create_cards_ui():
         ),
         "Collection -> Cards",
     )
+    print("Cards available at output/cards.pdf")
 
 
 def create_single_curly_ui(db):

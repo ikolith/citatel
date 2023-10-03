@@ -36,16 +36,26 @@ def generate_md(
     return result_text
 
 
-def prep_latex(entity_local: ty.Entity) -> str | list:
-    funcs = [
-        # removes curlies as they shouldn't show up in latex. they'd have to be escaped for  tex anyhow
-        (lambda v: re.sub(r"[{}]", "", v)),
-        # escape "_" which will otherwise break the tex
-        (lambda v: re.sub(r"([a-z0-9])(_)", r"\1\_", v)),
-        # a nicer arrow :)
-        (lambda v: re.sub(r"->", "$\\\Rightarrow$", v)),
-    ]
-    for f in funcs:
+def prep(entity_local: ty.Entity, text_type: str):
+    html_arrow = "&#8658;"
+    func_sets = {
+        "latex": [
+            # removes curlies as they shouldn't show up in latex. they'd have to be escaped for  tex anyhow
+            (lambda v: re.sub(r"[{}]", "", v)),
+            # escape "_" which will otherwise break the tex
+            (lambda v: re.sub(r"([a-z0-9])(_)", r"\1\_", v)),
+            # a nicer arrow :)
+            (lambda v: re.sub(r"->", "$\\\Rightarrow$", v)),
+        ],
+        "html": [
+            # escape * and _
+            (lambda v: re.sub(r"[_]", r"\_", v)),
+            (lambda v: re.sub("\*", r"\*", v)),
+            # nicer arrow :)
+            (lambda v: re.sub(r"->", f"{html_arrow}", v)),
+        ],
+    }
+    for f in func_sets[text_type]:
         for k, v in entity_local.items():
             if type(v) == list:
                 entity_local[k] = map(lambda v: f(v), v)
@@ -54,34 +64,34 @@ def prep_latex(entity_local: ty.Entity) -> str | list:
     return entity_local
 
 
+def prep_markdown(entity_local: ty.Entity):
+    funcs = []
+
+
 def generate_entity_text(
     entity: ty.Entity,
     text_type: str = "md",
     html_characters: bool = False,
     include_full_text: bool = False,  # only used by .md right now..
-    skip_feature_generation: bool = False,
-    # TODO: this doesn't show up in the curly command and probably it should! and maybe some other ones too
     skip_table: bool = False,  # only used by .md right now..
     # TODO: the latex here is really only for cards... probably it should still be able to handle tables though
 ) -> str:
     entity_local = deepcopy(entity)
     if text_type == "md":
+        formatting = deepcopy(tf.formatting_dict_md)
+        if not include_full_text:  # UNTESTED
+            formatting["full_text"] = {"hide": True}
+        if skip_table:
+            formatting["table"] = {"hide": True}
         if html_characters:
-            # TODO: this is broken by having lists in the data..
-            arrow = "&#8658;"
-            for key in entity_local.keys():  # untested.. yet
-                entity_local[key] = re.sub(r"[_]", r"\_", entity_local[key])
-                entity_local[key] = re.sub(r"->", f"{arrow}", entity_local[key])
-                entity_local[key] = re.sub("\*", r"\*", entity_local[key])
-        md_text = generate_md(entity_local) if not skip_feature_generation else ""
-        if include_full_text:
-            md_text = tf.format_full_text_md(entity_local) + md_text + "  \n\n"
-        if not skip_table:
-            if "table" in entity.keys():
-                md_text += tf.format_md_table(entity["table"])
-        return md_text
+            entity_local = prep(entity_local, "html")
+        return generate_md(entity_local, formatting)
     elif text_type == "latex":
-        return generate_latex(prep_latex(entity_local))
+        formatting = deepcopy(tf.formatting_dict_latex)
+        if skip_table:
+            formatting["table"] = {"hide": True}
+        return generate_latex(prep(entity_local, "latex"), formatting)
+
     else:
         raise Exception("text_type needs to be either 'latex' or 'md'.")
 

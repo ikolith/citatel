@@ -62,6 +62,31 @@ def footer_latex(clean_name: str, encumbrance: str = ""):
     {f_note(clean_name)} \hfill {enc}"""
 
 
+def format_table_latex(table: ty.Table) -> str:
+    text = (
+        f"""\n\nRoll {table["roll"]} on this table.\n\n"""
+        if "roll" in table.keys()
+        else ""
+    )
+    text += NoEscape(
+        r"""\smallskip\begin{center}
+\begin{tabularx}{\textwidth}{ | c | X | }"""
+    )
+    for roll, outcome in table["outcomes"].items():
+        text += NoEscape(
+            rf"""
+\hline
+{roll} & {outcome} \\"""
+        )
+    text += NoEscape(
+        r"""
+    \hline
+\end{tabularx}
+\end{center}"""
+    )
+    return text
+
+
 # latex entity text generation
 
 
@@ -84,9 +109,7 @@ def if_exists_format_latex(
     return text
 
 
-formatting_dict_latex: dict[
-    str, dict
-] = {  # TODO: this is the huge thing.. check all the list boys... make sure they gen good...
+formatting_dict_latex: dict[str, dict] = {
     "attacks": {"text_formatter": attacks_latex},
     "clean_name": {"hide": True},
     "cost": {
@@ -128,10 +151,8 @@ formatting_dict_latex: dict[
         "field_text_formatter": emph,
     },
     "to_hit": {"field_text": "To-Hit", "field_text_formatter": emph},
-    "full_text": {"hide": True},
-    "table": {"hide": True},  # TODO: THERE ARE NO LATEX TABLES
-    # due to the many issues with pandoc and latex, theres a good chance this will be handled in some other way entirely
-    # but until then, latex will simply skip tables
+    "full_text": {"hide": True},  # TODO: create full_text formatter for latex
+    "table": {"text_formatter": format_table_latex},
 }
 
 # MARKDOWN
@@ -158,10 +179,27 @@ def if_exists_format_md(
     return text_wrapper + text + text_wrapper + a_newline
 
 
+def format_table_md(table: ty.Table) -> str:
+    md_table = (
+        f"""  \n\nUnless otherwise specified, roll {table["roll"]} on this table.  """
+        + "\n\n| Roll | Outcome |  \n| --- | --- |"
+    )
+    for roll, outcome in table["outcomes"].items():
+        md_table += "\n" + f"| {roll} | {outcome} |  "
+    return md_table + "\n"
+
+
+def format_full_text_md(entity: dict) -> str:
+    if "full_text" in entity.keys():
+        return entity["full_text"] + "  \n\n\n"
+    else:
+        return ""
+
+
 formatting_dict_md: dict[str, dict] = {
     "attacks": {"text_formatter": lambda x: ", ".join(x)},
     "clean_name": {"hide": True},
-    "cost": {"field_text": "Cost"},
+    "cost": {"field_text": "Cost", "text_formatter": lambda x: ", ".join(x)},
     "effect": {},
     "encumbrance": {"field_text": "Encumbrance"},
     "flavor_text": {"text_wrapper": "*"},
@@ -179,25 +217,6 @@ formatting_dict_md: dict[str, dict] = {
     "tags": {"field_text": "Tags", "text_formatter": lambda x: ", ".join(x)},
     "target": {"field_text": "Target"},
     "to_hit": {"field_text": "To-Hit"},
-    "full_text": {
-        "hide": True
-    },  # generate_full_text_md() handles this instead of generate_md()
-    "table": {"hide": True},  # handled during generate_md(),
+    "full_text": {"text_formatter": format_full_text_md},
+    "table": {"text_formatter": format_table_md},
 }
-
-
-def format_md_table(table: ty.Table) -> str:
-    md_table = (
-        f"""  \n\nUnless otherwise specified, roll {table["roll"]} on this table.  """
-        + "\n\n| Roll | Outcome |  \n| --- | --- |"
-    )
-    for roll, outcome in table["outcomes"].items():
-        md_table += "\n" + f"| {roll} | {outcome} |  "
-    return md_table + "\n"
-
-
-def format_full_text_md(entity: dict) -> str:
-    if "full_text" in entity.keys():
-        return entity["full_text"] + "  \n\n\n"
-    else:
-        return ""
