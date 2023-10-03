@@ -61,10 +61,12 @@ def create_loaded_button_ui(run_on_submit: callable, description: str):
     def submit_clicked(b):
         if tw_v := text_widget.value:
             run_on_submit(loaded_submit_button, tw_v)
+            with output:
+                output.clear_output()
+                display(f"{str(run_on_submit)} ran successfully.")
 
     loaded_submit_button.on_click(submit_clicked)
-    display(text_widget, loaded_submit_button, output)
-    return loaded_submit_button
+    return (text_widget, loaded_submit_button, output)
 
 
 def load_and_process_collection(
@@ -80,13 +82,13 @@ def load_and_process_collection(
 
 
 def create_cards_ui():
-    collection_lb = create_loaded_button_ui(
+    text_widget, collection_lb, output = create_loaded_button_ui(
         lambda lb, tw_v: load_and_process_collection(
             lb, tw_v, run_on_submit=cr.generate_cards
         ),
         "Collection -> Cards",
     )
-    print("Cards available at output/cards.pdf")
+    return widgets.VBox([text_widget, collection_lb, output])
 
 
 def create_single_curly_ui(db):
@@ -110,25 +112,24 @@ def create_single_curly_ui(db):
                 display(Markdown(res))
 
     submit_button.on_click(submit_clicked)
-    display(
-        widgets.VBox(
-            [
-                widgets.HBox(
-                    [
-                        widgets.VBox([curly_tw, submit_button]),
-                        widgets.VBox([expand_entities_cb, roll_dice_cb]),
-                    ]
+
+    return widgets.VBox(
+        [
+            widgets.HBox(
+                [
+                    widgets.VBox([curly_tw, submit_button]),
+                    widgets.VBox([expand_entities_cb, roll_dice_cb]),
+                ]
+            ),
+            widgets.HBox(
+                [output],
+                layout=widgets.Layout(
+                    display="flex",
+                    flex_flow="column",
+                    width="300px",  # "40%"?
                 ),
-                widgets.HBox(
-                    [output],
-                    layout=widgets.Layout(
-                        display="flex",
-                        flex_flow="column",
-                        width="300px",  # "40%"?
-                    ),
-                ),
-            ]
-        )
+            ),
+        ]
     )
 
 
@@ -208,4 +209,4 @@ def create_filter_ui(db, fields, unique_array_field_values, preselect_basic=True
             output,
         ]
     )
-    display(filter_ui)
+    return filter_ui
