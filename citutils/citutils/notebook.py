@@ -180,6 +180,11 @@ def create_filter_ui(db, fields, unique_array_field_values, preselect_basic=True
     output = widgets.Output()
 
     def submit_clicked(b):
+        if not pickle_text_widget.value:
+            with output:
+                output.clear_output()
+                display("Need to name new collection.")
+            return None
         filter_params = {}
         for widg in text_widgets + sm_widgets + meta_tags_widget:
             if v := widg.value:
@@ -190,8 +195,9 @@ def create_filter_ui(db, fields, unique_array_field_values, preselect_basic=True
         )
         with output:
             output.clear_output()
-            # pprint(results) happens three times for some reason
-        pprint(results)
+            display(
+                f"Created collection {pickle_text_widget.value} in the /pickle_jar directory."
+            )
         if p := pickle_text_widget.value:
             with open("./pickle_jar/" + p + ".pickle", "wb") as handle:
                 pickle.dump(results, handle, protocol=pickle.HIGHEST_PROTOCOL)
