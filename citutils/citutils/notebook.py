@@ -189,7 +189,6 @@ def create_filter_ui(db, fields, unique_array_field_values, preselect_basic=True
         for widg in text_widgets + sm_widgets + meta_tags_widget:
             if v := widg.value:
                 filter_params[widg.description] = v
-            # i = 0
         results = dt.filter_entities(
             db, list(filter_params.keys()), list(filter_params.values())
         )

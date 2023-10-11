@@ -36,10 +36,7 @@ Where one could expect children and the elderly to be closer to 1:~3, some other
 
 ### CON
 
-<!-- CON used to let you ignore some portion of a number of accumulating status effects (like poison and bleed)...
-Eh, I'm gonna just make that a skill.-->
 Every point of CON gives you 1 extra crit health and 2 extra standard health.
-<!-- not clear thats the right number but hey! -->
 
 ### Defense and Movement Speed
 
@@ -89,7 +86,8 @@ Only the Crit and Crit Fail are "universal". The rest are triggered by skills, w
 Yes, a Crit also counts as "Matching".  
 Why have all of these special terms and conditions to check? Differing probabilities!
 
-### You Can Probablity Skip This Section
+### You Can Probablity Skip This Section  
+
 A roll of two d6s can resolve in 36 different ways, 36 combinations of dice. I will refer to these as "cases". Assuming a roll of 7 passes (most common DC), 21 of these cases pass (sum to >=7).
 
 | Condition | Passing Cases | Percentage of Passing Cases | Percentage of all Cases |
@@ -105,7 +103,7 @@ Didn't verify this. Winged it. Might be wrong.
 
 Crit Fails are maximally bad. You did as bad as you could do (~3% probability).  
 
-Double 6s are good. You did as good as you could have. If this is an attack roll, do 1 crit damage. 
+Double 6s are good. You did as good as you could have. If this is an attack roll, do 1 extra crit damage. 
 
 ## Initiative and AP
 

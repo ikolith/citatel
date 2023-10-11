@@ -175,7 +175,7 @@ def if_exists_format_md(
     if field_text:
         text = field_text_wrapper + field_text + ":" + field_text_wrapper + " " + text
     elif prefix:
-        text = prefix + " " + text
+        text = prefix + text
     return text_wrapper + text + text_wrapper + a_newline
 
 

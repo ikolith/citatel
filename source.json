@@ -164,7 +164,7 @@
         "speed": "1->2",
         "to_hit": "+AGI",
         "attacks": ["d4 [P] or [S]"],
-        "flavor_text": "\"An unadorned straight sword. A simple and reliable weapon.\"",
+        "flavor_text": "An unadorned straight sword. A simple and reliable weapon.",
         "encumbrance": "1",
         "meta_tags": ["weapon", "basic"]
       },
@@ -184,7 +184,7 @@
         "speed": "1->2",
         "to_hit": "+AGI",
         "attacks": ["1 [P] + 2 [Severing]"],
-        "flavor_text": "A sword adapted from a sickle. The blade curves forward, it is swung with the point toward the enemy.",
+        "flavor_text": "A sword adapted from a sickle. The blade curves forward, the point facing the enemy.",
         "meta_tags": ["weapon", "basic"]
       },
       "heavy_cutlass": {
@@ -203,27 +203,30 @@
         "requirements": ["1 DEX"],
         "speed": "1->1->2",
         "to_hit": "+AGI",
-        "attacks": ["d4 [Picking]", "d4 [Severing]"]
+        "attacks": ["d4 [Picking]", "d4 [Severing]"],
+        "flavor_text": "A shining black sickle sword, the blade curves in the shape of a crescent."
       },
       "boar_sword": {
         "name": "Boar Sword",
         "tags": ["hilted two-handed", "reach"],
-        "requirements": ["1 AGI"],
+        "requirements": ["1 AGI", "1 STR"],
         "speed": "1->2",
         "to_hit": "+AGI",
         "attacks": ["d4 [P]"],
+        "flavor_text": "A reinforced thrusting sword with a broad wavy tip. The sword creates deep, wide, uneven wounds.",
         "effect": "Inflict 1 [bleed]",
         "encumbrance": "1",
         "meta_tags": ["weapon", "basic"]
       },
       "estoc": {
         "name": "Estoc",
-        "tags": ["hilted", "two-handed", "reach"],
+        "tags": ["hilted", "two-handed", "reach: 2"],
         "requirements": ["1 AGI"],
         "speed": "1->1->2",
         "to_hit": "+AGI",
         "attacks": ["3 [P]"],
-        "effect": "Ignore armor equal to piercing damage.",
+        "flavor_text": "A specialized thrusting sword, reinforced, narrow, edgless, and long.",
+        "effect": "Ignore 3 armor.",
         "encumbrance": "1",
         "meta_tags": ["weapon", "basic"]
       },
@@ -234,6 +237,7 @@
         "speed": "1->2",
         "to_hit": "+AGI +STR",
         "attacks": ["d6 [P]", "d6 [S]"],
+        "flavor_text": "Why settle for a merely good sword?",
         "effect": "Robust Edge: increase number of low rolls required to lose [sharpened] buff by 2",
         "encumbrance": "1",
         "meta_tags": ["weapon", "basic"]
@@ -255,7 +259,7 @@
         "speed": "1->2",
         "to_hit": "+AGI",
         "attacks": ["2 [P] + 2 [Severing]", "3 [P]"],
-        "flavor_text": "The long blade of the Rhomphaia curves aggressively toward the enemy like a shining claw.",
+        "flavor_text": "The long blade curves aggressively toward the enemy like a shining claw.",
         "encumbrance": "1",
         "meta_tags": ["weapon", "basic"]
       },
@@ -288,6 +292,7 @@
         "speed": "2",
         "to_hit": "+STR",
         "attacks": ["3 [B]"],
+        "flavor_text": "A heavy flanged head on the end of a short shaft.",
         "effect": "Ignore 3 armor",
         "encumbrance": "1",
         "meta_tags": ["weapon", "basic"]
@@ -297,6 +302,7 @@
         "tags": ["shafted", "one-handed", "reach: 2"],
         "speed": "1->2",
         "attacks": ["d4 [P]"],
+        "flavor_text": "A simple shaft with and a plain metal tip. Simple, reliable, effective.",
         "encumbrance": "1",
         "meta_tags": ["weapon", "basic"]
       },
@@ -320,7 +326,7 @@
         "speed": "1->2",
         "to_hit": "+AGI",
         "attacks": ["3 [Severing]"],
-        "flavor_text": "The shaft is of a fine red wood, the engravings and the blade shine in the light.",
+        "flavor_text": "The shaft is carved from a fine red wood, the engravings on the blade shine and glitter in the light.",
         "meta_tags": ["weapon"]
       },
       "one_handed_war_axe": {
@@ -348,8 +354,9 @@
         "tags": ["one-handed", "shafted", "bladed"],
         "speed": "2",
         "to_hit": "+STR",
-        "attacks": ["d4 [Severing]"],
-        "effect": "If Adze does 4 or more damage it becomes stuck in the target. \nRemoving it costs 2 AP and does d4 (S) damage.",
+        "attacks": ["d4-1 [Severing]"],
+        "effect": "On half-crit the adze gets stuck in the target. \nRemoving it costs 1 AP and does 1 crit damage.",
+        "flavor_text": "A simple tool with a flat blade perpendicular to the handle. Meant for cutting and shaping wood.",
         "encumbrance": "1",
         "meta_tags": ["weapon", "basic"]
       },
@@ -360,7 +367,7 @@
         "speed": "2->3",
         "to_hit": "+2*STR",
         "attacks": ["d8 (B) + 2 [P]"],
-        "effect": "If cactus greatclub takes 10 damage in one turn (or more) explodes, doing d6 (P) in short radius (half as effective against armor)",
+        "effect": "If this weapon takes 3 damage in one turn it will explode dealing d6 (P) to all creatures within 1 space.",
         "encumbrance": "2",
         "meta_tags": ["weapon"]
       },
@@ -371,8 +378,8 @@
         "speed": "3",
         "to_hit": "+2*STR",
         "attacks": ["2d6+STR"],
-        "flavor_text": "BONK.",
         "effect": "Inflict 1 [stun]",
+        "flavor_text": "BONK.",
         "meta_tags": ["weapon", "basic"]
       },
       "giant_feasting_club": {
@@ -382,18 +389,19 @@
         "speed": "2->3",
         "to_hit": "+2*STR",
         "attacks": ["2d4 (B) d4 [P]"],
-        "effect": "Everytime you roll a 4 for damage, inflict 1 [bleeding] and 1 [poison]. Crush\nonly requires 1 extra STR.",
-        "flavor_text": "Only the handle of the dark hardwood club is visible. The rest is covered with enormous living barnacles, constantly chattering, clicking, moving, tearing at anything that comes near.",
+        "effect": "When a damage die rolls a 4, inflict 1 [bleeding] and 1 [poison].",
+        "flavor_text": "Only the handle of the dark hardwood club is visible. The rest is covered with enormous living barnacles. The barnacles constantly chatter, click, and move. They tear at anything that comes near.",
         "encumbrance": "2",
         "meta_tags": ["weapon"]
       },
       "goedendag": {
         "name": "Goedendag!",
         "tags": ["shafted", "two-handed", "reach: 2"],
-        "requirements": ["1 STR"],
+        "requirements": ["2 STR"],
         "speed": "2",
         "to_hit": "+STR",
-        "attacks": ["d6+STR [B]", "d6+STR [P]"],
+        "attacks": ["d4+STR [B]", "d4+STR [P]"],
+        "flavor_text": "A broad heavy shaft with a large iron spike mounted on the end, a heavy club-spear hybrid. Friendly.",
         "effect": "Ignore 2 armor.",
         "encumbrance": "2",
         "meta_tags": ["weapon", "basic"]
@@ -401,9 +409,9 @@
       "greatclub": {
         "name": "Greatclub",
         "tags": ["shafted", "two-handed", "reach: 2"],
-        "requirements": ["1 STR"],
+        "requirements": ["2 STR"],
         "speed": "2",
-        "attacks": ["10 [B]"],
+        "attacks": ["7 [B]"],
         "encumbrance": "2",
         "meta_tags": ["weapon"]
       },
@@ -412,8 +420,8 @@
         "tags": ["shafted", "two-handed", "reach: 2"],
         "speed": "1->2",
         "to_hit": "+AGI",
-        "attacks": ["d6 [P]"],
-        "effect": "If your STR is greater or equal to the enemy, you can choose to send them 1 space back on a hit.",
+        "attacks": ["3 [P]"],
+        "effect": "If your attack check exceeds the enemy's passive STR you can send them back 1 space.",
         "encumbrance": "1",
         "meta_tags": ["weapon", "basic"]
       },
@@ -470,7 +478,7 @@
       "pulling_punches": {
         "name": "Pulling Punches",
         "requirements": ["1 DEX"],
-        "effect": "When you roll damage dice for an attack, you can choose to set a max damage, (example: treat any number above a 4 as a 4). You can also choose to do non-lethal damage if the damage type is (B).",
+        "effect": "You can also choose to do non-lethal damage if the damage type is (B). Before you attack you can set a maximum damage for the attack to deal.",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "dex", "basic"]
       },
@@ -503,7 +511,7 @@
       "large_weapon_2_sweep": {
         "name": "Large Weapon 2: Sweep",
         "requirements": ["{Large Weapon 1}", "STR 2"],
-        "effect": "When you perform a non-[P] melee attack with a [two-handed] weapon or a weapon with [reach], you can treat it as an attack against two adjacent enemies that you can hit. Roll only once, resolve the attack separately for each enemy. You can spend an extra 1 AP and attack up to four adjacent enemies in the same way.",
+        "effect": "When you perform a non-(P) melee attack with a [two-handed] weapon or a weapon with [reach], you can treat it as an attack against two adjacent enemies that you can hit. Roll only once, resolve the attack separately for each enemy. You can spend an extra 1 AP and attack up to four adjacent enemies in the same way.",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "large_weapon", "basic"]
       },
@@ -548,30 +556,30 @@
         "meta_tags": ["skill", "shield", "basic"]
       },
       "wrestling_1_rasslin": {
-        "name": "Wrestling 1: Rasslin'",
+        "name": "Grappling 1: Rasslin'",
         "requirements": ["AGI 2", "STR 2"],
         "effect": "+2 to Grapple checks.",
         "cost": ["1 SP"],
-        "meta_tags": ["skill", "wrestling", "basic"]
+        "meta_tags": ["skill", "grappling", "basic"]
       },
       "wrestling_2_gottem": {
-        "name": "Wrestling 2: Gottem",
+        "name": "Grappling 2: Hold",
         "requirements": ["AGI 2", "STR 2", "Wrestling 1"],
         "effect": "If you're successfully grappling a humanoid in your size category or lower, get +4 to subsequent grapple checks. If you're successfully grappling a non-humanoid in your size category, +3 to subsequent grapple checks. Otherwise, if you're successfully grappling, +2 to subsequent grapple checks.",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "wrestling", "basic"]
       },
       "wrestling_2_choosin_a_snoozin": {
-        "name": "Wrestling 2: Choosin' a Snoozin'",
+        "name": "Wrestling 2: Cruisin' for a Snoozin'",
         "requirements": ["AGI 2", "STR 2", "Wrestling 1"],
-        "effect": "Can only be performed on something that needs to breathe and... has a neck. \n\nSpend an extra AP when entering a grapple check. If you can hold the grapple for 3 rounds, the grappled creature is knocked out for 1d12 hours.",
+        "effect": "Can only be performed on something that can be choked (has a neck, not wearing armor that covers their neck completely, TTYDM). \nSpend 2 AP while grappling. If you can hold the grapple for 2 more rounds the grappled creature is unconcious for 1d12 minutes.",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "wrestling", "basic"]
       },
       "dual_wielding_1_ambidextrous": {
         "name": "Dual Wielding 1: Ambidextrous",
         "requirements": ["AGI 1"],
-        "effect": "You can attack with your offhand as well as you attack with your main hand. Track the costs from their attacks separately.",
+        "effect": "You can attack with your offhand as well as you attack with your main hand. Track the costs from attacks with either hand separately.",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "dual_wielding", "basic"]
       },
@@ -591,7 +599,7 @@
       },
       "sling_bag": {
         "name": "Sling Bag",
-        "effect": "Can be worn with another bag. Max encumbrance: 3. This bag can be switched from being worn on your front or back for [1n1]. Searching and grabbing something from this bag is [2n1].",
+        "effect": "Can be worn with another bag. Max encumbrance: 3. This bag can be switched from being worn on your front or back for 1 AP. Searching and grabbing something from this bag is 5 AP.",
         "meta_tags": ["item", "bag", "basic"]
       },
       "scouts_bag": {
@@ -601,19 +609,19 @@
       },
       "frame_bag": {
         "name": "Frame Bag",
-        "effect": "Max encumbrance: 8+STR. [encumbered] threshold: 2+STR.",
+        "effect": "Max encumbrance: 8+STR.\n[encumbered] threshold: 2+STR.",
         "meta_tags": ["item", "bag", "basic"]
       },
       "stick_bag": {
         "name": "Stick Bag",
-        "effect": "Can be carried while wearing another bag. Stick must be held with one hand. Max encumbrance: 2 + STR.",
+        "effect": "Can be carried while wearing another bag. Stick must be held with one hand.\nMax encumbrance: 2 + STR.",
         "meta_tags": ["item", "bag", "basic"]
       }
     },
     "whetstones": {
       "simple_whetstone": {
         "name": "Simple Whetstone",
-        "effect": "Apply [sharpened] to a [bladed] weapon, takes 30 minutes to apply. The weapon does +1 damage and ignores 1 armor. Lose [sharpened] when you crit fail.",
+        "effect": "Apply [sharpened] to a [bladed] weapon, takes 30 minutes to apply. The weapon ignores 1 armor. Lose [sharpened] when you crit fail.",
         "flavor_text": "A large flat stone bearing faded inscriptions.",
         "meta_tags": ["item", "whetstone", "basic"]
       },
@@ -625,7 +633,7 @@
       "footsoldiers_whetstone": {
         "name": "Footsoldier's Whetstone",
         "effect": "Takes 30 minutes to apply [sharpened] to a [bladed] weapon. Ignore 3 armor. Rolling a crit fail removes [sharpened].",
-        "flavor_text": "A fragment of a relief etched into heavy white stone. The relief depicts a phalanx of soldiers in formation bearing partisans against an unseen force. The relief is etched deeply with identical runes in various styles.",
+        "flavor_text": "A fragment of a relief etched into heavy white stone. The relief depicts a phalanx of soldiers bearing partisans against an unseen enemy. The relief is etched deeply with identical runes in various styles.",
         "meta_tags": ["item", "whetstone"]
       },
       "cannibal_whetstone": {
@@ -694,109 +702,109 @@
     "npcs": {
       "salt_wretch": {
         "name": "Salt Wretch",
-        "hp": "{1d10} or 4",
+        "hp": "1:3",
         "scores": ["1 STR"],
         "skills": [
           "Claw (2n1): 1d4 (S). Enemies take damage equal to their current SALT on the beginning of their turn. Enemies lose 1 SALT when they start a round within 1 space of the Wretch."
         ],
-        "holds": "{1d4-3 pickaxe}, {1d4-2 curse_eye}.",
+        "holds": "{1d4-3 Pickaxe}, {1d4-2 Curse Eye}.",
         "flavor_text": "A bent creature, shriveled and distended. Rattling sandpaper breathing and muttering. Eyes shriveled and wasted, or a dull black.",
         "meta_tags": ["npc", "cave", "salt"]
       },
       "crust_punk": {
         "name": "Crust Punk",
-        "hp": "{4d10} or 20",
+        "hp": "{1d4:1d8}",
         "scores": ["2 STR", "1 CON", "2 HYLIC"],
         "holds": "{2d100}f of SALT.",
         "meta_tags": ["npc", "cave", "salt"]
       },
       "nightlight_chicken": {
         "name": "Nightlight Chicken",
-        "hp": "{1d6} or 3",
+        "hp": "2:0",
         "scores": ["-1 STR", "1 AGI"],
         "skills": ["Peck and Scratch", "(3n1): 1d4-1 (S) + 1 (P)."],
         "meta_tags": ["npc", "cave", "beast"]
       },
       "starving_harvester": {
         "name": "Starving Harvester",
-        "hp": "{2d12} 13",
+        "hp": "1:5",
         "scores": ["1 STR", "1 AGI", "1 CON", "1 HYLIC"],
-        "holds": "{foul_club}, {hunting_knife} are both standard. Otherwise, really any sharp knife and any bludgeoning weapon, as likely improvised. Weaker Harvesters will tend to have worse equipment. {1d100}f of SALT.",
+        "holds": "{Crude Club}, {Dagger}. Really any sharp knife and any bludgeoning weapon. {1d100}f of SALT.",
         "meta_tags": ["npc", "cave", "harvester"]
       },
       "gluttonous_harvester": {
         "name": "Gluttonous Harvester",
-        "hp": "{3d12} 19",
+        "hp": "4:10",
         "scores": ["2 STR", "2 AGI", "2 CON", "2 HYLIC"],
-        "holds": "{crimson_cudgel}, {cruel_razor}, potentially {foul_club} or {hunting_knife}. {2d100}f of SALT.",
+        "holds": "{c}, {Black Shotel}, potentially {Club} or {Dagger}. {2d100}f of SALT.",
         "meta_tags": ["npc", "cave", "harvester"]
       },
       "feasting_harvester": {
         "name": "Feasting Harvester",
-        "hp": "{5d12} or 32",
+        "hp": "5:18",
         "scores": ["2 STR", "2 AGI", "3 CON", "4 HYLIC"],
-        "holds": "{weeping_greatclub}, {screeching_sickle}, are unique to powerful Harvesters. Harvesters might also use other fine bludgeoning weapons or sharp knives. {1d4-1 hunting_net}. {4d100}f of SALT.",
+        "holds": "{Weeping Club}, {Red Peeler}, are unique to powerful Harvesters. Harvesters might also use other fine bludgeoning weapons or sharp knives. {Hunting_Net}. {4d100}f of SALT.",
         "meta_tags": ["npc", "cave", "harvester"]
       },
       "gold_eater": {
         "name": "Gold Eater",
-        "hp": "{5d6} or 18",
-        "scores": ["{1d4-1} or 2 STR", "-2 AGI and DEX", "0 PERCEPTION"],
+        "hp": "1:1",
+        "scores": ["{1d4-1} or 2 STR", "-2 AGI and DEX", "0 PER"],
         "meta_tags": ["npc"]
       },
       "ibex_duke": {
         "name": "Ibex Duke",
-        "hp": "{1d12} or 6 ",
+        "hp": "2:6",
         "scores": ["1 STR", "1 AGI"],
         "meta_tags": ["npc", "cave", "ibex", "beast"]
       },
       "ibex_king": {
         "name": "Ibex King",
-        "hp": "{3d12} or 19",
+        "hp": "5:10",
         "scores": ["1 STR", "1 AGI"],
         "meta_tags": ["npc", "cave", "ibex", "beast"]
       },
       "illuminated_wretch": {
         "name": "Illuminated Wretch",
-        "hp": "{1d8} or 4",
+        "hp": "1:3",
         "scores": ["-1 all core stats", "1 PSYCHIC"],
         "meta_tags": ["npc", "cave", "dandelion"]
       },
       "lionhead": {
         "name": "Lionhead",
-        "hp": "{1d12} or 6",
+        "hp": "1:5",
         "scores": ["-1 all core stats", "3 PSYCHIC"],
         "meta_tags": ["npc", "cave", "dandelion"]
       },
       "ant_scout": {
         "name": "Ant Scout",
-        "hp": "{1d12} or 6",
+        "hp": "1:5",
         "scores": ["1 STEALTH"],
         "meta_tags": ["npc", "cave", "ant"]
       },
       "ant_soldier": {
         "name": "Ant Soldier",
-        "hp": "{3d10} or 16",
+        "hp": "{1d4}:{1d8} or 2:6",
         "scores": ["1 STR", "1 AGI", "1 DEX"],
         "meta_tags": ["npc", "cave", "ant"]
       },
       "ant_demon": {
         "name": "Ant Demon",
-        "hp": "{5d10} or 27",
+        "hp": "4:12",
         "scores": ["3 STR", "2 AGI"],
         "meta_tags": ["npc", "cave", "ant"]
       },
       "tchok": {
         "name": "Tchok",
-        "hp": "{3d8+1} or 13",
+        "hp": "2:7",
         "scores": ["1 CON"],
         "skills": [
           "Jibbering (1n1): All checks related to magic made within earshot of a\njibbering Tchok are made with -3. This effect stacks with multiple instances\nof jibbering."
         ],
-        "holds": "Carrying 1d4 daggers, 1d6 short spears. 1d6 clubs. 1d2 blowguns.\nMore rarely poisons that push back the furthest AP token by 1 slot on hit,\nconsumed on hit. Even more rarely, daggers that can deliver 3 doses of\npoison before reapplication is necessary.",
+        "holds": "Carrying {1d4 Dagger}, {1 One Handed Spear}. {1d4-3 Crude Clubs}. \nMore rarely poisons that cause targets to lose 1 AP. Rarely, daggers that can deliver 3 doses of\npoison before reapplication is necessary.",
         "flavor_text": "Slimy, stupid, and inane.",
         "meta_tags": ["npc", "tchok"],
-        "full_text": "Webbed fingers in unfocused disarray squat the terminations of slimy limbs. Freely swiveling eyes perch on dull sloped faces above rows of lost-and-found teeth. The Tchoks, named after the sound that composes half of their vocabulary, stalk the eternally over-saturated mud and swollen brush between dirty water and watery dirt. They cling under branches and flatten their baggy bodies against walls. They prepare to ambush any shape passing by. \n\nThey are as barely functional in water as they are on land. What their awkward and spasmodic movement excels at is propelling them through mud. Their lapses into atonal jibbering make coherent thought, and seemingly magic, very difficult. The superstitious believe them to harbor some deep well of cryptic knowledge that they presumably cultivate when not clubbing each other or being eaten by the giant eyeless catfish that also live in the mud.  \n\nOne of the only formal records of their behavior comes from S. Bevlins, a scholar intrigued by stories of their mystical abilities. After weeks spent in careful hidden observation of constant slapstick inanity, Bevlins observed an elaborately painted Tchok pick up a stick and stumble around dragging it through the mud, creating a complex symmetrical pattern before realizing he couldn't find his way out of it. The Tchok then angrily beat the lines in the mud with his stick, losing his grip and flinging the stick outside of the pattern. The Tchok howled and gurgled for several minutes before tiring himself out and falling asleep in the mud. The rising tide washed him and the pattern away. Belvins ended his observations."
+        "full_text": "Webbed fingers in unfocused disarray squat the terminations of slimy limbs. Freely swiveling eyes perch on dull sloped faces above rows of lost-and-found teeth. The Tchoks, named after the sound that composes half of their vocabulary, stalk the eternally over-saturated mud and swollen brush between dirty water and watery dirt. They cling under branches and flatten their baggy bodies against walls. They prepare to ambush any shape passing by. \n\nThey are as barely functional in water as they are on land. What their awkward and spasmodic movement excels at is propelling them through mud. Their lapses into atonal jibbering make coherent thought, and seemingly magic, very difficult. The superstitious believe them to harbor some deep well of cryptic knowledge that they presumably cultivate when not clubbing each other or being eaten by the giant eyeless catfish that also live in the mud.  \n\nOne of the only formal records of their behavior comes from S. Bhevlins, a scholar intrigued by stories of their mystical abilities. After weeks spent in careful hidden observation of constant slapstick inanity, Bevlins observed an elaborately painted Tchok pick up a stick and stumble around dragging it through the mud, creating a complex symmetrical pattern before realizing he couldn't find his way out of it. The Tchok then angrily beat the lines in the mud with his stick, losing his grip and flinging the stick outside of the pattern. The Tchok howled and gurgled for several minutes before tiring himself out and falling asleep in the mud. The rising tide washed him and the pattern away. Belvins ended his observations."
       }
     },
     "invocations": {
@@ -809,7 +817,7 @@
       "flinch": {
         "name": "Flinch",
         "target": "Self",
-        "effect": "Next time you would take 7 or more damage, gain magical armor (-7 (B), -7 (P), -7 (S)), only for that attack.",
+        "effect": "Next time you would take 4 or more compbined damage, gain magical armor (-4 (B), -4 (P), -4 (S)), only for that attack.",
         "meta_tags": ["invocations"]
       },
       "bolster": {
@@ -833,7 +841,7 @@
       "leap": {
         "name": "Leap",
         "target": "Self",
-        "effect": "Jump 30 feet, ignore 30 feet of fall damage",
+        "effect": "Jump 30 feet, ignore 30 feet of falling for the purposes of fall damage.",
         "meta_tags": ["invocation"]
       },
       "valiikons_blessing": {
@@ -846,13 +854,13 @@
       "invocation_of_harm": {
         "name": "Invocation of Harm",
         "target": "Weapon",
-        "effect": "Roll max damage for one die (up to 6 damage). Consumed on hit.",
+        "effect": "If your attack hits, count it as a half-crit unless its a full-crit.",
         "meta_tags": ["invocation"]
       },
       "folly_of_the_strong": {
         "name": "Folly of the Strong",
         "target": "Weapon",
-        "effect": "Activates on parrying a blow from a weapon. That weapon becomes much heavier. The weapon's STR requirement goes up by 2 for 1 hour.",
+        "effect": "Activates on parrying a blow from a weapon. The weapon becomes far heavier. The weapon's STR requirement doubles for an hour.",
         "meta_tags": ["invocation"]
       },
       "cunning": {
@@ -892,7 +900,7 @@
       "charge": {
         "name": "Charge",
         "requirements": ["1 STR"],
-        "effect": "Charge is (1n1). Move double your movement speed in a straight line, must move at least two hexes.  Once you reach an enemy, you may perform an attack. If your attack hits you can choose to add your STR to the damage. If you are entering a STR contest of some kind, add your STR to your roll again.",
+        "effect": "Pay 1 AP. Move double your movement speed in a straight line. Must move at least two spaces.  Once you reach an enemy, you may perform an attack. If your attack hits you can choose to add your STR to the damage. If you are entering a STR contest of some kind, add your STR to your roll.",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "str", "basic"]
       },
@@ -912,21 +920,21 @@
           "2 AGI",
           "a hilted weapon that uses AGI or DEX To-Hit"
         ],
-        "effect": "Parry can be used to attempt to [interrupt] a melee attack. Pay (1n2). Contest the attack roll with a Parry attempt, a check + AGI or DEX.  If you win, the attack does no damage and you gain 2 Temp AP  (you can only gain 2 Temp AP per turn this way). If you fail, you are [vulnerable] until your next action.",
+        "effect": "Parry can be used to attempt to [interrupt] a melee attack. Pay 2 AP. Contest the attack roll with a Parry attempt, a check + AGI or DEX.  If you win, the attack does no damage and you gain 2 Temp AP  (you can only gain 2 Temp AP per turn this way). If you fail, you are [vulnerable] until your next action. You can pay AP out of the table deck to do this.",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "agi", "basic"]
       },
       "evasive": {
         "name": "Evasive",
         "requirements": ["Requires: 2 AGI", "a [finesse] weapon or shield."],
-        "effect": "Add 2 to your to-hit difficulty for every [finesse] weapon or [finesse] shield you are wielding, up to 4.",
+        "effect": "Add +2 to your to-hit difficulty for every [finesse] weapon or [finesse] shield you are wielding, up to +4.",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "agi", "basic"]
       },
       "feint": {
         "name": "Feint",
         "requirements": ["1 AGI"],
-        "effect": "(1n2). Roll a check +AGI against your enemies passive AGI or PERCEPTION, whichever is higher. If you win, you can perform 1 action without triggering [interrupt]s from that enemy. The enemy is considered [vulnerable] until your (or your allies') next action.",
+        "effect": "Pay 1 AP. Roll a check +AGI against your enemies passive AGI or PER, whichever is higher. If you win, you can perform 1 action without triggering [interrupt]s from that enemy. The enemy is considered [vulnerable] until your (or your allies') next action.",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "agi", "basic"]
       },
@@ -935,25 +943,25 @@
         "requirements": ["1 CON"],
         "effect": "Your recovery dice are d10s rather than d6s.",
         "cost": ["1 SP"],
-        "meta_tags": ["skill", "con", "basic"]
+        "meta_tags": ["skill", "con", "basic", "deprecated"]
       },
       "hearty": {
         "name": "Hearty",
         "requirements": ["2 CON"],
-        "effect": "Get +6 Health. You can take this skill twice.",
+        "effect": "Get +1:3 Health. You can take this skill twice.",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "con", "basic"]
       },
       "focus": {
         "name": "Focus",
         "requirements": ["1 PERCEPTION"],
-        "effect": "Costs 1 AP. You can use Focus right before any attack, including an interrupt. Add your PERCEPTION to hit.",
+        "effect": "Costs 1 AP. You can use Focus right before any attack, including an interrupt. Add PER your check to-hit, If you hit you half-crit.",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "perception", "basic"]
       },
       "finisher": {
         "name": "Finisher",
-        "effect": "Use this before performing an attack. Lose 1 AP. If double the damage would kill the opponent, treat the attack as dealing double damage (max +10), if you kill with the move regain 1 AP.",
+        "effect": "Use this before performing an attack. Pay 1 AP. If double the damage would kill the opponent, treat the attack as dealing double damage.",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "basic"]
       },
@@ -968,67 +976,67 @@
         "requirements": ["LIGHTNING 1"],
         "effect": "Spend 1 recovery die (do not heal). Immediately lose 1 max AP. At the beginning of every turn, (after AP is regained) gain 1 charge for every AP you have. This ability lasts a number of hours equal to your LIGHTNING score. Once the ability ends, regain 1 max AP.",
         "cost": ["1 SP"],
-        "meta_tags": ["skill", "lightning"]
+        "meta_tags": ["skill", "lightning", "deprecated"]
       },
       "skillful_conduit": {
         "name": "Skillful Conduit",
         "requirements": ["LIGHTNING 1"],
         "effect": "You're able to transfer up to your LIGHTNING score in charges with every hit, including when using [ranged] attacks.",
         "cost": ["1 SP"],
-        "meta_tags": ["skill", "lightning"]
+        "meta_tags": ["skill", "lightning", "deprecated"]
       },
       "crashing_step": {
         "name": "Crashing Step",
         "requirements": ["LIGHTNING 1"],
         "effect": "Spend 1 charge and (1n1). Move 6 spaces, you are able to turn at any angle, but only once. You must be able to move through the space normally. You move from space to space near instantaneously, and cannot be attacked or interrupted while moving. When you arrive at your target space, you can choose to transfer 1 charge to an enemy within 2 spaces.",
         "cost": ["1 SP"],
-        "meta_tags": ["skill", "lightning"]
+        "meta_tags": ["skill", "lightning", "deprecated"]
       },
       "watched_by_dark_clouds": {
         "name": "Watched by Dark Clouds",
         "requirements": ["LIGHTNING 1"],
         "effect": "You must be using Storm Gate to use this ability. Spend 1 charge. You're able to keep 1 entity (including yourself) from losing charge at the end of their turn (as long as they are within your range). If you cast this on another creature, you know the direction they are in and a rough estimate of distance. If you cast it on yourself, you know the direction and the rough distance to a number of creatures equal to your LIGHTNING score. This ability ignores stealth or other concealment. This means that, for example, you could not be caught unaware in melee. This effect ends when Storm Gate does.",
         "cost": ["1 SP"],
-        "meta_tags": ["skill", "lightning"]
+        "meta_tags": ["skill", "lightning", "deprecated"]
       },
       "silent_light": {
         "name": "Silent Light",
         "requirements": ["LIGHTNING 1"],
         "effect": "Spend 1 extra charge when you perform a LIGHTNING magic. You can choose either to prevent light or sound from being produced.",
         "cost": ["1 SP"],
-        "meta_tags": ["skill", "lightning"]
+        "meta_tags": ["skill", "lightning", "deprecated"]
       },
       "fingers_of_light": {
         "name": "Fingers of Light",
         "requirements": ["LIGHTNING 1"],
         "effect": "An attack. The target must have at least 1 charge. Range: 3 spaces. Costs (1n3) and all of your charge. \n+3*LIGHTNING to hit, roll a d6 for every charge you have (P).",
         "cost": ["1 SP"],
-        "meta_tags": ["skill", "lightning"]
+        "meta_tags": ["skill", "lightning", "deprecated"]
       },
       "spark": {
         "name": "Spark",
         "requirements": ["LIGHTNING 1"],
         "effect": "An attack. Range: 3 spaces. (2n1), 1d4 (P) damage. Transfer 1 charge between yourself and whoever is hit.\nCall Lightning: a much bigger move, sort of a signature move for the class, lightning hits whatever has the most charge, doing tons of damage",
         "cost": ["1 SP"],
-        "meta_tags": ["skill", "lightning"]
+        "meta_tags": ["skill", "lightning", "deprecated"]
       },
       "improvised_medicine": {
         "name": "Improvised Medicine",
         "requirements": ["2 MED", "1 DEX"],
         "effect": "You are able to do your work under quite poor conditions. You can performing surgery with a dagger, tear the stitching out of a backpack and use it to close a wound, and quickly create makeshift bandages from a torn cloak.\nLower your effective MED by 1 to replace 1 point of medical equipment up to 3 points of medical equipment. Explain where you're getting this material and how getting that material changes the source of the material (i.e. Your patients cloak now has a strip torn out, the haft of an axe was broken in half to be used as a splint).",
-        "meta_tags": ["skill", "med", "basic"]
+        "meta_tags": ["skill", "med", "basic", "deprecated"]
       },
       "severe_case": {
         "name": "Severe Case",
         "requirements": ["2 MED", "1 DEX"],
         "effect": "If the character has no more recovery dice to spend but a MED skill requires spending recovery dice you can attempt to perform the MED skill anyway. Spend the resources and time required to perform the skill as usual but then make a MED check against a DC of 9. If you pass, you succeed. Otherwise, nothing happens.",
-        "meta_tags": ["skill", "med", "basic"]
+        "meta_tags": ["skill", "med", "basic", "deprecated"]
       },
       "emergency_care": {
         "name": "Emergency Care",
         "requirements": ["2 MED", "1 DEX"],
         "effect": "This skill is to be used on someone who is downed and rolling death checks. Take (2n1), add your MED score to their death check. Consume 1 point of medical equipment. You can do this multiple times in a turn.",
-        "meta_tags": ["skill", "med", "basic"]
+        "meta_tags": ["skill", "med", "basic", "deprecated"]
       },
       "tend_to_the_wounded": {
         "name": "Tend to the Wounded",
@@ -1040,13 +1048,13 @@
         "name": "Triage",
         "requirements": ["1 MED"],
         "effect": "Consume 1 point of medical equipment, allow a conscious character to immediately roll a recovery die. Takes 5 minutes.",
-        "meta_tags": ["skill", "med", "basic"]
+        "meta_tags": ["skill", "med", "basic", "deprecated"]
       },
       "dissection": {
         "name": "Dissection",
         "requirements": ["1 MED"],
         "effect": "Dissect a human or humanoid specimen that has recently died. Takes 2 hours. Roll a MED check against a DC of 9 - the number of additional hours taken dissecting the specimen. If you succeed, gain 1 SP that must be spent on your MED score or MED skills.\nThis is considered desecrating a corpse my most groups. Having dissections attributed to you will tend to lower your reputation with a group.",
-        "meta_tags": ["skill", "med", "basic"]
+        "meta_tags": ["skill", "med", "basic", "deprecated"]
       },
       "edge_alignment": {
         "name": "Edge Alignment",
@@ -1061,7 +1069,7 @@
           "A melee weapon with [reach] and [hafted] and an attack with [P]",
           "STR 1."
         ],
-        "effect": "Spend 1 AP. You brace the weapon. \nIf an enemy moves into a space threatened by you, you get to use an attack immediately for 1 AP less than you would have to spend otherwise. \nIf your attack does damage, Roll a STR contest. \nIf you win, their action ends and they stop moving, stopping outside of your range. \nYou get 1 Temp AP. You can spend it to immediately get back into \u201cDefensive Perimeter\u201d.",
+        "effect": "Spend 1 AP. You brace the weapon. \nIf an enemy moves into a space threatened by you, you get to use an attack immediately for 1 AP less than you would have to spend otherwise. \nIf your attack hits and the attack check is higher than the enemy's passive STR, they stop moving oustide of your range andy ou get 1 Temp AP. You can spend it to immediately get back into \"Defensive Perimeter\".",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "melee", "basic"]
       },
@@ -1070,34 +1078,34 @@
         "requirements": ["AGI 1", "[stealth] weapon"],
         "effect": "Sneak attack dice are exploding (if you get the max value on a die, roll another, if it happens again, roll another, etc.). If a die is set to max, roll another die.",
         "cost": ["1 SP"],
-        "meta_tags": ["skill", "sneak_attack", "basic"]
+        "meta_tags": ["skill", "sneak_attack", "basic", "deprecated"]
       },
       "sneak_attack_2_precision_strike": {
         "name": "Sneak Attack 2: Precision Strike",
         "requirements": ["1 STEALTH", "[stealth] or [finesse] weapon"],
         "effect": "Before you attack, you can choose to increase the cost of your attack by 1 AP to roll an extra damage die.\n\nMax 1 damage die when you attack a [vulnerable] opponent (unaware opponents are [vulnerable]).",
         "cost": ["1 SP"],
-        "meta_tags": ["skill", "sneak_attack", "basic"]
+        "meta_tags": ["skill", "sneak_attack", "basic", "deprecated"]
       },
       "sneak_attack_2_twist_the_knife": {
         "name": "Sneak Attack 2: Twist the Knife",
         "requirements": ["1 STEALTH", "[stealth] weapon"],
         "effect": "After performing an attack you can spend [1n2] to roll another damage die and add it to the attack before damage multipliers are calculated. If this attack kills, regain 1 AP.",
         "cost": ["1 SP"],
-        "meta_tags": ["skill", "sneak_attack", "basic"]
+        "meta_tags": ["skill", "sneak_attack", "basic", "deprecated"]
       },
       "sneak_attack_3_assassinate": {
         "name": "Sneak Attack 3: Assassinate",
         "requirements": ["2 STEALTH", "2 DEX", "[stealth] weapon"],
         "effect": "Assassinate can only be used on an opponent who is unaware of you.\n\nIf you roll 3 dice at max damage, double your damage. If you roll 4, triple it. Ignore 8 armor on when using a Sneak Attack.",
         "cost": ["1 SP"],
-        "meta_tags": ["skill", "sneak_attack", "basic"]
+        "meta_tags": ["skill", "sneak_attack", "basic", "deprecated"]
       }
     },
     "dogmen": {
       "dogman": {
         "name": "Dogman",
-        "hp": "{2d6}",
+        "hp": "2:6",
         "scores": ["1 STR", "1 AGI", "7 Defense"],
         "holds": "{Dogman Weapons}",
         "full_text": "The dogmen of the hills travel in packs. They care for nothing and no one besides their own kin. They are immune to ideas like morals and nations. They have no interest in news from far off places. They are deaf to the words of people they will never meet. Dogmen cannot consider hypotheticals. They do not worry, they do not yearn, they do not lie. If they meet you on the road they will rob you, kill you, eat you, boil your bones for broth, then chew on what is left.\nDogmen are gangly hunched little weirdos with scrubby yellow fur, big beady black eyes, sagging skin, and floppy ears that are always twitching, tucking, and pointing, always out of sync with one another.\nWhen not attacking travelers they craft surprisingly nice skin-and-bone drums of all shapes and sizes with which they accompany their hungry howling. They are remarkably good leatherworkers.",
@@ -1118,7 +1126,7 @@
         "requirements": ["1 STR"],
         "speed": "1->2",
         "to_hit": "+STR",
-        "attacks": ["1d6 (B) + 2 [Severing]", "1d8 [B]"],
+        "attacks": ["2 (B) + 1 (Severing)", "3 (B)"],
         "flavor_text": "A rudimentary axe crafted from an enormous white bovine jawbone. The coronoid of the cone has been ground down to a wedge approximating an axe blade. The protruding back of the bone can be used as a hammer. The leather wrapping rests above the chin and below the teeth.",
         "encumbrance": "1",
         "meta_tags": ["weapon", "dogman"]
@@ -1129,7 +1137,7 @@
         "requirements": ["1 STR"],
         "speed": "1->2",
         "to_hit": "+STR",
-        "attacks": ["1d4 (B) + 2 [Picking]"],
+        "attacks": ["2 (B) + 1 [Picking]"],
         "flavor_text": "An enormous bovine lower jawbone chopped down to function as something between a sword and a club. The \"blade\" is composed of the jagged teeth of the jawbone. The handle is wrapped in leather.",
         "encumbrance": "1/3",
         "meta_tags": ["weapon", "dogman"]
@@ -1138,23 +1146,23 @@
     "isopods": {
       "isopod_peacekeeper": {
         "name": "Isopod Peacekeeper",
-        "hp": "{3d10}",
+        "hp": "4:10",
         "scores": ["1 STR", "2 CON"],
-        "holds": "2 {shell_buckler}, 1 {great_claw}, {sap}.",
-        "meta_tags": ["npc", "cave", "isopod"]
+        "holds": "{2 Shell Buckler}, {1 Great Claw}, {Sap}.",
+        "meta_tags": ["npc", "cave", "isopod", "deprecated"]
       },
       "isopod_trophy_hunter": {
         "name": "Isopod Trophy Hunter",
-        "hp": "{3d12}",
+        "hp": "4:12",
         "scores": ["1 STR", "2 CON", "1 STEALTH"],
-        "holds": "{hunting_knife}, {1d4 hunting_net}, {1d4 great_claw}, {1d4 shell_buckler}.",
-        "meta_tags": ["npc", "cave", "isopod"]
+        "holds": "{Dagger}, {1d4 hunting_net}, {1d4 great_claw}, {1d4 shell_buckler}.",
+        "meta_tags": ["npc", "cave", "isopod", "deprecated"]
       },
       "isopod_ambassador": {
         "name": "Isopod Ambassador",
-        "hp": "{2d12}",
+        "hp": "2:8",
         "scores": ["1 DEX", "2 PERSUASION", "2 STEALTH"],
-        "meta_tags": ["npc", "cave", "isopod"]
+        "meta_tags": ["npc", "cave", "isopod", "deprecated"]
       },
       "isopod_name": {
         "name": "Isopod Name",
@@ -1167,7 +1175,8 @@
             "5": "Gentleman",
             "6": "Setsket"
           }
-        }
+        },
+        "meta_tags": ["deprecated"]
       },
       "isopodan_fork": {
         "name": "Isopodan Fork",
@@ -1175,7 +1184,7 @@
         "requirements": ["2 DEX", "1 AGI"],
         "speed": "1->2",
         "to_hit": "+AGI",
-        "attacks": ["1d8 [P]", "1d4 (S) + 2 [Pulling]"],
+        "attacks": ["d8 [P]", "1d4 (S) + 2 [Pulling]"],
         "flavor_text": "The lithe organic polearm has a long tapering point and a scythe-like arm lined with jagged teeth. It can be used to trip, ensnare, or keep opponents at bay.",
         "encumbrance": "2",
         "meta_tags": ["weapon", "cave", "isopod"]
@@ -1184,47 +1193,47 @@
     "radiats": {
       "radiat_thrall": {
         "name": "Radiat Thrall",
-        "hp": "{2d12} or 13",
+        "hp": "1:3",
         "scores": ["1 STR", "1 CON", "1 PSYCHIC"],
-        "skills": ["- Screech (3n1): 1d6 + PSYCHIC (P) reach: 2 spaces."],
+        "skills": ["- Screech 3 AP: 1d6 + PSYCHIC (P) reach: 2 spaces."],
         "meta_tags": ["npc", "cave", "radiat"]
       },
       "radiat_priest": {
         "name": "Radiat Priest",
-        "hp": "{4d10} or 18",
+        "hp": "2:9",
         "scores": ["1 STR", "3 PSYCHIC"],
-        "holds": "{radiat_dagger}. Ceremonial robes.",
+        "holds": "{Dagger}. Ceremonial robes.",
         "meta_tags": ["npc", "cave", "radiat"]
       },
       "radiat_crusader": {
         "name": "Radiat Crusader",
-        "hp": "{5d12} or 32",
+        "hp": "5:16",
         "scores": ["3 STR", "2 AGI", "2 CON", "3 PSYCHIC"],
-        "holds": "{radiat_greatsword} sometimes. Any large sword. Sometimes a shield. The heaviest armor they would reasonably have in the situation. {radiat_crusader_armor} potentially.",
-        "meta_tags": ["npc", "cave", "radiat"]
+        "holds": "{Radiat Greatsword} sometimes. Any large sword. Sometimes a shield. The heaviest armor they would reasonably have in the situation. {Radiat Crusade Armor} potentially.",
+        "meta_tags": ["npc", "cave", "radiat", "deprecated"]
       }
     },
     "hylic_skills": {
       "chitinous_strata": {
         "name": "Chitinous Strata",
         "requirements": ["1 HYLIC"],
-        "effect": "(2n1) to start. Continuously burn 1 SALT for 1 hour. Generate a layer of salt armor with (-1d6 B, -1d8 P, -1d8 S). Lower your to-hit difficulty by 1. While using Salt Armor, you're able to use an unarmed attack of +AGI to hit, 1d4 (B) [range: close]. Disadvantage on anything requiring fine motor skills. You cannot wear other armor while using this ability. You can use this ability multiple times.\n\nFlare Effect: Must currently have Salt Armor. Burn 1 Salt. Triple armor bonus from this source for 1 turn.\n",
+        "effect": "Costs 2 AP. Continuously burn 1 SALT for 1 hour. Generate a layer of salt armor with (-1d4 B, -1d6 P, -1d6 S). Lower your to-hit difficulty by 1. While using Salt Armor, you're able to use an unarmed attack of +AGI to hit, 1d4 (B) [range: close]. Disadvantage on anything requiring fine motor skills. You cannot wear other armor while using this ability. You can use this ability multiple times.\n\nFlare Effect: Must currently have Salt Armor. Burn 1 Salt. Triple armor bonus from this source for 1 turn.",
         "cost": ["1 SP"],
-        "meta_tags": ["skill", "hylic", "salt", "quarter_size"]
+        "meta_tags": ["skill", "hylic", "salt", "quarter_size", "deprecated"]
       },
       "violent_accretion": {
         "name": "Violent Accretion",
         "requirements": ["1 HYLIC"],
-        "effect": "(1n1) to start. Continuously burn 1 SALT for 1 hour. Salt rapidly accrues on an arm, covering it in thick plates and amplifying its strength. While using Violent Accretion you have minimal use of the hand which is encased in thick plates of armor with few joints and little to no finger separation. Take disadvantage on anything requiring fine motor skills, and take disadvantage when using other weapons. When using Violent Accretion the arm functions as the following weapon:\n[one-handed] [range: close]\n\nSpeed: 1->2 To Hit: 2*STR  \n- 1d8+STR (B)\nIf flared for 1 SALT, lasting for 1 attack:\n[one-handed]\nSpeed: 2 To Hit: 2*STR\n- 1d8 (B) 2d8 (P) +STR",
+        "effect": "Costs 1 AP. Continuously burn 1 SALT for 1 hour. Salt rapidly accrues on an arm, covering it in thick plates of armor and amplifying its strength. Take disadvantage on anything requiring fine motor skills, and take disadvantage when using other weapons. When using Violent Accretion the arm functions as the following weapon:\n[one-handed] [range: close]\n\nSpeed: 1->2 To Hit: 2*STR  \n- 1d8+STR (B)\nIf flared for 1 SALT, lasting for 1 attack:\n[one-handed]\nSpeed: 2 To Hit: 2*STR\n- 1d8 (B) 2d8 (P) +STR",
         "cost": ["1 SP"],
-        "meta_tags": ["skill", "hylic", "salt", "quarter_size"]
+        "meta_tags": ["skill", "hylic", "salt", "quarter_size", "deprecated"]
       },
       "salubrity": {
         "name": "Salubrity",
         "requirements": ["1 HYLIC"],
         "effect": "This ability allows you to augment scores and abilities by burning SALT. This skill will probably have to be streamlined, rewritten.\n(1n1) to start all of these moves.\nSTR: Increase STR by 2 for 1 hour by continuously burning SALT.\nCON: Increase CON by 2 for 1 hour by continuously burning SALT.\nBoth of these can be flared to increase by 1 more for 1 minute.  \nIf you have at least 2 HYLIC: \nAGI: Increase AGI and move speed by 1 and move for 1 hour by continuously burning SALT. Can be flared for 1 SALT to leap 6 spaces.\nPERCEPTION: Increase perception by 1 for 6 hours by continuously burning SALT, can replace 4 hours of sleep. Can be flared by burning 1 SALT to add +3 to checks made with one sense for 5 minutes.",
         "cost": ["1 SP"],
-        "meta_tags": ["skill", "hylic", "salt", "quarter_size"]
+        "meta_tags": ["skill", "hylic", "salt", "quarter_size", "deprecated"]
       }
     },
     "items": {
@@ -1252,7 +1261,7 @@
       },
       "stolen_ichor": {
         "name": "Stolen Ichor",
-        "effect": "Use costs 2 AP. Get 3 [heal].",
+        "effect": "Use costs 2 AP. Gain 3 [heal].",
         "meta_tags": ["item", "medicine", "gear"]
       },
       "variigoshlovr_root": {
@@ -1262,7 +1271,7 @@
       },
       "glowing_root_bundle": {
         "name": "Glowing Root Bundle",
-        "effect": "Use costs 1 AP. Instantly gain 4 HP.",
+        "effect": "Use costs 1 AP. Instantly gain 1:3 HP.",
         "meta_tags": ["item", "medicine", "gear"]
       },
       "vial_of_verdant_sap": {
@@ -1278,7 +1287,7 @@
       },
       "battle_egg_carton_and_bandolier": {
         "name": "Battle Egg Carton and Bandolier",
-        "effect": "Carton holds 24 Putrefying Eggs. Carton will break if it or the person wearing it takes 6 damage in one turn.",
+        "effect": "Carton holds 24 Putrefying Eggs. Carton and eggs will break if it or the person wearing it takes 5 or more damage in one turn.",
         "flavor_text": "A wooden case made from solid hardwood with round impressions chipped into it. The inside is padded with soft moss.",
         "meta_tags": ["item"]
       },
@@ -1296,12 +1305,12 @@
       "tall_salted_peter": {
         "name": "Tall Salted Peter",
         "effect": "Gain 3 SALT.",
-        "flavor_text": "A long clay vial filled with salt suspended in a dark brown oil and continuously swirling and glittering .",
+        "flavor_text": "A long clay vial filled with salt suspended in a dark brown oil and continuously swirling and glittering.",
         "meta_tags": ["item", "basic"]
       },
       "curse_eye": {
         "name": "Curse Eye",
-        "effect": "When crushed, all characters within 3 spaces gain 1d4 CURSE.",
+        "effect": "When crushed, all characters within 3 spaces gain 1d4 [curse].",
         "flavor_text": "A brittle dull black sphere with a layer of veins on one side.",
         "meta_tags": ["item"]
       }

@@ -38,9 +38,9 @@ website:
           - book/actlite/talaje.qmd
       - section: "Stuff"
         contents:
-          - book/stuff/weapons.qmd
-          - book/stuff/items.qmd
-          - book/stuff/skills.qmd
+          - book/stuff/basic.qmd
+          - book/stuff/spoilers.qmd
+
       # - section: "Menagerie"
       #   contents:
 
