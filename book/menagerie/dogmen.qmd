@@ -1,0 +1,19 @@
+---
+title: "Dogmen"
+execute:
+    echo: false
+    output: asis
+---
+
+The dogmen of the hills travel in packs. They care for nothing and no one besides their own kin. They are immune to ideas like morals and nations. They have no interest in news from far off places. They are deaf to the words of people they will never meet. Dogmen cannot consider hypotheticals. They do not worry, they do not yearn, they do not lie. If they meet you on the road they will rob you, kill you, eat you, boil your bones for broth, then chew on what is left.  
+
+Dogmen are gangly hunched little weirdos with scrubby yellow fur, big beady black eyes, sagging skin, and floppy ears that are always twitching, tucking, and pointing, always out of sync with one another.When not attacking travelers they craft surprisingly nice skin-and-bone drums of all shapes and sizes with which they accompany their hungry howling. They are remarkably good leatherworkers.
+
+```{python}
+import os
+from tinydb import Query
+from citutils import docs as dc
+
+print(dc.create_query_section(query = Query().meta_tags.any("dogman")))
+```
+

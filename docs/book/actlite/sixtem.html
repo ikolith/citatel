@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -60,7 +60,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -71,11 +72,16 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Sixtem</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../book/actlite/sixtem.html">Rules</a></li><li class="breadcrumb-item"><a href="../../book/actlite/sixtem.html">Sixtem</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -83,93 +89,146 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">citatel</a> 
         <div class="sidebar-tools-main">
-  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">About</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">About</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/about/mutiny.html" class="sidebar-item-text sidebar-link">Pardon the Dust</a>
+  <a href="../../book/about/mutiny.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pardon the Dust</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/about/about.html" class="sidebar-item-text sidebar-link">About</a>
+  <a href="../../book/about/about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Rules</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Rules</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/actlite/sixtem.html" class="sidebar-item-text sidebar-link active">Sixtem</a>
+  <a href="../../book/actlite/sixtem.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Sixtem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/actlite/tactile.html" class="sidebar-item-text sidebar-link">Tactile</a>
+  <a href="../../book/actlite/tactile.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tactile</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/actlite/social.html" class="sidebar-item-text sidebar-link">Social</a>
+  <a href="../../book/actlite/social.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Social</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/actlite/mechanics-misc.html" class="sidebar-item-text sidebar-link">Misc. Mechanics Reference</a>
+  <a href="../../book/actlite/mechanics-misc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Misc. Mechanics Reference</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/actlite/talaje.html" class="sidebar-item-text sidebar-link">Talaje</a>
+  <a href="../../book/actlite/talaje.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Talaje</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Stuff</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">Skills, Weapons, Items</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/stuff/basic.html" class="sidebar-item-text sidebar-link">Basic</a>
+  <a href="../../book/stuff/basic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/stuff/spoilers.html" class="sidebar-item-text sidebar-link">Spoilers</a>
+  <a href="../../book/stuff/spoilers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Spoilers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text">Menagerie</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../book/menagerie/bureaucrats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bureaucrats</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../book/menagerie/crust_punks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Crust Punks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../book/menagerie/dogmen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dogmen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../book/menagerie/harvesters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Harvesters</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../book/menagerie/isopods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Isopods</span></a>
   </div>
 </li>
       </ul>
@@ -177,25 +236,23 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">???</a></li>
-  <li><a href="#sixtem" id="toc-sixtem" class="nav-link" data-scroll-target="#sixtem">Sixtem</a>
-  <ul class="collapse">
-  <li><a href="#characters" id="toc-characters" class="nav-link" data-scroll-target="#characters">Characters</a>
+  <li><a href="#characters" id="toc-characters" class="nav-link active" data-scroll-target="#characters">Characters</a>
   <ul class="collapse">
   <li><a href="#health" id="toc-health" class="nav-link" data-scroll-target="#health">Health</a></li>
-  <li><a href="#con" id="toc-con" class="nav-link" data-scroll-target="#con">CON</a></li>
   <li><a href="#defense-and-movement-speed" id="toc-defense-and-movement-speed" class="nav-link" data-scroll-target="#defense-and-movement-speed">Defense and Movement Speed</a></li>
-  <li><a href="#what-are-scores-and-attributes-used-for" id="toc-what-are-scores-and-attributes-used-for" class="nav-link" data-scroll-target="#what-are-scores-and-attributes-used-for">What are scores and attributes used for?</a></li>
-  <li><a href="#the-passive-score" id="toc-the-passive-score" class="nav-link" data-scroll-target="#the-passive-score">The Passive Score</a></li>
-  <li><a href="#i-dont-have-that-score-i-was-asked-for" id="toc-i-dont-have-that-score-i-was-asked-for" class="nav-link" data-scroll-target="#i-dont-have-that-score-i-was-asked-for">I don’t have that score I was asked for</a></li>
   </ul></li>
-  <li><a href="#doin" id="toc-doin" class="nav-link" data-scroll-target="#doin">Doin</a>
+  <li><a href="#scores" id="toc-scores" class="nav-link" data-scroll-target="#scores">Scores</a>
+  <ul class="collapse">
+  <li><a href="#missing-scores-special-scores" id="toc-missing-scores-special-scores" class="nav-link" data-scroll-target="#missing-scores-special-scores">Missing Scores, [special] scores</a></li>
+  </ul></li>
+  <li><a href="#doing-things" id="toc-doing-things" class="nav-link" data-scroll-target="#doing-things">Doing things</a>
   <ul class="collapse">
   <li><a href="#check-vs-contest" id="toc-check-vs-contest" class="nav-link" data-scroll-target="#check-vs-contest">“Check” vs “Contest”</a></li>
   </ul></li>
@@ -210,16 +267,15 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#beginning-of-the-round" id="toc-beginning-of-the-round" class="nav-link" data-scroll-target="#beginning-of-the-round">“Beginning of the Round”</a></li>
   <li><a href="#skills" id="toc-skills" class="nav-link" data-scroll-target="#skills">3. Skills</a></li>
   </ul></li>
-  </ul></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="sixtem.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Sixtem</h1>
+<h1 class="title">Sixtem</h1>
 </div>
 
 
@@ -234,12 +290,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">???</h2>
-<p>These are the actlite rules. They are very condensed, there are no examples, there is little clarification. This doc will be continuously edited and updated as the rules for actlite are revised. I am doing it this way because having a longer more complete rules document slows the rate at which I can make dramatic and ill-advised changes. Think of these as a quickstart ruleset.</p>
-</section>
-<section id="sixtem" class="level1">
-<h1>Sixtem</h1>
+<p>These are the actlite rules. They are very condensed, there are no examples, there is little clarification. This doc will be continuously edited and updated as the rules for actlite are revised. I am doing it this way because having a longer more complete rules document slows the rate at which I can make dramatic and ill-advised changes. Think of this as a quickstart ruleset.</p>
 <section id="characters" class="level2">
 <h2 class="anchored" data-anchor-id="characters">Characters</h2>
 <p>Character sheet for a “baseline adventurer”:</p>
@@ -282,40 +333,28 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <section id="health" class="level3">
 <h3 class="anchored" data-anchor-id="health">Health</h3>
-<p>Health is X:Y where X is standard health and Y is critical or “crit” health. When a character runs out of standard health, subsequent damage is to crit health. When a character runs out of crit health, that is bad.</p>
-<p>Where one could expect children and the elderly to be closer to 1:~3, some other people <sub>2:</sub>6. <sub>5:</sub>12 makes one extremely tough.</p>
-</section>
-<section id="con" class="level3">
-<h3 class="anchored" data-anchor-id="con">CON</h3>
+<p>Health is X:Y where X is standard health and Y is critical or “crit” health. When a character runs out of standard health, subsequent damage is to crit health. When a character runs out of crit health they are downed and will probably die. One could expect children and the elderly to have health closer to 1:~3. <sub>5:</sub>12 would make you extremely tough.</p>
 <p>Every point of CON gives you 1 extra crit health and 2 extra standard health.</p>
 </section>
 <section id="defense-and-movement-speed" class="level3">
 <h3 class="anchored" data-anchor-id="defense-and-movement-speed">Defense and Movement Speed</h3>
 <p>Moving costs 1 AP and you move a number of spaces equal to your MOVEMENT. When an enemy rolls to hit you, they roll a check against your DEFENSE.</p>
 </section>
-<section id="what-are-scores-and-attributes-used-for" class="level3">
-<h3 class="anchored" data-anchor-id="what-are-scores-and-attributes-used-for">What are scores and attributes used for?</h3>
-<p>Scores are added to all sorts of rolls, checks, modifiers, the passive score, etc.</p>
 </section>
-<section id="the-passive-score" class="level3">
-<h3 class="anchored" data-anchor-id="the-passive-score">The Passive Score</h3>
-<p>Your passive score in something is 6 + SCORE.</p>
-</section>
-<section id="i-dont-have-that-score-i-was-asked-for" class="level3">
-<h3 class="anchored" data-anchor-id="i-dont-have-that-score-i-was-asked-for">I don’t have that score I was asked for</h3>
-<p>If you’re asked about a score you don’t have, your score is 0, unless that score is a [special] score.</p>
-<section id="special-scores" class="level4">
-<h4 class="anchored" data-anchor-id="special-scores">[special] Scores</h4>
-<p>If you don’t have a [special] score you fail any check, contest, roll, whatever related to that score. The [sp] tag is just a shorter version of the [special] tag.</p>
-</section>
+<section id="scores" class="level2">
+<h2 class="anchored" data-anchor-id="scores">Scores</h2>
+<p>Scores are added to all sorts of rolls, checks, modifiers, the passive score, etc. Your “passive” score for a given score is 6 + SCORE. There is not a strict limit to how many different attributes or scores a character or setting can have.</p>
+<section id="missing-scores-special-scores" class="level3">
+<h3 class="anchored" data-anchor-id="missing-scores-special-scores">Missing Scores, [special] scores</h3>
+<p>If you’re asked about a score you don’t have, your score is 0, unless that score is a [special] score. If you don’t have a [special] score you fail any check, contest, roll, whatever related to that score. The [sp] tag is just a shorter version of the [special] tag. MEDICINE is not a [special] score, but PYROMANCY is.</p>
 <section id="standard-scores" class="level4">
 <h4 class="anchored" data-anchor-id="standard-scores">“Standard” Scores</h4>
-<p>Just a convention for non-[sp] scores that are important for the current setting. Make a decision about these scores when creating something for this setting. This is a convention, not a strict rule.</p>
+<p>“Standard Scores” are a convention for non-[sp] scores that are important for the current setting. This is just a convention, not a strict rule. Some settings might emphasize a TECHNOLOGY score, others might not use that score at all.</p>
 </section>
 </section>
 </section>
-<section id="doin" class="level2">
-<h2 class="anchored" data-anchor-id="doin">Doin</h2>
+<section id="doing-things" class="level2">
+<h2 class="anchored" data-anchor-id="doing-things">Doing things</h2>
 <p>When you do something roll 2d6s and add the relevant score. Tell your result to the DM to find out how your attempt went.</p>
 <section id="check-vs-contest" class="level3">
 <h3 class="anchored" data-anchor-id="check-vs-contest">“Check” vs “Contest”</h3>
@@ -387,9 +426,7 @@ Why have all of these special terms and conditions to check? Differing probabili
 </section>
 <section id="initiative-and-ap" class="level2">
 <h2 class="anchored" data-anchor-id="initiative-and-ap">Initiative and AP</h2>
-<p>Cards. Many cards.</p>
-<p>You have 3 AP, you use AP to do things. Most things cost 1 AP, you can do some limited amount of negligible things like talking for free.</p>
-<p>Terminology will change to be more clear. Categories will change.</p>
+<p>You have 3 AP cards, you use AP to do things. Most things cost 1 AP, you can a reasonable amount of simple things like talking for free.</p>
 <p><strong>Table Deck</strong>: The deck of cards that the DM (or whoever) draws from during initiative. The deck that the whole table uses.</p>
 <p><strong>Table Discard</strong>: The discard pile for the whole table.</p>
 <p><strong>Table Cards</strong>: Each character’s personal set of cards that they add to the table deck when initiative starts.</p>
@@ -397,11 +434,10 @@ Why have all of these special terms and conditions to check? Differing probabili
 <p><strong>Discard/Pay/Spend</strong>: Cards that have been used or removed that go to the discard and are shuffled together next round to make the table deck.</p>
 <p><strong>Trashed/Removed</strong>: Cards that have been used or removed and do not get shuffled back in every round.</p>
 <p><strong>Trash</strong>: The trash pile for the whole table.</p>
-<p>By “default” every character has 3 identical cards. The cards say “1 AP” and indicate what character they belong to.</p>
+<p>Every character has 3 identical cards. The cards say “1 AP” and indicate what character they belong to.</p>
 <p>When initiative starts all characters pass their table sets to the DM. The DM shuffles them together. The DM pulls a card from the top of the deck and deals the card to the character/player that it belongs to. When a character is dealt a card they can choose to act, spending however many cards they want to. They can also just hold on to the card. Cards that are not spent by the end of the round are discarded and shuffled back in.</p>
 <p>If you want to act, speak up before the DM moves on!<br>
-You can spend 1 AP at any time to act immediately.<br>
-You can only have 6 cards in the table deck at a time.</p>
+You can spend 1 AP at any time to act immediately.</p>
 <section id="multiple-ap-costs" class="level3">
 <h3 class="anchored" data-anchor-id="multiple-ap-costs">Multiple-&gt;AP-&gt;Costs</h3>
 <p>Some types of actions also have multiple AP costs. The first time you do the thing in a round it costs the first amount, the second time it costs the second, etc. These costs are connected with arrows, like this: 1-&gt;2-&gt;3.</p>
@@ -424,11 +460,9 @@ You can only have 6 cards in the table deck at a time.</p>
 </section>
 <section id="skills" class="level3">
 <h3 class="anchored" data-anchor-id="skills">3. Skills</h3>
-<p>Some moves and skills can be used “at the beginning of the round”. These must be used <strong>after</strong> effects and statuses resolve. They happen at the beginning of this “Main Phase”.<br>
-The main phase is where cards are drawn an actions are performed.</p>
+<p>Some moves and skills can be used “at the beginning of the round”. These must be used <strong>after</strong> effects and statuses resolve.</p>
 
 
-</section>
 </section>
 </section>
 
@@ -575,9 +609,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -642,6 +690,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

@@ -23,10 +23,10 @@ if [ "$1" == "dont" ] ; then #The usefulness of this option may be an indication
 fi
 
 if [ "$1" == "book" ] ; then
-  . .venv/bin/activate #TODO: do we need this line in the book workflow?
-  quarto render --profile pdf
-  #TODO: does the book have a preview option...?
-  quarto preview --profile pdf #TODO: again, test this
+  . .venv/bin/activate 
+  export QUARTO PROFILE=book # this works almost all the time
+  quarto render --to pdf
+  unset QUARTO_PROFILE
 fi
 if [ "$1" == "site" ] ; then
   . .venv/bin/activate
@@ -34,8 +34,7 @@ if [ "$1" == "site" ] ; then
 fi
 if [ "$1" == "full" ] ; then
   . .venv/bin/activate
-  quarto render #A call to render is needed to clean up any residual now-erroneous files that might be left in there, but once running preview should keep things mostly up to date
-  quarto render --profile pdf
+  quarto render
   quarto preview
 fi
 

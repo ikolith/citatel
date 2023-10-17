@@ -2,11 +2,7 @@
 title: Sixtem
 ---
 
-## ???
-
-These are the actlite rules. They are very condensed, there are no examples, there is little clarification. This doc will be continuously edited and updated as the rules for actlite are revised. I am doing it this way because having a longer more complete rules document slows the rate at which I can make dramatic and ill-advised changes. Think of these as a quickstart ruleset.
-
-# Sixtem
+These are the actlite rules. They are very condensed, there are no examples, there is little clarification. This doc will be continuously edited and updated as the rules for actlite are revised. I am doing it this way because having a longer more complete rules document slows the rate at which I can make dramatic and ill-advised changes. Think of this as a quickstart ruleset.
 
 ## Characters
 
@@ -29,12 +25,7 @@ Character sheet for a "baseline adventurer":
 
 ### Health
 
-Health is X:Y where X is standard health and Y is critical or "crit" health. When a character runs out of standard health, subsequent damage is to crit health. When a character runs out of crit health, that is bad.
-
-Where one could expect children and the elderly to be closer to 1:~3, some other people ~2:~6.
-~5:~12 makes one extremely tough.
-
-### CON
+Health is X:Y where X is standard health and Y is critical or "crit" health. When a character runs out of standard health, subsequent damage is to crit health. When a character runs out of crit health they are downed and will probably die. One could expect children and the elderly to have health closer to 1:~3. ~5:~12 would make you extremely tough.
 
 Every point of CON gives you 1 extra crit health and 2 extra standard health.
 
@@ -42,27 +33,19 @@ Every point of CON gives you 1 extra crit health and 2 extra standard health.
 
 Moving costs 1 AP and you move a number of spaces equal to your MOVEMENT. When an enemy rolls to hit you, they roll a check against your DEFENSE.
 
-### What are scores and attributes used for?
+## Scores
 
-Scores are added to all sorts of rolls, checks, modifiers, the passive score, etc.
+Scores are added to all sorts of rolls, checks, modifiers, the passive score, etc.   Your "passive" score for a given score is 6 + SCORE. There is not a strict limit to how many different attributes or scores a character or setting can have.
 
-### The Passive Score
+### Missing Scores, [special] scores
 
-Your passive score in something is 6 + SCORE. 
-
-### I don't have that score I was asked for
-
-If you're asked about a score you don't have, your score is 0, unless that score is a [special] score.
-
-#### [special] Scores
-
-If you don't have a [special] score you fail any check, contest, roll, whatever related to that score. The [sp] tag is just a shorter version of the [special] tag.
+If you're asked about a score you don't have, your score is 0, unless that score is a [special] score. If you don't have a [special] score you fail any check, contest, roll, whatever related to that score. The [sp] tag is just a shorter version of the [special] tag. MEDICINE is not a [special] score, but PYROMANCY is.
 
 #### "Standard" Scores
 
-Just a convention for non-[sp] scores that are important for the current setting. Make a decision about these scores when creating something for this setting. This is a convention, not a strict rule.
+"Standard Scores" are a convention for non-[sp] scores that are important for the current setting. This is just a convention, not a strict rule. Some settings might emphasize a TECHNOLOGY score, others might not use that score at all.
 
-## Doin
+## Doing things
 
 When you do something roll 2d6s and add the relevant score. Tell your result to the DM to find out how your attempt went.
 
@@ -107,11 +90,7 @@ Double 6s are good. You did as good as you could have. If this is an attack roll
 
 ## Initiative and AP
 
-Cards. Many cards.
-
-You have 3 AP, you use AP to do things. Most things cost 1 AP, you can do some limited amount of negligible things like talking for free.
-
-Terminology will change to be more clear. Categories will change.  
+You have 3 AP cards, you use AP to do things. Most things cost 1 AP, you can a reasonable amount of simple things like talking for free.
 
 **Table Deck**: The deck of cards that the DM (or whoever) draws from during initiative. The deck that the whole table uses.  
 
@@ -127,13 +106,12 @@ Terminology will change to be more clear. Categories will change.
 
 **Trash**: The trash pile for the whole table.  
 
-By "default" every character has 3 identical cards. The cards say "1 AP" and indicate what character they belong to.  
+Every character has 3 identical cards. The cards say "1 AP" and indicate what character they belong to.  
 
 When initiative starts all characters pass their table sets to the DM. The DM shuffles them together. The DM pulls a card from the top of the deck and deals the card to the character/player that it belongs to. When a character is dealt a card they can choose to act, spending however many cards they want to. They can also just hold on to the card. Cards that are not spent by the end of the round are discarded and shuffled back in.  
 
 If you want to act, speak up before the DM moves on!  
 You can spend 1 AP at any time to act immediately.  
-You can only have 6 cards in the table deck at a time.
 
 ### Multiple->AP->Costs
 
@@ -157,5 +135,4 @@ Statuses are added or removed now. A point of \[poison] is removed, a point of \
 
 ### 3. Skills
 
-Some moves and skills can be used "at the beginning of the round". These must be used **after** effects and statuses resolve. They happen at the beginning of this "Main Phase".  
-The main phase is where cards are drawn an actions are performed.
+Some moves and skills can be used "at the beginning of the round". These must be used **after** effects and statuses resolve.

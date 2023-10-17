@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -60,7 +60,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -71,11 +72,16 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Social</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../book/actlite/sixtem.html">Rules</a></li><li class="breadcrumb-item"><a href="../../book/actlite/social.html">Social</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -83,93 +89,146 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">citatel</a> 
         <div class="sidebar-tools-main">
-  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">About</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">About</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/about/mutiny.html" class="sidebar-item-text sidebar-link">Pardon the Dust</a>
+  <a href="../../book/about/mutiny.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pardon the Dust</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/about/about.html" class="sidebar-item-text sidebar-link">About</a>
+  <a href="../../book/about/about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Rules</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Rules</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/actlite/sixtem.html" class="sidebar-item-text sidebar-link">Sixtem</a>
+  <a href="../../book/actlite/sixtem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sixtem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/actlite/tactile.html" class="sidebar-item-text sidebar-link">Tactile</a>
+  <a href="../../book/actlite/tactile.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tactile</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/actlite/social.html" class="sidebar-item-text sidebar-link active">Social</a>
+  <a href="../../book/actlite/social.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Social</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/actlite/mechanics-misc.html" class="sidebar-item-text sidebar-link">Misc. Mechanics Reference</a>
+  <a href="../../book/actlite/mechanics-misc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Misc. Mechanics Reference</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/actlite/talaje.html" class="sidebar-item-text sidebar-link">Talaje</a>
+  <a href="../../book/actlite/talaje.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Talaje</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Stuff</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">Skills, Weapons, Items</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/stuff/basic.html" class="sidebar-item-text sidebar-link">Basic</a>
+  <a href="../../book/stuff/basic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/stuff/spoilers.html" class="sidebar-item-text sidebar-link">Spoilers</a>
+  <a href="../../book/stuff/spoilers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Spoilers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text">Menagerie</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../book/menagerie/bureaucrats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bureaucrats</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../book/menagerie/crust_punks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Crust Punks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../book/menagerie/dogmen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dogmen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../book/menagerie/harvesters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Harvesters</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../book/menagerie/isopods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Isopods</span></a>
   </div>
 </li>
       </ul>
@@ -177,6 +236,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -191,14 +251,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#contests" id="toc-contests" class="nav-link" data-scroll-target="#contests">Contests</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="social.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Social</h1>
+<h1 class="title">Social</h1>
 </div>
 
 
@@ -213,11 +273,9 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>The social rules in their entirety. Fuck.</p>
 <section id="social-rolls" class="level2">
 <h2 class="anchored" data-anchor-id="social-rolls">SOCIAL Rolls</h2>
-<p>Now for the least important part of playing a TTRPG, interacting with other people. This system is designed to allow a characters skills and stats to <em>augment</em> their social actions. The emphasis is not on getting good rolls, but on saying or doing the right thing. Rolls are used to express a particular character’s social talents, but they don’t replace the content of what the character says or does.</p>
-<p>A GM can use a check to determine success if they really do not know whether a given social action should or shouldn’t work on some character, and neither a success nor failure would be especially interesting. Even in this case, difficulty should be determined contextually. Grading numerical difficulty for a social interaction is generally difficult. A GM cannot prepare beforehand for the things a player will do or say, so DCs have to be set on the fly. Sometimes they are set incorrectly or something breaks. In this case, ignore the system/roll and do whatever is the most sensible/interesting/funny.</p>
+<p>This system is designed to allow a characters skills and stats to <em>augment</em> their social actions. The emphasis is not on getting good rolls, but on saying or doing the right thing. Rolls are used to express a particular character’s social talents, but they don’t replace what a character says or does. Grading numerical difficulty for a social interaction is difficult. A GM cannot prepare beforehand for the things a player will do or say, so DCs have to be set on the fly. Sometimes they are set incorrectly or something breaks. In this case, ignore the system/roll and do whatever is the most sensible/interesting/funny. This framework is largely for the benefit of the GM, to allow them to easily keep track of attitudes and relationships and to quickly create DCs and resolve rolls in a way that rewards the skill of the player as well as the skill of the character.</p>
 <p>Social skills are divided into two sets: communicative skills and perceptive skills. communicative skills include persuasion, deception, and performance. Perceptive skills include sensing motives, detecting deceit, and gaining insight into another character’s emotional state.</p>
 <section id="communicative-skills-bias-and-reputation" class="level3">
 <h3 class="anchored" data-anchor-id="communicative-skills-bias-and-reputation">Communicative Skills, Bias, and Reputation</h3>
@@ -302,43 +360,40 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>The framework for setting a DC for a given social roll and the framework for reputation management are the same and they can be used in combination. Both systems share the same table of scores with rough characterizations of what each score “feels” like.</p>
-<p>The scores range from -6 (“Reviled”) to +6 (“Revered”). These scores can be used by a GM to easily keep track of relationships and attitudes. They are also mechanical modifiers. If a character is at -2 (“Strongly Disliked”) with some group or individual, you treat their social roll as lowered by 2 (or you can just raise the DC by 2).</p>
+<p>The framework for setting a DC for a given social roll can also be used as a framework for managing a character’s reputation among different groups. The scores range from -6 (“Reviled”) to +6 (“Revered”). These scores can be used by a GM to easily keep track of relationships and attitudes. They are also mechanical modifiers. If a character is at -2 (“Strongly Disliked”) with some group or individual, subtract 2 from their social check and/or their passive social score.</p>
 <p>You can use these scores to set a sort of “default” attitude or bias for NPCs. The kindly innkeeper in a small peaceful town might treat every new person at around +2 (“Well-Liked”). The sneering guards in front of a keep might treat everyone at -2 (“Strongly Disliked”). Another traveler on the road just trying to get to where they’re going might be at -1 (“Disliked”) just because they really don’t want to stop and chat. The same traveler might, if you help them out, switch to +1 (“Liked”).</p>
-<p>The purpose of social rolls is to be able to, in a given interaction, change the way people perceive you or interact with you. Remember that rolling checks with the SOCIAL score does not replace the content of what a character does or says, but just augments it. If a player passes the DC, treat their interaction as happening at 1 point higher than it would be otherwise. If the player exceeds the DC by more than 3, you can treat the interaction as being at 2 points higher than it would be otherwise.</p>
-<p>Say a player character is in a town in which they are at -3 (“Loathed”). Typically, this would mean that they are treated as a pariah, people are unwilling to talk to them and will actively attempt to get rid of them, they might be thrown in jail on made up charges. Guards will not come to their aid. If they are very charismatic they may be able to walk into a shop, attempt to talk the owner into selling them something and succeed by 4 on a roll. The shop owner thinks that the player character really doesn’t seem quite so bad, he thinks that maybe he is misremembering something or getting this person confused with someone else. He is still wary, however. He still treats the character as -1 or “Disliked”, he will tend not to want to barter, and he’ll want to get through the interaction quickly. Similarly, a guard treating everyone at -2 might be persuaded to relax a bit and just talk to the player character on neutral terms (-2 -&gt; 0).</p>
-<p>Of course, there are plenty of things besides social interaction that might raise or lower someone’s opinion of you, and if the content of what a player character said is something that another character would naturally agree with or go along with, then no roll is necessary. Remember that the good will from one positive social interaction does not last forever. Actions will tend to have a greater effect for longer than words. If you just stabbed someone, you are not going to be able to smooth that over with your wit and charm, you do not even get to roll.</p>
+<p>If a player passes the DC, treat their interaction as happening at 1 point higher than it would be otherwise. If the player exceeds the DC by more than 3, treat the interaction as +2.</p>
+<p>An example: a player character is in a town in which they are at -3 (“Loathed”). Typically, this would mean that they are treated as a pariah, people are unwilling to talk to them and will actively attempt to get rid of them. They might be thrown in jail on made up charges. If they are very charismatic they may be able to walk into a shop, attempt to talk the owner into selling them something and recieve a +2 for the interaction. The shop owner might think that the player character doesn’t seem quite as bad as people say, maybe he thinks that he is misremembering something or getting the player character confused with someone else. He is still wary, however. He still treats the character as -1 or “Disliked”, he will tend not to want to barter. He’ll want to get through the interaction quickly. Similarly, a guard treating everyone at -2 might be persuaded to relax a bit and just talk to the player character on neutral terms (-2 -&gt; 0).</p>
+<p>Remember that the good will from one positive social interaction does not last forever. Actions will tend to have a greater effect than words. If you just stabbed someone, you are not going to be able to smooth that over with your wit and charm.</p>
 <p>The table with specific characterizations is useful, but it can be boiled down to some rules of thumb. 0 is neutral. From +1 to +3 the character is favored. Persuasion, information gathering, and bartering will be easier. People give you the benefit of the doubt. From +3 to +6 people will go out of their way to help you, they will likely come to your aid in combat or follow you into combat. From -1 to -3 people dislike you and generally do not want to have anything to do with you. -4 to -6 is when you start seeing a lot of unprovoked violence.</p>
-<p>This framework is largely for the benefit of the GM, to allow them to easily keep track of attitudes and relationships and to quickly create DCs and resolve rolls in a way that rewards the skills of the player as well as the skills of the character.</p>
-<p>There are several different ways a GM can deal with this system in game. The system can be player-facing, that is to say, you could tell your players their numerical reputation among different groups or numerical values for the attitudes of various characters (along with descriptions). I do not recommend this. You could gate numerical information behind something like a good insight roll. This is fine, but even in this case you should lean on qualitative descriptions of how some character treats a player character. You can also keep the entire system completely to yourself, as a useful tool for the GM to structure descriptions and interactions. In this approach players do not get to actually know numerical values and you never have to reveal or justify movements in numerical values. This is probably your best bet. In this case the framework is still useful for figuring out how much the charisma of the character has helped the efforts of the player.</p>
+<p>There are several different ways a GM can deal with this system in game. The system can be player-facing. You could tell your players their numerical reputation among different groups or numerical values for the attitudes of various characters. A DM could gate numerical information behind something like a good insight roll. A DM can also keep the entire system completely to themsleves, as a tool for the to structure descriptions and interactions.</p>
 </section>
 <section id="social-perception" class="level3">
 <h3 class="anchored" data-anchor-id="social-perception">Social Perception</h3>
-<p>“Social perception” is used here to refer to skills that allow you to roll to sense motives, detect deceit, and gain insight into another character’s emotional state. It’s important here to establish when <em>exactly</em> these skills are used and checks are made.</p>
-<p>When a player asks a question that would fall under “social perception” about another character, they should first be given a superficial description of the character and their apparent emotional state. If the character in question seems to be at ease, the GM should just say so. This is true even if the character in question is only pretending to be at ease, but plans to attack or betray the player’s character. It does not take a roll to be told that someone yelling and brandishing a knife is probably somewhat unhappy. The rules and skills for social perception are not meant to cover the superficial. These rules are for attempts to read another character. Social perception rolls are very similar to other character conflicts, they can be either a check or a contest.</p>
+<p>“Social perception” is used here to refer to skills that allow you to roll to sense motives, detect deceit, and gain insight into another character’s emotional state. When a player asks a question that would fall under “social perception” about another character, they should first be given a superficial description of the character and their apparent emotional state. If the character in question seems to be at ease, the GM should just say so. This is true even if the character in question is only pretending to be at ease, but plans to attack or betray the player’s character. The rules and skills for social perception are not meant to cover the superficial. These rules are for attempts to read another character. Social perception rolls are very similar to other character conflicts, they can be either a check or a contest.</p>
 </section>
 <section id="social-checks" class="level3">
 <h3 class="anchored" data-anchor-id="social-checks">Social Checks</h3>
-<p>When the roll is a check, the DC will likely be a default DC of 6 + SOCIAL (and/or relevant skills). If you are trying to read a character who is is lying the DC will be set by their initial attempt to lie, which will have been a check + SOCIAL (and/or relevant skills) against your passive social perception. If they attempt to lie and fail this check, then whatever they said will be described as highly suspicious or likely a lie. If they succeed in their initial check, but you pass their DC when you attempt to read them, you will notice that something seems wrong, or suspicious, or you’ll notice strange nervous habits.</p>
+<p>When the roll is a check, the DC will be the usual passive DC, 6 + SOCIAL (and/or relevant skills, bias, reputation). If you are trying to read a character who is is lying the DC will be set by their initial attempt to lie, which will have been a check + SOCIAL (and/or relevant skills) against your passive social perception. If they attempt to lie and fail this check, then whatever they said will be described as highly suspicious. If they succeed in their initial check, but you pass their DC when you attempt to read them, you will notice that something seems wrong, you might notice inconsistencies in what they said, they might seem nervous or suspicious.</p>
 <p>Social perception rolls are almost always checks. If you are lying to someone, you perform a check. If they are trying to figure out if you are lying, they perform a check. If someone is trying to convince you of something and you think they might be lying, you perform a check.</p>
 <section id="social-check-resolution" class="level4">
 <h4 class="anchored" data-anchor-id="social-check-resolution">Social Check Resolution</h4>
 <p>In the case of a tie, resolution is the same as any other check. Defender wins. Otherwise there are four possible outcomes.</p>
 <p><strong><em>If you pass the check more than 3, Complete Success:</em></strong></p>
-<p>You read the defender like an open book. You get a full answer to whatever question you were asking, or as full an answer as you could get from watching someone. They crumble at your gaze. Maybe they are so caught off guard that they fumble and make an embarrassing mistake, mentioning something they should not have.</p>
+<p>You read the defender like an open book. You get a full answer to whatever question you were asking, or as full an answer as you could get from watching someone. They crumble at your gaze. Maybe they are so caught off guard that they mention something they should not have.</p>
 <p><strong><em>If you pass the check by 3 or less, Moderate Success:</em></strong></p>
-<p>You get some insight into the question you were asking. If you are trying to see if someone is lying, you’ll know that they’re certainly not telling the whole truth, that they are actively misleading you. If you’re trying to get insight into someone’s emotional state, you get a good idea of how they are feeling. You might be able to tell that someone is distressed and trying to hide it. This is a pretty good read of someone, and they do not know that you know anything.</p>
+<p>You get some insight into the question you were asking. If you are trying to see if someone is lying, you’ll know that they’re not telling the whole truth, that they are actively misleading you. If you’re trying to get insight into someone’s emotional state, you get a good idea of how they are feeling. You might be able to tell that someone is distressed and trying to hide it. This is a pretty good read of someone. They do not know that you know anything.</p>
 <p><strong><em>If you fail the check by 3 or less, Moderate Failure:</em></strong></p>
-<p>You have no answer to your question at all and the person you were attempting to read knows the vague shape of the question you asked or that you have a question. If you were trying to figure out if someone was lying about a specific claim they might know that you don’t trust them or that you suspect them in some way. Otherwise, you might just be staring and it’s weird.</p>
+<p>You have no answer to your question at all and the person you were attempting to read knows what you were doing. If you were trying to figure out if someone was lying about a specific claim, they know that you don’t trust them or that you suspect them in some way. Otherwise, you might just be staring and it’s weird.</p>
 <p><strong><em>If you fail the check by more than 3, Catastrophic Failure:</em></strong></p>
-<p>God have mercy on your soul. You completely give yourself away, your interests and your question are written all over your face. If you are trying to catch a lie, not only is it clear what exactly you think is being lied about, it’s clear that you have <em>no</em> idea if the defender is lying. Maybe you scoffed at a specific claim, maybe you blurt out “But the stone of Macguffin!” at exactly the wrong time. Your face is very red.</p>
+<p>God have mercy on your soul. You completely give yourself away, your interests and your question are written all over your face. If you are trying to catch a lie, not only is it clear what exactly you think is being lied about, it’s clear that you have <em>no</em> idea if the defender is lying. Maybe you scoffed at a specific claim, maybe you blurt out some crucial piece of information at exactly the wrong time. Your face is very red.</p>
 </section>
 </section>
 <section id="contests" class="level3">
 <h3 class="anchored" data-anchor-id="contests">Contests</h3>
-<p>Contests are far rarer than checks. Social perception contests happen in contexts where it is understood that both parties are trying to advance their own interests and, if not outright lying, being very selective with the truth. Some examples of this would be a tense negotiation, an official dinner of ambassadors whose states are on the brink of war, a game of poker, spies meeting to trade secrets while not revealing their true intentions. In these cases checks would be happening simultaneously anyway, and the information that someone might doubt what you are saying or that they might not be telling the whole truth wouldn’t be very meaningful.</p>
+<p>Contests are far rarer than checks. Social perception contests happen in contexts where it is understood that both parties are trying to advance their own interests. Some examples of this would be a tense negotiation, an official dinner of ambassadors whose states are on the brink of war, a game of poker, spies meeting to trade secrets while not revealing their true interests. In these cases checks would be happening simultaneously anyway, and the information that someone might doubt what you are saying or that they might not be telling the whole truth wouldn’t be very meaningful.</p>
 <p>Contest Resolution is just about the same as check resolution. The difference between the rolls of the two characters determines which character succeeds and which fails, and to what degree. This success and failure are captured by the same event. For example one character might give away information they shouldn’t have, which captures both the success of one character and the failure of another.</p>
-<p>Ties are just ties, a staredown, a tense silence. If your group prefers, ties can be resolved in the normal way for a contest: win goes to the higher modifier, if that’s a tie, it’s a tie in game, if that makes no sense, do it again.</p>
+<p>Ties are just ties, a staredown, a tense silence. If your group prefers, ties can be resolved in the normal way for a contest: win goes to the higher modifier, if that’s a tie, it’s a tie in game. If that outcome makes no sense, roll again.</p>
 
 
 </section>
@@ -487,9 +542,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -554,6 +623,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

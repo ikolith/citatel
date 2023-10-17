@@ -803,8 +803,7 @@
         ],
         "holds": "Carrying {1d4 Dagger}, {1 One Handed Spear}. {1d4-3 Crude Clubs}. \nMore rarely poisons that cause targets to lose 1 AP. Rarely, daggers that can deliver 3 doses of\npoison before reapplication is necessary.",
         "flavor_text": "Slimy, stupid, and inane.",
-        "meta_tags": ["npc", "tchok"],
-        "full_text": "Webbed fingers in unfocused disarray squat the terminations of slimy limbs. Freely swiveling eyes perch on dull sloped faces above rows of lost-and-found teeth. The Tchoks, named after the sound that composes half of their vocabulary, stalk the eternally over-saturated mud and swollen brush between dirty water and watery dirt. They cling under branches and flatten their baggy bodies against walls. They prepare to ambush any shape passing by. \n\nThey are as barely functional in water as they are on land. What their awkward and spasmodic movement excels at is propelling them through mud. Their lapses into atonal jibbering make coherent thought, and seemingly magic, very difficult. The superstitious believe them to harbor some deep well of cryptic knowledge that they presumably cultivate when not clubbing each other or being eaten by the giant eyeless catfish that also live in the mud.  \n\nOne of the only formal records of their behavior comes from S. Bhevlins, a scholar intrigued by stories of their mystical abilities. After weeks spent in careful hidden observation of constant slapstick inanity, Bevlins observed an elaborately painted Tchok pick up a stick and stumble around dragging it through the mud, creating a complex symmetrical pattern before realizing he couldn't find his way out of it. The Tchok then angrily beat the lines in the mud with his stick, losing his grip and flinging the stick outside of the pattern. The Tchok howled and gurgled for several minutes before tiring himself out and falling asleep in the mud. The rising tide washed him and the pattern away. Belvins ended his observations."
+        "meta_tags": ["npc", "tchok"]
       }
     },
     "invocations": {
@@ -1108,8 +1107,7 @@
         "hp": "2:6",
         "scores": ["1 STR", "1 AGI", "7 Defense"],
         "holds": "{Dogman Weapons}",
-        "full_text": "The dogmen of the hills travel in packs. They care for nothing and no one besides their own kin. They are immune to ideas like morals and nations. They have no interest in news from far off places. They are deaf to the words of people they will never meet. Dogmen cannot consider hypotheticals. They do not worry, they do not yearn, they do not lie. If they meet you on the road they will rob you, kill you, eat you, boil your bones for broth, then chew on what is left.\nDogmen are gangly hunched little weirdos with scrubby yellow fur, big beady black eyes, sagging skin, and floppy ears that are always twitching, tucking, and pointing, always out of sync with one another.\nWhen not attacking travelers they craft surprisingly nice skin-and-bone drums of all shapes and sizes with which they accompany their hungry howling. They are remarkably good leatherworkers.",
-        "meta_tags": ["npc", "hills"]
+        "meta_tags": ["npc", "hills", "dogman"]
       },
       "dogman_weapons": {
         "name": "Dogman Weapons",
@@ -1118,7 +1116,8 @@
             "1": "{Jaw Axe}",
             "2": "{Jawblade}"
           }
-        }
+        },
+        "meta_tags": ["dogman"]
       },
       "jaw_axe": {
         "name": "Jaw Axe",
@@ -1132,7 +1131,7 @@
         "meta_tags": ["weapon", "dogman"]
       },
       "dogman_jawblade": {
-        "name": "Dogman Jawblade",
+        "name": "Jawblade",
         "tags": ["one-handed", "hilted"],
         "requirements": ["1 STR"],
         "speed": "1->2",

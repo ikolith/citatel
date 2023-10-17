@@ -3,7 +3,3 @@ title: Pardon the Dust
 ---
 
 The rules used to be much more verbose. They had in-depth explanations and sometimes several examples. But the game was too heavy. It was too hard to improvise with. The rules got in the way. I started a little side project to see if I could rebuild the rules (called "tactile") into something lighter ("actlite"). "actlite" turned out to be way more fun and has become the main version of the game. I'm rewriting things to fit the new rules and mechanics, so a lot of stuff is missing.  
-
-Also, the Python utils should be easily usable from the site. Eventually. When I get around to building a bunch of web shit.
-
-I'll put the old game up somewhere eventually.

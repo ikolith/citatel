@@ -70,15 +70,11 @@ Throwing a spear or dagger costs 2 AP, uses PER(CEPTION) to hit, has no damage s
 
 ## Resting and Healing
 
-This part needs to be reworked given the new health stuff.  
+Here are some differnt healing mechanics I need to test.. 
 
 **Strict**: Every day you recover 1 crit health if you are missing crit health, or 3 standard health if you are not.
 
-**Under-Die**: Every long rest you roll the largest die that is under your standard health. If you have 7 standard health, you roll a d6.
-
-**4-for-6**: For every 6 health you have you get a d4 recovery die, refilling every day. Using any amount takes resting for two hours and tending to wounds, or you can just use them all on long rest of 8 or more hours
-
-**4-for-3**: As above but for every 3 health.
+**Under-Die**: Every long rest you roll the largest die that is under your standard health. If you have 7 standard health, you roll a d6. Crit damage is healed first.
 
 **Dont-Get-Crit**: At a long rest, if you have taken crit damage, recover 1 crit heatlth. Otherwise, recover all standard health. 
 
@@ -114,7 +110,7 @@ If you're hit while you're down, take the damage and add a failed death check.
 
 ### Consequence Tables
 
-Why is this called Consequence Tables? The idea was that there could be multiple tables for different areas, contexts, game tones, etc.
+Consequence tables exist to determine what happens if you fail death checks. Different areas might have different consequence tables, the DM might pick a table completely randomly. Different campaigns might prefer harsher or more lenient consequenes. Having many consequence tables and an unknown death DC should make being downed stressful and full of uncertainty, this can increase the stakes while not necessarily increasing the chance that the character dies. Below is a sample generic consequence table and some sample consequences. 
 
 | Failure     | Consequence                           |
 | ----------- | ------------------------------------- |
@@ -176,11 +172,11 @@ Stealth is an AGI check (+STEALTH if you have it) against the defender’s passi
 
 ### Grappling
 
-Entering grappling takes 2 AP, it's an attack + AGI To-Hit followed by a STR contest. If the part entering the grapple wins, both parties are \[grappling] but only the defender is \[vulnerable]. Defender can spend 2 AP to trigger another STR contest to try and break free. Defender can do nothing else.
+Entering grappling takes 2 AP, it's an attack + AGI To-Hit followed by a STR contest. If the party entering the grapple wins, both parties are \[grappling] but only the defender is \[vulnerable]. Defender can spend 2 AP to trigger another STR contest to try and break free. Defender can do nothing else.
 
 #### Taking a Hostage
 
-Same as above, but the attacker rolls one fewer die on the initial grapple check. They can attack the defender during the grapple provided they have a \[range: 0] weapon.
+Same as above, but the attacker rolls one fewer die on the initial grapple check. They can attack the defender during the grapple provided they have a \[range: close] weapon.
 
 ### Fall Damage
 

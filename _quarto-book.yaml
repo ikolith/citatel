@@ -1,0 +1,23 @@
+project:
+  output-dir: .
+  type: book
+  render:
+    - "*.qmd"
+    - "!old/"
+
+format:
+  pdf:
+    documentclass: "scrbook"
+    classoption: ["letterpaper", "twoside", "openany"]
+    # tbl-colwidths: true # need to instead just specify spacing for specific tables
+
+book:
+  chapters:
+    - index.qmd
+    - book/actlite/sixtem.qmd
+    - book/actlite/tactile.qmd
+    - book/actlite/social.qmd
+    - book/actlite/mechanics-misc.qmd
+    - book/actlite/talaje.qmd
+    - book/stuff/basic.qmd
+    - book/stuff/spoilers.qmd

@@ -18,7 +18,7 @@ def create_query_section(
     # basic: bool = False,  # im lazy.
     sort: bool = True,
     deprecated: bool = False,
-) -> list:
+) -> str:
     if not deprecated:
         query = query & ~Query().meta_tags.any("deprecated")
     db = dt.create_tinydb(db_path)

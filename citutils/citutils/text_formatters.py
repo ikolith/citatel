@@ -181,7 +181,7 @@ def if_exists_format_md(
 
 def format_table_md(table: ty.Table) -> str:
     md_table = (
-        f"""  \n\nUnless otherwise specified, roll {table["roll"]} on this table.  """
+        f"""  \n\nUnless otherwise specified, roll {table["roll"]} on this table."""
         + "\n\n| Roll | Outcome |  \n| --- | --- |"
     )
     for roll, outcome in table["outcomes"].items():

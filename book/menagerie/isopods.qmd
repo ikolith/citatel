@@ -1,0 +1,64 @@
+---
+title: "Isopods"
+execute:
+    echo: false
+    output: asis
+---
+
+
+## Culture
+
+The Isopods are an ancient people with courts, politics, philosophy, and dynasties. In addition to being able to write and speak, they can bypass language entirely, communicating complex thoughts and feelings directly to one another via pheromones. They do this instinctively, like a person moving their face.  
+
+The Isopod word for what we would call thought is approximately "inner thought" where pheromones are "outer thought". Their word for themselves is approximately "thinker".  
+
+In the ornate and ancient Isopod courts, richly painted Isopods attempt to subtly manipulate each other by precisely deploying pheromones, they use bottled pheromones to mislead and persuade. They can strategically steer the mood of a room through highly trained covert manipulators (though an Isopod gentleman would never admit to this).  
+
+Isopods view life in the caves as beautiful, ancient, and harmonious. In the caves their pheromones are not tossed around by the wind. It is natural and just that the underground should be so vast and varied while the surface is just the end of useful space. They believe the world must be a sphere, as a sphere would maximize underground volume while minimizing surface area. They find it tremendously convenient that when a form of life is meant to be eaten they generally have their hard structure on the inside. Clearly, this could only serve the purpose of making them more suitable as food. They see their ability to speak to lower life as a great convenience, like being able to order around your coat rack. They are not religious, so a question their philosophers must grapple with is "Why, if there is no God, is the world so just?"  
+
+Isopods also have philosophies on the nature of being and consciousness. They believe that their ability to directly communicate their thoughts and emotions means they can verify and understand the experience and the consciousnesses of other Isopods. Groups that do not have this ability cannot meaningfully be called concious. Most Isopods think of other groups as complex automata, not capable of any true thought or socialization, like plants. They are not generally hostile or even rude to other forms of life. To mistreat a lower life form would not be immoral per se, but it would be tremendously gauche. If you tell an Isopod your name, say "Tod" and it has reason to remember your name, it will refer to you as "itsa Tod". If it is being very respectful, "It Calls Itself Tod".
+
+Isopods once ruled the earth and they believe their time will come again. They are one of the oldest forms of life, persisting largely unchanged through time. They have mixed views on other bugs, depending on their ability to communicate.  
+
+They absolutely revile the ants and want them exterminated. They read what primitive "pheromones" the ants create as a sort of repugnant malignancy below the level of thought. Their hate and fear is magnified by the growing number of ants. 
+
+Isopods converse in great halls built into their cave networks. Thy build their structures along every surface of the cave, the ceilings and walls as well as the floors. The Isopods are great weavers, they are only okay climbers. They cannot climb smooth surfaces, so the roads of their cities are made of mats that they can easily traverse. Opulent areas are covered in a crisscrossing network of ornate tapestries. They covet fine rugs and fashionable hats.
+
+## Isopod Anatomy, Movement
+
+Isopods have thick layered bands of chitin along their top side. This forms their natural armor. They have seven pairs of jointed appendages. Each appendage ends in two articulated long sticky fingers. The two front pairs of appendages are the longest, with long fingers meant for fine manipulation. Lacking thumbs, the Isopods use their arms in vertical pairs with the two suspended top fingers and two suspended bottom fingers working in tandem, each finger opposable. The appendages after the foremost pairs become shorter and their main purpose shifts from manipulation to movement. They move low, using all of the limbs that line their body. They move parallel to the ground, with the bulk of their limbs folded under them. Isopods are larger than humans, though of course they are shorter when walking. They do *not* call their movement "crawling".
+
+They will tip their front portions upward in a couple of situations. The first is when engaged in some especially demanding manual task where lifting something in front of themselves using only a couple of limb pairs is not enough, as when playing musical instruments or when weaving. The second is when in a posture of deference or trust. 
+
+## Fighting
+
+They fight low to the ground, taking advantage of the protection offered by the bands of chitinous armor on their backs. Because of this low fighting position and the arrangement of their limbs they rarely employ weapons that require large swinging motions, preferring to rely largely on long thrusting weapons. There are no Isopodan greataxes.
+
+### Melee 
+
+In close quarters they employ katars, patas, and insectoid claw weapons. They also wield long shields held parallel to the ground. Sometimes these are lined with spikes. 
+
+#### Polearms
+
+They often wield spears, grasping them with many arm-pairs at a time, coordinating arm pairs to thrust the weapon forward. They also wield a unique variety of polearm, called a "fork" by outsiders (the proper name can only be expressed via pheromone). Forks are long asymmetric polearms with sharp spear points at the end. The heads of the polearm are always flat on one side so that they be easily wielded near the ground. The opposite side can have a wide variety of features, the most common being a long and gently curved wavy blade sticking out at a right angle, sharp on both sides. This can be used defensively to keep an opponent at bay but it can also be used to hook a limb, at which point the Isopod uses their many arm pairs in tandem to wrench the blade back. If the Isopod has a spiked shield or katar they can pull the opponent closer with the blade while attacking with their sidearm, trapping them between the weapons.
+
+The forks excel when used to fight other bugs. They can be used to attack the rows of delicate limbs. They can be slipped under another shelled creature, turned so that the blade faces upward, and then torn across the soft underbelly of the opponent, bypassing their armor entirely.
+
+Their polearms are made of an extremely sharp and light organic material. The finest, sharpest, and lightest of their polearms are marbled by many colors. The secretive Isopodan craftsmen have accrued thousands of years experience and knowledge crafting these deadly polearms. Because of the effectiveness of the weapons against the Isopods themselves, they do not trade them with other groups and they keep careful track of them. A non-isopod simply being in posession of a marbled isopodan fork is seen as an act of open hostility.
+
+### Ranged
+
+They use their long powerful fore-limbs to throw out rope darts or barbed blades, then they either retract the projectiles or attach the ropes to the surfaces of the cave, suspending the opponent from multiple points. They also use crossbows that they can quickly wind with their limb-pairs if they flip over. They cannot wield normal bows and slings effectively.
+
+## Isopod Content
+
+Most of the content needs to be rewritten for the new rules, so it won't show up here yet.
+```{python}
+
+
+from tinydb import Query
+from citutils import docs as dc
+print(dc.create_query_section(query = Query().meta_tags.any("isopod")))
+
+
+```

@@ -12,18 +12,35 @@ format:
     theme:
       light: custom-light.scss
       dark: custom-dark.scss
-#  pdf: #how do I make this all go into the same pdf instead of multiple files? Is that the "book" "type" setting in "project"?? This is poorly documented...
-#    number-sections: true
+    #  pdf: #how do I make this all go into the same pdf instead of multiple files? Is that the "book" "type" setting in "project"?? This is poorly documented...
+    #    number-sections: true
+  pdf:
+    latex-auto-install: true
+    #documentclass: "scrbook"
+    #classoption: ["letterpaper", "twoside", "openany"]
+    # tbl-colwidths: true # need to instead just specify spacing for specific tables
+    fontfamily: libertinus
+    geometry:
+      - nomarginpar
+      - top=0.5in
+      - bottom=0.5in
+      - outer=0.5in
+      - inner=0.5in
+    number-sections: false
+    toc: true
 
 website:
   title: "citatel"
   repo-url: https://github.com/ikolith/citatel
   favicon: "./assets/images/favicons/favicon.ico"
-  description: "The fooligan's curse."
   page-navigation: true
+
   sidebar:
+    id: "sidebarid"
+    openSidebar: true
     style: "docked"
     collapse-level: 1
+    search: true
     contents:
       - section: "About"
         contents:
@@ -36,19 +53,9 @@ website:
           - book/actlite/social.qmd
           - book/actlite/mechanics-misc.qmd
           - book/actlite/talaje.qmd
-      - section: "Stuff"
+      - section: "Skills, Weapons, Items"
         contents:
           - book/stuff/basic.qmd
           - book/stuff/spoilers.qmd
-
-      # - section: "Menagerie"
-      #   contents:
-
-      # - section: "Adventures"
-      #   contents:
-
-      # - section: "Resources"
-      #   contents:
-
-      # - section: "Posts"
-      #   contets:
+      - section: "Menagerie"
+        contents: "book/menagerie/*.qmd"
