@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../book/actlite/tactile.html" rel="next">
-<link href="../../book/about/about.html" rel="prev">
+<link href="../../book/about/mutiny.html" rel="prev">
 <link href="../.././assets/images/favicons/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -120,12 +120,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Pardon the Dust</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../book/about/about.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">About</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -159,12 +153,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../../book/actlite/mechanics-misc.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Misc. Mechanics Reference</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../book/actlite/talaje.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Talaje</span></a>
   </div>
 </li>
       </ul>
@@ -252,16 +240,12 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#missing-scores-special-scores" id="toc-missing-scores-special-scores" class="nav-link" data-scroll-target="#missing-scores-special-scores">Missing Scores, [special] scores</a></li>
   </ul></li>
-  <li><a href="#doing-things" id="toc-doing-things" class="nav-link" data-scroll-target="#doing-things">Doing things</a>
-  <ul class="collapse">
-  <li><a href="#check-vs-contest" id="toc-check-vs-contest" class="nav-link" data-scroll-target="#check-vs-contest">“Check” vs “Contest”</a></li>
-  </ul></li>
+  <li><a href="#checks-and-contests" id="toc-checks-and-contests" class="nav-link" data-scroll-target="#checks-and-contests">Checks and Contests</a></li>
   <li><a href="#crits-and-more" id="toc-crits-and-more" class="nav-link" data-scroll-target="#crits-and-more">Crits and More</a>
   <ul class="collapse">
-  <li><a href="#you-can-probablity-skip-this-section" id="toc-you-can-probablity-skip-this-section" class="nav-link" data-scroll-target="#you-can-probablity-skip-this-section">You Can Probablity Skip This Section</a></li>
   <li><a href="#crit-and-crit-fail" id="toc-crit-and-crit-fail" class="nav-link" data-scroll-target="#crit-and-crit-fail">Crit and Crit Fail</a></li>
   </ul></li>
-  <li><a href="#initiative-and-ap" id="toc-initiative-and-ap" class="nav-link" data-scroll-target="#initiative-and-ap">Initiative and AP</a>
+  <li><a href="#initiative-and-ap-action-points" id="toc-initiative-and-ap-action-points" class="nav-link" data-scroll-target="#initiative-and-ap-action-points">Initiative and AP (Action Points)</a>
   <ul class="collapse">
   <li><a href="#multiple-ap-costs" id="toc-multiple-ap-costs" class="nav-link" data-scroll-target="#multiple-ap-costs">Multiple-&gt;AP-&gt;Costs</a></li>
   <li><a href="#beginning-of-the-round" id="toc-beginning-of-the-round" class="nav-link" data-scroll-target="#beginning-of-the-round">“Beginning of the Round”</a></li>
@@ -353,97 +337,60 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 </section>
-<section id="doing-things" class="level2">
-<h2 class="anchored" data-anchor-id="doing-things">Doing things</h2>
-<p>When a character wants to do something that might fail, they roll 2d6s and add the relevant SCORE. The result of the roll is determined by</p>
-<section id="check-vs-contest" class="level3">
-<h3 class="anchored" data-anchor-id="check-vs-contest">“Check” vs “Contest”</h3>
-<p>If one character is rolling, that’s a check. If two characters are rolling in direct competition, that’s a contest. Most rolls are checks. Attacks are checks.</p>
-</section>
+<section id="checks-and-contests" class="level2">
+<h2 class="anchored" data-anchor-id="checks-and-contests">Checks and Contests</h2>
+<p>When a character wants to do something that they might fail at, they roll 2d6s and add the relevant SCORE. The result of the roll is determined by comparing the roll to a Difficulty Score or DS. This is a “check”. If their roll is the same or higher than the DS, they succeed.</p>
+<p>If two charactes are in direct competition they are in a “contest”. They both roll 2d6 and add their scores. The higher score wins. In the case of a tie, they either tie in the game or if that does not make sense they redo the contest.</p>
+<p>“Checks” are compared to a DS which is often the passive attribute score of another character. Most rolls, including attacks, are checks.</p>
 </section>
 <section id="crits-and-more" class="level2">
 <h2 class="anchored" data-anchor-id="crits-and-more">Crits and More</h2>
-<p>Terminology. All of these refer to the numbers rolled during some check or contest. These only count if the total passes the difficulty, if you succeed. If the difficulty is 8, matching 2s is just a failure.<br>
-Only the Crit and Crit Fail are “universal”. The rest are triggered by skills, weapons, etc.</p>
+<p>If a character passes their check of wins their contest, their success might be accompanied by secondary effects according to the dice that they rolled. Here are a list of the condition names and their triggers.</p>
 <p><strong>Crit</strong>: Rolling two 6s.</p>
-<p><strong>Crit Fail</strong>: Rolling two 1s.</p>
 <p><strong>Matching</strong>: Matching numbers.</p>
 <p><strong>Half Crit</strong>: Rolling one 6.</p>
-<p>Yes, a Crit also counts as “Matching”.<br>
-Why have all of these special terms and conditions to check? Differing probabilities!</p>
-<section id="you-can-probablity-skip-this-section" class="level3">
-<h3 class="anchored" data-anchor-id="you-can-probablity-skip-this-section">You Can Probablity Skip This Section</h3>
-<p>A roll of two d6s can resolve in 36 different ways, 36 combinations of dice. I will refer to these as “cases”. Assuming a roll of 7 passes (most common DC), 21 of these cases pass (sum to &gt;=7).</p>
-<table class="table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Condition</th>
-<th>Passing Cases</th>
-<th>Percentage of Passing Cases</th>
-<th>Percentage of all Cases</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Crit</td>
-<td>1</td>
-<td>4.8%</td>
-<td>2.8%</td>
-</tr>
-<tr class="even">
-<td>Crit Fail</td>
-<td>0</td>
-<td>0%</td>
-<td>2.8%</td>
-</tr>
-<tr class="odd">
-<td>Matching</td>
-<td>3</td>
-<td>14.29%</td>
-<td>8.3%</td>
-</tr>
-<tr class="even">
-<td>Half Crit</td>
-<td>6</td>
-<td>28.6%</td>
-<td>16.7%</td>
-</tr>
-</tbody>
-</table>
-<p>Didn’t verify this. Winged it. Might be wrong.</p>
-</section>
+<p>A Crit also counts as “Matching”. An example of one of these effects is a character who, when dealing a certain damage type, inflicts the [bleed] condition on half crit.</p>
+<p>There is one condition that can be activated when a character fails, the Crit Fail.</p>
+<p><strong>Crit Fail</strong>: Rolling two 1s.</p>
+<p>Why have all of these special terms and conditions to check? Differing probabilities!</p>
+<!-- ### You Can Probablity Skip This Section  
+
+A roll of two d6s can resolve in 36 different ways, 36 combinations of dice. I will refer to these as "cases". Assuming a roll of 7 passes (most common DC), 21 of these cases pass (sum to >=7).
+
+| Condition | Passing Cases | Percentage of Passing Cases | Percentage of all Cases |
+| --- | --- | --- | --- |
+| Crit | 1 | 4.8% | 2.8% |
+| Crit Fail | 0 | 0% | 2.8% |
+| Matching | 3 | 14.29% | 8.3% |
+| Half Crit | 6 | 28.6% | 16.7% |
+
+Didn't verify this. Winged it. Might be wrong. -->
 <section id="crit-and-crit-fail" class="level3">
 <h3 class="anchored" data-anchor-id="crit-and-crit-fail">Crit and Crit Fail</h3>
-<p>Crit Fails are maximally bad. You did as bad as you could do (~3% probability).</p>
-<p>Double 6s are good. You did as good as you could have. If this is an attack roll, do 1 extra crit damage.</p>
+<p>Crit Fails are maximally bad. You did as badly as you could have done (~3% probability).</p>
+<p>Double 6s are good. You did as good as you could have. If this is an attack roll, do 1 extra crit damage on top of any other effects.</p>
 </section>
 </section>
-<section id="initiative-and-ap" class="level2">
-<h2 class="anchored" data-anchor-id="initiative-and-ap">Initiative and AP</h2>
-<p>You have 3 AP cards, you use AP to do things. Most things cost 1 AP, you can a reasonable amount of simple things like talking for free.</p>
-<p><strong>Table Deck</strong>: The deck of cards that the DM (or whoever) draws from during initiative. The deck that the whole table uses.</p>
+<section id="initiative-and-ap-action-points" class="level2">
+<h2 class="anchored" data-anchor-id="initiative-and-ap-action-points">Initiative and AP (Action Points)</h2>
+<p>AP is used during “initiative”. Initiative is any situation where many characters want to do things at the same time and the order in which things happen is important. Initiative is most often combat, but it can include other time sensitive events like chases or races.</p>
+<p>Ever character has 3 AP cards unless otherwise noted. The cards say “1 AP” and indicate what character they belong to with a name, a symbol, or both. Most actions cost 1 AP, but you can do a reasonable amount of simple things like talking for free. Some characters have skills or specializtions that allow them to have extra AP cards. These often have use requirements, like the Bruiser skill which grants 1 AP that can only be spent on an attack costing 2 or more AP.</p>
+<p>When initiative starts all characters pass their <strong>table sets</strong> to the DM. In addition to AP, the table set can also include special ability or effect cards. The DM shuffles the table sets together to create the <strong>table deck</strong>. The DM pulls a card from the top of the deck and either deals the card to the character/player that it belongs to or follows the rules on the card. When a character is dealt a card they can choose to act, spending however many cards they currently have in their <strong>hand</strong>. They can also just hold on to the card, adding it to their hand. When cards are spent or activated they get placed in the <strong>table discard</strong>. Any character can <strong>interrupt</strong> at any time, spending 1 AP to act immediately. The round ends when the table deck is empty and everyone who still has AP has had a chance to use interrupt. Acting at the end of a round requires using interrupt.</p>
+<p>Cards are <strong>discarded</strong> or <strong>spent</strong> are shuffled together to create the table deck for the next round while cards that are <strong>trashed</strong> or <strong>removed</strong> are not shuffled in at the end of the round and return to the table set after initiative ends completely unless otherwise stated.</p>
+<p><strong>Table Deck</strong>: This is the deck of cards that the DM (or whoever) draws from during initiative. The deck that the whole table uses.</p>
 <p><strong>Table Discard</strong>: The discard pile for the whole table.</p>
-<p><strong>Table Cards</strong>: Each character’s personal set of cards that they add to the table deck when initiative starts.</p>
+<p><strong>Table Set</strong>: Each character’s personal set of cards that they add to the table deck when initiative starts.</p>
 <p><strong>Hand</strong>: The cards that you have been dealt and are holding on to.</p>
-<p><strong>Discard/Pay/Spend</strong>: Cards that have been used or removed that go to the discard and are shuffled together next round to make the table deck.</p>
+<p><strong>Discard/Spend</strong>: Cards that have been used or removed that go to the discard and are shuffled together next round to make the table deck.</p>
 <p><strong>Trashed/Removed</strong>: Cards that have been used or removed and do not get shuffled back in every round.</p>
 <p><strong>Trash</strong>: The trash pile for the whole table.</p>
-<p>Every character has 3 identical cards. The cards say “1 AP” and indicate what character they belong to.</p>
-<p>When initiative starts all characters pass their table sets to the DM. The DM shuffles them together. The DM pulls a card from the top of the deck and deals the card to the character/player that it belongs to. When a character is dealt a card they can choose to act, spending however many cards they want to. They can also just hold on to the card. Cards that are not spent by the end of the round are discarded and shuffled back in.</p>
-<p>If you want to act, speak up before the DM moves on!<br>
-You can spend 1 AP at any time to act immediately.</p>
+<p>If you want to act, speak up before the DM moves on! Remember, you can spend 1 AP at any time to act immediately.</p>
 <section id="multiple-ap-costs" class="level3">
 <h3 class="anchored" data-anchor-id="multiple-ap-costs">Multiple-&gt;AP-&gt;Costs</h3>
-<p>Some types of actions also have multiple AP costs. The first time you do the thing in a round it costs the first amount, the second time it costs the second, etc. These costs are connected with arrows, like this: 1-&gt;2-&gt;3.</p>
+<p>Some types of actions have multiple AP costs. The first time you perform the action in a round it costs the first amount, the second time it costs the second, etc. These costs are connected with arrows, like this: 1-&gt;2-&gt;3.</p>
 <section id="ap-shenanigans-temp-ap-losing-ap-gaining-ap-the-wait-action" class="level4">
 <h4 class="anchored" data-anchor-id="ap-shenanigans-temp-ap-losing-ap-gaining-ap-the-wait-action">AP Shenanigans: Temp AP, Losing AP, Gaining AP, the “Wait” action</h4>
-<p>“Temp AP” must be spend in the same round it is recieved. If you do nothing for a round, regain 1 AP from the trash (if you have lost any).</p>
+<p>“Temp AP” must be spend in the same round it is recieved. If you do nothing for an entire round, regain 1 AP from the trash if you have lost any.</p>
 </section>
 </section>
 <section id="beginning-of-the-round" class="level3">
@@ -817,8 +764,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../book/about/about.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">About</span>
+      <a href="../../book/about/mutiny.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Pardon the Dust</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
