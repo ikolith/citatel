@@ -25,51 +25,53 @@ Character sheet for a "baseline adventurer":
 
 ### Health
 
-Health is X:Y where X is standard health and Y is critical or "crit" health. When a character runs out of standard health, subsequent damage is to crit health. When a character runs out of crit health they are downed and will probably die. One could expect children and the elderly to have health closer to 1:~3. ~5:~12 would make you extremely tough.
+Character health is tracked as X:Y where X is standard health and Y is critical or "crit" health. When a character runs out of standard health all subsequent damage reduces crit health. When a character runs out of crit health they are either killed or, if you are using more forgiving death rules for player characters, they are "downed".
 
 Every point of CON gives you 1 extra crit health and 2 extra standard health.
 
 ### Defense and Movement Speed
 
-Moving costs 1 AP and you move a number of spaces equal to your MOVEMENT. When an enemy rolls to hit you, they roll a check against your DEFENSE.
+Moving costs 1 AP and you move a number of spaces equal to your MOVEMENT SPEED. When an enemy attacks you they roll a check against your DEFENSE, more on that later.
 
 ## Scores
 
-Scores are added to all sorts of rolls, checks, modifiers, the passive score, etc.   Your "passive" score for a given score is 6 + SCORE. There is not a strict limit to how many different attributes or scores a character or setting can have.
+A character's attribute scores are added to rolls, checks, and modifiers as well as the "passive" score. A character's "passive" score for a given attribute is 6 + SCORE. The SCORES a character can have are not limited to what is on the default character sheet.
 
 ### Missing Scores, [special] scores
 
-If you're asked about a score you don't have, your score is 0, unless that score is a [special] score. If you don't have a [special] score you fail any check, contest, roll, whatever related to that score. The [sp] tag is just a shorter version of the [special] tag. MEDICINE is not a [special] score, but PYROMANCY is.
+If you're asked about a score you don't have, your score is 0 unless the score in question has the \[special] tag. If you don't have a \[special] score you fail any check, contest, or roll related to that score. The \[sp] tag is a shorter version of the \[special] tag. MEDICINE is not a \[special] score but PYROMANCY is.
 
 #### "Standard" Scores
 
 "Standard Scores" are a convention for non-[sp] scores that are important for the current setting. This is just a convention, not a strict rule. Some settings might emphasize a TECHNOLOGY score, others might not use that score at all.
 
-## Doing things
+## Checks and Contests
 
-When you do something roll 2d6s and add the relevant score. Tell your result to the DM to find out how your attempt went.
+When a character wants to do something that they might fail at, they roll 2d6s and add the relevant SCORE. The result of the roll is determined by comparing the roll to a Difficulty Score or DS. This is a "check". If their roll is the same or higher than the DS, they succeed.
 
-### "Check" vs "Contest" 
+If two charactes are in direct competition they are in a "contest". They both roll 2d6 and add their scores. The higher score wins. In the case of a tie, they either tie in the game or if that does not make sense they redo the contest.
 
-If one character is rolling to try to do something, that's a check. If two character's are rolling in direct competition, that's a contest. Most rolls are checks. Attacks are checks.
+"Checks" are compared to a DS which is often the passive attribute score of another character. Most rolls, including attacks, are checks. 
 
 ## Crits and More
 
-Terminology. All of these refer to the numbers rolled during some check or contest. These only count if the total passes the difficulty, if you succeed. If the difficulty is 8, matching 2s is just a failure.  
-Only the Crit and Crit Fail are "universal". The rest are triggered by skills, weapons, etc.
+If a character passes their check of wins their contest, their success might be accompanied by secondary effects according to the dice that they rolled. Here are a list of the condition names and their triggers.
 
 **Crit**: Rolling two 6s.  
-
-**Crit Fail**: Rolling two 1s.  
 
 **Matching**: Matching numbers.  
 
 **Half Crit**: Rolling one 6.  
 
-Yes, a Crit also counts as "Matching".  
+A Crit also counts as "Matching". An example of one of these effects is a character who, when dealing a certain damage type, inflicts the \[bleed] condition on half crit. 
+
+There is one condition that can be activated when a character fails, the Crit Fail.
+
+**Crit Fail**: Rolling two 1s.  
+
 Why have all of these special terms and conditions to check? Differing probabilities!
 
-### You Can Probablity Skip This Section  
+<!-- ### You Can Probablity Skip This Section  
 
 A roll of two d6s can resolve in 36 different ways, 36 combinations of dice. I will refer to these as "cases". Assuming a roll of 7 passes (most common DC), 21 of these cases pass (sum to >=7).
 
@@ -80,46 +82,47 @@ A roll of two d6s can resolve in 36 different ways, 36 combinations of dice. I w
 | Matching | 3 | 14.29% | 8.3% |
 | Half Crit | 6 | 28.6% | 16.7% |
 
-Didn't verify this. Winged it. Might be wrong.
+Didn't verify this. Winged it. Might be wrong. -->
 
 ### Crit and Crit Fail
 
-Crit Fails are maximally bad. You did as bad as you could do (~3% probability).  
+Crit Fails are maximally bad. You did as badly as you could have done (~3% probability).  
 
-Double 6s are good. You did as good as you could have. If this is an attack roll, do 1 extra crit damage. 
+Double 6s are good. You did as good as you could have. If this is an attack roll, do 1 extra crit damage on top of any other effects. 
 
-## Initiative and AP
+## Initiative and AP (Action Points)
 
-You have 3 AP cards, you use AP to do things. Most things cost 1 AP, you can a reasonable amount of simple things like talking for free.
+AP is used during "initiative". Initiative is any situation where many characters want to do things at the same time and the order in which things happen is important. Initiative is most often combat, but it can include other time sensitive events like chases or races.
 
-**Table Deck**: The deck of cards that the DM (or whoever) draws from during initiative. The deck that the whole table uses.  
+Ever character has 3 AP cards unless otherwise noted. The cards say "1 AP" and indicate what character they belong to with a name, a symbol, or both. Most actions cost 1 AP, but you can do a reasonable amount of simple things like talking for free. Some characters have skills or specializtions that allow them to have extra AP cards. These often have use requirements, like the Bruiser skill which grants 1 AP that can only be spent on an attack costing 2 or more AP.
+
+When initiative starts all characters pass their **table sets** to the DM. In addition to AP, the table set can also include special ability or effect cards. The DM shuffles the table sets together to create the **table deck**. The DM pulls a card from the top of the deck and either deals the card to the character/player that it belongs to or follows the rules on the card. When a character is dealt a card they can choose to act, spending however many cards they currently have in their **hand**. They can also just hold on to the card, adding it to their hand. When cards are spent or activated they get placed in the **table discard**. Any character can **interrupt** at any time, spending 1 AP to act immediately. The round ends when the table deck is empty and everyone who still has AP has had a chance to use interrupt. Acting at the end of a round requires using interrupt.
+
+Cards are **discarded** or **spent** are shuffled together to create the table deck for the next round while cards that are **trashed** or **removed** are not shuffled in at the end of the round and return to the table set after initiative ends completely unless otherwise stated.
+
+**Table Deck**: This is the deck of cards that the DM (or whoever) draws from during initiative. The deck that the whole table uses.  
 
 **Table Discard**: The discard pile for the whole table.  
 
-**Table Cards**: Each character's personal set of cards that they add to the table deck when initiative starts.  
+**Table Set**: Each character's personal set of cards that they add to the table deck when initiative starts.  
 
 **Hand**: The cards that you have been dealt and are holding on to.  
 
-**Discard/Pay/Spend**: Cards that have been used or removed that go to the discard and are shuffled together next round to make the table deck.  
+**Discard/Spend**: Cards that have been used or removed that go to the discard and are shuffled together next round to make the table deck.  
 
 **Trashed/Removed**: Cards that have been used or removed and do not get shuffled back in every round.  
 
 **Trash**: The trash pile for the whole table.  
 
-Every character has 3 identical cards. The cards say "1 AP" and indicate what character they belong to.  
-
-When initiative starts all characters pass their table sets to the DM. The DM shuffles them together. The DM pulls a card from the top of the deck and deals the card to the character/player that it belongs to. When a character is dealt a card they can choose to act, spending however many cards they want to. They can also just hold on to the card. Cards that are not spent by the end of the round are discarded and shuffled back in.  
-
-If you want to act, speak up before the DM moves on!  
-You can spend 1 AP at any time to act immediately.  
+If you want to act, speak up before the DM moves on! Remember, you can spend 1 AP at any time to act immediately.  
 
 ### Multiple->AP->Costs
 
-Some types of actions also have multiple AP costs. The first time you do the thing in a round it costs the first amount, the second time it costs the second, etc. These costs are connected with arrows, like this: 1->2->3.
+Some types of actions have multiple AP costs. The first time you perform the action in a round it costs the first amount, the second time it costs the second, etc. These costs are connected with arrows, like this: 1->2->3.
 
 #### AP Shenanigans: Temp AP, Losing AP, Gaining AP, the "Wait" action
 
-"Temp AP" must be spend in the same round it is recieved. If you do nothing for a round, regain 1 AP from the trash (if you have lost any).
+"Temp AP" must be spend in the same round it is recieved. If you do nothing for an entire round, regain 1 AP from the trash if you have lost any.
 
 ### "Beginning of the Round"
 

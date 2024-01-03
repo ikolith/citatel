@@ -44,14 +44,14 @@ website:
       - section: "About"
         contents:
           - book/about/mutiny.qmd
-          - book/about/about.qmd
+          #- book/about/about.qmd
       - section: "Rules"
         contents:
           - book/actlite/sixtem.qmd
           - book/actlite/tactile.qmd
           - book/actlite/social.qmd
           - book/actlite/mechanics-misc.qmd
-          - book/actlite/talaje.qmd
+          #- book/actlite/talaje.qmd
       - section: "Skills, Weapons, Items"
         contents:
           - book/stuff/basic.qmd

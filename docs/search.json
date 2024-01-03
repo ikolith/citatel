@@ -165,21 +165,21 @@
     "href": "book/actlite/sixtem.html#characters",
     "title": "Sixtem",
     "section": "Characters",
-    "text": "Characters\nCharacter sheet for a “baseline adventurer”:\nHEALTH: 3:9\nDEFENSE: 6\nMOVEMENT SPEED: 4\n\n\n\nATTRIBUTE\nSCORE\n\n\n\n\nSTR(ENGTH)\n0\n\n\nAGI(LITY)\n0\n\n\nDEX(TERITY)\n0\n\n\nCON(STITUTION)\n0\n\n\nPER(CEPTION)\n0\n\n\nSOC(IAL)\n0\n\n\n\n\nHealth\nHealth is X:Y where X is standard health and Y is critical or “crit” health. When a character runs out of standard health, subsequent damage is to crit health. When a character runs out of crit health they are downed and will probably die. One could expect children and the elderly to have health closer to 1:~3. 5:12 would make you extremely tough.\nEvery point of CON gives you 1 extra crit health and 2 extra standard health.\n\n\nDefense and Movement Speed\nMoving costs 1 AP and you move a number of spaces equal to your MOVEMENT. When an enemy rolls to hit you, they roll a check against your DEFENSE."
+    "text": "Characters\nCharacter sheet for a “baseline adventurer”:\nHEALTH: 3:9\nDEFENSE: 6\nMOVEMENT SPEED: 4\n\n\n\nATTRIBUTE\nSCORE\n\n\n\n\nSTR(ENGTH)\n0\n\n\nAGI(LITY)\n0\n\n\nDEX(TERITY)\n0\n\n\nCON(STITUTION)\n0\n\n\nPER(CEPTION)\n0\n\n\nSOC(IAL)\n0\n\n\n\n\nHealth\nCharacter health is tracked as X:Y where X is standard health and Y is critical or “crit” health. When a character runs out of standard health all subsequent damage reduces crit health. When a character runs out of crit health they are either killed or, if you are using more forgiving death rules for player characters, they are “downed”.\nEvery point of CON gives you 1 extra crit health and 2 extra standard health.\n\n\nDefense and Movement Speed\nMoving costs 1 AP and you move a number of spaces equal to your MOVEMENT SPEED. When an enemy attacks you they roll a check against your DEFENSE, more on that later."
   },
   {
     "objectID": "book/actlite/sixtem.html#scores",
     "href": "book/actlite/sixtem.html#scores",
     "title": "Sixtem",
     "section": "Scores",
-    "text": "Scores\nScores are added to all sorts of rolls, checks, modifiers, the passive score, etc. Your “passive” score for a given score is 6 + SCORE. There is not a strict limit to how many different attributes or scores a character or setting can have.\n\nMissing Scores, [special] scores\nIf you’re asked about a score you don’t have, your score is 0, unless that score is a [special] score. If you don’t have a [special] score you fail any check, contest, roll, whatever related to that score. The [sp] tag is just a shorter version of the [special] tag. MEDICINE is not a [special] score, but PYROMANCY is.\n\n“Standard” Scores\n“Standard Scores” are a convention for non-[sp] scores that are important for the current setting. This is just a convention, not a strict rule. Some settings might emphasize a TECHNOLOGY score, others might not use that score at all."
+    "text": "Scores\nA character’s attribute scores are added to rolls, checks, and modifiers as well as the “passive” score. A character’s “passive” score for a given attribute is 6 + SCORE. The SCORES a character can have are not limited to what is on the default character sheet.\n\nMissing Scores, [special] scores\nIf you’re asked about a score you don’t have, your score is 0 unless the score in question has the [special] tag. If you don’t have a [special] score you fail any check, contest, or roll related to that score. The [sp] tag is a shorter version of the [special] tag. MEDICINE is not a [special] score but PYROMANCY is.\n\n“Standard” Scores\n“Standard Scores” are a convention for non-[sp] scores that are important for the current setting. This is just a convention, not a strict rule. Some settings might emphasize a TECHNOLOGY score, others might not use that score at all."
   },
   {
     "objectID": "book/actlite/sixtem.html#doing-things",
     "href": "book/actlite/sixtem.html#doing-things",
     "title": "Sixtem",
     "section": "Doing things",
-    "text": "Doing things\nWhen you do something roll 2d6s and add the relevant score. Tell your result to the DM to find out how your attempt went.\n\n“Check” vs “Contest”\nIf one character is rolling to try to do something, that’s a check. If two character’s are rolling in direct competition, that’s a contest. Most rolls are checks. Attacks are checks."
+    "text": "Doing things\nWhen a character wants to do something that might fail, they roll 2d6s and add the relevant SCORE. The result of the roll is determined by\n\n“Check” vs “Contest”\nIf one character is rolling, that’s a check. If two characters are rolling in direct competition, that’s a contest. Most rolls are checks. Attacks are checks."
   },
   {
     "objectID": "book/actlite/sixtem.html#crits-and-more",
