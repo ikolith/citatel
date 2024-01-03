@@ -56,5 +56,5 @@ website:
         contents:
           - book/stuff/basic.qmd
           - book/stuff/spoilers.qmd
-      - section: "Menagerie"
-        contents: "book/menagerie/*.qmd"
+      # - section: "Menagerie"
+      #   contents: "book/menagerie/*.qmd"
