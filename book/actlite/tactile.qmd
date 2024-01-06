@@ -59,9 +59,12 @@ Drawing a weapon costs 1 AP. Picking a weapon up off the ground costs 1 AP and y
 
 If you’re below a weapon’s requirements, you get no score based damage scaling (+SCORE) when using that weapon. Your max  To-Hit modifier is 0 with that weapon. For every point you are below a SCORE requirement, halve the damage you do rounding up. If you would do 1 damage you cannot wield the weapon.
 
-### Two-handing a \[one-handed] weapon, one-handing a \[two-handed] weapon
+<!-- ### Two-handing a \[one-handed] weapon, one-handing a \[two-handed] weapon
 
 If you’re 2 STR above the requirements for a \[two-handed] weapon, you can effectively wield it with one hand. If you use two hands on a \[one-handed] weapon, raise your effective STR with the weapon by 2. 
+
+im not sure that this is a good rule, it seems like it should be broken up into a skill for the very strong and a benefit for those small enough to fit two hands on a one handed weapon.
+ -->
 
 ### Throwing a spear or a dagger without a specific \[thrown] move
 
