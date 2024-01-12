@@ -11,9 +11,7 @@ import os
 from tinydb import Query
 
 from citutils import docs as dc
-from citutils.database import create_tinydb
 
-db = create_tinydb(os.path.join("..","..","source.json"))
 basic =  Query().meta_tags.any("basic")
 item = Query().meta_tags.any("item")
 weapon = Query().meta_tags.any("weapon")
