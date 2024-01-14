@@ -8,9 +8,8 @@ from traitlets import traitlets
 from citutils.my_types import Entity
 import citutils.database as dt
 import citutils.cards as cr
-import citutils.parsers as pr
 
-# i shouldnt neet do this, but for some reason i cant get Entity to be a normal dict! TODO: this
+# i shouldnt neetd do this, but for some reason i cant get Entity to be a normal dict! TODO: this
 entity_dict = {
     "attacks": list,
     "clean_name": str,

@@ -1,4 +1,4 @@
-from typing import NewType, TypedDict, Union, Optional, Required
+from typing import NewType, TypedDict, Union, Optional, Required, Any
 
 
 class Curly(TypedDict):
@@ -36,6 +36,28 @@ class Entity(TypedDict, total=False):
     to_hit: str
     full_text: str
     table: Table
+
+
+class Formatting(TypedDict, total=False):
+    attacks: dict[str, Any]
+    clean_name: dict[str, Any]
+    cost: dict[str, Any]
+    effect: dict[str, Any]
+    encumbrance: dict[str, Any]
+    flavor_text: dict[str, Any]
+    holds: dict[str, Any]
+    hp: dict[str, Any]
+    meta_tags: dict[str, Any]
+    name: dict[str, Any]
+    requirements: dict[str, Any]
+    scores: dict[str, Any]
+    skills: dict[str, Any]
+    speed: dict[str, Any]
+    tags: dict[str, Any]
+    target: dict[str, Any]
+    to_hit: dict[str, Any]
+    full_text: dict[str, Any]
+    table: dict[str, Any]
 
 
 Entities = NewType("Entities", dict[str, Entity])

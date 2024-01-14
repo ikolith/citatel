@@ -6,8 +6,7 @@ import re
 from tinydb import TinyDB, where, Query
 
 import citutils.my_types as ty
-import citutils.parsers as p
-import citutils.citutils.text as tx
+import citutils.text as tx
 import citutils.dice_utils as du
 
 
@@ -54,12 +53,10 @@ class DB(TinyDB):
 
         if os.path.exists(output_path):
             os.remove(output_path)
-
         with open(input_path, "r") as f:
             data = json.load(f)
-
         build_db(data)
-
+        
         for doc in self.all():
             if "table" in doc.keys():
                 table = get_expanded_outcomes(doc["table"])
@@ -71,57 +68,6 @@ class DB(TinyDB):
 
     # parsers! doesnt use the tinydb features
 
-    @staticmethod
-    def parse_curlies(text: str) -> list[ty.Curly]:
-        curlies = re.findall(r"{[^}]*}", text)
-        dice_pattern = r"\d*?d\d+x?[+-]?\d*"
-        curlies_parsed = []
-        if curlies:
-            for match in curlies:
-                # Check for entity...
-                quantity = 1
-                if (
-                    e := re.search(r"(?<=\s|{)([a-zA-Z_',;:\-()\s]+)", match)
-                ) is not None:
-                    entity = tx.get_clean_name(e.group())
-                else:
-                    entity = ""
-                # Check for quantity dice (leading dice)...
-                if q := re.search(rf"(?<={{){dice_pattern}", match):
-                    quantity_dice = q.group()
-                    quantity = du.die_parser_roller(quantity_dice)
-                # Check for number
-                else:
-                    if entity == "":
-                        continue
-                    elif (n := re.search(r"(?<={)\d+(?=\s)", match)) is not None:
-                        quantity_dice = ""
-                        quantity = int(n.group())
-                    else:
-                        quantity_dice = ""
-                if entity and (t := re.search(rf"({dice_pattern})(?=}})", match)):
-                    table_dice = t.group()
-                    table_result = du.die_parser_roller(table_dice)
-                elif entity and (t := re.search(r"(\d+)(?=})", match)):
-                    table_dice = ""
-                    table_result = int(t.group())
-                else:
-                    table_dice = ""
-                    table_result = None
-                curlies_parsed.append(
-                    ty.Curly(
-                        {
-                            "match": match,
-                            "quantity_dice": quantity_dice,
-                            "table_dice": table_dice,
-                            "entity": entity,
-                            "quantity": quantity,
-                            "table_result": table_result,
-                        }
-                    )
-                )
-        return curlies_parsed
-
     def single_curly_parser(
         self,
         text: str,
@@ -130,7 +76,7 @@ class DB(TinyDB):
     ) -> str:
         if not (text.startswith("{") and text.endswith("}")):
             text = "{" + text + "}"
-        curlies_parsed = self.parse_curlies(text)
+        curlies_parsed = tx.parse_curlies(text)
         assert len(curlies_parsed) == 1
         base_curly = curlies_parsed[0]
         # case when only die roll is present
@@ -138,6 +84,8 @@ class DB(TinyDB):
             return str(du.die_parser_roller(base_curly["quantity_dice"]))
         # all other cases
         return self.generate_entity_tree_text(base_curly, expand_entities, roll_dice)
+
+    # tinydb querying
 
     def fetch_by_name(self, name: str):
         """Fetches an entity by name by first converting it to clean_name.
@@ -239,7 +187,7 @@ class DB(TinyDB):
                     entity_text += (
                         f"Table Result:  \n" + du.roll_on_table(entity, curly) + "\n"
                     )
-                curlies_parsed = self.parse_curlies(entity_text)
+                curlies_parsed = tx.parse_curlies(entity_text)
                 if any(
                     [inner_curly["quantity_dice"] for inner_curly in curlies_parsed]
                 ) or (has_table and roll_dice):
@@ -271,7 +219,7 @@ class DB(TinyDB):
                         else:
                             curly_queue += [[curly] * curly["quantity"]]
                 else:
-                    curly_queue.append(self.parse_curlies(entity_text))
+                    curly_queue.append(tx.parse_curlies(entity_text))
                 if parent_id >= 0:
                     entity_tree[parent_id]["children"].append(len(entity_tree) - 1)
                 entity_tree.append(
@@ -296,7 +244,7 @@ class DB(TinyDB):
         html_characters: bool = False,
     ) -> str:
         def text_has_children(text: str) -> bool:
-            return any([curly["entity"] for curly in self.parse_curlies(text)])
+            return any([curly["entity"] for curly in tx.parse_curlies(text)])
 
         base_quantity = base_curly["quantity"]
         # just need this line for the fancy name:
@@ -307,7 +255,7 @@ class DB(TinyDB):
         if not expand_entities or not text_has_children(base_entity_text):
             if roll_dice:
                 n_base_entity = str(base_quantity) + " " + base_entity["name"] + "  \n"
-                curlies_parsed = self.parse_curlies(base_entity_text)
+                curlies_parsed = tx.parse_curlies(base_entity_text)
                 return n_base_entity + self.get_replacement_text(
                     base_text=base_entity_text, curlies_parsed=curlies_parsed
                 )
@@ -353,5 +301,5 @@ class DB(TinyDB):
             results = sorted(results, key=lambda x: x["name"])
         text = ""
         for e in results:
-            text += self.generate_entity_text(e, text_type, True, True, False) + "\n"
+            text += tx.generate_entity_text(e, text_type, True, True, False) + "\n"
         return text

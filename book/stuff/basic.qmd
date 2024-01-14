@@ -10,7 +10,9 @@ import os
 
 from tinydb import Query
 
-from citutils import docs as dc
+from citutils.database import DB
+
+db = DB(os.path.join("..","..","source.json"))
 
 basic =  Query().meta_tags.any("basic")
 item = Query().meta_tags.any("item")
@@ -18,10 +20,10 @@ weapon = Query().meta_tags.any("weapon")
 skill = Query().meta_tags.any("skill")
 
 print("## Skills")
-print(dc.create_query_section(query = skill & basic, sort = False))
+print(db.create_query_text_section(query = skill & basic, sort = False))
 print("## Weapons")
-print(dc.create_query_section(query = weapon & basic)) # not clear any of it should be sorted??
+print(db.create_query_text_section(query = weapon & basic)) # not clear any of it should be sorted??
 print("## Items")
-print(dc.create_query_section(query = item & basic))
+print(db.create_query_text_section(query = item & basic))
 
 ```

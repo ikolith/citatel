@@ -6,8 +6,62 @@ from collections.abc import Callable
 from pylatex.utils import NoEscape
 
 import citutils.my_types as ty
-import citutils.database as dt
+import citutils.text as tx
 import citutils.dice_utils as du
+
+# parsing
+
+
+def parse_curlies(text: str) -> list[ty.Curly]:
+    curlies = re.findall(r"{[^}]*}", text)
+    dice_pattern = r"\d*?d\d+x?[+-]?\d*"
+    curlies_parsed = []
+    if curlies:
+        for match in curlies:
+            # Check for entity...
+            quantity = 1
+            if (e := re.search(r"(?<=\s|{)([a-zA-Z_',;:\-()\s]+)", match)) is not None:
+                entity = tx.get_clean_name(e.group())
+            else:
+                entity = ""
+            # Check for quantity dice (leading dice)...
+            if q := re.search(rf"(?<={{){dice_pattern}", match):
+                quantity_dice = q.group()
+                quantity = du.die_parser_roller(quantity_dice)
+            # Check for number
+            else:
+                if entity == "":
+                    continue
+                elif (n := re.search(r"(?<={)\d+(?=\s)", match)) is not None:
+                    quantity_dice = ""
+                    quantity = int(n.group())
+                else:
+                    quantity_dice = ""
+            if entity and (t := re.search(rf"({dice_pattern})(?=}})", match)):
+                table_dice = t.group()
+                table_result = du.die_parser_roller(table_dice)
+            elif entity and (t := re.search(r"(\d+)(?=})", match)):
+                table_dice = ""
+                table_result = int(t.group())
+            else:
+                table_dice = ""
+                table_result = None
+            curlies_parsed.append(
+                ty.Curly(
+                    {
+                        "match": match,
+                        "quantity_dice": quantity_dice,
+                        "table_dice": table_dice,
+                        "entity": entity,
+                        "quantity": quantity,
+                        "table_result": table_result,
+                    }
+                )
+            )
+    return curlies_parsed
+
+
+# cleaning
 
 
 def get_clean_name(name: str) -> str:
@@ -72,32 +126,32 @@ def generate_entity_text(
         for f in func_sets[text_type]:
             for k, v in entity.items():
                 if type(v) == list:
-                    entity[k] = map(lambda v: f(v), v)
+                    entity[k] = map(lambda v: f(v), v)  # type: ignore
                 elif type(v) == str:
-                    entity[k] = f(v)
+                    entity[k] = f(v)  # type: ignore
         return entity
 
     def generate_md(
         entity: ty.Entity,
-        formatting: dict = formatting_dict_md,
+        formatting: ty.Formatting = formatting_dict_md,
         key_order: list = key_order,
     ) -> str:
         result_text = ""
         for k in key_order:
             if k in entity.keys():
-                result_text += if_exists_format_md(text=entity[k], **formatting[k])
+                result_text += if_exists_format_md(text=entity[k], **formatting[k])  # type: ignore
         return result_text
 
     def generate_latex(
         entity: ty.Entity,
-        formatting: dict[str, dict] = formatting_dict_latex,
+        formatting: ty.Formatting = formatting_dict_latex,
         footer: bool = True,
         key_order: list = key_order,
     ) -> str:
         result_text = ""
         for k in key_order:
             if k in entity.keys():
-                result_text += if_exists_format_latex(text=entity[k], **formatting[k])
+                result_text += if_exists_format_latex(text=entity[k], **formatting[k])  # type: ignore
         if footer and "encumbrance" in entity.keys():
             result_text += rf"""\vfill
             \hfill {"Enc: " + entity["encumbrance"]} 
@@ -212,10 +266,10 @@ def format_table_latex(table: ty.Table) -> str:
 
 
 def if_exists_format_latex(
-    text: str | list = None,
-    text_formatter: Callable = lambda text: text,
+    text: str | list = "",
+    text_formatter: Callable[[str | list], str] = lambda text: str(text),
     field_text: str = "",
-    field_text_formatter: Callable = lambda text: text,
+    field_text_formatter: Callable[[str], str] = lambda text: str(text),
     add_newline: bool = True,
     add_skipline: bool = False,
     hide: bool = False,
@@ -230,7 +284,7 @@ def if_exists_format_latex(
     return text
 
 
-formatting_dict_latex: dict[str, dict] = {
+formatting_dict_latex: ty.Formatting = {
     "attacks": {"text_formatter": attacks_latex},
     "clean_name": {"hide": True},
     "cost": {
@@ -282,7 +336,7 @@ formatting_dict_latex: dict[str, dict] = {
 def if_exists_format_md(
     text: str | list,
     text_wrapper: str = "",
-    text_formatter: Callable = lambda text: text,
+    text_formatter: Callable[[str | list], str] = lambda text: str(text),
     field_text: str = "",
     field_text_wrapper: str = "**",  # note that this one is the only one that doesnt default empty
     prefix: str = "",
@@ -317,7 +371,7 @@ def format_full_text_md(entity: dict) -> str:
         return ""
 
 
-formatting_dict_md: dict[str, dict] = {
+formatting_dict_md: ty.Formatting = {
     "attacks": {"text_formatter": lambda x: ", ".join(x)},
     "clean_name": {"hide": True},
     "cost": {"field_text": "Cost", "text_formatter": lambda x: ", ".join(x)},

@@ -1,6 +1,6 @@
 import pytest
-import citutils.parsers as p
-import citutils.database as dt
+from citutils.database import DB
+import citutils.text as tx
 
 
 @pytest.fixture
@@ -12,13 +12,14 @@ def test_db(tmp_path):
     )  # Use the tmp_path for the test database
 
     # Call create_tinydb with the specified input and output paths
-    db = dt.create_tinydb(input_path, output_path)
+    db = DB()
 
     yield db  # Yield the database object to the tests
-    db.close()  # Close the database when the tests are done
+    db.close()  # Close the database when the tests are
 
 
-db = dt.create_tinydb()
+# not sure we need an outside of funcs db
+db = DB()  # dt.create_tinydb()
 
 
 def test_parse_curlies():
@@ -54,14 +55,14 @@ test test test {4d1}
             "table_result": None,
         },
     ]
-    print(p.parse_curlies(test_str))
-    assert p.parse_curlies(test_str) == result
+    print(db.parse_curlies(test_str))
+    assert db.parse_curlies(test_str) == result
 
 
 def test_fetch_by_name(test_db):
     # remake asserts later
-    p.single_curly_parser(db, "{Man From Saint Ives}", False, False).strip()
-    p.single_curly_parser(db, "{Man From Saint Ives}", True, False)
+    tx.single_curly_parser(db, "{Man From Saint Ives}", False, False).strip()
+    tx.single_curly_parser(db, "{Man From Saint Ives}", True, False)
 
 
 # test_parse_curlies()

@@ -12,8 +12,8 @@ Dogmen are gangly hunched little weirdos with scrubby yellow fur, big beady blac
 ```{python}
 import os
 from tinydb import Query
-from citutils import docs as dc
-
-print(dc.create_query_section(query = Query().meta_tags.any("dogman")))
+from citutils.database import DB
+db = DB(os.path.join("..","..","source.json"))
+print(db.create_query_text_section(query = Query().meta_tags.any("dogman")))
 ```
 

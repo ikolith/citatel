@@ -195,9 +195,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#health" id="toc-health" class="nav-link" data-scroll-target="#health">Health</a></li>
   <li><a href="#defense-and-movement-speed" id="toc-defense-and-movement-speed" class="nav-link" data-scroll-target="#defense-and-movement-speed">Defense and Movement Speed</a></li>
   </ul></li>
-  <li><a href="#scores" id="toc-scores" class="nav-link" data-scroll-target="#scores">Scores</a>
+  <li><a href="#attribute-scores" id="toc-attribute-scores" class="nav-link" data-scroll-target="#attribute-scores">Attribute Scores</a>
   <ul class="collapse">
-  <li><a href="#missing-scores-special-scores" id="toc-missing-scores-special-scores" class="nav-link" data-scroll-target="#missing-scores-special-scores">Missing Scores, [special] scores</a></li>
+  <li><a href="#getting-new-attributes-raising-your-attribute-scores" id="toc-getting-new-attributes-raising-your-attribute-scores" class="nav-link" data-scroll-target="#getting-new-attributes-raising-your-attribute-scores">Getting New Attributes, Raising Your Attribute Scores</a></li>
   </ul></li>
   <li><a href="#checks-and-contests" id="toc-checks-and-contests" class="nav-link" data-scroll-target="#checks-and-contests">Checks and Contests</a></li>
   <li><a href="#crits-and-more" id="toc-crits-and-more" class="nav-link" data-scroll-target="#crits-and-more">Crits and More</a>
@@ -284,21 +284,66 @@ ul.task-list li input[type="checkbox"] {
 <p>Moving costs 1 AP and you move a number of spaces equal to your MOVEMENT SPEED. When an enemy attacks you they roll a check against your DEFENSE, more on that later.</p>
 </section>
 </section>
-<section id="scores" class="level2">
-<h2 class="anchored" data-anchor-id="scores">Scores</h2>
-<p>A character’s attribute scores are added to rolls, checks, and modifiers as well as the “passive” score. A character’s “passive” score for a given attribute is 6 + SCORE. The SCORES a character can have are not limited to what is on the default character sheet.</p>
-<section id="missing-scores-special-scores" class="level3">
-<h3 class="anchored" data-anchor-id="missing-scores-special-scores">Missing Scores, [special] scores</h3>
-<p>If you’re asked about a score you don’t have, your score is 0 unless the score in question has the [special] tag. If you don’t have a [special] score you fail any check, contest, or roll related to that score. The [sp] tag is a shorter version of the [special] tag. MEDICINE is not a [special] score but PYROMANCY is.</p>
-<section id="standard-scores" class="level4">
-<h4 class="anchored" data-anchor-id="standard-scores">“Standard” Scores</h4>
-<p>“Standard Scores” are a convention for non-[sp] scores that are important for the current setting. This is just a convention, not a strict rule. Some settings might emphasize a TECHNOLOGY score, others might not use that score at all.</p>
-</section>
+<section id="attribute-scores" class="level2">
+<h2 class="anchored" data-anchor-id="attribute-scores">Attribute Scores</h2>
+<p>A character’s basic qualities or problem solving tools are described by the attributes they have and the scores given to those attributes. If a character is missing an attribute from their sheet they cannot make checks using that attribute and they automatically fail any contest related to that score. What this represents is that, as a character, they do not use that attribute to solve problems. A pack animal does not have any SOCial or any DEXterity. Scores can be negative. Having an attribute with a negative score is more useful than not having that score at all. When you create your character, your species and background will determine what attributes and scores you start with.</p>
+<p>A character’s attribute scores are added to rolls, checks, and modifiers as well as the “passive” score. A character’s “passive” score for a given attribute is 6 + SCORE.</p>
+<section id="getting-new-attributes-raising-your-attribute-scores" class="level3">
+<h3 class="anchored" data-anchor-id="getting-new-attributes-raising-your-attribute-scores">Getting New Attributes, Raising Your Attribute Scores</h3>
+<p>The attributes a character can have are not limited to what is on the default character sheet. There are others, such as MEDicine or PYROmancy. Some scores are harder to obtain than others, check the rules for a given score in <!-- should have a link or some better info here --> the skills page to see the requirements.</p>
+<p>All of the following attribute score rules are “unless otherwise stated” by the score page. Your score in a given attribute starts at -2 when you acquire it. Skill Points or “SP” are used both to buy skills and raise attribute scores. Each Skill is priced individually, but they typically cost less than 10 SP. The price for raising an attribute score is 10 SP while the score is negative. Once your score reaches 0, every subsequent increase costs an amount of SP equal to the new score times 10. That means that going from -1 to 0 costs 10 SP, going from 0 to 1 costs 10 SP, going from 1 to 2 costs 20 SP, going from 2 to 3 costs 30 SP and so on.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Attribute Score</th>
+<th>Cost</th>
+<th>Total Cost to Reach Score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>-2</td>
+<td>10</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>-1</td>
+<td>10</td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td>0</td>
+<td>10</td>
+<td>30</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>10</td>
+<td>40</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>20</td>
+<td>60</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>30</td>
+<td>90</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>40</td>
+<td>130</td>
+</tr>
+</tbody>
+</table>
+<!-- in the fucking... attribute section -->
 </section>
 </section>
 <section id="checks-and-contests" class="level2">
 <h2 class="anchored" data-anchor-id="checks-and-contests">Checks and Contests</h2>
-<p>When a character wants to do something that they might fail at, they roll 2d6s and add the relevant SCORE. The result of the roll is determined by comparing the roll to a Difficulty Score or DS. This is a “check”. If their roll is the same or higher than the DS, they succeed.</p>
+<p>When a character wants to do something using an attribute they roll 2d6s and add the relevant SCORE. The result of the roll is determined by comparing the roll to a Difficulty Score or DS. This is a “check”. If their roll is the same or higher than the DS, they succeed.</p>
 <p>If two charactes are in direct competition they are in a “contest”. They both roll 2d6 and add their scores. The higher score wins. In the case of a tie, they either tie in the game or if that does not make sense they redo the contest.</p>
 <p>“Checks” are compared to a DS which is often the passive attribute score of another character. Most rolls, including attacks, are checks.</p>
 </section>
