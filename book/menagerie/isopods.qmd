@@ -54,11 +54,9 @@ They use their long powerful fore-limbs to throw out rope darts or barbed blades
 
 Most of the content needs to be rewritten for the new rules, so it won't show up here yet.
 ```{python}
-
-
+import os
 from tinydb import Query
-from citutils import docs as dc
-print(dc.create_query_section(query = Query().meta_tags.any("isopod")))
-
-
+from citutils.database import DB
+db = DB(os.path.join("..","..","source.json"))
+print(db.create_query_text_section(query = Query().meta_tags.any("isopod")))
 ```

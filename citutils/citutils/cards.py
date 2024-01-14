@@ -7,9 +7,8 @@ from pylatex.base_classes import Arguments, Options, CommandBase
 from pylatex.package import Package
 from pylatex.utils import NoEscape
 
-import citutils.parsers as tu
 import citutils.my_types as ty
-import citutils.text_generators as ge
+import citutils.citutils.text as ge
 import citutils.database as dt
 
 

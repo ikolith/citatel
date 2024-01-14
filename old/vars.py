@@ -93,7 +93,6 @@ There will probably be better online documentation generators down the line. Thi
 
 # doc dicts for generated docs
 
-
 getting_started_docs_front_text = """
 If you haven't read the [rules](../docs/_pages/rules_and_resources/rules) you should do that first.  
 

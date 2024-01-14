@@ -1,4 +1,4 @@
-from typing import NewType, TypedDict, Union
+from typing import NewType, TypedDict, Union, Optional, Required, Any
 
 
 class Curly(TypedDict):
@@ -11,11 +11,9 @@ class Curly(TypedDict):
 
 
 class Table(TypedDict, total=False):
-    roll: str  # optional
-    outcomes: dict[int, str]  # required
-    # this optional/doable setup is doable in python 3.11...
-    # but discord.py doesn't support 3.11,
-    # so they're just all optional because total=False. Sad!
+    roll: Optional[str]
+    outcomes: dict[Union[int, str], str]  # required
+    expanded_outcomes: dict[int, str]
 
 
 class Entity(TypedDict, total=False):
@@ -28,8 +26,7 @@ class Entity(TypedDict, total=False):
     holds: str
     hp: str
     meta_tags: list
-    name: str  # this would be required, everything else would be optional
-    # if i could use python 3.11! discord.py!!!
+    name: Required[str]
     requirements: list
     scores: list
     skills: list
@@ -39,6 +36,28 @@ class Entity(TypedDict, total=False):
     to_hit: str
     full_text: str
     table: Table
+
+
+class Formatting(TypedDict, total=False):
+    attacks: dict[str, Any]
+    clean_name: dict[str, Any]
+    cost: dict[str, Any]
+    effect: dict[str, Any]
+    encumbrance: dict[str, Any]
+    flavor_text: dict[str, Any]
+    holds: dict[str, Any]
+    hp: dict[str, Any]
+    meta_tags: dict[str, Any]
+    name: dict[str, Any]
+    requirements: dict[str, Any]
+    scores: dict[str, Any]
+    skills: dict[str, Any]
+    speed: dict[str, Any]
+    tags: dict[str, Any]
+    target: dict[str, Any]
+    to_hit: dict[str, Any]
+    full_text: dict[str, Any]
+    table: dict[str, Any]
 
 
 Entities = NewType("Entities", dict[str, Entity])

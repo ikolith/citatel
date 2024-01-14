@@ -8,9 +8,8 @@ from traitlets import traitlets
 from citutils.my_types import Entity
 import citutils.database as dt
 import citutils.cards as cr
-import citutils.parsers as pr
 
-# i shouldnt neet do this, but for some reason i cant get Entity to be a normal dict! TODO: this
+# i shouldnt neetd do this, but for some reason i cant get Entity to be a normal dict! TODO: this
 entity_dict = {
     "attacks": list,
     "clean_name": str,
@@ -106,8 +105,8 @@ def create_single_curly_ui(db):
         if tw_v := curly_tw.value:
             with output:
                 output.clear_output()
-                res = pr.single_curly_parser(
-                    db, curly_tw.value, expand_entities_cb.value, roll_dice_cb.value
+                res = db.single_curly_parser(
+                    curly_tw.value, expand_entities_cb.value, roll_dice_cb.value
                 )
                 display(Markdown(res))
 
@@ -189,8 +188,8 @@ def create_filter_ui(db, fields, unique_array_field_values, preselect_basic=True
         for widg in text_widgets + sm_widgets + meta_tags_widget:
             if v := widg.value:
                 filter_params[widg.description] = v
-        results = dt.filter_entities(
-            db, list(filter_params.keys()), list(filter_params.values())
+        results = db.filter_entities(
+            list(filter_params.keys()), list(filter_params.values())
         )
         with output:
             output.clear_output()
