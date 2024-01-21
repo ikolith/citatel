@@ -2,6 +2,9 @@ import itertools
 import re
 import random
 from typing import Union
+from collections import Counter
+import heapq
+from functools import cache
 
 import citutils.my_types as ty
 from random import randint
@@ -35,6 +38,73 @@ def all_rolls(
         return {i: roll_counts[i] / sum(roll_counts.values()) for i in roll_counts}
     else:
         raise Exception("Invalid result_type passed.")
+
+
+def check_conditions():
+    @cache
+    def condition_test(rolled: tuple) -> tuple[bool, bool, bool, bool]:
+        hc, fc, m, pm = False, False, False, False
+        counts = Counter(rolled)
+        if counts[6] >= 1:
+            hc = True
+            if counts[6] >= 2:
+                fc = True
+        for number, count in counts.items():
+            if count >= 2:
+                m = True
+                if number * 2 >= 7:
+                    pm = True
+                    break
+        return (hc, fc, m, pm)
+
+    res = {
+        "adv_level": [],
+        "total_rolls": [],
+        "passing_matching": [],
+        "matching": [],
+        "halfcrit": [],
+        "fullcrit": [],
+    }
+
+    for dice in range(2, 5):
+        res["adv_level"].append(dice - 2)
+        res["total_rolls"].append(6**dice)
+        res["passing_matching"].append(0)
+        res["matching"].append(0)
+        res["halfcrit"].append(0)
+        res["fullcrit"].append(0)
+        rolls = all_rolls([6] * dice)
+
+        for k, v in rolls.items():
+            for rolled in v:
+                # advantage
+                # gotta cast to tuple so its hashable...
+                hc, fc, m, pm = condition_test(tuple(rolled))
+                res["passing_matching"][-1] += pm
+                res["matching"][-1] += m
+                res["halfcrit"][-1] += hc
+                res["fullcrit"][-1] += fc
+
+        if dice == 2:
+            continue
+
+        res["adv_level"].append(2 - dice)
+        res["total_rolls"].append(6**dice)
+        res["passing_matching"].append(0)
+        res["matching"].append(0)
+        res["halfcrit"].append(0)
+        res["fullcrit"].append(0)
+        rolls = all_rolls([6] * dice)
+
+        for k, v in rolls.items():
+            for rolled in v:
+                # disadvantage
+                hc, fc, m, pm = condition_test(tuple(heapq.nsmallest(2, rolled)))
+                res["passing_matching"][-1] += pm
+                res["matching"][-1] += m
+                res["halfcrit"][-1] += hc
+                res["fullcrit"][-1] += fc
+    return res
 
 
 def roll_on_table(entity: ty.Entity, curly: ty.Curly, bound_roll: bool = True) -> str:
