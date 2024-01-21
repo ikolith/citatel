@@ -33,21 +33,32 @@ Every point of CON gives you 1 extra crit health and 2 extra standard health.
 
 Moving costs 1 AP and you move a number of spaces equal to your MOVEMENT SPEED. When an enemy attacks you they roll a check against your DEFENSE, more on that later.
 
-## Scores
+## Attribute Scores
 
-A character's attribute scores are added to rolls, checks, and modifiers as well as the "passive" score. A character's "passive" score for a given attribute is 6 + SCORE. The SCORES a character can have are not limited to what is on the default character sheet.
+A character's basic qualities or problem solving tools are described by the attributes they have and the scores given to those attributes. If a character is missing an attribute from their sheet they cannot make checks using that attribute and they automatically fail any contest related to that score. What this represents is that, as a character, they do not use that attribute to solve problems. A pack animal does not have any SOCial or any DEXterity. Scores can be negative. Having an attribute with a negative score is more useful than not having that score at all. When you create your character, your species and background will determine what attributes and scores you start with.  
 
-### Missing Scores, [special] scores
+A character's attribute scores are added to rolls, checks, and modifiers as well as the "passive" score. A character's "passive" score for a given attribute is 6 + SCORE. This is the score other characters roll checks against.
 
-If you're asked about a score you don't have, your score is 0 unless the score in question has the \[special] tag. If you don't have a \[special] score you fail any check, contest, or roll related to that score. The \[sp] tag is a shorter version of the \[special] tag. MEDICINE is not a \[special] score but PYROMANCY is.
+### Getting New Attributes, Raising Your Attribute Scores
 
-#### "Standard" Scores
+The attributes a character can have are not limited to what is on the default character sheet. There are others, such as MEDicine or PYROmancy. Some scores are harder to obtain than others. All of the scores listed here work the usual way. When new scores are being written and tested they will be linked here on a page dedicated to scores and skills.
 
-"Standard Scores" are a convention for non-[sp] scores that are important for the current setting. This is just a convention, not a strict rule. Some settings might emphasize a TECHNOLOGY score, others might not use that score at all.
+All of the following attribute score rules are "unless otherwise stated". Your score in a given attribute starts at -2 when you acquire it. Skill Points or "SP" are used both to buy skills and raise attribute scores. Each Skill is priced individually, but they typically cost less than 10 SP. The price for raising an attribute score is 10 SP while the score is negative. Once your score reaches 0, every subsequent increase costs an amount of SP equal to the new score times 10. That means that going from -1 to 0 costs 10 SP, going from 0 to 1 costs 10 SP, going from 1 to 2 costs 20 SP, going from 2 to 3 costs 30 SP and so on.
 
+| Attribute Score | Cost | Total Cost to Reach Score | 
+| --- | --- | --- | 
+| -2 | 10 | 10 |
+| -1 | 10 | 20 |
+| 0 | 10 | 30 |
+| 1 | 10 | 40 |
+| 2 | 20 | 60 |
+| 3 | 30 | 90 |
+| 4 | 40 | 130 |
+
+ 
 ## Checks and Contests
 
-When a character wants to do something that they might fail at, they roll 2d6s and add the relevant SCORE. The result of the roll is determined by comparing the roll to a Difficulty Score or DS. This is a "check". If their roll is the same or higher than the DS, they succeed.
+When a character wants to do something using an attribute they roll 2d6s and add the relevant SCORE. The result of the roll is determined by comparing the roll to a Difficulty Score or DS. This is a "check". If their roll is the same or higher than the DS, they succeed.
 
 If two charactes are in direct competition they are in a "contest". They both roll 2d6 and add their scores. The higher score wins. In the case of a tie, they either tie in the game or if that does not make sense they redo the contest.
 
@@ -90,6 +101,10 @@ Didn't verify this. Winged it. Might be wrong. -->
 Crit Fails are maximally bad. You did as badly as you could have done (~3% probability).  
 
 Double 6s are good. You did as good as you could have. If this is an attack roll, do 1 extra crit damage on top of any other effects. 
+
+### Advantage/Disadvantage
+
+When you have "advantage", roll another die during your check, pick two. When you have "disadvantage", roll another die, pick the two lowest. Advantage and disadvantage cancel each other out, but they are also cumulative. That is, if somehow you have disadvantage on a check twice, but advantage four times, two of the advantages and disadvantages cancel out, and you get double advantage. So, you roll four dice and pick two. Because you can pick two rather than having to take the two highest rolls, you can be strategic with the effects you activate. For example, if you roll a 6, two 4s, and a 2, you may choose to lower your roll's total from a 10 (4+6) to an 8 (4+4) in order to activate an effect triggered by matching dice if you succeed (otherwise you would get a half crit).
 
 ## Initiative and AP (Action Points)
 
