@@ -40,7 +40,7 @@ def all_rolls(
         raise Exception("Invalid result_type passed.")
 
 
-def check_conditions():
+def check_conditions(adv_range: int = 3):
     @cache
     def condition_test(rolled: tuple) -> tuple[bool, bool, bool, bool]:
         hc, fc, m, pm = False, False, False, False
@@ -66,7 +66,7 @@ def check_conditions():
         "fullcrit": [],
     }
 
-    for dice in range(2, 5):
+    for dice in range(2, 3 + adv_range):
         res["adv_level"].append(dice - 2)
         res["total_rolls"].append(6**dice)
         res["passing_matching"].append(0)
