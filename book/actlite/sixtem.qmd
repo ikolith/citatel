@@ -74,11 +74,11 @@ If a character rolls in a check or contest and the they succeed, they check the 
 
 **Half Crit**: Rolling at least one 6.  
 
-An example of one of these effects is a character who inflicts the \[bleed] condition on half crit when dealing \[Slicing] damage. Notice that rolling a  Full Crit activates both the Half Crit and Matching Crit conditions.
+An example of one of these effects is a character who inflicts the \[bleed] condition on half crit when dealing \[Slicing] damage. Notice that rolling a Full Crit activates both the Half Crit and Matching Crit conditions.
 
-There is one condition that can be activated when a character fails, the Total Failure.
+There is only one condition that can be activated when a character fails, the Total Failure.
 
-**Total Failure**: Rolling two 1s.  
+**Total Failure**: Rolling two 1s. 
 
 Getting a Full Crit when attacking always means dealing 1 more crit damage. Otherwise, rolling a Full Crit means succeeded at your task as well as you could have. Likewise, rolling a Total Failure means you did as badly at the task as you could have. The effect of these dramatic successes and failures is up to DM discretion. Not all checks or contests will involve a great distinction between success and dramatic success. 
 <!-- Why have all of these special terms and conditions to check? Differing probabilities! -->

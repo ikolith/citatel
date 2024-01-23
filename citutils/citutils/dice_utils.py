@@ -5,10 +5,12 @@ from typing import Union
 from collections import Counter
 import heapq
 from functools import cache
+from random import randint
+import logging
+
+import pandas as pd
 
 import citutils.my_types as ty
-from random import randint
-import citutils.database as dt
 
 
 def all_rolls(
@@ -40,27 +42,36 @@ def all_rolls(
         raise Exception("Invalid result_type passed.")
 
 
-def check_conditions(adv_range: int = 3):
+def check_conditions(adv_range: int = 3, passing_value: int = 7):
+    if passing_value < 2 or passing_value > 12:
+        raise ValueError(
+            f"passing_value of {passing_value} is outside of the range of a 2d6 check."
+        )
+
     @cache
-    def condition_test(rolled: tuple) -> tuple[bool, bool, bool, bool]:
-        hc, fc, m, pm = False, False, False, False
+    def condition_test(rolled: tuple) -> tuple[bool, bool, bool, bool, bool]:
+        pm, phc, m, hc, fc = False, False, False, False, False
         counts = Counter(rolled)
         if counts[6] >= 1:
             hc = True
             if counts[6] >= 2:
                 fc = True
+                phc = True
+            elif heapq.nlargest(2, rolled)[-1] + 6 >= passing_value:
+                phc = True
         for number, count in counts.items():
-            if count >= 2:
+            if count >= 2 and number != 1:  # total failures dont count as matching!
                 m = True
-                if number * 2 >= 7:
+                if number * 2 >= passing_value:
                     pm = True
                     break
-        return (hc, fc, m, pm)
+        return (pm, phc, m, hc, fc)
 
-    res = {
+    res: dict = {
         "adv_level": [],
         "total_rolls": [],
         "passing_matching": [],
+        "passing_halfcrit": [],
         "matching": [],
         "halfcrit": [],
         "fullcrit": [],
@@ -70,6 +81,7 @@ def check_conditions(adv_range: int = 3):
         res["adv_level"].append(dice - 2)
         res["total_rolls"].append(6**dice)
         res["passing_matching"].append(0)
+        res["passing_halfcrit"].append(0)
         res["matching"].append(0)
         res["halfcrit"].append(0)
         res["fullcrit"].append(0)
@@ -79,8 +91,9 @@ def check_conditions(adv_range: int = 3):
             for rolled in v:
                 # advantage
                 # gotta cast to tuple so its hashable...
-                hc, fc, m, pm = condition_test(tuple(rolled))
+                pm, phc, m, hc, fc = condition_test(tuple(rolled))
                 res["passing_matching"][-1] += pm
+                res["passing_halfcrit"][-1] += phc
                 res["matching"][-1] += m
                 res["halfcrit"][-1] += hc
                 res["fullcrit"][-1] += fc
@@ -91,6 +104,7 @@ def check_conditions(adv_range: int = 3):
         res["adv_level"].append(2 - dice)
         res["total_rolls"].append(6**dice)
         res["passing_matching"].append(0)
+        res["passing_halfcrit"].append(0)
         res["matching"].append(0)
         res["halfcrit"].append(0)
         res["fullcrit"].append(0)
@@ -99,12 +113,21 @@ def check_conditions(adv_range: int = 3):
         for k, v in rolls.items():
             for rolled in v:
                 # disadvantage
-                hc, fc, m, pm = condition_test(tuple(heapq.nsmallest(2, rolled)))
+                pm, phc, m, hc, fc = condition_test(tuple(heapq.nsmallest(2, rolled)))
                 res["passing_matching"][-1] += pm
+                res["passing_halfcrit"][-1] += phc
                 res["matching"][-1] += m
                 res["halfcrit"][-1] += hc
                 res["fullcrit"][-1] += fc
-    return res
+
+    df = pd.DataFrame(res)
+    df = df.sort_values(by="adv_level", ascending=False)
+    df["prob_pm"] = df["passing_matching"] / df["total_rolls"]
+    df["prob_phc"] = df["passing_halfcrit"] / df["total_rolls"]
+    df["prob_m"] = df["matching"] / df["total_rolls"]
+    df["prob_hc"] = df["halfcrit"] / df["total_rolls"]
+    df["prob_fc"] = df["fullcrit"] / df["total_rolls"]
+    return df
 
 
 def roll_on_table(entity: ty.Entity, curly: ty.Curly, bound_roll: bool = True) -> str:
