@@ -199,7 +199,7 @@
         "wrestling_2_choosin_a_snoozin": {
           "name": "Wrestling 2: Cruisin' for a Snoozin'",
           "requirements": ["AGI 2", "STR 2", "Wrestling 1"],
-          "effect": "Can only be performed on something that can be choked (has a neck, not wearing armor that covers their neck completely, TTYGM). \nSpend 2 AP while grappling. If you can hold the grapple for 2 more rounds the grappled creature is unconcious for 1d12 minutes.",
+          "effect": "Can only be performed on something that can be choked (has a neck, not wearing armor that covers their neck completely, TTYGM). \nSpend 2 AP while grappling. If you can hold the grapple for 2 more rounds the grappled creature is unconciouss for 1d12 minutes.",
           "cost": ["5 SP"],
           "meta_tags": ["skill", "wrestling", "basic"]
         },
