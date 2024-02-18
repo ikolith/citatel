@@ -57,20 +57,6 @@
       }
     },
     "skills": {
-      "robust": {
-        "name": "Robust",
-        "cost": ["2 SP"],
-        "requirements": ["1 CON"],
-        "effect": "For every point you have in CON you can ignore the effects of one stack of [poison] and/or [bleed]. You still have the status until it is removed.",
-        "meta_tags": ["skill", "con", "basic"]
-      },
-      "unstoppable": {
-        "name": "Unstoppable",
-        "cost": ["3 SP"],
-        "requirements": ["2 CON", "{Robust}"],
-        "effect": "You can ignore the effect (but not the damage) of up to CON injuries.",
-        "meta_tags": ["skill", "con", "basic"]
-      },
       "coordination_1": {
         "name": "Coordination 1",
         "cost": ["3 SP"],
@@ -133,42 +119,42 @@
           "cost": ["5 SP"],
           "requirements": ["2 STR"],
           "effect": "Treat your Strength as 1 higher (for weapon related rolls) when wielding two handed weapons.",
-          "meta_tags": ["skill", "large_weapon", "basic"]
+          "meta_tags": ["skill", "large_weapon", "basic", "str"]
         },
         "large_weapon_2_sweep": {
           "name": "Large Weapon 2: Sweep",
           "cost": ["5 SP"],
           "requirements": ["{Large Weapon 1}", "STR 2"],
           "effect": "When you perform a non-(P) melee attack with a [two-handed] weapon or a weapon with [reach], you can treat it as an attack against two adjacent enemies that you can hit. Roll only once, resolve the attack separately for each enemy. You can spend an extra 1 AP and attack up to four adjacent enemies in the same way.",
-          "meta_tags": ["skill", "large_weapon", "basic"]
+          "meta_tags": ["skill", "large_weapon", "basic", "str"]
         },
         "large_weapon_2_giant_weapon_proficiency": {
           "name": "Large Weapon 2: Giant Weapon Proficiency",
           "cost": ["5 SP"],
           "requirements": ["{Large Weapon 1}"],
           "effect": "Treat your Strength as 1 higher (for weapon related rolls) when wielding a weapon with the [giant] tag.",
-          "meta_tags": ["skill", "large_weapon", "basic"]
+          "meta_tags": ["skill", "large_weapon", "basic", "str"]
         },
         "large_weapon_2_giant_weapon_efficiency": {
           "name": "Large Weapon 2: Giant Weapon Efficiency",
-          "requirements": ["{Large Weapon 2}", "AGI 2"],
+          "requirements": ["{Large Weapon 2}", "AGI 1"],
           "effect": "When you land a hit with a [giant] weapon, gain 1 Temp AP.",
           "cost": ["10 SP"],
-          "meta_tags": ["skill", "large_weapon", "basic"]
+          "meta_tags": ["skill", "large_weapon", "basic", "str", "agi"]
         },
         "sharpshooter": {
           "name": "Sharpshooter",
           "requirements": ["1 PER"],
           "effect": "When making [ranged] attacks, treat your PERCEPTION as 1 higher.",
           "cost": ["7 SP"],
-          "meta_tags": ["skill", "ranged", "basic"]
+          "meta_tags": ["skill", "ranged", "basic", "per"]
         },
         "trick_shot": {
           "name": "Trick Shot",
           "requirements": ["1 PER"],
           "effect": "+2 To-Hit when using \"Called Shot\" with a [ranged] attack.",
           "cost": ["4 SP"],
-          "meta_tags": ["skill", "ranged", "basic"]
+          "meta_tags": ["skill", "ranged", "basic", "per"]
         },
         "shield_training": {
           "name": "Shield Training",
@@ -180,42 +166,21 @@
           "name": "Shield Bash",
           "effect": "You can attack with a shield as +STR to hit, 1 Damage [B]. Knock the enemy prone on a half crit.",
           "cost": ["4 SP"],
-          "meta_tags": ["skill", "shield", "basic"]
-        },
-        "wrestling_1_rasslin": {
-          "name": "Grappling 1: Rasslin'",
-          "requirements": ["AGI 2", "STR 2"],
-          "effect": "+2 to Grapple checks.",
-          "cost": ["3 SP"],
-          "meta_tags": ["skill", "grappling", "basic"]
-        },
-        "wrestling_2_gottem": {
-          "name": "Grappling 2: Hold",
-          "requirements": ["AGI 2", "STR 2", "Wrestling 1"],
-          "effect": "If you're successfully grappling a humanoid in your size category or lower, get +4 to subsequent grapple checks. If you're successfully grappling a non-humanoid in your size category, +3 to subsequent grapple checks. Otherwise, if you're successfully grappling, +2 to subsequent grapple checks.",
-          "cost": ["5 SP"],
-          "meta_tags": ["skill", "wrestling", "basic"]
-        },
-        "wrestling_2_choosin_a_snoozin": {
-          "name": "Wrestling 2: Cruisin' for a Snoozin'",
-          "requirements": ["AGI 2", "STR 2", "Wrestling 1"],
-          "effect": "Can only be performed on something that can be choked (has a neck, not wearing armor that covers their neck completely, TTYGM). \nSpend 2 AP while grappling. If you can hold the grapple for 2 more rounds the grappled creature is unconciouss for 1d12 minutes.",
-          "cost": ["5 SP"],
-          "meta_tags": ["skill", "wrestling", "basic"]
+          "meta_tags": ["skill", "shield", "basic", "str"]
         },
         "dual_wielding_1_ambidextrous": {
           "name": "Dual Wielding 1: Ambidextrous",
-          "requirements": ["AGI 1"],
+          "requirements": ["DEX 1"],
           "effect": "You can attack with your offhand as well as you attack with your main hand. Track the costs from attacks with either hand separately.",
           "cost": ["5 SP"],
-          "meta_tags": ["skill", "dual_wielding", "basic"]
+          "meta_tags": ["skill", "dual_wielding", "basic", "dex"]
         },
         "dual_wielding_2_simultaneous_attack": {
           "name": "Dual Wielding 2: Simultaneous Attack",
-          "requirements": ["AGI 1", "STR 1", "Dual Wielding 1"],
+          "requirements": ["AGI 1", "DEX 1", "Dual Wielding 1"],
           "effect": "Once per turn, you can attack with both of your weapons at the same time spending 1 less AP than you would to do the attacks separately. Perform the attacks as normal otherwise.",
           "cost": ["5 SP"],
-          "meta_tags": ["skill", "dual_wielding", "basic"]
+          "meta_tags": ["skill", "dual_wielding", "basic", "dex", "agi"]
         }
       },
       "special_skills": {
@@ -239,6 +204,106 @@
           "requirements": ["1 CHRONO"],
           "effect": "Spend 1 AP. Draw 2 cards from the table deck for each character in initiative. They don't get to act unless it is the last card they can get from the table deck.",
           "meta_tags": ["skill", "chrono"]
+        }
+      },
+      "str": {
+        "grappling": {
+          "grappling_adept": {
+            "name": "Grappling Adept",
+            "requirements": ["0 STR"],
+            "cost": ["10 SP"],
+            "effect": "+2 to grapple checks. If you are being grappled, you can spend 1 AP to perform a grapple check. If you succeed, you are the one grappling and your opponent is being grappled.",
+            "meta_tags": ["skill", "str", "grappling", "basic"]
+          },
+          "grappling_expert": {
+            "name": "Grappling Expert",
+            "requirements": ["0 STR", "{Grappling Adept}"],
+            "cost": ["20 SP"],
+            "effect": "+4 to grapple checks. All Grappling skills cost 1 AP to perform. You can grapple opponents one size category larger than you. Treat your STR as +2 while you are grappling your opponent (does not apply to grapple checks).",
+            "meta_tags": ["skill", "str", "grappling", "basic"]
+          },
+          "throw": {
+            "name": "Throw",
+            "requirements": ["{Grappling Adept}"],
+            "cost": ["4 SP"],
+            "effect": "You can perform a Throw while grappling or being grappled unless you or your target is [prone]. Spend 2 AP. Perform a STR check. If you succeed, Throw your target STR spaces, up to 3 spaces. Your target lands [prone].",
+            "meta_tags": ["skill", "str", "grappling", "basic"]
+          },
+          "takedown": {
+            "name": "Takedown",
+            "requirements": ["{Grappling Adept}"],
+            "cost": ["4 SP"],
+            "effect": "Using Takedown costs 2 AP. You can take a move action when you use it. Make a [range: close] attack, if you succeed, the target is knocked prone and you are grappling them. You are treated as by everyone except your target.",
+            "meta_tags": ["skill", "str", "grappling", "basic"]
+          },
+          "slam": {
+            "name": "Slam",
+            "requirements": ["{Grappling Adept}"],
+            "cost": ["4 SP"],
+            "effect": "You can perform a Slam while grappling unless you or your target is [prone]. Spend 2 AP. Deal 1d4 (B). You are still grappling your target. Your target is [prone].",
+            "meta_tags": ["skill", "str", "grappling", "basic"]
+          },
+          "chokehold": {
+            "name": "Chokehold",
+            "requirements": ["{Grappling Adept}"],
+            "cost": ["4 SP"],
+            "effect": "You must be grappling your target and your target must be [prone] for you to perform a Chokehold.  Spend 2 AP to initiate a Chokehold. The target can try to break out of the grapple while you are performing the Chokehold. You cannot do anything else while performing the Chokehold. The Chokehold costs 2 AP to maintain every turn. On the start of the third round in the Chokehold, the target becomes [unconscious] for 1d12 minutes. The Chokehold ends if you take damage from any non-unarmed attack. Chokehold cannot be performed on a target wearing a full helmet, or has a gaseous form, doesn't have a neck, etc.",
+            "meta_tags": ["skill", "str", "grappling", "basic"]
+          },
+          "submission": {
+            "name": "Submission",
+            "requirements": ["{Grappling Adept}"],
+            "cost": ["4 SP"],
+            "effect": "You must be grappling your target and your target must be [prone] for you to perform a Submission.  Spend 2 AP to initiate a Submission.  Perform a STR check. If you succeed, choose which limb to injure. For humanoids you can injure an arm or leg. Injuring an arm means the target has disadvantage when trying to do anything with that arm for an hour, injuring a leg lowers the targets movement speed by 2.",
+            "meta_tags": ["skill", "str", "grappling", "basic"]
+          },
+          "control": {
+            "name": "Control",
+            "requirements": ["{Grappling Adept}"],
+            "cost": ["2 SP"],
+            "effect": "You must be grappling your target and your target must be [prone] for you to use Control.  Spend 2 AP to initiate Control. The target has disadvantage when attempting to end or reverse the grapple. You cannot do anything else while maintaining Control. Control costs 2 AP to maintain every turn. ",
+            "meta_tags": ["skill", "str", "grappling", "basic"]
+          }
+        },
+        "unstoppable": {
+          "name": "Unstoppable",
+          "cost": ["9 SP"],
+          "requirements": ["1 STR"],
+          "effect": "Ignore the effects of a number of [stun], [injury], [poison], and [bleed] status effects up to your STR in the order that you recieve the statuses. The statuses must still be treated or resolve themselves, you just ignore their effects.",
+          "meta_tags": ["skill", "str", "basic"]
+        },
+        "jackassery": {
+          "name": "Jackassery",
+          "cost": ["7 SP"],
+          "requirements": ["0 STR"],
+          "effect": "Take half damage from falling. Take half damage when you choose to jump through glass windows, run through burning buildings, or do other things that are wildly unsafe. ",
+          "meta_tags": ["skill", "str", "basic"]
+        },
+        "hard_to_kill": {
+          "name": "Hard to Kill",
+          "requirements": ["1 STR", "1 WIL"],
+          "cost": ["10 SP"],
+          "effect": "When you would be killed or downed by less damage than your total standard health (not your current standard health), flip a coin. If it comes up heads, you stay standing with 1 crit health.",
+          "meta_tags": ["skill", "str", "basic"]
+        },
+        "clobber": {
+          "name": "Clobber",
+          "requirements": ["1 STR"],
+          "cost": ["5 SP"],
+          "effect": "Take disadvantage on an attack that costs at least 2 AP. Add your STR to the damage if it hits.",
+          "meta_tags": ["skill", "str", "basic"]
+        },
+        "hearty": {
+          "name": "Hearty",
+          "cost": ["9 SP"],
+          "effect": "Get +1:+3 max health. You can take this skill once for every point of STR you have.",
+          "meta_tags": ["skill", "str", "basic"]
+        },
+        "charge": {
+          "name": "Charge",
+          "cost": ["5 SP"],
+          "effect": "Pay 1 AP. Move double your movement speed in a straight line. You must move at least two spaces. Once you reach an enemy, you may perform an attack, paying AP as usual. Before you roll your attack you can choose to add your STR to the damage or to your attack roll. If you are entering a STR contest of some kind, add your STR to your roll.",
+          "meta_tags": ["skill", "str", "basic"]
         }
       }
     },
@@ -901,13 +966,6 @@
           "cost": ["1 SP"],
           "meta_tags": ["skill", "hylic", "salt", "quarter_size", "deprecated"]
         }
-      },
-      "charge": {
-        "name": "Charge",
-        "requirements": ["1 STR"],
-        "effect": "Pay 1 AP. Move double your movement speed in a straight line. Must move at least two spaces.  Once you reach an enemy, you may perform an attack. If your attack hits you can choose to add your STR to the damage. If you are entering a STR contest of some kind, add your STR to your roll.",
-        "cost": ["1 SP"],
-        "meta_tags": ["skill", "str", "basic"]
       },
       "crush": {
         "name": "Crush",

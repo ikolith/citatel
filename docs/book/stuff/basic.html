@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.547">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -50,7 +50,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -59,6 +65,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -74,12 +81,12 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../book/stuff/basic.html">Skills, Weapons, Items</a></li><li class="breadcrumb-item"><a href="../../book/stuff/basic.html">Basic</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../book/stuff/basic.html">Skills, Weapons, Items</a></li><li class="breadcrumb-item"><a href="../../book/stuff/basic.html">Basic</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -89,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">citatel</a> 
@@ -183,7 +190,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -199,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../book/stuff/basic.html">Skills, Weapons, Items</a></li><li class="breadcrumb-item"><a href="../../book/stuff/basic.html">Basic</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Basic</h1>
 </div>
@@ -214,22 +221,12 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <section id="skills" class="level2">
 <h2 class="anchored" data-anchor-id="skills">Skills</h2>
-<section id="robust" class="level4">
-<h4 class="anchored" data-anchor-id="robust">Robust</h4>
-<p><strong>Requirements:</strong> 1 CON<br>
-<strong>Cost:</strong> 2 SP<br>
-For every point you have in CON you can ignore the effects of one stack of [poison] and/or [bleed]. You still have the status until it is removed.</p>
-</section>
-<section id="unstoppable" class="level4">
-<h4 class="anchored" data-anchor-id="unstoppable">Unstoppable</h4>
-<p><strong>Requirements:</strong> 2 CON, {Robust}<br>
-<strong>Cost:</strong> 3 SP<br>
-You can ignore the effect (but not the damage) of up to CON injuries.</p>
-</section>
 <section id="coordination-1" class="level4">
 <h4 class="anchored" data-anchor-id="coordination-1">Coordination 1</h4>
 <p><strong>Requirements:</strong> 1 SOC<br>
@@ -298,7 +295,7 @@ Treat your Strength as 1 higher (for weapon related rolls) when wielding a weapo
 </section>
 <section id="large-weapon-2-giant-weapon-efficiency" class="level4">
 <h4 class="anchored" data-anchor-id="large-weapon-2-giant-weapon-efficiency">Large Weapon 2: Giant Weapon Efficiency</h4>
-<p><strong>Requirements:</strong> {Large Weapon 2}, AGI 2<br>
+<p><strong>Requirements:</strong> {Large Weapon 2}, AGI 1<br>
 <strong>Cost:</strong> 10 SP<br>
 When you land a hit with a [giant] weapon, gain 1 Temp AP.</p>
 </section>
@@ -324,35 +321,99 @@ Raise your DEFENSE by 2 against melee attacks and by 3 against ranged attacks wh
 <p><strong>Cost:</strong> 4 SP<br>
 You can attack with a shield as +STR to hit, 1 Damage [B]. Knock the enemy prone on a half crit.</p>
 </section>
-<section id="grappling-1-rasslin" class="level4">
-<h4 class="anchored" data-anchor-id="grappling-1-rasslin">Grappling 1: Rasslin’</h4>
-<p><strong>Requirements:</strong> AGI 2, STR 2<br>
-<strong>Cost:</strong> 3 SP<br>
-+2 to Grapple checks.</p>
-</section>
-<section id="grappling-2-hold" class="level4">
-<h4 class="anchored" data-anchor-id="grappling-2-hold">Grappling 2: Hold</h4>
-<p><strong>Requirements:</strong> AGI 2, STR 2, Wrestling 1<br>
-<strong>Cost:</strong> 5 SP<br>
-If you’re successfully grappling a humanoid in your size category or lower, get +4 to subsequent grapple checks. If you’re successfully grappling a non-humanoid in your size category, +3 to subsequent grapple checks. Otherwise, if you’re successfully grappling, +2 to subsequent grapple checks.</p>
-</section>
-<section id="wrestling-2-cruisin-for-a-snoozin" class="level4">
-<h4 class="anchored" data-anchor-id="wrestling-2-cruisin-for-a-snoozin">Wrestling 2: Cruisin’ for a Snoozin’</h4>
-<p><strong>Requirements:</strong> AGI 2, STR 2, Wrestling 1<br>
-<strong>Cost:</strong> 5 SP<br>
-Can only be performed on something that can be choked (has a neck, not wearing armor that covers their neck completely, TTYGM). Spend 2 AP while grappling. If you can hold the grapple for 2 more rounds the grappled creature is unconcious for 1d12 minutes.</p>
-</section>
 <section id="dual-wielding-1-ambidextrous" class="level4">
 <h4 class="anchored" data-anchor-id="dual-wielding-1-ambidextrous">Dual Wielding 1: Ambidextrous</h4>
-<p><strong>Requirements:</strong> AGI 1<br>
+<p><strong>Requirements:</strong> DEX 1<br>
 <strong>Cost:</strong> 5 SP<br>
 You can attack with your offhand as well as you attack with your main hand. Track the costs from attacks with either hand separately.</p>
 </section>
 <section id="dual-wielding-2-simultaneous-attack" class="level4">
 <h4 class="anchored" data-anchor-id="dual-wielding-2-simultaneous-attack">Dual Wielding 2: Simultaneous Attack</h4>
-<p><strong>Requirements:</strong> AGI 1, STR 1, Dual Wielding 1<br>
+<p><strong>Requirements:</strong> AGI 1, DEX 1, Dual Wielding 1<br>
 <strong>Cost:</strong> 5 SP<br>
 Once per turn, you can attack with both of your weapons at the same time spending 1 less AP than you would to do the attacks separately. Perform the attacks as normal otherwise.</p>
+</section>
+<section id="grappling-adept" class="level4">
+<h4 class="anchored" data-anchor-id="grappling-adept">Grappling Adept</h4>
+<p><strong>Requirements:</strong> 0 STR<br>
+<strong>Cost:</strong> 10 SP<br>
++2 to grapple checks. If you are being grappled, you can spend 1 AP to perform a grapple check. If you succeed, you are the one grappling and your opponent is being grappled.</p>
+</section>
+<section id="grappling-expert" class="level4">
+<h4 class="anchored" data-anchor-id="grappling-expert">Grappling Expert</h4>
+<p><strong>Requirements:</strong> 0 STR, {Grappling Adept}<br>
+<strong>Cost:</strong> 20 SP<br>
++4 to grapple checks. All Grappling skills cost 1 AP to perform. You can grapple opponents one size category larger than you. Treat your STR as +2 while you are grappling your opponent (does not apply to grapple checks).</p>
+</section>
+<section id="throw" class="level4">
+<h4 class="anchored" data-anchor-id="throw">Throw</h4>
+<p><strong>Requirements:</strong> {Grappling Adept}<br>
+<strong>Cost:</strong> 4 SP<br>
+You can perform a Throw while grappling or being grappled unless you or your target is [prone]. Spend 2 AP. Perform a STR check. If you succeed, Throw your target STR spaces, up to 3 spaces. Your target lands [prone].</p>
+</section>
+<section id="takedown" class="level4">
+<h4 class="anchored" data-anchor-id="takedown">Takedown</h4>
+<p><strong>Requirements:</strong> {Grappling Adept}<br>
+<strong>Cost:</strong> 4 SP<br>
+Using Takedown costs 2 AP. You can take a move action when you use it. Make a [range: close] attack, if you succeed, the target is knocked prone and you are grappling them. You are treated as by everyone except your target.</p>
+</section>
+<section id="slam" class="level4">
+<h4 class="anchored" data-anchor-id="slam">Slam</h4>
+<p><strong>Requirements:</strong> {Grappling Adept}<br>
+<strong>Cost:</strong> 4 SP<br>
+You can perform a Slam while grappling unless you or your target is [prone]. Spend 2 AP. Deal 1d4 (B). You are still grappling your target. Your target is [prone].</p>
+</section>
+<section id="chokehold" class="level4">
+<h4 class="anchored" data-anchor-id="chokehold">Chokehold</h4>
+<p><strong>Requirements:</strong> {Grappling Adept}<br>
+<strong>Cost:</strong> 4 SP<br>
+You must be grappling your target and your target must be [prone] for you to perform a Chokehold. Spend 2 AP to initiate a Chokehold. The target can try to break out of the grapple while you are performing the Chokehold. You cannot do anything else while performing the Chokehold. The Chokehold costs 2 AP to maintain every turn. On the start of the third round in the Chokehold, the target becomes [unconscious] for 1d12 minutes. The Chokehold ends if you take damage from any non-unarmed attack. Chokehold cannot be performed on a target wearing a full helmet, or has a gaseous form, doesn’t have a neck, etc.</p>
+</section>
+<section id="submission" class="level4">
+<h4 class="anchored" data-anchor-id="submission">Submission</h4>
+<p><strong>Requirements:</strong> {Grappling Adept}<br>
+<strong>Cost:</strong> 4 SP<br>
+You must be grappling your target and your target must be [prone] for you to perform a Submission. Spend 2 AP to initiate a Submission. Perform a STR check. If you succeed, choose which limb to injure. For humanoids you can injure an arm or leg. Injuring an arm means the target has disadvantage when trying to do anything with that arm for an hour, injuring a leg lowers the targets movement speed by 2.</p>
+</section>
+<section id="control" class="level4">
+<h4 class="anchored" data-anchor-id="control">Control</h4>
+<p><strong>Requirements:</strong> {Grappling Adept}<br>
+<strong>Cost:</strong> 2 SP<br>
+You must be grappling your target and your target must be [prone] for you to use Control. Spend 2 AP to initiate Control. The target has disadvantage when attempting to end or reverse the grapple. You cannot do anything else while maintaining Control. Control costs 2 AP to maintain every turn.</p>
+</section>
+<section id="unstoppable" class="level4">
+<h4 class="anchored" data-anchor-id="unstoppable">Unstoppable</h4>
+<p><strong>Requirements:</strong> 1 STR<br>
+<strong>Cost:</strong> 9 SP<br>
+Ignore the effects of a number of [stun], [injury], [poison], and [bleed] status effects up to your STR in the order that you recieve the statuses. The statuses must still be treated or resolve themselves, you just ignore their effects.</p>
+</section>
+<section id="jackassery" class="level4">
+<h4 class="anchored" data-anchor-id="jackassery">Jackassery</h4>
+<p><strong>Requirements:</strong> 0 STR<br>
+<strong>Cost:</strong> 7 SP<br>
+Take half damage from falling. Take half damage when you choose to jump through glass windows, run through burning buildings, or do other things that are wildly unsafe.</p>
+</section>
+<section id="hard-to-kill" class="level4">
+<h4 class="anchored" data-anchor-id="hard-to-kill">Hard to Kill</h4>
+<p><strong>Requirements:</strong> 1 STR, 1 WIL<br>
+<strong>Cost:</strong> 10 SP<br>
+When you would be killed or downed by less damage than your total standard health (not your current standard health), flip a coin. If it comes up heads, you stay standing with 1 crit health.</p>
+</section>
+<section id="clobber" class="level4">
+<h4 class="anchored" data-anchor-id="clobber">Clobber</h4>
+<p><strong>Requirements:</strong> 1 STR<br>
+<strong>Cost:</strong> 5 SP<br>
+Take disadvantage on an attack that costs at least 2 AP. Add your STR to the damage if it hits.</p>
+</section>
+<section id="hearty" class="level4">
+<h4 class="anchored" data-anchor-id="hearty">Hearty</h4>
+<p><strong>Cost:</strong> 9 SP<br>
+Get +1:+3 max health. You can take this skill once for every point of STR you have.</p>
+</section>
+<section id="charge" class="level4">
+<h4 class="anchored" data-anchor-id="charge">Charge</h4>
+<p><strong>Cost:</strong> 5 SP<br>
+Pay 1 AP. Move double your movement speed in a straight line. You must move at least two spaces. Once you reach an enemy, you may perform an attack, paying AP as usual. Before you roll your attack you can choose to add your STR to the damage or to your attack roll. If you are entering a STR contest of some kind, add your STR to your roll.</p>
 </section>
 <section id="dodge" class="level4">
 <h4 class="anchored" data-anchor-id="dodge">Dodge</h4>
@@ -382,12 +443,6 @@ Add this card to the table deck when initiative starts. Treat the card as 1 AP t
 <strong>Cost:</strong> 10 SP<br>
 Add this card to the table deck when initiative starts. Treat the card as 1 AP that can only be spent to make a 1 AP attack. Any effects that affect AP cards affect this card.</p>
 </section>
-<section id="charge" class="level4">
-<h4 class="anchored" data-anchor-id="charge">Charge</h4>
-<p><strong>Requirements:</strong> 1 STR<br>
-<strong>Cost:</strong> 1 SP<br>
-Pay 1 AP. Move double your movement speed in a straight line. Must move at least two spaces. Once you reach an enemy, you may perform an attack. If your attack hits you can choose to add your STR to the damage. If you are entering a STR contest of some kind, add your STR to your roll.</p>
-</section>
 <section id="crush" class="level4">
 <h4 class="anchored" data-anchor-id="crush">Crush</h4>
 <p><strong>Requirements:</strong> 2 STR, a [swinging] (B) attack that uses +STR to-hit<br>
@@ -412,8 +467,8 @@ Add +2 to your to-hit difficulty for every [finesse] weapon or [finesse] shield 
 <strong>Cost:</strong> 1 SP<br>
 Pay 1 AP. Roll a check +AGI against your enemies passive AGI or PER, whichever is higher. If you win, you can perform 1 action without triggering [interrupt]s from that enemy. The enemy is considered [vulnerable] until your (or your allies’) next action.</p>
 </section>
-<section id="hearty" class="level4">
-<h4 class="anchored" data-anchor-id="hearty">Hearty</h4>
+<section id="hearty-1" class="level4">
+<h4 class="anchored" data-anchor-id="hearty-1">Hearty</h4>
 <p><strong>Requirements:</strong> 2 CON<br>
 <strong>Cost:</strong> 1 SP<br>
 Get +1:3 Health. You can take this skill twice.</p>
@@ -781,6 +836,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -847,13 +929,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -932,10 +1016,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -945,8 +1028,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -959,6 +1051,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1002,6 +1213,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1027,6 +1239,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1088,17 +1326,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../book/actlite/mechanics-misc.html" class="pagination-link">
+      <a href="../../book/actlite/mechanics-misc.html" class="pagination-link  aria-label=" misc.="" mechanics="" reference"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Misc. Mechanics Reference</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../book/stuff/spoilers.html" class="pagination-link">
+      <a href="../../book/stuff/spoilers.html" class="pagination-link" aria-label="Spoilers">
         <span class="nav-page-text">Spoilers</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 
