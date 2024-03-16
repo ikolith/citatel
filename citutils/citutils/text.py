@@ -364,11 +364,8 @@ def format_table_md(table: ty.Table) -> str:
     return md_table + "\n"
 
 
-def format_full_text_md(entity: dict) -> str:
-    if "full_text" in entity.keys():
-        return entity["full_text"] + "  \n\n\n"
-    else:
-        return ""
+def format_full_text_md(text) -> str:
+    return text + "  \n\n\n"
 
 
 formatting_dict_md: ty.Formatting = {

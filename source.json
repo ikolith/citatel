@@ -400,7 +400,42 @@
           "effect": "Take 1 [exhaustion]. Get 1 Temp AP.",
           "meta_tags": ["skill", "wil", "basic"]
         },
-        "per": {}
+        "per": {
+          "wild_conjecture": {
+            "name": "Wild Conjecture",
+            "requirements": ["1 PER"],
+            "cost": ["8 SP"],
+            "effect": "First, specify a question. Next, the GM flips a coin in secret. Finally, the GM tells you what insane theory your character concocted by combining the information available to them with a liberal dose of moon logic. Your character wholeheartedly believes this theory.\n\nIf the GM got a heads on the coin flip, you get a theory that is on the right track, maybe even totally correct (at least, in it's conclusions). If the GM got tails, you receive a theory that is as astoundingly incorrect as it is completely unhelpful. You can only use this skill on a question once. Once you use Wild Conjecture, you have to rest before you can use it again.",
+            "flavor_text": "You have what could be charitably described as an “unorthodox” relationship with reason. The impressive leaps of logic you are able to perform allow you to reach conclusions that lesser thinkers would never even begin to consider. Even more impressively, sometimes you're correct!",
+            "full_text": "Before you take this skill, establish with the GM how you want to receive the theory. The GM could, in secret, gives you a series of “beats” to hit or facts to include along with a conclusion. Then, you roleplay and improvise the connecting tissue of the theory. Alternatively, the GM just tells you the theory. You could do something else entirely. The GM could just drop an earth shattering revelation that has a 50% chance of being false. If you're the GM and a player uses Wild Conjecture on a question they have insufficient information to even begin answering and they get heads, get creative. Give them some little tidbit related to the answer, push them down the right track, confuse them. \n\n Of course your theory has a 50% chance of being right, it's either right or it's wrong! That's basic statistics!",
+            "meta_tags": ["skill", "per", "basic"]
+          },
+          "keen": {
+            "name": "Keen",
+            "requirements": ["1 PER"],
+            "cost": ["4 SP"],
+            "effect": "+2 when using your PER to watch for specific and brief events. You can use this to watch for a positive or negative reaction when you give another character new information, or you can watch to see if another character will try to draw a weapon, allowing you to draw yours first. Keen allows you not only to react quickly, but to anticipate actions and act first. Add +2 to your passive resistance to stealth and pickpocketing.",
+            "flavor_text": "You are able to focus your perception to a razors edge, catching the briefest movement. You're like a poker player spotting the telltale dilation of pupils as a card is dealt, or a watchman high on a tower watching for movement below. When you know what you are looking for, it's almost as if time slows down for you for just a moment.",
+            "full_text": "",
+            "meta_tags": ["skill", "per", "basic"]
+          },
+          "rumination": {
+            "name": "Rumination",
+            "requirements": ["0 PER"],
+            "cost": ["11 SP"],
+            "effect": "Flip a coin. On a heads, all of the puzzle pieces you have snap into place, you know where to look, you know what you're missing, you see the path to the answer. On a tails you get cryptic hints, symbols, hunches, impressions. If you get a heads but you don't have enough information, you get particularly useful hints, symbols, hunches, impressions.\n\nYou cannot use Rumination during initiative. You cannot use Rumination on the same question twice. You cannot do anything complex or time sensitive while using Rumination. Once you use Rumination, you have to rest before you can use it again. You can use Rumination any time you can take a moment just to think.",
+            "flavor_text": "You deeply ponder a question. You turn what you have seen and heard over in your mind, without judgement or bias. You dredge up minute details from your memory that may have, at the time, slipped past your conscious awareness. You approach your problem from all angles, crafting and discarding theories. You are fishing for an epiphany, a sudden flash of realization.",
+            "full_text": "For GMs: This can be a difficult skill to work with! When a character uses this skill, they only get information that they have already seen or information that they “could” have seen. Give out new information sparingly with this ability! New pieces of information should be very small. Maybe a look from another character that didn't seem like anything at the time, but is strange or out of place in hindsight. If a player has so much information the answer is staring them in the face and they get heads, at least try to give them the information slowly so they have a chance to figure it out, maybe text it to them separately so they can present their eureka moment to the rest of the party themselves.\n\nThis ability allows GMs to arrange the information in front of players usefully, discard some things, and focus on others. This ability is more straightforwardly useful on heads, but more interesting on tails. Tails gives the player another puzzle piece, an impression, a symbol, a hunch they can't make sense of but can't quite shake.",
+            "meta_tags": ["skill", "per", "basic"]
+          },
+          "reading_lips": {
+            "name": "Reading Lips",
+            "requirements": ["1 PER"],
+            "cost": ["5 SP"],
+            "effect": "You can read the lips of characters whose faces you can see clearly.",
+            "meta_tags": ["skill", "per", "basic"]
+          }
+        }
       }
     },
     "npcs": {
