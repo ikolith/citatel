@@ -2,7 +2,9 @@
 title: Sixtem
 ---
 
-These are the actlite rules. They are very condensed, there are no examples, there is little clarification. This doc will be continuously edited and updated as the rules for actlite are revised. I am doing it this way because having a longer more complete rules document slows the rate at which I can make dramatic and ill-advised changes. Think of this as a quickstart ruleset.
+These are the Actlite rules. They are very condensed, there are no examples, there is little clarification. I am doing it this way because having a longer more complete rules document slows the rate at which I can make dramatic and ill-advised changes. Think of this as a quickstart ruleset.  
+
+Additionally, I make weekly posts on the [Substack](https://actlite.substack.com/) where I create content and revise rules. Often there is a delay between posts going up on the blog and changes being reflected here! This is bad. I'm trying to keep it from happening. If this notice is here it's still happening. When I've revised everything I want to revise, the site will be the main source of truth and the Substack will have Beta content.
 
 ## Characters
 
