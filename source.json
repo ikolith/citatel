@@ -476,7 +476,7 @@
         },
         "isopodan_fork": {
           "name": "Isopodan Fork",
-          "tags": ["shafted", "two-handed", "reach: 2"],
+          "tags": ["pole", "two-handed", "reach: 2"],
           "requirements": ["2 DEX", "1 AGI"],
           "speed": "1->2",
           "to_hit": "+AGI",
@@ -506,7 +506,7 @@
         },
         "jaw_axe": {
           "name": "Jaw Axe",
-          "tags": ["one-handed", "hilted"],
+          "tags": ["one-handed", "hilt"],
           "requirements": ["1 STR"],
           "speed": "1->2",
           "to_hit": "+STR",
@@ -517,7 +517,7 @@
         },
         "dogman_jawblade": {
           "name": "Jawblade",
-          "tags": ["one-handed", "hilted"],
+          "tags": ["one-handed", "hilt"],
           "requirements": ["1 STR"],
           "speed": "1->2",
           "to_hit": "+STR",
@@ -554,7 +554,7 @@
     "weapons": {
       "dagger": {
         "name": "Dagger",
-        "tags": ["one-handed", "hilted", "bladed", "reach: close", "stealth"],
+        "tags": ["one-handed", "hilt", "reach: close"],
         "speed": "1",
         "to_hit": "+DEX",
         "attacks": ["2 [P]", "1 [S]"],
@@ -563,7 +563,7 @@
       },
       "long_tooth": {
         "name": "Long Tooth",
-        "tags": ["one-handed", "hilted", "bladed", "reach: close", "stealth"],
+        "tags": ["one-handed", "hilt", "reach: close"],
         "speed": "1->1->2",
         "to_hit": "+DEX",
         "attacks": ["2 [P]"],
@@ -574,7 +574,7 @@
       },
       "butchers_cleaver": {
         "name": "Butcher's Cleaver",
-        "tags": ["one-handed", "hilted", "bladed", "reach: close", "stealth"],
+        "tags": ["one-handed", "hilt", "reach: close"],
         "requirements": ["1 STR"],
         "speed": "1->1->2",
         "to_hit": "+STR",
@@ -586,7 +586,7 @@
       },
       "bushmans_kukri": {
         "name": "Bushman's Kukri",
-        "tags": ["one-handed", "hilted", "bladed", "reach: close", "stealth"],
+        "tags": ["one-handed", "hilt", "reach: close"],
         "speed": "1->1->2",
         "to_hit": "+DEX",
         "attacks": ["1 [P]", "2 [Severing]"],
@@ -595,7 +595,7 @@
       },
       "gleaming_sabre": {
         "name": "Gleaming Sabre",
-        "tags": ["one-handed", "hilted", "bladed"],
+        "tags": ["one-handed", "hilt"],
         "requirements": ["2 DEX"],
         "speed": "1->1->2",
         "to_hit": "+AGI",
@@ -606,14 +606,14 @@
       },
       "dueling_sabre": {
         "name": "Dueling Sabre",
-        "tags": ["one-handed", "hilted", "bladed"],
+        "tags": ["one-handed", "hilt"],
         "speed": "1->1->2",
         "to_hit": "+AGI or +DEX",
         "attacks": ["d4 [Slicing]", "2 [P]"]
       },
       "simple_shortsword": {
         "name": "Simple Shortsword",
-        "tags": ["one-handed", "hilted", "bladed"],
+        "tags": ["one-handed", "hilt"],
         "speed": "1->2",
         "to_hit": "+AGI",
         "attacks": ["d4 [P] or [S]"],
@@ -623,7 +623,7 @@
       },
       "machete": {
         "name": "Machete",
-        "tags": ["one-handed", "hilted", "bladed"],
+        "tags": ["one-handed", "hilt"],
         "speed": "1->2",
         "to_hit": "+STR",
         "attacks": ["d4 [S]"],
@@ -633,7 +633,7 @@
       },
       "falx": {
         "name": "Falx",
-        "tags": ["one-handed", "hilted", "bladed"],
+        "tags": ["one-handed", "hilt"],
         "speed": "1->2",
         "to_hit": "+AGI",
         "attacks": ["1 [P] + 2 [Severing]"],
@@ -642,7 +642,7 @@
       },
       "heavy_cutlass": {
         "name": "Heavy Cutlass",
-        "tags": ["one-handed", "hilted", "bladed"],
+        "tags": ["one-handed", "hilt",
         "speed": "1->2",
         "to_hit": "+STR",
         "attacks": ["d4 [Severing]", "2 [P]"],
@@ -652,7 +652,7 @@
       },
       "black_shotel": {
         "name": "Black Shotel",
-        "tags": ["one-handed", "hilted", "bladed"],
+        "tags": ["one-handed", "hilt"],
         "requirements": ["1 DEX"],
         "speed": "1->1->2",
         "to_hit": "+AGI",
@@ -661,7 +661,7 @@
       },
       "boar_sword": {
         "name": "Boar Sword",
-        "tags": ["hilted two-handed", "reach"],
+        "tags": ["hilt two-handed", "reach: 2"],
         "requirements": ["1 AGI", "1 STR"],
         "speed": "1->2",
         "to_hit": "+AGI",
@@ -673,7 +673,7 @@
       },
       "estoc": {
         "name": "Estoc",
-        "tags": ["hilted", "two-handed", "reach: 2"],
+        "tags": ["hilt", "two-handed", "reach: 2"],
         "requirements": ["1 AGI"],
         "speed": "1->1->2",
         "to_hit": "+AGI",
@@ -685,7 +685,7 @@
       },
       "greatsword": {
         "name": "Greatsword",
-        "tags": ["hilted", "two-handed", "bladed"],
+        "tags": ["hilt", "two-handed"],
         "requirements": ["1 AGI", "2 STR"],
         "speed": "1->2",
         "to_hit": "+AGI +STR",
@@ -697,7 +697,7 @@
       },
       "primary_of_the_night_heron": {
         "name": "Primary of the Night-Heron",
-        "tags": ["hilted", "two-handed", "bladed", "reach: 2"],
+        "tags": ["hilt", "two-handed", "reach: 2"],
         "requirements": ["1 STR"],
         "speed": "1->1->2",
         "to_hit": "+AGI",
@@ -707,7 +707,7 @@
       },
       "rhomphaia": {
         "name": "Rhomphaia",
-        "tags": ["two-handed", "bladed", "reach: 2"],
+        "tags": ["two-handed", "reach: 2"],
         "requirements": ["1 STR"],
         "speed": "1->2",
         "to_hit": "+AGI",
@@ -718,7 +718,7 @@
       },
       "the_serpent_lords_coiled_greatsword": {
         "name": "The Serpent Lord's Coiled Greatsword",
-        "tags": ["two-handed", "bladed"],
+        "tags": ["two-handed"],
         "requirements": ["1 AGI", "2 STR"],
         "speed": "1->2",
         "to_hit": "+AGI +STR",
@@ -730,7 +730,7 @@
       },
       "crude_club": {
         "name": "Crude Club",
-        "tags": ["hilted", "one-handed"],
+        "tags": ["hilt", "one-handed"],
         "speed": "2",
         "to_hit": "+STR",
         "attacks": ["3 [B]"],
@@ -740,7 +740,7 @@
       },
       "mace": {
         "name": "Mace",
-        "tags": ["shafted", "one-handed"],
+        "tags": ["pole", "one-handed"],
         "requirements": ["1 STR"],
         "speed": "2",
         "to_hit": "+STR",
@@ -752,7 +752,7 @@
       },
       "one_handed_spear": {
         "name": "One Handed Spear",
-        "tags": ["shafted", "one-handed", "reach: 2"],
+        "tags": ["pole", "one-handed", "reach: 2"],
         "speed": "1->2",
         "attacks": ["d4 [P]"],
         "flavor_text": "A simple shaft with and a plain metal tip. Simple, reliable, effective.",
@@ -761,7 +761,7 @@
       },
       "javelin": {
         "name": "Javelin",
-        "tags": ["one-handed", "shafted"],
+        "tags": ["one-handed", "pole"],
         "requirements": ["1 AGI"],
         "speed": "1->2",
         "to_hit": "+AGI",
@@ -774,7 +774,7 @@
       },
       "fine_engraved_axe": {
         "name": "Fine Engraved Axe",
-        "tags": ["one-handed", "shafted", "bladed"],
+        "tags": ["one-handed", "pole"],
         "requirements": ["1 AGI"],
         "speed": "1->2",
         "to_hit": "+AGI",
@@ -784,7 +784,7 @@
       },
       "one_handed_war_axe": {
         "name": "One-Handed War Axe",
-        "tags": ["one-handed", "shafted", "bladed"],
+        "tags": ["one-handed", "pole"],
         "requirements": ["1 STR"],
         "speed": "1->2",
         "to_hit": "+STR",
@@ -793,7 +793,7 @@
       },
       "one_handed_war_hammer": {
         "name": "One-Handed War Hammer",
-        "tags": ["one-handed", "shafted"],
+        "tags": ["one-handed", "pole"],
         "requirements": ["1 STR"],
         "speed": "2",
         "to_hit": "+STR",
@@ -804,7 +804,7 @@
       },
       "adze": {
         "name": "Adze",
-        "tags": ["one-handed", "shafted", "bladed"],
+        "tags": ["one-handed", "pole"],
         "speed": "2",
         "to_hit": "+STR",
         "attacks": ["d4-1 [Severing]"],
@@ -815,7 +815,7 @@
       },
       "cactus_greatclub": {
         "name": "Cactus Greatclub",
-        "tags": ["hilted", "two-handed"],
+        "tags": ["hilt", "two-handed"],
         "requirements": ["2 STR"],
         "speed": "2->3",
         "to_hit": "+2*STR",
@@ -826,7 +826,7 @@
       },
       "giant_club": {
         "name": "Giant Club",
-        "tags": ["two-handed", "giant", "shafted"],
+        "tags": ["two-handed", "giant", "pole"],
         "requirements": ["3 STR"],
         "speed": "3",
         "to_hit": "+2*STR",
@@ -837,7 +837,7 @@
       },
       "giant_feasting_club": {
         "name": "Giant Feasting Club",
-        "tags": ["two-handed", "giant", "hilted"],
+        "tags": ["two-handed", "giant", "hilt"],
         "requirements": ["4 STR"],
         "speed": "2->3",
         "to_hit": "+2*STR",
@@ -849,7 +849,7 @@
       },
       "goedendag": {
         "name": "Goedendag!",
-        "tags": ["shafted", "two-handed", "reach: 2"],
+        "tags": ["pole", "two-handed", "reach: 2"],
         "requirements": ["2 STR"],
         "speed": "2",
         "to_hit": "+STR",
@@ -861,7 +861,7 @@
       },
       "greatclub": {
         "name": "Greatclub",
-        "tags": ["shafted", "two-handed", "reach: 2"],
+        "tags": ["pole", "two-handed", "reach: 2"],
         "requirements": ["2 STR"],
         "speed": "2",
         "attacks": ["7 [B]"],
@@ -870,7 +870,7 @@
       },
       "pitchfork": {
         "name": "Pitchfork",
-        "tags": ["shafted", "two-handed", "reach: 2"],
+        "tags": ["pole", "two-handed", "reach: 2"],
         "speed": "1->2",
         "to_hit": "+AGI",
         "attacks": ["3 [P]"],
@@ -880,7 +880,7 @@
       },
       "two_handed_spear": {
         "name": "Two Handed Spear",
-        "tags": ["shafted", "two-handed", "reach: 3"],
+        "tags": ["pole", "two-handed", "reach: 3"],
         "speed": "1->2",
         "to_hit": "+AGI",
         "attacks": ["d6 [P]"],
@@ -888,7 +888,7 @@
       },
       "battleaxe": {
         "name": "Battleaxe",
-        "tags": ["two-handed", "shafted", "bladed"],
+        "tags": ["two-handed", "pole"],
         "requirements": ["1 STR"],
         "speed": "2",
         "to_hit": "+STR",
@@ -898,7 +898,7 @@
       },
       "cutter_mattock": {
         "name": "Cutter Mattock",
-        "tags": ["two-handed", "shafted", "heavy"],
+        "tags": ["two-handed", "pole", "heavy"],
         "requirements": ["1 STR"],
         "speed": "2->3",
         "to_hit": "+STR",
@@ -908,7 +908,7 @@
       },
       "pickaxe": {
         "name": "Pickaxe",
-        "tags": ["two-handed", "shafted"],
+        "tags": ["two-handed", "pole"],
         "speed": "2->3",
         "to_hit": "+STR",
         "attacks": ["4 [Picking]"],
@@ -917,7 +917,7 @@
       },
       "warpick": {
         "name": "Warpick",
-        "tags": ["two-handed", "shafted", "reach: 2"],
+        "tags": ["two-handed", "pole", "reach: 2"],
         "requirements": ["2 STR"],
         "speed": "2",
         "to_hit": "+STR",
@@ -1100,7 +1100,7 @@
         "name": "Parry",
         "requirements": [
           "2 AGI",
-          "a hilted weapon that uses AGI or DEX To-Hit"
+          "a hilt weapon that uses AGI or DEX To-Hit"
         ],
         "effect": "Parry can be used to attempt to [interrupt] a melee attack. Pay 2 AP. Contest the attack roll with a Parry attempt, a check + AGI or DEX.  If you win, the attack does no damage and you gain 2 Temp AP  (you can only gain 2 Temp AP per turn this way). If you fail, you are [vulnerable] until your next action. You can pay AP out of the table deck to do this.",
         "cost": ["1 SP"],
@@ -1257,28 +1257,28 @@
       },
       "sneak_attack_1_lucky_strike": {
         "name": "Sneak Attack 1: Lucky Strike",
-        "requirements": ["AGI 1", "[stealth] weapon"],
+        "requirements": ["AGI 1"],
         "effect": "Sneak attack dice are exploding (if you get the max value on a die, roll another, if it happens again, roll another, etc.). If a die is set to max, roll another die.",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "sneak_attack", "basic", "deprecated"]
       },
       "sneak_attack_2_precision_strike": {
         "name": "Sneak Attack 2: Precision Strike",
-        "requirements": ["1 STEALTH", "[stealth] or [finesse] weapon"],
+        "requirements": ["1 STEALTH", "[finesse] weapon"],
         "effect": "Before you attack, you can choose to increase the cost of your attack by 1 AP to roll an extra damage die.\n\nMax 1 damage die when you attack a [vulnerable] opponent (unaware opponents are [vulnerable]).",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "sneak_attack", "basic", "deprecated"]
       },
       "sneak_attack_2_twist_the_knife": {
         "name": "Sneak Attack 2: Twist the Knife",
-        "requirements": ["1 STEALTH", "[stealth] weapon"],
+        "requirements": ["1 STEALTH"],
         "effect": "After performing an attack you can spend [1n2] to roll another damage die and add it to the attack before damage multipliers are calculated. If this attack kills, regain 1 AP.",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "sneak_attack", "basic", "deprecated"]
       },
       "sneak_attack_3_assassinate": {
         "name": "Sneak Attack 3: Assassinate",
-        "requirements": ["2 STEALTH", "2 DEX", "[stealth] weapon"],
+        "requirements": ["2 STEALTH", "2 DEX"],
         "effect": "Assassinate can only be used on an opponent who is unaware of you.\n\nIf you roll 3 dice at max damage, double your damage. If you roll 4, triple it. Ignore 8 armor on when using a Sneak Attack.",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "sneak_attack", "basic", "deprecated"]
