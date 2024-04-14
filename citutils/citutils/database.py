@@ -56,7 +56,7 @@ class DB(TinyDB):
         with open(input_path, "r") as f:
             data = json.load(f)
         build_db(data)
-        
+
         for doc in self.all():
             if "table" in doc.keys():
                 table = get_expanded_outcomes(doc["table"])
@@ -285,6 +285,9 @@ class DB(TinyDB):
         # basic: bool = False,  # im lazy.
         sort: bool = True,
         deprecated: bool = False,
+        html_characters: bool = False,
+        include_full_text: bool = True,
+        skip_table: bool = False,
     ) -> str:
         """!!! NOTICE: You probably need to set a non-default input_path when creating the db that you want to generate docs with !!!"""
         if query is None:
@@ -301,5 +304,10 @@ class DB(TinyDB):
             results = sorted(results, key=lambda x: x["name"])
         text = ""
         for e in results:
-            text += tx.generate_entity_text(e, text_type, True, True, False) + "\n"
+            text += (
+                tx.generate_entity_text(
+                    e, text_type, html_characters, include_full_text, skip_table
+                )
+                + "\n"
+            )
         return text
