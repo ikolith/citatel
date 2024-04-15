@@ -642,7 +642,7 @@
       },
       "heavy_cutlass": {
         "name": "Heavy Cutlass",
-        "tags": ["one-handed", "hilt",
+        "tags": ["one-handed", "hilt"],
         "speed": "1->2",
         "to_hit": "+STR",
         "attacks": ["d4 [Severing]", "2 [P]"],
@@ -1098,10 +1098,7 @@
       },
       "parry": {
         "name": "Parry",
-        "requirements": [
-          "2 AGI",
-          "a hilt weapon that uses AGI or DEX To-Hit"
-        ],
+        "requirements": ["2 AGI", "a hilt weapon that uses AGI or DEX To-Hit"],
         "effect": "Parry can be used to attempt to [interrupt] a melee attack. Pay 2 AP. Contest the attack roll with a Parry attempt, a check + AGI or DEX.  If you win, the attack does no damage and you gain 2 Temp AP  (you can only gain 2 Temp AP per turn this way). If you fail, you are [vulnerable] until your next action. You can pay AP out of the table deck to do this.",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "agi", "basic"]
