@@ -27,7 +27,7 @@ Some weapons do two types of damage only for the purposes of armor damage reduct
 
 **\[Slicing]**: What a saber does. Long fast drawing cut, often with a curved blade.  
 
-**\[Severing]**: What an axe does. A chopping motion2.  
+**\[Severing]**: What an axe does. A chopping motion.  
 
 **\[Picking]**: What a warpick does.  
   

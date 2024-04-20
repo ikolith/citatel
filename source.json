@@ -89,16 +89,15 @@
         "pulling_punches": {
           "name": "Pulling Punches",
           "cost": ["2 SP"],
-          "requirements": ["1 DEX"],
           "effect": "You can also choose to do non-lethal damage if the damage type is (B). Before you attack you can set a maximum damage for the attack to deal.",
-          "meta_tags": ["skill", "dex", "basic"]
+          "meta_tags": ["skill", "basic"]
         },
         "draw": {
           "name": "Draw!",
           "cost": ["3 SP"],
-          "requirements": ["1 DEX"],
+          "requirements": ["1 AGI"],
           "effect": "You may ignore weapon switching costs if you either switch [one-handed] weapons or draw a [one-handed] weapon and immediately attempt an attack.",
-          "meta_tags": ["skill", "dex", "basic"]
+          "meta_tags": ["skill", "agi", "basic"]
         },
         "butchery_i": {
           "name": "Butchery I",
@@ -170,17 +169,17 @@
         },
         "dual_wielding_1_ambidextrous": {
           "name": "Dual Wielding 1: Ambidextrous",
-          "requirements": ["DEX 1"],
+          "requirements": ["AGI 1"],
           "effect": "You can attack with your offhand as well as you attack with your main hand. Track the costs from attacks with either hand separately.",
           "cost": ["5 SP"],
-          "meta_tags": ["skill", "dual_wielding", "basic", "dex"]
+          "meta_tags": ["skill", "dual_wielding", "basic", "AGI"]
         },
         "dual_wielding_2_simultaneous_attack": {
           "name": "Dual Wielding 2: Simultaneous Attack",
-          "requirements": ["AGI 1", "DEX 1", "Dual Wielding 1"],
+          "requirements": ["AGI 1", "Dual Wielding 1"],
           "effect": "Once per turn, you can attack with both of your weapons at the same time spending 1 less AP than you would to do the attacks separately. Perform the attacks as normal otherwise.",
           "cost": ["5 SP"],
-          "meta_tags": ["skill", "dual_wielding", "basic", "dex", "agi"]
+          "meta_tags": ["skill", "dual_wielding", "basic", "AGI", "agi"]
         }
       },
       "special_skills": {
@@ -457,7 +456,7 @@
         "isopod_ambassador": {
           "name": "Isopod Ambassador",
           "hp": "2:8",
-          "scores": ["1 DEX", "2 PERSUASION", "2 STEALTH"],
+          "scores": ["1 AGI", "2 PERSUASION", "2 STEALTH"],
           "meta_tags": ["npc", "cave", "isopod", "deprecated"]
         },
         "isopod_name": {
@@ -477,7 +476,7 @@
         "isopodan_fork": {
           "name": "Isopodan Fork",
           "tags": ["pole", "two-handed", "reach: 2"],
-          "requirements": ["2 DEX", "1 AGI"],
+          "requirements": ["2 AGI"],
           "speed": "1->2",
           "to_hit": "+AGI",
           "attacks": ["d8 [P]", "1d4 (S) + 2 [Pulling]"],
@@ -510,19 +509,19 @@
           "requirements": ["1 STR"],
           "speed": "1->2",
           "to_hit": "+STR",
-          "attacks": ["2 (B) + 1 (Severing)", "3 (B)"],
-          "flavor_text": "A rudimentary axe crafted from an enormous white bovine jawbone. The coronoid of the cone has been ground down to a wedge approximating an axe blade. The protruding back of the bone can be used as a hammer. The leather wrapping rests above the chin and below the teeth.",
+          "attacks": ["2 [B] + 1 [Severing]", "3 [B]"],
+          "flavor_text": "A rudimentary axe crafted from an enormous white bovine jawbone. The coronoid of the bone has been ground down to a wedge approximating an axe blade. The protruding back of the bone can be used as a hammer. The leather wrapping rests above the chin and below the teeth of the jaw.",
           "encumbrance": "1",
           "meta_tags": ["weapon", "dogman"]
         },
-        "dogman_jawblade": {
-          "name": "Jawblade",
+        "jaw_blade": {
+          "name": "Jaw Blade",
           "tags": ["one-handed", "hilt"],
           "requirements": ["1 STR"],
           "speed": "1->2",
           "to_hit": "+STR",
-          "attacks": ["2 (B) + 1 [Picking]"],
-          "flavor_text": "An enormous bovine lower jawbone chopped down to function as something between a sword and a club. The \"blade\" is composed of the jagged teeth of the jawbone. The handle is wrapped in leather.",
+          "attacks": ["2 [B] + 1 [Picking]"],
+          "flavor_text": "The lower portion of an enormous bovine jawbone. The jaw has been chopped down, functioning as something between a sword and a club. The \"blade\" is composed of the jagged teeth of the jawbone. The handle is wrapped in leather.",
           "encumbrance": "1/3",
           "meta_tags": ["weapon", "dogman"]
         }
@@ -546,7 +545,7 @@
       "scheming": {
         "name": "Scheming",
         "cost": ["4 SP"],
-        "requirements": ["1 DEX"],
+        "requirements": ["1 AGI"],
         "effect": "Add this card to the table deck when initiative starts. Treat the card as 1 AP that cannot be spent on movement or attacks. Any effects that affect AP cards affect this card.",
         "meta_tags": ["skill", "basic"]
       }
@@ -556,7 +555,7 @@
         "name": "Dagger",
         "tags": ["one-handed", "hilt", "reach: close"],
         "speed": "1",
-        "to_hit": "+DEX",
+        "to_hit": "+AGI",
         "attacks": ["2 [P]", "1 [S]"],
         "encumbrance": "1/3",
         "meta_tags": ["weapon", "basic"]
@@ -565,12 +564,12 @@
         "name": "Long Tooth",
         "tags": ["one-handed", "hilt", "reach: close"],
         "speed": "1->1->2",
-        "to_hit": "+DEX",
+        "to_hit": "+AGI",
         "attacks": ["2 [P]"],
         "effect": "Ignore 2 Armor. 1 crit damage on crit.",
+        "flavor_text": "A narrow and bladeless rondel dagger.",
         "encumbrance": "1/3",
-        "meta_tags": ["weapon", "basic"],
-        "flavor_text": "A narrow bladeless rondel dagger, a long spike with a reinforced point."
+        "meta_tags": ["weapon", "basic"]
       },
       "butchers_cleaver": {
         "name": "Butcher's Cleaver",
@@ -588,7 +587,7 @@
         "name": "Bushman's Kukri",
         "tags": ["one-handed", "hilt", "reach: close"],
         "speed": "1->1->2",
-        "to_hit": "+DEX",
+        "to_hit": "+AGI",
         "attacks": ["1 [P]", "2 [Severing]"],
         "encumbrance": "1/3",
         "meta_tags": ["weapon", "basic"]
@@ -596,10 +595,10 @@
       "gleaming_sabre": {
         "name": "Gleaming Sabre",
         "tags": ["one-handed", "hilt"],
-        "requirements": ["2 DEX"],
+        "requirements": ["2 AGI"],
         "speed": "1->1->2",
         "to_hit": "+AGI",
-        "attacks": ["3 [Slicing]"],
+        "attacks": ["3 [Slicing]", "2 [P]"],
         "effect": "Inflict 1 [bleed] on crit.",
         "flavor_text": "The fine pale blade curves back gracefully. The sword is deceptively light in the hand, it is thin and fickle.",
         "meta_tags": ["weapon", "basic"]
@@ -608,7 +607,7 @@
         "name": "Dueling Sabre",
         "tags": ["one-handed", "hilt"],
         "speed": "1->1->2",
-        "to_hit": "+AGI or +DEX",
+        "to_hit": "+AGI",
         "attacks": ["d4 [Slicing]", "2 [P]"]
       },
       "simple_shortsword": {
@@ -616,7 +615,7 @@
         "tags": ["one-handed", "hilt"],
         "speed": "1->2",
         "to_hit": "+AGI",
-        "attacks": ["d4 [P] or [S]"],
+        "attacks": ["d4 [P], d4 [S]"],
         "flavor_text": "An unadorned straight sword. A simple and reliable weapon.",
         "encumbrance": "1",
         "meta_tags": ["weapon", "basic"]
@@ -653,15 +652,16 @@
       "black_shotel": {
         "name": "Black Shotel",
         "tags": ["one-handed", "hilt"],
-        "requirements": ["1 DEX"],
-        "speed": "1->1->2",
+        "requirements": ["1 AGI"],
+        "speed": "1",
         "to_hit": "+AGI",
         "attacks": ["d4 [Picking]", "d4 [Severing]"],
-        "flavor_text": "A shining black sickle sword, the blade curves in the shape of a crescent."
+        "flavor_text": "A shining black sword with a crescent shaped blade.",
+        "meta_tags": ["weapon", "basic"]
       },
       "boar_sword": {
         "name": "Boar Sword",
-        "tags": ["hilt two-handed", "reach: 2"],
+        "tags": ["hilt", "two-handed", "reach: 2"],
         "requirements": ["1 AGI", "1 STR"],
         "speed": "1->2",
         "to_hit": "+AGI",
@@ -718,7 +718,7 @@
       },
       "the_serpent_lords_coiled_greatsword": {
         "name": "The Serpent Lord's Coiled Greatsword",
-        "tags": ["two-handed"],
+        "tags": ["hilt", "two-handed"],
         "requirements": ["1 AGI", "2 STR"],
         "speed": "1->2",
         "to_hit": "+AGI +STR",
@@ -755,7 +755,7 @@
         "tags": ["pole", "one-handed", "reach: 2"],
         "speed": "1->2",
         "attacks": ["d4 [P]"],
-        "flavor_text": "A simple shaft with and a plain metal tip. Simple, reliable, effective.",
+        "flavor_text": "A simple, reliable, and effective weapon for a common footsoldier.",
         "encumbrance": "1",
         "meta_tags": ["weapon", "basic"]
       },
@@ -841,7 +841,7 @@
         "requirements": ["4 STR"],
         "speed": "2->3",
         "to_hit": "+2*STR",
-        "attacks": ["2d4 (B) d4 [P]"],
+        "attacks": ["2d4 [B] + d4 [Picking]"],
         "effect": "When a damage die rolls a 4, inflict 1 [bleeding] and 1 [poison].",
         "flavor_text": "Only the handle of the dark hardwood club is visible. The rest is covered with enormous living barnacles. The barnacles constantly chatter, click, and move. They tear at anything that comes near.",
         "encumbrance": "2",
@@ -854,7 +854,7 @@
         "speed": "2",
         "to_hit": "+STR",
         "attacks": ["d4+STR [B]", "d4+STR [P]"],
-        "flavor_text": "A broad heavy shaft with a large iron spike mounted on the end, a heavy club-spear hybrid. Friendly.",
+        "flavor_text": "A broad heavy shaft with a large iron spike mounted on the end. A heavy club-spear hybrid. Friendly.",
         "effect": "Ignore 2 armor.",
         "encumbrance": "2",
         "meta_tags": ["weapon", "basic"]
@@ -1098,8 +1098,8 @@
       },
       "parry": {
         "name": "Parry",
-        "requirements": ["2 AGI", "a hilt weapon that uses AGI or DEX To-Hit"],
-        "effect": "Parry can be used to attempt to [interrupt] a melee attack. Pay 2 AP. Contest the attack roll with a Parry attempt, a check + AGI or DEX.  If you win, the attack does no damage and you gain 2 Temp AP  (you can only gain 2 Temp AP per turn this way). If you fail, you are [vulnerable] until your next action. You can pay AP out of the table deck to do this.",
+        "requirements": ["2 AGI", "A hilt weapon that uses AGI to hit."],
+        "effect": "Parry can be used to attempt to [interrupt] a melee attack. Pay 2 AP. Contest the attack roll with a Parry attempt, a check + AGI.  If you win, the attack does no damage and you gain 2 Temp AP  (you can only gain 2 Temp AP per turn this way). If you fail, you are [vulnerable] until your next action. You can pay AP out of the table deck to do this.",
         "cost": ["1 SP"],
         "meta_tags": ["skill", "agi", "basic"]
       },
