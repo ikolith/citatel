@@ -1,0 +1,381 @@
+{
+  "coordination_1": {
+    "name": "Coordination 1",
+    "cost": ["3 SP"],
+    "requirements": ["1 SOC"],
+    "effect": "At the beginning of initiative you can choose to separate your team's table cards into a deck separate from the main table deck. Cards will be drawn alternating from each deck with your team's deck going first. You can pay 1 AP so that the next 3 cards are drawn from your deck. Characters can choose to affect either deck with their abilities.",
+    "meta_tags": ["skill", "soc", "basic"]
+  },
+  "coordination_2": {
+    "name": "Coordination 2",
+    "cost": ["2 SP"],
+    "requirements": ["2 SOC"],
+    "effect": "If you have separated your team's deck you can also pay 1 AP out of the deck at any time to rearrange the cards in your team's table deck.",
+    "meta_tags": ["skill", "soc", "basic"]
+  },
+  "deception": {
+    "name": "Deception",
+    "cost": ["4 SP"],
+    "requirements": ["1 SOC"],
+    "effect": "+2 to SOCIAL checks when lying. You can buy this skill twice.",
+    "meta_tags": ["skill", "soc", "basic"]
+  },
+  "disguise": {
+    "name": "Disguise",
+    "cost": ["4 SP"],
+    "requirements": ["1 SOC"],
+    "effect": "You can create disguises. Roll a check +3 to set a DC for your disguise, you can create a disguise for another person this way. When using a disguise you get +3 to SOCIAL or STEALTH rolls relevant to your use of the disguise.",
+    "meta_tags": ["skill", "soc", "basic"]
+  },
+  "weapon_skills": {
+    "pulling_punches": {
+      "name": "Pulling Punches",
+      "cost": ["2 SP"],
+      "effect": "You can also choose to do non-lethal damage if the damage type is (B). Before you attack you can set a maximum damage for the attack to deal.",
+      "meta_tags": ["skill", "basic"]
+    },
+    "draw": {
+      "name": "Draw!",
+      "cost": ["3 SP"],
+      "requirements": ["1 AGI"],
+      "effect": "You may ignore weapon switching costs if you either switch [one-handed] weapons or draw a [one-handed] weapon and immediately attempt an attack.",
+      "meta_tags": ["skill", "agi", "basic"]
+    },
+    "butchery_i": {
+      "name": "Butchery I",
+      "cost": ["5 SP"],
+      "requirements": ["1 STR"],
+      "effect": "When you roll matching dice with a [Severing] weapon, do 1 crit damage and apply apply an [injury] that disables one of the enemy's limbs.",
+      "meta_tags": ["skill", "str", "basic"]
+    },
+    "butchery_ii": {
+      "name": "Butchery II",
+      "cost": ["5 SP"],
+      "requirements": ["3 STR", "Butchery I"],
+      "effect": "Replaces Butchery I. When you roll a half crit with a [Severing] weapon, do 1 crit damage and apply an [injury] that disables one of the enemy's limbs. On full crit, remove the limb.",
+      "meta_tags": ["skill", "str", "basic"]
+    },
+    "large_weapon_1_two_handed_proficiency": {
+      "name": "Large Weapon 1: [two-handed] Proficiency",
+      "cost": ["5 SP"],
+      "requirements": ["2 STR"],
+      "effect": "Treat your Strength as 1 higher (for weapon related rolls) when wielding two handed weapons.",
+      "meta_tags": ["skill", "large_weapon", "basic", "str"]
+    },
+    "large_weapon_2_sweep": {
+      "name": "Large Weapon 2: Sweep",
+      "cost": ["5 SP"],
+      "requirements": ["{Large Weapon 1}", "STR 2"],
+      "effect": "When you perform a non-(P) melee attack with a [two-handed] weapon or a weapon with [reach], you can treat it as an attack against two adjacent enemies that you can hit. Roll only once, resolve the attack separately for each enemy. You can spend an extra 1 AP and attack up to four adjacent enemies in the same way.",
+      "meta_tags": ["skill", "large_weapon", "basic", "str"]
+    },
+    "large_weapon_2_giant_weapon_proficiency": {
+      "name": "Large Weapon 2: Giant Weapon Proficiency",
+      "cost": ["5 SP"],
+      "requirements": ["{Large Weapon 1}"],
+      "effect": "Treat your Strength as 1 higher (for weapon related rolls) when wielding a weapon with the [giant] tag.",
+      "meta_tags": ["skill", "large_weapon", "basic", "str"]
+    },
+    "large_weapon_2_giant_weapon_efficiency": {
+      "name": "Large Weapon 2: Giant Weapon Efficiency",
+      "requirements": ["{Large Weapon 2}", "AGI 1"],
+      "effect": "When you land a hit with a [giant] weapon, gain 1 Temp AP.",
+      "cost": ["10 SP"],
+      "meta_tags": ["skill", "large_weapon", "basic", "str", "agi"]
+    },
+    "sharpshooter": {
+      "name": "Sharpshooter",
+      "requirements": ["1 PER"],
+      "effect": "When making [ranged] attacks, treat your PERCEPTION as 1 higher.",
+      "cost": ["7 SP"],
+      "meta_tags": ["skill", "ranged", "basic", "per"]
+    },
+    "trick_shot": {
+      "name": "Trick Shot",
+      "requirements": ["1 PER"],
+      "effect": "+2 To-Hit when using \"Called Shot\" with a [ranged] attack.",
+      "cost": ["4 SP"],
+      "meta_tags": ["skill", "ranged", "basic", "per"]
+    },
+    "shield_training": {
+      "name": "Shield Training",
+      "effect": "Raise your DEFENSE by 2 against melee attacks and by 3 against ranged attacks when using a shield.",
+      "cost": ["3 SP"],
+      "meta_tags": ["skill", "shield", "basic"]
+    },
+    "shield_bash": {
+      "name": "Shield Bash",
+      "effect": "You can attack with a shield as +STR to hit, 1 Damage [B]. Knock the enemy prone on a half crit.",
+      "cost": ["4 SP"],
+      "meta_tags": ["skill", "shield", "basic", "str"]
+    },
+    "dual_wielding_1_ambidextrous": {
+      "name": "Dual Wielding 1: Ambidextrous",
+      "requirements": ["AGI 1"],
+      "effect": "You can attack with your offhand as well as you attack with your main hand. Track the costs from attacks with either hand separately.",
+      "cost": ["5 SP"],
+      "meta_tags": ["skill", "dual_wielding", "basic", "AGI"]
+    },
+    "dual_wielding_2_simultaneous_attack": {
+      "name": "Dual Wielding 2: Simultaneous Attack",
+      "requirements": ["AGI 1", "Dual Wielding 1"],
+      "effect": "Once per turn, you can attack with both of your weapons at the same time spending 1 less AP than you would to do the attacks separately. Perform the attacks as normal otherwise.",
+      "cost": ["5 SP"],
+      "meta_tags": ["skill", "dual_wielding", "basic", "AGI", "agi"]
+    }
+  },
+  "special_skills": {
+    "chronomancy_slippage": {
+      "name": "Chronomancy: Slippage",
+      "cost": ["8 SP"],
+      "requirements": ["1 CHRONO"],
+      "effect": "Pay 3 AP. Add this card to the table deck. For the next 3 rounds, whenever this card is drawn the round immediately ends.",
+      "meta_tags": ["skill", "chrono"]
+    },
+    "chronomancy_sustain": {
+      "name": "Chronomancy: Sustain",
+      "cost": ["8 SP"],
+      "requirements": ["1 CHRONO"],
+      "effect": "Pay 3 AP. Add this card to the table deck. For the next 3 rounds, the first time this card is drawn, reshuffle all the table deck cards as if a new round is starting and continue the round.",
+      "meta_tags": ["skill", "chrono"]
+    },
+    "chronomancy_tension": {
+      "name": "Chronomancy: Tension",
+      "cost": ["8 SP"],
+      "requirements": ["1 CHRONO"],
+      "effect": "Spend 1 AP. Draw 2 cards from the table deck for each character in initiative. They don't get to act unless it is the last card they can get from the table deck.",
+      "meta_tags": ["skill", "chrono"]
+    }
+  },
+  "agi": {
+    "improved_interrupt": {
+      "name": "Improved Interrupt",
+      "requirements": ["1 AGI"],
+      "cost": ["8 SP"],
+      "effect": "When you use an [interrupt] flip a coin. If heads, you do not have to pay the 1 AP cost for interrupting.",
+      "meta_tags": ["skill", "agi", "basic"]
+    },
+    "improved_dodge": {
+      "name": "Improved Dodge",
+      "requirements": ["1 AGI"],
+      "cost": ["5 SP"],
+      "effect": "You can spend 1 AP to raise your DEFENSE by your AGI for the rest of the round, minimum +2. You can do this at any point except after an attack against you has already been rolled. You cannot do this if you are wearing [bulky] armor.",
+      "meta_tags": ["skill", "agi", "basic"]
+    },
+    "running_on_empty": {
+      "name": "Running on Empty",
+      "requirements": ["0 AGI"],
+      "cost": ["8 SP"],
+      "effect": "Gain +1 DEFENSE as long as you have less than 2 total AP.",
+      "meta_tags": ["skill", "agi", "basic"]
+    },
+    "reflex": {
+      "name": "Reflex",
+      "requirements": ["1 AGI"],
+      "cost": ["15 SP"],
+      "effect": "The first time someone attacks you and misses in a round, gain 1 temp AP that you must use immediately or lose.",
+      "meta_tags": ["skill", "agi", "basic"]
+    },
+    "dead_sprint": {
+      "name": "Dead Sprint",
+      "requirements": ["1 AGI"],
+      "cost": ["10 SP"],
+      "effect": "You can move three times your speed in a straight line.",
+      "meta_tags": ["skill", "agi", "basic"]
+    },
+    "opportunism": {
+      "name": "Opportunism",
+      "requirements": ["0 AGI"],
+      "cost": ["10 SP"],
+      "effect": "When someone you can currently hit with a melee attack moves, you can act just before them. If you choose to attack, the attack is AP cheaper. If you hit, they only move 1 space. You can only use Opportunism three times per round.",
+      "meta_tags": ["skill", "agi", "basic"]
+    },
+    "slippery": {
+      "name": "Slippery",
+      "requirements": ["1 AGI"],
+      "cost": ["5 SP"],
+      "effect": "When someone tries to take any action that would interrupt your movement, as in {Opportunism} or {Defensive Stance} they get disadvantage. If anyone tries to grapple you, they get disadvantage. You get advantage when taking an action that moves you through the space of a hostile character.",
+      "meta_tags": ["skill", "agi", "basic"]
+    },
+    "fancy_footwork": {
+      "name": "Fancy Footwork",
+      "requirements": ["2 AGI"],
+      "cost": ["7 SP"],
+      "effect": "You can move 1 space everytime you attack.",
+      "meta_tags": ["skill", "agi", "basic"]
+    }
+  },
+  "str": {
+    "grappling": {
+      "grappling_adept": {
+        "name": "Grappling Adept",
+        "requirements": ["0 STR"],
+        "cost": ["10 SP"],
+        "effect": "+2 to grapple checks. If you are being grappled, you can spend 1 AP to perform a grapple check. If you succeed, you are the one grappling and your opponent is being grappled.",
+        "meta_tags": ["skill", "str", "grappling", "basic"]
+      },
+      "grappling_expert": {
+        "name": "Grappling Expert",
+        "requirements": ["0 STR", "{Grappling Adept}"],
+        "cost": ["20 SP"],
+        "effect": "+4 to grapple checks. All Grappling skills cost 1 AP to perform. You can grapple opponents one size category larger than you. Treat your STR as +2 while you are grappling your opponent (does not apply to grapple checks).",
+        "meta_tags": ["skill", "str", "grappling", "basic"]
+      },
+      "throw": {
+        "name": "Throw",
+        "requirements": ["{Grappling Adept}"],
+        "cost": ["4 SP"],
+        "effect": "You can perform a Throw while grappling or being grappled unless you or your target is [prone]. Spend 2 AP. Perform a STR check. If you succeed, Throw your target STR spaces, up to 3 spaces. Your target lands [prone].",
+        "meta_tags": ["skill", "str", "grappling", "basic"]
+      },
+      "takedown": {
+        "name": "Takedown",
+        "requirements": ["{Grappling Adept}"],
+        "cost": ["4 SP"],
+        "effect": "Using Takedown costs 2 AP. You can take a move action when you use it. Make a [range: close] attack, if you succeed, the target is knocked prone and you are grappling them. You are treated as by everyone except your target.",
+        "meta_tags": ["skill", "str", "grappling", "basic"]
+      },
+      "slam": {
+        "name": "Slam",
+        "requirements": ["{Grappling Adept}"],
+        "cost": ["4 SP"],
+        "effect": "You can perform a Slam while grappling unless you or your target is [prone]. Spend 2 AP. Deal 1d4 (B). You are still grappling your target. Your target is [prone].",
+        "meta_tags": ["skill", "str", "grappling", "basic"]
+      },
+      "chokehold": {
+        "name": "Chokehold",
+        "requirements": ["{Grappling Adept}"],
+        "cost": ["4 SP"],
+        "effect": "You must be grappling your target and your target must be [prone] for you to perform a Chokehold.  Spend 2 AP to initiate a Chokehold. The target can try to break out of the grapple while you are performing the Chokehold. You cannot do anything else while performing the Chokehold. The Chokehold costs 2 AP to maintain every turn. On the start of the third round in the Chokehold, the target becomes [unconscious] for 1d12 minutes. The Chokehold ends if you take damage from any non-unarmed attack. Chokehold cannot be performed on a target wearing a full helmet, or has a gaseous form, doesn't have a neck, etc.",
+        "meta_tags": ["skill", "str", "grappling", "basic"]
+      },
+      "submission": {
+        "name": "Submission",
+        "requirements": ["{Grappling Adept}"],
+        "cost": ["4 SP"],
+        "effect": "You must be grappling your target and your target must be [prone] for you to perform a Submission.  Spend 2 AP to initiate a Submission.  Perform a STR check. If you succeed, choose which limb to injure. For humanoids you can injure an arm or leg. Injuring an arm means the target has disadvantage when trying to do anything with that arm for an hour, injuring a leg lowers the targets movement speed by 2.",
+        "meta_tags": ["skill", "str", "grappling", "basic"]
+      },
+      "control": {
+        "name": "Control",
+        "requirements": ["{Grappling Adept}"],
+        "cost": ["2 SP"],
+        "effect": "You must be grappling your target and your target must be [prone] for you to use Control.  Spend 2 AP to initiate Control. The target has disadvantage when attempting to end or reverse the grapple. You cannot do anything else while maintaining Control. Control costs 2 AP to maintain every turn. ",
+        "meta_tags": ["skill", "str", "grappling", "basic"]
+      }
+    },
+    "unstoppable": {
+      "name": "Unstoppable",
+      "cost": ["9 SP"],
+      "requirements": ["1 STR"],
+      "effect": "Ignore the effects of a number of [stun], [injury], [poison], and [bleed] status effects up to your STR in the order that you recieve the statuses. The statuses must still be treated or resolve themselves, you just ignore their effects.",
+      "meta_tags": ["skill", "str", "basic"]
+    },
+    "jackassery": {
+      "name": "Jackassery",
+      "cost": ["7 SP"],
+      "requirements": ["0 STR"],
+      "effect": "Take half damage from falling. Take half damage when you choose to jump through glass windows, run through burning buildings, or do other things that are wildly unsafe. ",
+      "meta_tags": ["skill", "str", "basic"]
+    },
+    "hard_to_kill": {
+      "name": "Hard to Kill",
+      "requirements": ["1 STR", "1 WIL"],
+      "cost": ["10 SP"],
+      "effect": "When you would be killed or downed by less damage than your total standard health (not your current standard health), flip a coin. If it comes up heads, you stay standing with 1 crit health.",
+      "meta_tags": ["skill", "str", "basic"]
+    },
+    "clobber": {
+      "name": "Clobber",
+      "requirements": ["1 STR"],
+      "cost": ["5 SP"],
+      "effect": "Take disadvantage on an attack that costs at least 2 AP. Add your STR to the damage if it hits.",
+      "meta_tags": ["skill", "str", "basic"]
+    },
+    "hearty": {
+      "name": "Hearty",
+      "cost": ["9 SP"],
+      "effect": "Get +1:+3 max health. You can take this skill once for every point of STR you have.",
+      "meta_tags": ["skill", "str", "basic"]
+    },
+    "charge": {
+      "name": "Charge",
+      "cost": ["5 SP"],
+      "effect": "Pay 1 AP. Move double your movement speed in a straight line. You must move at least two spaces. Once you reach an enemy, you may perform an attack, paying AP as usual. Before you roll your attack you can choose to add your STR to the damage or to your attack roll. If you are entering a STR contest of some kind, add your STR to your roll.",
+      "meta_tags": ["skill", "str", "basic"]
+    }
+  },
+  "wil": {
+    "indefatigable": {
+      "name": "Indefatigable",
+      "requirements": ["1 WIL"],
+      "cost": ["8 SP"],
+      "effect": "When you would take a point of [exhaustion], flip a coin. On heads, don't.",
+      "meta_tags": ["skill", "wil", "basic"]
+    },
+    "adrenaline": {
+      "name": "Adrenaline",
+      "requirements": ["1 WIL"],
+      "cost": ["5 SP"],
+      "effect": "Don't suffer the penalties of [exhaustion] incurred during initiative until initiative ends. You can't take more stacks of [exhaustion] this way than what it would take to cause you to fall [unconscious].",
+      "meta_tags": ["skill", "wil", "basic"]
+    },
+    "heroic_effort": {
+      "name": "Heroic Effort",
+      "requirements": ["0 WIL"],
+      "cost": ["5 SP"],
+      "effect": "Take 1 [exhaustion]. Get advantage on your next check.",
+      "meta_tags": ["skill", "wil", "basic"]
+    },
+    "tenacity": {
+      "name": "Tenacity",
+      "requirements": ["0 WIL"],
+      "cost": ["5 SP"],
+      "effect": "Take 1 [exhaustion]. Reroll any damage, check, or contest die.",
+      "meta_tags": ["skill", "wil", "basic"]
+    },
+    "strain": {
+      "name": "Strain",
+      "requirements": ["0 WIL"],
+      "cost": ["5 SP"],
+      "effect": "Take 1 [exhaustion]. Get 1 Temp AP.",
+      "meta_tags": ["skill", "wil", "basic"]
+    }
+  },
+  "per": {
+    "wild_conjecture": {
+      "name": "Wild Conjecture",
+      "requirements": ["1 PER"],
+      "cost": ["8 SP"],
+      "effect": "First, specify a question. Next, the GM flips a coin in secret. Finally, the GM tells you what insane theory your character concocted by combining the information available to them with a liberal dose of moon logic. Your character wholeheartedly believes this theory.\n\nIf the GM got a heads on the coin flip, you get a theory that is on the right track, maybe even totally correct (at least, in it's conclusions). If the GM got tails, you receive a theory that is as astoundingly incorrect as it is completely unhelpful. You can only use this skill on a question once. Once you use Wild Conjecture, you have to rest before you can use it again.",
+      "flavor_text": "You have what could be charitably described as an “unorthodox” relationship with reason. The impressive leaps of logic you are able to perform allow you to reach conclusions that lesser thinkers would never even begin to consider. Even more impressively, sometimes you're correct!",
+      "full_text": "Before you take this skill, establish with the GM how you want to receive the theory. The GM could, in secret, gives you a series of “beats” to hit or facts to include along with a conclusion. Then, you roleplay and improvise the connecting tissue of the theory. Alternatively, the GM just tells you the theory. You could do something else entirely. The GM could just drop an earth shattering revelation that has a 50% chance of being false. If you're the GM and a player uses Wild Conjecture on a question they have insufficient information to even begin answering and they get heads, get creative. Give them some little tidbit related to the answer, push them down the right track, confuse them. \n\n Of course your theory has a 50% chance of being right, it's either right or it's wrong! That's basic statistics!",
+      "meta_tags": ["skill", "per", "basic"]
+    },
+    "keen": {
+      "name": "Keen",
+      "requirements": ["1 PER"],
+      "cost": ["4 SP"],
+      "effect": "+2 when using your PER to watch for specific and brief events. You can use this to watch for a positive or negative reaction when you give another character new information, or you can watch to see if another character will try to draw a weapon, allowing you to draw yours first. Keen allows you not only to react quickly, but to anticipate actions and act first. Add +2 to your passive resistance to stealth and pickpocketing.",
+      "flavor_text": "You are able to focus your perception to a razors edge, catching the briefest movement. You're like a poker player spotting the telltale dilation of pupils as a card is dealt, or a watchman high on a tower watching for movement below. When you know what you are looking for, it's almost as if time slows down for you for just a moment.",
+      "full_text": "",
+      "meta_tags": ["skill", "per", "basic"]
+    },
+    "rumination": {
+      "name": "Rumination",
+      "requirements": ["0 PER"],
+      "cost": ["11 SP"],
+      "effect": "Flip a coin. On a heads, all of the puzzle pieces you have snap into place, you know where to look, you know what you're missing, you see the path to the answer. On a tails you get cryptic hints, symbols, hunches, impressions. If you get a heads but you don't have enough information, you get particularly useful hints, symbols, hunches, impressions.\n\nYou cannot use Rumination during initiative. You cannot use Rumination on the same question twice. You cannot do anything complex or time sensitive while using Rumination. Once you use Rumination, you have to rest before you can use it again. You can use Rumination any time you can take a moment just to think.",
+      "flavor_text": "You deeply ponder a question. You turn what you have seen and heard over in your mind, without judgement or bias. You dredge up minute details from your memory that may have, at the time, slipped past your conscious awareness. You approach your problem from all angles, crafting and discarding theories. You are fishing for an epiphany, a sudden flash of realization.",
+      "full_text": "For GMs: This can be a difficult skill to work with! When a character uses this skill, they only get information that they have already seen or information that they “could” have seen. Give out new information sparingly with this ability! New pieces of information should be very small. Maybe a look from another character that didn't seem like anything at the time, but is strange or out of place in hindsight. If a player has so much information the answer is staring them in the face and they get heads, at least try to give them the information slowly so they have a chance to figure it out, maybe text it to them separately so they can present their eureka moment to the rest of the party themselves.\n\nThis ability allows GMs to arrange the information in front of players usefully, discard some things, and focus on others. This ability is more straightforwardly useful on heads, but more interesting on tails. Tails gives the player another puzzle piece, an impression, a symbol, a hunch they can't make sense of but can't quite shake.",
+      "meta_tags": ["skill", "per", "basic"]
+    },
+    "reading_lips": {
+      "name": "Reading Lips",
+      "requirements": ["1 PER"],
+      "cost": ["5 SP"],
+      "effect": "You can read the lips of characters whose faces you can see clearly.",
+      "meta_tags": ["skill", "per", "basic"]
+    }
+  }
+}

@@ -11,14 +11,14 @@ import citutils.dice_utils as du
 
 
 class DB(TinyDB):
-    def __init__(self, input_path: str = "source.json", output_path: str = "db.json"):
+    def __init__(self, input_path: str = "./source", output_path: str = "db.json"):
         super().__init__(output_path)
         self.input_path = input_path
         self.output_path = output_path
         self._create_tinydb(input_path, output_path)
 
     def _create_tinydb(
-        self, input_path: str = "source.json", output_path: str = "db.json"
+        self, input_path: str = "./source", output_path: str = "db.json"
     ):
         """This function creates a flattened TinyDB db.
         !!! You should NOT write to this db !!!
@@ -35,6 +35,22 @@ class DB(TinyDB):
                     self.insert(v)
                 else:
                     build_db(v)
+
+        def wrangle_jsons(path: str, aggregated: dict = {}):
+            print("path", path)
+            print("aggregated", aggregated)
+            # look into getting a path-type
+            if os.path.isdir(path):
+                for p in [os.path.join(path, entry) for entry in os.listdir(path)]:
+                    aggregated = wrangle_jsons(p, aggregated)
+            else:
+                with open(path, "r") as f:
+                    temp = json.loads(f.read())
+                intersection = set(aggregated.keys()) & set(temp.keys())
+                if intersection:
+                    raise KeyError(f"Duplicate Key(s): {intersection}")
+                aggregated = {**aggregated, **temp}
+            return aggregated
 
         def get_expanded_outcomes(table: ty.Table):
             expanded_outcomes = {}
@@ -53,9 +69,7 @@ class DB(TinyDB):
 
         if os.path.exists(output_path):
             os.remove(output_path)
-        with open(input_path, "r") as f:
-            data = json.load(f)
-        build_db(data)
+        build_db(wrangle_jsons(input_path))
 
         for doc in self.all():
             if "table" in doc.keys():

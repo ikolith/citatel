@@ -1,0 +1,106 @@
+{
+  "items": {
+    "the_braggart": {
+      "name": "The Braggart",
+      "effect": "A cloak with bright silver stitching.  When worn, DC 9 illusion of a full set of plate armor.",
+      "meta_tags": ["item"]
+    },
+    "lost": {
+      "name": "Lost",
+      "effect": "Two stone birds that constantly tug towards each other, regardless of distance.",
+      "meta_tags": ["item"]
+    },
+    "bandage": {
+      "name": "Bandage",
+      "effect": "Spend 2 AP. Remove 1 [bleed]. Bandages can be improvised out of any cloth.",
+      "flavor_text": "A roll of clean cloth.",
+      "meta_tags": ["item", "medicine", "gear", "basic"]
+    },
+    "troll_salts": {
+      "name": "Troll Salts",
+      "effect": "Remove 1 [exhaustion], after 10 minutes take 2 [exhaustion]. Wake up from unconsciousness not caused by negative health.",
+      "flavor_text": "A small earthenware jar filled with a strong-smelling coarse powder, sealed with a waxed ball of plant fiber.",
+      "meta_tags": ["item", "medicine"]
+    },
+    "stolen_ichor": {
+      "name": "Stolen Ichor",
+      "effect": "Use costs 2 AP. Gain 3 [heal].",
+      "meta_tags": ["item", "medicine", "gear"]
+    },
+    "variigoshlovr_root": {
+      "name": "Variigoshlovr Root ",
+      "effect": "Use costs 1 AP. Remove 1 [bleed].",
+      "meta_tags": ["item", "medicine", "gear", "basic"]
+    },
+    "glowing_root_bundle": {
+      "name": "Glowing Root Bundle",
+      "effect": "Use costs 1 AP. Instantly gain 1:3 HP.",
+      "meta_tags": ["item", "medicine", "gear"]
+    },
+    "vial_of_verdant_sap": {
+      "name": "Vial of Verdant Sap",
+      "effect": "Use costs 2 AP. Gain 2 [heal].",
+      "meta_tags": ["item", "medicine", "gear"]
+    },
+    "crude_frog_idol": {
+      "name": "Crude Frog Idol",
+      "effect": "Use costs 3 AP. Must be holding the idol with both hands. Ignore 3 poison damage next turn.",
+      "flavor_text": "A small, worn, and stained frog idol on a fraying cord of twine. It's wearing an even smaller straw hat. He seems to be smiling.",
+      "meta_tags": ["item"]
+    },
+    "battle_egg_carton_and_bandolier": {
+      "name": "Battle Egg Carton and Bandolier",
+      "effect": "Carton holds 24 Putrefying Eggs. Carton and eggs will break if it or the person wearing it takes 5 or more damage in one turn.",
+      "flavor_text": "A wooden case made from solid hardwood with round impressions chipped into it. The inside is padded with soft moss.",
+      "meta_tags": ["item"]
+    }
+  },
+  "ap_card_skills": {
+    "mobility": {
+      "name": "Mobility",
+      "cost": ["8 SP"],
+      "requirements": ["1 AGI"],
+      "effect": "Add this card to the table deck when initiative starts. Treat the card as 1 AP that can only be spent on movement. Any effects that affect AP cards affect this card.",
+      "meta_tags": ["skill", "basic"]
+    },
+    "bruiser": {
+      "name": "Bruiser",
+      "cost": ["15 SP"],
+      "requirements": ["2 STR"],
+      "effect": "Add this card to the table deck when initiative starts. Treat the card as 2 AP that can only be spent on attacks. Any effects that affect AP cards affect this card.",
+      "meta_tags": ["skill", "basic"]
+    },
+    "scheming": {
+      "name": "Scheming",
+      "cost": ["4 SP"],
+      "requirements": ["1 AGI"],
+      "effect": "Add this card to the table deck when initiative starts. Treat the card as 1 AP that cannot be spent on movement or attacks. Any effects that affect AP cards affect this card.",
+      "meta_tags": ["skill", "basic"]
+    }
+  },
+  "whetstones": {
+    "simple_whetstone": {
+      "name": "Simple Whetstone",
+      "effect": "Apply [sharpened] to a [bladed] weapon, takes 30 minutes to apply. The weapon ignores 1 armor. Lose [sharpened] when you crit fail.",
+      "flavor_text": "A large flat stone bearing faded inscriptions.",
+      "meta_tags": ["item", "whetstone", "basic"]
+    },
+    "valiikons_whetstone": {
+      "name": "Valiikon's Whetstone",
+      "effect": "Takes 30 minutes to apply [sharpened]. Inflict 1 poison on hit. Inflict 1 poison if you do 2 poison in one turn. Missing an attack removes [sharpened].",
+      "meta_tags": ["item", "whetstone"]
+    },
+    "footsoldiers_whetstone": {
+      "name": "Footsoldier's Whetstone",
+      "effect": "Takes 30 minutes to apply [sharpened] to a [bladed] weapon. Ignore 3 armor. Rolling a crit fail removes [sharpened].",
+      "flavor_text": "A fragment of a relief etched into heavy white stone. The relief depicts a phalanx of soldiers bearing partisans against an unseen enemy. The relief is etched deeply with identical runes in various styles.",
+      "meta_tags": ["item", "whetstone"]
+    },
+    "cannibal_whetstone": {
+      "name": "Cannibal Whetstone",
+      "effect": "Take 1 hour to apply [sharpened] to a [bladed] weapon. Whetstone must be soaked in blood for 1 hour before use. Inflict 1 [bleed] on half crit. Gain 1 health at the beginning of your turn as long as the opponent is bleeding.",
+      "flavor_text": "A warm mass of striated stone writhing almost imperceptibly. It bears a closed eye on one side. It scrapes against your hand. It screams in your head.",
+      "meta_tags": ["item", "whetstone"]
+    }
+  }
+}

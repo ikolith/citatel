@@ -1,0 +1,27 @@
+{
+  "rucksack": {
+    "name": "Rucksack",
+    "effect": "Max encumbrance: 6 + STR, [encumbered] threshold: 3 + STR.",
+    "meta_tags": ["item", "bag", "basic"]
+  },
+  "sling_bag": {
+    "name": "Sling Bag",
+    "effect": "Can be worn with another bag. Max encumbrance: 3. This bag can be switched from being worn on your front or back for 1 AP. Searching and grabbing something from this bag is 5 AP.",
+    "meta_tags": ["item", "bag", "basic"]
+  },
+  "scouts_bag": {
+    "name": "Scout's Bag",
+    "effect": "Max encumbrance: 4 + STR.",
+    "meta_tags": ["item", "bag", "basic"]
+  },
+  "frame_bag": {
+    "name": "Frame Bag",
+    "effect": "Max encumbrance: 8+STR.\n[encumbered] threshold: 2+STR.",
+    "meta_tags": ["item", "bag", "basic"]
+  },
+  "stick_bag": {
+    "name": "Stick Bag",
+    "effect": "Can be carried while wearing another bag. Stick must be held with one hand.\nMax encumbrance: 2 + STR.",
+    "meta_tags": ["item", "bag", "basic"]
+  }
+}

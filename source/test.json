@@ -1,0 +1,54 @@
+{
+  "man_from_saint_ives": {
+    "name": "Man From Saint Ives",
+    "holds": "{2d1 Wife From Saint Ives}",
+    "hp": "7:7 or {2d6}:{2d6}",
+    "meta_tags": ["test"],
+    "requirements": ["7 WIFE", "49 CAT", "1 ETC"],
+    "scores": ["7 Defense", "7 STR"],
+    "speed": "7->7",
+    "tags": ["giant", "heavy"],
+    "target": "Self",
+    "to_hit": "+STR",
+    "flavor_text": "Tastes like Ivar's.",
+    "attacks": ["1d8 [B]", "1 [S]"],
+    "cost": ["Not for sale."],
+    "effect": "Polygamy",
+    "encumbrance": "7",
+    "skills": ["1 AP: Do a flip.", "1 AP: Ambulate"],
+    "full_text": "As I was going to St. Ives,\nUpon the road I met seven wives;\nEvery wife had seven sacks,\nEvery sack had seven cats,\nEvery cat had seven kits:\nKits, cats, sacks, and wives,\nHow many were going to St. Ives?"
+  },
+  "wife_from_saint_ives": {
+    "name": "Wife From Saint Ives",
+    "holds": "{2d1 Sack From Saint Ives}",
+    "meta_tags": ["test"]
+  },
+  "sack_from_saint_ives": {
+    "name": "Sack From Saint Ives",
+    "holds": "{2d1 Cat From Saint Ives}",
+    "meta_tags": ["test"]
+  },
+  "cat_from_saint_ives": {
+    "name": "Cat From Saint Ives",
+    "holds": "{2d1 Kit From Saint Ives}",
+    "meta_tags": ["test"]
+  },
+  "kit_from_saint_ives": {
+    "name": "Kit From Saint Ives",
+    "holds": "{1 Table From Saint Ives 1}",
+    "meta_tags": ["test"]
+  },
+  "table_from_saint_ives": {
+    "name": "Table From Saint Ives",
+    "table": {
+      "outcomes": {
+        "1": "RIGHT!",
+        "8": "RIGHT!",
+        "9": "WRONG!",
+        "2-7": "WRONG!"
+      }
+    },
+    "flavor_text": "Why the deuce do you give yourselves so much vexation,\nAnd puzzle your brains with a long calculation\nOf the number of cats, with their kittens and sacks,\nWhich went to St Ives, on the old women's backs,\nAs you seem to suppose? — Don't you see that the cunning\nOld Querist went only? — The rest were all coming.\nBut grant the wives went too, — as sure's they were married,\nEight only could go, — for the rest were all carried.",
+    "meta_tags": ["test"]
+  }
+}

@@ -1,0 +1,379 @@
+{
+  "weapons": {
+    "dagger": {
+      "name": "Dagger",
+      "tags": ["one-handed", "hilt", "reach: close"],
+      "speed": "1",
+      "to_hit": "+AGI",
+      "attacks": ["2 [P]", "1 [S]"],
+      "encumbrance": "1/3",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "long_tooth": {
+      "name": "Long Tooth",
+      "tags": ["one-handed", "hilt", "reach: close"],
+      "speed": "1->1->2",
+      "to_hit": "+AGI",
+      "attacks": ["2 [P]"],
+      "effect": "Ignore 2 Armor. 1 crit damage on crit.",
+      "flavor_text": "A narrow and bladeless rondel dagger.",
+      "encumbrance": "1/3",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "butchers_cleaver": {
+      "name": "Butcher's Cleaver",
+      "tags": ["one-handed", "hilt", "reach: close"],
+      "requirements": ["1 STR"],
+      "speed": "1->1->2",
+      "to_hit": "+STR",
+      "attacks": ["2 [Severing]"],
+      "flavor_text": "A heavy, crude cleaver of black pocked metal.",
+      "effect": "Inflict 1 [bleed] on crit.",
+      "encumbrance": "1/3",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "bushmans_kukri": {
+      "name": "Bushman's Kukri",
+      "tags": ["one-handed", "hilt", "reach: close"],
+      "speed": "1->1->2",
+      "to_hit": "+AGI",
+      "attacks": ["1 [P]", "2 [Severing]"],
+      "encumbrance": "1/3",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "gleaming_sabre": {
+      "name": "Gleaming Sabre",
+      "tags": ["one-handed", "hilt"],
+      "requirements": ["2 AGI"],
+      "speed": "1->1->2",
+      "to_hit": "+AGI",
+      "attacks": ["3 [Slicing]", "2 [P]"],
+      "effect": "Inflict 1 [bleed] on crit.",
+      "flavor_text": "The fine pale blade curves back gracefully. The sword is deceptively light in the hand, it is thin and fickle.",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "dueling_sabre": {
+      "name": "Dueling Sabre",
+      "tags": ["one-handed", "hilt"],
+      "speed": "1->1->2",
+      "to_hit": "+AGI",
+      "attacks": ["d4 [Slicing]", "2 [P]"]
+    },
+    "simple_shortsword": {
+      "name": "Simple Shortsword",
+      "tags": ["one-handed", "hilt"],
+      "speed": "1->2",
+      "to_hit": "+AGI",
+      "attacks": ["d4 [P], d4 [S]"],
+      "flavor_text": "An unadorned straight sword. A simple and reliable weapon.",
+      "encumbrance": "1",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "machete": {
+      "name": "Machete",
+      "tags": ["one-handed", "hilt"],
+      "speed": "1->2",
+      "to_hit": "+STR",
+      "attacks": ["d4 [S]"],
+      "flavor_text": "A simple tool for cutting down brush.",
+      "encumbrance": "1",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "falx": {
+      "name": "Falx",
+      "tags": ["one-handed", "hilt"],
+      "speed": "1->2",
+      "to_hit": "+AGI",
+      "attacks": ["1 [P] + 2 [Severing]"],
+      "flavor_text": "A sword adapted from a sickle. The blade curves forward, the point facing the enemy.",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "heavy_cutlass": {
+      "name": "Heavy Cutlass",
+      "tags": ["one-handed", "hilt"],
+      "speed": "1->2",
+      "to_hit": "+STR",
+      "attacks": ["d4 [Severing]", "2 [P]"],
+      "flavor_text": "A broad, unrefined sword for hacking through enemies.",
+      "encumbrance": "1",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "black_shotel": {
+      "name": "Black Shotel",
+      "tags": ["one-handed", "hilt"],
+      "requirements": ["1 AGI"],
+      "speed": "1",
+      "to_hit": "+AGI",
+      "attacks": ["d4 [Picking]", "d4 [Severing]"],
+      "flavor_text": "A shining black sword with a crescent shaped blade.",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "boar_sword": {
+      "name": "Boar Sword",
+      "tags": ["hilt", "two-handed", "reach: 2"],
+      "requirements": ["1 AGI", "1 STR"],
+      "speed": "1->2",
+      "to_hit": "+AGI",
+      "attacks": ["d4 [P]"],
+      "flavor_text": "A reinforced thrusting sword with a broad wavy tip. The sword creates deep, wide, uneven wounds.",
+      "effect": "Inflict 1 [bleed]",
+      "encumbrance": "1",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "estoc": {
+      "name": "Estoc",
+      "tags": ["hilt", "two-handed", "reach: 2"],
+      "requirements": ["1 AGI"],
+      "speed": "1->1->2",
+      "to_hit": "+AGI",
+      "attacks": ["3 [P]"],
+      "flavor_text": "A specialized thrusting sword, reinforced, narrow, edgless, and long.",
+      "effect": "Ignore 3 armor.",
+      "encumbrance": "1",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "greatsword": {
+      "name": "Greatsword",
+      "tags": ["hilt", "two-handed"],
+      "requirements": ["1 AGI", "2 STR"],
+      "speed": "1->2",
+      "to_hit": "+AGI +STR",
+      "attacks": ["d6 [P]", "d6 [S]"],
+      "flavor_text": "Why settle for a merely good sword?",
+      "effect": "Robust Edge: increase number of low rolls required to lose [sharpened] buff by 2",
+      "encumbrance": "1",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "primary_of_the_night_heron": {
+      "name": "Primary of the Night-Heron",
+      "tags": ["hilt", "two-handed", "reach: 2"],
+      "requirements": ["1 STR"],
+      "speed": "1->1->2",
+      "to_hit": "+AGI",
+      "attacks": ["d8 [Slicing]"],
+      "effect": "Ignore 1 Armor. All sharpening takes 3 times longer. Requires 2 PSYCHIC: Before you attempt an attack you can choose to either move one space when you attack or use your To-Hit as a check against the opponents STR. If you pass the check they are pushed back one space.",
+      "flavor_text": "An enormous broad black feather, light, thin, deceptively delicate. The vanes of the feather are razor sharp and harder than steel."
+    },
+    "rhomphaia": {
+      "name": "Rhomphaia",
+      "tags": ["two-handed", "reach: 2"],
+      "requirements": ["1 STR"],
+      "speed": "1->2",
+      "to_hit": "+AGI",
+      "attacks": ["2 [P] + 2 [Severing]", "3 [P]"],
+      "flavor_text": "The long blade curves aggressively toward the enemy like a shining claw.",
+      "encumbrance": "1",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "the_serpent_lords_coiled_greatsword": {
+      "name": "The Serpent Lord's Coiled Greatsword",
+      "tags": ["hilt", "two-handed"],
+      "requirements": ["1 AGI", "2 STR"],
+      "speed": "1->2",
+      "to_hit": "+AGI +STR",
+      "attacks": ["d6 [Severing]"],
+      "effect": "Inflict 1 [poison].",
+      "flavor_text": "The end of the blade is coiled into a heavy spiral. The metal has a green shine.",
+      "encumbrance": "1",
+      "meta_tags": ["weapon"]
+    },
+    "crude_club": {
+      "name": "Crude Club",
+      "tags": ["hilt", "one-handed"],
+      "speed": "2",
+      "to_hit": "+STR",
+      "attacks": ["3 [B]"],
+      "flavor_text": "Bonk.",
+      "encumbrance": "1",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "mace": {
+      "name": "Mace",
+      "tags": ["pole", "one-handed"],
+      "requirements": ["1 STR"],
+      "speed": "2",
+      "to_hit": "+STR",
+      "attacks": ["3 [B]"],
+      "flavor_text": "A heavy flanged head on the end of a short shaft.",
+      "effect": "Ignore 3 armor",
+      "encumbrance": "1",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "one_handed_spear": {
+      "name": "One Handed Spear",
+      "tags": ["pole", "one-handed", "reach: 2"],
+      "speed": "1->2",
+      "attacks": ["d4 [P]"],
+      "flavor_text": "A simple, reliable, and effective weapon for a common footsoldier.",
+      "encumbrance": "1",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "javelin": {
+      "name": "Javelin",
+      "tags": ["one-handed", "pole"],
+      "requirements": ["1 AGI"],
+      "speed": "1->2",
+      "to_hit": "+AGI",
+      "attacks": [
+        "d4 [P]\nCan be thrown for 2 AP, +PER To-Hit",
+        "d4 [P], range: 5+STR"
+      ],
+      "encumbrance": "1/3",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "fine_engraved_axe": {
+      "name": "Fine Engraved Axe",
+      "tags": ["one-handed", "pole"],
+      "requirements": ["1 AGI"],
+      "speed": "1->2",
+      "to_hit": "+AGI",
+      "attacks": ["3 [Severing]"],
+      "flavor_text": "The shaft is carved from a fine red wood, the engravings on the blade shine and glitter in the light.",
+      "meta_tags": ["weapon"]
+    },
+    "one_handed_war_axe": {
+      "name": "One-Handed War Axe",
+      "tags": ["one-handed", "pole"],
+      "requirements": ["1 STR"],
+      "speed": "1->2",
+      "to_hit": "+STR",
+      "attacks": ["3 [Severing]"],
+      "meta_tags": ["weapon"]
+    },
+    "one_handed_war_hammer": {
+      "name": "One-Handed War Hammer",
+      "tags": ["one-handed", "pole"],
+      "requirements": ["1 STR"],
+      "speed": "2",
+      "to_hit": "+STR",
+      "attacks": ["3 [Bashing]"],
+      "effect": "Ignore 3 Armor.",
+      "encumbrance": "1",
+      "meta_tags": ["weapon"]
+    },
+    "adze": {
+      "name": "Adze",
+      "tags": ["one-handed", "pole"],
+      "speed": "2",
+      "to_hit": "+STR",
+      "attacks": ["d4-1 [Severing]"],
+      "effect": "On half-crit the adze gets stuck in the target. \nRemoving it costs 1 AP and does 1 crit damage.",
+      "flavor_text": "A simple tool with a flat blade perpendicular to the handle. Meant for cutting and shaping wood.",
+      "encumbrance": "1",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "cactus_greatclub": {
+      "name": "Cactus Greatclub",
+      "tags": ["hilt", "two-handed"],
+      "requirements": ["2 STR"],
+      "speed": "2->3",
+      "to_hit": "+2*STR",
+      "attacks": ["d8 (B) + 2 [P]"],
+      "effect": "If this weapon takes 3 damage in one turn it will explode dealing d6 (P) to all creatures within 1 space.",
+      "encumbrance": "2",
+      "meta_tags": ["weapon"]
+    },
+    "giant_club": {
+      "name": "Giant Club",
+      "tags": ["two-handed", "giant", "pole"],
+      "requirements": ["3 STR"],
+      "speed": "3",
+      "to_hit": "+2*STR",
+      "attacks": ["2d6+STR"],
+      "effect": "Inflict 1 [stun]",
+      "flavor_text": "BONK.",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "giant_feasting_club": {
+      "name": "Giant Feasting Club",
+      "tags": ["two-handed", "giant", "hilt"],
+      "requirements": ["4 STR"],
+      "speed": "2->3",
+      "to_hit": "+2*STR",
+      "attacks": ["2d4 [B] + d4 [Picking]"],
+      "effect": "When a damage die rolls a 4, inflict 1 [bleeding] and 1 [poison].",
+      "flavor_text": "Only the handle of the dark hardwood club is visible. The rest is covered with enormous living barnacles. The barnacles constantly chatter, click, and move. They tear at anything that comes near.",
+      "encumbrance": "2",
+      "meta_tags": ["weapon"]
+    },
+    "goedendag": {
+      "name": "Goedendag!",
+      "tags": ["pole", "two-handed", "reach: 2"],
+      "requirements": ["2 STR"],
+      "speed": "2",
+      "to_hit": "+STR",
+      "attacks": ["d4+STR [B]", "d4+STR [P]"],
+      "flavor_text": "A broad heavy shaft with a large iron spike mounted on the end. A heavy club-spear hybrid. Friendly.",
+      "effect": "Ignore 2 armor.",
+      "encumbrance": "2",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "greatclub": {
+      "name": "Greatclub",
+      "tags": ["pole", "two-handed", "reach: 2"],
+      "requirements": ["2 STR"],
+      "speed": "2",
+      "attacks": ["7 [B]"],
+      "encumbrance": "2",
+      "meta_tags": ["weapon"]
+    },
+    "pitchfork": {
+      "name": "Pitchfork",
+      "tags": ["pole", "two-handed", "reach: 2"],
+      "speed": "1->2",
+      "to_hit": "+AGI",
+      "attacks": ["3 [P]"],
+      "effect": "If your attack check exceeds the enemy's passive STR you can send them back 1 space.",
+      "encumbrance": "1",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "two_handed_spear": {
+      "name": "Two Handed Spear",
+      "tags": ["pole", "two-handed", "reach: 3"],
+      "speed": "1->2",
+      "to_hit": "+AGI",
+      "attacks": ["d6 [P]"],
+      "encumbrance": "1"
+    },
+    "battleaxe": {
+      "name": "Battleaxe",
+      "tags": ["two-handed", "pole"],
+      "requirements": ["1 STR"],
+      "speed": "2",
+      "to_hit": "+STR",
+      "attacks": ["d10 [Severing]"],
+      "encumbrance": "2",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "cutter_mattock": {
+      "name": "Cutter Mattock",
+      "tags": ["two-handed", "pole", "heavy"],
+      "requirements": ["1 STR"],
+      "speed": "2->3",
+      "to_hit": "+STR",
+      "attacks": ["4 [Severing]"],
+      "encumbrance": "2",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "pickaxe": {
+      "name": "Pickaxe",
+      "tags": ["two-handed", "pole"],
+      "speed": "2->3",
+      "to_hit": "+STR",
+      "attacks": ["4 [Picking]"],
+      "encumbrance": "2",
+      "meta_tags": ["weapon", "basic"]
+    },
+    "warpick": {
+      "name": "Warpick",
+      "tags": ["two-handed", "pole", "reach: 2"],
+      "requirements": ["2 STR"],
+      "speed": "2",
+      "to_hit": "+STR",
+      "attacks": ["d10 [Picking]"],
+      "effect": "Ignore 5 armor.",
+      "encumbrance": "2",
+      "meta_tags": ["weapon"]
+    }
+  }
+}
