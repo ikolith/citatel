@@ -16,12 +16,12 @@
   },
   "frame_bag": {
     "name": "Frame Bag",
-    "effect": "Max encumbrance: 8+STR.\n[encumbered] threshold: 2+STR.",
+    "effect": "Max encumbrance: 8+STR. [encumbered] threshold: 2+STR.",
     "meta_tags": ["item", "bag", "basic"]
   },
   "stick_bag": {
     "name": "Stick Bag",
-    "effect": "Can be carried while wearing another bag. Stick must be held with one hand.\nMax encumbrance: 2 + STR.",
+    "effect": "Can be carried while wearing another bag. Stick must be held with one hand. Max encumbrance: 2 + STR.",
     "meta_tags": ["item", "bag", "basic"]
   }
 }

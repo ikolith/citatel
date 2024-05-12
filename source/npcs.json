@@ -70,7 +70,7 @@
       "requirements": ["1 STR"],
       "speed": "1->2",
       "to_hit": "+STR",
-      "attacks": ["2 [B] + 1 [Severing]", "3 [B]"],
+      "attacks": ["2 B + 1 Severing", "3 B"],
       "flavor_text": "A rudimentary axe crafted from an enormous white bovine jawbone. The coronoid of the bone has been ground down to a wedge approximating an axe blade. The protruding back of the bone can be used as a hammer. The leather wrapping rests above the chin and below the teeth of the jaw.",
       "encumbrance": "1",
       "meta_tags": ["weapon", "dogman"]
@@ -81,7 +81,7 @@
       "requirements": ["1 STR"],
       "speed": "1->2",
       "to_hit": "+STR",
-      "attacks": ["2 [B] + 1 [Picking]"],
+      "attacks": ["2 B + 1 Picking"],
       "flavor_text": "The lower portion of an enormous bovine jawbone. The jaw has been chopped down, functioning as something between a sword and a club. The \"blade\" is composed of the jagged teeth of the jawbone. The handle is wrapped in leather.",
       "encumbrance": "1/3",
       "meta_tags": ["weapon", "dogman"]
