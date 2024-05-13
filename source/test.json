@@ -11,7 +11,7 @@
     "target": "Self",
     "to_hit": "+STR",
     "flavor_text": "Tastes like Ivar's.",
-    "attacks": ["1d8 [B]", "1 [S]"],
+    "attacks": ["1d8 B", "1 [S]"],
     "cost": ["Not for sale."],
     "effect": "Polygamy",
     "encumbrance": "7",

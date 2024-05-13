@@ -19,9 +19,9 @@ Some weapons deal flat damage, some (often large weapons) roll for damage. Most 
 
 These tags describe the type of damage that the weapon does. 
 
-There are three major types of damage. They are: [B] for "Bludgeoning", [P] for "Piercing" and [S] for "Slashing". There are also sub-types like [Severing], [Slicing], and [Picking]. [Severing] counts as the more generic [S], but [S] does not count as [Severing]. The damage sub-type will share the first letter of the more generic damage type. This has worked so far because there are very many words in english and they are conveniently placed. I am not afraid to resort to attic greek or something to keep this stupid system working.
+There are three major types of damage. They are: B for "Bludgeoning", [P] for "Piercing" and [S] for "Slashing". There are also sub-types like [Severing], [Slicing], and [Picking]. [Severing] counts as the more generic [S], but [S] does not count as [Severing]. The damage sub-type will share the first letter of the more generic damage type. This has worked so far because there are very many words in english and they are conveniently placed. I am not afraid to resort to attic greek or something to keep this stupid system working.
 
-Some weapons do two types of damage only for the purposes of armor damage reduction, only the first gets to be used for skills (that's bad). This looks like: [B]/[P]  
+Some weapons do two types of damage only for the purposes of armor damage reduction, only the first gets to be used for skills (that's bad). This looks like: B/[P]  
 
 #### Some common damage subtypes: 
 

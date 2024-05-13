@@ -6,7 +6,7 @@ import citutils.text as tx
 @pytest.fixture
 def test_db(tmp_path):
     # Specify paths for input and output JSON files
-    input_path = "source.json"
+    input_path = "./source"
     output_path = str(
         tmp_path / "test_db.json"
     )  # Use the tmp_path for the test database

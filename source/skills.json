@@ -105,7 +105,7 @@
     },
     "shield_bash": {
       "name": "Shield Bash",
-      "effect": "You can attack with a shield as +STR to hit, 1 Damage [B]. Knock the enemy prone on a half crit.",
+      "effect": "You can attack with a shield as +STR to hit, 1 Damage B. Knock the enemy prone on a half crit.",
       "cost": ["4 SP"],
       "meta_tags": ["skill", "shield", "basic", "str"]
     },

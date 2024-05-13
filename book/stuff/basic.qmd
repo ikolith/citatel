@@ -12,7 +12,7 @@ from tinydb import Query
 
 from citutils.database import DB
 
-db = DB(os.path.join("..","..","source.json"))
+db = DB(os.path.join("..","..","./source"))
 
 basic =  Query().meta_tags.any("basic")
 item = Query().meta_tags.any("item")

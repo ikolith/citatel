@@ -37,8 +37,6 @@ class DB(TinyDB):
                     build_db(v)
 
         def wrangle_jsons(path: str, aggregated: dict = {}):
-            print("path", path)
-            print("aggregated", aggregated)
             # look into getting a path-type
             if os.path.isdir(path):
                 for p in [os.path.join(path, entry) for entry in os.listdir(path)]:
