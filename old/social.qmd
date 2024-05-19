@@ -2,6 +2,8 @@
 title: Social
 ---
 
+This needs to be retooled and reframed as a buff/debuff based on reputation.
+
 ## SOCIAL Rolls
 
 This system is designed to allow a characters skills and stats to *augment* their social actions. The emphasis is not on getting good rolls, but on saying or doing the right thing. Rolls are used to express a particular character's social talents, but they don't replace what a character says or does. Grading numerical difficulty for a social interaction is difficult. A GM cannot prepare beforehand for the things a player will do or say, so DCs have to be set on the fly. Sometimes they are set incorrectly or something breaks. In this case, ignore the system/roll and do whatever is the most sensible/interesting/funny. This framework is largely for the benefit of the GM, to allow them to easily keep track of attitudes and relationships and to quickly create DCs and resolve rolls in a way that rewards the skill of the player as well as the skill of the character. 
