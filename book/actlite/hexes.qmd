@@ -1,0 +1,18 @@
+# Hex Discovery Tables
+
+[Orignal post.](https://actlite.substack.com/p/hexes-part-2-invocations)
+
+A couple of quick reminders and clarifications:
+
+- Unless otherwise stated, activating a hex destroys it, destroying a hex activates it.
+- Some hexes have an effect the entire time they are maintained. Some hexes only have an effect when activated.
+- Some hexes require a target.
+- A hex’s “target” is somewhat contextual. Unless otherwise stated, a hex has to be physically touching something for that thing to be the “target”. If a hex is written on paper that is wrapped around something, that thing is the target. If a hex is written directly on something, that thing the target.
+- Unless otherwise stated, the effect of a hex lasts only until the hex is destroyed.
+- - If a hex specifies that it can be attached to “any” hex, this includes hexes you didn’t write or hexes that would otherwise be unable to support another [mod].
+
+The hexes in this broad selection rely on very fuzzy measurements: “The target must not be larger than a person.” or “They experience a loss of hearing that is like having their ears blocked by hands.” This is intentional. I want to see how much fuzziness I can get away with.
+
+By relying on qualitative or intuitive measurements I want to minimize how often you are forced to bring a scale and a tape measure into the “theater of the mind”. Anyway, the GM is going to be the final source of truth whether you maintain a fiction of weighing imaginary objects or not.
+
+<!-- Then, hexes. -->
