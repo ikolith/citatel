@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>citatel</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../book/stuff/basic.html" rel="next">
+<link href="../book/about/mutiny.html" rel="prev">
+<link href=".././assets/images/favicons/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../book/rules.html">Rules</a></li><li class="breadcrumb-item"><a href="../book/rules.html">Core Rules</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">citatel</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">About</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../book/about/mutiny.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pardon the Dust</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Rules</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../book/rules.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Core Rules</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">Skills, Weapons, Items</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../book/stuff/basic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basic</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../book/stuff/spoilers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Spoilers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#core-rules" id="toc-core-rules" class="nav-link active" data-scroll-target="#core-rules">Core Rules</a>
+  <ul class="collapse">
+  <li><a href="#characters" id="toc-characters" class="nav-link" data-scroll-target="#characters">Characters</a>
+  <ul class="collapse">
+  <li><a href="#health" id="toc-health" class="nav-link" data-scroll-target="#health">Health</a></li>
+  <li><a href="#movement-speed" id="toc-movement-speed" class="nav-link" data-scroll-target="#movement-speed">Movement Speed</a></li>
+  <li><a href="#attributes" id="toc-attributes" class="nav-link" data-scroll-target="#attributes">Attributes</a></li>
+  <li><a href="#checks-and-contests" id="toc-checks-and-contests" class="nav-link" data-scroll-target="#checks-and-contests">Checks and Contests</a></li>
+  <li><a href="#advantage-disadvantage" id="toc-advantage-disadvantage" class="nav-link" data-scroll-target="#advantage-disadvantage">Advantage / Disadvantage</a></li>
+  <li><a href="#initiative" id="toc-initiative" class="nav-link" data-scroll-target="#initiative">Initiative</a></li>
+  <li><a href="#character-advancement-and-xp" id="toc-character-advancement-and-xp" class="nav-link" data-scroll-target="#character-advancement-and-xp">Character Advancement and XP</a></li>
+  </ul></li>
+  <li><a href="#misc.-rules" id="toc-misc.-rules" class="nav-link" data-scroll-target="#misc.-rules">Misc. Rules</a>
+  <ul class="collapse">
+  <li><a href="#searching-and-switching-during-combat" id="toc-searching-and-switching-during-combat" class="nav-link" data-scroll-target="#searching-and-switching-during-combat">Searching and Switching During Combat</a></li>
+  </ul></li>
+  <li><a href="#stealth" id="toc-stealth" class="nav-link" data-scroll-target="#stealth">Stealth</a>
+  <ul class="collapse">
+  <li><a href="#grappling" id="toc-grappling" class="nav-link" data-scroll-target="#grappling">Grappling</a></li>
+  <li><a href="#fall-damage" id="toc-fall-damage" class="nav-link" data-scroll-target="#fall-damage">Fall Damage</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#weapons" id="toc-weapons" class="nav-link" data-scroll-target="#weapons">Weapons</a>
+  <ul class="collapse">
+  <li><a href="#tags" id="toc-tags" class="nav-link" data-scroll-target="#tags">Tags</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
+  <li><a href="#speed" id="toc-speed" class="nav-link" data-scroll-target="#speed">Speed</a></li>
+  <li><a href="#to-hit" id="toc-to-hit" class="nav-link" data-scroll-target="#to-hit">To-Hit</a></li>
+  <li><a href="#attacks" id="toc-attacks" class="nav-link" data-scroll-target="#attacks">Attacks</a>
+  <ul class="collapse">
+  <li><a href="#damage-types" id="toc-damage-types" class="nav-link" data-scroll-target="#damage-types">Damage Types</a></li>
+  <li><a href="#effects-and-conditions" id="toc-effects-and-conditions" class="nav-link" data-scroll-target="#effects-and-conditions">Effects and Conditions</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#resting-healing-dying" id="toc-resting-healing-dying" class="nav-link" data-scroll-target="#resting-healing-dying">Resting, Healing, Dying</a>
+  <ul class="collapse">
+  <li><a href="#resting-and-healing" id="toc-resting-and-healing" class="nav-link" data-scroll-target="#resting-and-healing">Resting and Healing</a></li>
+  <li><a href="#dying" id="toc-dying" class="nav-link" data-scroll-target="#dying">Dying</a>
+  <ul class="collapse">
+  <li><a href="#consequence-tables" id="toc-consequence-tables" class="nav-link" data-scroll-target="#consequence-tables">Consequence Tables</a></li>
+  <li><a href="#sample-consequence-tables" id="toc-sample-consequence-tables" class="nav-link" data-scroll-target="#sample-consequence-tables">Sample Consequence Tables</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#common-status-conditions" id="toc-common-status-conditions" class="nav-link" data-scroll-target="#common-status-conditions">Common Status Conditions</a></li>
+  <li><a href="#cash" id="toc-cash" class="nav-link" data-scroll-target="#cash">CASH</a>
+  <ul class="collapse">
+  <li><a href="#the-rules" id="toc-the-rules" class="nav-link" data-scroll-target="#the-rules">The Rules</a></li>
+  <li><a href="#cash-levels" id="toc-cash-levels" class="nav-link" data-scroll-target="#cash-levels">CASH Levels</a></li>
+  </ul></li>
+  <li><a href="#hexes" id="toc-hexes" class="nav-link" data-scroll-target="#hexes">Hexes</a>
+  <ul class="collapse">
+  <li><a href="#lore" id="toc-lore" class="nav-link" data-scroll-target="#lore">Lore</a></li>
+  <li><a href="#learning-hexes" id="toc-learning-hexes" class="nav-link" data-scroll-target="#learning-hexes">Learning Hexes</a>
+  <ul class="collapse">
+  <li><a href="#mechanics" id="toc-mechanics" class="nav-link" data-scroll-target="#mechanics">Mechanics</a></li>
+  </ul></li>
+  <li><a href="#hex-activation" id="toc-hex-activation" class="nav-link" data-scroll-target="#hex-activation">Hex Activation</a></li>
+  <li><a href="#writing-and-casting-hexes" id="toc-writing-and-casting-hexes" class="nav-link" data-scroll-target="#writing-and-casting-hexes">Writing and Casting Hexes</a>
+  <ul class="collapse">
+  <li><a href="#modifier-hexes" id="toc-modifier-hexes" class="nav-link" data-scroll-target="#modifier-hexes">[modifier] Hexes</a></li>
+  <li><a href="#independent-hexes" id="toc-independent-hexes" class="nav-link" data-scroll-target="#independent-hexes">[independent] Hexes</a></li>
+  </ul></li>
+  <li><a href="#additional-context" id="toc-additional-context" class="nav-link" data-scroll-target="#additional-context">Additional Context</a>
+  <ul class="collapse">
+  <li><a href="#durable-casting-and-hex-tables" id="toc-durable-casting-and-hex-tables" class="nav-link" data-scroll-target="#durable-casting-and-hex-tables">[durable] Casting and Hex Tables</a></li>
+  <li><a href="#invocations" id="toc-invocations" class="nav-link" data-scroll-target="#invocations">Invocations</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#original-posts" id="toc-original-posts" class="nav-link" data-scroll-target="#original-posts">Original Posts</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="rules.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="core-rules" class="level1">
+<h1>Core Rules</h1>
+<section id="characters" class="level2">
+<h2 class="anchored" data-anchor-id="characters">Characters</h2>
+<p>A basic player character statblock looks like this:</p>
+<p>Health: (3)9<br>
+Movement Speed: 4</p>
+<p>STR: 0<br>
+AGI: 0<br>
+WIL: 0<br>
+PER: 0<br>
+SOC: 0</p>
+<section id="health" class="level3">
+<h3 class="anchored" data-anchor-id="health">Health</h3>
+<p>Character health is tracked as (X)Y where X is critical or “crit” health and Y is standard health. When crit health reaches 0, the character falls unconscious and begins dying. When a character runs out of standard health all subsequent damage reduces crit health. Crit damage reduces crit health directly, it does not matter how much standard health a character still has. Crit damage is notated with parentheses.</p>
+<p>This health score of (3)9 is higher than what most people have! a very old or frail person might be (1)1, a normal adult might be (2)6. The default character block with (3)9 health and 0s for all attributes represents a healthy, able person with no deficiencies.</p>
+</section>
+<section id="movement-speed" class="level3">
+<h3 class="anchored" data-anchor-id="movement-speed">Movement Speed</h3>
+<p>“Movement Speed” determines how many spaces a character moves when they spend 1 AP to move during initaitive.</p>
+</section>
+<section id="attributes" class="level3">
+<h3 class="anchored" data-anchor-id="attributes">Attributes</h3>
+<p>Attribute scores are not mandatory descriptions of qualities. They represent abilities or tools that the character has. They tend to range from -3 to +3. The attribute score is the same as the modifier on a check using that attribute. The “passive” score, the score that other characters roll against, is 6+SCORE. If you do not have an attribute score, it is not a narrative tool that you use to solve problems. You can have attribute scores not listed here.</p>
+<p>This set of scores is listed because they are the “defensive” attributes. That means these are the only attributes that other characters are allowed to roll checks against. If you do not have an attribute score, any checks made against that attribute succeed automatically.</p>
+<section id="str-strength" class="level4">
+<h4 class="anchored" data-anchor-id="str-strength">STR / Strength</h4>
+<p>Strength is used to perform actions like lifting or breaking things as well as some actions like grappling. It’s also used to resist physical conditions like poison, disease, and exhaustion.</p>
+</section>
+<section id="agi-agility" class="level4">
+<h4 class="anchored" data-anchor-id="agi-agility">AGI / Agility</h4>
+<p>AGI is your ability to evade attacks, grab on to ledges to keep yourself from falling, avoid falling rocks, etc. It is your ability to avoid physical danger.</p>
+<p>It is also your ability to do a flip, jump over a chasm, etc. This is not your DEX / Dexterity! DEX is your fine motor skills, your ability to do card tricks, pickpocket, and juggle. DEX is not a “defensive” score.</p>
+<section id="attack-checks" class="level5">
+<h5 class="anchored" data-anchor-id="attack-checks">Attack Checks</h5>
+<p>Attacks are checks against passive AGI. The attacker wins ties. Some mechanics like armor can replace passive AGI in the context of attack checks.</p>
+</section>
+</section>
+<section id="wil-will" class="level4">
+<h4 class="anchored" data-anchor-id="wil-will">WIL / Will</h4>
+<p>WIL is your ability to resist mental conditions like fear. It is used to resist many supernatural effects. It is also used for most supernatural abilities, like writing hexes.</p>
+</section>
+<section id="per-perception" class="level4">
+<h4 class="anchored" data-anchor-id="per-perception">PER / Perception</h4>
+<p>PER is your resistance to stealth and being tricked.</p>
+<p>It is also your ability to investigate, spot things other people miss, quickly find things, etc.</p>
+</section>
+<section id="soc-social" class="level4">
+<h4 class="anchored" data-anchor-id="soc-social">SOC / Social</h4>
+<p>SOC is your resistance to being manipulated.</p>
+<p>SOC is also your ability to manipulate, to schmooze. It’s your gab, your social acumen. Social rules are covered in greater detail later in this document.</p>
+</section>
+</section>
+<section id="checks-and-contests" class="level3">
+<h3 class="anchored" data-anchor-id="checks-and-contests">Checks and Contests</h3>
+<p>When a character wants to do something using an attribute they roll 2d6 and add the relevant SCORE. The result of the roll is determined by comparing the roll to a Difficulty Class or DC. This is a “check”. If the character’s check is the same as the DC or higher, they succeed. Often the DC for a check is the passive SCORE of another character.</p>
+<p>If two charactes are in direct competition they are in a “contest”. They both roll 2d6 and add their scores. The higher score wins. In the case of a tie, they either tie in the game or if that does not make sense they redo the contest.</p>
+<section id="additional-effects-on-success" class="level4">
+<h4 class="anchored" data-anchor-id="additional-effects-on-success">Additional Effects on Success</h4>
+<p>Sometimes, skills or weapons will have additional effects triggered “on 6”, “on at least one 6” or “on matching”. This means that if you succeed and the dice you rolled fulfilled the requirement (being a six, both dice matching, etc.) the effect is activated.</p>
+<p>“on 6” effects can be triggered twice if you roll two 6s, “at least one 6” effects only trigger once. “on matching” triggers on any set of matching dice rolled.</p>
+</section>
+</section>
+<section id="advantage-disadvantage" class="level3">
+<h3 class="anchored" data-anchor-id="advantage-disadvantage">Advantage / Disadvantage</h3>
+<p>When you have “advantage”, roll an extra d6 for your check and pick two. When you have “disadvantage”, roll another d6, then pick the two lowest rolls. Advantage and disadvantage cancel each other out and are cumulative.</p>
+<p>If you somehow have disadvantage twice and advantage four times, you have advantage twice. Roll four dice and pick two.</p>
+</section>
+<section id="initiative" class="level3">
+<h3 class="anchored" data-anchor-id="initiative">Initiative</h3>
+<p>AP is used during “initiative”. Initiative is any situation where many characters want to do things at the same time and the order in which things happen is important. Initiative is most often combat, but it can include other time sensitive events like chases or races.</p>
+<p>Every character has 3 AP cards.5 The cards say “1 AP” and indicate what character they belong to with a name, a symbol, or both. Most actions cost 1 AP, but you can do a “reasonable amount” of simple things like talking for free.</p>
+<p>Some terms:</p>
+<p><strong>Deck</strong>: This is the deck of cards that the DM (or whoever) draws from during initiative. The deck that the whole table uses.</p>
+<p><strong>Discard</strong>: The discard pile for the whole table.</p>
+<p><strong>Hand</strong>: The cards that you have been dealt and are holding on to.</p>
+<p><strong>“Spending” AP</strong>: Cards that have been used or removed that go to the discard and are shuffled back together for the next round’s deck.</p>
+<p><strong>“Losing” AP</strong>: “Lost” AP is not shuffled back into the deck at the end of the round. It must be “regained” either mechanically or automatically at the end of initiative.</p>
+<p><strong>“Interrupt”</strong>: Spend 1 AP, act immediately</p>
+<p>When initiative starts all characters pass their cards to the DM. This includes their AP and any other special cards. The DM shuffles these cards together to create the deck. The DM pulls a card from the top of the deck and either deals the card to the character/player that it belongs to or follows the rules on the card.</p>
+<p>When a character is dealt a card they can choose to act using whatever cards they currently have in their hand. They can also just hold on to the card. When cards are spent or activated they get placed in the discard.</p>
+<p>Any character can interrupt in order to act at any time, doing this costs 1 AP. The round ends when the table deck is empty and everyone who still has AP has had a chance to interrupt to act with their remaining AP.</p>
+<p>At the end of a round, cards that have been discarded are shuffled together to create the deck for the next round. Cards that have been lost are not, they are set aside until they are regained, or initiative ends.</p>
+<p>This initiative system is intended for combat that is fast and unpredictable.</p>
+<section id="multiple---ap---costs" class="level4">
+<h4 class="anchored" data-anchor-id="multiple---ap---costs">Multiple -&gt; AP -&gt; Costs</h4>
+<p>Some types of actions have multiple AP costs. The first time you perform the action in a round it costs the first amount, the second time you do it, it costs the second, etc. These costs are connected with arrows, like this: 1-&gt;2-&gt;3. This does not limit how many times you can perform an action. If you are at the last cost, pay that amount of AP again to do the action.</p>
+</section>
+<section id="temp-ap-and-regaining-ap" class="level4">
+<h4 class="anchored" data-anchor-id="temp-ap-and-regaining-ap">Temp AP and Regaining AP</h4>
+<p>“Temp AP” must be spent immediately when it is recieved or it is lost. If you spend no AP for an entire round, regain 1 AP.</p>
+</section>
+<section id="beginning-of-the-round" class="level4">
+<h4 class="anchored" data-anchor-id="beginning-of-the-round">“Beginning of the Round”</h4>
+<p>Very rarely, the particular order things happen in the “beginning of the round” will matter. In that case, effects resolve in this order:</p>
+<section id="first-effect-management" class="level5">
+<h5 class="anchored" data-anchor-id="first-effect-management">First, Effect Management</h5>
+<p>Any already active effects that trigger “at the beginning of a round” happen first. It happens before anything else in the round does. Examples includes taking damage from [poison] or [bleed] or gaining health from [heal]. If you have some effect or condition that causes you to do some sort of roll or contest, do that now.</p>
+</section>
+<section id="next-status-management" class="level5">
+<h5 class="anchored" data-anchor-id="next-status-management">Next, Status Management</h5>
+<p>Statuses are added or removed now. A point of [poison] is removed, a point of [heal] is removed, anything that would end at the “beginning” of this round ends now.</p>
+</section>
+<section id="skills" class="level5">
+<h5 class="anchored" data-anchor-id="skills">Skills</h5>
+<p>Some moves and skills can be used “at the beginning of the round”. These must be used after effects and statuses resolve.</p>
+</section>
+</section>
+</section>
+<section id="character-advancement-and-xp" class="level3">
+<h3 class="anchored" data-anchor-id="character-advancement-and-xp">Character Advancement and XP</h3>
+<p>Characters gain XP by solving problems, navigating difficult situatoins, etc. XP can be used to increase attribute scores or acquire more skills. There are no character levels in Actlite.</p>
+<section id="increasing-attribute-scores" class="level4">
+<h4 class="anchored" data-anchor-id="increasing-attribute-scores">Increasing Attribute Scores</h4>
+<p>Increasing a negative attribute costs 1 XP. Increasing a positive attribute costs a number of XP equal to the new attribute score. This means going from 2 STR to 3 STR costs 3 XP. Going from -1 STR to 2 STR costs <strong>1</strong> (-1 to 0) <strong>+ 1</strong> (0 to 1) <strong>+ 2</strong> (1 to 2) <strong>= 4</strong> XP.</p>
+<p>Some species or groups have hard limits on attribute scores and/or alternative costs for upgrading some attribute scores.</p>
+</section>
+<section id="archetype-tables" class="level4">
+<h4 class="anchored" data-anchor-id="archetype-tables">Archetype Tables</h4>
+<p>Characters gain skills by rolling on “Archetype Tables”, collections of thematically or mechanically similar skills. Archetype Tables can have attribute score requirements or some other setting-specific requirement. They can also have varying XP costs for rolls, notated similarly to variable AP costs so that the first roll costs X, the second roll costs Y, and all subsequent rolls have an XP cost of Z, notated X-&gt;Y-&gt;Z. This allows some tables to reward specialization, and some to punish it. If no cost is listed, rolling costs on the table costs 1 XP.</p>
+<p>Skills in tables are loosely ordered by desirability. If a player gets a skill they already have by rolling on an archetype table, they get the skill below/before it in the table. If none are below it, they get the first skill above it. A player cannot roll on a table when they have every skill on the table.</p>
+</section>
+</section>
+</section>
+<section id="misc.-rules" class="level2">
+<h2 class="anchored" data-anchor-id="misc.-rules">Misc. Rules</h2>
+<section id="searching-and-switching-during-combat" class="level3">
+<h3 class="anchored" data-anchor-id="searching-and-switching-during-combat">Searching and Switching During Combat</h3>
+<p>Drawing, stowing, switching weapons, or picking a weapon up off the ground costs 1 AP, dropping a weapon is free. Searching for something you have on your person but you do not have ready is 1 AP. If what you need is further away, like in a backpack you are wearing, pay 2 AP to take off the bag, open it, rummage through it, etc.</p>
+</section>
+</section>
+<section id="stealth" class="level2">
+<h2 class="anchored" data-anchor-id="stealth">Stealth</h2>
+<p>Stealth is an AGI check against the defender’s passive perception. It’s a check against a passive score, and that is always 6 + SCORE.</p>
+<section id="grappling" class="level3">
+<h3 class="anchored" data-anchor-id="grappling">Grappling</h3>
+<p>To start a grapple, perform a “grapple check”, which is a +STR to-hit [reach: close] attack that costs 2 AP. While grappling an opponent, you have advantage on [reach: close] attacks against them, they have disadvantage on attacks against you. You can move them by one space or you can both go to the ground at the cost of 1 AP. Defender can spend 2 AP to trigger another STR contest to try and break free. Defender can do nothing but attack and try to end the grapple. You cannot grapple a creature larger than yourself. There are grappling skills that add a lot of other options.</p>
+</section>
+<section id="fall-damage" class="level3">
+<h3 class="anchored" data-anchor-id="fall-damage">Fall Damage</h3>
+<p>Fall damage is a d4 for every 6 spaces up to 25d4.</p>
+</section>
+</section>
+</section>
+<section id="weapons" class="level1">
+<h1>Weapons</h1>
+<p>Here’s a basic weapon, a club:</p>
+<p>Club Tags: pole, one-handed Speed: 1-&gt;2 Attacks: - 1d4 B, On 6: inflict [stun]</p>
+<section id="tags" class="level2">
+<h2 class="anchored" data-anchor-id="tags">Tags</h2>
+<p>The “tags” are listed right after the name listed. This is where mechanically-significant descriptors are stored. Some skills may require weapons with particular tags, like “range: close” or “hilt”. Weapon tags describe how the weapon is handled. There are six main weapon tags, “hilt”, “pole”, “one-handed” (or “1-h”), “two-handed” (“2-h”), reach and range.</p>
+<p><strong>hilt</strong>: A weapon with a hilt. A “hilt” is a “well-defined” handle or grip which often2 includes some kind of guard to protect the users hand. Swords, knives, and daggers, are hilt weapons, as are patas and katars.</p>
+<p><strong>pole</strong>: Pole weapons. Weapons with a long shaft rather than a well defined grip. Pole weapons include spears, axes, hammers, and of course, all polearms.</p>
+<p><strong>one-handed</strong>: A weapon designed to be used with one hand. If you use two hands on a one-handed weapon, treat your STR as 2 points higher for the purposes of meeting a STR requirement.</p>
+<p><strong>two-handed</strong>: If you try to wield a two-handed weapon with one hand, attack with disadvantage.</p>
+<p><strong>reach</strong>: How many spaces does your weapon reach? If this tag is absent, assume the weapon has reach: 1. If a weapon has [reach: close], you are treated as if you move briefly into the opponents space to attack them. This is often relevant for particular skills.</p>
+<p><strong>range</strong>: Used for ranged weapons. <!-- disastrously, in the currently existing weapons a lot of weapons use "range" when they should be using "reach". TODO: fix that --></p>
+<p>Tags can be combined to accommodate unusual weapons like “hand-and-a-half” a.k.a. “bastard” swords or <a href="https://www.youtube.com/watch?v=rHWGp5lGUNY">this</a> <a href="https://swordsantiqueweapons.com/s1866_full.html">thing</a>.</p>
+</section>
+<section id="requirements" class="level2">
+<h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
+<p>Not satisfying a weapon’s requirements causes you to attack with disadvantage.</p>
+</section>
+<section id="speed" class="level2">
+<h2 class="anchored" data-anchor-id="speed">Speed</h2>
+<p>The “Speed” of a weapon is the AP cost of an attack with the weapon. If the weapon has multiple costs separated by arrows, you pay the first cost on your first attack with the weapon in a round, the second cost on your second, etc. If you are on the last listed cost, pay that cost again to attack again. Attacking three times in one round with a weapon with the cost “1-&gt;2” costs 5 AP.</p>
+</section>
+<section id="to-hit" class="level2">
+<h2 class="anchored" data-anchor-id="to-hit">To-Hit</h2>
+<p>The score you add to an attack check with this weapon.</p>
+</section>
+<section id="attacks" class="level2">
+<h2 class="anchored" data-anchor-id="attacks">Attacks</h2>
+<section id="damage-types" class="level3">
+<h3 class="anchored" data-anchor-id="damage-types">Damage Types</h3>
+<p>Attacks also have with damage types. There are three major types of damage. They are: B for “Bludgeoning”, P for “Piercing”, and S for “Slashing”.</p>
+<p>There are also sub-types like Severing, Slicing, and Picking. Severing damage counts as S, but S does not count as Severing. The damage sub-type will share the first letter of the generic damage type. This has worked so far because there are a lot of conveniently placed words in English.</p>
+<p>The most common sub-types of damage are:</p>
+<p><strong>Slicing</strong>: What a saber does. A long fast drawing cut, often with a curved blade.</p>
+<p><strong>Severing</strong>: What an axe does. A chopping motion.</p>
+<p><strong>Picking</strong>: What a warpick does. A swinging motion.</p>
+<p><strong>Bashing</strong>: Reserved for heavy, crushing blows.</p>
+</section>
+<section id="effects-and-conditions" class="level3">
+<h3 class="anchored" data-anchor-id="effects-and-conditions">Effects and Conditions</h3>
+<p>Weapons often have extra effects that trigger “on 6”, “on matching”. Rolling a 6 and a 4 will give you a total of 10 (+ any bonuses) and if you succeed, the 6 might activate some additional effect. This makes gaining advantage even more useful, as it increases your chance of activating effects.</p>
+<p>Often, weapons use common effects and inflict common statuses or conditions. These conditions and effects are listed below. Conditions are notated in brackets, effects are in quotes. Common weapon conditions and effects are listed below.</p>
+<section id="effects" class="level4">
+<h4 class="anchored" data-anchor-id="effects">Effects</h4>
+<p><strong>“Bypass”</strong>: Ignore an amount of damage reduction from armor equal to your To-Hit bonus.</p>
+<p><strong>“Pull”</strong>: The target can be moved one space in any direction except backwards. Target can spend 1 AP to trigger a STR contest. If they win, they are not moved.</p>
+<p><strong>“Push”</strong>: The target is pushed back one space. Target can spend 1 AP to trigger a STR contest. If they win, they are not pushed back.</p>
+<p><strong>“Rend”</strong>: If armor reduced the damage of this attack note whether the damage type was B, P, or S. Reduce the armor’s damage reduction against that damage type by the To-Hit bonus of this attack.</p>
+<p>Common status effects are listed in their own section.</p>
+</section>
+<section id="combat-maneuvers" class="level4">
+<h4 class="anchored" data-anchor-id="combat-maneuvers">Combat Maneuvers</h4>
+<p>These effects are inflicted in addition to damage on a successful attack, they allow you to build a strategy around a certain fighting style or weapon type. These effects and conditions are not meant to encapsulate everything you can do! For everything else:</p>
+<p>On a successful attack, describe the maneuver you are attempting to perform. The target can either let you do it or take the damage of the attack as usual. <a href="https://oddskullblog.wordpress.com/2021/11/15/combat-maneuvers-the-easy-way/">Credit.</a></p>
+<p>Use this to disarm, knock people out, etc. You can also use this to do what would normally be done by “Push” or some other effect, you just won’t get damage on top of the maneuver.</p>
+<!-- Used to have rules for throwing spears or daggers without specific thrown rules. They were complicated. Better would just be treat it as +AGI and disadvantage to hit, but honestly I think it's better left up to rulings.  -->
+</section>
+</section>
+</section>
+</section>
+<section id="resting-healing-dying" class="level1">
+<h1>Resting, Healing, Dying</h1>
+<section id="resting-and-healing" class="level2">
+<h2 class="anchored" data-anchor-id="resting-and-healing">Resting and Healing</h2>
+<p>A “Rest” is a period of light, relaxing, non-strenuous activity. Resting includes, but is not limited to, eating, drinking, and sleeping.</p>
+<p>If you rest for an hour, either: - Regain all standard health - Regain 1 Crit Health.</p>
+<p>If you rest for 8 hours: - Remove 3 [exhaustion] and remove 1 [injury].</p>
+</section>
+<section id="dying" class="level2">
+<h2 class="anchored" data-anchor-id="dying">Dying</h2>
+<p>If you reach 0 crit health, fall unconscious. All damage taken while you are down is crit damage, if your negative crit health exceeds your total crit health, you die. If your crit health becomes positive, you are conscious again.</p>
+<p>At the beginning of every round in which you are down, the DM rolls for your character on an Individual Consequence Table. You do not know what is on the table, and you do not know what you rolled until:</p>
+<ul>
+<li>You regain consciousness.</li>
+<li>Someone checks on your body.</li>
+<li>Someone attempts to administer aid to you.</li>
+</ul>
+<p>The [stabilized] condition is a common consequence. The DM keeps rolling every round until either you are [stabilized] or you die. Death is another. When you become [stabilized] you stop rolling on the consequence table and start Resting. If you take damage while [stabilized], you are no longer Resting, start rolling on the consequence table again. At some point, the GM might stop rolling for your character. Hopefully you’re [stabilized]!</p>
+<p>If the whole party is down, the GM rolls on a Party Consequence table. This is almost certain death. You never know though, maybe you get rescued/jailed/possessed/repurposed as a nutrient dense mulch.</p>
+<section id="consequence-tables" class="level3">
+<h3 class="anchored" data-anchor-id="consequence-tables">Consequence Tables</h3>
+<p>There are three basic outcomes on a consequence table:</p>
+<ul>
+<li>You die.</li>
+<li>Something bad happens, you recieve a debuff of some kind.</li>
+<li>You become [stabilized].</li>
+</ul>
+<p>A ratio of 1:2:3 for [stabilized] / die / “something bad happens” is tough but fair. This is easily handled by a table with 6 entries:</p>
+<ul>
+<li>1-2: Death.</li>
+<li>3-5: Something bad happens.</li>
+<li>6: [stabilize]</li>
+</ul>
+<p>If you want to be more lenient you can change the ratios or rule that a character doesn’t have to roll on the first round that they are out. Get spicy, put something positive on the table, the world is your oyster.</p>
+<section id="bad-things" class="level4">
+<h4 class="anchored" data-anchor-id="bad-things">Bad Things</h4>
+<section id="temporary-debuffs" class="level5">
+<h5 class="anchored" data-anchor-id="temporary-debuffs">Temporary Debuffs</h5>
+<ul>
+<li>[lame] for an hour.</li>
+<li>Take 1 [exhaustion].</li>
+<li>[injury: disable an arm].</li>
+<li>Die if your crit health hits 0 again before your next rest.</li>
+</ul>
+</section>
+<section id="permananent-debuffs" class="level5">
+<h5 class="anchored" data-anchor-id="permananent-debuffs">Permananent Debuffs</h5>
+<ul>
+<li>Lose an eye. Your max PER becomes 1.</li>
+<li>Lower STR by 1.</li>
+<li>Lower max crit health by 1.</li>
+<li>Lose an arm.</li>
+</ul>
+<p>Many groups don’t like permanent debuffs! Make tables tailored to whatever sort of game you are running. Maybe replace one Death outcome with a permanent debuff, so you have 1 [stabilized], 1 Death, 3 temporary debuffs, and 1 permanent debuff.</p>
+<p>The role of these tables is to increase tension by introducing a high degree of risk and uncertainty without <em>necessarily</em> having to increase the probability of character death.</p>
+</section>
+</section>
+</section>
+<section id="sample-consequence-tables" class="level3">
+<h3 class="anchored" data-anchor-id="sample-consequence-tables">Sample Consequence Tables</h3>
+<section id="individual-consequence-tables" class="level4">
+<h4 class="anchored" data-anchor-id="individual-consequence-tables">Individual Consequence Tables</h4>
+<section id="nothing-d4" class="level5">
+<h5 class="anchored" data-anchor-id="nothing-d4">Nothing d4</h5>
+<ol type="1">
+<li>Death.</li>
+<li>Nothing happens.</li>
+<li>Nothing happens.</li>
+<li>[stabilized]</li>
+</ol>
+</section>
+<section id="generic-d6" class="level5">
+<h5 class="anchored" data-anchor-id="generic-d6">Generic d6</h5>
+<ol type="1">
+<li>Death.</li>
+<li>Death.</li>
+<li>Die if you are reduced to (0) before your next rest.</li>
+<li>Take 1 [exhaustion].</li>
+<li>[injury: disable an arm].</li>
+<li>You are [stabilized].</li>
+</ol>
+</section>
+</section>
+<section id="party-consequence-tables" class="level4">
+<h4 class="anchored" data-anchor-id="party-consequence-tables">Party Consequence Tables</h4>
+<p>In most cases, the thing that makes most sense is that the whole party dies, but maybe if they are attacked while traveling, something else happens!</p>
+<p>Things that are context specific will be italicized.</p>
+<ol type="1">
+<li>Everyone dies.</li>
+<li>Everyone dies.</li>
+<li>Each character flips a coin. On heads, they are [stabilized], on tails they die.</li>
+<li>The party wakes up in cells in <em>local jail</em> with all of their things missing.</li>
+<li>Miraculously, no one is dead. All of your things have been stolen.</li>
+<li>The players wake up having been rescued by <em>strange legendary creatures / local band of Merry Men.</em></li>
+</ol>
+</section>
+</section>
+</section>
+</section>
+<section id="common-status-conditions" class="level1">
+<h1>Common Status Conditions</h1>
+<p><strong>[bleed]</strong>: Take 1 damage each turn until [bleed] is removed. [bleed] can be removed by spending 3 AP fashioning and applying a bandage or spending 1 AP applying a prepared bandage</p>
+<p><strong>[exhaustion]</strong>: Temporarily lower all of your scores by 1 for every stack of [exhaustion] you have. Once none of your scores are above 0, start lowering your movement speed by 1 instead. Once your movement speed hits 0, fall [unconscious]. When you Rest, remove 1 [exhaustion].</p>
+<p><strong>[injury]</strong>: The target chooses to either lower their move speed by 1 by taking an injury to a leg, orthey take disadvantage while using one limb. [injury] can be removed by resting while missing no crit health, then flipping a coin and getting heads.</p>
+<p><strong>[lame]</strong>: Lower movement speed by 1.</p>
+<p><strong>[poison]</strong>: At the beginning of the round, take damage equal to the number of [poison] you have. Remove 1 [poison].</p>
+<p><strong>[prone]</strong>: Character is knocked to the ground and [vulnerable] (so attacks against them have disadvantage). Getting up costs 1 AP.</p>
+<p><strong>[stun]</strong>: When the character receives AP, discard it and remove this condition.</p>
+<p><strong>[vulnerable]</strong>: If a character is knocked down, distracted, being attacked from opposing directions, or otherwise in a disadvantageous position, checks made against the character have advantage.</p>
+<p><strong>[stabilized]</strong>: Do not roll on consequence tables. Begin resting. If you take damage remove this condition.</p>
+</section>
+<section id="cash" class="level1">
+<h1>CASH</h1>
+<p>CASH stands for Currency Abstraction System. The “H” is just an “H”. It is an optional ruleset for dealing with money that allows it to stay in the fiction while also getting rid of bookkeeping. Not appropriate for every game, but a good way to keep things moving quickly.</p>
+<p>CASH expresses the narrative cost or value of something through broad characterizations. Every character has a CASH level. CASH levels are ordinal but not cardinal. Having a CASH level is like having a position in a footrace. If you know you are in third place, you know your relative position but not your actual distance from any other participant. Your position is only defined relative to other positions.</p>
+<section id="the-rules" class="level2">
+<h2 class="anchored" data-anchor-id="the-rules">The Rules</h2>
+<ol type="1">
+<li><p>You cannot purchase anything valued above your current CASH level.</p></li>
+<li><p>If you purchase something valued at your current CASH level, lower your CASH level by 1.</p></li>
+<li><p>If you purchase something 1 level below your current CASH level, perform a BARTER or SOCIAL check. If you fail the check, lower your current level of CASH by 1.</p></li>
+<li><p>You can buy anything 2 or more levels below your current CASH level.</p></li>
+</ol>
+</section>
+<section id="cash-levels" class="level2">
+<h2 class="anchored" data-anchor-id="cash-levels">CASH Levels</h2>
+<ol type="1">
+<li><strong>Deprivation</strong>: Food barely fit for human consumption. Most things you could purchase at this level are practically indistinguishable from trash.</li>
+<li><strong>Destitution</strong>: Some street food, maybe a loaf of bread. Rags. Ale.</li>
+<li><strong>Indigence</strong>: A cup of stew. Hardtack. Raggedy threadbare clothing. A night in a run-down shack. Maybe a club.</li>
+<li><strong>Scarcity</strong>: A short stay in a shared room. A hot meal.</li>
+<li><strong>Penury</strong>: A knife. An article of common clothing.</li>
+<li><strong>Poverty</strong>: A dagger. A backpack.</li>
+<li><strong>Frugality</strong>: A short stay in an inn. A cheap spear or a woodcutting axe. An old rickety open cart. A wooden shield. Rope.</li>
+<li><strong>Austerity</strong>: An old mule. A new outfit. A basic weapon like an axe, a spear, or a short sword. Padded armor.</li>
+<li><strong>Moderation</strong>: A pack animal. Provisions for a journey. Nice warm clothing. Leather armor. A sword.</li>
+<li><strong>Substance</strong>: A horse. A polearm. Fine Clothing. A skiff.</li>
+<li><strong>Prosperity</strong>: Chain mail armor. A brigandine. A helmet or breastplate.</li>
+<li><strong>Affluence</strong>: A small sailboat. A war horse. Fine weapons of war.</li>
+<li><strong>Abundance</strong>: Plate Armor. Bodyguards and servants.</li>
+<li><strong>Fortune</strong>: A mansion. A ship capable of crossing an ocean.</li>
+<li><strong>Wealth</strong>: Businesses. Militias.</li>
+<li><strong>Riches</strong>: An estate. A Galleon. Marble statues.</li>
+<li><strong>Opulence</strong>: This level of wealth commands political power, it is difficult to even conceptualize. Fleets of ships. Entire industries.</li>
+<li><strong>Incredible Fortune</strong>: You command armies. You own banks. Your face is on the money.</li>
+<li><strong>Unfathomable Wealth</strong>: You determine the course of entire economies. Your wealth is your power, your power is your wealth.</li>
+<li><strong>Limitless Riches</strong>: This level of wealth exists only in legend. The wealth of gods. The wealth of an immortal dragon sleeping on a planetary core of pure gold. <!-- 
+Saving encumbrance for deletion, but leaving it commented out for now. Encumbrance, I hardly knew ye.
+
+# Encumbrance.
+
+Encumbrance is measured in encs. Encs are a combined measure of weight and unwieldiness. Most weapons are 1 enc. A \[heavy] weapon is 2 encs. A days worth of food and water is 1. 3 small items, like a book, a dagger, and some bandages together take 1 enc. Negligible items like quills and needles don't take up any encs, unless the DM determines you are carrying "way too many".  
+
+Players must describe and account for how they are moving their things. They take "reasonable" penalties for impractical methods. If they tie a bunch of swords together and then hang that off of their neck, they will have a hard time stealthing. If they fall over while wearing the described necklace of dangerous wind chimes they're going to have a bad time.
+
+## Storage Spaces, The "Personal" Space and Bags
+
+"Storage space" is used to broadly refer to any place you can put things. Each storage space you have can be thought of as a source of a max encumbrance and a source of an \[encumbered] threshold. Most of the time you will have two storage spaces: 
+
+- Your "personal" space, which includes anything you're carrying that isn't itself a storage space. Most often this would be your weapons and armor. 
+
+- Your bag. This is most often some kind of backpack.
+
+You have a personal \[encumbered] threshold. This is used for the weapons and armor you are carrying without a bag.
+Your personal \[encumbered] threshold is 3 + STR. Your personal max encumbrance is 6 + STR encs.
+
+The primary use of a bag is to give you more \[encumbered] thresholds and to change your maximum encumbrance.
+
+Bags have varying \[encumbered] thresholds and max encumbrances. If a bag does not say it has an \[encumbrance] threshold, then it never makes you \[encumbered]. This is common for small bags that don't have a max enc capacity high enough to be able to encumber. Removing a bag costs 1 AP. 
+
+### The \[encumbered] Threshold and Maximum Encumbrance
+
+If you are past any encumbrance threshold in any storage space, you are \[encumbered], you have the \[encumbered] status.
+
+The \[encumbered] status lowers your move speed by 1. Your Defense is lowered by 3. Additionally, take a -1 to all AGI checks.
+
+If you aren't wearing heavy armor but you're carrying enough in your bag to pass the bag's encumbrance threshold, you are \[encumbered]. Less obviously, this also means that if you are past your personal encumbrance threshold (most likely from carrying weapons and wearing armor that are too heavy for you to move freely with) but you are not past your \[encumbered] threshold for your bag, you are still \[encumbered].  
+
+In order to avoid passing an \[encumbered] threshold you likely want to spread the weight around multiple storage spaces, keeping under all of their \[encumbered] thresholds, or you might want to just put everything in a bag so that in a fight you can take it off quickly and not be \[encumbered].
+
+You cannot carry more encs in total than your single highest max encumbrance score. This does not mean that having one storage space where you can carry 8 encs means that you must be able to carry 8 encs in every storage space, it just means that all together you can't carry more than 8 encs.
+
+Unless otherwise specified, you can only use one bag at a time. If some mechanic allows you to use multiple bags, you cannot carry in total more than your highest max encumbrance from a single source, though you can move encs around to try to avoid the \[encumbered] status effect.
+
+Your \[encumbered] threshold and your maximum encumbrance can be affected by status effects or skills, but most often they will be affected by the bag you are using. --></li>
+</ol>
+</section>
+</section>
+<section id="hexes" class="level1">
+<h1>Hexes</h1>
+<p>Hexes are the foundation of “scrivening”, a magic system relying entirely on written representations. Those who write hexes are “scriveners”. It is the most prominent magic system in the upcoming setting. This is not the only magic system that would be compatible with Actlite, and it is not the only magic system that I plan on making.</p>
+<p>Hex magic is a ~low, ~hard magic system. It’s not for everyone. It is built for the type of player that wants to tool around directly with magic, finding clever or unexpected uses, interactions, and effects.3 This system is an example of “opting-in” to complexity, which I’ve written about before.</p>
+<section id="lore" class="level2">
+<h2 class="anchored" data-anchor-id="lore">Lore</h2>
+<p>Hexes are symbols used by scriviners to directly access, manipulate, and utilize abstract concepts. By manipulating these symbols, scriveners cause tangible effects in the world around them. Hexes can be subjected to any number of alterations, transformations, and modifications. Some of these operations don’t fundamentally change how the hex works, some do. Different scriveners tend to write hexes in slightly different ways, but they are all accessing the same concepts.</p>
+<p>Scrivening uses a combination of written symbols and cognition. [independent] hexes can handle cognition on their own, the scrivener handles the cognition for any other hex. Making a hex [independent] is difficult and requires a lot of modifications and transformations. Because of this, studying an [independent] example of a hex is a terrible way to try to learn the hex.</p>
+</section>
+<section id="learning-hexes" class="level2">
+<h2 class="anchored" data-anchor-id="learning-hexes">Learning Hexes</h2>
+<p>The easiest way to learn a particular hex is to study it along with some explanation or guidance from the author of the hex. This is one of the many reasons scrivening is a fractured and secretive art. The primary method of teaching someone a particular hex involves giving them access to your hexes directly, putting yourself at risk.</p>
+<p>The typical way to learn hexes is to discover them for yourself using the methods or protocols of the relevant school or tradition. Sometimes this means feverish study, sometimes this means clear-headed meditation.</p>
+<section id="mechanics" class="level3">
+<h3 class="anchored" data-anchor-id="mechanics">Mechanics</h3>
+<p>You can try to learn individual hexes by studying the hexes themselves or you can roll on a hex archetype table. This magic system does not hand players a great big catalog of spells to choose from. Every character should end up with a unique set of hexes that they have to learn to utilize effectively. You are meant to improvise with what you get and use your hex library to write your own signature combinations.</p>
+<section id="learning-combined-hexes" class="level4">
+<h4 class="anchored" data-anchor-id="learning-combined-hexes">Learning Combined Hexes</h4>
+<p>When you succeed in learning a hex that is composed of multiple hexes, you learn every unknown hex in the combination. The DC to learn a combined hex is +3 for every hex in the combination.</p>
+<p>Studying a hex combination takes an hour per hex. You can only attempt to learn a given hex once per day. You cannot study [independent] hexes.</p>
+</section>
+</section>
+</section>
+<section id="hex-activation" class="level2">
+<h2 class="anchored" data-anchor-id="hex-activation">Hex Activation</h2>
+<p>When a hex is destroyed it is activated. When it is activated, it is destroyed. If it is activated while some effect requirement is not met, it is destroyed. “Destroyed” includes smudged to illegibility, the medium that it is written on is torn, etc.</p>
+</section>
+<section id="writing-and-casting-hexes" class="level2">
+<h2 class="anchored" data-anchor-id="writing-and-casting-hexes">Writing and Casting Hexes</h2>
+<p>A character can write 3 + WIL hexes, this capacity is reset after every rest. A character can maintain 3 + WIL hexes at a time. If a character writes another hex while they are maintaining as many as they can, the olest hex is destroyed.</p>
+<p>Each hex can be modified by up to 3 + WIL [modifier] hexes.</p>
+<p>Once written, a hex remains usable until you sleep or until 24 hours pass, whichever happens first.</p>
+<p>To write a hex during initiative you have to spend 3 AP for the hex and 1 AP for every modifier.</p>
+<p>Many hexes have some kind of activation condition. Often this condition is some action the character might take, like attacking. In these cases you don’t have to pay AP to use the hex. If you want to search for an already written hex you do not already have in your hand and then activate it, pay 1 AP.</p>
+<!-- Many of these mechanics are currently unused, so their rules are commented out. -->
+<!-- ### [durable] hexes
+
+Durable hexes are not destroyed upon activation. These are often written on a durable medium or some kind of focus like a staff, gloves, robes, or even as a tattoo. If a hex does not have the [durable] tag it is destroyed when activated. [durable] hexes often have casting DCs.
+ -->
+<section id="modifier-hexes" class="level3">
+<h3 class="anchored" data-anchor-id="modifier-hexes">[modifier] Hexes</h3>
+<p>[modifier] hexes can be combined with other hexes. If one hex in the combination is activated, all are. [modifier] hexes do not affect individual hexes within a combination, they affect the whole combination.</p>
+</section>
+<section id="independent-hexes" class="level3">
+<h3 class="anchored" data-anchor-id="independent-hexes">[independent] Hexes</h3>
+<p>Independent hexes do not lose power over time and are not bound to their author. As a result, effects that target the author do not work.</p>
+</section>
+</section>
+<section id="additional-context" class="level2">
+<h2 class="anchored" data-anchor-id="additional-context">Additional Context</h2>
+<p>Individual hexes might override any rule listed above. For example, many [modifier] hexes can be added to hexes you did not write.</p>
+<p>Hexes can also impose additional restrictions, requirements, or costs. For example, taking extra time to create, having unique costs for creation or activation, or only being compatible with certain hexes.</p>
+<section id="durable-casting-and-hex-tables" class="level3">
+<h3 class="anchored" data-anchor-id="durable-casting-and-hex-tables">[durable] Casting and Hex Tables</h3>
+<p>[durable] hexes can be written into a “hex pallete”. Hexes can be built from combinations of hexes in the same table and immediately cast without the caster having to write the hex down. Diegetically, a hex “table” might be called a pallete, a matrix, or something else depending on the tradition or school.</p>
+<p>[durable] hexes often come with additional or alternative casting requirements. Some hexes can only be cast as [durable] hexes. [independent] Hexes</p>
+<p>To make a hex [independent], a scrivener must attach a [modifier] that consists of two parts.</p>
+<p>The first is the “key”. The “key” is the first step in breaking the unique connection between scrivener and hex. It varies from person to person and from hex to hex. The writer must figure out the unique key for each hex they cast, they cannot use someone else’s.</p>
+<p>The second part is a “hex signature”. This is a unique hex that you will use every time you make a hex [independent]. The signature does not, on its own, identify you. if someone sees your signature they won’t necessarily know it is yours. However once they do know, they will recognize the signature in every [independent] hex you write. You cannot change your signature.</p>
+<p>Two people writing the same non-[independent] hex will write nearly identical hexes. Once they make their hexes [independent] they have to leave distinct signatures. Unless steps are taken to obfuscate the contents of the entire hex, the signature is obvious. The process of making a hex [independent] often means adding a large number of alterations that make it hard for other scriveners to learn the hex, but reading it remains relatively easy.</p>
+<p>Some hexes can be made [independent] relatively easily. For some hexes the process is very difficult or costly. Many hexes (especially powerful hexes) cannot be made independent through any known means. If a hex is not [independent], it is bound to an author and follows the usual casting rules</p>
+</section>
+<section id="invocations" class="level3">
+<h3 class="anchored" data-anchor-id="invocations">Invocations</h3>
+<p>Invocations are [independent] hexes written on long and narrow strips of material. Most often this is paper. Invocations are by far the most common type hex. Many people never come into contact with hexes, most that do only come in contact with invocations. Invocations typically have relatively minor effects. Invocations are almost always activated by tearing the medium they are written on.</p>
+<p>Invocations are almost always [independent] so that they do not lose potency. Additionally, [modifier] hexes that harm the author are very easy to write, so any sane scrivener wouldn’t part with a hex without making it [independent] first.</p>
+<p>Some of the reasons for the format of the invocation is practical. A long slip of paper is easy to fully rip in half, guaranteeing activation. They are easy to tear with one hand. This is especially useful for weapon invocations, where the invocation is wrapped around either the handle or the hand wielding the weapon. Prayers are written in a similar format.</p>
+</section>
+</section>
+</section>
+<section id="original-posts" class="level1">
+<h1>Original Posts</h1>
+<p>A lot of the first drafts for these rules appeared on the <a href="https://actlite.substack.com/">Substack</a>. The Substack posts often include optional rules, content, and more context around why certain mechanics were written they way they were. They also often include outdated rules.</p>
+<p>I’ll link those posts here in roughly the order they appeared here.</p>
+<ul>
+<li><a href="https://actlite.substack.com/p/core-rules">Core Rules</a></li>
+<li><a href="https://actlite.substack.com/p/weapons">Weapons</a></li>
+<li><a href="https://actlite.substack.com/p/resting-healing-dying">Resting, Healing, Dying</a></li>
+<li><a href="https://actlite.substack.com/p/the-essential-johnny-cash">CASH</a></li>
+<li><a href="https://actlite.substack.com/p/hexes-part-1-the-rules">Hexes Part 1</a></li>
+<li><a href="https://actlite.substack.com/publish/posts/detail/142442758?referrer=%2Fpublish%2Fposts">Hexes Part 2</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../book/about/mutiny.html" class="pagination-link" aria-label="Pardon the Dust">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Pardon the Dust</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../book/stuff/basic.html" class="pagination-link" aria-label="Basic">
+        <span class="nav-page-text">Basic</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
