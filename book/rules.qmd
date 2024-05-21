@@ -147,17 +147,21 @@ Characters gain skills by rolling on "Archetype Tables", collections of thematic
 
 Skills in tables are loosely ordered by desirability. If a player gets a skill they already have by rolling on an archetype table, they get the skill below/before it in the table. If none are below it, they get the first skill above it. A player cannot roll on a table when they have every skill on the table.
 
-# Misc. Rules
+## Misc. Rules
+
+### Searching and Switching During Combat
+
+Drawing, stowing, switching weapons, or picking a weapon up off the ground costs 1 AP, dropping a weapon is free. Searching for something you have on your person but you do not have ready is 1 AP. If what you need is further away, like in a backpack you are wearing, pay 2 AP to take off the bag, open it, rummage through it, etc.
 
 ## Stealth
 
 Stealth is an AGI check against the defender’s passive perception. It’s a check against a passive score, and that is always 6 + SCORE.
 
-## Grappling
+### Grappling
 
 To start a grapple, perform a "grapple check", which is a +STR to-hit [reach: close] attack that costs 2 AP. While grappling an opponent, you have advantage on [reach: close] attacks against them, they have disadvantage on attacks against you. You can move them by one space or you can both go to the ground at the cost of 1 AP. Defender can spend 2 AP to trigger another STR contest to try and break free. Defender can do nothing but attack and try to end the grapple. You cannot grapple a creature larger than yourself. There are grappling skills that add a lot of other options.
 
-## Fall Damage
+### Fall Damage
 
 Fall damage is a d4 for every 6 spaces up to 25d4.
 
@@ -238,20 +242,6 @@ Often, weapons use common effects and inflict common statuses or conditions. The
 
 Common status effects are listed in their own section.
 
-<!-- #### Conditions
-
-**[bleed]**: Take 1 damage each turn until [bleed] is removed. [bleed] can be removed by spending 3 AP fashioning and applying a bandage or spending 1 AP applying a prepared bandage
-
-**[injury]**: The target chooses to either lower their move speed by 1 by taking an injury to a leg, orthey take disadvantage while using one limb. [injury] can be removed by resting while missing no crit health, then flipping a coin and getting heads.
-
-**[poison]**: At the beginning of the round, take damage equal to the number of [poison] you have. Remove 1 [poison].
-
-**[prone]**: Character is knocked to the ground and [vulnerable] (so attacks against them have disadvantage). Getting up costs 1 AP.
-
-**[stun]**: When the character receives AP, discard it and remove this condition.
-
-**[vulnerable]**: If a character is knocked down, distracted, being attacked from opposing directions, or otherwise in a disadvantageous position, checks made against the character have advantage. -->
-
 #### Combat Maneuvers
 
 These effects are inflicted in addition to damage on a successful attack, they allow you to build a strategy around a certain fighting style or weapon type. These effects and conditions are not meant to encapsulate everything you can do! For everything else:
@@ -259,6 +249,8 @@ These effects are inflicted in addition to damage on a successful attack, they a
 On a successful attack, describe the maneuver you are attempting to perform. The target can either let you do it or take the damage of the attack as usual. [Credit.](https://oddskullblog.wordpress.com/2021/11/15/combat-maneuvers-the-easy-way/)
 
 Use this to disarm, knock people out, etc. You can also use this to do what would normally be done by “Push” or some other effect, you just won’t get damage on top of the maneuver.
+
+<!-- Used to have rules for throwing spears or daggers without specific thrown rules. They were complicated. Better would just be treat it as +AGI and disadvantage to hit, but honestly I think it's better left up to rulings.  -->
 
 # Resting, Healing, Dying
 
@@ -414,11 +406,47 @@ CASH expresses the narrative cost or value of something through broad characteri
 18. **Incredible Fortune**: You command armies. You own banks. Your face is on the money.
 19. **Unfathomable Wealth**: You determine the course of entire economies. Your wealth is your power, your power is your wealth.
 20. **Limitless Riches**: This level of wealth exists only in legend. The wealth of gods. The wealth of an immortal dragon sleeping on a planetary core of pure gold.
+<!-- 
+Saving encumbrance for deletion, but leaving it commented out for now. Encumbrance, I hardly knew ye.
+
+# Encumbrance.
+
+Encumbrance is measured in encs. Encs are a combined measure of weight and unwieldiness. Most weapons are 1 enc. A \[heavy] weapon is 2 encs. A days worth of food and water is 1. 3 small items, like a book, a dagger, and some bandages together take 1 enc. Negligible items like quills and needles don't take up any encs, unless the DM determines you are carrying "way too many".  
+
+Players must describe and account for how they are moving their things. They take "reasonable" penalties for impractical methods. If they tie a bunch of swords together and then hang that off of their neck, they will have a hard time stealthing. If they fall over while wearing the described necklace of dangerous wind chimes they're going to have a bad time.
+
+## Storage Spaces, The "Personal" Space and Bags
+
+"Storage space" is used to broadly refer to any place you can put things. Each storage space you have can be thought of as a source of a max encumbrance and a source of an \[encumbered] threshold. Most of the time you will have two storage spaces: 
+
+- Your "personal" space, which includes anything you're carrying that isn't itself a storage space. Most often this would be your weapons and armor. 
+
+- Your bag. This is most often some kind of backpack.
+
+You have a personal \[encumbered] threshold. This is used for the weapons and armor you are carrying without a bag.
+Your personal \[encumbered] threshold is 3 + STR. Your personal max encumbrance is 6 + STR encs.
+
+The primary use of a bag is to give you more \[encumbered] thresholds and to change your maximum encumbrance.
+
+Bags have varying \[encumbered] thresholds and max encumbrances. If a bag does not say it has an \[encumbrance] threshold, then it never makes you \[encumbered]. This is common for small bags that don't have a max enc capacity high enough to be able to encumber. Removing a bag costs 1 AP. 
+
+### The \[encumbered] Threshold and Maximum Encumbrance
+
+If you are past any encumbrance threshold in any storage space, you are \[encumbered], you have the \[encumbered] status.
+
+The \[encumbered] status lowers your move speed by 1. Your Defense is lowered by 3. Additionally, take a -1 to all AGI checks.
+
+If you aren't wearing heavy armor but you're carrying enough in your bag to pass the bag's encumbrance threshold, you are \[encumbered]. Less obviously, this also means that if you are past your personal encumbrance threshold (most likely from carrying weapons and wearing armor that are too heavy for you to move freely with) but you are not past your \[encumbered] threshold for your bag, you are still \[encumbered].  
+
+In order to avoid passing an \[encumbered] threshold you likely want to spread the weight around multiple storage spaces, keeping under all of their \[encumbered] thresholds, or you might want to just put everything in a bag so that in a fight you can take it off quickly and not be \[encumbered].
+
+You cannot carry more encs in total than your single highest max encumbrance score. This does not mean that having one storage space where you can carry 8 encs means that you must be able to carry 8 encs in every storage space, it just means that all together you can't carry more than 8 encs.
+
+Unless otherwise specified, you can only use one bag at a time. If some mechanic allows you to use multiple bags, you cannot carry in total more than your highest max encumbrance from a single source, though you can move encs around to try to avoid the \[encumbered] status effect.
+
+Your \[encumbered] threshold and your maximum encumbrance can be affected by status effects or skills, but most often they will be affected by the bag you are using. -->
 
 # Hexes 
-
-<!-- The original posts are [here](https://actlite.substack.com/p/hexes-part-1-the-rules) and [here](https://actlite.substack.com/p/hexes-part-2-invocations).  -->
-<!-- Really this should just be in a list at the end. -->
 
 Hexes are the foundation of “scrivening”, a magic system relying entirely on written representations. Those who write hexes are “scriveners”. It is the most prominent magic system in the upcoming setting. This is not the only magic system that would be compatible with Actlite, and it is not the only magic system that I plan on making.
 

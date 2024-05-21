@@ -47,11 +47,7 @@ website:
           #- book/about/about.qmd
       - section: "Rules"
         contents:
-          - book/actlite/sixtem.qmd
-          - book/actlite/tactile.qmd
-          - book/actlite/social.qmd
-          - book/actlite/mechanics-misc.qmd
-          #- book/actlite/talaje.qmd
+          - book/rules.qmd
       - section: "Skills, Weapons, Items"
         contents:
           - book/stuff/basic.qmd
