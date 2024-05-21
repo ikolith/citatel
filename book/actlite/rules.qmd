@@ -147,8 +147,21 @@ Characters gain skills by rolling on "Archetype Tables", collections of thematic
 
 Skills in tables are loosely ordered by desirability. If a player gets a skill they already have by rolling on an archetype table, they get the skill below/before it in the table. If none are below it, they get the first skill above it. A player cannot roll on a table when they have every skill on the table.
 
-# Weapons
+# Misc. Rules
 
+## Stealth
+
+Stealth is an AGI check against the defender’s passive perception. It’s a check against a passive score, and that is always 6 + SCORE.
+
+## Grappling
+
+To start a grapple, perform a "grapple check", which is a +STR to-hit [reach: close] attack that costs 2 AP. While grappling an opponent, you have advantage on [reach: close] attacks against them, they have disadvantage on attacks against you. You can move them by one space or you can both go to the ground at the cost of 1 AP. Defender can spend 2 AP to trigger another STR contest to try and break free. Defender can do nothing but attack and try to end the grapple. You cannot grapple a creature larger than yourself. There are grappling skills that add a lot of other options.
+
+## Fall Damage
+
+Fall damage is a d4 for every 6 spaces up to 25d4.
+
+# Weapons
 
 Here's a basic weapon, a club:
 
@@ -188,6 +201,219 @@ The “Speed” of a weapon is the AP cost of an attack with the weapon. If the 
 ## To-Hit
 
 The score you add to an attack check with this weapon.
+
+## Attacks
+
+### Damage Types
+
+Attacks also have with damage types. There are three major types of damage. They are: B for "Bludgeoning", P for "Piercing", and S for "Slashing". 
+
+There are also sub-types like Severing, Slicing, and Picking. Severing damage counts as S, but S does not count as Severing. The damage sub-type will share the first letter of the generic damage type. This has worked so far because there are a lot of conveniently placed words in English. 
+
+The most common sub-types of damage are:
+
+**Slicing**: What a saber does. A long fast drawing cut, often with a curved blade.
+
+**Severing**: What an axe does. A chopping motion.
+
+**Picking**: What a warpick does. A swinging motion.
+
+**Bashing**: Reserved for heavy, crushing blows.
+
+### Effects and Conditions
+
+Weapons often have extra effects that trigger “on 6”, “on matching”. Rolling a 6 and a 4 will give you a total of 10 (+ any bonuses) and if you succeed, the 6 might activate some additional effect. This makes gaining advantage even more useful, as it increases your chance of activating effects.
+
+Often, weapons use common effects and inflict common statuses or conditions. These conditions and effects are listed below. Conditions are notated in brackets, effects are in quotes. Common weapon conditions and effects are listed below.
+
+#### Effects
+
+**“Bypass”**: Ignore an amount of damage reduction from armor equal to your To-Hit bonus.
+
+**“Pull”**: The target can be moved one space in any direction except backwards. Target can spend 1 AP to trigger a STR contest. If they win, they are not moved.
+
+**“Push”**: The target is pushed back one space. Target can spend 1 AP to trigger a STR contest. If they win, they are not pushed back.
+
+**“Rend”**: If armor reduced the damage of this attack note whether the damage type was B, P, or S. Reduce the armor’s damage reduction against that damage type by the To-Hit bonus of this attack.
+
+Common status effects are listed in their own section.
+
+<!-- #### Conditions
+
+**[bleed]**: Take 1 damage each turn until [bleed] is removed. [bleed] can be removed by spending 3 AP fashioning and applying a bandage or spending 1 AP applying a prepared bandage
+
+**[injury]**: The target chooses to either lower their move speed by 1 by taking an injury to a leg, orthey take disadvantage while using one limb. [injury] can be removed by resting while missing no crit health, then flipping a coin and getting heads.
+
+**[poison]**: At the beginning of the round, take damage equal to the number of [poison] you have. Remove 1 [poison].
+
+**[prone]**: Character is knocked to the ground and [vulnerable] (so attacks against them have disadvantage). Getting up costs 1 AP.
+
+**[stun]**: When the character receives AP, discard it and remove this condition.
+
+**[vulnerable]**: If a character is knocked down, distracted, being attacked from opposing directions, or otherwise in a disadvantageous position, checks made against the character have advantage. -->
+
+#### Combat Maneuvers
+
+These effects are inflicted in addition to damage on a successful attack, they allow you to build a strategy around a certain fighting style or weapon type. These effects and conditions are not meant to encapsulate everything you can do! For everything else:
+
+On a successful attack, describe the maneuver you are attempting to perform. The target can either let you do it or take the damage of the attack as usual. [Credit.](https://oddskullblog.wordpress.com/2021/11/15/combat-maneuvers-the-easy-way/)
+
+Use this to disarm, knock people out, etc. You can also use this to do what would normally be done by “Push” or some other effect, you just won’t get damage on top of the maneuver.
+
+# Resting, Healing, Dying
+
+## Resting and Healing
+
+A “Rest” is a period of light, relaxing, non-strenuous activity. Resting includes, but is not limited to, eating, drinking, and sleeping.
+
+If you rest for an hour, either:
+- Regain all standard health
+- Regain 1 Crit Health.
+
+If you rest for 8 hours:
+- Remove 3 [exhaustion] and remove 1 [injury].
+
+## Dying
+
+If you reach 0 crit health, fall unconscious. All damage taken while you are down is crit damage, if your negative crit health exceeds your total crit health, you die. If your crit health becomes positive, you are conscious again.
+
+At the beginning of every round in which you are down, the DM rolls for your character on an Individual Consequence Table. You do not know what is on the table, and you do not know what you rolled until:
+
+- You regain consciousness.
+- Someone checks on your body.
+- Someone attempts to administer aid to you.
+
+The [stabilized] condition is a common consequence. The DM keeps rolling every round until either you are [stabilized] or you die. Death is another. When you become [stabilized] you stop rolling on the consequence table and start Resting. If you take damage while [stabilized], you are no longer Resting, start rolling on the consequence table again. At some point, the GM might stop rolling for your character. Hopefully you’re [stabilized]!
+
+If the whole party is down, the GM rolls on a Party Consequence table. This is almost certain death. You never know though, maybe you get rescued/jailed/possessed/repurposed as a nutrient dense mulch.
+
+### Consequence Tables
+
+There are three basic outcomes on a consequence table:
+
+- You die.
+- Something bad happens, you recieve a debuff of some kind.
+- You become [stabilized].
+
+A ratio of 1:2:3 for [stabilized] / die / “something bad happens” is tough but fair. This is easily handled by a table with 6 entries:
+
+- 1-2: Death.
+- 3-5: Something bad happens.
+- 6: [stabilize]
+
+If you want to be more lenient you can change the ratios or rule that a character doesn’t have to roll on the first round that they are out. Get spicy, put something positive on the table, the world is your oyster.
+
+#### Bad Things
+
+##### Temporary Debuffs 
+
+- [lame] for an hour.
+- Take 1 [exhaustion].
+- [injury: disable an arm].
+- Die if your crit health hits 0 again before your next rest.
+
+##### Permananent Debuffs
+
+- Lose an eye. Your max PER becomes 1.
+- Lower STR by 1.
+- Lower max crit health by 1.
+- Lose an arm.
+
+Many groups don’t like permanent debuffs! Make tables tailored to whatever sort of game you are running. Maybe replace one Death outcome with a permanent debuff, so you have 1 [stabilized], 1 Death, 3 temporary debuffs, and 1 permanent debuff.
+
+The role of these tables is to increase tension by introducing a high degree of risk and uncertainty without *necessarily* having to increase the probability of character death.
+
+### Sample Consequence Tables
+
+#### Individual Consequence Tables
+
+##### Nothing d4
+
+1. Death.
+2. Nothing happens.
+3. Nothing happens.
+4. [stabilized]
+
+##### Generic d6
+
+1. Death.
+2. Death.
+3. Die if you are reduced to (0) before your next rest.
+4. Take 1 [exhaustion].
+5. [injury: disable an arm].
+6. You are [stabilized].
+
+#### Party Consequence Tables
+
+In most cases, the thing that makes most sense is that the whole party dies, but maybe if they are attacked while traveling, something else happens!
+
+Things that are context specific will be italicized.
+
+1. Everyone dies.
+2. Everyone dies.
+3. Each character flips a coin. On heads, they are [stabilized], on tails they die.
+4. The party wakes up in cells in *local jail* with all of their things missing.
+5. Miraculously, no one is dead. All of your things have been stolen.
+6. The players wake up having been rescued by *strange legendary creatures / local band of Merry Men.*
+
+# Common Status Conditions
+
+**[bleed]**: Take 1 damage each turn until [bleed] is removed. [bleed] can be removed by spending 3 AP fashioning and applying a bandage or spending 1 AP applying a prepared bandage
+
+**[exhaustion]**: Temporarily lower all of your scores by 1 for every stack of [exhaustion] you have. Once none of your scores are above 0, start lowering your movement speed by 1 instead. Once your movement speed hits 0, fall [unconscious]. When you Rest, remove 1 [exhaustion].
+
+**[injury]**: The target chooses to either lower their move speed by 1 by taking an injury to a leg, orthey take disadvantage while using one limb. [injury] can be removed by resting while missing no crit health, then flipping a coin and getting heads.
+
+**[lame]**: Lower movement speed by 1.
+
+**[poison]**: At the beginning of the round, take damage equal to the number of [poison] you have. Remove 1 [poison].
+
+**[prone]**: Character is knocked to the ground and [vulnerable] (so attacks against them have disadvantage). Getting up costs 1 AP.
+
+**[stun]**: When the character receives AP, discard it and remove this condition.
+
+**[vulnerable]**: If a character is knocked down, distracted, being attacked from opposing directions, or otherwise in a disadvantageous position, checks made against the character have advantage.
+
+**[stabilized]**: Do not roll on consequence tables. Begin resting. If you take damage remove this condition.
+
+# CASH
+
+CASH stands for Currency Abstraction System. The “H” is just an “H”. It is an optional ruleset for dealing with money that allows it to stay in the fiction while also getting rid of bookkeeping. Not appropriate for every game, but a good way to keep things moving quickly.
+
+CASH expresses the narrative cost or value of something through broad characterizations. Every character has a CASH level. CASH levels are ordinal but not cardinal. Having a CASH level is like having a position in a footrace. If you know you are in third place, you know your relative position but not your actual distance from any other participant. Your position is only defined relative to other positions.
+
+## The Rules
+
+1. You cannot purchase anything valued above your current CASH level.
+
+2. If you purchase something valued at your current CASH level, lower your CASH level by 1.
+
+3. If you purchase something 1 level below your current CASH level, perform a BARTER or SOCIAL check. If you fail the check, lower your current level of CASH by 1.
+
+4. You can buy anything 2 or more levels below your current CASH level.
+
+## CASH Levels
+
+1. **Deprivation**: Food barely fit for human consumption. Most things you could purchase at this level are practically indistinguishable from trash. 
+2. **Destitution**: Some street food, maybe a loaf of bread. Rags. Ale.
+3. **Indigence**: A cup of stew. Hardtack. Raggedy threadbare clothing. A night in a run-down shack. Maybe a club. 
+4. **Scarcity**: A short stay in a shared room. A hot meal.
+5. **Penury**: A knife. An article of common clothing.
+6. **Poverty**: A dagger. A backpack. 
+7. **Frugality**: A short stay in an inn. A cheap spear or a woodcutting axe. An old rickety open cart. A wooden shield. Rope.
+8. **Austerity**: An old mule. A new outfit. A basic weapon like an axe, a spear, or a short sword. Padded armor.
+9. **Moderation**: A pack animal. Provisions for a journey. Nice warm clothing. Leather armor. A sword.
+10. **Substance**: A horse. A polearm. Fine Clothing. A skiff.
+11. **Prosperity**: Chain mail armor. A brigandine. A helmet or breastplate.
+12. **Affluence**: A small sailboat. A war horse. Fine weapons of war.
+13. **Abundance**: Plate Armor. Bodyguards and servants.
+14. **Fortune**: A mansion. A ship capable of crossing an ocean.
+15. **Wealth**: Businesses. Militias. 
+16. **Riches**: An estate. A Galleon. Marble statues.
+17. **Opulence**: This level of wealth commands political power, it is difficult to even conceptualize. Fleets of ships. Entire industries.
+18. **Incredible Fortune**: You command armies. You own banks. Your face is on the money.
+19. **Unfathomable Wealth**: You determine the course of entire economies. Your wealth is your power, your power is your wealth.
+20. **Limitless Riches**: This level of wealth exists only in legend. The wealth of gods. The wealth of an immortal dragon sleeping on a planetary core of pure gold.
 
 # Hexes 
 
@@ -279,3 +505,16 @@ Invocations are [independent] hexes written on long and narrow strips of materia
 Invocations are almost always [independent] so that they do not lose potency. Additionally, [modifier] hexes that harm the author are very easy to write, so any sane scrivener wouldn’t part with a hex without making it [independent] first.
 
 Some of the reasons for the format of the invocation is practical. A long slip of paper is easy to fully rip in half, guaranteeing activation. They are easy to tear with one hand. This is especially useful for weapon invocations, where the invocation is wrapped around either the handle or the hand wielding the weapon. Prayers are written in a similar format.
+
+# Original Posts
+
+A lot of the first drafts for these rules appeared on the [Substack](https://actlite.substack.com/). The Substack posts often include optional rules, content, and more context around why certain mechanics were written they way they were. They also often include outdated rules. 
+
+I'll link those posts here in roughly the order they appeared here.
+
+- [Core Rules](https://actlite.substack.com/p/core-rules)
+- [Weapons](https://actlite.substack.com/p/weapons)
+- [Resting, Healing, Dying](https://actlite.substack.com/p/resting-healing-dying)
+- [CASH](https://actlite.substack.com/p/the-essential-johnny-cash)
+- [Hexes Part 1](https://actlite.substack.com/p/hexes-part-1-the-rules)
+- [Hexes Part 2](https://actlite.substack.com/publish/posts/detail/142442758?referrer=%2Fpublish%2Fposts)
