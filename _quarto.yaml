@@ -35,7 +35,6 @@ website:
   page-navigation: true
 
   sidebar:
-    id: "sidebarid"
     openSidebar: true
     style: "docked"
     collapse-level: 1
