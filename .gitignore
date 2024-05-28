@@ -2,6 +2,9 @@
 /.luarc.json
 /quarto_output/
 
+!/ttrpyg/.git
+/ttrpyg/*
+
 /.quarto/
 
 scratch.md
