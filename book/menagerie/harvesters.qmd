@@ -18,7 +18,7 @@ Harvesters are not misunderstood, they are indiscriminantly killing people for p
 ```{python}
 import os
 from tinydb import Query
-from citutils.database import DB
+from ttrpyg.database import DB
 db = DB(os.path.join("..","..","./source"))
 print(db.create_query_text_section(query = Query().meta_tags.any("harvester")))
 ```

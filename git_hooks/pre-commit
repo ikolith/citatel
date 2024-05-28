@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "Git pre-commit hook running now."
 #mypy update.py cli.py; 
-if pytest citutils/citutils/tests.py; then
+if pytest ttrpyg/ttrpyg/tests.py; then
     echo "Python's Black:"
     black .
     # Add any other commands you want to run if tests pass here

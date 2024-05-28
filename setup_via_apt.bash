@@ -24,7 +24,7 @@ then
   source .venv/bin/activate
   echo "Installing required python packages."
   pip install -r requirements.txt
-  cd citutils;pip install --editable .;cd ..
+  cd ttrpyg;pip install --editable .;cd ..
   if ! command -v pdflatex &> /dev/null
   then
     sudo apt install -y texlive

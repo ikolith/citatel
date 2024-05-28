@@ -11,11 +11,11 @@ pylatex
 # just for the discord bot
 discord.py
 python-dotenv
-# you also have to drop into citutils and run:
+# you also have to drop into ttrpyg and run:
 # pip install --editable .
 # or, alternatively, use apt_setup.sh
 
-# not using "pip freeze > requirements.txt" because it does not seem to play quite ideally with citutils, pulling it from the remote rather than the local copy, as well as including a relatively noisy dependency list.
+# not using "pip freeze > requirements.txt" because it does not seem to play quite ideally with ttrpyg, pulling it from the remote rather than the local copy, as well as including a relatively noisy dependency list.
 # if you need or prefer the exact dependencies, here they are commented out:
 
 # TODO: freeze a new list before merging to main

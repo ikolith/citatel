@@ -7,7 +7,7 @@ from discord.ext import commands
 from discord import app_commands
 from dotenv import load_dotenv
 
-from citutils import (
+from ttrpyg import (
     entity_text_generators as ge,
     parsers as tu,
     commands as co,

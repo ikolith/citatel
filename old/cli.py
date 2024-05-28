@@ -3,9 +3,9 @@ import argparse
 import os.path
 
 try:
-    from citutils import parsers as tu, vars as vs, commands as co
+    from ttrpyg import parsers as tu, vars as vs, commands as co
 except:
-    print("citutils not found. Have you tried running . .venv/bin/activate ?")
+    print("ttrpyg not found. Have you tried running . .venv/bin/activate ?")
     exit()
 
 entities = tu.get_entities(os.path.join("data", "entities"))

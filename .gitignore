@@ -5,6 +5,8 @@
 !/ttrpyg/.git
 /ttrpyg/*
 
+.DS_Store
+
 /.quarto/
 
 scratch.md

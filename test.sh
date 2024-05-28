@@ -1,2 +1,2 @@
 #!/bin/bash
-pytest citutils/citutils/tests.py
+pytest ttrpyg/ttrpyg/tests.py

@@ -21,7 +21,7 @@ Here is a brief overview of the layout of this project, as it stand now, which h
 * README.md - This file.
 * book/ - This is the most important folder. Pretty much all of the actual game content is in this folder.
 * assets/ - Website/book assets (media files, ie non-text), including images (just the favicon so far at time of writing)
-* citutils/ - Python module for manipulating game content data for 
+* ttrpyg/ - Python module for manipulating game content data for 
 * cli.py - A command-line program to run queries on the game data and whatnot.
 * data/ - Creature and item yaml files and rendered handouts.
 * docs/ - Technically useful because it has the rendered html versions of the markdowns, but honestly it's probably bad that this folder isn't gitignored. But github doesn't work with quarto in any other way. So whatever.
