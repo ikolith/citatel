@@ -1,5 +1,8 @@
 # citatel
 
+NOTICE: This repo contains the submodule ttrpyg. The easiest way to get this is to clone this repo with the "--recurse-submodules" flag, like this:
+```git clone --recurse-submodules https://github.com/ikolith/citatel.git```
+
 ## Abstract
 
 The site lives at https://ikolith.com/.
