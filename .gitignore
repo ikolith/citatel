@@ -1,7 +1,6 @@
 .venv/
 /.luarc.json
 /quarto_output/
-ttrpyg/
 
 /.quarto/
 
