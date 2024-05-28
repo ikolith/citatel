@@ -44,9 +44,7 @@ website:
         contents:
           - book/about/mutiny.qmd
           #- book/about/about.qmd
-      - section: "Rules"
-        contents:
-          - book/rules.qmd
+      - book/rules.qmd
       - section: "Skills, Weapons, Items"
         contents:
           - book/stuff/basic.qmd

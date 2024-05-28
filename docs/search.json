@@ -60,199 +60,181 @@
   {
     "objectID": "book/rules.html",
     "href": "book/rules.html",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "",
     "text": "A basic player character statblock looks like this:\nHealth: (3)9\nMovement Speed: 4\nSTR: 0\nAGI: 0\nWIL: 0\nPER: 0\nSOC: 0\n\n\nCharacter health is tracked as (X)Y where X is critical or “crit” health and Y is standard health. When crit health reaches 0, the character falls unconscious and begins dying. When a character runs out of standard health all subsequent damage reduces crit health. Crit damage reduces crit health directly, it does not matter how much standard health a character still has. Crit damage is notated with parentheses.\nThis health score of (3)9 is higher than what most people have! a very old or frail person might be (1)1, a normal adult might be (2)6. The default character block with (3)9 health and 0s for all attributes represents a healthy, able person with no deficiencies.\n\n\n\n“Movement Speed” determines how many spaces a character moves when they spend 1 AP to move during initaitive.\n\n\n\nAttribute scores are not mandatory descriptions of qualities. They represent abilities or tools that the character has. They tend to range from -3 to +3. The attribute score is the same as the modifier on a check using that attribute. The “passive” score, the score that other characters roll against, is 6+SCORE. If you do not have an attribute score, it is not a narrative tool that you use to solve problems. You can have attribute scores not listed here.\nThis set of scores is listed because they are the “defensive” attributes. That means these are the only attributes that other characters are allowed to roll checks against. If you do not have an attribute score, any checks made against that attribute succeed automatically.\n\n\nStrength is used to perform actions like lifting or breaking things as well as some actions like grappling. It’s also used to resist physical conditions like poison, disease, and exhaustion.\n\n\n\nAGI is your ability to evade attacks, grab on to ledges to keep yourself from falling, avoid falling rocks, etc. It is your ability to avoid physical danger.\nIt is also your ability to do a flip, jump over a chasm, etc. This is not your DEX / Dexterity! DEX is your fine motor skills, your ability to do card tricks, pickpocket, and juggle. DEX is not a “defensive” score.\n\n\nAttacks are checks against passive AGI. The attacker wins ties. Some mechanics like armor can replace passive AGI in the context of attack checks.\n\n\n\n\nWIL is your ability to resist mental conditions like fear. It is used to resist many supernatural effects. It is also used for most supernatural abilities, like writing hexes.\n\n\n\nPER is your resistance to stealth and being tricked.\nIt is also your ability to investigate, spot things other people miss, quickly find things, etc.\n\n\n\nSOC is your resistance to being manipulated.\nSOC is also your ability to manipulate, to schmooze. It’s your gab, your social acumen. Social rules are covered in greater detail later in this document.\n\n\n\n\nWhen a character wants to do something using an attribute they roll 2d6 and add the relevant SCORE. The result of the roll is determined by comparing the roll to a Difficulty Class or DC. This is a “check”. If the character’s check is the same as the DC or higher, they succeed. Often the DC for a check is the passive SCORE of another character.\nIf two charactes are in direct competition they are in a “contest”. They both roll 2d6 and add their scores. The higher score wins. In the case of a tie, they either tie in the game or if that does not make sense they redo the contest.\n\n\nSometimes, skills or weapons will have additional effects triggered “on 6”, “on at least one 6” or “on matching”. This means that if you succeed and the dice you rolled fulfilled the requirement (being a six, both dice matching, etc.) the effect is activated.\n“on 6” effects can be triggered twice if you roll two 6s, “at least one 6” effects only trigger once. “on matching” triggers on any set of matching dice rolled.\n\n\n\n\nWhen you have “advantage”, roll an extra d6 for your check and pick two. When you have “disadvantage”, roll another d6, then pick the two lowest rolls. Advantage and disadvantage cancel each other out and are cumulative.\nIf you somehow have disadvantage twice and advantage four times, you have advantage twice. Roll four dice and pick two.\n\n\n\nAP is used during “initiative”. Initiative is any situation where many characters want to do things at the same time and the order in which things happen is important. Initiative is most often combat, but it can include other time sensitive events like chases or races.\nEvery character has 3 AP cards.5 The cards say “1 AP” and indicate what character they belong to with a name, a symbol, or both. Most actions cost 1 AP, but you can do a “reasonable amount” of simple things like talking for free.\nSome terms:\nDeck: This is the deck of cards that the DM (or whoever) draws from during initiative. The deck that the whole table uses.\nDiscard: The discard pile for the whole table.\nHand: The cards that you have been dealt and are holding on to.\n“Spending” AP: Cards that have been used or removed that go to the discard and are shuffled back together for the next round’s deck.\n“Losing” AP: “Lost” AP is not shuffled back into the deck at the end of the round. It must be “regained” either mechanically or automatically at the end of initiative.\n“Interrupt”: Spend 1 AP, act immediately\nWhen initiative starts all characters pass their cards to the DM. This includes their AP and any other special cards. The DM shuffles these cards together to create the deck. The DM pulls a card from the top of the deck and either deals the card to the character/player that it belongs to or follows the rules on the card.\nWhen a character is dealt a card they can choose to act using whatever cards they currently have in their hand. They can also just hold on to the card. When cards are spent or activated they get placed in the discard.\nAny character can interrupt in order to act at any time, doing this costs 1 AP. The round ends when the table deck is empty and everyone who still has AP has had a chance to interrupt to act with their remaining AP.\nAt the end of a round, cards that have been discarded are shuffled together to create the deck for the next round. Cards that have been lost are not, they are set aside until they are regained, or initiative ends.\nThis initiative system is intended for combat that is fast and unpredictable.\n\n\nSome types of actions have multiple AP costs. The first time you perform the action in a round it costs the first amount, the second time you do it, it costs the second, etc. These costs are connected with arrows, like this: 1-&gt;2-&gt;3. This does not limit how many times you can perform an action. If you are at the last cost, pay that amount of AP again to do the action.\n\n\n\n“Temp AP” must be spent immediately when it is recieved or it is lost. If you spend no AP for an entire round, regain 1 AP.\n\n\n\nVery rarely, the particular order things happen in the “beginning of the round” will matter. In that case, effects resolve in this order:\n\n\nAny already active effects that trigger “at the beginning of a round” happen first. It happens before anything else in the round does. Examples includes taking damage from [poison] or [bleed] or gaining health from [heal]. If you have some effect or condition that causes you to do some sort of roll or contest, do that now.\n\n\n\nStatuses are added or removed now. A point of [poison] is removed, a point of [heal] is removed, anything that would end at the “beginning” of this round ends now.\n\n\n\nSome moves and skills can be used “at the beginning of the round”. These must be used after effects and statuses resolve.\n\n\n\n\n\nCharacters gain XP by solving problems, navigating difficult situatoins, etc. XP can be used to increase attribute scores or acquire more skills. There are no character levels in Actlite.\n\n\nIncreasing a negative attribute costs 1 XP. Increasing a positive attribute costs a number of XP equal to the new attribute score. This means going from 2 STR to 3 STR costs 3 XP. Going from -1 STR to 2 STR costs 1 (-1 to 0) + 1 (0 to 1) + 2 (1 to 2) = 4 XP.\nSome species or groups have hard limits on attribute scores and/or alternative costs for upgrading some attribute scores.\n\n\n\nCharacters gain skills by rolling on “Archetype Tables”, collections of thematically or mechanically similar skills. Archetype Tables can have attribute score requirements or some other setting-specific requirement. They can also have varying XP costs for rolls, notated similarly to variable AP costs so that the first roll costs X, the second roll costs Y, and all subsequent rolls have an XP cost of Z, notated X-&gt;Y-&gt;Z. This allows some tables to reward specialization, and some to punish it. If no cost is listed, rolling costs on the table costs 1 XP.\nSkills in tables are loosely ordered by desirability. If a player gets a skill they already have by rolling on an archetype table, they get the skill below/before it in the table. If none are below it, they get the first skill above it. A player cannot roll on a table when they have every skill on the table.\n\n\n\n\n\n\n\nDrawing, stowing, switching weapons, or picking a weapon up off the ground costs 1 AP, dropping a weapon is free. Searching for something you have on your person but you do not have ready is 1 AP. If what you need is further away, like in a backpack you are wearing, pay 2 AP to take off the bag, open it, rummage through it, etc.\n\n\n\n\nStealth is an AGI check against the defender’s passive perception. It’s a check against a passive score, and that is always 6 + SCORE.\n\n\nTo start a grapple, perform a “grapple check”, which is a +STR to-hit [reach: close] attack that costs 2 AP. While grappling an opponent, you have advantage on [reach: close] attacks against them, they have disadvantage on attacks against you. You can move them by one space or you can both go to the ground at the cost of 1 AP. Defender can spend 2 AP to trigger another STR contest to try and break free. Defender can do nothing but attack and try to end the grapple. You cannot grapple a creature larger than yourself. There are grappling skills that add a lot of other options.\n\n\n\nFall damage is a d4 for every 6 spaces up to 25d4.",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
     "objectID": "book/rules.html#characters",
     "href": "book/rules.html#characters",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "",
     "text": "A basic player character statblock looks like this:\nHealth: (3)9\nMovement Speed: 4\nSTR: 0\nAGI: 0\nWIL: 0\nPER: 0\nSOC: 0\n\n\nCharacter health is tracked as (X)Y where X is critical or “crit” health and Y is standard health. When crit health reaches 0, the character falls unconscious and begins dying. When a character runs out of standard health all subsequent damage reduces crit health. Crit damage reduces crit health directly, it does not matter how much standard health a character still has. Crit damage is notated with parentheses.\nThis health score of (3)9 is higher than what most people have! a very old or frail person might be (1)1, a normal adult might be (2)6. The default character block with (3)9 health and 0s for all attributes represents a healthy, able person with no deficiencies.\n\n\n\n“Movement Speed” determines how many spaces a character moves when they spend 1 AP to move during initaitive.\n\n\n\nAttribute scores are not mandatory descriptions of qualities. They represent abilities or tools that the character has. They tend to range from -3 to +3. The attribute score is the same as the modifier on a check using that attribute. The “passive” score, the score that other characters roll against, is 6+SCORE. If you do not have an attribute score, it is not a narrative tool that you use to solve problems. You can have attribute scores not listed here.\nThis set of scores is listed because they are the “defensive” attributes. That means these are the only attributes that other characters are allowed to roll checks against. If you do not have an attribute score, any checks made against that attribute succeed automatically.\n\n\nStrength is used to perform actions like lifting or breaking things as well as some actions like grappling. It’s also used to resist physical conditions like poison, disease, and exhaustion.\n\n\n\nAGI is your ability to evade attacks, grab on to ledges to keep yourself from falling, avoid falling rocks, etc. It is your ability to avoid physical danger.\nIt is also your ability to do a flip, jump over a chasm, etc. This is not your DEX / Dexterity! DEX is your fine motor skills, your ability to do card tricks, pickpocket, and juggle. DEX is not a “defensive” score.\n\n\nAttacks are checks against passive AGI. The attacker wins ties. Some mechanics like armor can replace passive AGI in the context of attack checks.\n\n\n\n\nWIL is your ability to resist mental conditions like fear. It is used to resist many supernatural effects. It is also used for most supernatural abilities, like writing hexes.\n\n\n\nPER is your resistance to stealth and being tricked.\nIt is also your ability to investigate, spot things other people miss, quickly find things, etc.\n\n\n\nSOC is your resistance to being manipulated.\nSOC is also your ability to manipulate, to schmooze. It’s your gab, your social acumen. Social rules are covered in greater detail later in this document.\n\n\n\n\nWhen a character wants to do something using an attribute they roll 2d6 and add the relevant SCORE. The result of the roll is determined by comparing the roll to a Difficulty Class or DC. This is a “check”. If the character’s check is the same as the DC or higher, they succeed. Often the DC for a check is the passive SCORE of another character.\nIf two charactes are in direct competition they are in a “contest”. They both roll 2d6 and add their scores. The higher score wins. In the case of a tie, they either tie in the game or if that does not make sense they redo the contest.\n\n\nSometimes, skills or weapons will have additional effects triggered “on 6”, “on at least one 6” or “on matching”. This means that if you succeed and the dice you rolled fulfilled the requirement (being a six, both dice matching, etc.) the effect is activated.\n“on 6” effects can be triggered twice if you roll two 6s, “at least one 6” effects only trigger once. “on matching” triggers on any set of matching dice rolled.\n\n\n\n\nWhen you have “advantage”, roll an extra d6 for your check and pick two. When you have “disadvantage”, roll another d6, then pick the two lowest rolls. Advantage and disadvantage cancel each other out and are cumulative.\nIf you somehow have disadvantage twice and advantage four times, you have advantage twice. Roll four dice and pick two.\n\n\n\nAP is used during “initiative”. Initiative is any situation where many characters want to do things at the same time and the order in which things happen is important. Initiative is most often combat, but it can include other time sensitive events like chases or races.\nEvery character has 3 AP cards.5 The cards say “1 AP” and indicate what character they belong to with a name, a symbol, or both. Most actions cost 1 AP, but you can do a “reasonable amount” of simple things like talking for free.\nSome terms:\nDeck: This is the deck of cards that the DM (or whoever) draws from during initiative. The deck that the whole table uses.\nDiscard: The discard pile for the whole table.\nHand: The cards that you have been dealt and are holding on to.\n“Spending” AP: Cards that have been used or removed that go to the discard and are shuffled back together for the next round’s deck.\n“Losing” AP: “Lost” AP is not shuffled back into the deck at the end of the round. It must be “regained” either mechanically or automatically at the end of initiative.\n“Interrupt”: Spend 1 AP, act immediately\nWhen initiative starts all characters pass their cards to the DM. This includes their AP and any other special cards. The DM shuffles these cards together to create the deck. The DM pulls a card from the top of the deck and either deals the card to the character/player that it belongs to or follows the rules on the card.\nWhen a character is dealt a card they can choose to act using whatever cards they currently have in their hand. They can also just hold on to the card. When cards are spent or activated they get placed in the discard.\nAny character can interrupt in order to act at any time, doing this costs 1 AP. The round ends when the table deck is empty and everyone who still has AP has had a chance to interrupt to act with their remaining AP.\nAt the end of a round, cards that have been discarded are shuffled together to create the deck for the next round. Cards that have been lost are not, they are set aside until they are regained, or initiative ends.\nThis initiative system is intended for combat that is fast and unpredictable.\n\n\nSome types of actions have multiple AP costs. The first time you perform the action in a round it costs the first amount, the second time you do it, it costs the second, etc. These costs are connected with arrows, like this: 1-&gt;2-&gt;3. This does not limit how many times you can perform an action. If you are at the last cost, pay that amount of AP again to do the action.\n\n\n\n“Temp AP” must be spent immediately when it is recieved or it is lost. If you spend no AP for an entire round, regain 1 AP.\n\n\n\nVery rarely, the particular order things happen in the “beginning of the round” will matter. In that case, effects resolve in this order:\n\n\nAny already active effects that trigger “at the beginning of a round” happen first. It happens before anything else in the round does. Examples includes taking damage from [poison] or [bleed] or gaining health from [heal]. If you have some effect or condition that causes you to do some sort of roll or contest, do that now.\n\n\n\nStatuses are added or removed now. A point of [poison] is removed, a point of [heal] is removed, anything that would end at the “beginning” of this round ends now.\n\n\n\nSome moves and skills can be used “at the beginning of the round”. These must be used after effects and statuses resolve.\n\n\n\n\n\nCharacters gain XP by solving problems, navigating difficult situatoins, etc. XP can be used to increase attribute scores or acquire more skills. There are no character levels in Actlite.\n\n\nIncreasing a negative attribute costs 1 XP. Increasing a positive attribute costs a number of XP equal to the new attribute score. This means going from 2 STR to 3 STR costs 3 XP. Going from -1 STR to 2 STR costs 1 (-1 to 0) + 1 (0 to 1) + 2 (1 to 2) = 4 XP.\nSome species or groups have hard limits on attribute scores and/or alternative costs for upgrading some attribute scores.\n\n\n\nCharacters gain skills by rolling on “Archetype Tables”, collections of thematically or mechanically similar skills. Archetype Tables can have attribute score requirements or some other setting-specific requirement. They can also have varying XP costs for rolls, notated similarly to variable AP costs so that the first roll costs X, the second roll costs Y, and all subsequent rolls have an XP cost of Z, notated X-&gt;Y-&gt;Z. This allows some tables to reward specialization, and some to punish it. If no cost is listed, rolling costs on the table costs 1 XP.\nSkills in tables are loosely ordered by desirability. If a player gets a skill they already have by rolling on an archetype table, they get the skill below/before it in the table. If none are below it, they get the first skill above it. A player cannot roll on a table when they have every skill on the table.",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
     "objectID": "book/rules.html#misc.-rules",
     "href": "book/rules.html#misc.-rules",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "",
     "text": "Drawing, stowing, switching weapons, or picking a weapon up off the ground costs 1 AP, dropping a weapon is free. Searching for something you have on your person but you do not have ready is 1 AP. If what you need is further away, like in a backpack you are wearing, pay 2 AP to take off the bag, open it, rummage through it, etc.",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
     "objectID": "book/rules.html#stealth",
     "href": "book/rules.html#stealth",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "",
     "text": "Stealth is an AGI check against the defender’s passive perception. It’s a check against a passive score, and that is always 6 + SCORE.\n\n\nTo start a grapple, perform a “grapple check”, which is a +STR to-hit [reach: close] attack that costs 2 AP. While grappling an opponent, you have advantage on [reach: close] attacks against them, they have disadvantage on attacks against you. You can move them by one space or you can both go to the ground at the cost of 1 AP. Defender can spend 2 AP to trigger another STR contest to try and break free. Defender can do nothing but attack and try to end the grapple. You cannot grapple a creature larger than yourself. There are grappling skills that add a lot of other options.\n\n\n\nFall damage is a d4 for every 6 spaces up to 25d4.",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
     "objectID": "book/rules.html#tags",
     "href": "book/rules.html#tags",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "Tags",
     "text": "Tags\nThe “tags” are listed right after the name listed. This is where mechanically-significant descriptors are stored. Some skills may require weapons with particular tags, like “range: close” or “hilt”. Weapon tags describe how the weapon is handled. There are six main weapon tags, “hilt”, “pole”, “one-handed” (or “1-h”), “two-handed” (“2-h”), reach and range.\nhilt: A weapon with a hilt. A “hilt” is a “well-defined” handle or grip which often2 includes some kind of guard to protect the users hand. Swords, knives, and daggers, are hilt weapons, as are patas and katars.\npole: Pole weapons. Weapons with a long shaft rather than a well defined grip. Pole weapons include spears, axes, hammers, and of course, all polearms.\none-handed: A weapon designed to be used with one hand. If you use two hands on a one-handed weapon, treat your STR as 2 points higher for the purposes of meeting a STR requirement.\ntwo-handed: If you try to wield a two-handed weapon with one hand, attack with disadvantage.\nreach: How many spaces does your weapon reach? If this tag is absent, assume the weapon has reach: 1. If a weapon has [reach: close], you are treated as if you move briefly into the opponents space to attack them. This is often relevant for particular skills.\nrange: Used for ranged weapons. \nTags can be combined to accommodate unusual weapons like “hand-and-a-half” a.k.a. “bastard” swords or this thing.",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
     "objectID": "book/rules.html#requirements",
     "href": "book/rules.html#requirements",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "Requirements",
     "text": "Requirements\nNot satisfying a weapon’s requirements causes you to attack with disadvantage.",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
     "objectID": "book/rules.html#speed",
     "href": "book/rules.html#speed",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "Speed",
     "text": "Speed\nThe “Speed” of a weapon is the AP cost of an attack with the weapon. If the weapon has multiple costs separated by arrows, you pay the first cost on your first attack with the weapon in a round, the second cost on your second, etc. If you are on the last listed cost, pay that cost again to attack again. Attacking three times in one round with a weapon with the cost “1-&gt;2” costs 5 AP.",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
     "objectID": "book/rules.html#to-hit",
     "href": "book/rules.html#to-hit",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "To-Hit",
     "text": "To-Hit\nThe score you add to an attack check with this weapon.",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
     "objectID": "book/rules.html#attacks",
     "href": "book/rules.html#attacks",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "Attacks",
     "text": "Attacks\n\nDamage Types\nAttacks also have with damage types. There are three major types of damage. They are: B for “Bludgeoning”, P for “Piercing”, and S for “Slashing”.\nThere are also sub-types like Severing, Slicing, and Picking. Severing damage counts as S, but S does not count as Severing. The damage sub-type will share the first letter of the generic damage type. This has worked so far because there are a lot of conveniently placed words in English.\nThe most common sub-types of damage are:\nSlicing: What a saber does. A long fast drawing cut, often with a curved blade.\nSevering: What an axe does. A chopping motion.\nPicking: What a warpick does. A swinging motion.\nBashing: Reserved for heavy, crushing blows.\n\n\nEffects and Conditions\nWeapons often have extra effects that trigger “on 6”, “on matching”. Rolling a 6 and a 4 will give you a total of 10 (+ any bonuses) and if you succeed, the 6 might activate some additional effect. This makes gaining advantage even more useful, as it increases your chance of activating effects.\nOften, weapons use common effects and inflict common statuses or conditions. These conditions and effects are listed below. Conditions are notated in brackets, effects are in quotes. Common weapon conditions and effects are listed below.\n\nEffects\n“Bypass”: Ignore an amount of damage reduction from armor equal to your To-Hit bonus.\n“Pull”: The target can be moved one space in any direction except backwards. Target can spend 1 AP to trigger a STR contest. If they win, they are not moved.\n“Push”: The target is pushed back one space. Target can spend 1 AP to trigger a STR contest. If they win, they are not pushed back.\n“Rend”: If armor reduced the damage of this attack note whether the damage type was B, P, or S. Reduce the armor’s damage reduction against that damage type by the To-Hit bonus of this attack.\nCommon status effects are listed in their own section.\n\n\nCombat Maneuvers\nThese effects are inflicted in addition to damage on a successful attack, they allow you to build a strategy around a certain fighting style or weapon type. These effects and conditions are not meant to encapsulate everything you can do! For everything else:\nOn a successful attack, describe the maneuver you are attempting to perform. The target can either let you do it or take the damage of the attack as usual. Credit.\nUse this to disarm, knock people out, etc. You can also use this to do what would normally be done by “Push” or some other effect, you just won’t get damage on top of the maneuver.",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
     "objectID": "book/rules.html#resting-and-healing",
     "href": "book/rules.html#resting-and-healing",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "Resting and Healing",
     "text": "Resting and Healing\nA “Rest” is a period of light, relaxing, non-strenuous activity. Resting includes, but is not limited to, eating, drinking, and sleeping.\nIf you rest for an hour, either: - Regain all standard health - Regain 1 Crit Health.\nIf you rest for 8 hours: - Remove 3 [exhaustion] and remove 1 [injury].",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
     "objectID": "book/rules.html#dying",
     "href": "book/rules.html#dying",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "Dying",
     "text": "Dying\nIf you reach 0 crit health, fall unconscious. All damage taken while you are down is crit damage, if your negative crit health exceeds your total crit health, you die. If your crit health becomes positive, you are conscious again.\nAt the beginning of every round in which you are down, the DM rolls for your character on an Individual Consequence Table. You do not know what is on the table, and you do not know what you rolled until:\n\nYou regain consciousness.\nSomeone checks on your body.\nSomeone attempts to administer aid to you.\n\nThe [stabilized] condition is a common consequence. The DM keeps rolling every round until either you are [stabilized] or you die. Death is another. When you become [stabilized] you stop rolling on the consequence table and start Resting. If you take damage while [stabilized], you are no longer Resting, start rolling on the consequence table again. At some point, the GM might stop rolling for your character. Hopefully you’re [stabilized]!\nIf the whole party is down, the GM rolls on a Party Consequence table. This is almost certain death. You never know though, maybe you get rescued/jailed/possessed/repurposed as a nutrient dense mulch.\n\nConsequence Tables\nThere are three basic outcomes on a consequence table:\n\nYou die.\nSomething bad happens, you recieve a debuff of some kind.\nYou become [stabilized].\n\nA ratio of 1:2:3 for [stabilized] / die / “something bad happens” is tough but fair. This is easily handled by a table with 6 entries:\n\n1-2: Death.\n3-5: Something bad happens.\n6: [stabilize]\n\nIf you want to be more lenient you can change the ratios or rule that a character doesn’t have to roll on the first round that they are out. Get spicy, put something positive on the table, the world is your oyster.\n\nBad Things\n\nTemporary Debuffs\n\n[lame] for an hour.\nTake 1 [exhaustion].\n[injury: disable an arm].\nDie if your crit health hits 0 again before your next rest.\n\n\n\nPermananent Debuffs\n\nLose an eye. Your max PER becomes 1.\nLower STR by 1.\nLower max crit health by 1.\nLose an arm.\n\nMany groups don’t like permanent debuffs! Make tables tailored to whatever sort of game you are running. Maybe replace one Death outcome with a permanent debuff, so you have 1 [stabilized], 1 Death, 3 temporary debuffs, and 1 permanent debuff.\nThe role of these tables is to increase tension by introducing a high degree of risk and uncertainty without necessarily having to increase the probability of character death.\n\n\n\n\nSample Consequence Tables\n\nIndividual Consequence Tables\n\nNothing d4\n\nDeath.\nNothing happens.\nNothing happens.\n[stabilized]\n\n\n\nGeneric d6\n\nDeath.\nDeath.\nDie if you are reduced to (0) before your next rest.\nTake 1 [exhaustion].\n[injury: disable an arm].\nYou are [stabilized].\n\n\n\n\nParty Consequence Tables\nIn most cases, the thing that makes most sense is that the whole party dies, but maybe if they are attacked while traveling, something else happens!\nThings that are context specific will be italicized.\n\nEveryone dies.\nEveryone dies.\nEach character flips a coin. On heads, they are [stabilized], on tails they die.\nThe party wakes up in cells in local jail with all of their things missing.\nMiraculously, no one is dead. All of your things have been stolen.\nThe players wake up having been rescued by strange legendary creatures / local band of Merry Men.",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
     "objectID": "book/rules.html#the-rules",
     "href": "book/rules.html#the-rules",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "The Rules",
     "text": "The Rules\n\nYou cannot purchase anything valued above your current CASH level.\nIf you purchase something valued at your current CASH level, lower your CASH level by 1.\nIf you purchase something 1 level below your current CASH level, perform a BARTER or SOCIAL check. If you fail the check, lower your current level of CASH by 1.\nYou can buy anything 2 or more levels below your current CASH level.",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
     "objectID": "book/rules.html#cash-levels",
     "href": "book/rules.html#cash-levels",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "CASH Levels",
     "text": "CASH Levels\n\nDeprivation: Food barely fit for human consumption. Most things you could purchase at this level are practically indistinguishable from trash.\nDestitution: Some street food, maybe a loaf of bread. Rags. Ale.\nIndigence: A cup of stew. Hardtack. Raggedy threadbare clothing. A night in a run-down shack. Maybe a club.\nScarcity: A short stay in a shared room. A hot meal.\nPenury: A knife. An article of common clothing.\nPoverty: A dagger. A backpack.\nFrugality: A short stay in an inn. A cheap spear or a woodcutting axe. An old rickety open cart. A wooden shield. Rope.\nAusterity: An old mule. A new outfit. A basic weapon like an axe, a spear, or a short sword. Padded armor.\nModeration: A pack animal. Provisions for a journey. Nice warm clothing. Leather armor. A sword.\nSubstance: A horse. A polearm. Fine Clothing. A skiff.\nProsperity: Chain mail armor. A brigandine. A helmet or breastplate.\nAffluence: A small sailboat. A war horse. Fine weapons of war.\nAbundance: Plate Armor. Bodyguards and servants.\nFortune: A mansion. A ship capable of crossing an ocean.\nWealth: Businesses. Militias.\nRiches: An estate. A Galleon. Marble statues.\nOpulence: This level of wealth commands political power, it is difficult to even conceptualize. Fleets of ships. Entire industries.\nIncredible Fortune: You command armies. You own banks. Your face is on the money.\nUnfathomable Wealth: You determine the course of entire economies. Your wealth is your power, your power is your wealth.\nLimitless Riches: This level of wealth exists only in legend. The wealth of gods. The wealth of an immortal dragon sleeping on a planetary core of pure gold.",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
     "objectID": "book/rules.html#lore",
     "href": "book/rules.html#lore",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "Lore",
     "text": "Lore\nHexes are symbols used by scriviners to directly access, manipulate, and utilize abstract concepts. By manipulating these symbols, scriveners cause tangible effects in the world around them. Hexes can be subjected to any number of alterations, transformations, and modifications. Some of these operations don’t fundamentally change how the hex works, some do. Different scriveners tend to write hexes in slightly different ways, but they are all accessing the same concepts.\nScrivening uses a combination of written symbols and cognition. [independent] hexes can handle cognition on their own, the scrivener handles the cognition for any other hex. Making a hex [independent] is difficult and requires a lot of modifications and transformations. Because of this, studying an [independent] example of a hex is a terrible way to try to learn the hex.",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
     "objectID": "book/rules.html#learning-hexes",
     "href": "book/rules.html#learning-hexes",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "Learning Hexes",
     "text": "Learning Hexes\nThe easiest way to learn a particular hex is to study it along with some explanation or guidance from the author of the hex. This is one of the many reasons scrivening is a fractured and secretive art. The primary method of teaching someone a particular hex involves giving them access to your hexes directly, putting yourself at risk.\nThe typical way to learn hexes is to discover them for yourself using the methods or protocols of the relevant school or tradition. Sometimes this means feverish study, sometimes this means clear-headed meditation.\n\nMechanics\nYou can try to learn individual hexes by studying the hexes themselves or you can roll on a hex archetype table. This magic system does not hand players a great big catalog of spells to choose from. Every character should end up with a unique set of hexes that they have to learn to utilize effectively. You are meant to improvise with what you get and use your hex library to write your own signature combinations.\n\nLearning Combined Hexes\nWhen you succeed in learning a hex that is composed of multiple hexes, you learn every unknown hex in the combination. The DC to learn a combined hex is +3 for every hex in the combination.\nStudying a hex combination takes an hour per hex. You can only attempt to learn a given hex once per day. You cannot study [independent] hexes.",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
     "objectID": "book/rules.html#hex-activation",
     "href": "book/rules.html#hex-activation",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "Hex Activation",
     "text": "Hex Activation\nWhen a hex is destroyed it is activated. When it is activated, it is destroyed. If it is activated while some effect requirement is not met, it is destroyed. “Destroyed” includes smudged to illegibility, the medium that it is written on is torn, etc.",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
     "objectID": "book/rules.html#writing-and-casting-hexes",
     "href": "book/rules.html#writing-and-casting-hexes",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "Writing and Casting Hexes",
     "text": "Writing and Casting Hexes\nA character can write 3 + WIL hexes, this capacity is reset after every rest. A character can maintain 3 + WIL hexes at a time. If a character writes another hex while they are maintaining as many as they can, the olest hex is destroyed.\nEach hex can be modified by up to 3 + WIL [modifier] hexes.\nOnce written, a hex remains usable until you sleep or until 24 hours pass, whichever happens first.\nTo write a hex during initiative you have to spend 3 AP for the hex and 1 AP for every modifier.\nMany hexes have some kind of activation condition. Often this condition is some action the character might take, like attacking. In these cases you don’t have to pay AP to use the hex. If you want to search for an already written hex you do not already have in your hand and then activate it, pay 1 AP.\n\n\n\n[modifier] Hexes\n[modifier] hexes can be combined with other hexes. If one hex in the combination is activated, all are. [modifier] hexes do not affect individual hexes within a combination, they affect the whole combination.\n\n\n[independent] Hexes\nIndependent hexes do not lose power over time and are not bound to their author. As a result, effects that target the author do not work.",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
     "objectID": "book/rules.html#additional-context",
     "href": "book/rules.html#additional-context",
-    "title": "Core Rules",
+    "title": "Rules",
     "section": "Additional Context",
     "text": "Additional Context\nIndividual hexes might override any rule listed above. For example, many [modifier] hexes can be added to hexes you did not write.\nHexes can also impose additional restrictions, requirements, or costs. For example, taking extra time to create, having unique costs for creation or activation, or only being compatible with certain hexes.\n\n[durable] Casting and Hex Tables\n[durable] hexes can be written into a “hex pallete”. Hexes can be built from combinations of hexes in the same table and immediately cast without the caster having to write the hex down. Diegetically, a hex “table” might be called a pallete, a matrix, or something else depending on the tradition or school.\n[durable] hexes often come with additional or alternative casting requirements. Some hexes can only be cast as [durable] hexes. [independent] Hexes\nTo make a hex [independent], a scrivener must attach a [modifier] that consists of two parts.\nThe first is the “key”. The “key” is the first step in breaking the unique connection between scrivener and hex. It varies from person to person and from hex to hex. The writer must figure out the unique key for each hex they cast, they cannot use someone else’s.\nThe second part is a “hex signature”. This is a unique hex that you will use every time you make a hex [independent]. The signature does not, on its own, identify you. if someone sees your signature they won’t necessarily know it is yours. However once they do know, they will recognize the signature in every [independent] hex you write. You cannot change your signature.\nTwo people writing the same non-[independent] hex will write nearly identical hexes. Once they make their hexes [independent] they have to leave distinct signatures. Unless steps are taken to obfuscate the contents of the entire hex, the signature is obvious. The process of making a hex [independent] often means adding a large number of alterations that make it hard for other scriveners to learn the hex, but reading it remains relatively easy.\nSome hexes can be made [independent] relatively easily. For some hexes the process is very difficult or costly. Many hexes (especially powerful hexes) cannot be made independent through any known means. If a hex is not [independent], it is bound to an author and follows the usual casting rules\n\n\nInvocations\nInvocations are [independent] hexes written on long and narrow strips of material. Most often this is paper. Invocations are by far the most common type hex. Many people never come into contact with hexes, most that do only come in contact with invocations. Invocations typically have relatively minor effects. Invocations are almost always activated by tearing the medium they are written on.\nInvocations are almost always [independent] so that they do not lose potency. Additionally, [modifier] hexes that harm the author are very easy to write, so any sane scrivener wouldn’t part with a hex without making it [independent] first.\nSome of the reasons for the format of the invocation is practical. A long slip of paper is easy to fully rip in half, guaranteeing activation. They are easy to tear with one hand. This is especially useful for weapon invocations, where the invocation is wrapped around either the handle or the hand wielding the weapon. Prayers are written in a similar format.",
     "crumbs": [
-      "Rules",
-      "Core Rules"
+      "Rules"
     ]
   },
   {
