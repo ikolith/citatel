@@ -12,7 +12,7 @@ from tinydb import Query
 
 from ttrpyg.database import DB
 
-db = DB(os.path.join("..","..","./source"))
+db = DB(os.path.join("..","..","./entities"))
 
 basic =  Query().meta_tags.any("basic")
 item = Query().meta_tags.any("item")

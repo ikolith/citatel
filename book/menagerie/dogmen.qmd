@@ -13,7 +13,7 @@ Dogmen are gangly hunched little weirdos with scrubby yellow fur, big beady blac
 import os
 from tinydb import Query
 from ttrpyg.database import DB
-db = DB(os.path.join("..","..","./source"))
+db = DB(os.path.join("..","..","./entities"))
 print(db.create_query_text_section(query = Query().meta_tags.any("dogman")))
 ```
 

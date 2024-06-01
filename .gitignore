@@ -1,6 +1,9 @@
 .venv/
 /.luarc.json
 /quarto_output/
+/scratch_files
+README_files/
+
 
 !/ttrpyg/.git
 /ttrpyg/*

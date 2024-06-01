@@ -57,6 +57,6 @@ Most of the content needs to be rewritten for the new rules, so it won't show up
 import os
 from tinydb import Query
 from ttrpyg.database import DB
-db = DB(os.path.join("..","..","./source"))
+db = DB(os.path.join("..","..","./entities"))
 print(db.create_query_text_section(query = Query().meta_tags.any("isopod")))
 ```
