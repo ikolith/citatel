@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "No Page Like Homepage",
     "section": "",
-    "text": "This is “citatel”, home of what started as the “tactile” TTRPG system. You can learn more about the game here. The GitHub repo includes the code for the site itself, as well as all of the tooling and data used to generate enemies, weapons, etc.\nThe site is set up so you can read through the whole thing starting at About like a book. Eventually this should all be a physical honest-to-god-book in addition to being a website."
+    "text": "This is “citatel”, home of what started as the “tactile” TTRPG system. You can learn more about the game here. The GitHub repo includes the code for the site itself, as well as all of the tooling and data used to generate enemies, weapons, etc. Most of the recent writing about the system is here, on Substack."
   },
   {
     "objectID": "index.html#beta",
@@ -324,12 +324,11 @@
   {
     "objectID": "book/about/mutiny.html",
     "href": "book/about/mutiny.html",
-    "title": "Pardon the Dust",
+    "title": "About",
     "section": "",
-    "text": "The rules used to be much more verbose. They had in-depth explanations and sometimes several examples. But the game was too heavy. It was too hard to improvise with. The rules got in the way. I started a little side project to see if I could rebuild the rules (called “tactile”) into something lighter (“actlite”). “actlite” turned out to be way more fun and has become the main version of the game. I’m rewriting things to fit the new rules and mechanics so a lot of stuff is missing.",
+    "text": "The rules used to be much more verbose. They had in-depth explanations and sometimes several examples. But the game was too heavy. It was too hard to improvise with. The rules got in the way. I started a little side project to see if I could rebuild the rules (called “tactile”) into something lighter (“actlite”). “actlite” turned out to be way more fun and has become the main version of the game. I’m rewriting things to fit the new rules and mechanics so a lot of stuff is missing.\nMost of the recent content is on the Substack.",
     "crumbs": [
-      "About",
-      "Pardon the Dust"
+      "About"
     ]
   },
   {

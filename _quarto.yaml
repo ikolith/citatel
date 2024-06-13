@@ -40,10 +40,8 @@ website:
     collapse-level: 1
     search: true
     contents:
-      - section: "About"
-        contents:
-          - book/about/mutiny.qmd
-          #- book/about/about.qmd
+      - book/about/mutiny.qmd
+      #- book/about/about.qmd
       - book/rules.qmd
       - section: "Skills, Weapons, Items"
         contents:

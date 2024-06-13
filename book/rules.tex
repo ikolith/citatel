@@ -1,0 +1,1092 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage[]{libertinus}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[nomarginpar,top=0.5in,bottom=0.5in,outer=0.5in,inner=0.5in]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Rules},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Rules}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Core Rules}\label{core-rules}
+
+\subsection{Characters}\label{characters}
+
+A basic player character statblock looks like this:
+
+Health: (3)9\\
+Movement Speed: 4
+
+STR: 0\\
+AGI: 0\\
+WIL: 0\\
+PER: 0\\
+SOC: 0
+
+\subsubsection{Health}\label{health}
+
+Character health is tracked as (X)Y where X is critical or ``crit''
+health and Y is standard health. When crit health reaches 0, the
+character falls unconscious and begins dying. When a character runs out
+of standard health all subsequent damage reduces crit health. Crit
+damage reduces crit health directly, it does not matter how much
+standard health a character still has. Crit damage is notated with
+parentheses.
+
+This health score of (3)9 is higher than what most people have! a very
+old or frail person might be (1)1, a normal adult might be (2)6. The
+default character block with (3)9 health and 0s for all attributes
+represents a healthy, able person with no deficiencies.
+
+\subsubsection{Movement Speed}\label{movement-speed}
+
+``Movement Speed'' determines how many spaces a character moves when
+they spend 1 AP to move during initaitive.
+
+\subsubsection{Attributes}\label{attributes}
+
+Attribute scores are not mandatory descriptions of qualities. They
+represent abilities or tools that the character has. They tend to range
+from -3 to +3. The attribute score is the same as the modifier on a
+check using that attribute. The ``passive'' score, the score that other
+characters roll against, is 6+SCORE. If you do not have an attribute
+score, it is not a narrative tool that you use to solve problems. You
+can have attribute scores not listed here.
+
+This set of scores is listed because they are the ``defensive''
+attributes. That means these are the only attributes that other
+characters are allowed to roll checks against. If you do not have an
+attribute score, any checks made against that attribute succeed
+automatically.
+
+\paragraph{STR / Strength}\label{str-strength}
+
+Strength is used to perform actions like lifting or breaking things as
+well as some actions like grappling. It's also used to resist physical
+conditions like poison, disease, and exhaustion.
+
+\paragraph{AGI / Agility}\label{agi-agility}
+
+AGI is your ability to evade attacks, grab on to ledges to keep yourself
+from falling, avoid falling rocks, etc. It is your ability to avoid
+physical danger.
+
+It is also your ability to do a flip, jump over a chasm, etc. This is
+not your DEX / Dexterity! DEX is your fine motor skills, your ability to
+do card tricks, pickpocket, and juggle. DEX is not a ``defensive''
+score.
+
+\subparagraph{Attack Checks}\label{attack-checks}
+
+Attacks are checks against passive AGI. The attacker wins ties. Some
+mechanics like armor can replace passive AGI in the context of attack
+checks.
+
+\paragraph{WIL / Will}\label{wil-will}
+
+WIL is your ability to resist mental conditions like fear. It is used to
+resist many supernatural effects. It is also used for most supernatural
+abilities, like writing hexes.
+
+\paragraph{PER / Perception}\label{per-perception}
+
+PER is your resistance to stealth and being tricked.
+
+It is also your ability to investigate, spot things other people miss,
+quickly find things, etc.
+
+\paragraph{SOC / Social}\label{soc-social}
+
+SOC is your resistance to being manipulated.
+
+SOC is also your ability to manipulate, to schmooze. It's your gab, your
+social acumen. Social rules are covered in greater detail later in this
+document.
+
+\subsubsection{Checks and Contests}\label{checks-and-contests}
+
+When a character wants to do something using an attribute they roll 2d6
+and add the relevant SCORE. The result of the roll is determined by
+comparing the roll to a Difficulty Class or DC. This is a ``check''. If
+the character's check is the same as the DC or higher, they succeed.
+Often the DC for a check is the passive SCORE of another character.
+
+If two charactes are in direct competition they are in a ``contest''.
+They both roll 2d6 and add their scores. The higher score wins. In the
+case of a tie, they either tie in the game or if that does not make
+sense they redo the contest.
+
+\paragraph{Additional Effects on
+Success}\label{additional-effects-on-success}
+
+Sometimes, skills or weapons will have additional effects triggered ``on
+6'', ``on at least one 6'' or ``on matching''. This means that if you
+succeed and the dice you rolled fulfilled the requirement (being a six,
+both dice matching, etc.) the effect is activated.
+
+``on 6'' effects can be triggered twice if you roll two 6s, ``at least
+one 6'' effects only trigger once. ``on matching'' triggers on any set
+of matching dice rolled.
+
+\subsubsection{Advantage / Disadvantage}\label{advantage-disadvantage}
+
+When you have ``advantage'', roll an extra d6 for your check and pick
+two. When you have ``disadvantage'', roll another d6, then pick the two
+lowest rolls. Advantage and disadvantage cancel each other out and are
+cumulative.
+
+If you somehow have disadvantage twice and advantage four times, you
+have advantage twice. Roll four dice and pick two.
+
+\subsubsection{Initiative}\label{initiative}
+
+AP is used during ``initiative''. Initiative is any situation where many
+characters want to do things at the same time and the order in which
+things happen is important. Initiative is most often combat, but it can
+include other time sensitive events like chases or races.
+
+Every character has 3 AP cards.5 The cards say ``1 AP'' and indicate
+what character they belong to with a name, a symbol, or both. Most
+actions cost 1 AP, but you can do a ``reasonable amount'' of simple
+things like talking for free.
+
+Some terms:
+
+\textbf{Deck}: This is the deck of cards that the DM (or whoever) draws
+from during initiative. The deck that the whole table uses.
+
+\textbf{Discard}: The discard pile for the whole table.
+
+\textbf{Hand}: The cards that you have been dealt and are holding on to.
+
+\textbf{``Spending'' AP}: Cards that have been used or removed that go
+to the discard and are shuffled back together for the next round's deck.
+
+\textbf{``Losing'' AP}: ``Lost'' AP is not shuffled back into the deck
+at the end of the round. It must be ``regained'' either mechanically or
+automatically at the end of initiative.
+
+\textbf{``Interrupt''}: Spend 1 AP, act immediately
+
+When initiative starts all characters pass their cards to the DM. This
+includes their AP and any other special cards. The DM shuffles these
+cards together to create the deck. The DM pulls a card from the top of
+the deck and either deals the card to the character/player that it
+belongs to or follows the rules on the card.
+
+When a character is dealt a card they can choose to act using whatever
+cards they currently have in their hand. They can also just hold on to
+the card. When cards are spent or activated they get placed in the
+discard.
+
+Any character can interrupt in order to act at any time, doing this
+costs 1 AP. The round ends when the table deck is empty and everyone who
+still has AP has had a chance to interrupt to act with their remaining
+AP.
+
+At the end of a round, cards that have been discarded are shuffled
+together to create the deck for the next round. Cards that have been
+lost are not, they are set aside until they are regained, or initiative
+ends.
+
+This initiative system is intended for combat that is fast and
+unpredictable.
+
+\paragraph{Multiple -\textgreater{} AP -\textgreater{}
+Costs}\label{multiple---ap---costs}
+
+Some types of actions have multiple AP costs. The first time you perform
+the action in a round it costs the first amount, the second time you do
+it, it costs the second, etc. These costs are connected with arrows,
+like this: 1-\textgreater2-\textgreater3. This does not limit how many
+times you can perform an action. If you are at the last cost, pay that
+amount of AP again to do the action.
+
+\paragraph{Temp AP and Regaining AP}\label{temp-ap-and-regaining-ap}
+
+``Temp AP'' must be spent immediately when it is recieved or it is lost.
+If you spend no AP for an entire round, regain 1 AP.
+
+\paragraph{``Beginning of the Round''}\label{beginning-of-the-round}
+
+Very rarely, the particular order things happen in the ``beginning of
+the round'' will matter. In that case, effects resolve in this order:
+
+\subparagraph{First, Effect Management}\label{first-effect-management}
+
+Any already active effects that trigger ``at the beginning of a round''
+happen first. It happens before anything else in the round does.
+Examples includes taking damage from {[}poison{]} or {[}bleed{]} or
+gaining health from {[}heal{]}. If you have some effect or condition
+that causes you to do some sort of roll or contest, do that now.
+
+\subparagraph{Next, Status Management}\label{next-status-management}
+
+Statuses are added or removed now. A point of {[}poison{]} is removed, a
+point of {[}heal{]} is removed, anything that would end at the
+``beginning'' of this round ends now.
+
+\subparagraph{Skills}\label{skills}
+
+Some moves and skills can be used ``at the beginning of the round''.
+These must be used after effects and statuses resolve.
+
+\subsubsection{Character Advancement and
+XP}\label{character-advancement-and-xp}
+
+Characters gain XP by solving problems, navigating difficult situatoins,
+etc. XP can be used to increase attribute scores or acquire more skills.
+There are no character levels in Actlite.
+
+\paragraph{Increasing Attribute
+Scores}\label{increasing-attribute-scores}
+
+Increasing a negative attribute costs 1 XP. Increasing a positive
+attribute costs a number of XP equal to the new attribute score. This
+means going from 2 STR to 3 STR costs 3 XP. Going from -1 STR to 2 STR
+costs \textbf{1} (-1 to 0) \textbf{+ 1} (0 to 1) \textbf{+ 2} (1 to 2)
+\textbf{= 4} XP.
+
+Some species or groups have hard limits on attribute scores and/or
+alternative costs for upgrading some attribute scores.
+
+\paragraph{Archetype Tables}\label{archetype-tables}
+
+Characters gain skills by rolling on ``Archetype Tables'', collections
+of thematically or mechanically similar skills. Archetype Tables can
+have attribute score requirements or some other setting-specific
+requirement. They can also have varying XP costs for rolls, notated
+similarly to variable AP costs so that the first roll costs X, the
+second roll costs Y, and all subsequent rolls have an XP cost of Z,
+notated X-\textgreater Y-\textgreater Z. This allows some tables to
+reward specialization, and some to punish it. If no cost is listed,
+rolling costs on the table costs 1 XP.
+
+Skills in tables are loosely ordered by desirability. If a player gets a
+skill they already have by rolling on an archetype table, they get the
+skill below/before it in the table. If none are below it, they get the
+first skill above it. A player cannot roll on a table when they have
+every skill on the table.
+
+\subsection{Misc. Rules}\label{misc.-rules}
+
+\subsubsection{Searching and Switching During
+Combat}\label{searching-and-switching-during-combat}
+
+Drawing, stowing, switching weapons, or picking a weapon up off the
+ground costs 1 AP, dropping a weapon is free. Searching for something
+you have on your person but you do not have ready is 1 AP. If what you
+need is further away, like in a backpack you are wearing, pay 2 AP to
+take off the bag, open it, rummage through it, etc.
+
+\subsection{Stealth}\label{stealth}
+
+Stealth is an AGI check against the defender's passive perception. It's
+a check against a passive score, and that is always 6 + SCORE.
+
+\subsubsection{Grappling}\label{grappling}
+
+To start a grapple, perform a ``grapple check'', which is a +STR to-hit
+{[}reach: close{]} attack that costs 2 AP. While grappling an opponent,
+you have advantage on {[}reach: close{]} attacks against them, they have
+disadvantage on attacks against you. You can move them by one space or
+you can both go to the ground at the cost of 1 AP. Defender can spend 2
+AP to trigger another STR contest to try and break free. Defender can do
+nothing but attack and try to end the grapple. You cannot grapple a
+creature larger than yourself. There are grappling skills that add a lot
+of other options.
+
+\subsubsection{Fall Damage}\label{fall-damage}
+
+Fall damage is a d4 for every 6 spaces up to 25d4.
+
+\section{Weapons}\label{weapons}
+
+Here's a basic weapon, a club:
+
+Club Tags: pole, one-handed Speed: 1-\textgreater2 Attacks: - 1d4 B, On
+6: inflict {[}stun{]}
+
+\subsection{Tags}\label{tags}
+
+The ``tags'' are listed right after the name listed. This is where
+mechanically-significant descriptors are stored. Some skills may require
+weapons with particular tags, like ``range: close'' or ``hilt''. Weapon
+tags describe how the weapon is handled. There are six main weapon tags,
+``hilt'', ``pole'', ``one-handed'' (or ``1-h''), ``two-handed''
+(``2-h''), reach and range.
+
+\textbf{hilt}: A weapon with a hilt. A ``hilt'' is a ``well-defined''
+handle or grip which often2 includes some kind of guard to protect the
+users hand. Swords, knives, and daggers, are hilt weapons, as are patas
+and katars.
+
+\textbf{pole}: Pole weapons. Weapons with a long shaft rather than a
+well defined grip. Pole weapons include spears, axes, hammers, and of
+course, all polearms.
+
+\textbf{one-handed}: A weapon designed to be used with one hand. If you
+use two hands on a one-handed weapon, treat your STR as 2 points higher
+for the purposes of meeting a STR requirement.
+
+\textbf{two-handed}: If you try to wield a two-handed weapon with one
+hand, attack with disadvantage.
+
+\textbf{reach}: How many spaces does your weapon reach? If this tag is
+absent, assume the weapon has reach: 1. If a weapon has {[}reach:
+close{]}, you are treated as if you move briefly into the opponents
+space to attack them. This is often relevant for particular skills.
+
+\textbf{range}: Used for ranged weapons.
+
+Tags can be combined to accommodate unusual weapons like
+``hand-and-a-half'' a.k.a. ``bastard'' swords or
+\href{https://www.youtube.com/watch?v=rHWGp5lGUNY}{this}
+\href{https://swordsantiqueweapons.com/s1866_full.html}{thing}.
+
+\subsection{Requirements}\label{requirements}
+
+Not satisfying a weapon's requirements causes you to attack with
+disadvantage.
+
+\subsection{Speed}\label{speed}
+
+The ``Speed'' of a weapon is the AP cost of an attack with the weapon.
+If the weapon has multiple costs separated by arrows, you pay the first
+cost on your first attack with the weapon in a round, the second cost on
+your second, etc. If you are on the last listed cost, pay that cost
+again to attack again. Attacking three times in one round with a weapon
+with the cost ``1-\textgreater2'' costs 5 AP.
+
+\subsection{To-Hit}\label{to-hit}
+
+The score you add to an attack check with this weapon.
+
+\subsection{Attacks}\label{attacks}
+
+\subsubsection{Damage Types}\label{damage-types}
+
+Attacks also have with damage types. There are three major types of
+damage. They are: B for ``Bludgeoning'', P for ``Piercing'', and S for
+``Slashing''.
+
+There are also sub-types like Severing, Slicing, and Picking. Severing
+damage counts as S, but S does not count as Severing. The damage
+sub-type will share the first letter of the generic damage type. This
+has worked so far because there are a lot of conveniently placed words
+in English.
+
+The most common sub-types of damage are:
+
+\textbf{Slicing}: What a saber does. A long fast drawing cut, often with
+a curved blade.
+
+\textbf{Severing}: What an axe does. A chopping motion.
+
+\textbf{Picking}: What a warpick does. A swinging motion.
+
+\textbf{Bashing}: Reserved for heavy, crushing blows.
+
+\subsubsection{Effects and Conditions}\label{effects-and-conditions}
+
+Weapons often have extra effects that trigger ``on 6'', ``on matching''.
+Rolling a 6 and a 4 will give you a total of 10 (+ any bonuses) and if
+you succeed, the 6 might activate some additional effect. This makes
+gaining advantage even more useful, as it increases your chance of
+activating effects.
+
+Often, weapons use common effects and inflict common statuses or
+conditions. These conditions and effects are listed below. Conditions
+are notated in brackets, effects are in quotes. Common weapon conditions
+and effects are listed below.
+
+\paragraph{Effects}\label{effects}
+
+\textbf{``Bypass''}: Ignore an amount of damage reduction from armor
+equal to your To-Hit bonus.
+
+\textbf{``Pull''}: The target can be moved one space in any direction
+except backwards. Target can spend 1 AP to trigger a STR contest. If
+they win, they are not moved.
+
+\textbf{``Push''}: The target is pushed back one space. Target can spend
+1 AP to trigger a STR contest. If they win, they are not pushed back.
+
+\textbf{``Rend''}: If armor reduced the damage of this attack note
+whether the damage type was B, P, or S. Reduce the armor's damage
+reduction against that damage type by the To-Hit bonus of this attack.
+
+Common status effects are listed in their own section.
+
+\paragraph{Combat Maneuvers}\label{combat-maneuvers}
+
+These effects are inflicted in addition to damage on a successful
+attack, they allow you to build a strategy around a certain fighting
+style or weapon type. These effects and conditions are not meant to
+encapsulate everything you can do! For everything else:
+
+On a successful attack, describe the maneuver you are attempting to
+perform. The target can either let you do it or take the damage of the
+attack as usual.
+\href{https://oddskullblog.wordpress.com/2021/11/15/combat-maneuvers-the-easy-way/}{Credit.}
+
+Use this to disarm, knock people out, etc. You can also use this to do
+what would normally be done by ``Push'' or some other effect, you just
+won't get damage on top of the maneuver.
+
+\section{Resting, Healing, Dying}\label{resting-healing-dying}
+
+\subsection{Resting and Healing}\label{resting-and-healing}
+
+A ``Rest'' is a period of light, relaxing, non-strenuous activity.
+Resting includes, but is not limited to, eating, drinking, and sleeping.
+
+If you rest for an hour, either: - Regain all standard health - Regain 1
+Crit Health.
+
+If you rest for 8 hours: - Remove 3 {[}exhaustion{]} and remove 1
+{[}injury{]}.
+
+\subsection{Dying}\label{dying}
+
+If you reach 0 crit health, fall unconscious. All damage taken while you
+are down is crit damage, if your negative crit health exceeds your total
+crit health, you die. If your crit health becomes positive, you are
+conscious again.
+
+At the beginning of every round in which you are down, the DM rolls for
+your character on an Individual Consequence Table. You do not know what
+is on the table, and you do not know what you rolled until:
+
+\begin{itemize}
+\tightlist
+\item
+  You regain consciousness.
+\item
+  Someone checks on your body.
+\item
+  Someone attempts to administer aid to you.
+\end{itemize}
+
+The {[}stabilized{]} condition is a common consequence. The DM keeps
+rolling every round until either you are {[}stabilized{]} or you die.
+Death is another. When you become {[}stabilized{]} you stop rolling on
+the consequence table and start Resting. If you take damage while
+{[}stabilized{]}, you are no longer Resting, start rolling on the
+consequence table again. At some point, the GM might stop rolling for
+your character. Hopefully you're {[}stabilized{]}!
+
+If the whole party is down, the GM rolls on a Party Consequence table.
+This is almost certain death. You never know though, maybe you get
+rescued/jailed/possessed/repurposed as a nutrient dense mulch.
+
+\subsubsection{Consequence Tables}\label{consequence-tables}
+
+There are three basic outcomes on a consequence table:
+
+\begin{itemize}
+\tightlist
+\item
+  You die.
+\item
+  Something bad happens, you recieve a debuff of some kind.
+\item
+  You become {[}stabilized{]}.
+\end{itemize}
+
+A ratio of 1:2:3 for {[}stabilized{]} / die / ``something bad happens''
+is tough but fair. This is easily handled by a table with 6 entries:
+
+\begin{itemize}
+\tightlist
+\item
+  1-2: Death.
+\item
+  3-5: Something bad happens.
+\item
+  6: {[}stabilize{]}
+\end{itemize}
+
+If you want to be more lenient you can change the ratios or rule that a
+character doesn't have to roll on the first round that they are out. Get
+spicy, put something positive on the table, the world is your oyster.
+
+\paragraph{Bad Things}\label{bad-things}
+
+\subparagraph{Temporary Debuffs}\label{temporary-debuffs}
+
+\begin{itemize}
+\tightlist
+\item
+  {[}lame{]} for an hour.
+\item
+  Take 1 {[}exhaustion{]}.
+\item
+  {[}injury: disable an arm{]}.
+\item
+  Die if your crit health hits 0 again before your next rest.
+\end{itemize}
+
+\subparagraph{Permananent Debuffs}\label{permananent-debuffs}
+
+\begin{itemize}
+\tightlist
+\item
+  Lose an eye. Your max PER becomes 1.
+\item
+  Lower STR by 1.
+\item
+  Lower max crit health by 1.
+\item
+  Lose an arm.
+\end{itemize}
+
+Many groups don't like permanent debuffs! Make tables tailored to
+whatever sort of game you are running. Maybe replace one Death outcome
+with a permanent debuff, so you have 1 {[}stabilized{]}, 1 Death, 3
+temporary debuffs, and 1 permanent debuff.
+
+The role of these tables is to increase tension by introducing a high
+degree of risk and uncertainty without \emph{necessarily} having to
+increase the probability of character death.
+
+\subsubsection{Sample Consequence
+Tables}\label{sample-consequence-tables}
+
+\paragraph{Individual Consequence
+Tables}\label{individual-consequence-tables}
+
+\subparagraph{Nothing d4}\label{nothing-d4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Death.
+\item
+  Nothing happens.
+\item
+  Nothing happens.
+\item
+  {[}stabilized{]}
+\end{enumerate}
+
+\subparagraph{Generic d6}\label{generic-d6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Death.
+\item
+  Death.
+\item
+  Die if you are reduced to (0) before your next rest.
+\item
+  Take 1 {[}exhaustion{]}.
+\item
+  {[}injury: disable an arm{]}.
+\item
+  You are {[}stabilized{]}.
+\end{enumerate}
+
+\paragraph{Party Consequence Tables}\label{party-consequence-tables}
+
+In most cases, the thing that makes most sense is that the whole party
+dies, but maybe if they are attacked while traveling, something else
+happens!
+
+Things that are context specific will be italicized.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Everyone dies.
+\item
+  Everyone dies.
+\item
+  Each character flips a coin. On heads, they are {[}stabilized{]}, on
+  tails they die.
+\item
+  The party wakes up in cells in \emph{local jail} with all of their
+  things missing.
+\item
+  Miraculously, no one is dead. All of your things have been stolen.
+\item
+  The players wake up having been rescued by \emph{strange legendary
+  creatures / local band of Merry Men.}
+\end{enumerate}
+
+\section{Common Status Conditions}\label{common-status-conditions}
+
+\textbf{{[}bleed{]}}: Take 1 damage each turn until {[}bleed{]} is
+removed. {[}bleed{]} can be removed by spending 3 AP fashioning and
+applying a bandage or spending 1 AP applying a prepared bandage
+
+\textbf{{[}exhaustion{]}}: Temporarily lower all of your scores by 1 for
+every stack of {[}exhaustion{]} you have. Once none of your scores are
+above 0, start lowering your movement speed by 1 instead. Once your
+movement speed hits 0, fall {[}unconscious{]}. When you Rest, remove 1
+{[}exhaustion{]}.
+
+\textbf{{[}injury{]}}: The target chooses to either lower their move
+speed by 1 by taking an injury to a leg, orthey take disadvantage while
+using one limb. {[}injury{]} can be removed by resting while missing no
+crit health, then flipping a coin and getting heads.
+
+\textbf{{[}lame{]}}: Lower movement speed by 1.
+
+\textbf{{[}poison{]}}: At the beginning of the round, take damage equal
+to the number of {[}poison{]} you have. Remove 1 {[}poison{]}.
+
+\textbf{{[}prone{]}}: Character is knocked to the ground and
+{[}vulnerable{]} (so attacks against them have disadvantage). Getting up
+costs 1 AP.
+
+\textbf{{[}stun{]}}: When the character receives AP, discard it and
+remove this condition.
+
+\textbf{{[}vulnerable{]}}: If a character is knocked down, distracted,
+being attacked from opposing directions, or otherwise in a
+disadvantageous position, checks made against the character have
+advantage.
+
+\textbf{{[}stabilized{]}}: Do not roll on consequence tables. Begin
+resting. If you take damage remove this condition.
+
+\section{CASH}\label{cash}
+
+CASH stands for Currency Abstraction System. The ``H'' is just an ``H''.
+It is an optional ruleset for dealing with money that allows it to stay
+in the fiction while also getting rid of bookkeeping. Not appropriate
+for every game, but a good way to keep things moving quickly.
+
+CASH expresses the narrative cost or value of something through broad
+characterizations. Every character has a CASH level. CASH levels are
+ordinal but not cardinal. Having a CASH level is like having a position
+in a footrace. If you know you are in third place, you know your
+relative position but not your actual distance from any other
+participant. Your position is only defined relative to other positions.
+
+\subsection{The Rules}\label{the-rules}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  You cannot purchase anything valued above your current CASH level.
+\item
+  If you purchase something valued at your current CASH level, lower
+  your CASH level by 1.
+\item
+  If you purchase something 1 level below your current CASH level,
+  perform a BARTER or SOCIAL check. If you fail the check, lower your
+  current level of CASH by 1.
+\item
+  You can buy anything 2 or more levels below your current CASH level.
+\end{enumerate}
+
+\subsection{CASH Levels}\label{cash-levels}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Deprivation}: Food barely fit for human consumption. Most
+  things you could purchase at this level are practically
+  indistinguishable from trash.
+\item
+  \textbf{Destitution}: Some street food, maybe a loaf of bread. Rags.
+  Ale.
+\item
+  \textbf{Indigence}: A cup of stew. Hardtack. Raggedy threadbare
+  clothing. A night in a run-down shack. Maybe a club.
+\item
+  \textbf{Scarcity}: A short stay in a shared room. A hot meal.
+\item
+  \textbf{Penury}: A knife. An article of common clothing.
+\item
+  \textbf{Poverty}: A dagger. A backpack.
+\item
+  \textbf{Frugality}: A short stay in an inn. A cheap spear or a
+  woodcutting axe. An old rickety open cart. A wooden shield. Rope.
+\item
+  \textbf{Austerity}: An old mule. A new outfit. A basic weapon like an
+  axe, a spear, or a short sword. Padded armor.
+\item
+  \textbf{Moderation}: A pack animal. Provisions for a journey. Nice
+  warm clothing. Leather armor. A sword.
+\item
+  \textbf{Substance}: A horse. A polearm. Fine Clothing. A skiff.
+\item
+  \textbf{Prosperity}: Chain mail armor. A brigandine. A helmet or
+  breastplate.
+\item
+  \textbf{Affluence}: A small sailboat. A war horse. Fine weapons of
+  war.
+\item
+  \textbf{Abundance}: Plate Armor. Bodyguards and servants.
+\item
+  \textbf{Fortune}: A mansion. A ship capable of crossing an ocean.
+\item
+  \textbf{Wealth}: Businesses. Militias.
+\item
+  \textbf{Riches}: An estate. A Galleon. Marble statues.
+\item
+  \textbf{Opulence}: This level of wealth commands political power, it
+  is difficult to even conceptualize. Fleets of ships. Entire
+  industries.
+\item
+  \textbf{Incredible Fortune}: You command armies. You own banks. Your
+  face is on the money.
+\item
+  \textbf{Unfathomable Wealth}: You determine the course of entire
+  economies. Your wealth is your power, your power is your wealth.
+\item
+  \textbf{Limitless Riches}: This level of wealth exists only in legend.
+  The wealth of gods. The wealth of an immortal dragon sleeping on a
+  planetary core of pure gold.
+\end{enumerate}
+
+\section{Hexes}\label{hexes}
+
+Hexes are the foundation of ``scrivening'', a magic system relying
+entirely on written representations. Those who write hexes are
+``scriveners''. It is the most prominent magic system in the upcoming
+setting. This is not the only magic system that would be compatible with
+Actlite, and it is not the only magic system that I plan on making.
+
+Hex magic is a \textasciitilde low, \textasciitilde hard magic system.
+It's not for everyone. It is built for the type of player that wants to
+tool around directly with magic, finding clever or unexpected uses,
+interactions, and effects.3 This system is an example of ``opting-in''
+to complexity, which I've written about before.
+
+\subsection{Lore}\label{lore}
+
+Hexes are symbols used by scriviners to directly access, manipulate, and
+utilize abstract concepts. By manipulating these symbols, scriveners
+cause tangible effects in the world around them. Hexes can be subjected
+to any number of alterations, transformations, and modifications. Some
+of these operations don't fundamentally change how the hex works, some
+do. Different scriveners tend to write hexes in slightly different ways,
+but they are all accessing the same concepts.
+
+Scrivening uses a combination of written symbols and cognition.
+{[}independent{]} hexes can handle cognition on their own, the scrivener
+handles the cognition for any other hex. Making a hex {[}independent{]}
+is difficult and requires a lot of modifications and transformations.
+Because of this, studying an {[}independent{]} example of a hex is a
+terrible way to try to learn the hex.
+
+\subsection{Learning Hexes}\label{learning-hexes}
+
+The easiest way to learn a particular hex is to study it along with some
+explanation or guidance from the author of the hex. This is one of the
+many reasons scrivening is a fractured and secretive art. The primary
+method of teaching someone a particular hex involves giving them access
+to your hexes directly, putting yourself at risk.
+
+The typical way to learn hexes is to discover them for yourself using
+the methods or protocols of the relevant school or tradition. Sometimes
+this means feverish study, sometimes this means clear-headed meditation.
+
+\subsubsection{Mechanics}\label{mechanics}
+
+You can try to learn individual hexes by studying the hexes themselves
+or you can roll on a hex archetype table. This magic system does not
+hand players a great big catalog of spells to choose from. Every
+character should end up with a unique set of hexes that they have to
+learn to utilize effectively. You are meant to improvise with what you
+get and use your hex library to write your own signature combinations.
+
+\paragraph{Learning Combined Hexes}\label{learning-combined-hexes}
+
+When you succeed in learning a hex that is composed of multiple hexes,
+you learn every unknown hex in the combination. The DC to learn a
+combined hex is +3 for every hex in the combination.
+
+Studying a hex combination takes an hour per hex. You can only attempt
+to learn a given hex once per day. You cannot study {[}independent{]}
+hexes.
+
+\subsection{Hex Activation}\label{hex-activation}
+
+When a hex is destroyed it is activated. When it is activated, it is
+destroyed. If it is activated while some effect requirement is not met,
+it is destroyed. ``Destroyed'' includes smudged to illegibility, the
+medium that it is written on is torn, etc.
+
+\subsection{Writing and Casting Hexes}\label{writing-and-casting-hexes}
+
+A character can write 3 + WIL hexes, this capacity is reset after every
+rest. A character can maintain 3 + WIL hexes at a time. If a character
+writes another hex while they are maintaining as many as they can, the
+olest hex is destroyed.
+
+Each hex can be modified by up to 3 + WIL {[}modifier{]} hexes.
+
+Once written, a hex remains usable until you sleep or until 24 hours
+pass, whichever happens first.
+
+To write a hex during initiative you have to spend 3 AP for the hex and
+1 AP for every modifier.
+
+Many hexes have some kind of activation condition. Often this condition
+is some action the character might take, like attacking. In these cases
+you don't have to pay AP to use the hex. If you want to search for an
+already written hex you do not already have in your hand and then
+activate it, pay 1 AP.
+
+\subsubsection{{[}modifier{]} Hexes}\label{modifier-hexes}
+
+{[}modifier{]} hexes can be combined with other hexes. If one hex in the
+combination is activated, all are. {[}modifier{]} hexes do not affect
+individual hexes within a combination, they affect the whole
+combination.
+
+\subsubsection{{[}independent{]} Hexes}\label{independent-hexes}
+
+Independent hexes do not lose power over time and are not bound to their
+author. As a result, effects that target the author do not work.
+
+\subsection{Additional Context}\label{additional-context}
+
+Individual hexes might override any rule listed above. For example, many
+{[}modifier{]} hexes can be added to hexes you did not write.
+
+Hexes can also impose additional restrictions, requirements, or costs.
+For example, taking extra time to create, having unique costs for
+creation or activation, or only being compatible with certain hexes.
+
+\subsubsection{{[}durable{]} Casting and Hex
+Tables}\label{durable-casting-and-hex-tables}
+
+{[}durable{]} hexes can be written into a ``hex pallete''. Hexes can be
+built from combinations of hexes in the same table and immediately cast
+without the caster having to write the hex down. Diegetically, a hex
+``table'' might be called a pallete, a matrix, or something else
+depending on the tradition or school.
+
+{[}durable{]} hexes often come with additional or alternative casting
+requirements. Some hexes can only be cast as {[}durable{]} hexes.
+{[}independent{]} Hexes
+
+To make a hex {[}independent{]}, a scrivener must attach a
+{[}modifier{]} that consists of two parts.
+
+The first is the ``key''. The ``key'' is the first step in breaking the
+unique connection between scrivener and hex. It varies from person to
+person and from hex to hex. The writer must figure out the unique key
+for each hex they cast, they cannot use someone else's.
+
+The second part is a ``hex signature''. This is a unique hex that you
+will use every time you make a hex {[}independent{]}. The signature does
+not, on its own, identify you. if someone sees your signature they won't
+necessarily know it is yours. However once they do know, they will
+recognize the signature in every {[}independent{]} hex you write. You
+cannot change your signature.
+
+Two people writing the same non-{[}independent{]} hex will write nearly
+identical hexes. Once they make their hexes {[}independent{]} they have
+to leave distinct signatures. Unless steps are taken to obfuscate the
+contents of the entire hex, the signature is obvious. The process of
+making a hex {[}independent{]} often means adding a large number of
+alterations that make it hard for other scriveners to learn the hex, but
+reading it remains relatively easy.
+
+Some hexes can be made {[}independent{]} relatively easily. For some
+hexes the process is very difficult or costly. Many hexes (especially
+powerful hexes) cannot be made independent through any known means. If a
+hex is not {[}independent{]}, it is bound to an author and follows the
+usual casting rules
+
+\subsubsection{Invocations}\label{invocations}
+
+Invocations are {[}independent{]} hexes written on long and narrow
+strips of material. Most often this is paper. Invocations are by far the
+most common type hex. Many people never come into contact with hexes,
+most that do only come in contact with invocations. Invocations
+typically have relatively minor effects. Invocations are almost always
+activated by tearing the medium they are written on.
+
+Invocations are almost always {[}independent{]} so that they do not lose
+potency. Additionally, {[}modifier{]} hexes that harm the author are
+very easy to write, so any sane scrivener wouldn't part with a hex
+without making it {[}independent{]} first.
+
+Some of the reasons for the format of the invocation is practical. A
+long slip of paper is easy to fully rip in half, guaranteeing
+activation. They are easy to tear with one hand. This is especially
+useful for weapon invocations, where the invocation is wrapped around
+either the handle or the hand wielding the weapon. Prayers are written
+in a similar format.
+
+\section{Original Posts}\label{original-posts}
+
+A lot of the first drafts for these rules appeared on the
+\href{https://actlite.substack.com/}{Substack}. The Substack posts often
+include optional rules, content, and more context around why certain
+mechanics were written they way they were. They also often include
+outdated rules.
+
+I'll link those posts here in roughly the order they appeared here.
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://actlite.substack.com/p/core-rules}{Core Rules}
+\item
+  \href{https://actlite.substack.com/p/weapons}{Weapons}
+\item
+  \href{https://actlite.substack.com/p/resting-healing-dying}{Resting,
+  Healing, Dying}
+\item
+  \href{https://actlite.substack.com/p/the-essential-johnny-cash}{CASH}
+\item
+  \href{https://actlite.substack.com/p/hexes-part-1-the-rules}{Hexes
+  Part 1}
+\item
+  \href{https://actlite.substack.com/publish/posts/detail/142442758?referrer=\%2Fpublish\%2Fposts}{Hexes
+  Part 2}
+\end{itemize}
+
+
+
+\end{document}
