@@ -1,0 +1,168 @@
+{
+  "tank": {
+    "disregard_cowards": {
+      "name": "Disregard Cowards",
+      "effect": "If a 1 is rolled in a ranged attack against you, ignore the attack.",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "retaliation": {
+      "name": "Retaliation",
+      "effect": "Once per round, if an enemy has done damage to you this round, take advantage on an attack against them.",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "hearty_ii": {
+      "name": "Hearty II",
+      "effect": "Gain 1d2:2d4 max health.",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "shrug_it_off": {
+      "name": "Shrug it Off",
+      "effect": "Once per round, you can choose to take 2 standard damage rather than 1 crit damage.",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "second_wind": {
+      "name": "Second Wind",
+      "effect": "Once per day you can recover 2d6 standard health instantly.",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "hard_to_kill": {
+      "name": "Hard to Kill",
+      "effect": "If you are reduced to 0 HP but not killed outright, flip a coin. If heads, you stay standing with 1 crit health.",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "unstoppable": {
+      "name": "Unstoppable",
+      "effect": "Ignore the effects of a number of [stun], [injury], [poison], [bleed], conditions up to your STR score. Ignore these in the order you receive them. Statuses must still be resolved or removed normally.",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "vanguard": {
+      "name": "Vanguard",
+      "effect": "Enemies attack with disadvantage if they are within your melee range but they are not attacking you.",
+      "meta_tags": ["skill", "basic", "archetype"]
+    }
+  },
+  "fast": {
+    "dead_sprint": {
+      "name": "Dead Sprint",
+      "effect": "Once per round you can pay 1 AP to move three times your movement speed in a straight line. If you attack at the end of this movement, take advantage",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "improved_interrupt": {
+      "name": "Improved Interrupt",
+      "effect": "Once per round, you can \"interrupt\" for free.",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "dodge": {
+      "name": "Dodge",
+      "effect": "Spend 1 AP. For the rest of the round, attacks against you have disadvantage. This ends if you take a different action",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "fancy_footwork": {
+      "name": "Fancy Footwork",
+      "requirements": ["Slicing attack or hilt weapon"],
+      "effect": "On a successful attack, you can choose to move 1 space.",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "running_on_empty": {
+      "name": "Running on Empty",
+      "effect": "Raise your to-hit difficulty by 1 while you are holding no AP.",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "reflex": {
+      "name": "Reflex",
+      "effect": "Gain 1 Temp AP the first time an attack against you misses during a round.",
+      "meta_tags": ["skill", "basic", "archetype"]
+    }
+  },
+  "duelist": {
+    "bloodletting": {
+      "name": "Bloodletting",
+      "requirements": ["S attack"],
+      "effect": "On 6, deal 1 [bleed].",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "blood_in_the_water": {
+      "name": "Blood in the Water",
+      "effect": "If the enemy has any of the following status effects: [bleed], [stun], [poison], [prone], or [vulnerable], double any dealt crit damage. If they are not aware of you, triple it instead.",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "assassination": {
+      "name": "Assassination",
+      "requirements": ["range:close weapon or P attack"],
+      "effect": "Deal 1 crit damage ignoring armor on 6 or when you have advantage.",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "duelist": {
+      "name": "Duelist",
+      "effect": "Once per round, if an enemy leaves your threatened area, gain 2 Temp AP.",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "aggression": {
+      "name": "Aggression",
+      "requirements": ["hilt weapon"],
+      "effect": "Gain advantage on your melee attack if your last action moved you closer to your opponent.",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "slasher": {
+      "name": "Slasher",
+      "effect": "On a successful attack, the next attack costs 1 fewer AP. You can use this once per round.",
+      "meta_tags": ["skill", "basic", "archetype"]
+    },
+    "giant": {
+      "devastating_strike": {
+        "name": "Devastating Strike",
+        "requirements": ["Severing, Bashing, or Picking attack"],
+        "effect": "Add your to_hit to your damage. You can do this once per round. State you will do this before the attack.",
+        "meta_tags": ["skill", "basic", "archetype"]
+      },
+      "basher": {
+        "name": "Basher",
+        "effect": "On 6, pick one effect: If B, [stun] or \"Push\". If Bashing: [injury], [prone] or \"Rend\".",
+        "meta_tags": ["skill", "basic", "archetype"]
+      },
+      "sweep": {
+        "name": "Sweep",
+        "requirements": ["non-P attack and a 2-h weapon."],
+        "effect": "Your attacks are able to hit 2 neighboring enemies. Make only one attack roll.",
+        "meta_tags": ["skill", "basic", "archetype"]
+      },
+      "decisive_strike": {
+        "name": "Decisive Strike",
+        "requirements": ["2-h weapon"],
+        "effect": "Once per round, you can double your to-hit bonus. State you will do this before the attack.",
+        "meta_tags": ["skill", "basic", "archetype"]
+      },
+      "efficiency": {
+        "name": "Efficiency",
+        "requirements": ["+STR to-hit attack or 2-h weapon"],
+        "effect": "Treat your STR as 1 point higher for the purpose of attacks, weapon requirements, etc.",
+        "meta_tags": ["skill", "basic", "archetype"]
+      },
+      "giant_killer": {
+        "name": "Giant Killer",
+        "effect": "Your first attack in a round costs 1 AP.",
+        "meta_tags": ["skill", "basic", "archetype"]
+      },
+      "spearman": {
+        "spearman": {
+          "name": "Spearman",
+          "requirements": ["P attack and pole weapon"],
+          "effect": "On 6, choose one effect: \"Push\", \"Rend\", \"Bypass\", or deal 1 crit daamge.",
+          "meta_tags": ["skill", "basic", "archetype"]
+        },
+        "expert_positioning": {
+          "name": "Expert Positioning",
+          "requirements": ["melee reapon without reach: close"],
+          "effect": "Treat the reach of your melee weapons as increased by 1.",
+          "meta_tags": ["skill", "basic", "archetype"]
+        },
+        "outreach": {
+          "name": "Outreach",
+          "requirements": ["pole weapon"],
+          "effect": "If your opponent is in your threatened range and you are not in theirs, gain advantage on attacks against them.",
+          "meta_tags": ["skill", "basic", "archetype"]
+        }
+      }
+    }
+  }
+}
